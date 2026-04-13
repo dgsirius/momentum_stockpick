@@ -1,0 +1,65 @@
+{
+  "summary": {
+    "signal_date": "2026-04-10",
+    "next_trade_date": null,
+    "spy_above_ma100": true,
+    "spy_adj_close": 680.565,
+    "spy_ma100": 676.4606814185701,
+    "strategy_nav": 1.1265667173974556,
+    "benchmark_nav": 1.0007385278174707,
+    "data_dir": "/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_relative_strength/futu_2025q4",
+    "warnings": [
+      "Metadata file has no date column. Static metadata is used for all history; this may introduce point-in-time bias.",
+      "Using static market_cap across history. This creates look-ahead bias risk for the $10.0B+ market-cap filter.",
+      "Using static shares_outstanding across history. This approximates point-in-time market cap and may introduce bias."
+    ],
+    "config": {
+      "start_date": "2026-01-01",
+      "fast_window": 126,
+      "mid_window": 252,
+      "slow_window": 252,
+      "min_market_cap": 10000000000.0,
+      "market_filter_mode": "none",
+      "mode": "mode_b",
+      "selection_style": "momentum_volume",
+      "rebalance_frequency": "weekly"
+    },
+    "variant": {
+      "name": "动量量能周度基线",
+      "slug": "momentum_weekly_baseline"
+    },
+    "current_holding_count": 8,
+    "planned_holding_count": 8,
+    "keep_count": 6,
+    "buy_count": 2,
+    "blocked_buy_count": 0,
+    "allow_new_buys": true
+  },
+  "performance": {
+    "CAGR": 0.555267310019492,
+    "Annualized Return": 0.6067919560291389,
+    "Annualized Volatility": 0.5745286593858461,
+    "Sharpe Ratio": 1.0561561135658253,
+    "Sortino Ratio": 1.4141908842706092,
+    "Max Drawdown": -0.26185250068998545,
+    "Calmar Ratio": 2.120534684818186,
+    "Win Rate": 0.6176470588235294,
+    "Monthly Win Rate": 0.75,
+    "Turnover (Annualized)": 23.666578994734135,
+    "Average Holding Count": 8.0,
+    "Average Daily Turnover": 0.09391499601084974,
+    "Beta vs SPY": 2.1088471626619634,
+    "Alpha vs SPY": 0.5788025856968959,
+    "Information Ratio vs SPY": 1.1614430383252299
+  },
+  "paths": {
+    "signal_top10_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/momentum_weekly_baseline/latest_signal_top10.csv",
+    "planned_holdings_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/momentum_weekly_baseline/planned_holdings_top10.csv",
+    "current_holdings_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/momentum_weekly_baseline/current_holdings.csv",
+    "historical_buy_counts_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/momentum_weekly_baseline/historical_buy_counts.csv",
+    "profit_contribution_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/momentum_weekly_baseline/profit_contribution_by_ticker.csv",
+    "top10_profit_contributors_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/momentum_weekly_baseline/top10_profit_contributors.csv",
+    "daily_nav_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/momentum_weekly_baseline/daily_nav.csv",
+    "html": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/momentum_weekly_baseline/index.html"
+  }
+}

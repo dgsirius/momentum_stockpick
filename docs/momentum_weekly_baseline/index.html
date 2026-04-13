@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>US Strategy Dashboard - 动量量能周度基线</title>
+  <style>
+    :root {
+      --bg: #f5f0e8;
+      --panel: #fffdf9;
+      --ink: #1f2a2e;
+      --muted: #647276;
+      --line: #d8cfc2;
+      --accent: #9b5f2d;
+      --accent-2: #0f5c73;
+      --good: #1a7f52;
+      --warn: #b15e1e;
+      --font: "Avenir Next", "Helvetica Neue", "PingFang SC", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(155,95,45,0.12), transparent 32%),
+        radial-gradient(circle at top right, rgba(15,92,115,0.10), transparent 28%),
+        linear-gradient(180deg, #f7f2ea 0%, var(--bg) 100%);
+    }
+    .wrap {
+      width: min(1380px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 28px 0 48px;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 20px;
+    }
+    .sidebar {
+      background: rgba(255, 253, 249, 0.84);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(31, 42, 46, 0.05);
+      padding: 18px 14px;
+      position: sticky;
+      top: 20px;
+      height: fit-content;
+    }
+    .sidebar-title {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .nav-links {
+      display: grid;
+      gap: 8px;
+    }
+    .nav-link {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 12px;
+      color: var(--ink);
+      text-decoration: none;
+      background: rgba(15,92,115,0.04);
+      border: 1px solid transparent;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .nav-link.active {
+      background: linear-gradient(135deg, rgba(15,92,115,0.14), rgba(155,95,45,0.12));
+      border-color: rgba(15,92,115,0.12);
+    }
+    .content {
+      min-width: 0;
+    }
+    .hero {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .hero-main {
+      min-width: 0;
+    }
+    .toolbar {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+      min-width: 220px;
+    }
+    .toolbar-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    h1, h2 { margin: 0; }
+    h1 {
+      font-size: 34px;
+      letter-spacing: 0.02em;
+    }
+    .subtitle {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .refresh-btn {
+      border: 0;
+      border-radius: 12px;
+      padding: 12px 18px;
+      background: linear-gradient(135deg, var(--accent-2), #1a7f52);
+      color: white;
+      font-size: 14px;
+      font-weight: 650;
+      cursor: pointer;
+      min-width: 150px;
+      box-shadow: 0 12px 24px rgba(15, 92, 115, 0.18);
+    }
+    .secondary-btn {
+      border: 1px solid rgba(15,92,115,0.16);
+      border-radius: 12px;
+      padding: 12px 18px;
+      background: rgba(255,255,255,0.78);
+      color: var(--accent-2);
+      font-size: 14px;
+      font-weight: 650;
+      cursor: pointer;
+      min-width: 150px;
+      box-shadow: 0 12px 24px rgba(31, 42, 46, 0.06);
+    }
+    .secondary-btn[disabled] {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+    .refresh-btn[disabled] {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+    .refresh-note {
+      text-align: right;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .content-note {
+      max-width: 320px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .card, .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(31, 42, 46, 0.05);
+    }
+    .card {
+      padding: 16px 18px;
+    }
+    .label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .value {
+      margin-top: 8px;
+      font-size: 26px;
+      font-weight: 650;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .panel {
+      padding: 18px;
+      overflow: hidden;
+    }
+    .panel h2 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+    .panel p.meta {
+      color: var(--muted);
+      margin: -4px 0 14px;
+      font-size: 13px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-bottom: 1px solid #ece5da;
+      text-align: left;
+      padding: 9px 8px;
+      vertical-align: top;
+    }
+    th {
+      color: var(--muted);
+      font-weight: 600;
+      background: rgba(155,95,45,0.04);
+    }
+    .stack {
+      display: grid;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .charts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .charts img {
+      width: 100%;
+      display: block;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: white;
+    }
+    .footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+    .tag {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(15,92,115,0.08);
+      color: var(--accent-2);
+      font-size: 12px;
+      margin-right: 6px;
+    }
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(18, 28, 33, 0.42);
+      z-index: 30;
+    }
+    .modal.open {
+      display: flex;
+    }
+    .modal-card {
+      width: min(780px, calc(100vw - 32px));
+      max-height: calc(100vh - 48px);
+      overflow: hidden;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 24px 60px rgba(31, 42, 46, 0.18);
+      display: grid;
+      grid-template-rows: auto auto minmax(0, 1fr) auto;
+    }
+    .modal-head {
+      padding: 18px 20px 10px;
+      border-bottom: 1px solid #ece5da;
+    }
+    .modal-sub {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .modal-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 20px;
+      border-bottom: 1px solid #ece5da;
+    }
+    .modal-search {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: white;
+      color: var(--ink);
+      font-size: 14px;
+    }
+    .modal-count {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .option-list {
+      overflow: auto;
+      padding: 14px 20px 8px;
+      display: grid;
+      gap: 10px;
+    }
+    .option-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px 14px;
+      border: 1px solid #ece5da;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.75);
+    }
+    .option-row.hidden {
+      display: none;
+    }
+    .option-main {
+      min-width: 0;
+      flex: 1;
+    }
+    .option-title {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .option-meta {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .badge-chip {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(15,92,115,0.08);
+      color: var(--accent-2);
+      font-size: 11px;
+      font-weight: 600;
+      margin-right: 6px;
+      margin-top: 6px;
+    }
+    .modal-foot {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      padding: 16px 20px 20px;
+      border-top: 1px solid #ece5da;
+    }
+    .text-btn {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 16px;
+      background: white;
+      color: var(--ink);
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .modal-note {
+      padding: 0 20px 10px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    @media (max-width: 1024px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        position: static;
+      }
+      .hero {
+        flex-direction: column;
+      }
+      .toolbar {
+        align-items: flex-start;
+      }
+      .toolbar-actions {
+        width: 100%;
+        flex-wrap: wrap;
+      }
+      .cards, .grid, .charts {
+        grid-template-columns: 1fr;
+      }
+      .modal-toolbar, .modal-foot {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="sidebar-title">策略目录</div>
+        <div class="nav-links">
+          <a class='nav-link' href='../index.html'>ER 3/8/20</a>
+<a class='nav-link' href='../er_5_10_30/index.html'>ER 5/10/30</a>
+<a class='nav-link active' href='./index.html'>动量量能周度基线</a>
+<a class='nav-link' href='../er_3_8_20_1b/index.html'>ER 3/8/20 - 1B</a>
+        </div>
+      </aside>
+
+      <main class="content">
+        <section class="hero">
+          <div class="hero-main">
+            <h1>US Strategy Dashboard</h1>
+            <div class="subtitle">策略固定为 <span class='tag'>动量量能周度基线</span><span class='tag'>Weekly Rebalance</span><span class='tag'>MA50/MA200 Trend</span><span class='tag'>Near 52W High</span><span class='tag'>mode_b</span><span class='tag'>Start 2026-01-01</span></div>
+          </div>
+          <div class="toolbar">
+            <div class="toolbar-actions">
+              <button id="generateContentButton" class="secondary-btn" type="button">生成内容</button>
+              <button id="refreshButton" class="refresh-btn" type="button">更新所有数据</button>
+            </div>
+            <div id="refreshStatus" class="refresh-note">当前为静态快照。</div>
+            <div id="contentStatus" class="refresh-note content-note"></div>
+          </div>
+        </section>
+
+        <section class="cards">
+          <div class='card'><div class='label'>最新信号日</div><div class='value'>2026-04-10</div></div>
+<div class='card'><div class='label'>下个交易日</div><div class='value'>None</div></div>
+<div class='card'><div class='label'>市场过滤</div><div class='value'>none</div></div>
+<div class='card'><div class='label'>策略净值</div><div class='value'>1.1266</div></div>
+<div class='card'><div class='label'>SPY净值</div><div class='value'>1.0007</div></div>
+<div class='card'><div class='label'>CAGR</div><div class='value'>55.53%</div></div>
+<div class='card'><div class='label'>Sharpe</div><div class='value'>1.06</div></div>
+<div class='card'><div class='label'>最大回撤</div><div class='value'>-26.19%</div></div>
+        </section>
+
+        <section class="grid">
+          <div class="panel">
+            <h2>当前持有 / 计划持有 Top8</h2>
+            <p class="meta">按最新信号日生成，包含 keep / buy 动作。</p>
+            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>mom_126_0</th><th>mom_252_0</th><th>near_high_ratio</th><th>adv_ratio</th></tr></thead><tbody><tr><td>1</td><td>US.CIEN</td><td>Ciena</td><td>keep</td><td>2.1409</td><td>8.2814</td><td>0.9847</td><td>1.6834</td></tr>
+<tr><td>2</td><td>US.TSEM</td><td>Tower半导体</td><td>keep</td><td>1.7820</td><td>5.6769</td><td>1.0000</td><td>3.0948</td></tr>
+<tr><td>3</td><td>US.SNDK</td><td>闪迪</td><td>keep</td><td>5.3884</td><td>25.0433</td><td>1.0326</td><td>3.0314</td></tr>
+<tr><td>4</td><td>US.LITE</td><td>Lumentum</td><td>keep</td><td>4.4243</td><td>16.6859</td><td>0.9491</td><td>3.2689</td></tr>
+<tr><td>5</td><td>US.PL</td><td>Planet Labs PBC</td><td>keep</td><td>1.2801</td><td>10.7007</td><td>0.9732</td><td>2.5306</td></tr>
+<tr><td>6</td><td>US.WDC</td><td>西部数据</td><td>keep</td><td>1.7908</td><td>9.7514</td><td>0.9802</td><td>1.4236</td></tr>
+<tr><td>7</td><td>US.AAOI</td><td>Applied Optoelectronics</td><td>buy</td><td>3.5652</td><td>12.7467</td><td>1.0409</td><td>7.3609</td></tr>
+<tr><td>8</td><td>US.COHR</td><td>Coherent</td><td>buy</td><td>1.5676</td><td>4.8292</td><td>1.0022</td><td>2.5800</td></tr></tbody></table>
+          </div>
+          <div class="panel">
+            <h2>当前实际持仓</h2>
+            <p class="meta">最新信号日对应的 mode_b 实际持仓快照。</p>
+            <table><thead><tr><th>ticker</th><th>name</th><th>shares</th><th>weight</th><th>market_value</th></tr></thead><tbody><tr><td>US.CIEN</td><td>Ciena</td><td>369.7720</td><td>0.1646</td><td></td></tr>
+<tr><td>US.TSEM</td><td>Tower半导体</td><td>738.0540</td><td>0.1352</td><td></td></tr>
+<tr><td>US.TER</td><td>泰瑞达</td><td>379.7854</td><td>0.1240</td><td></td></tr>
+<tr><td>US.SNDK</td><td>闪迪</td><td>164.5566</td><td>0.1231</td><td></td></tr>
+<tr><td>US.AEIS</td><td>先进能源工业</td><td>355.1875</td><td>0.1194</td><td></td></tr>
+<tr><td>US.WDC</td><td>西部数据</td><td>390.9781</td><td>0.1172</td><td></td></tr>
+<tr><td>US.LITE</td><td>Lumentum</td><td>143.0774</td><td>0.1124</td><td></td></tr>
+<tr><td>US.PL</td><td>Planet Labs PBC</td><td>3,300.0203</td><td>0.1042</td><td></td></tr></tbody></table>
+          </div>
+        </section>
+
+        <section class="stack">
+          <div class="panel">
+            <h2>最新信号 Top8</h2>
+            <p class="meta">每日更新的 top8 名单，按当前策略排序输出。</p>
+            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>planned_holding</th><th>mom_126_0</th><th>mom_252_0</th><th>near_high_ratio</th><th>adv_ratio</th><th>adv20</th></tr></thead><tbody><tr><td>1</td><td>US.CIEN</td><td>Ciena</td><td>keep</td><td>True</td><td>2.1409</td><td>8.2814</td><td>0.9847</td><td>1.6834</td><td>1,162,613,554.4112</td></tr>
+<tr><td>2</td><td>US.TSEM</td><td>Tower半导体</td><td>keep</td><td>True</td><td>1.7820</td><td>5.6769</td><td>1.0000</td><td>3.0948</td><td>618,819,147.0243</td></tr>
+<tr><td>3</td><td>US.SNDK</td><td>闪迪</td><td>keep</td><td>True</td><td>5.3884</td><td>25.0433</td><td>1.0326</td><td>3.0314</td><td>11,544,008,858.4865</td></tr>
+<tr><td>4</td><td>US.LITE</td><td>Lumentum</td><td>keep</td><td>True</td><td>4.4243</td><td>16.6859</td><td>0.9491</td><td>3.2689</td><td>4,854,548,582.7113</td></tr>
+<tr><td>5</td><td>US.PL</td><td>Planet Labs PBC</td><td>keep</td><td>True</td><td>1.2801</td><td>10.7007</td><td>0.9732</td><td>2.5306</td><td>584,782,710.5240</td></tr>
+<tr><td>6</td><td>US.WDC</td><td>西部数据</td><td>keep</td><td>True</td><td>1.7908</td><td>9.7514</td><td>0.9802</td><td>1.4236</td><td>2,402,459,148.6715</td></tr>
+<tr><td>7</td><td>US.AAOI</td><td>Applied Optoelectronics</td><td>buy</td><td>True</td><td>3.5652</td><td>12.7467</td><td>1.0409</td><td>7.3609</td><td>1,305,563,491.1985</td></tr>
+<tr><td>8</td><td>US.COHR</td><td>Coherent</td><td>buy</td><td>True</td><td>1.5676</td><td>4.8292</td><td>1.0022</td><td>2.5800</td><td>2,088,112,190.7958</td></tr></tbody></table>
+          </div>
+
+          <div class="panel">
+            <h2>历史触发买入信号标的</h2>
+            <p class="meta">这里按策略实际 BUY 事件统计，而不是仅进过 top10 名单。按出现次数排序。</p>
+            <table><thead><tr><th>ticker</th><th>name</th><th>industry_labels</th><th>buy_count</th><th>total_buy_value</th><th>latest_adj_close</th><th>first_signal_date</th><th>last_signal_date</th></tr></thead><tbody><tr><td>US.LITE</td><td>Lumentum</td><td>通讯设备</td><td>4</td><td>502,198.5956</td><td>884.6500</td><td>2026-01-02 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
+<tr><td>US.WDC</td><td>西部数据</td><td>计算机硬件</td><td>4</td><td>498,865.7405</td><td>337.7500</td><td>2026-01-02 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
+<tr><td>US.TTMI</td><td>TTM科技</td><td>电子元件</td><td>3</td><td>392,246.6358</td><td>110.5100</td><td>2026-01-16 00:00:00</td><td>2026-02-20 00:00:00</td></tr>
+<tr><td>US.CIEN</td><td>Ciena</td><td>通讯设备</td><td>3</td><td>384,786.4664</td><td>501.4750</td><td>2026-01-02 00:00:00</td><td>2026-03-13 00:00:00</td></tr>
+<tr><td>US.SNDK</td><td>闪迪</td><td>计算机硬件</td><td>3</td><td>379,038.4144</td><td>842.5000</td><td>2026-02-20 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
+<tr><td>US.PL</td><td>Planet Labs PBC</td><td>航空航天与国防</td><td>3</td><td>370,047.2510</td><td>35.5700</td><td>2026-01-02 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
+<tr><td>US.IAG</td><td>Iamgold</td><td>黄金</td><td>3</td><td>366,751.3443</td><td>19.7800</td><td>2026-01-09 00:00:00</td><td>2026-02-13 00:00:00</td></tr>
+<tr><td>US.STX</td><td>希捷科技</td><td>计算机硬件</td><td>2</td><td>258,602.5996</td><td>501.8900</td><td>2026-01-30 00:00:00</td><td>2026-03-20 00:00:00</td></tr>
+<tr><td>US.TSEM</td><td>Tower半导体</td><td>半导体</td><td>2</td><td>258,602.5996</td><td>206.3150</td><td>2026-01-30 00:00:00</td><td>2026-03-20 00:00:00</td></tr>
+<tr><td>US.LRCX</td><td>泛林集团</td><td>半导体设备与材料</td><td>2</td><td>253,813.6392</td><td>263.0900</td><td>2026-01-30 00:00:00</td><td>2026-02-13 00:00:00</td></tr>
+<tr><td>US.MU</td><td>美光科技</td><td>半导体</td><td>2</td><td>252,635.1219</td><td>417.1350</td><td>2026-01-02 00:00:00</td><td>2026-03-13 00:00:00</td></tr>
+<tr><td>US.ASTS</td><td>AST SpaceMobile</td><td>通讯设备</td><td>2</td><td>250,316.8480</td><td>95.9975</td><td>2026-01-09 00:00:00</td><td>2026-01-30 00:00:00</td></tr>
+<tr><td>US.FTI</td><td>德希尼布FMC</td><td>油气设备与服务</td><td>2</td><td>247,075.4381</td><td>73.7350</td><td>2026-03-06 00:00:00</td><td>2026-03-27 00:00:00</td></tr>
+<tr><td>US.TIGO</td><td>Millicom International Cellular</td><td>电信服务</td><td>2</td><td>247,075.4381</td><td>83.8000</td><td>2026-03-06 00:00:00</td><td>2026-03-27 00:00:00</td></tr>
+<tr><td>US.VRT</td><td>Vertiv Holdings</td><td>电气设备及零件</td><td>2</td><td>247,075.4381</td><td>294.1300</td><td>2026-03-06 00:00:00</td><td>2026-03-27 00:00:00</td></tr>
+<tr><td>US.TER</td><td>泰瑞达</td><td>半导体设备与材料</td><td>2</td><td>246,230.6186</td><td>367.8865</td><td>2026-02-06 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
+<tr><td>US.BE</td><td>Bloom Energy</td><td>电气设备及零件</td><td>1</td><td>131,804.7167</td><td>168.5700</td><td>2026-01-16 00:00:00</td><td>2026-01-16 00:00:00</td></tr>
+<tr><td>US.CDE</td><td>科尔黛伦矿业</td><td>黄金</td><td>1</td><td>131,804.7167</td><td>20.0450</td><td>2026-01-16 00:00:00</td><td>2026-01-16 00:00:00</td></tr>
+<tr><td>US.HII</td><td>亨廷顿英格尔斯工业</td><td>航空航天与国防</td><td>1</td><td>129,583.4688</td><td>398.8850</td><td>2026-03-06 00:00:00</td><td>2026-03-06 00:00:00</td></tr>
+<tr><td>US.AGI</td><td>Alamos Gold</td><td>黄金</td><td>1</td><td>129,583.4688</td><td>47.7600</td><td>2026-03-06 00:00:00</td><td>2026-03-06 00:00:00</td></tr>
+<tr><td>US.ATI</td><td>ATI Inc</td><td>金属加工</td><td>1</td><td>129,583.4688</td><td>161.2400</td><td>2026-03-06 00:00:00</td><td>2026-03-06 00:00:00</td></tr>
+<tr><td>US.ESLT</td><td>埃尔比特系统</td><td>航空航天与国防</td><td>1</td><td>129,583.4688</td><td>923.3500</td><td>2026-03-06 00:00:00</td><td>2026-03-06 00:00:00</td></tr>
+<tr><td>US.AAOI</td><td>Applied Optoelectronics</td><td>通讯设备</td><td>1</td><td>128,138.5702</td><td>147.0900</td><td>2026-02-27 00:00:00</td><td>2026-02-27 00:00:00</td></tr>
+<tr><td>US.AU</td><td>AngloGold Ashanti</td><td>黄金</td><td>1</td><td>128,138.5702</td><td>109.3550</td><td>2026-02-27 00:00:00</td><td>2026-02-27 00:00:00</td></tr>
+<tr><td>US.AA</td><td>美国铝业公司</td><td>铝</td><td>1</td><td>127,635.1219</td><td>73.4500</td><td>2026-03-13 00:00:00</td><td>2026-03-13 00:00:00</td></tr>
+<tr><td>US.SATS</td><td>回声星通信</td><td>电信服务</td><td>1</td><td>125,000.0000</td><td>117.8228</td><td>2026-01-02 00:00:00</td><td>2026-01-02 00:00:00</td></tr>
+<tr><td>US.EQX</td><td>Equinox Gold</td><td>黄金</td><td>1</td><td>125,000.0000</td><td>14.9550</td><td>2026-01-02 00:00:00</td><td>2026-01-02 00:00:00</td></tr>
+<tr><td>US.HL</td><td>赫克拉矿业</td><td>其他贵金属和采矿</td><td>1</td><td>125,000.0000</td><td>19.5950</td><td>2026-01-02 00:00:00</td><td>2026-01-02 00:00:00</td></tr>
+<tr><td>US.AEIS</td><td>先进能源工业</td><td>电气设备及零件</td><td>1</td><td>118,595.9960</td><td>378.6700</td><td>2026-04-02 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
+<tr><td>US.RKLB</td><td>Rocket Lab</td><td>航空航天与国防</td><td>1</td><td>118,165.5035</td><td>67.4050</td><td>2026-01-09 00:00:00</td><td>2026-01-09 00:00:00</td></tr>
+<tr><td>US.APA</td><td>阿帕奇石油</td><td>油气勘探与开发</td><td>1</td><td>117,491.9693</td><td>38.4600</td><td>2026-03-27 00:00:00</td><td>2026-03-27 00:00:00</td></tr>
+<tr><td>US.CRS</td><td>卡朋特科技</td><td>金属加工</td><td>1</td><td>117,491.9693</td><td>436.5700</td><td>2026-03-27 00:00:00</td><td>2026-03-27 00:00:00</td></tr>
+<tr><td>US.E</td><td>埃尼石油</td><td>综合油气</td><td>1</td><td>117,491.9693</td><td>56.2500</td><td>2026-03-27 00:00:00</td><td>2026-03-27 00:00:00</td></tr></tbody></table>
+          </div>
+        </section>
+
+        <section class="charts">
+          <div class="panel">
+            <h2>策略净值 vs SPY</h2>
+            <img src="charts/nav_vs_spy.png" alt="nav vs spy">
+          </div>
+          <div class="panel">
+            <h2>历史买入信号次数 Top20</h2>
+            <img src="charts/top_buy_counts.png" alt="top buy counts">
+          </div>
+          <div class="panel">
+            <h2>回撤</h2>
+            <img src="charts/drawdown.png" alt="drawdown">
+          </div>
+          <div class="panel">
+            <h2>Rolling 63-Day Excess Return</h2>
+            <img src="charts/rolling_63_excess_return.png" alt="rolling excess return">
+          </div>
+          <div class="panel">
+            <h2>买入信号最多的10只: 股价和信号点</h2>
+            <img src="charts/top10_most_buy_signal_prices.png" alt="top10 most buy signal prices">
+          </div>
+          <div class="panel">
+            <h2>买入信号最少的10只: 股价和信号点</h2>
+            <img src="charts/top10_fewest_buy_signal_prices.png" alt="top10 fewest buy signal prices">
+          </div>
+          <div class="panel">
+            <h2>盈利贡献最多的10只: 股价和买卖点</h2>
+            <img src="charts/top10_profit_trade_markers.png" alt="top10 profit trade markers">
+          </div>
+          <div class="panel">
+            <h2>亏损贡献最多的10只: 股价和买卖点</h2>
+            <img src="charts/top10_loss_trade_markers.png" alt="top10 loss trade markers">
+          </div>
+        </section>
+
+        <div class="footer">
+          <div>数据目录：/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_relative_strength/futu_2025q4</div>
+          <div>最新信号日：2026-04-10，下个交易日：None</div>
+          <div>SPY 收盘：680.57，市场过滤：none</div>
+          <div>Warnings：Metadata file has no date column. Static metadata is used for all history; this may introduce point-in-time bias.；Using static market_cap across history. This creates look-ahead bias risk for the $10.0B+ market-cap filter.；Using static shares_outstanding across history. This approximates point-in-time market cap and may introduce bias.</div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <div id="contentModal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h2>生成技术面文章</h2>
+        <div class="modal-sub">候选池来自当前页的当前持仓与计划持仓并集，也支持手动输入 ticker。可多选，最多 20 只。文章只基于 Futu OpenAPI 日 K、量价、均线、RSI、MACD、ATR、支撑阻力和历史 K 线形态生成。</div>
+      </div>
+      <div class="modal-toolbar">
+        <input id="contentSearchInput" class="modal-search" type="search" placeholder="搜索 ticker、名称或行业">
+        <div id="contentSelectionCount" class="modal-count">已选 0 / 20</div>
+      </div>
+      <div class="modal-note">
+        <div style="margin-bottom:8px;">也可以手动输入 ticker，支持 `LITE` 或 `US.LITE`，用空格、逗号或换行分隔。</div>
+        <textarea id="contentManualInput" class="modal-search" rows="3" placeholder="例如：LITE EQNR US.WDC"></textarea>
+      </div>
+      <div id="contentModalNote" class="modal-note"></div>
+      <div id="contentOptionList" class="option-list"></div>
+      <div class="modal-foot">
+        <button id="contentCancelButton" class="text-btn" type="button">取消</button>
+        <button id="contentSubmitButton" class="refresh-btn" type="button">生成技术面文章</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const button = document.getElementById("refreshButton");
+      const generateButton = document.getElementById("generateContentButton");
+      const status = document.getElementById("refreshStatus");
+      const contentStatus = document.getElementById("contentStatus");
+      const contentModal = document.getElementById("contentModal");
+      const contentOptionList = document.getElementById("contentOptionList");
+      const contentSearchInput = document.getElementById("contentSearchInput");
+      const contentSelectionCount = document.getElementById("contentSelectionCount");
+      const contentSubmitButton = document.getElementById("contentSubmitButton");
+      const contentCancelButton = document.getElementById("contentCancelButton");
+      const contentModalNote = document.getElementById("contentModalNote");
+      const contentManualInput = document.getElementById("contentManualInput");
+      const liveMode = window.location.protocol !== "file:";
+      const activeVariantSlug = "momentum_weekly_baseline";
+      const maxContentSelections = 20;
+      let previousRunning = false;
+      let contentOptions = [];
+      let contentBaseNote = "";
+
+      function setStatus(text) {
+        status.textContent = text;
+      }
+
+      function setContentStatus(text) {
+        contentStatus.textContent = text || "";
+      }
+
+      function showRefreshComplete(data) {
+        const summary = data.dashboard_summary || {};
+        const signalDate = summary.signal_date || "N/A";
+        const finishedAt = data.last_finished_at || "";
+        setStatus(`完成刷新。当前信号日 ${signalDate}，完成时间 ${finishedAt}`);
+        button.textContent = "更新所有数据";
+      }
+
+      function reloadWithRefreshDoneFlag() {
+        const url = new URL(window.location.href);
+        url.searchParams.set("refresh_done", "1");
+        window.location.replace(url.toString());
+      }
+
+      function applyStatus(data) {
+        const running = Boolean(data.running);
+        button.disabled = running || !liveMode;
+        generateButton.disabled = running || !liveMode;
+        if (!liveMode) {
+          setStatus("刷新按钮需要通过本地服务打开，例如 http://127.0.0.1:8765/");
+          setContentStatus("生成内容按钮同样需要通过本地服务访问。");
+          return;
+        }
+        if (running) {
+          const started = data.last_started_at || "";
+          button.textContent = "刷新中...";
+          setStatus(`后台刷新中，起始时间 ${started}`);
+          previousRunning = true;
+          return;
+        }
+        if (data.last_error) {
+          button.textContent = "更新所有数据";
+          setStatus(`刷新失败: ${data.last_error}`);
+        } else if (data.last_finished_at) {
+          showRefreshComplete(data);
+        } else {
+          button.textContent = "更新所有数据";
+          setStatus("本地服务已就绪，可以手动刷新。");
+        }
+        if (previousRunning) {
+          previousRunning = false;
+          setStatus("完成刷新，正在重新加载页面...");
+          reloadWithRefreshDoneFlag();
+        }
+      }
+
+      async function fetchStatus() {
+        if (!liveMode) {
+          applyStatus({});
+          return;
+        }
+        const response = await fetch(`/api/status?ts=${Date.now()}`, { cache: "no-store" });
+        if (!response.ok) {
+          throw new Error(`status http ${response.status}`);
+        }
+        applyStatus(await response.json());
+      }
+
+      async function triggerRefresh() {
+        if (!liveMode) {
+          applyStatus({});
+          return;
+        }
+        button.disabled = true;
+        generateButton.disabled = true;
+        button.textContent = "刷新中...";
+        setStatus("刷新请求已发送，等待后台执行...");
+        const response = await fetch("/api/refresh", { method: "POST" });
+        const payload = await response.json();
+        applyStatus(payload);
+      }
+
+      function closeContentModal() {
+        contentModal.classList.remove("open");
+        contentModal.setAttribute("aria-hidden", "true");
+      }
+
+      function openContentModal() {
+        contentSearchInput.value = "";
+        contentManualInput.value = "";
+        contentModal.classList.add("open");
+        contentModal.setAttribute("aria-hidden", "false");
+        contentSearchInput.focus();
+      }
+
+      function parseManualTickers() {
+        const raw = (contentManualInput.value || "").toUpperCase();
+        return raw
+          .split(/[\s,，;；/|]+/)
+          .map((item) => item.trim())
+          .filter(Boolean)
+          .map((item) => item.includes(".") ? item : `US.${item}`);
+      }
+
+      function selectedContentCount() {
+        const checked = contentOptionList.querySelectorAll("input[type='checkbox']:checked").length;
+        const manual = new Set(parseManualTickers());
+        return new Set([
+          ...Array.from(contentOptionList.querySelectorAll("input[type='checkbox']:checked")).map((input) => input.value),
+          ...Array.from(manual),
+        ]).size;
+      }
+
+      function refreshSelectionCount() {
+        const selected = selectedContentCount();
+        contentSelectionCount.textContent = `已选 ${selected} / ${maxContentSelections}`;
+        const reachedCap = selected >= maxContentSelections;
+        contentOptionList.querySelectorAll("input[type='checkbox']").forEach((input) => {
+          if (!input.checked) {
+            input.disabled = reachedCap;
+          }
+        });
+        contentSubmitButton.disabled = selected === 0;
+        const manualCount = new Set(parseManualTickers()).size;
+        contentModalNote.textContent = manualCount
+          ? `${contentBaseNote} 手动输入检测到 ${manualCount} 个 ticker。`
+          : contentBaseNote;
+      }
+
+      function renderContentOptions() {
+        if (!contentOptions.length) {
+          contentOptionList.innerHTML = "<div class='option-row'><div class='option-main'><div class='option-title'>当前没有可选标的</div><div class='option-meta'>请先等待看板生成持仓与计划持仓数据。</div></div></div>";
+          refreshSelectionCount();
+          return;
+        }
+        contentOptionList.innerHTML = contentOptions.map((item, idx) => {
+          const badges = [];
+          if (item.is_current) badges.push("<span class='badge-chip'>当前持仓</span>");
+          if (item.is_planned) badges.push(`<span class='badge-chip'>计划持仓${item.planned_action ? " · " + item.planned_action : ""}</span>`);
+          return `
+            <label class="option-row" data-search="${`${item.ticker} ${item.name || ""} ${item.industry_labels || ""}`.toLowerCase()}">
+              <input type="checkbox" value="${item.ticker}" data-index="${idx}">
+              <div class="option-main">
+                <div class="option-title">${item.ticker}${item.name ? " · " + item.name : ""}</div>
+                <div class="option-meta">${item.industry_labels || "未分类"}${item.current_weight ? " · 当前权重 " + (item.current_weight * 100).toFixed(2) + "%" : ""}</div>
+                <div>${badges.join("")}</div>
+              </div>
+            </label>
+          `;
+        }).join("");
+        contentOptionList.querySelectorAll("input[type='checkbox']").forEach((input) => {
+          input.addEventListener("change", refreshSelectionCount);
+        });
+        refreshSelectionCount();
+      }
+
+      function filterContentOptions() {
+        const query = (contentSearchInput.value || "").trim().toLowerCase();
+        contentOptionList.querySelectorAll(".option-row").forEach((row) => {
+          const haystack = row.getAttribute("data-search") || "";
+          row.classList.toggle("hidden", Boolean(query) && !haystack.includes(query));
+        });
+      }
+
+      async function loadContentOptions() {
+        contentSubmitButton.disabled = true;
+        contentModalNote.textContent = "正在读取候选股票...";
+        const response = await fetch(`/api/content-options?variant=${encodeURIComponent(activeVariantSlug)}&ts=${Date.now()}`, { cache: "no-store" });
+        if (!response.ok) {
+          throw new Error(`options http ${response.status}`);
+        }
+        const payload = await response.json();
+        contentOptions = Array.isArray(payload.candidates) ? payload.candidates : [];
+        contentBaseNote = `当前页策略：${payload.variant_name || "N/A"}。候选数：${contentOptions.length}。`;
+        contentModalNote.textContent = contentBaseNote;
+        renderContentOptions();
+      }
+
+      async function openContentGenerator() {
+        if (!liveMode) {
+          setContentStatus("生成内容需要通过本地服务访问。");
+          return;
+        }
+        setContentStatus("");
+        openContentModal();
+        await loadContentOptions();
+      }
+
+      async function submitContentGeneration() {
+        const tickers = Array.from(new Set([
+          ...Array.from(contentOptionList.querySelectorAll("input[type='checkbox']:checked")).map((input) => input.value),
+          ...parseManualTickers(),
+        ]));
+        if (!tickers.length) {
+          setContentStatus("请至少选择 1 只股票。");
+          return;
+        }
+        if (tickers.length > maxContentSelections) {
+          setContentStatus(`最多只能生成 ${maxContentSelections} 只股票。`);
+          return;
+        }
+        contentSubmitButton.disabled = true;
+        contentModalNote.textContent = "正在生成技术面文章，请稍候...";
+        const response = await fetch("/api/generate-content", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ variant_slug: activeVariantSlug, tickers, manual_tickers: contentManualInput.value || "" }),
+        });
+        const payload = await response.json();
+        if (!response.ok) {
+          throw new Error(payload.error || `generate http ${response.status}`);
+        }
+        closeContentModal();
+        setContentStatus(`已生成 ${payload.generated_count} 只股票的技术面文章。`);
+        if (payload.url) {
+          window.open(payload.url, "_blank", "noopener,noreferrer");
+        }
+      }
+
+      button.addEventListener("click", () => {
+        triggerRefresh().catch((error) => {
+          button.disabled = false;
+          setStatus(`刷新请求失败: ${error.message}`);
+        });
+      });
+
+      generateButton.addEventListener("click", () => {
+        openContentGenerator().catch((error) => {
+          closeContentModal();
+          setContentStatus(`候选股票读取失败: ${error.message}`);
+        });
+      });
+
+      contentCancelButton.addEventListener("click", closeContentModal);
+      contentModal.addEventListener("click", (event) => {
+        if (event.target === contentModal) {
+          closeContentModal();
+        }
+      });
+      contentSearchInput.addEventListener("input", filterContentOptions);
+      contentManualInput.addEventListener("input", refreshSelectionCount);
+      contentSubmitButton.addEventListener("click", () => {
+        submitContentGeneration().catch((error) => {
+          contentSubmitButton.disabled = false;
+          contentModalNote.textContent = `生成失败: ${error.message}`;
+          setContentStatus(`生成失败: ${error.message}`);
+        });
+      });
+
+      fetchStatus().then(() => {
+        const url = new URL(window.location.href);
+        if (url.searchParams.get("refresh_done") === "1") {
+          setStatus("完成刷新。页面已更新为最新结果。");
+          url.searchParams.delete("refresh_done");
+          window.history.replaceState(null, "", url.toString());
+        }
+      }).catch((error) => {
+        setStatus(`状态读取失败: ${error.message}`);
+      });
+      if (liveMode) {
+        window.setInterval(() => {
+          fetchStatus().catch(() => null);
+        }, 3000);
+      }
+    })();
+  </script>
+</body>
+</html>
