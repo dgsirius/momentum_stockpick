@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>US Strategy Snapshot - 策略 D</title>
+  <style>
+    :root {
+      --bg: #f5f0e8;
+      --panel: #fffdf9;
+      --ink: #1f2a2e;
+      --muted: #647276;
+      --line: #d8cfc2;
+      --accent: #9b5f2d;
+      --accent-2: #0f5c73;
+      --font: "Avenir Next", "Helvetica Neue", "PingFang SC", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(155,95,45,0.12), transparent 32%),
+        radial-gradient(circle at top right, rgba(15,92,115,0.10), transparent 28%),
+        linear-gradient(180deg, #f7f2ea 0%, var(--bg) 100%);
+    }
+    .wrap {
+      width: min(1280px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 28px 0 48px;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 20px;
+    }
+    .sidebar {
+      background: rgba(255, 253, 249, 0.84);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(31, 42, 46, 0.05);
+      padding: 18px 14px;
+      position: sticky;
+      top: 20px;
+      height: fit-content;
+    }
+    .sidebar-title {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .nav-links {
+      display: grid;
+      gap: 8px;
+    }
+    .nav-link {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 12px;
+      color: var(--ink);
+      text-decoration: none;
+      background: rgba(15,92,115,0.04);
+      border: 1px solid transparent;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .nav-link.active {
+      background: linear-gradient(135deg, rgba(15,92,115,0.14), rgba(155,95,45,0.12));
+      border-color: rgba(15,92,115,0.12);
+    }
+    .hero {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    h1, h2 { margin: 0; }
+    h1 {
+      font-size: 34px;
+      letter-spacing: 0.02em;
+    }
+    .subtitle {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+      max-width: 760px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .card, .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(31, 42, 46, 0.05);
+    }
+    .card {
+      padding: 16px 18px;
+    }
+    .label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .value {
+      margin-top: 8px;
+      font-size: 24px;
+      font-weight: 650;
+    }
+    .stack {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .panel {
+      padding: 18px;
+      overflow: hidden;
+    }
+    .panel p {
+      color: var(--muted);
+      margin: 10px 0 0;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .panel ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .charts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .charts img {
+      width: 100%;
+      display: block;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: white;
+    }
+    .footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+    @media (max-width: 1024px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        position: static;
+      }
+      .cards, .charts {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="sidebar-title">公开版本目录</div>
+        <div class="nav-links">
+          <a class='nav-link' href='../strategy_a/index.html'>策略 A</a>
+<a class='nav-link' href='../strategy_b/index.html'>策略 B</a>
+<a class='nav-link' href='../strategy_c/index.html'>策略 C</a>
+<a class='nav-link active' href='./index.html'>策略 D</a>
+<a class='nav-link' href='../strategy_e/index.html'>策略 E</a>
+        </div>
+      </aside>
+      <main>
+        <section class="hero">
+          <div>
+            <h1>US Strategy Snapshot</h1>
+            <div class="subtitle">这是对外分享版 策略 D。页面只展示汇总绩效、净值曲线与风险轮廓，不展示策略参数、候选池、因子明细、持仓明细、交易标记或本地目录信息。</div>
+          </div>
+        </section>
+        <section class="cards">
+          <div class='card'><div class='label'>公开版本</div><div class='value'>策略 D</div></div>
+<div class='card'><div class='label'>最新信号日</div><div class='value'>2026-04-15</div></div>
+<div class='card'><div class='label'>下个交易日</div><div class='value'>待更新</div></div>
+<div class='card'><div class='label'>策略净值</div><div class='value'>1.3545</div></div>
+<div class='card'><div class='label'>SPY净值</div><div class='value'>1.0228</div></div>
+<div class='card'><div class='label'>CAGR</div><div class='value'>193.57%</div></div>
+<div class='card'><div class='label'>Sharpe</div><div class='value'>2.69</div></div>
+<div class='card'><div class='label'>最大回撤</div><div class='value'>-12.11%</div></div>
+<div class='card'><div class='label'>当前持仓数</div><div class='value'>10</div></div>
+<div class='card'><div class='label'>计划持仓数</div><div class='value'>10</div></div>
+<div class='card'><div class='label'>待新增标的数</div><div class='value'>2</div></div>
+<div class='card'><div class='label'>允许新开仓</div><div class='value'>是</div></div>
+        </section>
+        <section class="stack">
+          <div class="panel">
+            <h2>查看说明</h2>
+            <ul>
+              <li>只展示汇总绩效与风险，不展示参数窗口、候选池、因子打分或逐笔调仓明细。</li>
+<li>图表反映历史结果快照，页面本身不包含本地目录、原始 CSV、JSON 或脚本路径。</li>
+<li>如需进一步交流策略框架，请通过单独材料说明，不在公开页面中直接暴露实现细节。</li>
+            </ul>
+          </div>
+        </section>
+        <section class="charts">
+          <div class="panel">
+            <h2>策略净值 vs SPY</h2>
+            <img src="charts/nav_vs_spy.png" alt="nav vs spy">
+          </div>
+          <div class="panel">
+            <h2>回撤</h2>
+            <img src="charts/drawdown.png" alt="drawdown">
+          </div>
+          <div class="panel">
+            <h2>Rolling 63-Day Return</h2>
+            <img src="charts/rolling_63_return.png" alt="rolling return">
+          </div>
+          <div class="panel">
+            <h2>Rolling 63-Day Excess Return</h2>
+            <img src="charts/rolling_63_excess_return.png" alt="rolling excess return">
+          </div>
+        </section>
+        <div class="footer">
+          <div>公开页更新时间对应信号日：2026-04-15</div>
+          <div>本页不包含本地路径、参数标签、原始持仓文件或候选打分文件。</div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
