@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ER 3/8/20 技术面文章</title>
+  <style>
+    :root {
+      --bg: #f5f0e8;
+      --panel: #fffdf9;
+      --ink: #1f2a2e;
+      --muted: #647276;
+      --line: #d8cfc2;
+      --accent: #9b5f2d;
+      --accent-2: #0f5c73;
+    }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(155,95,45,0.12), transparent 32%),
+        radial-gradient(circle at top right, rgba(15,92,115,0.10), transparent 28%),
+        linear-gradient(180deg, #f7f2ea 0%, var(--bg) 100%);
+      color: var(--ink);
+      font-family: "Avenir Next", "Helvetica Neue", "PingFang SC", sans-serif;
+    }
+    .wrap {
+      width: min(1320px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 28px 0 48px;
+    }
+    .hero, .stock-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(31, 42, 46, 0.05);
+    }
+    .hero {
+      padding: 24px;
+      margin-bottom: 18px;
+    }
+    .hero-sub {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .stock-card {
+      padding: 20px;
+      margin-bottom: 18px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 16px;
+    }
+    h1, h2, h3 { margin: 0; }
+    .stock-header {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 14px;
+      align-items: start;
+    }
+    .stock-subtitle {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .summary-box {
+      background: rgba(15,92,115,0.06);
+      border: 1px solid rgba(15,92,115,0.14);
+      border-radius: 14px;
+      padding: 12px 14px;
+    }
+    .summary-title {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .summary-text {
+      margin-top: 8px;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+    .prose h3 {
+      margin-top: 16px;
+      font-size: 17px;
+    }
+    .prose p {
+      margin-top: 8px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    table.metrics {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      border: 1px solid #ece5da;
+      border-radius: 12px;
+      overflow: hidden;
+      background: white;
+    }
+    .metrics th, .metrics td {
+      text-align: left;
+      padding: 8px 10px;
+      border-bottom: 1px solid #ece5da;
+      vertical-align: top;
+    }
+    .metrics th {
+      width: 42%;
+      color: var(--muted);
+      background: rgba(155,95,45,0.04);
+      font-weight: 600;
+    }
+    @media (max-width: 980px) {
+      .stock-card, .stock-header {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>ER 3/8/20 技术面观察专栏</h1>
+      <div class="hero-sub">
+        生成时间：2026-04-08 22:12:48<br>
+        数据来源：Futu OpenAPI 日 K 线。全文只依据价格、成交量、成交额、均线、RSI、MACD、ATR、支撑阻力和历史日 K 形态来写。<br>
+        写法面向普通投资者，先给摘要，再按短期、中期、长期和历史日 K 结构展开，最后补充风险提示与一句话结论。
+      </div>
+    </section>
+    <section class='stock-card'><div class='stock-header'><div><h2>闪迪 技术面全景：短中长期趋势、日K结构与关键位</h2><div class='stock-subtitle'>闪迪 · US.SNDK · 计算机硬件</div></div><div class='summary-box'><div class='summary-title'>摘要</div><div class='summary-text'>截至 2026-04-08，闪迪 收于 781.44。短线重点看节奏与日 K 形态，中期看 50 日和 120 日均线，长期看 200 日线与 52 周区间位置。</div></div></div><div class='prose'><h3>导语</h3><p>闪迪（US.SNDK）所属行业为 计算机硬件。 全文只基于 Futu OpenAPI 拉取的历史日 K、成交量、成交额和常见技术指标展开。 分析顺序按照短期、中期、长期三个层面推进，再单独讨论历史日 K 形态、关键支撑阻力与风险提示，方便普通投资者直接把图形语言翻译成可理解的交易信息。</p><h3>短期节奏</h3><p>最近 5 日与 20 日涨跌分别为 23.0% 和 26.3%。 RSI14 位于 63.26，MACD 柱值为 5.43，可用于观察短线动能是否继续扩张。 最新成交量相对 20 日均量的比例约为 0.35。 最新一根日 K 接近十字星，说明短线多空仍在激烈博弈。 最新一根日 K 带有射击之星特征，说明上方抛压不轻。 收盘价突破前 20 日高点，属于典型的日线突破结构。 短线更值得关注的支撑位在 558.58 一带，阻力位在 777.60 一带。</p><h3>中期结构</h3><p>中期均线结构偏多，50 日线和 120 日线都处于价格下方。 最近 60 日与 120 日涨跌分别为 107.1% 和 513.9%，这更接近 3 到 6 个月的中期波段表现。 以成交额衡量的量能强度约为 20 日均值的 0.41 倍。 中期交易区间更适合参考近 60 个交易日的支撑 334.54 与阻力 777.60。</p><h3>长期趋势</h3><p>长期趋势仍在 200 日均线上方，底层结构没有被彻底破坏。 当前价格相对 52 周高点的距离约为 -3.3%，52 周高点与低点分别约在 807.99 和 27.89。 年初至今涨跌约为 183.9%。</p><h3>历史日K形态</h3><p>历史日 K 形态最值得看的不是单根蜡烛，而是它放在位置、量能和前后结构里是否成立。 最新一根日 K 接近十字星，说明短线多空仍在激烈博弈。 最新一根日 K 带有射击之星特征，说明上方抛压不轻。 收盘价突破前 20 日高点，属于典型的日线突破结构。 近 20 个交易日呈现抬高高点和抬高低点的特征，日线结构偏向趋势推进。 如果后续出现突破，最好同时看到成交量和成交额同步放大；如果只是价格短暂刺破高低点而量能跟不上，假突破概率会更高。</p><h3>风险提示</h3><p>20 日实现波动率约为 97.8%，ATR14 占股价比例约为 8.4%。 这意味着即便方向判断正确，过程中的震荡也可能不小。 对普通投资者而言，更合理的做法是把关键支撑位和仓位管理放在同等重要的位置。</p><h3>一句话结论</h3><p>如果股价能继续守住 558.58 上方并向 777.60 发起攻击，短线结构会更有利；反之，一旦跌破关键支撑，就要把判断从趋势延续下修为震荡或转弱。</p></div><div class='side-panel'><table class='metrics'><tbody><tr><th>收盘价</th><td>781.44</td></tr><tr><th>5日 / 20日</th><td>23.0% / 26.3%</td></tr><tr><th>60日 / 120日</th><td>107.1% / 513.9%</td></tr><tr><th>YTD</th><td>183.9%</td></tr><tr><th>MA10 / MA20</th><td>671.59 / 685.80</td></tr><tr><th>MA50 / MA120</th><td>634.24 / 413.59</td></tr><tr><th>MA200</th><td>274.53</td></tr><tr><th>RSI14</th><td>63.26</td></tr><tr><th>MACD柱值</th><td>5.43</td></tr><tr><th>量比(20D)</th><td>0.35</td></tr><tr><th>成交额</th><td>$5.01B</td></tr><tr><th>20日支撑 / 阻力</th><td>558.58 / 777.60</td></tr><tr><th>60日支撑 / 阻力</th><td>334.54 / 777.60</td></tr><tr><th>52周高 / 低</th><td>807.99 / 27.89</td></tr></tbody></table></div></section>
+  </div>
+</body>
+</html>

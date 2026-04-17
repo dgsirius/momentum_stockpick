@@ -1,0 +1,67 @@
+{
+  "summary": {
+    "signal_date": "2026-04-15",
+    "next_trade_date": null,
+    "spy_above_ma100": true,
+    "spy_adj_close": 695.5599,
+    "spy_ma100": 677.27479409434,
+    "strategy_nav": 1.4256622583490548,
+    "benchmark_nav": 1.0227878164978614,
+    "data_dir": "/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_relative_strength/futu_2025q4",
+    "warnings": [
+      "Metadata file has no date column. Static metadata is used for all history; this may introduce point-in-time bias.",
+      "Using static market_cap across history. This creates look-ahead bias risk for the $10.0B+ market-cap filter.",
+      "Using static shares_outstanding across history. This approximates point-in-time market cap and may introduce bias."
+    ],
+    "config": {
+      "start_date": "2026-01-01",
+      "fast_window": 3,
+      "mid_window": 8,
+      "slow_window": 20,
+      "initial_capital": 500000.0,
+      "commission_per_order": 1.0,
+      "min_market_cap": 10000000000.0,
+      "market_filter_mode": "none",
+      "mode": "mode_b",
+      "selection_style": "waterfall",
+      "rebalance_frequency": "daily"
+    },
+    "variant": {
+      "name": "ER 3/8/20 (10B)",
+      "slug": "er_3_8_20"
+    },
+    "current_holding_count": 10,
+    "planned_holding_count": 10,
+    "keep_count": 6,
+    "buy_count": 4,
+    "blocked_buy_count": 0,
+    "allow_new_buys": true
+  },
+  "performance": {
+    "CAGR": 2.520875386587029,
+    "Annualized Return": 1.3533119929876813,
+    "Annualized Volatility": 0.43162491569552386,
+    "Sharpe Ratio": 3.135388954103689,
+    "Sortino Ratio": 4.620624283122212,
+    "Max Drawdown": -0.13913731940239726,
+    "Calmar Ratio": 18.117895309571384,
+    "Win Rate": 0.6056338028169014,
+    "Monthly Win Rate": 1.0,
+    "Turnover (Annualized)": 95.73716702120893,
+    "Average Holding Count": 10.0,
+    "Average Daily Turnover": 0.37990939294130527,
+    "Beta vs SPY": 0.737280418130418,
+    "Alpha vs SPY": 1.2863216601742413,
+    "Information Ratio vs SPY": 3.010912663457813
+  },
+  "paths": {
+    "signal_top10_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/latest_signal_top10.csv",
+    "planned_holdings_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/planned_holdings_top10.csv",
+    "current_holdings_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/current_holdings.csv",
+    "historical_buy_counts_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/historical_buy_counts.csv",
+    "profit_contribution_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/profit_contribution_by_ticker.csv",
+    "top10_profit_contributors_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/top10_profit_contributors.csv",
+    "daily_nav_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/daily_nav.csv",
+    "html": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/index.html"
+  }
+}
