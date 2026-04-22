@@ -5,7 +5,7 @@
     "spy_above_ma100": true,
     "spy_adj_close": 26487.48,
     "spy_ma100": 26087.6816,
-    "strategy_nav": 1.0742943101153024,
+    "strategy_nav": 1.321402942761546,
     "benchmark_nav": 1.0334343326359874,
     "data_dir": "/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_dashboard_variants/hk_er_3_8_20_20b_stock_connect",
     "warnings": [
@@ -14,15 +14,15 @@
     ],
     "config": {
       "start_date": "2026-01-01",
-      "fast_window": 3,
-      "mid_window": 8,
-      "slow_window": 20,
+      "fast_window": 8,
+      "mid_window": 15,
+      "slow_window": 40,
       "initial_capital": 500000.0,
       "commission_per_order": 1.0,
       "min_market_cap": 20000000000.0,
       "market_filter_mode": "none",
       "mode": "mode_b",
-      "selection_style": "waterfall",
+      "selection_style": "dual_objective",
       "rebalance_frequency": "daily",
       "industry_filter": "none",
       "market": "HK",
@@ -30,7 +30,7 @@
       "market_cap_currency": "HKD"
     },
     "variant": {
-      "name": "HK ER 3/8/20 (20B, Stock Connect)",
+      "name": "HK ER 8/15/40 Dual Objective (20B, Stock Connect)",
       "slug": "hk_er_3_8_20_20b_stock_connect"
     },
     "current_holding_count": 10,
@@ -41,21 +41,21 @@
     "allow_new_buys": true
   },
   "performance": {
-    "CAGR": 0.28508384608537685,
-    "Annualized Return": 0.3446389593333608,
-    "Annualized Volatility": 0.4339016138651853,
-    "Sharpe Ratio": 0.794279044650987,
-    "Sortino Ratio": 1.0903654470228663,
-    "Max Drawdown": -0.22427306453541906,
-    "Calmar Ratio": 1.2711461658399645,
+    "CAGR": 1.652304876394043,
+    "Annualized Return": 1.087334175478908,
+    "Annualized Volatility": 0.47177067840150083,
+    "Sharpe Ratio": 2.3047938866466207,
+    "Sortino Ratio": 3.6042939054703034,
+    "Max Drawdown": -0.17513643120611722,
+    "Calmar Ratio": 9.434387037665816,
     "Win Rate": 0.5694444444444444,
     "Monthly Win Rate": 0.75,
-    "Turnover (Annualized)": 84.837894191594,
+    "Turnover (Annualized)": 49.92309856126397,
     "Average Holding Count": 10.0,
-    "Average Daily Turnover": 0.3366583102841032,
-    "Beta vs SPY": 0.6970433127139809,
-    "Alpha vs SPY": 0.24816044764065534,
-    "Information Ratio vs SPY": 0.5006898558440697
+    "Average Daily Turnover": 0.19810753397326972,
+    "Beta vs SPY": 0.9380793712277624,
+    "Alpha vs SPY": 0.9574936046924262,
+    "Information Ratio vs SPY": 2.2293874966993363
   },
   "paths": {
     "signal_top10_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/hk_er_3_8_20_20b_stock_connect/latest_signal_top10.csv",
