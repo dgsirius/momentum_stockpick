@@ -5,7 +5,7 @@
     "spy_above_ma100": true,
     "spy_adj_close": 704.08,
     "spy_ma100": 679.23185188491,
-    "strategy_nav": 1.510739251717146,
+    "strategy_nav": 1.5372283175640507,
     "benchmark_nav": 1.0353162191204728,
     "data_dir": "/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_relative_strength/futu_2025q4",
     "warnings": [
@@ -25,7 +25,10 @@
       "mode": "mode_b",
       "selection_style": "waterfall",
       "rebalance_frequency": "daily",
-      "industry_filter": "whitelist"
+      "industry_filter": "whitelist",
+      "market": "US",
+      "benchmark_label": "SPY",
+      "market_cap_currency": "USD"
     },
     "variant": {
       "name": "ER 3/8/20 (10B)",
@@ -39,21 +42,21 @@
     "allow_new_buys": true
   },
   "performance": {
-    "CAGR": 3.000154485349108,
-    "Annualized Return": 1.477892501412668,
-    "Annualized Volatility": 0.4225307140729383,
-    "Sharpe Ratio": 3.497716147464609,
-    "Sortino Ratio": 5.052811326993293,
-    "Max Drawdown": -0.13913731940239726,
-    "Calmar Ratio": 21.56254337969815,
-    "Win Rate": 0.6133333333333333,
+    "CAGR": 3.2407331352993385,
+    "Annualized Return": 1.5338257760665963,
+    "Annualized Volatility": 0.415443789312889,
+    "Sharpe Ratio": 3.692017585828933,
+    "Sortino Ratio": 5.309526050660581,
+    "Max Drawdown": -0.14191056161777682,
+    "Calmar Ratio": 22.836447818647624,
+    "Win Rate": 0.6,
     "Monthly Win Rate": 1.0,
-    "Turnover (Annualized)": 95.37126056738335,
+    "Turnover (Annualized)": 95.96152875161783,
     "Average Holding Count": 10.0,
-    "Average Daily Turnover": 0.37845738320390215,
-    "Beta vs SPY": 0.7470359799601691,
-    "Alpha vs SPY": 1.3827503473974267,
-    "Information Ratio vs SPY": 3.2971841825529533
+    "Average Daily Turnover": 0.38079971726832473,
+    "Beta vs SPY": 0.7032693961015617,
+    "Alpha vs SPY": 1.4442577137603227,
+    "Information Ratio vs SPY": 3.475765292308279
   },
   "paths": {
     "signal_top10_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/latest_signal_top10.csv",

@@ -5,7 +5,7 @@
     "spy_above_ma100": true,
     "spy_adj_close": 704.08,
     "spy_ma100": 679.3992948849101,
-    "strategy_nav": 1.0108852283910692,
+    "strategy_nav": 0.9767156776001065,
     "benchmark_nav": 1.0353162191204728,
     "data_dir": "/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_dashboard_variants/er_3_8_20_1b",
     "warnings": [
@@ -25,7 +25,10 @@
       "mode": "mode_b",
       "selection_style": "waterfall",
       "rebalance_frequency": "daily",
-      "industry_filter": "whitelist"
+      "industry_filter": "whitelist",
+      "market": "US",
+      "benchmark_label": "SPY",
+      "market_cap_currency": "USD"
     },
     "variant": {
       "name": "ER 3/8/20 (1B)",
@@ -39,21 +42,21 @@
     "allow_new_buys": true
   },
   "performance": {
-    "CAGR": 0.03704646986947546,
-    "Annualized Return": 0.1697059225767643,
-    "Annualized Volatility": 0.5156278842022368,
-    "Sharpe Ratio": 0.3291247967307431,
-    "Sortino Ratio": 0.41573709813419624,
-    "Max Drawdown": -0.30528498455434216,
-    "Calmar Ratio": 0.12135044874072742,
-    "Win Rate": 0.5866666666666667,
-    "Monthly Win Rate": 0.75,
-    "Turnover (Annualized)": 104.80143905037579,
+    "CAGR": -0.07610841066657259,
+    "Annualized Return": 0.046311130724424866,
+    "Annualized Volatility": 0.5009751678524922,
+    "Sharpe Ratio": 0.09244196857689517,
+    "Sortino Ratio": 0.12386438771696072,
+    "Max Drawdown": -0.30952178839678934,
+    "Calmar Ratio": -0.24589031699767105,
+    "Win Rate": 0.5066666666666667,
+    "Monthly Win Rate": 0.5,
+    "Turnover (Annualized)": 106.8636532985708,
     "Average Holding Count": 10.72,
-    "Average Daily Turnover": 0.41587872639038015,
-    "Beta vs SPY": 1.0054647283410767,
-    "Alpha vs SPY": 0.04207950214867112,
-    "Information Ratio vs SPY": 0.0864592959578469
+    "Average Daily Turnover": 0.42406211626416984,
+    "Beta vs SPY": 1.1204787979232165,
+    "Alpha vs SPY": -0.09591434383842137,
+    "Information Ratio vs SPY": -0.16994818074873855
   },
   "paths": {
     "signal_top10_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_1b/latest_signal_top10.csv",
