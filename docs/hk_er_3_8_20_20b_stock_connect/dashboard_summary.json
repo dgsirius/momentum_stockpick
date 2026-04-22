@@ -1,0 +1,70 @@
+{
+  "summary": {
+    "signal_date": "2026-04-21",
+    "next_trade_date": null,
+    "spy_above_ma100": true,
+    "spy_adj_close": 26487.48,
+    "spy_ma100": 26087.6816,
+    "strategy_nav": 1.0742943101153024,
+    "benchmark_nav": 1.0334343326359874,
+    "data_dir": "/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_dashboard_variants/hk_er_3_8_20_20b_stock_connect",
+    "warnings": [
+      "Metadata file has no date column. Static metadata is used for all history; this may introduce point-in-time bias.",
+      "Using static market_cap across history. This creates look-ahead bias risk for the $20.0B+ market-cap filter."
+    ],
+    "config": {
+      "start_date": "2026-01-01",
+      "fast_window": 3,
+      "mid_window": 8,
+      "slow_window": 20,
+      "initial_capital": 500000.0,
+      "commission_per_order": 1.0,
+      "min_market_cap": 20000000000.0,
+      "market_filter_mode": "none",
+      "mode": "mode_b",
+      "selection_style": "waterfall",
+      "rebalance_frequency": "daily",
+      "industry_filter": "none",
+      "market": "HK",
+      "benchmark_label": "HSI",
+      "market_cap_currency": "HKD"
+    },
+    "variant": {
+      "name": "HK ER 3/8/20 (20B, Stock Connect)",
+      "slug": "hk_er_3_8_20_20b_stock_connect"
+    },
+    "current_holding_count": 10,
+    "planned_holding_count": 10,
+    "keep_count": 7,
+    "buy_count": 3,
+    "blocked_buy_count": 0,
+    "allow_new_buys": true
+  },
+  "performance": {
+    "CAGR": 0.28508384608537685,
+    "Annualized Return": 0.3446389593333608,
+    "Annualized Volatility": 0.4339016138651853,
+    "Sharpe Ratio": 0.794279044650987,
+    "Sortino Ratio": 1.0903654470228663,
+    "Max Drawdown": -0.22427306453541906,
+    "Calmar Ratio": 1.2711461658399645,
+    "Win Rate": 0.5694444444444444,
+    "Monthly Win Rate": 0.75,
+    "Turnover (Annualized)": 84.837894191594,
+    "Average Holding Count": 10.0,
+    "Average Daily Turnover": 0.3366583102841032,
+    "Beta vs SPY": 0.6970433127139809,
+    "Alpha vs SPY": 0.24816044764065534,
+    "Information Ratio vs SPY": 0.5006898558440697
+  },
+  "paths": {
+    "signal_top10_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/hk_er_3_8_20_20b_stock_connect/latest_signal_top10.csv",
+    "planned_holdings_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/hk_er_3_8_20_20b_stock_connect/planned_holdings_top10.csv",
+    "current_holdings_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/hk_er_3_8_20_20b_stock_connect/current_holdings.csv",
+    "historical_buy_counts_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/hk_er_3_8_20_20b_stock_connect/historical_buy_counts.csv",
+    "profit_contribution_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/hk_er_3_8_20_20b_stock_connect/profit_contribution_by_ticker.csv",
+    "top10_profit_contributors_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/hk_er_3_8_20_20b_stock_connect/top10_profit_contributors.csv",
+    "daily_nav_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/hk_er_3_8_20_20b_stock_connect/daily_nav.csv",
+    "html": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/hk_er_3_8_20_20b_stock_connect/index.html"
+  }
+}
