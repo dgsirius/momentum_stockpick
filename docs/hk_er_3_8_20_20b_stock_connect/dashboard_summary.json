@@ -1,12 +1,12 @@
 {
   "summary": {
-    "signal_date": "2026-04-22",
+    "signal_date": "2026-04-23",
     "next_trade_date": null,
-    "spy_above_ma100": true,
-    "spy_adj_close": 26163.24,
-    "spy_ma100": 26090.958300000002,
-    "strategy_nav": 1.3467559541890033,
-    "benchmark_nav": 1.020783799326896,
+    "spy_above_ma100": false,
+    "spy_adj_close": 25915.2,
+    "spy_ma100": 26097.910099999997,
+    "strategy_nav": 1.3281006336993397,
+    "benchmark_nav": 1.0111062818028798,
     "data_dir": "/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_dashboard_variants/hk_er_3_8_20_20b_stock_connect",
     "warnings": [
       "Metadata file has no date column. Static metadata is used for all history; this may introduce point-in-time bias.",
@@ -41,21 +41,21 @@
     "allow_new_buys": true
   },
   "performance": {
-    "CAGR": 1.7945532015843644,
-    "Annualized Return": 1.1386718110713328,
-    "Annualized Volatility": 0.4692971663503842,
-    "Sharpe Ratio": 2.4263342988548615,
-    "Sortino Ratio": 3.7744678329158687,
-    "Max Drawdown": -0.17513643120611722,
-    "Calmar Ratio": 10.246601402265433,
-    "Win Rate": 0.5753424657534246,
+    "CAGR": 1.6281579280092289,
+    "Annualized Return": 1.0758563851169314,
+    "Annualized Volatility": 0.4667542064692752,
+    "Sharpe Ratio": 2.304974160286976,
+    "Sortino Ratio": 3.6081510228371747,
+    "Max Drawdown": -0.17656580129695154,
+    "Calmar Ratio": 9.22125301757028,
+    "Win Rate": 0.5675675675675675,
     "Monthly Win Rate": 0.75,
-    "Turnover (Annualized)": 50.10793451363773,
+    "Turnover (Annualized)": 50.622141069797046,
     "Average Holding Count": 10.0,
-    "Average Daily Turnover": 0.1988410099747529,
-    "Beta vs SPY": 0.9129197093839794,
-    "Alpha vs SPY": 1.0526222396847187,
-    "Information Ratio vs SPY": 2.4528857071608203
+    "Average Daily Turnover": 0.2008815121817343,
+    "Beta vs SPY": 0.9198816613788059,
+    "Alpha vs SPY": 1.020020555313217,
+    "Information Ratio vs SPY": 2.402613628076342
   },
   "paths": {
     "signal_top10_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/hk_er_3_8_20_20b_stock_connect/latest_signal_top10.csv",
