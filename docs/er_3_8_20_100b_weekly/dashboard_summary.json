@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "signal_date": "2026-05-04",
+    "data_end_date": "2026-05-04",
+    "next_trade_date": "2026-05-05",
+    "spy_above_ma100": true,
+    "spy_adj_close": 718.01,
+    "spy_ma100": 682.6794150352401,
+    "strategy_nav": 1.8991837934170668,
+    "benchmark_nav": 1.055799622898947,
+    "data_dir": "/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_dashboard_variants/er_3_8_20_100b",
+    "warnings": [
+      "Metadata file has no date column. Static metadata is used for all history; this may introduce point-in-time bias.",
+      "Using static market_cap across history. This creates look-ahead bias risk for the $100.0B+ market-cap filter.",
+      "Using static shares_outstanding across history. This approximates point-in-time market cap and may introduce bias."
+    ],
+    "config": {
+      "start_date": "2026-01-01",
+      "fast_window": 3,
+      "mid_window": 8,
+      "slow_window": 20,
+      "initial_capital": 500000.0,
+      "commission_per_order": 1.0,
+      "min_market_cap": 100000000000.0,
+      "market_filter_mode": "none",
+      "mode": "mode_b",
+      "selection_style": "waterfall",
+      "rebalance_frequency": "weekly",
+      "rebalance_update_every": 5,
+      "rebalance_keep_stage": "",
+      "industry_filter": "whitelist",
+      "market": "US",
+      "benchmark_label": "SPY",
+      "market_cap_currency": "USD"
+    },
+    "variant": {
+      "name": "ER 3/8/20 (100B 周调仓)",
+      "slug": "er_3_8_20_100b_weekly"
+    },
+    "current_holding_count": 10,
+    "planned_holding_count": 10,
+    "keep_count": 10,
+    "buy_count": 0,
+    "blocked_buy_count": 0,
+    "allow_new_buys": true
+  },
+  "performance": {
+    "CAGR": 5.850164279464242,
+    "Annualized Return": 2.0032034083478236,
+    "Annualized Volatility": 0.3811574088563173,
+    "Sharpe Ratio": 5.255580402748932,
+    "Sortino Ratio": 7.684383824639709,
+    "Max Drawdown": -0.08529520188407735,
+    "Calmar Ratio": 68.58726106792102,
+    "Win Rate": 0.6785714285714286,
+    "Monthly Win Rate": 0.8,
+    "Turnover (Annualized)": 24.731463668564796,
+    "Average Holding Count": 10.0,
+    "Average Daily Turnover": 0.09814072884351109,
+    "Beta vs SPY": 1.243454438308435,
+    "Alpha vs SPY": 1.7885744951989175,
+    "Information Ratio vs SPY": 5.371070185084401
+  },
+  "paths": {
+    "signal_top10_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_100b_weekly/latest_signal_top10.csv",
+    "planned_holdings_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_100b_weekly/planned_holdings_top10.csv",
+    "current_holdings_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_100b_weekly/current_holdings.csv",
+    "historical_buy_counts_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_100b_weekly/historical_buy_counts.csv",
+    "profit_contribution_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_100b_weekly/profit_contribution_by_ticker.csv",
+    "top10_profit_contributors_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_100b_weekly/top10_profit_contributors.csv",
+    "daily_nav_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_100b_weekly/daily_nav.csv",
+    "html": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_100b_weekly/index.html"
+  }
+}
