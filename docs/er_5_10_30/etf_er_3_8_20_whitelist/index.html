@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>US Strategy Dashboard - ETF ER 3/8/20 (白名单周调仓)</title>
+  <title>US Strategy Dashboard - ETF ER 3/8/20 (白名单日调仓 Top5)</title>
   <style>
     :root {
       --bg: #f5f0e8;
@@ -400,7 +400,7 @@
 <a class='nav-link' href='../er_3_8_20_100b_weekly/index.html'>ER 3/8/20 (100B 周调仓)</a>
 <a class='nav-link' href='../er_3_8_20_5b/index.html'>ER 3/8/20 (5B, All Industries)</a>
 <a class='nav-link' href='../momentum_weekly_baseline/index.html'>动量量能周度基线</a>
-<a class='nav-link active' href='./index.html'>ETF ER 3/8/20 (白名单周调仓)</a>
+<a class='nav-link active' href='./index.html'>ETF ER 3/8/20 (白名单日调仓 Top5)</a>
 <a class='nav-link' href='../hk_er_3_8_20_20b_stock_connect/index.html'>HK ER 8/15/40 Dual Objective Liquidity (20B, Stock Connect)</a>
         </div>
       </aside>
@@ -409,7 +409,7 @@
         <section class="hero">
           <div class="hero-main">
             <h1>US Strategy Dashboard</h1>
-            <div class="subtitle">策略固定为 <span class='tag'>ETF ER 3/8/20 (白名单周调仓)</span><span class='tag'>ETF Whitelist</span><span class='tag'>Initial Capital $500K</span><span class='tag'>Commission $1/order</span><span class='tag'>Weekly Rebalance</span><span class='tag'>All Industries</span><span class='tag'>Top10 Direct</span><span class='tag'>No Market Filter</span><span class='tag'>mode_b</span><span class='tag'>Start 2026-01-01</span></div>
+            <div class="subtitle">策略固定为 <span class='tag'>ETF ER 3/8/20 (白名单日调仓 Top5)</span><span class='tag'>ETF Whitelist</span><span class='tag'>Initial Capital $500K</span><span class='tag'>Commission $1/order</span><span class='tag'>Daily Rebalance</span><span class='tag'>All Industries</span><span class='tag'>Top5 Direct</span><span class='tag'>No Market Filter</span><span class='tag'>mode_a</span><span class='tag'>Start 2026-01-01</span></div>
           </div>
           <div class="toolbar">
             <div class="toolbar-actions">
@@ -425,125 +425,91 @@
           <div class='card'><div class='label'>最新信号日</div><div class='value'>2026-05-20</div></div>
 <div class='card'><div class='label'>下个交易日</div><div class='value'>2026-05-21</div></div>
 <div class='card'><div class='label'>市场过滤</div><div class='value'>none</div></div>
-<div class='card'><div class='label'>策略净值</div><div class='value'>1.4092</div></div>
+<div class='card'><div class='label'>策略净值</div><div class='value'>1.8432</div></div>
 <div class='card'><div class='label'>SPY净值</div><div class='value'>1.0900</div></div>
-<div class='card'><div class='label'>CAGR</div><div class='value'>146.07%</div></div>
-<div class='card'><div class='label'>Sharpe</div><div class='value'>2.87</div></div>
-<div class='card'><div class='label'>最大回撤</div><div class='value'>-17.07%</div></div>
+<div class='card'><div class='label'>CAGR</div><div class='value'>397.89%</div></div>
+<div class='card'><div class='label'>Sharpe</div><div class='value'>3.75</div></div>
+<div class='card'><div class='label'>最大回撤</div><div class='value'>-14.73%</div></div>
         </section>
 
         <section class="grid">
           <div class="panel">
-            <h2>当前持有 / 计划持有 Top10</h2>
+            <h2>当前持有 / 计划持有 Top5</h2>
             <p class="meta">按最新信号日生成，包含 keep / buy 动作。</p>
-            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>er3</th><th>er8</th><th>er20</th></tr></thead><tbody><tr><td>1</td><td>US.XLK</td><td>科技行业精选指数ETF-SPDR</td><td>keep</td><td>0.0022</td><td>0.0043</td><td>0.0783</td></tr>
-<tr><td>2</td><td>US.VGT</td><td>资讯科技ETF-Vanguard</td><td>keep</td><td>0.0018</td><td>0.0074</td><td>0.0626</td></tr>
-<tr><td>5</td><td>US.IGV</td><td>扩展科技软件行业ETF-iShares</td><td>keep</td><td>0.0140</td><td>0.0189</td><td>0.0094</td></tr>
-<tr><td></td><td>US.USO</td><td>美国原油ETF</td><td>keep</td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.EWY</td><td>韩国ETF-iShares MSCI</td><td>keep</td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.IYW</td><td>美国科技ETF-iShares</td><td>keep</td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.QQQM</td><td>NASDAQ100指数ETF-Invesco</td><td>keep</td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.QQQ</td><td>纳指100ETF-Invesco QQQ Trust</td><td>keep</td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.IVW</td><td>标普500成长股指数ETF-iShares</td><td>keep</td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.SPYG</td><td>SPDR Portfolio S&P 500 Growth ETF</td><td>keep</td><td></td><td></td><td></td></tr></tbody></table>
+            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>er3</th><th>er8</th><th>er20</th></tr></thead><tbody><tr><td>2</td><td>US.BWET</td><td>BWET</td><td>keep</td><td>0.0405</td><td>0.1185</td><td>0.4262</td></tr>
+<tr><td>3</td><td>US.CIBR</td><td>CIBR</td><td>keep</td><td>0.0302</td><td>0.0793</td><td>0.1428</td></tr>
+<tr><td>1</td><td>US.NASA</td><td>NASA</td><td>keep</td><td>0.0633</td><td>0.1415</td><td>0.1224</td></tr>
+<tr><td>6</td><td>US.BOAT</td><td>BOAT</td><td>buy</td><td>0.0470</td><td>0.0103</td><td>0.0457</td></tr>
+<tr><td>4</td><td>US.XLE</td><td>XLE</td><td>keep</td><td>0.0032</td><td>0.0687</td><td>0.0154</td></tr></tbody></table>
           </div>
           <div class="panel">
             <h2>当前实际持仓</h2>
-            <p class="meta">最新信号日对应的 mode_b 实际持仓快照。</p>
-            <table><thead><tr><th>ticker</th><th>name</th><th>shares</th><th>weight</th><th>market_value</th></tr></thead><tbody><tr><td>US.EWY</td><td>韩国ETF-iShares MSCI</td><td>408.9768</td><td>0.1045</td><td></td></tr>
-<tr><td>US.QQQ</td><td>纳指100ETF-Invesco QQQ Trust</td><td>99.1553</td><td>0.1004</td><td></td></tr>
-<tr><td>US.QQQM</td><td>NASDAQ100指数ETF-Invesco</td><td>240.8116</td><td>0.1004</td><td></td></tr>
-<tr><td>US.IVW</td><td>标普500成长股指数ETF-iShares</td><td>515.4369</td><td>0.0997</td><td></td></tr>
-<tr><td>US.SPYG</td><td>SPDR Portfolio S&P 500 Growth ETF</td><td>594.8819</td><td>0.0997</td><td></td></tr>
-<tr><td>US.USO</td><td>美国原油ETF</td><td>483.5378</td><td>0.0990</td><td></td></tr>
-<tr><td>US.XLK</td><td>科技行业精选指数ETF-SPDR</td><td>369.7806</td><td>0.0930</td><td></td></tr>
-<tr><td>US.IGV</td><td>扩展科技软件行业ETF-iShares</td><td>693.7494</td><td>0.0919</td><td></td></tr>
-<tr><td>US.VGT</td><td>资讯科技ETF-Vanguard</td><td>567.6384</td><td>0.0917</td><td></td></tr>
-<tr><td>US.IYW</td><td>美国科技ETF-iShares</td><td>262.2440</td><td>0.0891</td><td></td></tr></tbody></table>
+            <p class="meta">最新信号日对应的 mode_a 实际持仓快照。</p>
+            <table><thead><tr><th>ticker</th><th>name</th><th>shares</th><th>weight</th><th>market_value</th></tr></thead><tbody><tr><td>US.NASA</td><td>NASA</td><td>5,163.5219</td><td>0.2061</td><td></td></tr>
+<tr><td>US.CIBR</td><td>CIBR</td><td>2,323.1960</td><td>0.2058</td><td></td></tr>
+<tr><td>US.XLE</td><td>XLE</td><td>3,044.1088</td><td>0.1975</td><td></td></tr>
+<tr><td>US.BWET</td><td>BWET</td><td>963.8753</td><td>0.1967</td><td></td></tr>
+<tr><td>US.BNO</td><td>BNO</td><td>3,210.8891</td><td>0.1939</td><td></td></tr></tbody></table>
           </div>
         </section>
 
         <section class="stack">
           <div class="panel">
-            <h2>最新信号 Top10</h2>
-            <p class="meta">每日更新的 top10 名单，按当前策略排序输出。</p>
-            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>planned_holding</th><th>er3</th><th>er8</th><th>er20</th><th>adv20</th></tr></thead><tbody><tr><td>1</td><td>US.XLK</td><td>科技行业精选指数ETF-SPDR</td><td>keep</td><td>True</td><td>0.0022</td><td>0.0043</td><td>0.0783</td><td>1,966,153,341.8300</td></tr>
-<tr><td>2</td><td>US.VGT</td><td>资讯科技ETF-Vanguard</td><td>keep</td><td>True</td><td>0.0018</td><td>0.0074</td><td>0.0626</td><td>496,997,618.7540</td></tr>
-<tr><td>5</td><td>US.IGV</td><td>扩展科技软件行业ETF-iShares</td><td>keep</td><td>True</td><td>0.0140</td><td>0.0189</td><td>0.0094</td><td>1,998,579,047.3510</td></tr>
-<tr><td>3</td><td>US.XLE</td><td>能源指数ETF-SPDR</td><td>watch</td><td>False</td><td>0.0032</td><td>0.0687</td><td>0.0154</td><td>2,166,241,366.3920</td></tr>
-<tr><td>4</td><td>US.FTXN</td><td>First Trust Exchange-Traded Fund VI First Trust Nasdaq Oil & Gas ETF</td><td>watch</td><td>False</td><td>0.0042</td><td>0.0728</td><td>0.0138</td><td>68,473,987.6874</td></tr>
-<tr><td>6</td><td>US.VOO</td><td>标普500ETF-Vanguard</td><td>watch</td><td>False</td><td>0.0003</td><td>0.0003</td><td>0.0001</td><td>3,855,044,119.4050</td></tr>
-<tr><td>7</td><td>US.IVV</td><td>标普500ETF-iShares</td><td>watch</td><td>False</td><td>0.0003</td><td>0.0002</td><td>0.0001</td><td>3,708,900,869.6355</td></tr>
-<tr><td>8</td><td>US.SPYM</td><td>投资组合标普500指数ETF-SPDR</td><td>watch</td><td>False</td><td>0.0003</td><td>0.0001</td><td>0.0000</td><td>662,928,136.2795</td></tr>
-<tr><td></td><td>US.USO</td><td>美国原油ETF</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.EWY</td><td>韩国ETF-iShares MSCI</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.IYW</td><td>美国科技ETF-iShares</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.QQQM</td><td>NASDAQ100指数ETF-Invesco</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.QQQ</td><td>纳指100ETF-Invesco QQQ Trust</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.IVW</td><td>标普500成长股指数ETF-iShares</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.SPYG</td><td>SPDR Portfolio S&P 500 Growth ETF</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td></tr></tbody></table>
+            <h2>最新信号 Top5</h2>
+            <p class="meta">每日更新的 top5 名单，按当前策略排序输出。</p>
+            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>planned_holding</th><th>er3</th><th>er8</th><th>er20</th><th>adv20</th></tr></thead><tbody><tr><td>2</td><td>US.BWET</td><td>BWET</td><td>keep</td><td>True</td><td>0.0405</td><td>0.1185</td><td>0.4262</td><td>13,934,212.3045</td></tr>
+<tr><td>3</td><td>US.CIBR</td><td>CIBR</td><td>keep</td><td>True</td><td>0.0302</td><td>0.0793</td><td>0.1428</td><td>110,987,524.8705</td></tr>
+<tr><td>1</td><td>US.NASA</td><td>NASA</td><td>keep</td><td>True</td><td>0.0633</td><td>0.1415</td><td>0.1224</td><td>108,000,768.2610</td></tr>
+<tr><td>6</td><td>US.BOAT</td><td>BOAT</td><td>buy</td><td>True</td><td>0.0470</td><td>0.0103</td><td>0.0457</td><td>925,157.4288</td></tr>
+<tr><td>4</td><td>US.XLE</td><td>XLE</td><td>keep</td><td>True</td><td>0.0032</td><td>0.0687</td><td>0.0154</td><td>2,166,241,366.3920</td></tr></tbody></table>
           </div>
 
           <div class="panel">
             <h2>历史触发买入信号标的</h2>
             <p class="meta">这里按策略实际 BUY 事件统计，而不是仅进过 top10 名单。按出现次数排序。</p>
-            <table><thead><tr><th>ticker</th><th>name</th><th>industry_labels</th><th>buy_count</th><th>total_buy_value</th><th>latest_adj_close</th><th>first_signal_date</th><th>last_signal_date</th></tr></thead><tbody><tr><td>US.EWT</td><td>安硕MSCI台湾ETF</td><td></td><td>4</td><td>215,741.6314</td><td>91.9200</td><td>2025-12-31 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
-<tr><td>US.SMH</td><td>半导体指数ETF-VanEck</td><td></td><td>4</td><td>209,319.7780</td><td>564.6600</td><td>2025-12-31 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
-<tr><td>US.USO</td><td>美国原油ETF</td><td></td><td>3</td><td>176,553.1260</td><td>144.2700</td><td>2026-02-19 00:00:00</td><td>2026-05-15 00:00:00</td></tr>
-<tr><td>US.EWY</td><td>韩国ETF-iShares MSCI</td><td></td><td>3</td><td>159,641.2328</td><td>180.1100</td><td>2025-12-31 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
-<tr><td>US.ETHA</td><td>以太坊ETF-iShares</td><td></td><td>3</td><td>158,523.0342</td><td>16.1400</td><td>2026-01-06 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
-<tr><td>US.SOXX</td><td>半导体ETF-iShares</td><td></td><td>3</td><td>155,331.3955</td><td>520.3100</td><td>2025-12-31 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
-<tr><td>US.IGV</td><td>扩展科技软件行业ETF-iShares</td><td></td><td>2</td><td>114,513.0742</td><td>93.3200</td><td>2026-03-05 00:00:00</td><td>2026-05-08 00:00:00</td></tr>
-<tr><td>US.GLD</td><td>黄金ETF-SPDR</td><td></td><td>2</td><td>110,268.0365</td><td>417.4000</td><td>2026-01-28 00:00:00</td><td>2026-02-11 00:00:00</td></tr>
-<tr><td>US.ARKK</td><td>创新ETF-ARK</td><td></td><td>2</td><td>109,068.1385</td><td>75.8400</td><td>2026-03-05 00:00:00</td><td>2026-04-17 00:00:00</td></tr>
-<tr><td>US.VGT</td><td>资讯科技ETF-Vanguard</td><td></td><td>2</td><td>109,068.1385</td><td>113.8300</td><td>2026-03-05 00:00:00</td><td>2026-04-17 00:00:00</td></tr>
-<tr><td>US.XLK</td><td>科技行业精选指数ETF-SPDR</td><td></td><td>2</td><td>109,064.1385</td><td>177.1400</td><td>2026-03-05 00:00:00</td><td>2026-04-17 00:00:00</td></tr>
-<tr><td>US.SPMO</td><td>Invesco S&P 500 Momentum ETF</td><td></td><td>2</td><td>108,959.1028</td><td>143.3100</td><td>2026-03-05 00:00:00</td><td>2026-04-24 00:00:00</td></tr>
-<tr><td>US.EWZ</td><td>巴西ETF-iShares</td><td></td><td>2</td><td>108,672.8946</td><td>36.7500</td><td>2026-01-28 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
-<tr><td>US.EFA</td><td>欧澳远东指数ETF-iShares</td><td></td><td>2</td><td>108,451.9162</td><td>103.6200</td><td>2026-02-26 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
-<tr><td>US.KRE</td><td>区域银行指数ETF-SPDR KBW</td><td></td><td>2</td><td>108,431.6504</td><td>69.1700</td><td>2026-02-04 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
-<tr><td>US.URA</td><td>铀价ETF-Global X</td><td></td><td>2</td><td>108,361.0216</td><td>48.0400</td><td>2026-01-06 00:00:00</td><td>2026-04-17 00:00:00</td></tr>
-<tr><td>US.XLU</td><td>公用事业精选行业指数ETF-SPDR</td><td></td><td>2</td><td>107,656.5059</td><td>44.5100</td><td>2026-02-26 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
-<tr><td>US.EWJ</td><td>日本ETF-iShares</td><td></td><td>2</td><td>106,303.1771</td><td>91.2100</td><td>2026-02-11 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
-<tr><td>US.EEM</td><td>新兴市场ETF-iShares</td><td></td><td>2</td><td>106,100.3986</td><td>65.4600</td><td>2025-12-31 00:00:00</td><td>2026-02-26 00:00:00</td></tr>
-<tr><td>US.SPDW</td><td>SPDR投资组合发达世界(美国除外)ETF</td><td></td><td>2</td><td>106,100.3986</td><td>50.0100</td><td>2025-12-31 00:00:00</td><td>2026-02-26 00:00:00</td></tr>
-<tr><td>US.VEA</td><td>富时成熟市场ETF-Vanguard</td><td></td><td>2</td><td>106,100.3986</td><td>70.2000</td><td>2025-12-31 00:00:00</td><td>2026-02-26 00:00:00</td></tr>
-<tr><td>US.VXUS</td><td>全世界股票ETF-Vanguard</td><td></td><td>2</td><td>106,090.3986</td><td>84.1700</td><td>2025-12-31 00:00:00</td><td>2026-02-26 00:00:00</td></tr>
-<tr><td>US.GDXJ</td><td>小型黄金矿业ETF-VanEck</td><td></td><td>2</td><td>105,223.0131</td><td>113.3700</td><td>2026-01-06 00:00:00</td><td>2026-02-11 00:00:00</td></tr>
-<tr><td>US.FTXN</td><td>First Trust Exchange-Traded Fund VI First Trust Nasdaq Oil & Gas ETF</td><td></td><td>2</td><td>104,725.5476</td><td>37.7951</td><td>2026-02-04 00:00:00</td><td>2026-03-05 00:00:00</td></tr>
-<tr><td>US.XOP</td><td>标普油气开采指数ETF-SPDR</td><td></td><td>2</td><td>104,707.5476</td><td>174.7300</td><td>2026-02-04 00:00:00</td><td>2026-03-05 00:00:00</td></tr>
-<tr><td>US.XLE</td><td>能源指数ETF-SPDR</td><td></td><td>2</td><td>104,309.1845</td><td>59.8000</td><td>2026-02-04 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
-<tr><td>US.XLB</td><td>SPDR原物料类ETF</td><td></td><td>2</td><td>104,011.4307</td><td>49.7200</td><td>2026-01-06 00:00:00</td><td>2026-02-04 00:00:00</td></tr>
-<tr><td>US.FTXL</td><td>First Trust Exchange-Traded Fund VI First Trust Nasdaq Semiconductor ETF</td><td></td><td>2</td><td>102,351.5177</td><td>239.8300</td><td>2025-12-31 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
-<tr><td>US.IVW</td><td>标普500成长股指数ETF-iShares</td><td></td><td>1</td><td>70,588.2730</td><td>136.3300</td><td>2026-05-15 00:00:00</td><td>2026-05-15 00:00:00</td></tr>
-<tr><td>US.QQQ</td><td>纳指100ETF-Invesco QQQ Trust</td><td></td><td>1</td><td>70,588.2730</td><td>713.1500</td><td>2026-05-15 00:00:00</td><td>2026-05-15 00:00:00</td></tr>
-<tr><td>US.QQQM</td><td>NASDAQ100指数ETF-Invesco</td><td></td><td>1</td><td>70,588.2730</td><td>293.6300</td><td>2026-05-15 00:00:00</td><td>2026-05-15 00:00:00</td></tr>
-<tr><td>US.SPYG</td><td>SPDR Portfolio S&P 500 Growth ETF</td><td></td><td>1</td><td>70,588.2730</td><td>118.0400</td><td>2026-05-15 00:00:00</td><td>2026-05-15 00:00:00</td></tr>
-<tr><td>US.DRAM</td><td>Roundhill Memory ETF</td><td></td><td>1</td><td>57,194.3805</td><td>51.5100</td><td>2026-05-01 00:00:00</td><td>2026-05-01 00:00:00</td></tr>
-<tr><td>US.IYW</td><td>美国科技ETF-iShares</td><td></td><td>1</td><td>56,982.6324</td><td>239.3300</td><td>2026-04-24 00:00:00</td><td>2026-04-24 00:00:00</td></tr>
-<tr><td>US.IAU</td><td>黄金信托ETF-iShares</td><td></td><td>1</td><td>56,318.3770</td><td>85.5300</td><td>2026-01-28 00:00:00</td><td>2026-01-28 00:00:00</td></tr>
-<tr><td>US.KBE</td><td>银行指数ETF-SPDR KBW</td><td></td><td>1</td><td>55,689.5733</td><td>63.3600</td><td>2026-04-10 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
-<tr><td>US.IJH</td><td>标普中型股指数ETF-iShares</td><td></td><td>1</td><td>53,986.3825</td><td>72.7900</td><td>2026-02-19 00:00:00</td><td>2026-02-19 00:00:00</td></tr>
-<tr><td>US.XLI</td><td>工业指数ETF-SPDR</td><td></td><td>1</td><td>53,982.3825</td><td>170.7300</td><td>2026-02-19 00:00:00</td><td>2026-02-19 00:00:00</td></tr>
-<tr><td>US.EFV</td><td>EAFE价值股ETF-iShares</td><td></td><td>1</td><td>52,747.0771</td><td>78.7500</td><td>2026-02-04 00:00:00</td><td>2026-02-04 00:00:00</td></tr>
-<tr><td>US.SCHD</td><td>美国红利股ETF-Schwab</td><td></td><td>1</td><td>52,747.0771</td><td>32.1200</td><td>2026-02-04 00:00:00</td><td>2026-02-04 00:00:00</td></tr>
-<tr><td>US.XLP</td><td>日常消费品精选行业指数ETF-SPDR</td><td></td><td>1</td><td>52,747.0771</td><td>85.5200</td><td>2026-02-04 00:00:00</td><td>2026-02-04 00:00:00</td></tr>
-<tr><td>US.MTUM</td><td>iShares安硕MSCI美国动量因素</td><td></td><td>1</td><td>52,351.5177</td><td>299.5900</td><td>2026-04-02 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
-<tr><td>US.IBB</td><td>生物科技指数ETF-iShares</td><td></td><td>1</td><td>52,351.5177</td><td>167.9100</td><td>2026-04-02 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
-<tr><td>US.XBI</td><td>标普生物科技ETF-SPDR</td><td></td><td>1</td><td>52,342.5177</td><td>131.7100</td><td>2026-04-02 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
-<tr><td>US.VXX</td><td>标普500短期期货恐慌指数ETN-iPath</td><td></td><td>1</td><td>51,978.4705</td><td>27.0000</td><td>2026-03-05 00:00:00</td><td>2026-03-05 00:00:00</td></tr>
-<tr><td>US.XLC</td><td>通讯服务行业精选指数ETF-SPDR</td><td></td><td>1</td><td>51,978.4705</td><td>116.1000</td><td>2026-03-05 00:00:00</td><td>2026-03-05 00:00:00</td></tr>
-<tr><td>US.BITO</td><td>比特币期货ETF-ProShares</td><td></td><td>1</td><td>51,562.1074</td><td>10.6000</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
-<tr><td>US.IBIT</td><td>比特币ETF-iShares</td><td></td><td>1</td><td>51,562.1074</td><td>43.9900</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
-<tr><td>US.SH</td><td>Proshares做空标普500</td><td></td><td>1</td><td>51,562.1074</td><td>33.4900</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
-<tr><td>US.GDX</td><td>黄金矿业ETF-VanEck</td><td></td><td>1</td><td>51,271.3536</td><td>86.3600</td><td>2026-01-06 00:00:00</td><td>2026-01-06 00:00:00</td></tr>
-<tr><td>US.MISL</td><td>FIRST TRUST INDXX AEROSPACE & DEFENSE ETF</td><td></td><td>1</td><td>51,271.3536</td><td>45.8400</td><td>2026-01-06 00:00:00</td><td>2026-01-06 00:00:00</td></tr>
-<tr><td>US.COPX</td><td>铜矿ETF-Global X</td><td></td><td>1</td><td>51,271.3536</td><td>82.3100</td><td>2026-01-06 00:00:00</td><td>2026-01-06 00:00:00</td></tr>
-<tr><td>US.BIL</td><td>1-3月美国国债ETF-SPDR</td><td></td><td>1</td><td>50,236.9726</td><td>91.5700</td><td>2026-03-19 00:00:00</td><td>2026-03-19 00:00:00</td></tr>
-<tr><td>US.BOXX</td><td>ALPHA ARCHITECT 1-3 MONTH BOX ETF</td><td></td><td>1</td><td>50,236.9726</td><td>116.7700</td><td>2026-03-19 00:00:00</td><td>2026-03-19 00:00:00</td></tr>
-<tr><td>US.IQMM</td><td>ProShares GENIUS Money Market ETF</td><td></td><td>1</td><td>50,236.9726</td><td>100.0800</td><td>2026-03-19 00:00:00</td><td>2026-03-19 00:00:00</td></tr>
-<tr><td>US.SGOV</td><td>0-3月美国国债ETF-iShares</td><td></td><td>1</td><td>50,232.9726</td><td>100.5800</td><td>2026-03-19 00:00:00</td><td>2026-03-19 00:00:00</td></tr>
-<tr><td>US.SLV</td><td>白银ETF-iShares</td><td></td><td>1</td><td>50,000.0000</td><td>68.7300</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr></tbody></table>
+            <table><thead><tr><th>ticker</th><th>name</th><th>industry_labels</th><th>buy_count</th><th>total_buy_value</th><th>latest_adj_close</th><th>first_signal_date</th><th>last_signal_date</th></tr></thead><tbody><tr><td>US.BWET</td><td>BWET</td><td></td><td>29</td><td>1,631,167.1345</td><td>188.0294</td><td>2026-01-14 00:00:00</td><td>2026-05-19 00:00:00</td></tr>
+<tr><td>US.EWY</td><td>EWY</td><td></td><td>24</td><td>1,341,132.1588</td><td>180.1100</td><td>2025-12-31 00:00:00</td><td>2026-05-15 00:00:00</td></tr>
+<tr><td>US.XOP</td><td>XOP</td><td></td><td>17</td><td>811,236.1587</td><td>174.7300</td><td>2026-02-04 00:00:00</td><td>2026-05-18 00:00:00</td></tr>
+<tr><td>US.XTL</td><td>XTL</td><td></td><td>16</td><td>1,474,398.7856</td><td>224.1200</td><td>2025-12-31 00:00:00</td><td>2026-04-21 00:00:00</td></tr>
+<tr><td>US.BNO</td><td>BNO</td><td></td><td>15</td><td>1,284,054.5570</td><td>55.6400</td><td>2026-01-30 00:00:00</td><td>2026-05-19 00:00:00</td></tr>
+<tr><td>US.XLE</td><td>XLE</td><td></td><td>15</td><td>1,064,840.4941</td><td>59.8000</td><td>2026-01-30 00:00:00</td><td>2026-05-18 00:00:00</td></tr>
+<tr><td>US.VXX</td><td>VXX</td><td></td><td>13</td><td>1,080,930.7092</td><td>27.0000</td><td>2026-02-23 00:00:00</td><td>2026-04-07 00:00:00</td></tr>
+<tr><td>US.SOXX</td><td>SOXX</td><td></td><td>12</td><td>606,301.0274</td><td>520.3100</td><td>2026-04-01 00:00:00</td><td>2026-05-12 00:00:00</td></tr>
+<tr><td>US.EWT</td><td>EWT</td><td></td><td>11</td><td>893,336.6125</td><td>91.9200</td><td>2025-12-31 00:00:00</td><td>2026-05-04 00:00:00</td></tr>
+<tr><td>US.SMH</td><td>SMH</td><td></td><td>11</td><td>650,089.1708</td><td>564.6600</td><td>2026-04-01 00:00:00</td><td>2026-05-12 00:00:00</td></tr>
+<tr><td>US.BOAT</td><td>BOAT</td><td></td><td>11</td><td>498,010.8443</td><td>43.4200</td><td>2026-02-02 00:00:00</td><td>2026-03-10 00:00:00</td></tr>
+<tr><td>US.URA</td><td>URA</td><td></td><td>10</td><td>681,322.8560</td><td>48.0400</td><td>2026-01-15 00:00:00</td><td>2026-04-24 00:00:00</td></tr>
+<tr><td>US.PSLV</td><td>PSLV</td><td></td><td>10</td><td>238,533.7021</td><td>24.4800</td><td>2026-01-02 00:00:00</td><td>2026-01-29 00:00:00</td></tr>
+<tr><td>US.EWZ</td><td>EWZ</td><td></td><td>9</td><td>526,486.1683</td><td>36.7500</td><td>2026-02-03 00:00:00</td><td>2026-04-09 00:00:00</td></tr>
+<tr><td>US.MEME</td><td>MEME</td><td></td><td>8</td><td>573,170.4395</td><td>9.5500</td><td>2026-01-13 00:00:00</td><td>2026-05-13 00:00:00</td></tr>
+<tr><td>US.SLV</td><td>SLV</td><td></td><td>8</td><td>234,949.5327</td><td>68.7300</td><td>2026-01-02 00:00:00</td><td>2026-01-29 00:00:00</td></tr>
+<tr><td>US.URNM</td><td>URNM</td><td></td><td>7</td><td>511,304.8448</td><td>57.4300</td><td>2026-01-09 00:00:00</td><td>2026-04-20 00:00:00</td></tr>
+<tr><td>US.ETHA</td><td>ETHA</td><td></td><td>6</td><td>567,913.7012</td><td>16.1400</td><td>2026-03-11 00:00:00</td><td>2026-04-08 00:00:00</td></tr>
+<tr><td>US.COPX</td><td>COPX</td><td></td><td>6</td><td>488,710.5322</td><td>82.3100</td><td>2026-01-02 00:00:00</td><td>2026-04-15 00:00:00</td></tr>
+<tr><td>US.SILJ</td><td>SILJ</td><td></td><td>6</td><td>472,752.9329</td><td>29.3500</td><td>2026-01-06 00:00:00</td><td>2026-03-02 00:00:00</td></tr>
+<tr><td>US.FBTC</td><td>FBTC</td><td></td><td>4</td><td>521,784.6914</td><td>67.5700</td><td>2026-03-11 00:00:00</td><td>2026-03-23 00:00:00</td></tr>
+<tr><td>US.UX</td><td>UX</td><td></td><td>4</td><td>488,467.9370</td><td>29.2700</td><td>2025-12-31 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
+<tr><td>US.GRID</td><td>GRID</td><td></td><td>4</td><td>475,687.2902</td><td>188.4900</td><td>2026-02-02 00:00:00</td><td>2026-02-26 00:00:00</td></tr>
+<tr><td>US.IGV</td><td>IGV</td><td></td><td>4</td><td>457,627.8407</td><td>93.3200</td><td>2026-03-05 00:00:00</td><td>2026-05-15 00:00:00</td></tr>
+<tr><td>US.ITA</td><td>ITA</td><td></td><td>4</td><td>207,910.9825</td><td>223.2800</td><td>2026-01-02 00:00:00</td><td>2026-01-09 00:00:00</td></tr>
+<tr><td>US.MAGS</td><td>MAGS</td><td></td><td>3</td><td>344,255.6091</td><td>69.4900</td><td>2026-04-27 00:00:00</td><td>2026-05-14 00:00:00</td></tr>
+<tr><td>US.DRAM</td><td>DRAM</td><td></td><td>3</td><td>176,964.8555</td><td>51.5100</td><td>2026-05-01 00:00:00</td><td>2026-05-13 00:00:00</td></tr>
+<tr><td>US.XBI</td><td>XBI</td><td></td><td>3</td><td>139,850.3561</td><td>131.7100</td><td>2026-03-31 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
+<tr><td>US.XLP</td><td>XLP</td><td></td><td>3</td><td>114,662.1467</td><td>85.5200</td><td>2026-02-02 00:00:00</td><td>2026-02-06 00:00:00</td></tr>
+<tr><td>US.KRE</td><td>KRE</td><td></td><td>2</td><td>287,089.1593</td><td>69.1700</td><td>2026-04-07 00:00:00</td><td>2026-04-09 00:00:00</td></tr>
+<tr><td>US.XLU</td><td>XLU</td><td></td><td>2</td><td>254,660.8108</td><td>44.5100</td><td>2026-02-24 00:00:00</td><td>2026-03-09 00:00:00</td></tr>
+<tr><td>US.GDX</td><td>GDX</td><td></td><td>2</td><td>232,151.4639</td><td>86.3600</td><td>2026-01-08 00:00:00</td><td>2026-03-02 00:00:00</td></tr>
+<tr><td>US.GDXJ</td><td>GDXJ</td><td></td><td>2</td><td>230,150.9158</td><td>113.3700</td><td>2026-01-06 00:00:00</td><td>2026-03-02 00:00:00</td></tr>
+<tr><td>US.NASA</td><td>NASA</td><td></td><td>2</td><td>192,112.9019</td><td>36.7900</td><td>2026-05-13 00:00:00</td><td>2026-05-18 00:00:00</td></tr>
+<tr><td>US.CIBR</td><td>CIBR</td><td></td><td>2</td><td>187,923.1964</td><td>81.6600</td><td>2026-05-14 00:00:00</td><td>2026-05-19 00:00:00</td></tr>
+<tr><td>US.ARKK</td><td>ARKK</td><td></td><td>2</td><td>133,454.3718</td><td>75.8400</td><td>2026-03-05 00:00:00</td><td>2026-03-06 00:00:00</td></tr>
+<tr><td>US.XME</td><td>XME</td><td></td><td>2</td><td>102,259.6516</td><td>113.1900</td><td>2026-01-07 00:00:00</td><td>2026-01-08 00:00:00</td></tr>
+<tr><td>US.QQQ</td><td>QQQ</td><td></td><td>1</td><td>188,442.7903</td><td>713.1500</td><td>2026-05-15 00:00:00</td><td>2026-05-15 00:00:00</td></tr>
+<tr><td>US.SPMO</td><td>SPMO</td><td></td><td>1</td><td>161,662.2770</td><td>143.3100</td><td>2026-04-30 00:00:00</td><td>2026-04-30 00:00:00</td></tr>
+<tr><td>US.IBB</td><td>IBB</td><td></td><td>1</td><td>136,452.2342</td><td>167.9100</td><td>2026-04-01 00:00:00</td><td>2026-04-01 00:00:00</td></tr>
+<tr><td>US.FXI</td><td>FXI</td><td></td><td>1</td><td>136,242.1907</td><td>36.2400</td><td>2026-03-31 00:00:00</td><td>2026-03-31 00:00:00</td></tr>
+<tr><td>US.EWJ</td><td>EWJ</td><td></td><td>1</td><td>116,540.0456</td><td>91.2100</td><td>2026-02-12 00:00:00</td><td>2026-02-12 00:00:00</td></tr>
+<tr><td>US.XLC</td><td>XLC</td><td></td><td>1</td><td>99,795.0000</td><td>116.1000</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr></tbody></table>
           </div>
         </section>
 
