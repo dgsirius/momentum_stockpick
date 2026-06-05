@@ -131,6 +131,10 @@
       min-width: 150px;
       box-shadow: 0 12px 24px rgba(31, 42, 46, 0.06);
     }
+    a.secondary-btn {
+      text-align: center;
+      text-decoration: none;
+    }
     .secondary-btn[disabled] {
       opacity: 0.65;
       cursor: not-allowed;
@@ -341,6 +345,83 @@
       margin-right: 6px;
       margin-top: 6px;
     }
+    .technical-board {
+      margin-top: 16px;
+      scroll-margin-top: 18px;
+    }
+    .technical-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+    .technical-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+      min-width: 220px;
+    }
+    .technical-summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 12px 0 14px;
+    }
+    .technical-stat {
+      border: 1px solid #ece5da;
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: rgba(255,255,255,0.68);
+    }
+    .technical-stat .label {
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    .technical-stat .value {
+      font-size: 18px;
+      margin-top: 5px;
+    }
+    .technical-table-wrap {
+      overflow-x: auto;
+    }
+    .risk-chip {
+      display: inline-block;
+      min-width: 36px;
+      text-align: center;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .risk-high {
+      background: rgba(181, 54, 46, 0.09);
+    }
+    .risk-high .risk-chip {
+      background: #b5362e;
+      color: white;
+    }
+    .risk-mid .risk-chip {
+      background: rgba(177, 94, 30, 0.16);
+      color: #8a4a18;
+    }
+    .risk-low .risk-chip {
+      background: rgba(26, 127, 82, 0.14);
+      color: var(--good);
+    }
+    .score-cell {
+      font-weight: 750;
+      white-space: nowrap;
+    }
+    .level-cell {
+      white-space: nowrap;
+    }
+    .reason-cell {
+      min-width: 180px;
+      line-height: 1.45;
+      color: var(--muted);
+    }
     .modal-foot {
       display: flex;
       justify-content: flex-end;
@@ -383,6 +464,15 @@
       .cards, .grid, .charts {
         grid-template-columns: 1fr;
       }
+      .technical-head, .technical-actions {
+        align-items: stretch;
+      }
+      .technical-head {
+        flex-direction: column;
+      }
+      .technical-summary {
+        grid-template-columns: 1fr 1fr;
+      }
       .modal-toolbar, .modal-foot {
         flex-direction: column;
         align-items: stretch;
@@ -402,6 +492,7 @@
 <a class='nav-link' href='../hk_er_3_8_20_20b_stock_connect/index.html'>HK ER 8/15/40 Dual Objective Liquidity (20B, Stock Connect)</a>
 <a class='nav-link' href='../er_3_8_20_100b_top5_biweekly_top50/index.html'>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</a>
 <a class='nav-link' href='../er_3_8_20_10b_top5_weekly/index.html'>ER 3/8/20 (10B Top5 周换仓)</a>
+<a class='nav-link' href='#technicalRiskBoard'>技术评分 / 止盈止损</a>
         </div>
       </aside>
 
@@ -414,6 +505,7 @@
           <div class="toolbar">
             <div class="toolbar-actions">
               <button id="generateContentButton" class="secondary-btn" type="button">生成内容</button>
+              <a class="secondary-btn" href="#technicalRiskBoard">技术评分</a>
               <button id="refreshButton" class="refresh-btn" type="button">更新所有数据</button>
             </div>
             <div id="refreshStatus" class="refresh-note">当前为静态快照。</div>
@@ -549,6 +641,21 @@
           </div>
         </section>
 
+        <section class="panel technical-board" id="technicalRiskBoard">
+          <div class="technical-head">
+            <div>
+              <h2>技术面评分 / 止盈止损建议</h2>
+              <p class="meta">聚合所有看板当前实际持仓，并补充 SPY、QQQ；评分按右侧趋势、MACD、KDJ、成交量、ATR 赔率位置计算。</p>
+            </div>
+            <div class="technical-actions">
+              <button id="technicalRiskButton" class="refresh-btn" type="button">刷新评分与点位</button>
+              <div id="technicalRiskStatus" class="refresh-note">等待计算技术评分。</div>
+            </div>
+          </div>
+          <div id="technicalRiskSummary" class="technical-summary"></div>
+          <div id="technicalRiskTable" class="technical-table-wrap"></div>
+        </section>
+
         <div class="footer">
           <div>数据目录：/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_dashboard_variants/etf_er_3_8_20_whitelist</div>
           <div>最新信号日：2026-06-04，下个交易日：2026-06-05</div>
@@ -594,6 +701,10 @@
       const contentCancelButton = document.getElementById("contentCancelButton");
       const contentModalNote = document.getElementById("contentModalNote");
       const contentManualInput = document.getElementById("contentManualInput");
+      const technicalRiskButton = document.getElementById("technicalRiskButton");
+      const technicalRiskStatus = document.getElementById("technicalRiskStatus");
+      const technicalRiskSummary = document.getElementById("technicalRiskSummary");
+      const technicalRiskTable = document.getElementById("technicalRiskTable");
       const apiEnabled = new Set(["127.0.0.1", "localhost"]).has(window.location.hostname);
       const activeVariantSlug = "etf_er_3_8_20_whitelist";
       const maxContentSelections = 20;
@@ -607,6 +718,159 @@
 
       function setContentStatus(text) {
         contentStatus.textContent = text || "";
+      }
+
+      function setTechnicalRiskStatus(text) {
+        technicalRiskStatus.textContent = text || "";
+      }
+
+      function escapeHtml(value) {
+        return String(value ?? "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#39;");
+      }
+
+      function formatNumber(value, digits = 2) {
+        if (value === null || value === undefined || Number.isNaN(Number(value))) return "";
+        return Number(value).toLocaleString("en-US", { minimumFractionDigits: digits, maximumFractionDigits: digits });
+      }
+
+      function formatPct(value) {
+        if (value === null || value === undefined || Number.isNaN(Number(value))) return "";
+        return `${(Number(value) * 100).toFixed(2)}%`;
+      }
+
+      function renderTechnicalRisk(payload) {
+        const strategy = payload.strategy_summary || {};
+        const stats = [
+          ["覆盖标的", `${payload.ticker_count || 0}`],
+          ["高风险", `${payload.risk_high_count || 0}`],
+          ["回测胜率", formatPct(strategy.win_rate)],
+          ["ATR策略", `${formatNumber(strategy.stop_atr, 2)}止损 / ${formatNumber(strategy.take_atr, 2)}止盈`],
+        ];
+        technicalRiskSummary.innerHTML = stats.map(([label, value]) => `
+          <div class="technical-stat">
+            <div class="label">${escapeHtml(label)}</div>
+            <div class="value">${escapeHtml(value || "N/A")}</div>
+          </div>
+        `).join("");
+        const rows = Array.isArray(payload.rows) ? payload.rows : [];
+        if (!rows.length) {
+          technicalRiskTable.innerHTML = "<table><tbody><tr><td>暂无技术评分数据。</td></tr></tbody></table>";
+          return;
+        }
+        const body = rows.map((row) => {
+          const riskClass = row.risk_level === "高" ? "risk-high" : row.risk_level === "中" ? "risk-mid" : "risk-low";
+          const reasons = Array.isArray(row.risk_reasons) && row.risk_reasons.length ? row.risk_reasons.join("；") : (row.cap_reason || "");
+          const sources = Array.isArray(row.sources) ? row.sources.slice(0, 3).join(" / ") : "";
+          const texts = row.texts || {};
+          const detail = [texts.trend, texts.macd, texts.kdj, texts.volume, texts.atr].filter(Boolean).join("；");
+          if (row.status === "missing_price") {
+            return `
+              <tr class="risk-high">
+                <td>${escapeHtml(row.ticker)}</td>
+                <td>${escapeHtml(row.name || "")}</td>
+                <td><span class="risk-chip">高</span></td>
+                <td colspan="9" class="reason-cell">缺少行情缓存，无法计算技术面评分。${escapeHtml(sources)}</td>
+              </tr>
+            `;
+          }
+          return `
+            <tr class="${riskClass}">
+              <td><strong>${escapeHtml(row.ticker)}</strong><div class="reason-cell">${escapeHtml(row.name || "")}</div></td>
+              <td>${escapeHtml(row.latest_date || "")}</td>
+              <td class="score-cell">${escapeHtml(row.score)} / 100<br>${escapeHtml(row.rating || "")}</td>
+              <td><span class="risk-chip">${escapeHtml(row.risk_level || "")}</span></td>
+              <td class="level-cell">${formatNumber(row.close, 2)}</td>
+              <td class="level-cell">${formatNumber(row.stop_loss, 2)}<br><span class="reason-cell">${formatPct(row.stop_pct)}</span></td>
+              <td class="level-cell">${formatNumber(row.take_profit, 2)}<br><span class="reason-cell">${formatPct(row.take_pct)}</span></td>
+              <td class="level-cell">${formatNumber(row.add_price, 2)}</td>
+              <td class="level-cell">${formatNumber(row.invalidation, 2)}</td>
+              <td>${escapeHtml(row.action || "")}</td>
+              <td class="reason-cell">${escapeHtml(reasons || "无高风险触发项")}</td>
+              <td class="reason-cell">${escapeHtml(detail)}<br>${escapeHtml(sources)}</td>
+              <td class="level-cell">${formatPct((row.exit_strategy || {}).win_rate)}<br><span class="reason-cell">${(row.exit_strategy || {}).trades || 0}笔</span></td>
+            </tr>
+          `;
+        }).join("");
+        technicalRiskTable.innerHTML = `
+          <table>
+            <thead>
+              <tr>
+                <th>标的</th>
+                <th>日期</th>
+                <th>评分</th>
+                <th>风险</th>
+                <th>收盘</th>
+                <th>止损</th>
+                <th>止盈</th>
+                <th>加仓区</th>
+                <th>失效</th>
+                <th>动作</th>
+                <th>风险原因</th>
+                <th>技术解读</th>
+                <th>回测胜率</th>
+              </tr>
+            </thead>
+            <tbody>${body}</tbody>
+          </table>
+        `;
+        setTechnicalRiskStatus(`已计算 ${payload.ticker_count || rows.length} 个标的。生成时间 ${payload.generated_at || ""}；回测区间 ${payload.backtest_period || ""}。`);
+      }
+
+      async function loadTechnicalRisk() {
+        if (!apiEnabled) {
+          technicalRiskButton.disabled = true;
+          setTechnicalRiskStatus("技术评分需要通过本地服务计算；GitHub Pages 静态快照不能触发 OpenD 刷新。");
+          return;
+        }
+        setTechnicalRiskStatus("正在计算技术评分和止盈止损点位...");
+        const response = await fetch(`/api/technical-risk?ts=${Date.now()}`, { cache: "no-store" });
+        const payload = await response.json();
+        if (!response.ok) {
+          throw new Error(payload.error || `technical risk http ${response.status}`);
+        }
+        renderTechnicalRisk(payload);
+      }
+
+      async function waitForAllRefreshDone() {
+        for (;;) {
+          const response = await fetch(`/api/status?ts=${Date.now()}`, { cache: "no-store" });
+          const payload = await response.json();
+          if (!payload.running) {
+            if (payload.last_error) throw new Error(payload.last_error);
+            return payload;
+          }
+          setTechnicalRiskStatus(`全部看板数据刷新中，起始时间 ${payload.last_started_at || ""}...`);
+          await new Promise((resolve) => window.setTimeout(resolve, 3000));
+        }
+      }
+
+      async function refreshTechnicalRiskBoard() {
+        if (!apiEnabled) {
+          await loadTechnicalRisk();
+          return;
+        }
+        technicalRiskButton.disabled = true;
+        technicalRiskButton.textContent = "刷新中...";
+        setTechnicalRiskStatus("正在刷新全部看板数据...");
+        const response = await fetch("/api/refresh", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({}),
+        });
+        const payload = await response.json();
+        if (!response.ok && response.status !== 409) {
+          throw new Error(payload.error || `refresh http ${response.status}`);
+        }
+        if (payload.running || response.status === 202 || response.status === 409) {
+          await waitForAllRefreshDone();
+        }
+        setTechnicalRiskStatus("行情和持仓已刷新，正在重新计算技术评分...");
+        await loadTechnicalRisk();
       }
 
       function showRefreshComplete(data) {
@@ -851,6 +1115,14 @@
           setContentStatus(`生成失败: ${error.message}`);
         });
       });
+      technicalRiskButton.addEventListener("click", () => {
+        refreshTechnicalRiskBoard().catch((error) => {
+          setTechnicalRiskStatus(`刷新评分失败: ${error.message}`);
+        }).finally(() => {
+          technicalRiskButton.disabled = !apiEnabled;
+          technicalRiskButton.textContent = "刷新评分与点位";
+        });
+      });
 
       fetchStatus().then(() => {
         const url = new URL(window.location.href);
@@ -867,6 +1139,9 @@
           fetchStatus().catch(() => null);
         }, 3000);
       }
+      loadTechnicalRisk().catch((error) => {
+        setTechnicalRiskStatus(`技术评分读取失败: ${error.message}`);
+      });
     })();
   </script>
 </body>

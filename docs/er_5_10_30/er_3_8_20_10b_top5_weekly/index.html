@@ -131,6 +131,10 @@
       min-width: 150px;
       box-shadow: 0 12px 24px rgba(31, 42, 46, 0.06);
     }
+    a.secondary-btn {
+      text-align: center;
+      text-decoration: none;
+    }
     .secondary-btn[disabled] {
       opacity: 0.65;
       cursor: not-allowed;
@@ -341,6 +345,83 @@
       margin-right: 6px;
       margin-top: 6px;
     }
+    .technical-board {
+      margin-top: 16px;
+      scroll-margin-top: 18px;
+    }
+    .technical-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+    .technical-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+      min-width: 220px;
+    }
+    .technical-summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 12px 0 14px;
+    }
+    .technical-stat {
+      border: 1px solid #ece5da;
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: rgba(255,255,255,0.68);
+    }
+    .technical-stat .label {
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    .technical-stat .value {
+      font-size: 18px;
+      margin-top: 5px;
+    }
+    .technical-table-wrap {
+      overflow-x: auto;
+    }
+    .risk-chip {
+      display: inline-block;
+      min-width: 36px;
+      text-align: center;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .risk-high {
+      background: rgba(181, 54, 46, 0.09);
+    }
+    .risk-high .risk-chip {
+      background: #b5362e;
+      color: white;
+    }
+    .risk-mid .risk-chip {
+      background: rgba(177, 94, 30, 0.16);
+      color: #8a4a18;
+    }
+    .risk-low .risk-chip {
+      background: rgba(26, 127, 82, 0.14);
+      color: var(--good);
+    }
+    .score-cell {
+      font-weight: 750;
+      white-space: nowrap;
+    }
+    .level-cell {
+      white-space: nowrap;
+    }
+    .reason-cell {
+      min-width: 180px;
+      line-height: 1.45;
+      color: var(--muted);
+    }
     .modal-foot {
       display: flex;
       justify-content: flex-end;
@@ -383,6 +464,15 @@
       .cards, .grid, .charts {
         grid-template-columns: 1fr;
       }
+      .technical-head, .technical-actions {
+        align-items: stretch;
+      }
+      .technical-head {
+        flex-direction: column;
+      }
+      .technical-summary {
+        grid-template-columns: 1fr 1fr;
+      }
       .modal-toolbar, .modal-foot {
         flex-direction: column;
         align-items: stretch;
@@ -402,6 +492,7 @@
 <a class='nav-link' href='../hk_er_3_8_20_20b_stock_connect/index.html'>HK ER 8/15/40 Dual Objective Liquidity (20B, Stock Connect)</a>
 <a class='nav-link' href='../er_3_8_20_100b_top5_biweekly_top50/index.html'>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</a>
 <a class='nav-link active' href='./index.html'>ER 3/8/20 (10B Top5 周换仓)</a>
+<a class='nav-link' href='#technicalRiskBoard'>技术评分 / 止盈止损</a>
         </div>
       </aside>
 
@@ -414,6 +505,7 @@
           <div class="toolbar">
             <div class="toolbar-actions">
               <button id="generateContentButton" class="secondary-btn" type="button">生成内容</button>
+              <a class="secondary-btn" href="#technicalRiskBoard">技术评分</a>
               <button id="refreshButton" class="refresh-btn" type="button">更新所有数据</button>
             </div>
             <div id="refreshStatus" class="refresh-note">当前为静态快照。</div>
@@ -422,34 +514,34 @@
         </section>
 
         <section class="cards">
-          <div class='card'><div class='label'>最新信号日</div><div class='value'>2026-06-03</div></div>
-<div class='card'><div class='label'>下个交易日</div><div class='value'>2026-06-04</div></div>
+          <div class='card'><div class='label'>最新信号日</div><div class='value'>2026-06-04</div></div>
+<div class='card'><div class='label'>下个交易日</div><div class='value'>2026-06-05</div></div>
 <div class='card'><div class='label'>市场过滤</div><div class='value'>none</div></div>
-<div class='card'><div class='label'>策略净值</div><div class='value'>1.7311</div></div>
-<div class='card'><div class='label'>SPY净值</div><div class='value'>1.1091</div></div>
-<div class='card'><div class='label'>CAGR</div><div class='value'>273.23%</div></div>
-<div class='card'><div class='label'>Sharpe</div><div class='value'>2.70</div></div>
-<div class='card'><div class='label'>最大回撤</div><div class='value'>-15.44%</div></div>
+<div class='card'><div class='label'>策略净值</div><div class='value'>2.8728</div></div>
+<div class='card'><div class='label'>SPY净值</div><div class='value'>1.1133</div></div>
+<div class='card'><div class='label'>CAGR</div><div class='value'>1128.98%</div></div>
+<div class='card'><div class='label'>Sharpe</div><div class='value'>4.76</div></div>
+<div class='card'><div class='label'>最大回撤</div><div class='value'>-11.87%</div></div>
         </section>
 
         <section class="grid">
           <div class="panel">
             <h2>当前持有 / 计划持有 Top5</h2>
             <p class="meta">按最新信号日生成，包含 keep / buy 动作。</p>
-            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>er3</th><th>er8</th><th>er20</th></tr></thead><tbody><tr><td>1</td><td>US.DELL</td><td>戴尔科技</td><td>keep</td><td>0.0034</td><td>0.6502</td><td>0.9045</td></tr>
-<tr><td>8</td><td>US.ARM</td><td>Arm Holdings</td><td>keep</td><td>0.1687</td><td>0.3654</td><td>0.9299</td></tr>
-<tr><td>6</td><td>US.MU</td><td>美光科技</td><td>keep</td><td>0.1148</td><td>0.4011</td><td>0.6442</td></tr>
-<tr><td>7</td><td>US.OKTA</td><td>Okta</td><td>keep</td><td>0.0142</td><td>0.3782</td><td>0.5611</td></tr>
-<tr><td></td><td>US.UMC</td><td>联电</td><td>keep</td><td></td><td></td><td></td></tr></tbody></table>
+            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>er3</th><th>er8</th><th>er20</th></tr></thead><tbody><tr><td></td><td>US.DELL</td><td>戴尔科技</td><td>keep</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>US.ARM</td><td>Arm Holdings</td><td>keep</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>US.MU</td><td>美光科技</td><td>keep</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>US.CRWD</td><td>CrowdStrike</td><td>keep</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>US.PANW</td><td>Palo Alto Networks</td><td>keep</td><td></td><td></td><td></td></tr></tbody></table>
           </div>
           <div class="panel">
             <h2>当前实际持仓</h2>
             <p class="meta">最新信号日对应的 mode_b 实际持仓快照。</p>
-            <table><thead><tr><th>ticker</th><th>name</th><th>shares</th><th>weight</th><th>market_value</th></tr></thead><tbody><tr><td>US.UMC</td><td>联电</td><td>9,181.1826</td><td>0.2272</td><td></td></tr>
-<tr><td>US.MU</td><td>美光科技</td><td>162.7597</td><td>0.2030</td><td></td></tr>
-<tr><td>US.ARM</td><td>Arm Holdings</td><td>426.0406</td><td>0.2027</td><td></td></tr>
-<tr><td>US.OKTA</td><td>Okta</td><td>1,310.3941</td><td>0.1887</td><td></td></tr>
-<tr><td>US.DELL</td><td>戴尔科技</td><td>366.6466</td><td>0.1784</td><td></td></tr></tbody></table>
+            <table><thead><tr><th>ticker</th><th>name</th><th>shares</th><th>weight</th><th>market_value</th></tr></thead><tbody><tr><td>US.DELL</td><td>戴尔科技</td><td>844.1101</td><td>0.2480</td><td></td></tr>
+<tr><td>US.CRWD</td><td>CrowdStrike</td><td>403.2028</td><td>0.2019</td><td></td></tr>
+<tr><td>US.PANW</td><td>Palo Alto Networks</td><td>994.8976</td><td>0.1934</td><td></td></tr>
+<tr><td>US.ARM</td><td>Arm Holdings</td><td>662.5417</td><td>0.1815</td><td></td></tr>
+<tr><td>US.MU</td><td>美光科技</td><td>252.7052</td><td>0.1752</td><td></td></tr></tbody></table>
           </div>
         </section>
 
@@ -457,73 +549,50 @@
           <div class="panel">
             <h2>最新信号 Top5</h2>
             <p class="meta">每日更新的 top5 名单，按当前策略排序输出。</p>
-            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>planned_holding</th><th>er3</th><th>er8</th><th>er20</th><th>adv20</th></tr></thead><tbody><tr><td>1</td><td>US.DELL</td><td>戴尔科技</td><td>keep</td><td>True</td><td>0.0034</td><td>0.6502</td><td>0.9045</td><td>3,919,771,860.8455</td></tr>
-<tr><td>8</td><td>US.ARM</td><td>Arm Holdings</td><td>keep</td><td>True</td><td>0.1687</td><td>0.3654</td><td>0.9299</td><td>3,882,544,844.7730</td></tr>
-<tr><td>6</td><td>US.MU</td><td>美光科技</td><td>keep</td><td>True</td><td>0.1148</td><td>0.4011</td><td>0.6442</td><td>45,169,197,026.7385</td></tr>
-<tr><td>7</td><td>US.OKTA</td><td>Okta</td><td>keep</td><td>True</td><td>0.0142</td><td>0.3782</td><td>0.5611</td><td>505,906,595.4305</td></tr>
-<tr><td></td><td>US.UMC</td><td>联电</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td></tr></tbody></table>
+            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>planned_holding</th><th>er3</th><th>er8</th><th>er20</th><th>adv20</th></tr></thead><tbody><tr><td></td><td>US.DELL</td><td>戴尔科技</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td>US.ARM</td><td>Arm Holdings</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td>US.MU</td><td>美光科技</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td>US.CRWD</td><td>CrowdStrike</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td>US.PANW</td><td>Palo Alto Networks</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td></tr></tbody></table>
           </div>
 
           <div class="panel">
             <h2>历史触发买入信号标的</h2>
             <p class="meta">这里按策略实际 BUY 事件统计，而不是仅进过 top10 名单。按出现次数排序。</p>
-            <table><thead><tr><th>ticker</th><th>name</th><th>industry_labels</th><th>buy_count</th><th>total_buy_value</th><th>latest_adj_close</th><th>first_signal_date</th><th>last_signal_date</th></tr></thead><tbody><tr><td>US.AAOI</td><td>Applied Optoelectronics</td><td>通讯设备</td><td>3</td><td>418,822.1295</td><td>184.0700</td><td>2026-02-11 00:00:00</td><td>2026-05-01 00:00:00</td></tr>
-<tr><td>US.MU</td><td>美光科技</td><td>半导体</td><td>3</td><td>388,611.4475</td><td>1,079.5700</td><td>2025-12-31 00:00:00</td><td>2026-06-01 00:00:00</td></tr>
-<tr><td>US.IONQ</td><td>IonQ Inc</td><td>计算机硬件</td><td>2</td><td>315,354.5487</td><td>68.2300</td><td>2026-04-17 00:00:00</td><td>2026-05-22 00:00:00</td></tr>
-<tr><td>US.DELL</td><td>戴尔科技</td><td>计算机硬件</td><td>2</td><td>296,443.3501</td><td>421.0800</td><td>2026-03-26 00:00:00</td><td>2026-06-01 00:00:00</td></tr>
-<tr><td>US.BE</td><td>Bloom Energy</td><td>电气设备及零件</td><td>2</td><td>271,642.5240</td><td>287.3200</td><td>2026-01-13 00:00:00</td><td>2026-04-24 00:00:00</td></tr>
-<tr><td>US.RKLB</td><td>Rocket Lab</td><td>航空航天与国防</td><td>2</td><td>268,184.5006</td><td>114.7000</td><td>2026-01-06 00:00:00</td><td>2026-05-15 00:00:00</td></tr>
-<tr><td>US.INTC</td><td>英特尔</td><td>半导体</td><td>2</td><td>267,444.5060</td><td>112.7100</td><td>2026-01-21 00:00:00</td><td>2026-04-17 00:00:00</td></tr>
-<tr><td>US.LITE</td><td>Lumentum</td><td>通讯设备</td><td>2</td><td>259,051.0077</td><td>938.0000</td><td>2026-02-11 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
-<tr><td>US.STX</td><td>希捷科技</td><td>计算机硬件</td><td>2</td><td>258,672.9603</td><td>940.6900</td><td>2026-01-28 00:00:00</td><td>2026-05-01 00:00:00</td></tr>
-<tr><td>US.SNDK</td><td>闪迪</td><td>计算机硬件</td><td>2</td><td>255,994.7504</td><td>1,831.5000</td><td>2026-01-06 00:00:00</td><td>2026-05-08 00:00:00</td></tr>
-<tr><td>US.CIEN</td><td>Ciena</td><td>通讯设备</td><td>2</td><td>254,631.3416</td><td>620.3700</td><td>2026-02-19 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
-<tr><td>US.GLW</td><td>康宁</td><td>电子元件</td><td>2</td><td>254,345.7468</td><td>200.7600</td><td>2026-02-11 00:00:00</td><td>2026-02-26 00:00:00</td></tr>
-<tr><td>US.CVE</td><td>Cenovus能源</td><td>综合油气</td><td>2</td><td>238,536.0296</td><td>29.4800</td><td>2026-02-04 00:00:00</td><td>2026-02-19 00:00:00</td></tr>
-<tr><td>US.ATI</td><td>ATI Inc</td><td>金属加工</td><td>2</td><td>229,156.0207</td><td>179.9400</td><td>2025-12-31 00:00:00</td><td>2026-02-26 00:00:00</td></tr>
-<tr><td>US.ARM</td><td>Arm Holdings</td><td>半导体</td><td>1</td><td>170,983.1168</td><td>411.8300</td><td>2026-06-01 00:00:00</td><td>2026-06-01 00:00:00</td></tr>
-<tr><td>US.OKTA</td><td>Okta</td><td>软件基础设施</td><td>1</td><td>170,436.4082</td><td>124.6500</td><td>2026-06-01 00:00:00</td><td>2026-06-01 00:00:00</td></tr>
-<tr><td>US.QCOM</td><td>高通</td><td>半导体</td><td>1</td><td>166,033.3922</td><td>249.0900</td><td>2026-05-22 00:00:00</td><td>2026-05-22 00:00:00</td></tr>
-<tr><td>US.FTNT</td><td>飞塔信息</td><td>软件基础设施</td><td>1</td><td>162,318.3626</td><td>146.4800</td><td>2026-05-15 00:00:00</td><td>2026-05-15 00:00:00</td></tr>
-<tr><td>US.PANW</td><td>Palo Alto Networks</td><td>软件基础设施</td><td>1</td><td>162,318.3626</td><td>280.4300</td><td>2026-05-15 00:00:00</td><td>2026-05-15 00:00:00</td></tr>
-<tr><td>US.AKAM</td><td>阿克迈</td><td>软件基础设施</td><td>1</td><td>162,318.3626</td><td>160.3600</td><td>2026-05-15 00:00:00</td><td>2026-05-15 00:00:00</td></tr>
-<tr><td>US.UMC</td><td>联电</td><td>半导体</td><td>1</td><td>161,669.6082</td><td>21.4200</td><td>2026-05-15 00:00:00</td><td>2026-05-15 00:00:00</td></tr>
-<tr><td>US.ALAB</td><td>Astera Labs</td><td>半导体</td><td>1</td><td>159,606.9590</td><td>363.5400</td><td>2026-04-24 00:00:00</td><td>2026-04-24 00:00:00</td></tr>
-<tr><td>US.RMBS</td><td>Rambus</td><td>半导体</td><td>1</td><td>159,224.2085</td><td>170.6600</td><td>2026-04-24 00:00:00</td><td>2026-04-24 00:00:00</td></tr>
-<tr><td>US.AMD</td><td>美国超微公司</td><td>半导体</td><td>1</td><td>150,779.9731</td><td>542.5200</td><td>2026-05-08 00:00:00</td><td>2026-05-08 00:00:00</td></tr>
-<tr><td>US.FLEX</td><td>伟创力</td><td>电子元件</td><td>1</td><td>150,779.9731</td><td>161.9400</td><td>2026-05-08 00:00:00</td><td>2026-05-08 00:00:00</td></tr>
-<tr><td>US.SITM</td><td>SiTime</td><td>半导体</td><td>1</td><td>150,779.9731</td><td>712.7500</td><td>2026-05-08 00:00:00</td><td>2026-05-08 00:00:00</td></tr>
-<tr><td>US.CRDO</td><td>Credo Technology</td><td>半导体</td><td>1</td><td>149,533.4149</td><td>214.6000</td><td>2026-04-17 00:00:00</td><td>2026-04-17 00:00:00</td></tr>
-<tr><td>US.MRVL</td><td>迈威尔科技</td><td>半导体</td><td>1</td><td>133,861.2815</td><td>301.6500</td><td>2026-04-02 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
-<tr><td>US.PL</td><td>Planet Labs PBC</td><td>航空航天与国防</td><td>1</td><td>133,433.2679</td><td>43.1300</td><td>2026-04-02 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
-<tr><td>US.KEYS</td><td>Keysight Technologies</td><td>科技仪器</td><td>1</td><td>129,156.0207</td><td>350.4800</td><td>2026-02-26 00:00:00</td><td>2026-02-26 00:00:00</td></tr>
-<tr><td>US.UI</td><td>厄比奎蒂</td><td>通讯设备</td><td>1</td><td>129,156.0207</td><td>576.1300</td><td>2026-02-26 00:00:00</td><td>2026-02-26 00:00:00</td></tr>
-<tr><td>US.AMKR</td><td>艾马克技术</td><td>半导体设备与材料</td><td>1</td><td>126,862.2426</td><td>75.2000</td><td>2026-04-10 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
-<tr><td>US.APA</td><td>阿帕奇石油</td><td>油气勘探与开发</td><td>1</td><td>125,661.1304</td><td>38.3300</td><td>2026-03-26 00:00:00</td><td>2026-03-26 00:00:00</td></tr>
-<tr><td>US.TER</td><td>泰瑞达</td><td>半导体设备与材料</td><td>1</td><td>125,189.7261</td><td>409.6700</td><td>2026-02-11 00:00:00</td><td>2026-02-11 00:00:00</td></tr>
-<tr><td>US.VRT</td><td>Vertiv Holdings</td><td>电气设备及零件</td><td>1</td><td>124,689.3675</td><td>331.4400</td><td>2026-02-11 00:00:00</td><td>2026-02-11 00:00:00</td></tr>
-<tr><td>US.COIN</td><td>Coinbase</td><td>金融数据与证券交易所</td><td>1</td><td>121,961.9710</td><td>163.2200</td><td>2026-03-05 00:00:00</td><td>2026-03-05 00:00:00</td></tr>
-<tr><td>US.AXON</td><td>Axon Enterprise</td><td>航空航天与国防</td><td>1</td><td>121,961.9710</td><td>481.4800</td><td>2026-03-05 00:00:00</td><td>2026-03-05 00:00:00</td></tr>
-<tr><td>US.ESLT</td><td>埃尔比特系统</td><td>航空航天与国防</td><td>1</td><td>121,961.9710</td><td>829.8100</td><td>2026-03-05 00:00:00</td><td>2026-03-05 00:00:00</td></tr>
-<tr><td>US.CEG</td><td>Constellation Energy</td><td>独立电力生产商</td><td>1</td><td>121,961.9710</td><td>267.2400</td><td>2026-03-05 00:00:00</td><td>2026-03-05 00:00:00</td></tr>
-<tr><td>US.VG</td><td>Venture Global</td><td>油气中游</td><td>1</td><td>121,474.5131</td><td>12.5200</td><td>2026-03-05 00:00:00</td><td>2026-03-05 00:00:00</td></tr>
-<tr><td>US.TSEM</td><td>Tower半导体</td><td>半导体</td><td>1</td><td>120,592.1109</td><td>267.9100</td><td>2026-03-19 00:00:00</td><td>2026-03-19 00:00:00</td></tr>
-<tr><td>US.TPL</td><td>Texas Pacific Land</td><td>油气勘探与开发</td><td>1</td><td>120,480.4436</td><td>406.7600</td><td>2026-02-19 00:00:00</td><td>2026-02-19 00:00:00</td></tr>
-<tr><td>US.HL</td><td>赫克拉矿业</td><td>其他贵金属和采矿</td><td>1</td><td>117,911.0911</td><td>16.6700</td><td>2026-01-21 00:00:00</td><td>2026-01-21 00:00:00</td></tr>
-<tr><td>US.IMO</td><td>帝国石油</td><td>综合油气</td><td>1</td><td>117,765.9696</td><td>125.6211</td><td>2026-02-04 00:00:00</td><td>2026-02-04 00:00:00</td></tr>
-<tr><td>US.SKM</td><td>韩国SK电信</td><td>电信服务</td><td>1</td><td>117,765.9696</td><td>45.0400</td><td>2026-02-04 00:00:00</td><td>2026-02-04 00:00:00</td></tr>
-<tr><td>US.WLK</td><td>Westlake</td><td>特殊化工用品</td><td>1</td><td>117,765.9696</td><td>86.3900</td><td>2026-02-04 00:00:00</td><td>2026-02-04 00:00:00</td></tr>
-<tr><td>US.EQNR</td><td>Equinor</td><td>综合油气</td><td>1</td><td>116,894.7649</td><td>37.9500</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
-<tr><td>US.LYB</td><td>利安德巴塞尔</td><td>特殊化工用品</td><td>1</td><td>116,894.7649</td><td>67.3000</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
-<tr><td>US.OXY</td><td>西方石油</td><td>油气勘探与开发</td><td>1</td><td>116,894.7649</td><td>59.6400</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
-<tr><td>US.WDS</td><td>Woodside Energy</td><td>油气勘探与开发</td><td>1</td><td>116,521.0007</td><td>22.3200</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
-<tr><td>US.ASTS</td><td>AST SpaceMobile</td><td>通讯设备</td><td>1</td><td>114,804.3459</td><td>107.7300</td><td>2026-01-28 00:00:00</td><td>2026-01-28 00:00:00</td></tr>
-<tr><td>US.WDC</td><td>西部数据</td><td>计算机硬件</td><td>1</td><td>114,529.0357</td><td>594.1100</td><td>2026-01-28 00:00:00</td><td>2026-01-28 00:00:00</td></tr>
-<tr><td>US.KRMN</td><td>Karman Holdings</td><td>航空航天与国防</td><td>1</td><td>112,035.5651</td><td>51.8400</td><td>2026-01-13 00:00:00</td><td>2026-01-13 00:00:00</td></tr>
-<tr><td>US.KTOS</td><td>克瑞拓斯安全防卫</td><td>航空航天与国防</td><td>1</td><td>111,766.8946</td><td>58.4300</td><td>2026-01-13 00:00:00</td><td>2026-01-13 00:00:00</td></tr>
-<tr><td>US.AA</td><td>美国铝业公司</td><td>铝</td><td>1</td><td>100,000.0000</td><td>80.8600</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr>
-<tr><td>US.BA</td><td>波音</td><td>航空航天与国防</td><td>1</td><td>100,000.0000</td><td>210.5800</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr>
-<tr><td>US.SATS</td><td>回声星通信</td><td>电信服务</td><td>1</td><td>99,600.3197</td><td>120.9200</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr></tbody></table>
+            <table><thead><tr><th>ticker</th><th>name</th><th>industry_labels</th><th>buy_count</th><th>total_buy_value</th><th>latest_adj_close</th><th>first_signal_date</th><th>last_signal_date</th></tr></thead><tbody><tr><td>US.SNDK</td><td>闪迪</td><td>计算机硬件</td><td>5</td><td>826,796.6030</td><td>1,759.6800</td><td>2026-01-06 00:00:00</td><td>2026-05-22 00:00:00</td></tr>
+<tr><td>US.MU</td><td>美光科技</td><td>半导体</td><td>3</td><td>591,538.9286</td><td>996.0000</td><td>2025-12-31 00:00:00</td><td>2026-06-01 00:00:00</td></tr>
+<tr><td>US.ARM</td><td>Arm Holdings</td><td>半导体</td><td>3</td><td>555,824.4569</td><td>393.4400</td><td>2026-02-26 00:00:00</td><td>2026-06-01 00:00:00</td></tr>
+<tr><td>US.GLW</td><td>康宁</td><td>电子元件</td><td>3</td><td>414,842.8554</td><td>197.7000</td><td>2026-02-04 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
+<tr><td>US.COP</td><td>康菲石油</td><td>油气勘探与开发</td><td>3</td><td>406,170.3281</td><td>119.2300</td><td>2026-02-19 00:00:00</td><td>2026-03-26 00:00:00</td></tr>
+<tr><td>US.WDC</td><td>西部数据</td><td>计算机硬件</td><td>3</td><td>369,513.3237</td><td>575.3500</td><td>2025-12-31 00:00:00</td><td>2026-02-19 00:00:00</td></tr>
+<tr><td>US.QCOM</td><td>高通</td><td>半导体</td><td>2</td><td>479,275.1562</td><td>242.5700</td><td>2026-05-08 00:00:00</td><td>2026-05-22 00:00:00</td></tr>
+<tr><td>US.DELL</td><td>戴尔科技</td><td>计算机硬件</td><td>2</td><td>388,811.1516</td><td>422.0500</td><td>2026-03-12 00:00:00</td><td>2026-05-22 00:00:00</td></tr>
+<tr><td>US.MRVL</td><td>迈威尔科技</td><td>半导体</td><td>2</td><td>362,499.6931</td><td>316.4300</td><td>2026-03-26 00:00:00</td><td>2026-05-15 00:00:00</td></tr>
+<tr><td>US.TTE</td><td>道达尔</td><td>综合油气</td><td>2</td><td>286,196.4718</td><td>90.1700</td><td>2026-02-19 00:00:00</td><td>2026-03-19 00:00:00</td></tr>
+<tr><td>US.INTC</td><td>英特尔</td><td>半导体</td><td>2</td><td>273,760.7649</td><td>111.7800</td><td>2026-01-13 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
+<tr><td>US.VZ</td><td>Verizon</td><td>电信服务</td><td>2</td><td>266,400.4709</td><td>44.8700</td><td>2026-02-11 00:00:00</td><td>2026-03-05 00:00:00</td></tr>
+<tr><td>US.STX</td><td>希捷科技</td><td>计算机硬件</td><td>2</td><td>266,136.8207</td><td>925.9900</td><td>2026-01-28 00:00:00</td><td>2026-04-02 00:00:00</td></tr>
+<tr><td>US.PBR</td><td>巴西石油公司</td><td>综合油气</td><td>2</td><td>264,332.3877</td><td>18.0600</td><td>2026-02-11 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
+<tr><td>US.SCCO</td><td>南方铜业</td><td>铜</td><td>2</td><td>244,670.2069</td><td>194.0900</td><td>2026-01-13 00:00:00</td><td>2026-01-28 00:00:00</td></tr>
+<tr><td>US.CRWD</td><td>CrowdStrike</td><td>软件基础设施</td><td>1</td><td>237,804.8519</td><td>719.0900</td><td>2026-05-15 00:00:00</td><td>2026-05-15 00:00:00</td></tr>
+<tr><td>US.CSCO</td><td>思科</td><td>通讯设备</td><td>1</td><td>237,804.8519</td><td>130.0000</td><td>2026-05-15 00:00:00</td><td>2026-05-15 00:00:00</td></tr>
+<tr><td>US.PANW</td><td>Palo Alto Networks</td><td>软件基础设施</td><td>1</td><td>237,804.8519</td><td>279.2500</td><td>2026-05-15 00:00:00</td><td>2026-05-15 00:00:00</td></tr>
+<tr><td>US.TXN</td><td>德州仪器</td><td>半导体</td><td>1</td><td>236,854.3929</td><td>305.3700</td><td>2026-05-15 00:00:00</td><td>2026-05-15 00:00:00</td></tr>
+<tr><td>US.AMD</td><td>美国超微公司</td><td>半导体</td><td>1</td><td>165,657.4286</td><td>523.2000</td><td>2026-04-17 00:00:00</td><td>2026-04-17 00:00:00</td></tr>
+<tr><td>US.AVGO</td><td>博通</td><td>半导体</td><td>1</td><td>165,392.5886</td><td>418.9100</td><td>2026-04-17 00:00:00</td><td>2026-04-17 00:00:00</td></tr>
+<tr><td>US.BHP</td><td>必和必拓</td><td>其他工业金属与采矿</td><td>1</td><td>149,568.7661</td><td>88.7800</td><td>2026-02-26 00:00:00</td><td>2026-02-26 00:00:00</td></tr>
+<tr><td>US.HWM</td><td>Howmet Aerospace</td><td>航空航天与国防</td><td>1</td><td>149,568.7661</td><td>249.3300</td><td>2026-02-26 00:00:00</td><td>2026-02-26 00:00:00</td></tr>
+<tr><td>US.CEG</td><td>Constellation Energy</td><td>独立电力生产商</td><td>1</td><td>138,170.2583</td><td>264.5900</td><td>2026-03-05 00:00:00</td><td>2026-03-05 00:00:00</td></tr>
+<tr><td>US.ENB</td><td>恩桥</td><td>油气中游</td><td>1</td><td>138,170.2583</td><td>56.7400</td><td>2026-03-05 00:00:00</td><td>2026-03-05 00:00:00</td></tr>
+<tr><td>US.PLTR</td><td>Palantir</td><td>软件基础设施</td><td>1</td><td>138,170.2583</td><td>141.7000</td><td>2026-03-05 00:00:00</td><td>2026-03-05 00:00:00</td></tr>
+<tr><td>US.TMUS</td><td>T-Mobile US</td><td>电信服务</td><td>1</td><td>138,170.2583</td><td>177.0200</td><td>2026-03-05 00:00:00</td><td>2026-03-05 00:00:00</td></tr>
+<tr><td>US.BP</td><td>英国石油</td><td>综合油气</td><td>1</td><td>135,240.3627</td><td>44.0400</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
+<tr><td>US.SHEL</td><td>壳牌</td><td>综合油气</td><td>1</td><td>134,699.8337</td><td>86.7300</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
+<tr><td>US.VRT</td><td>Vertiv Holdings</td><td>电气设备及零件</td><td>1</td><td>129,092.0250</td><td>323.9200</td><td>2026-02-11 00:00:00</td><td>2026-02-11 00:00:00</td></tr>
+<tr><td>US.NEM</td><td>纽曼矿业</td><td>黄金</td><td>1</td><td>107,367.1168</td><td>108.3300</td><td>2026-01-06 00:00:00</td><td>2026-01-06 00:00:00</td></tr>
+<tr><td>US.BA</td><td>波音</td><td>航空航天与国防</td><td>1</td><td>100,000.0000</td><td>217.4200</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr>
+<tr><td>US.LMT</td><td>洛克希德马丁</td><td>航空航天与国防</td><td>1</td><td>100,000.0000</td><td>519.0500</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr>
+<tr><td>US.LRCX</td><td>泛林集团</td><td>半导体设备与材料</td><td>1</td><td>100,000.0000</td><td>336.4100</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr></tbody></table>
           </div>
         </section>
 
@@ -562,10 +631,25 @@
           </div>
         </section>
 
+        <section class="panel technical-board" id="technicalRiskBoard">
+          <div class="technical-head">
+            <div>
+              <h2>技术面评分 / 止盈止损建议</h2>
+              <p class="meta">聚合所有看板当前实际持仓，并补充 SPY、QQQ；评分按右侧趋势、MACD、KDJ、成交量、ATR 赔率位置计算。</p>
+            </div>
+            <div class="technical-actions">
+              <button id="technicalRiskButton" class="refresh-btn" type="button">刷新评分与点位</button>
+              <div id="technicalRiskStatus" class="refresh-note">等待计算技术评分。</div>
+            </div>
+          </div>
+          <div id="technicalRiskSummary" class="technical-summary"></div>
+          <div id="technicalRiskTable" class="technical-table-wrap"></div>
+        </section>
+
         <div class="footer">
           <div>数据目录：/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_relative_strength/futu_2025q4</div>
-          <div>最新信号日：2026-06-03，下个交易日：2026-06-04</div>
-          <div>SPY 收盘：754.24，市场过滤：none</div>
+          <div>最新信号日：2026-06-04，下个交易日：2026-06-05</div>
+          <div>SPY 收盘：nan，市场过滤：none</div>
           <div>Warnings：Metadata file has no date column. Static metadata is used for all history; this may introduce point-in-time bias.；Using static market_cap across history. This creates look-ahead bias risk for the $10.0B+ market-cap filter.；Using static shares_outstanding across history. This approximates point-in-time market cap and may introduce bias.</div>
         </div>
       </main>
@@ -607,6 +691,10 @@
       const contentCancelButton = document.getElementById("contentCancelButton");
       const contentModalNote = document.getElementById("contentModalNote");
       const contentManualInput = document.getElementById("contentManualInput");
+      const technicalRiskButton = document.getElementById("technicalRiskButton");
+      const technicalRiskStatus = document.getElementById("technicalRiskStatus");
+      const technicalRiskSummary = document.getElementById("technicalRiskSummary");
+      const technicalRiskTable = document.getElementById("technicalRiskTable");
       const apiEnabled = new Set(["127.0.0.1", "localhost"]).has(window.location.hostname);
       const activeVariantSlug = "er_3_8_20_10b_top5_weekly";
       const maxContentSelections = 20;
@@ -620,6 +708,159 @@
 
       function setContentStatus(text) {
         contentStatus.textContent = text || "";
+      }
+
+      function setTechnicalRiskStatus(text) {
+        technicalRiskStatus.textContent = text || "";
+      }
+
+      function escapeHtml(value) {
+        return String(value ?? "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#39;");
+      }
+
+      function formatNumber(value, digits = 2) {
+        if (value === null || value === undefined || Number.isNaN(Number(value))) return "";
+        return Number(value).toLocaleString("en-US", { minimumFractionDigits: digits, maximumFractionDigits: digits });
+      }
+
+      function formatPct(value) {
+        if (value === null || value === undefined || Number.isNaN(Number(value))) return "";
+        return `${(Number(value) * 100).toFixed(2)}%`;
+      }
+
+      function renderTechnicalRisk(payload) {
+        const strategy = payload.strategy_summary || {};
+        const stats = [
+          ["覆盖标的", `${payload.ticker_count || 0}`],
+          ["高风险", `${payload.risk_high_count || 0}`],
+          ["回测胜率", formatPct(strategy.win_rate)],
+          ["ATR策略", `${formatNumber(strategy.stop_atr, 2)}止损 / ${formatNumber(strategy.take_atr, 2)}止盈`],
+        ];
+        technicalRiskSummary.innerHTML = stats.map(([label, value]) => `
+          <div class="technical-stat">
+            <div class="label">${escapeHtml(label)}</div>
+            <div class="value">${escapeHtml(value || "N/A")}</div>
+          </div>
+        `).join("");
+        const rows = Array.isArray(payload.rows) ? payload.rows : [];
+        if (!rows.length) {
+          technicalRiskTable.innerHTML = "<table><tbody><tr><td>暂无技术评分数据。</td></tr></tbody></table>";
+          return;
+        }
+        const body = rows.map((row) => {
+          const riskClass = row.risk_level === "高" ? "risk-high" : row.risk_level === "中" ? "risk-mid" : "risk-low";
+          const reasons = Array.isArray(row.risk_reasons) && row.risk_reasons.length ? row.risk_reasons.join("；") : (row.cap_reason || "");
+          const sources = Array.isArray(row.sources) ? row.sources.slice(0, 3).join(" / ") : "";
+          const texts = row.texts || {};
+          const detail = [texts.trend, texts.macd, texts.kdj, texts.volume, texts.atr].filter(Boolean).join("；");
+          if (row.status === "missing_price") {
+            return `
+              <tr class="risk-high">
+                <td>${escapeHtml(row.ticker)}</td>
+                <td>${escapeHtml(row.name || "")}</td>
+                <td><span class="risk-chip">高</span></td>
+                <td colspan="9" class="reason-cell">缺少行情缓存，无法计算技术面评分。${escapeHtml(sources)}</td>
+              </tr>
+            `;
+          }
+          return `
+            <tr class="${riskClass}">
+              <td><strong>${escapeHtml(row.ticker)}</strong><div class="reason-cell">${escapeHtml(row.name || "")}</div></td>
+              <td>${escapeHtml(row.latest_date || "")}</td>
+              <td class="score-cell">${escapeHtml(row.score)} / 100<br>${escapeHtml(row.rating || "")}</td>
+              <td><span class="risk-chip">${escapeHtml(row.risk_level || "")}</span></td>
+              <td class="level-cell">${formatNumber(row.close, 2)}</td>
+              <td class="level-cell">${formatNumber(row.stop_loss, 2)}<br><span class="reason-cell">${formatPct(row.stop_pct)}</span></td>
+              <td class="level-cell">${formatNumber(row.take_profit, 2)}<br><span class="reason-cell">${formatPct(row.take_pct)}</span></td>
+              <td class="level-cell">${formatNumber(row.add_price, 2)}</td>
+              <td class="level-cell">${formatNumber(row.invalidation, 2)}</td>
+              <td>${escapeHtml(row.action || "")}</td>
+              <td class="reason-cell">${escapeHtml(reasons || "无高风险触发项")}</td>
+              <td class="reason-cell">${escapeHtml(detail)}<br>${escapeHtml(sources)}</td>
+              <td class="level-cell">${formatPct((row.exit_strategy || {}).win_rate)}<br><span class="reason-cell">${(row.exit_strategy || {}).trades || 0}笔</span></td>
+            </tr>
+          `;
+        }).join("");
+        technicalRiskTable.innerHTML = `
+          <table>
+            <thead>
+              <tr>
+                <th>标的</th>
+                <th>日期</th>
+                <th>评分</th>
+                <th>风险</th>
+                <th>收盘</th>
+                <th>止损</th>
+                <th>止盈</th>
+                <th>加仓区</th>
+                <th>失效</th>
+                <th>动作</th>
+                <th>风险原因</th>
+                <th>技术解读</th>
+                <th>回测胜率</th>
+              </tr>
+            </thead>
+            <tbody>${body}</tbody>
+          </table>
+        `;
+        setTechnicalRiskStatus(`已计算 ${payload.ticker_count || rows.length} 个标的。生成时间 ${payload.generated_at || ""}；回测区间 ${payload.backtest_period || ""}。`);
+      }
+
+      async function loadTechnicalRisk() {
+        if (!apiEnabled) {
+          technicalRiskButton.disabled = true;
+          setTechnicalRiskStatus("技术评分需要通过本地服务计算；GitHub Pages 静态快照不能触发 OpenD 刷新。");
+          return;
+        }
+        setTechnicalRiskStatus("正在计算技术评分和止盈止损点位...");
+        const response = await fetch(`/api/technical-risk?ts=${Date.now()}`, { cache: "no-store" });
+        const payload = await response.json();
+        if (!response.ok) {
+          throw new Error(payload.error || `technical risk http ${response.status}`);
+        }
+        renderTechnicalRisk(payload);
+      }
+
+      async function waitForAllRefreshDone() {
+        for (;;) {
+          const response = await fetch(`/api/status?ts=${Date.now()}`, { cache: "no-store" });
+          const payload = await response.json();
+          if (!payload.running) {
+            if (payload.last_error) throw new Error(payload.last_error);
+            return payload;
+          }
+          setTechnicalRiskStatus(`全部看板数据刷新中，起始时间 ${payload.last_started_at || ""}...`);
+          await new Promise((resolve) => window.setTimeout(resolve, 3000));
+        }
+      }
+
+      async function refreshTechnicalRiskBoard() {
+        if (!apiEnabled) {
+          await loadTechnicalRisk();
+          return;
+        }
+        technicalRiskButton.disabled = true;
+        technicalRiskButton.textContent = "刷新中...";
+        setTechnicalRiskStatus("正在刷新全部看板数据...");
+        const response = await fetch("/api/refresh", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({}),
+        });
+        const payload = await response.json();
+        if (!response.ok && response.status !== 409) {
+          throw new Error(payload.error || `refresh http ${response.status}`);
+        }
+        if (payload.running || response.status === 202 || response.status === 409) {
+          await waitForAllRefreshDone();
+        }
+        setTechnicalRiskStatus("行情和持仓已刷新，正在重新计算技术评分...");
+        await loadTechnicalRisk();
       }
 
       function showRefreshComplete(data) {
@@ -864,6 +1105,14 @@
           setContentStatus(`生成失败: ${error.message}`);
         });
       });
+      technicalRiskButton.addEventListener("click", () => {
+        refreshTechnicalRiskBoard().catch((error) => {
+          setTechnicalRiskStatus(`刷新评分失败: ${error.message}`);
+        }).finally(() => {
+          technicalRiskButton.disabled = !apiEnabled;
+          technicalRiskButton.textContent = "刷新评分与点位";
+        });
+      });
 
       fetchStatus().then(() => {
         const url = new URL(window.location.href);
@@ -880,6 +1129,9 @@
           fetchStatus().catch(() => null);
         }, 3000);
       }
+      loadTechnicalRisk().catch((error) => {
+        setTechnicalRiskStatus(`技术评分读取失败: ${error.message}`);
+      });
     })();
   </script>
 </body>

@@ -131,6 +131,10 @@
       min-width: 150px;
       box-shadow: 0 12px 24px rgba(31, 42, 46, 0.06);
     }
+    a.secondary-btn {
+      text-align: center;
+      text-decoration: none;
+    }
     .secondary-btn[disabled] {
       opacity: 0.65;
       cursor: not-allowed;
@@ -341,6 +345,83 @@
       margin-right: 6px;
       margin-top: 6px;
     }
+    .technical-board {
+      margin-top: 16px;
+      scroll-margin-top: 18px;
+    }
+    .technical-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+    .technical-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+      min-width: 220px;
+    }
+    .technical-summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 12px 0 14px;
+    }
+    .technical-stat {
+      border: 1px solid #ece5da;
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: rgba(255,255,255,0.68);
+    }
+    .technical-stat .label {
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    .technical-stat .value {
+      font-size: 18px;
+      margin-top: 5px;
+    }
+    .technical-table-wrap {
+      overflow-x: auto;
+    }
+    .risk-chip {
+      display: inline-block;
+      min-width: 36px;
+      text-align: center;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .risk-high {
+      background: rgba(181, 54, 46, 0.09);
+    }
+    .risk-high .risk-chip {
+      background: #b5362e;
+      color: white;
+    }
+    .risk-mid .risk-chip {
+      background: rgba(177, 94, 30, 0.16);
+      color: #8a4a18;
+    }
+    .risk-low .risk-chip {
+      background: rgba(26, 127, 82, 0.14);
+      color: var(--good);
+    }
+    .score-cell {
+      font-weight: 750;
+      white-space: nowrap;
+    }
+    .level-cell {
+      white-space: nowrap;
+    }
+    .reason-cell {
+      min-width: 180px;
+      line-height: 1.45;
+      color: var(--muted);
+    }
     .modal-foot {
       display: flex;
       justify-content: flex-end;
@@ -383,6 +464,15 @@
       .cards, .grid, .charts {
         grid-template-columns: 1fr;
       }
+      .technical-head, .technical-actions {
+        align-items: stretch;
+      }
+      .technical-head {
+        flex-direction: column;
+      }
+      .technical-summary {
+        grid-template-columns: 1fr 1fr;
+      }
       .modal-toolbar, .modal-foot {
         flex-direction: column;
         align-items: stretch;
@@ -402,6 +492,7 @@
 <a class='nav-link active' href='./index.html'>HK ER 8/15/40 Dual Objective Liquidity (20B, Stock Connect)</a>
 <a class='nav-link' href='../er_3_8_20_100b_top5_biweekly_top50/index.html'>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</a>
 <a class='nav-link' href='../er_3_8_20_10b_top5_weekly/index.html'>ER 3/8/20 (10B Top5 周换仓)</a>
+<a class='nav-link' href='#technicalRiskBoard'>技术评分 / 止盈止损</a>
         </div>
       </aside>
 
@@ -414,6 +505,7 @@
           <div class="toolbar">
             <div class="toolbar-actions">
               <button id="generateContentButton" class="secondary-btn" type="button">生成内容</button>
+              <a class="secondary-btn" href="#technicalRiskBoard">技术评分</a>
               <button id="refreshButton" class="refresh-btn" type="button">更新所有数据</button>
             </div>
             <div id="refreshStatus" class="refresh-note">当前为静态快照。</div>
@@ -422,13 +514,13 @@
         </section>
 
         <section class="cards">
-          <div class='card'><div class='label'>最新信号日</div><div class='value'>2026-06-03</div></div>
-<div class='card'><div class='label'>下个交易日</div><div class='value'>2026-06-04</div></div>
+          <div class='card'><div class='label'>最新信号日</div><div class='value'>2026-06-04</div></div>
+<div class='card'><div class='label'>下个交易日</div><div class='value'>2026-06-05</div></div>
 <div class='card'><div class='label'>市场过滤</div><div class='value'>none</div></div>
-<div class='card'><div class='label'>策略净值</div><div class='value'>1.7788</div></div>
-<div class='card'><div class='label'>HSI净值</div><div class='value'>1.0001</div></div>
-<div class='card'><div class='label'>CAGR</div><div class='value'>320.83%</div></div>
-<div class='card'><div class='label'>Sharpe</div><div class='value'>3.07</div></div>
+<div class='card'><div class='label'>策略净值</div><div class='value'>1.7903</div></div>
+<div class='card'><div class='label'>HSI净值</div><div class='value'>0.9853</div></div>
+<div class='card'><div class='label'>CAGR</div><div class='value'>321.57%</div></div>
+<div class='card'><div class='label'>Sharpe</div><div class='value'>3.09</div></div>
 <div class='card'><div class='label'>最大回撤</div><div class='value'>-18.30%</div></div>
         </section>
 
@@ -436,30 +528,30 @@
           <div class="panel">
             <h2>当前持有 / 计划持有 Top10</h2>
             <p class="meta">按最新信号日生成，包含 keep / buy 动作。</p>
-            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>er8</th><th>er15</th><th>er40</th></tr></thead><tbody><tr><td>1</td><td>HK.06651</td><td>五一视界</td><td>keep</td><td>0.5611</td><td>1.5004</td><td>2.1090</td></tr>
-<tr><td>2</td><td>HK.00992</td><td>联想集团</td><td>keep</td><td>0.9781</td><td>1.0457</td><td>1.7382</td></tr>
-<tr><td>3</td><td>HK.01888</td><td>建滔积层板</td><td>keep</td><td>0.2121</td><td>0.2468</td><td>1.5923</td></tr>
-<tr><td>4</td><td>HK.03986</td><td>兆易创新</td><td>buy</td><td>0.0578</td><td>0.4836</td><td>1.0009</td></tr>
-<tr><td>5</td><td>HK.06166</td><td>剑桥科技</td><td>buy</td><td>0.0650</td><td>0.0557</td><td>0.9992</td></tr>
-<tr><td>6</td><td>HK.02631</td><td>天岳先进</td><td>buy</td><td>0.0354</td><td>0.0642</td><td>0.9515</td></tr>
-<tr><td>7</td><td>HK.00148</td><td>建滔集团</td><td>keep</td><td>0.1427</td><td>0.1477</td><td>0.8097</td></tr>
-<tr><td>8</td><td>HK.00522</td><td>ASMPT</td><td>keep</td><td>0.0583</td><td>0.0873</td><td>0.8037</td></tr>
-<tr><td>9</td><td>HK.01347</td><td>华虹半导体</td><td>keep</td><td>0.1754</td><td>0.1986</td><td>0.8001</td></tr>
-<tr><td>10</td><td>HK.00981</td><td>中芯国际</td><td>keep</td><td>0.1082</td><td>0.1100</td><td>0.5561</td></tr></tbody></table>
+            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>er8</th><th>er15</th><th>er40</th></tr></thead><tbody><tr><td>1</td><td>HK.06651</td><td>五一视界</td><td>keep</td><td>0.2609</td><td>1.4815</td><td>2.3858</td></tr>
+<tr><td>2</td><td>HK.01888</td><td>建滔积层板</td><td>keep</td><td>0.0784</td><td>0.2014</td><td>1.7462</td></tr>
+<tr><td>3</td><td>HK.00992</td><td>联想集团</td><td>keep</td><td>0.6011</td><td>0.9750</td><td>1.5745</td></tr>
+<tr><td>4</td><td>HK.03986</td><td>兆易创新</td><td>keep</td><td>0.0241</td><td>0.4773</td><td>1.2719</td></tr>
+<tr><td>5</td><td>HK.00148</td><td>建滔集团</td><td>keep</td><td>0.1613</td><td>0.2025</td><td>1.0194</td></tr>
+<tr><td>6</td><td>HK.01347</td><td>华虹半导体</td><td>keep</td><td>0.2167</td><td>0.2487</td><td>0.9668</td></tr>
+<tr><td>7</td><td>HK.00522</td><td>ASMPT</td><td>keep</td><td>0.0105</td><td>0.0523</td><td>0.8236</td></tr>
+<tr><td>8</td><td>HK.00981</td><td>中芯国际</td><td>keep</td><td>0.0344</td><td>0.1421</td><td>0.5926</td></tr>
+<tr><td>9</td><td>HK.06613</td><td>蓝思科技</td><td>buy</td><td>0.2615</td><td>0.2584</td><td>0.4406</td></tr>
+<tr><td>10</td><td>HK.02018</td><td>瑞声科技</td><td>buy</td><td>0.1121</td><td>0.1343</td><td>0.3989</td></tr></tbody></table>
           </div>
           <div class="panel">
             <h2>当前实际持仓</h2>
             <p class="meta">最新信号日对应的 mode_b 实际持仓快照。</p>
-            <table><thead><tr><th>ticker</th><th>name</th><th>shares</th><th>weight</th><th>market_value</th></tr></thead><tbody><tr><td>HK.00992</td><td>联想集团</td><td>5,351.2666</td><td>0.1573</td><td></td></tr>
-<tr><td>HK.01888</td><td>建滔积层板</td><td>2,249.2372</td><td>0.1372</td><td></td></tr>
-<tr><td>HK.06651</td><td>五一视界</td><td>930.0948</td><td>0.1259</td><td></td></tr>
-<tr><td>HK.01347</td><td>华虹半导体</td><td>619.2267</td><td>0.1056</td><td></td></tr>
-<tr><td>HK.02018</td><td>瑞声科技</td><td>1,796.7165</td><td>0.0977</td><td></td></tr>
-<tr><td>HK.03200</td><td>大族数控</td><td>439.6984</td><td>0.0855</td><td></td></tr>
-<tr><td>HK.00148</td><td>建滔集团</td><td>1,160.5900</td><td>0.0819</td><td></td></tr>
-<tr><td>HK.00522</td><td>ASMPT</td><td>349.2295</td><td>0.0733</td><td></td></tr>
-<tr><td>HK.00981</td><td>中芯国际</td><td>741.4430</td><td>0.0691</td><td></td></tr>
-<tr><td>HK.02382</td><td>舜宇光学科技</td><td>704.5241</td><td>0.0664</td><td></td></tr></tbody></table>
+            <table><thead><tr><th>ticker</th><th>name</th><th>shares</th><th>weight</th><th>market_value</th></tr></thead><tbody><tr><td>HK.00992</td><td>联想集团</td><td>5,351.2666</td><td>0.1495</td><td></td></tr>
+<tr><td>HK.01888</td><td>建滔积层板</td><td>2,249.2372</td><td>0.1367</td><td></td></tr>
+<tr><td>HK.06651</td><td>五一视界</td><td>930.0948</td><td>0.1277</td><td></td></tr>
+<tr><td>HK.01347</td><td>华虹半导体</td><td>619.2267</td><td>0.1083</td><td></td></tr>
+<tr><td>HK.00148</td><td>建滔集团</td><td>1,160.5900</td><td>0.0867</td><td></td></tr>
+<tr><td>HK.03986</td><td>兆易创新</td><td>97.3160</td><td>0.0854</td><td></td></tr>
+<tr><td>HK.02631</td><td>天岳先进</td><td>727.6736</td><td>0.0853</td><td></td></tr>
+<tr><td>HK.06166</td><td>剑桥科技</td><td>524.4571</td><td>0.0811</td><td></td></tr>
+<tr><td>HK.00522</td><td>ASMPT</td><td>349.2295</td><td>0.0718</td><td></td></tr>
+<tr><td>HK.00981</td><td>中芯国际</td><td>741.4430</td><td>0.0675</td><td></td></tr></tbody></table>
           </div>
         </section>
 
@@ -467,106 +559,106 @@
           <div class="panel">
             <h2>最新信号 Top10</h2>
             <p class="meta">每日更新的 top10 名单，按当前策略排序输出。</p>
-            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>planned_holding</th><th>er8</th><th>er15</th><th>er40</th><th>adv20</th></tr></thead><tbody><tr><td>1</td><td>HK.06651</td><td>五一视界</td><td>keep</td><td>True</td><td>0.5611</td><td>1.5004</td><td>2.1090</td><td>1,221,154,697.9110</td></tr>
-<tr><td>2</td><td>HK.00992</td><td>联想集团</td><td>keep</td><td>True</td><td>0.9781</td><td>1.0457</td><td>1.7382</td><td>4,525,732,776.8275</td></tr>
-<tr><td>3</td><td>HK.01888</td><td>建滔积层板</td><td>keep</td><td>True</td><td>0.2121</td><td>0.2468</td><td>1.5923</td><td>2,607,223,344.1605</td></tr>
-<tr><td>4</td><td>HK.03986</td><td>兆易创新</td><td>buy</td><td>True</td><td>0.0578</td><td>0.4836</td><td>1.0009</td><td>1,731,454,082.7500</td></tr>
-<tr><td>5</td><td>HK.06166</td><td>剑桥科技</td><td>buy</td><td>True</td><td>0.0650</td><td>0.0557</td><td>0.9992</td><td>1,672,033,687.7100</td></tr>
-<tr><td>6</td><td>HK.02631</td><td>天岳先进</td><td>buy</td><td>True</td><td>0.0354</td><td>0.0642</td><td>0.9515</td><td>1,154,709,939.0825</td></tr>
-<tr><td>7</td><td>HK.00148</td><td>建滔集团</td><td>keep</td><td>True</td><td>0.1427</td><td>0.1477</td><td>0.8097</td><td>1,161,487,429.8285</td></tr>
-<tr><td>8</td><td>HK.00522</td><td>ASMPT</td><td>keep</td><td>True</td><td>0.0583</td><td>0.0873</td><td>0.8037</td><td>825,586,592.7160</td></tr>
-<tr><td>9</td><td>HK.01347</td><td>华虹半导体</td><td>keep</td><td>True</td><td>0.1754</td><td>0.1986</td><td>0.8001</td><td>6,291,037,474.4200</td></tr>
-<tr><td>10</td><td>HK.00981</td><td>中芯国际</td><td>keep</td><td>True</td><td>0.1082</td><td>0.1100</td><td>0.5561</td><td>12,974,724,054.2150</td></tr></tbody></table>
+            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>planned_holding</th><th>er8</th><th>er15</th><th>er40</th><th>adv20</th></tr></thead><tbody><tr><td>1</td><td>HK.06651</td><td>五一视界</td><td>keep</td><td>True</td><td>0.2609</td><td>1.4815</td><td>2.3858</td><td>1,286,228,830.2510</td></tr>
+<tr><td>2</td><td>HK.01888</td><td>建滔积层板</td><td>keep</td><td>True</td><td>0.0784</td><td>0.2014</td><td>1.7462</td><td>2,624,933,812.7565</td></tr>
+<tr><td>3</td><td>HK.00992</td><td>联想集团</td><td>keep</td><td>True</td><td>0.6011</td><td>0.9750</td><td>1.5745</td><td>4,758,100,043.5550</td></tr>
+<tr><td>4</td><td>HK.03986</td><td>兆易创新</td><td>keep</td><td>True</td><td>0.0241</td><td>0.4773</td><td>1.2719</td><td>1,738,520,050.1000</td></tr>
+<tr><td>5</td><td>HK.00148</td><td>建滔集团</td><td>keep</td><td>True</td><td>0.1613</td><td>0.2025</td><td>1.0194</td><td>1,198,331,472.7125</td></tr>
+<tr><td>6</td><td>HK.01347</td><td>华虹半导体</td><td>keep</td><td>True</td><td>0.2167</td><td>0.2487</td><td>0.9668</td><td>6,257,161,655.0450</td></tr>
+<tr><td>7</td><td>HK.00522</td><td>ASMPT</td><td>keep</td><td>True</td><td>0.0105</td><td>0.0523</td><td>0.8236</td><td>807,675,919.8360</td></tr>
+<tr><td>8</td><td>HK.00981</td><td>中芯国际</td><td>keep</td><td>True</td><td>0.0344</td><td>0.1421</td><td>0.5926</td><td>12,576,070,640.8600</td></tr>
+<tr><td>9</td><td>HK.06613</td><td>蓝思科技</td><td>buy</td><td>True</td><td>0.2615</td><td>0.2584</td><td>0.4406</td><td>839,055,629.1375</td></tr>
+<tr><td>10</td><td>HK.02018</td><td>瑞声科技</td><td>buy</td><td>True</td><td>0.1121</td><td>0.1343</td><td>0.3989</td><td>408,595,711.3100</td></tr></tbody></table>
           </div>
 
           <div class="panel">
             <h2>历史触发买入信号标的</h2>
             <p class="meta">这里按策略实际 BUY 事件统计，而不是仅进过 top10 名单。按出现次数排序。</p>
-            <table><thead><tr><th>ticker</th><th>name</th><th>industry_labels</th><th>buy_count</th><th>total_buy_value</th><th>latest_adj_close</th><th>first_signal_date</th><th>last_signal_date</th></tr></thead><tbody><tr><td>HK.02315</td><td>百奥赛图-B</td><td></td><td>9</td><td>477,502.1085</td><td>42.4800</td><td>2025-12-31 00:00:00</td><td>2026-04-01 00:00:00</td></tr>
-<tr><td>HK.06869</td><td>长飞光纤光缆</td><td></td><td>8</td><td>458,680.7488</td><td>257.6000</td><td>2025-12-31 00:00:00</td><td>2026-05-18 00:00:00</td></tr>
-<tr><td>HK.06088</td><td>FIT HON TENG</td><td></td><td>7</td><td>413,732.5305</td><td>9.7100</td><td>2026-03-16 00:00:00</td><td>2026-05-04 00:00:00</td></tr>
-<tr><td>HK.03750</td><td>宁德时代</td><td></td><td>7</td><td>407,858.1523</td><td>778.0000</td><td>2026-03-16 00:00:00</td><td>2026-04-23 00:00:00</td></tr>
-<tr><td>HK.03393</td><td>威胜控股</td><td></td><td>7</td><td>377,235.7070</td><td>22.8000</td><td>2025-12-31 00:00:00</td><td>2026-03-18 00:00:00</td></tr>
-<tr><td>HK.03986</td><td>兆易创新</td><td></td><td>6</td><td>379,623.7288</td><td>735.5000</td><td>2026-03-16 00:00:00</td><td>2026-05-18 00:00:00</td></tr>
-<tr><td>HK.01072</td><td>东方电气</td><td></td><td>6</td><td>333,421.5332</td><td>32.5800</td><td>2025-12-31 00:00:00</td><td>2026-04-23 00:00:00</td></tr>
-<tr><td>HK.01347</td><td>华虹半导体</td><td></td><td>5</td><td>332,255.2252</td><td>151.7000</td><td>2026-01-22 00:00:00</td><td>2026-05-26 00:00:00</td></tr>
-<tr><td>HK.06166</td><td>剑桥科技</td><td></td><td>5</td><td>327,856.3602</td><td>144.1000</td><td>2026-04-17 00:00:00</td><td>2026-05-28 00:00:00</td></tr>
-<tr><td>HK.01428</td><td>耀才证券金融</td><td></td><td>5</td><td>294,359.2099</td><td>9.4000</td><td>2026-03-17 00:00:00</td><td>2026-04-29 00:00:00</td></tr>
-<tr><td>HK.02656</td><td>健康160</td><td></td><td>5</td><td>272,888.8750</td><td>14.3300</td><td>2026-01-02 00:00:00</td><td>2026-03-31 00:00:00</td></tr>
-<tr><td>HK.03317</td><td>迅策</td><td></td><td>4</td><td>223,452.3143</td><td>180.7000</td><td>2026-03-02 00:00:00</td><td>2026-03-25 00:00:00</td></tr>
-<tr><td>HK.02618</td><td>京东物流</td><td></td><td>4</td><td>221,165.6336</td><td>13.2000</td><td>2026-04-14 00:00:00</td><td>2026-04-30 00:00:00</td></tr>
-<tr><td>HK.09926</td><td>康方生物</td><td></td><td>4</td><td>220,521.8690</td><td>102.7000</td><td>2026-03-31 00:00:00</td><td>2026-04-17 00:00:00</td></tr>
-<tr><td>HK.02338</td><td>潍柴动力</td><td></td><td>4</td><td>200,230.7219</td><td>39.8800</td><td>2026-02-02 00:00:00</td><td>2026-05-04 00:00:00</td></tr>
-<tr><td>HK.02689</td><td>玖龙纸业</td><td></td><td>4</td><td>186,232.3062</td><td>6.7200</td><td>2026-01-08 00:00:00</td><td>2026-02-16 00:00:00</td></tr>
-<tr><td>HK.03858</td><td>佳鑫国际资源</td><td></td><td>4</td><td>178,270.1490</td><td>92.8000</td><td>2025-12-31 00:00:00</td><td>2026-02-27 00:00:00</td></tr>
-<tr><td>HK.01070</td><td>TCL电子</td><td></td><td>3</td><td>207,484.6176</td><td>14.2500</td><td>2026-05-15 00:00:00</td><td>2026-05-21 00:00:00</td></tr>
-<tr><td>HK.00992</td><td>联想集团</td><td></td><td>3</td><td>200,074.1823</td><td>26.1400</td><td>2026-04-24 00:00:00</td><td>2026-05-21 00:00:00</td></tr>
-<tr><td>HK.00148</td><td>建滔集团</td><td></td><td>3</td><td>183,860.6720</td><td>62.7500</td><td>2026-03-17 00:00:00</td><td>2026-05-19 00:00:00</td></tr>
-<tr><td>HK.01171</td><td>兖矿能源</td><td></td><td>3</td><td>178,564.8462</td><td>15.7200</td><td>2026-03-05 00:00:00</td><td>2026-03-26 00:00:00</td></tr>
-<tr><td>HK.01877</td><td>君实生物</td><td></td><td>3</td><td>173,017.2498</td><td>18.1100</td><td>2026-04-17 00:00:00</td><td>2026-04-28 00:00:00</td></tr>
-<tr><td>HK.00290</td><td>国富量子</td><td></td><td>3</td><td>172,977.3807</td><td>5.0200</td><td>2026-04-01 00:00:00</td><td>2026-04-28 00:00:00</td></tr>
-<tr><td>HK.01138</td><td>中远海能</td><td></td><td>3</td><td>171,857.2447</td><td>14.1700</td><td>2026-02-02 00:00:00</td><td>2026-03-18 00:00:00</td></tr>
-<tr><td>HK.09995</td><td>荣昌生物</td><td></td><td>3</td><td>171,851.4388</td><td>73.3500</td><td>2026-04-02 00:00:00</td><td>2026-04-20 00:00:00</td></tr>
-<tr><td>HK.00522</td><td>ASMPT</td><td></td><td>3</td><td>171,060.1308</td><td>186.8000</td><td>2026-04-21 00:00:00</td><td>2026-05-20 00:00:00</td></tr>
-<tr><td>HK.03320</td><td>华润医药</td><td></td><td>3</td><td>167,505.9191</td><td>4.7100</td><td>2026-03-31 00:00:00</td><td>2026-04-20 00:00:00</td></tr>
-<tr><td>HK.02099</td><td>中国黄金国际</td><td></td><td>3</td><td>165,282.0165</td><td>155.4000</td><td>2026-01-16 00:00:00</td><td>2026-01-23 00:00:00</td></tr>
-<tr><td>HK.02635</td><td>诺比侃</td><td></td><td>3</td><td>163,158.0145</td><td>14.5300</td><td>2026-03-06 00:00:00</td><td>2026-04-17 00:00:00</td></tr>
-<tr><td>HK.00017</td><td>新世界发展</td><td></td><td>3</td><td>159,783.9123</td><td>7.8800</td><td>2026-01-19 00:00:00</td><td>2026-02-10 00:00:00</td></tr>
-<tr><td>HK.03993</td><td>洛阳钼业</td><td></td><td>3</td><td>158,066.5793</td><td>19.8400</td><td>2026-01-02 00:00:00</td><td>2026-01-15 00:00:00</td></tr>
-<tr><td>HK.02259</td><td>紫金黄金国际</td><td></td><td>3</td><td>157,498.3879</td><td>125.0000</td><td>2026-01-27 00:00:00</td><td>2026-02-27 00:00:00</td></tr>
-<tr><td>HK.03899</td><td>中集安瑞科</td><td></td><td>3</td><td>155,942.9082</td><td>8.9000</td><td>2025-12-31 00:00:00</td><td>2026-02-04 00:00:00</td></tr>
-<tr><td>HK.01797</td><td>东方甄选</td><td></td><td>3</td><td>152,197.5128</td><td>21.9200</td><td>2026-02-02 00:00:00</td><td>2026-02-11 00:00:00</td></tr>
-<tr><td>HK.01164</td><td>中广核矿业</td><td></td><td>3</td><td>151,812.7759</td><td>3.5100</td><td>2026-01-28 00:00:00</td><td>2026-02-20 00:00:00</td></tr>
-<tr><td>HK.02018</td><td>瑞声科技</td><td></td><td>2</td><td>156,641.2245</td><td>48.3800</td><td>2026-05-15 00:00:00</td><td>2026-06-02 00:00:00</td></tr>
-<tr><td>HK.06809</td><td>澜起科技</td><td></td><td>2</td><td>152,518.0724</td><td>403.0000</td><td>2026-04-27 00:00:00</td><td>2026-05-27 00:00:00</td></tr>
-<tr><td>HK.03200</td><td>大族数控</td><td></td><td>2</td><td>141,603.6617</td><td>173.0000</td><td>2026-05-13 00:00:00</td><td>2026-05-29 00:00:00</td></tr>
-<tr><td>HK.01860</td><td>汇量科技</td><td></td><td>2</td><td>121,272.1587</td><td>14.1200</td><td>2026-04-29 00:00:00</td><td>2026-05-05 00:00:00</td></tr>
-<tr><td>HK.00883</td><td>中国海洋石油</td><td></td><td>2</td><td>120,824.2199</td><td>27.2600</td><td>2026-03-13 00:00:00</td><td>2026-03-19 00:00:00</td></tr>
-<tr><td>HK.09696</td><td>天齐锂业</td><td></td><td>2</td><td>120,695.3421</td><td>47.5000</td><td>2026-04-23 00:00:00</td><td>2026-04-30 00:00:00</td></tr>
-<tr><td>HK.02661</td><td>轻松健康</td><td></td><td>2</td><td>119,763.0407</td><td>18.3500</td><td>2026-03-12 00:00:00</td><td>2026-03-20 00:00:00</td></tr>
-<tr><td>HK.01772</td><td>赣锋锂业</td><td></td><td>2</td><td>117,751.6928</td><td>60.5500</td><td>2026-04-10 00:00:00</td><td>2026-05-04 00:00:00</td></tr>
-<tr><td>HK.03931</td><td>中创新航</td><td></td><td>2</td><td>115,784.9503</td><td>30.5600</td><td>2026-03-30 00:00:00</td><td>2026-04-09 00:00:00</td></tr>
-<tr><td>HK.01729</td><td>汇聚科技</td><td></td><td>2</td><td>115,002.6428</td><td>19.0200</td><td>2026-04-22 00:00:00</td><td>2026-05-11 00:00:00</td></tr>
-<tr><td>HK.00016</td><td>新鸿基地产</td><td></td><td>2</td><td>113,964.0922</td><td>124.2000</td><td>2026-03-04 00:00:00</td><td>2026-03-10 00:00:00</td></tr>
-<tr><td>HK.06693</td><td>赤峰黄金</td><td></td><td>2</td><td>113,777.2940</td><td>30.6400</td><td>2026-01-29 00:00:00</td><td>2026-03-10 00:00:00</td></tr>
-<tr><td>HK.01208</td><td>五矿资源</td><td></td><td>2</td><td>110,982.7933</td><td>9.7800</td><td>2025-12-31 00:00:00</td><td>2026-01-23 00:00:00</td></tr>
-<tr><td>HK.03939</td><td>万国黄金集团</td><td></td><td>2</td><td>110,187.8245</td><td>10.7900</td><td>2026-01-14 00:00:00</td><td>2026-02-03 00:00:00</td></tr>
-<tr><td>HK.03330</td><td>灵宝黄金</td><td></td><td>2</td><td>109,393.8877</td><td>15.5900</td><td>2026-01-16 00:00:00</td><td>2026-03-09 00:00:00</td></tr>
-<tr><td>HK.00666</td><td>瑞浦兰钧</td><td></td><td>2</td><td>108,260.5441</td><td>14.8900</td><td>2026-03-26 00:00:00</td><td>2026-03-30 00:00:00</td></tr>
-<tr><td>HK.02883</td><td>中海油田服务</td><td></td><td>2</td><td>107,691.4031</td><td>8.1600</td><td>2026-03-03 00:00:00</td><td>2026-03-09 00:00:00</td></tr>
-<tr><td>HK.02610</td><td>南山铝业国际</td><td></td><td>2</td><td>107,003.2428</td><td>35.9400</td><td>2026-01-07 00:00:00</td><td>2026-02-03 00:00:00</td></tr>
-<tr><td>HK.00358</td><td>江西铜业股份</td><td></td><td>2</td><td>105,266.1972</td><td>38.3600</td><td>2025-12-31 00:00:00</td><td>2026-01-29 00:00:00</td></tr>
-<tr><td>HK.01888</td><td>建滔积层板</td><td></td><td>2</td><td>102,683.1733</td><td>54.2500</td><td>2026-02-11 00:00:00</td><td>2026-04-13 00:00:00</td></tr>
-<tr><td>HK.02039</td><td>中集集团</td><td></td><td>2</td><td>100,978.2799</td><td>9.2900</td><td>2025-12-31 00:00:00</td><td>2026-03-06 00:00:00</td></tr>
-<tr><td>HK.00670</td><td>中国东方航空股份</td><td></td><td>2</td><td>100,302.2900</td><td>3.4800</td><td>2025-12-31 00:00:00</td><td>2026-01-06 00:00:00</td></tr>
-<tr><td>HK.01385</td><td>上海复旦</td><td></td><td>2</td><td>99,706.9860</td><td>31.0800</td><td>2026-01-05 00:00:00</td><td>2026-01-08 00:00:00</td></tr>
-<tr><td>HK.06651</td><td>五一视界</td><td></td><td>1</td><td>73,653.8107</td><td>120.4000</td><td>2026-05-21 00:00:00</td><td>2026-05-21 00:00:00</td></tr>
-<tr><td>HK.00470</td><td>先导智能</td><td></td><td>1</td><td>64,582.7109</td><td>45.9800</td><td>2026-04-23 00:00:00</td><td>2026-04-23 00:00:00</td></tr>
-<tr><td>HK.00995</td><td>安徽皖通高速公路</td><td></td><td>1</td><td>63,772.3597</td><td>16.4100</td><td>2026-04-24 00:00:00</td><td>2026-04-24 00:00:00</td></tr>
-<tr><td>HK.03698</td><td>徽商银行</td><td></td><td>1</td><td>62,963.3624</td><td>4.9700</td><td>2026-04-27 00:00:00</td><td>2026-04-27 00:00:00</td></tr>
-<tr><td>HK.06821</td><td>凯莱英</td><td></td><td>1</td><td>61,898.9426</td><td>90.6000</td><td>2026-04-28 00:00:00</td><td>2026-04-28 00:00:00</td></tr>
-<tr><td>HK.09863</td><td>零跑汽车</td><td></td><td>1</td><td>61,224.2121</td><td>40.9200</td><td>2026-04-09 00:00:00</td><td>2026-04-09 00:00:00</td></tr>
-<tr><td>HK.00981</td><td>中芯国际</td><td></td><td>1</td><td>59,233.8271</td><td>82.9500</td><td>2026-06-01 00:00:00</td><td>2026-06-01 00:00:00</td></tr>
-<tr><td>HK.01898</td><td>中煤能源</td><td></td><td>1</td><td>59,154.2035</td><td>13.2200</td><td>2026-03-17 00:00:00</td><td>2026-03-17 00:00:00</td></tr>
-<tr><td>HK.02382</td><td>舜宇光学科技</td><td></td><td>1</td><td>59,139.1288</td><td>83.8000</td><td>2026-06-01 00:00:00</td><td>2026-06-01 00:00:00</td></tr>
-<tr><td>HK.09678</td><td>云知声</td><td></td><td>1</td><td>59,060.0124</td><td>234.8000</td><td>2026-03-25 00:00:00</td><td>2026-03-25 00:00:00</td></tr>
-<tr><td>HK.01308</td><td>海丰国际</td><td></td><td>1</td><td>58,221.8323</td><td>34.6800</td><td>2026-03-19 00:00:00</td><td>2026-03-19 00:00:00</td></tr>
-<tr><td>HK.00966</td><td>中国太平</td><td></td><td>1</td><td>57,678.0338</td><td>19.8300</td><td>2026-01-30 00:00:00</td><td>2026-01-30 00:00:00</td></tr>
-<tr><td>HK.03347</td><td>泰格医药</td><td></td><td>1</td><td>57,678.0338</td><td>32.4600</td><td>2026-01-30 00:00:00</td><td>2026-01-30 00:00:00</td></tr>
-<tr><td>HK.02631</td><td>天岳先进</td><td></td><td>1</td><td>57,284.8805</td><td>100.8000</td><td>2026-05-11 00:00:00</td><td>2026-05-11 00:00:00</td></tr>
-<tr><td>HK.09969</td><td>诺诚健华</td><td></td><td>1</td><td>55,440.6296</td><td>10.9800</td><td>2026-04-08 00:00:00</td><td>2026-04-08 00:00:00</td></tr>
-<tr><td>HK.00631</td><td>三一国际</td><td></td><td>1</td><td>54,900.3548</td><td>7.7400</td><td>2026-01-19 00:00:00</td><td>2026-01-19 00:00:00</td></tr>
-<tr><td>HK.00175</td><td>吉利汽车</td><td></td><td>1</td><td>53,149.4019</td><td>18.8100</td><td>2026-03-31 00:00:00</td><td>2026-03-31 00:00:00</td></tr>
-<tr><td>HK.01196</td><td>伟禄集团</td><td></td><td>1</td><td>51,920.8174</td><td>11.2700</td><td>2026-02-06 00:00:00</td><td>2026-02-06 00:00:00</td></tr>
-<tr><td>HK.02788</td><td>创新实业</td><td></td><td>1</td><td>51,827.2625</td><td>19.9700</td><td>2026-01-22 00:00:00</td><td>2026-01-22 00:00:00</td></tr>
-<tr><td>HK.03808</td><td>中国重汽</td><td></td><td>1</td><td>51,542.7405</td><td>41.7200</td><td>2026-02-26 00:00:00</td><td>2026-02-26 00:00:00</td></tr>
-<tr><td>HK.03668</td><td>兖煤澳大利亚</td><td></td><td>1</td><td>50,815.2799</td><td>38.9600</td><td>2026-03-06 00:00:00</td><td>2026-03-06 00:00:00</td></tr>
-<tr><td>HK.01336</td><td>新华保险</td><td></td><td>1</td><td>50,302.2900</td><td>48.5200</td><td>2026-01-06 00:00:00</td><td>2026-01-06 00:00:00</td></tr>
-<tr><td>HK.02600</td><td>中国铝业</td><td></td><td>1</td><td>50,144.9316</td><td>11.5800</td><td>2026-01-02 00:00:00</td><td>2026-01-02 00:00:00</td></tr>
-<tr><td>HK.02318</td><td>中国平安</td><td></td><td>1</td><td>50,141.4513</td><td>57.8000</td><td>2026-01-06 00:00:00</td><td>2026-01-06 00:00:00</td></tr>
-<tr><td>HK.02208</td><td>金风科技</td><td></td><td>1</td><td>49,911.8263</td><td>13.1500</td><td>2026-01-09 00:00:00</td><td>2026-01-09 00:00:00</td></tr>
-<tr><td>HK.02659</td><td>宝济药业-B</td><td></td><td>1</td><td>49,080.2418</td><td>21.2400</td><td>2026-02-09 00:00:00</td><td>2026-02-09 00:00:00</td></tr>
-<tr><td>HK.02525</td><td>禾赛-W</td><td></td><td>1</td><td>47,773.2556</td><td>167.3000</td><td>2026-01-13 00:00:00</td><td>2026-01-13 00:00:00</td></tr></tbody></table>
+            <table><thead><tr><th>ticker</th><th>name</th><th>industry_labels</th><th>buy_count</th><th>total_buy_value</th><th>latest_adj_close</th><th>first_signal_date</th><th>last_signal_date</th></tr></thead><tbody><tr><td>HK.02315</td><td>百奥赛图-B</td><td></td><td>9</td><td>477,502.1085</td><td>41.0600</td><td>2025-12-31 00:00:00</td><td>2026-04-01 00:00:00</td></tr>
+<tr><td>HK.06869</td><td>长飞光纤光缆</td><td></td><td>8</td><td>458,680.7488</td><td>250.8000</td><td>2025-12-31 00:00:00</td><td>2026-05-18 00:00:00</td></tr>
+<tr><td>HK.03986</td><td>兆易创新</td><td></td><td>7</td><td>452,209.0652</td><td>786.0000</td><td>2026-03-16 00:00:00</td><td>2026-06-03 00:00:00</td></tr>
+<tr><td>HK.06088</td><td>FIT HON TENG</td><td></td><td>7</td><td>413,732.5305</td><td>9.1300</td><td>2026-03-16 00:00:00</td><td>2026-05-04 00:00:00</td></tr>
+<tr><td>HK.03750</td><td>宁德时代</td><td></td><td>7</td><td>407,858.1523</td><td>723.5000</td><td>2026-03-16 00:00:00</td><td>2026-04-23 00:00:00</td></tr>
+<tr><td>HK.03393</td><td>威胜控股</td><td></td><td>7</td><td>377,235.7070</td><td>23.2000</td><td>2025-12-31 00:00:00</td><td>2026-03-18 00:00:00</td></tr>
+<tr><td>HK.06166</td><td>剑桥科技</td><td></td><td>6</td><td>400,267.6310</td><td>138.5000</td><td>2026-04-17 00:00:00</td><td>2026-06-03 00:00:00</td></tr>
+<tr><td>HK.01072</td><td>东方电气</td><td></td><td>6</td><td>333,421.5332</td><td>32.1600</td><td>2025-12-31 00:00:00</td><td>2026-04-23 00:00:00</td></tr>
+<tr><td>HK.01347</td><td>华虹半导体</td><td></td><td>5</td><td>332,255.2252</td><td>156.5000</td><td>2026-01-22 00:00:00</td><td>2026-05-26 00:00:00</td></tr>
+<tr><td>HK.01428</td><td>耀才证券金融</td><td></td><td>5</td><td>294,359.2099</td><td>9.5200</td><td>2026-03-17 00:00:00</td><td>2026-04-29 00:00:00</td></tr>
+<tr><td>HK.02656</td><td>健康160</td><td></td><td>5</td><td>272,888.8750</td><td>14.0100</td><td>2026-01-02 00:00:00</td><td>2026-03-31 00:00:00</td></tr>
+<tr><td>HK.03317</td><td>迅策</td><td></td><td>4</td><td>223,452.3143</td><td>188.2000</td><td>2026-03-02 00:00:00</td><td>2026-03-25 00:00:00</td></tr>
+<tr><td>HK.02618</td><td>京东物流</td><td></td><td>4</td><td>221,165.6336</td><td>13.1600</td><td>2026-04-14 00:00:00</td><td>2026-04-30 00:00:00</td></tr>
+<tr><td>HK.09926</td><td>康方生物</td><td></td><td>4</td><td>220,521.8690</td><td>99.4500</td><td>2026-03-31 00:00:00</td><td>2026-04-17 00:00:00</td></tr>
+<tr><td>HK.02338</td><td>潍柴动力</td><td></td><td>4</td><td>200,230.7219</td><td>40.6800</td><td>2026-02-02 00:00:00</td><td>2026-05-04 00:00:00</td></tr>
+<tr><td>HK.02689</td><td>玖龙纸业</td><td></td><td>4</td><td>186,232.3062</td><td>6.7300</td><td>2026-01-08 00:00:00</td><td>2026-02-16 00:00:00</td></tr>
+<tr><td>HK.03858</td><td>佳鑫国际资源</td><td></td><td>4</td><td>178,270.1490</td><td>89.5000</td><td>2025-12-31 00:00:00</td><td>2026-02-27 00:00:00</td></tr>
+<tr><td>HK.01070</td><td>TCL电子</td><td></td><td>3</td><td>207,484.6176</td><td>14.0900</td><td>2026-05-15 00:00:00</td><td>2026-05-21 00:00:00</td></tr>
+<tr><td>HK.00992</td><td>联想集团</td><td></td><td>3</td><td>200,074.1823</td><td>25.0000</td><td>2026-04-24 00:00:00</td><td>2026-05-21 00:00:00</td></tr>
+<tr><td>HK.00148</td><td>建滔集团</td><td></td><td>3</td><td>183,860.6720</td><td>66.9000</td><td>2026-03-17 00:00:00</td><td>2026-05-19 00:00:00</td></tr>
+<tr><td>HK.01171</td><td>兖矿能源</td><td></td><td>3</td><td>178,564.8462</td><td>15.8200</td><td>2026-03-05 00:00:00</td><td>2026-03-26 00:00:00</td></tr>
+<tr><td>HK.01877</td><td>君实生物</td><td></td><td>3</td><td>173,017.2498</td><td>17.6000</td><td>2026-04-17 00:00:00</td><td>2026-04-28 00:00:00</td></tr>
+<tr><td>HK.00290</td><td>国富量子</td><td></td><td>3</td><td>172,977.3807</td><td>3.9800</td><td>2026-04-01 00:00:00</td><td>2026-04-28 00:00:00</td></tr>
+<tr><td>HK.01138</td><td>中远海能</td><td></td><td>3</td><td>171,857.2447</td><td>14.0200</td><td>2026-02-02 00:00:00</td><td>2026-03-18 00:00:00</td></tr>
+<tr><td>HK.09995</td><td>荣昌生物</td><td></td><td>3</td><td>171,851.4388</td><td>72.4000</td><td>2026-04-02 00:00:00</td><td>2026-04-20 00:00:00</td></tr>
+<tr><td>HK.00522</td><td>ASMPT</td><td></td><td>3</td><td>171,060.1308</td><td>184.0000</td><td>2026-04-21 00:00:00</td><td>2026-05-20 00:00:00</td></tr>
+<tr><td>HK.03320</td><td>华润医药</td><td></td><td>3</td><td>167,505.9191</td><td>4.7400</td><td>2026-03-31 00:00:00</td><td>2026-04-20 00:00:00</td></tr>
+<tr><td>HK.02099</td><td>中国黄金国际</td><td></td><td>3</td><td>165,282.0165</td><td>150.5000</td><td>2026-01-16 00:00:00</td><td>2026-01-23 00:00:00</td></tr>
+<tr><td>HK.02635</td><td>诺比侃</td><td></td><td>3</td><td>163,158.0145</td><td>16.3000</td><td>2026-03-06 00:00:00</td><td>2026-04-17 00:00:00</td></tr>
+<tr><td>HK.00017</td><td>新世界发展</td><td></td><td>3</td><td>159,783.9123</td><td>7.6900</td><td>2026-01-19 00:00:00</td><td>2026-02-10 00:00:00</td></tr>
+<tr><td>HK.03993</td><td>洛阳钼业</td><td></td><td>3</td><td>158,066.5793</td><td>18.4700</td><td>2026-01-02 00:00:00</td><td>2026-01-15 00:00:00</td></tr>
+<tr><td>HK.02259</td><td>紫金黄金国际</td><td></td><td>3</td><td>157,498.3879</td><td>119.5000</td><td>2026-01-27 00:00:00</td><td>2026-02-27 00:00:00</td></tr>
+<tr><td>HK.03899</td><td>中集安瑞科</td><td></td><td>3</td><td>155,942.9082</td><td>8.8300</td><td>2025-12-31 00:00:00</td><td>2026-02-04 00:00:00</td></tr>
+<tr><td>HK.01797</td><td>东方甄选</td><td></td><td>3</td><td>152,197.5128</td><td>21.4200</td><td>2026-02-02 00:00:00</td><td>2026-02-11 00:00:00</td></tr>
+<tr><td>HK.01164</td><td>中广核矿业</td><td></td><td>3</td><td>151,812.7759</td><td>3.0900</td><td>2026-01-28 00:00:00</td><td>2026-02-20 00:00:00</td></tr>
+<tr><td>HK.02018</td><td>瑞声科技</td><td></td><td>2</td><td>156,641.2245</td><td>47.5800</td><td>2026-05-15 00:00:00</td><td>2026-06-02 00:00:00</td></tr>
+<tr><td>HK.06809</td><td>澜起科技</td><td></td><td>2</td><td>152,518.0724</td><td>406.2000</td><td>2026-04-27 00:00:00</td><td>2026-05-27 00:00:00</td></tr>
+<tr><td>HK.03200</td><td>大族数控</td><td></td><td>2</td><td>141,603.6617</td><td>176.0000</td><td>2026-05-13 00:00:00</td><td>2026-05-29 00:00:00</td></tr>
+<tr><td>HK.02631</td><td>天岳先进</td><td></td><td>2</td><td>129,870.2169</td><td>104.9000</td><td>2026-05-11 00:00:00</td><td>2026-06-03 00:00:00</td></tr>
+<tr><td>HK.01860</td><td>汇量科技</td><td></td><td>2</td><td>121,272.1587</td><td>14.0200</td><td>2026-04-29 00:00:00</td><td>2026-05-05 00:00:00</td></tr>
+<tr><td>HK.00883</td><td>中国海洋石油</td><td></td><td>2</td><td>120,824.2199</td><td>27.0200</td><td>2026-03-13 00:00:00</td><td>2026-03-19 00:00:00</td></tr>
+<tr><td>HK.09696</td><td>天齐锂业</td><td></td><td>2</td><td>120,695.3421</td><td>45.7600</td><td>2026-04-23 00:00:00</td><td>2026-04-30 00:00:00</td></tr>
+<tr><td>HK.02661</td><td>轻松健康</td><td></td><td>2</td><td>119,763.0407</td><td>18.0500</td><td>2026-03-12 00:00:00</td><td>2026-03-20 00:00:00</td></tr>
+<tr><td>HK.01772</td><td>赣锋锂业</td><td></td><td>2</td><td>117,751.6928</td><td>57.6000</td><td>2026-04-10 00:00:00</td><td>2026-05-04 00:00:00</td></tr>
+<tr><td>HK.03931</td><td>中创新航</td><td></td><td>2</td><td>115,784.9503</td><td>28.7000</td><td>2026-03-30 00:00:00</td><td>2026-04-09 00:00:00</td></tr>
+<tr><td>HK.01729</td><td>汇聚科技</td><td></td><td>2</td><td>115,002.6428</td><td>18.6500</td><td>2026-04-22 00:00:00</td><td>2026-05-11 00:00:00</td></tr>
+<tr><td>HK.00016</td><td>新鸿基地产</td><td></td><td>2</td><td>113,964.0922</td><td>123.7000</td><td>2026-03-04 00:00:00</td><td>2026-03-10 00:00:00</td></tr>
+<tr><td>HK.06693</td><td>赤峰黄金</td><td></td><td>2</td><td>113,777.2940</td><td>29.7400</td><td>2026-01-29 00:00:00</td><td>2026-03-10 00:00:00</td></tr>
+<tr><td>HK.01208</td><td>五矿资源</td><td></td><td>2</td><td>110,982.7933</td><td>9.2600</td><td>2025-12-31 00:00:00</td><td>2026-01-23 00:00:00</td></tr>
+<tr><td>HK.03939</td><td>万国黄金集团</td><td></td><td>2</td><td>110,187.8245</td><td>10.3400</td><td>2026-01-14 00:00:00</td><td>2026-02-03 00:00:00</td></tr>
+<tr><td>HK.03330</td><td>灵宝黄金</td><td></td><td>2</td><td>109,393.8877</td><td>15.0900</td><td>2026-01-16 00:00:00</td><td>2026-03-09 00:00:00</td></tr>
+<tr><td>HK.00666</td><td>瑞浦兰钧</td><td></td><td>2</td><td>108,260.5441</td><td>14.3100</td><td>2026-03-26 00:00:00</td><td>2026-03-30 00:00:00</td></tr>
+<tr><td>HK.02883</td><td>中海油田服务</td><td></td><td>2</td><td>107,691.4031</td><td>8.0500</td><td>2026-03-03 00:00:00</td><td>2026-03-09 00:00:00</td></tr>
+<tr><td>HK.02610</td><td>南山铝业国际</td><td></td><td>2</td><td>107,003.2428</td><td>34.1800</td><td>2026-01-07 00:00:00</td><td>2026-02-03 00:00:00</td></tr>
+<tr><td>HK.00358</td><td>江西铜业股份</td><td></td><td>2</td><td>105,266.1972</td><td>36.7000</td><td>2025-12-31 00:00:00</td><td>2026-01-29 00:00:00</td></tr>
+<tr><td>HK.01888</td><td>建滔积层板</td><td></td><td>2</td><td>102,683.1733</td><td>54.4000</td><td>2026-02-11 00:00:00</td><td>2026-04-13 00:00:00</td></tr>
+<tr><td>HK.02039</td><td>中集集团</td><td></td><td>2</td><td>100,978.2799</td><td>9.2800</td><td>2025-12-31 00:00:00</td><td>2026-03-06 00:00:00</td></tr>
+<tr><td>HK.00670</td><td>中国东方航空股份</td><td></td><td>2</td><td>100,302.2900</td><td>3.4500</td><td>2025-12-31 00:00:00</td><td>2026-01-06 00:00:00</td></tr>
+<tr><td>HK.01385</td><td>上海复旦</td><td></td><td>2</td><td>99,706.9860</td><td>30.2000</td><td>2026-01-05 00:00:00</td><td>2026-01-08 00:00:00</td></tr>
+<tr><td>HK.06651</td><td>五一视界</td><td></td><td>1</td><td>73,653.8107</td><td>122.9000</td><td>2026-05-21 00:00:00</td><td>2026-05-21 00:00:00</td></tr>
+<tr><td>HK.00470</td><td>先导智能</td><td></td><td>1</td><td>64,582.7109</td><td>43.8600</td><td>2026-04-23 00:00:00</td><td>2026-04-23 00:00:00</td></tr>
+<tr><td>HK.00995</td><td>安徽皖通高速公路</td><td></td><td>1</td><td>63,772.3597</td><td>16.1400</td><td>2026-04-24 00:00:00</td><td>2026-04-24 00:00:00</td></tr>
+<tr><td>HK.03698</td><td>徽商银行</td><td></td><td>1</td><td>62,963.3624</td><td>4.9500</td><td>2026-04-27 00:00:00</td><td>2026-04-27 00:00:00</td></tr>
+<tr><td>HK.06821</td><td>凯莱英</td><td></td><td>1</td><td>61,898.9426</td><td>91.4500</td><td>2026-04-28 00:00:00</td><td>2026-04-28 00:00:00</td></tr>
+<tr><td>HK.09863</td><td>零跑汽车</td><td></td><td>1</td><td>61,224.2121</td><td>40.9800</td><td>2026-04-09 00:00:00</td><td>2026-04-09 00:00:00</td></tr>
+<tr><td>HK.00981</td><td>中芯国际</td><td></td><td>1</td><td>59,233.8271</td><td>81.5000</td><td>2026-06-01 00:00:00</td><td>2026-06-01 00:00:00</td></tr>
+<tr><td>HK.01898</td><td>中煤能源</td><td></td><td>1</td><td>59,154.2035</td><td>13.2600</td><td>2026-03-17 00:00:00</td><td>2026-03-17 00:00:00</td></tr>
+<tr><td>HK.02382</td><td>舜宇光学科技</td><td></td><td>1</td><td>59,139.1288</td><td>80.9940</td><td>2026-06-01 00:00:00</td><td>2026-06-01 00:00:00</td></tr>
+<tr><td>HK.09678</td><td>云知声</td><td></td><td>1</td><td>59,060.0124</td><td>210.2000</td><td>2026-03-25 00:00:00</td><td>2026-03-25 00:00:00</td></tr>
+<tr><td>HK.01308</td><td>海丰国际</td><td></td><td>1</td><td>58,221.8323</td><td>34.5000</td><td>2026-03-19 00:00:00</td><td>2026-03-19 00:00:00</td></tr>
+<tr><td>HK.00966</td><td>中国太平</td><td></td><td>1</td><td>57,678.0338</td><td>19.6300</td><td>2026-01-30 00:00:00</td><td>2026-01-30 00:00:00</td></tr>
+<tr><td>HK.03347</td><td>泰格医药</td><td></td><td>1</td><td>57,678.0338</td><td>31.9200</td><td>2026-01-30 00:00:00</td><td>2026-01-30 00:00:00</td></tr>
+<tr><td>HK.09969</td><td>诺诚健华</td><td></td><td>1</td><td>55,440.6296</td><td>10.7600</td><td>2026-04-08 00:00:00</td><td>2026-04-08 00:00:00</td></tr>
+<tr><td>HK.00631</td><td>三一国际</td><td></td><td>1</td><td>54,900.3548</td><td>7.7000</td><td>2026-01-19 00:00:00</td><td>2026-01-19 00:00:00</td></tr>
+<tr><td>HK.00175</td><td>吉利汽车</td><td></td><td>1</td><td>53,149.4019</td><td>18.5800</td><td>2026-03-31 00:00:00</td><td>2026-03-31 00:00:00</td></tr>
+<tr><td>HK.01196</td><td>伟禄集团</td><td></td><td>1</td><td>51,920.8174</td><td>11.2000</td><td>2026-02-06 00:00:00</td><td>2026-02-06 00:00:00</td></tr>
+<tr><td>HK.02788</td><td>创新实业</td><td></td><td>1</td><td>51,827.2625</td><td>19.4200</td><td>2026-01-22 00:00:00</td><td>2026-01-22 00:00:00</td></tr>
+<tr><td>HK.03808</td><td>中国重汽</td><td></td><td>1</td><td>51,542.7405</td><td>43.9200</td><td>2026-02-26 00:00:00</td><td>2026-02-26 00:00:00</td></tr>
+<tr><td>HK.03668</td><td>兖煤澳大利亚</td><td></td><td>1</td><td>50,815.2799</td><td>39.4000</td><td>2026-03-06 00:00:00</td><td>2026-03-06 00:00:00</td></tr>
+<tr><td>HK.01336</td><td>新华保险</td><td></td><td>1</td><td>50,302.2900</td><td>47.0200</td><td>2026-01-06 00:00:00</td><td>2026-01-06 00:00:00</td></tr>
+<tr><td>HK.02600</td><td>中国铝业</td><td></td><td>1</td><td>50,144.9316</td><td>11.0400</td><td>2026-01-02 00:00:00</td><td>2026-01-02 00:00:00</td></tr>
+<tr><td>HK.02318</td><td>中国平安</td><td></td><td>1</td><td>50,141.4513</td><td>57.0500</td><td>2026-01-06 00:00:00</td><td>2026-01-06 00:00:00</td></tr>
+<tr><td>HK.02208</td><td>金风科技</td><td></td><td>1</td><td>49,911.8263</td><td>12.8200</td><td>2026-01-09 00:00:00</td><td>2026-01-09 00:00:00</td></tr>
+<tr><td>HK.02659</td><td>宝济药业-B</td><td></td><td>1</td><td>49,080.2418</td><td>22.5600</td><td>2026-02-09 00:00:00</td><td>2026-02-09 00:00:00</td></tr>
+<tr><td>HK.02525</td><td>禾赛-W</td><td></td><td>1</td><td>47,773.2556</td><td>162.2000</td><td>2026-01-13 00:00:00</td><td>2026-01-13 00:00:00</td></tr></tbody></table>
           </div>
         </section>
 
@@ -605,10 +697,25 @@
           </div>
         </section>
 
+        <section class="panel technical-board" id="technicalRiskBoard">
+          <div class="technical-head">
+            <div>
+              <h2>技术面评分 / 止盈止损建议</h2>
+              <p class="meta">聚合所有看板当前实际持仓，并补充 SPY、QQQ；评分按右侧趋势、MACD、KDJ、成交量、ATR 赔率位置计算。</p>
+            </div>
+            <div class="technical-actions">
+              <button id="technicalRiskButton" class="refresh-btn" type="button">刷新评分与点位</button>
+              <div id="technicalRiskStatus" class="refresh-note">等待计算技术评分。</div>
+            </div>
+          </div>
+          <div id="technicalRiskSummary" class="technical-summary"></div>
+          <div id="technicalRiskTable" class="technical-table-wrap"></div>
+        </section>
+
         <div class="footer">
           <div>数据目录：/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_dashboard_variants/hk_er_3_8_20_20b_stock_connect</div>
-          <div>最新信号日：2026-06-03，下个交易日：2026-06-04</div>
-          <div>HSI 收盘：25633.21，市场过滤：none</div>
+          <div>最新信号日：2026-06-04，下个交易日：2026-06-05</div>
+          <div>HSI 收盘：25253.40，市场过滤：none</div>
           <div>Warnings：Metadata file has no date column. Static metadata is used for all history; this may introduce point-in-time bias.；Using static market_cap across history. This creates look-ahead bias risk for the $20.0B+ market-cap filter.</div>
         </div>
       </main>
@@ -650,6 +757,10 @@
       const contentCancelButton = document.getElementById("contentCancelButton");
       const contentModalNote = document.getElementById("contentModalNote");
       const contentManualInput = document.getElementById("contentManualInput");
+      const technicalRiskButton = document.getElementById("technicalRiskButton");
+      const technicalRiskStatus = document.getElementById("technicalRiskStatus");
+      const technicalRiskSummary = document.getElementById("technicalRiskSummary");
+      const technicalRiskTable = document.getElementById("technicalRiskTable");
       const apiEnabled = new Set(["127.0.0.1", "localhost"]).has(window.location.hostname);
       const activeVariantSlug = "hk_er_3_8_20_20b_stock_connect";
       const maxContentSelections = 20;
@@ -663,6 +774,159 @@
 
       function setContentStatus(text) {
         contentStatus.textContent = text || "";
+      }
+
+      function setTechnicalRiskStatus(text) {
+        technicalRiskStatus.textContent = text || "";
+      }
+
+      function escapeHtml(value) {
+        return String(value ?? "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#39;");
+      }
+
+      function formatNumber(value, digits = 2) {
+        if (value === null || value === undefined || Number.isNaN(Number(value))) return "";
+        return Number(value).toLocaleString("en-US", { minimumFractionDigits: digits, maximumFractionDigits: digits });
+      }
+
+      function formatPct(value) {
+        if (value === null || value === undefined || Number.isNaN(Number(value))) return "";
+        return `${(Number(value) * 100).toFixed(2)}%`;
+      }
+
+      function renderTechnicalRisk(payload) {
+        const strategy = payload.strategy_summary || {};
+        const stats = [
+          ["覆盖标的", `${payload.ticker_count || 0}`],
+          ["高风险", `${payload.risk_high_count || 0}`],
+          ["回测胜率", formatPct(strategy.win_rate)],
+          ["ATR策略", `${formatNumber(strategy.stop_atr, 2)}止损 / ${formatNumber(strategy.take_atr, 2)}止盈`],
+        ];
+        technicalRiskSummary.innerHTML = stats.map(([label, value]) => `
+          <div class="technical-stat">
+            <div class="label">${escapeHtml(label)}</div>
+            <div class="value">${escapeHtml(value || "N/A")}</div>
+          </div>
+        `).join("");
+        const rows = Array.isArray(payload.rows) ? payload.rows : [];
+        if (!rows.length) {
+          technicalRiskTable.innerHTML = "<table><tbody><tr><td>暂无技术评分数据。</td></tr></tbody></table>";
+          return;
+        }
+        const body = rows.map((row) => {
+          const riskClass = row.risk_level === "高" ? "risk-high" : row.risk_level === "中" ? "risk-mid" : "risk-low";
+          const reasons = Array.isArray(row.risk_reasons) && row.risk_reasons.length ? row.risk_reasons.join("；") : (row.cap_reason || "");
+          const sources = Array.isArray(row.sources) ? row.sources.slice(0, 3).join(" / ") : "";
+          const texts = row.texts || {};
+          const detail = [texts.trend, texts.macd, texts.kdj, texts.volume, texts.atr].filter(Boolean).join("；");
+          if (row.status === "missing_price") {
+            return `
+              <tr class="risk-high">
+                <td>${escapeHtml(row.ticker)}</td>
+                <td>${escapeHtml(row.name || "")}</td>
+                <td><span class="risk-chip">高</span></td>
+                <td colspan="9" class="reason-cell">缺少行情缓存，无法计算技术面评分。${escapeHtml(sources)}</td>
+              </tr>
+            `;
+          }
+          return `
+            <tr class="${riskClass}">
+              <td><strong>${escapeHtml(row.ticker)}</strong><div class="reason-cell">${escapeHtml(row.name || "")}</div></td>
+              <td>${escapeHtml(row.latest_date || "")}</td>
+              <td class="score-cell">${escapeHtml(row.score)} / 100<br>${escapeHtml(row.rating || "")}</td>
+              <td><span class="risk-chip">${escapeHtml(row.risk_level || "")}</span></td>
+              <td class="level-cell">${formatNumber(row.close, 2)}</td>
+              <td class="level-cell">${formatNumber(row.stop_loss, 2)}<br><span class="reason-cell">${formatPct(row.stop_pct)}</span></td>
+              <td class="level-cell">${formatNumber(row.take_profit, 2)}<br><span class="reason-cell">${formatPct(row.take_pct)}</span></td>
+              <td class="level-cell">${formatNumber(row.add_price, 2)}</td>
+              <td class="level-cell">${formatNumber(row.invalidation, 2)}</td>
+              <td>${escapeHtml(row.action || "")}</td>
+              <td class="reason-cell">${escapeHtml(reasons || "无高风险触发项")}</td>
+              <td class="reason-cell">${escapeHtml(detail)}<br>${escapeHtml(sources)}</td>
+              <td class="level-cell">${formatPct((row.exit_strategy || {}).win_rate)}<br><span class="reason-cell">${(row.exit_strategy || {}).trades || 0}笔</span></td>
+            </tr>
+          `;
+        }).join("");
+        technicalRiskTable.innerHTML = `
+          <table>
+            <thead>
+              <tr>
+                <th>标的</th>
+                <th>日期</th>
+                <th>评分</th>
+                <th>风险</th>
+                <th>收盘</th>
+                <th>止损</th>
+                <th>止盈</th>
+                <th>加仓区</th>
+                <th>失效</th>
+                <th>动作</th>
+                <th>风险原因</th>
+                <th>技术解读</th>
+                <th>回测胜率</th>
+              </tr>
+            </thead>
+            <tbody>${body}</tbody>
+          </table>
+        `;
+        setTechnicalRiskStatus(`已计算 ${payload.ticker_count || rows.length} 个标的。生成时间 ${payload.generated_at || ""}；回测区间 ${payload.backtest_period || ""}。`);
+      }
+
+      async function loadTechnicalRisk() {
+        if (!apiEnabled) {
+          technicalRiskButton.disabled = true;
+          setTechnicalRiskStatus("技术评分需要通过本地服务计算；GitHub Pages 静态快照不能触发 OpenD 刷新。");
+          return;
+        }
+        setTechnicalRiskStatus("正在计算技术评分和止盈止损点位...");
+        const response = await fetch(`/api/technical-risk?ts=${Date.now()}`, { cache: "no-store" });
+        const payload = await response.json();
+        if (!response.ok) {
+          throw new Error(payload.error || `technical risk http ${response.status}`);
+        }
+        renderTechnicalRisk(payload);
+      }
+
+      async function waitForAllRefreshDone() {
+        for (;;) {
+          const response = await fetch(`/api/status?ts=${Date.now()}`, { cache: "no-store" });
+          const payload = await response.json();
+          if (!payload.running) {
+            if (payload.last_error) throw new Error(payload.last_error);
+            return payload;
+          }
+          setTechnicalRiskStatus(`全部看板数据刷新中，起始时间 ${payload.last_started_at || ""}...`);
+          await new Promise((resolve) => window.setTimeout(resolve, 3000));
+        }
+      }
+
+      async function refreshTechnicalRiskBoard() {
+        if (!apiEnabled) {
+          await loadTechnicalRisk();
+          return;
+        }
+        technicalRiskButton.disabled = true;
+        technicalRiskButton.textContent = "刷新中...";
+        setTechnicalRiskStatus("正在刷新全部看板数据...");
+        const response = await fetch("/api/refresh", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({}),
+        });
+        const payload = await response.json();
+        if (!response.ok && response.status !== 409) {
+          throw new Error(payload.error || `refresh http ${response.status}`);
+        }
+        if (payload.running || response.status === 202 || response.status === 409) {
+          await waitForAllRefreshDone();
+        }
+        setTechnicalRiskStatus("行情和持仓已刷新，正在重新计算技术评分...");
+        await loadTechnicalRisk();
       }
 
       function showRefreshComplete(data) {
@@ -907,6 +1171,14 @@
           setContentStatus(`生成失败: ${error.message}`);
         });
       });
+      technicalRiskButton.addEventListener("click", () => {
+        refreshTechnicalRiskBoard().catch((error) => {
+          setTechnicalRiskStatus(`刷新评分失败: ${error.message}`);
+        }).finally(() => {
+          technicalRiskButton.disabled = !apiEnabled;
+          technicalRiskButton.textContent = "刷新评分与点位";
+        });
+      });
 
       fetchStatus().then(() => {
         const url = new URL(window.location.href);
@@ -923,6 +1195,9 @@
           fetchStatus().catch(() => null);
         }, 3000);
       }
+      loadTechnicalRisk().catch((error) => {
+        setTechnicalRiskStatus(`技术评分读取失败: ${error.message}`);
+      });
     })();
   </script>
 </body>
