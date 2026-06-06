@@ -492,7 +492,6 @@
 <a class='nav-link' href='../hk_er_3_8_20_20b_stock_connect/index.html'>HK ER 8/15/40 Dual Objective Liquidity (20B, Stock Connect)</a>
 <a class='nav-link' href='../er_3_8_20_100b_top5_biweekly_top50/index.html'>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</a>
 <a class='nav-link active' href='./index.html'>ER 3/8/20 (10B Top5 周换仓)</a>
-<a class='nav-link' href='#technicalRiskBoard'>技术评分 / 止盈止损</a>
         </div>
       </aside>
 
@@ -543,6 +542,21 @@
 <tr><td>US.ARM</td><td>Arm Holdings</td><td>662.5417</td><td>0.1815</td><td></td></tr>
 <tr><td>US.MU</td><td>美光科技</td><td>252.7052</td><td>0.1752</td><td></td></tr></tbody></table>
           </div>
+        </section>
+
+        <section class="panel technical-board" id="technicalRiskBoard">
+          <div class="technical-head">
+            <div>
+              <h2>技术面评分 / 止盈止损建议</h2>
+              <p class="meta">仅分析当前看板的当前实际持仓与计划买入标的；评分按右侧趋势、MACD、KDJ、成交量、ATR 赔率位置计算。</p>
+            </div>
+            <div class="technical-actions">
+              <button id="technicalRiskButton" class="refresh-btn" type="button">刷新评分与点位</button>
+              <div id="technicalRiskStatus" class="refresh-note">等待计算技术评分。</div>
+            </div>
+          </div>
+          <div id="technicalRiskSummary" class="technical-summary"></div>
+          <div id="technicalRiskTable" class="technical-table-wrap"></div>
         </section>
 
         <section class="stack">
@@ -629,21 +643,6 @@
             <h2>亏损贡献最多的10只: 股价和买卖点</h2>
             <img src="charts/top10_loss_trade_markers.png" alt="top10 loss trade markers">
           </div>
-        </section>
-
-        <section class="panel technical-board" id="technicalRiskBoard">
-          <div class="technical-head">
-            <div>
-              <h2>技术面评分 / 止盈止损建议</h2>
-              <p class="meta">聚合所有看板当前实际持仓，并补充 SPY、QQQ；评分按右侧趋势、MACD、KDJ、成交量、ATR 赔率位置计算。</p>
-            </div>
-            <div class="technical-actions">
-              <button id="technicalRiskButton" class="refresh-btn" type="button">刷新评分与点位</button>
-              <div id="technicalRiskStatus" class="refresh-note">等待计算技术评分。</div>
-            </div>
-          </div>
-          <div id="technicalRiskSummary" class="technical-summary"></div>
-          <div id="technicalRiskTable" class="technical-table-wrap"></div>
         </section>
 
         <div class="footer">
@@ -736,7 +735,7 @@
       function renderTechnicalRisk(payload) {
         const strategy = payload.strategy_summary || {};
         const stats = [
-          ["覆盖标的", `${payload.ticker_count || 0}`],
+          ["覆盖标的", `${payload.ticker_count || 0}（持有 ${payload.current_holding_count || 0} / 买入 ${payload.planned_buy_count || 0}）`],
           ["高风险", `${payload.risk_high_count || 0}`],
           ["回测胜率", formatPct(strategy.win_rate)],
           ["ATR策略", `${formatNumber(strategy.stop_atr, 2)}止损 / ${formatNumber(strategy.take_atr, 2)}止盈`],
@@ -764,7 +763,7 @@
                 <td>${escapeHtml(row.ticker)}</td>
                 <td>${escapeHtml(row.name || "")}</td>
                 <td><span class="risk-chip">高</span></td>
-                <td colspan="9" class="reason-cell">缺少行情缓存，无法计算技术面评分。${escapeHtml(sources)}</td>
+                <td colspan="10" class="reason-cell">缺少行情缓存，无法计算技术面评分。${escapeHtml(sources)}</td>
               </tr>
             `;
           }
@@ -818,7 +817,7 @@
           return;
         }
         setTechnicalRiskStatus("正在计算技术评分和止盈止损点位...");
-        const response = await fetch(`/api/technical-risk?ts=${Date.now()}`, { cache: "no-store" });
+        const response = await fetch(`/api/technical-risk?variant=${encodeURIComponent(activeVariantSlug)}&ts=${Date.now()}`, { cache: "no-store" });
         const payload = await response.json();
         if (!response.ok) {
           throw new Error(payload.error || `technical risk http ${response.status}`);
@@ -828,13 +827,13 @@
 
       async function waitForAllRefreshDone() {
         for (;;) {
-          const response = await fetch(`/api/status?ts=${Date.now()}`, { cache: "no-store" });
+          const response = await fetch(`/api/status?variant=${encodeURIComponent(activeVariantSlug)}&ts=${Date.now()}`, { cache: "no-store" });
           const payload = await response.json();
           if (!payload.running) {
             if (payload.last_error) throw new Error(payload.last_error);
             return payload;
           }
-          setTechnicalRiskStatus(`全部看板数据刷新中，起始时间 ${payload.last_started_at || ""}...`);
+          setTechnicalRiskStatus(`当前看板数据刷新中，起始时间 ${payload.last_started_at || ""}...`);
           await new Promise((resolve) => window.setTimeout(resolve, 3000));
         }
       }
@@ -846,11 +845,11 @@
         }
         technicalRiskButton.disabled = true;
         technicalRiskButton.textContent = "刷新中...";
-        setTechnicalRiskStatus("正在刷新全部看板数据...");
+        setTechnicalRiskStatus("正在刷新当前看板数据...");
         const response = await fetch("/api/refresh", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({}),
+          body: JSON.stringify({ variant_slug: activeVariantSlug }),
         });
         const payload = await response.json();
         if (!response.ok && response.status !== 409) {
