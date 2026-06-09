@@ -6,7 +6,7 @@
     "spy_above_ma100": true,
     "spy_adj_close": 737.55,
     "spy_ma100": 696.5293303131001,
-    "strategy_nav": 2.8512443045762828,
+    "strategy_nav": 2.8286401512562818,
     "benchmark_nav": 1.0845322653850482,
     "data_dir": "/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_relative_strength/futu_2025q4",
     "warnings": [
@@ -32,7 +32,11 @@
       "industry_filter": "whitelist",
       "market": "US",
       "benchmark_label": "SPY",
-      "market_cap_currency": "USD"
+      "market_cap_currency": "USD",
+      "enable_dynamic_hedge": true,
+      "dynamic_hedge_above_ma100": 0.0,
+      "dynamic_hedge_between_ma100_ma200": 0.1,
+      "dynamic_hedge_below_ma200": 0.25
     },
     "variant": {
       "name": "ER 3/8/20 (100B Top5 双周 Top50 Buffer)",
@@ -46,21 +50,21 @@
     "allow_new_buys": true
   },
   "performance": {
-    "CAGR": 10.794237647899186,
-    "Annualized Return": 2.6250135385290125,
-    "Annualized Volatility": 0.5414145110145273,
-    "Sharpe Ratio": 4.848435875148861,
-    "Sortino Ratio": 6.970294071323327,
-    "Max Drawdown": -0.14070296269618654,
-    "Calmar Ratio": 76.71649154401025,
+    "CAGR": 10.575207706437439,
+    "Annualized Return": 2.6052240407896674,
+    "Annualized Volatility": 0.539772656817561,
+    "Sharpe Ratio": 4.826520958193354,
+    "Sortino Ratio": 6.8768040436481455,
+    "Max Drawdown": -0.140600186490337,
+    "Calmar Ratio": 75.21474878814786,
     "Win Rate": 0.6448598130841121,
     "Monthly Win Rate": 0.8333333333333334,
-    "Turnover (Annualized)": 9.314444601802649,
-    "Average Holding Count": 5.0,
-    "Average Daily Turnover": 0.03696208175318511,
-    "Beta vs SPY": 1.8900392433334148,
-    "Alpha vs SPY": 2.2453280475046835,
-    "Information Ratio vs SPY": 4.961979565170881
+    "Turnover (Annualized)": 10.219440046223365,
+    "Average Holding Count": 5.233644859813084,
+    "Average Daily Turnover": 0.04055333351675938,
+    "Beta vs SPY": 1.8098583028592303,
+    "Alpha vs SPY": 2.241645908309408,
+    "Information Ratio vs SPY": 4.907447261124977
   },
   "paths": {
     "signal_top10_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_100b_top5_biweekly_top50/latest_signal_top10.csv",
@@ -69,6 +73,8 @@
     "historical_buy_counts_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_100b_top5_biweekly_top50/historical_buy_counts.csv",
     "profit_contribution_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_100b_top5_biweekly_top50/profit_contribution_by_ticker.csv",
     "top10_profit_contributors_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_100b_top5_biweekly_top50/top10_profit_contributors.csv",
+    "annual_independent_rule_comparison_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_100b_top5_biweekly_top50/annual_independent_rule_comparison.csv",
+    "annual_independent_rule_pivot_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_100b_top5_biweekly_top50/annual_independent_rule_pivot.csv",
     "daily_nav_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_100b_top5_biweekly_top50/daily_nav.csv",
     "html": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_100b_top5_biweekly_top50/index.html"
   }

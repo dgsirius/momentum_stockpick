@@ -6,7 +6,7 @@
     "spy_above_ma100": true,
     "spy_adj_close": 737.55,
     "spy_ma100": 696.5293303131001,
-    "strategy_nav": 1.7031793912585547,
+    "strategy_nav": 1.6810503824917455,
     "benchmark_nav": 1.0845322653850482,
     "data_dir": "/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_relative_strength/futu_2025q4",
     "warnings": [
@@ -32,7 +32,11 @@
       "industry_filter": "whitelist",
       "market": "US",
       "benchmark_label": "SPY",
-      "market_cap_currency": "USD"
+      "market_cap_currency": "USD",
+      "enable_dynamic_hedge": true,
+      "dynamic_hedge_above_ma100": 0.0,
+      "dynamic_hedge_between_ma100_ma200": 0.1,
+      "dynamic_hedge_below_ma200": 0.25
     },
     "variant": {
       "name": "ER 3/8/20 (10B 日调仓)",
@@ -46,21 +50,21 @@
     "allow_new_buys": true
   },
   "performance": {
-    "CAGR": 2.504698366940525,
-    "Annualized Return": 1.3733670915191079,
-    "Annualized Volatility": 0.4832177024505702,
-    "Sharpe Ratio": 2.84212909534206,
-    "Sortino Ratio": 4.000495136773053,
-    "Max Drawdown": -0.14927221682774516,
-    "Calmar Ratio": 16.77940088362765,
-    "Win Rate": 0.5700934579439252,
+    "CAGR": 2.3983980209683406,
+    "Annualized Return": 1.3377229447143733,
+    "Annualized Volatility": 0.4729365062944564,
+    "Sharpe Ratio": 2.8285465953890427,
+    "Sortino Ratio": 3.8353212691794307,
+    "Max Drawdown": -0.14873941522620127,
+    "Calmar Ratio": 16.124831587652025,
+    "Win Rate": 0.5887850467289719,
     "Monthly Win Rate": 0.8333333333333334,
-    "Turnover (Annualized)": 90.82912242751812,
-    "Average Holding Count": 10.0,
-    "Average Daily Turnover": 0.36043302550602424,
-    "Beta vs SPY": 1.3823868843026208,
-    "Alpha vs SPY": 1.0956626762254187,
-    "Information Ratio vs SPY": 2.6287876153392737
+    "Turnover (Annualized)": 92.93133640361825,
+    "Average Holding Count": 10.233644859813085,
+    "Average Daily Turnover": 0.36877514445880255,
+    "Beta vs SPY": 1.2736430808684214,
+    "Alpha vs SPY": 1.0818638136116872,
+    "Information Ratio vs SPY": 2.5853226879684175
   },
   "paths": {
     "signal_top10_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/latest_signal_top10.csv",
@@ -69,6 +73,8 @@
     "historical_buy_counts_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/historical_buy_counts.csv",
     "profit_contribution_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/profit_contribution_by_ticker.csv",
     "top10_profit_contributors_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/top10_profit_contributors.csv",
+    "annual_independent_rule_comparison_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/annual_independent_rule_comparison.csv",
+    "annual_independent_rule_pivot_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/annual_independent_rule_pivot.csv",
     "daily_nav_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/daily_nav.csv",
     "html": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/index.html"
   }

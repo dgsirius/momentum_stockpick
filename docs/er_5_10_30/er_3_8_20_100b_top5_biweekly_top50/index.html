@@ -386,6 +386,62 @@
     .technical-table-wrap {
       overflow-x: auto;
     }
+    .annual-rule-board {
+      margin-top: 16px;
+      scroll-margin-top: 18px;
+    }
+    .annual-rule-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+    .annual-rule-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      min-width: 190px;
+    }
+    .annual-rule-links a {
+      display: inline-block;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.72);
+      color: var(--accent-2);
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .annual-stats {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+      margin: 10px 0 14px;
+    }
+    .annual-stat {
+      border: 1px solid #ece5da;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.68);
+      padding: 10px 12px;
+    }
+    .annual-stat .label {
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    .annual-stat .value {
+      font-size: 18px;
+      margin-top: 5px;
+    }
+    .annual-table-wrap {
+      overflow-x: auto;
+    }
+    .annual-table-wrap td,
+    .annual-table-wrap th {
+      white-space: nowrap;
+    }
     .risk-chip {
       display: inline-block;
       min-width: 36px;
@@ -421,6 +477,186 @@
       min-width: 180px;
       line-height: 1.45;
       color: var(--muted);
+    }
+    .etf-monitor {
+      margin-top: 16px;
+      scroll-margin-top: 18px;
+    }
+    .etf-monitor-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+    .etf-monitor-date {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    .etf-monitor-stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .etf-monitor-stat {
+      border: 1px solid #ece5da;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.68);
+      padding: 10px 12px;
+    }
+    .etf-monitor-stat .label {
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    .etf-monitor-stat .value {
+      font-size: 18px;
+      margin-top: 5px;
+    }
+    .etf-monitor-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+      gap: 16px;
+      align-items: start;
+    }
+    .etf-subhead {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .etf-return-bars {
+      display: grid;
+      gap: 8px;
+    }
+    .etf-bar-row {
+      display: grid;
+      grid-template-columns: 54px minmax(72px, 1fr) 78px repeat(3, minmax(72px, 1fr));
+      gap: 8px;
+      align-items: center;
+    }
+    .etf-bar-label {
+      font-weight: 750;
+      font-size: 13px;
+    }
+    .etf-bar-cell {
+      position: relative;
+      height: 28px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: rgba(31,42,46,0.05);
+      border: 1px solid rgba(216,207,194,0.8);
+    }
+    .etf-bar-fill {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      background: rgba(26,127,82,0.72);
+    }
+    .etf-bar-fill.negative {
+      left: auto;
+      right: 50%;
+      background: rgba(181,54,46,0.68);
+    }
+    .etf-bar-cell::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      border-left: 1px solid rgba(31,42,46,0.25);
+    }
+    .etf-bar-value {
+      position: relative;
+      z-index: 1;
+      display: block;
+      padding: 6px 7px;
+      font-size: 12px;
+      font-weight: 700;
+      text-align: right;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    .gap-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 64px;
+      min-height: 26px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(100,114,118,0.12);
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 750;
+      white-space: nowrap;
+    }
+    .gap-up {
+      background: rgba(26,127,82,0.14);
+      color: var(--good);
+    }
+    .gap-down {
+      background: rgba(181,54,46,0.13);
+      color: #a1322d;
+    }
+    .etf-inflection-list {
+      display: grid;
+      gap: 10px;
+    }
+    .etf-signal-card {
+      border: 1px solid #ece5da;
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: rgba(255,255,255,0.68);
+    }
+    .etf-signal-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-weight: 750;
+    }
+    .etf-signal-detail {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+    .state-chip {
+      display: inline-block;
+      min-width: 42px;
+      text-align: center;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 750;
+      background: rgba(100,114,118,0.12);
+      color: var(--muted);
+    }
+    .state-strong {
+      background: rgba(26,127,82,0.14);
+      color: var(--good);
+    }
+    .state-weak {
+      background: rgba(181,54,46,0.13);
+      color: #a1322d;
+    }
+    .state-watch {
+      background: rgba(177,94,30,0.14);
+      color: #8a4a18;
+    }
+    .etf-table-wrap {
+      overflow-x: auto;
+      margin-top: 16px;
+    }
+    .etf-table-wrap td,
+    .etf-table-wrap th {
+      white-space: nowrap;
     }
     .modal-foot {
       display: flex;
@@ -470,8 +706,25 @@
       .technical-head {
         flex-direction: column;
       }
-      .technical-summary {
+      .technical-summary,
+      .annual-stats {
         grid-template-columns: 1fr 1fr;
+      }
+      .annual-rule-head {
+        flex-direction: column;
+      }
+      .annual-rule-links {
+        justify-content: flex-start;
+      }
+      .etf-monitor-head {
+        flex-direction: column;
+      }
+      .etf-monitor-stats,
+      .etf-monitor-grid {
+        grid-template-columns: 1fr;
+      }
+      .etf-bar-row {
+        grid-template-columns: 52px minmax(64px, 1fr) 76px repeat(3, minmax(64px, 1fr));
       }
       .modal-toolbar, .modal-foot {
         flex-direction: column;
@@ -499,7 +752,7 @@
         <section class="hero">
           <div class="hero-main">
             <h1>US Strategy Dashboard</h1>
-            <div class="subtitle">策略固定为 <span class='tag'>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</span><span class='tag'>Market Cap >= 100B USD</span><span class='tag'>Initial Capital $500K</span><span class='tag'>Commission 0.08%/side</span><span class='tag'>Biweekly Rebalance</span><span class='tag'>Industry Whitelist</span><span class='tag'>Top50 Buffer</span><span class='tag'>No Market Filter</span><span class='tag'>mode_b</span><span class='tag'>Start 2026-01-01</span></div>
+            <div class="subtitle">策略固定为 <span class='tag'>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</span><span class='tag'>Market Cap >= 100B USD</span><span class='tag'>Initial Capital $500K</span><span class='tag'>Commission 0.08%/side</span><span class='tag'>Biweekly Rebalance</span><span class='tag'>Industry Whitelist</span><span class='tag'>Top50 Buffer</span><span class='tag'>No Market Filter</span><span class='tag'>Embedded 10%/25% Dynamic Hedge</span><span class='tag'>mode_b</span><span class='tag'>Start 2026-01-01</span></div>
           </div>
           <div class="toolbar">
             <div class="toolbar-actions">
@@ -516,31 +769,31 @@
           <div class='card'><div class='label'>最新信号日</div><div class='value'>2026-06-05</div></div>
 <div class='card'><div class='label'>下个交易日</div><div class='value'>2026-06-08</div></div>
 <div class='card'><div class='label'>市场过滤</div><div class='value'>none</div></div>
-<div class='card'><div class='label'>策略净值</div><div class='value'>2.8512</div></div>
+<div class='card'><div class='label'>策略净值</div><div class='value'>2.8286</div></div>
 <div class='card'><div class='label'>SPY净值</div><div class='value'>1.0845</div></div>
-<div class='card'><div class='label'>CAGR</div><div class='value'>1079.42%</div></div>
-<div class='card'><div class='label'>Sharpe</div><div class='value'>4.85</div></div>
-<div class='card'><div class='label'>最大回撤</div><div class='value'>-14.07%</div></div>
+<div class='card'><div class='label'>CAGR</div><div class='value'>1057.52%</div></div>
+<div class='card'><div class='label'>Sharpe</div><div class='value'>4.83</div></div>
+<div class='card'><div class='label'>最大回撤</div><div class='value'>-14.06%</div></div>
         </section>
 
         <section class="grid">
           <div class="panel">
             <h2>当前持有 / 计划持有 Top5</h2>
             <p class="meta">按最新信号日生成，包含 keep / buy 动作。</p>
-            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>er3</th><th>er8</th><th>er20</th></tr></thead><tbody><tr><td></td><td>US.SNDK</td><td>闪迪</td><td>keep</td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.ARM</td><td>Arm Holdings</td><td>keep</td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.AMD</td><td>美国超微公司</td><td>keep</td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.QCOM</td><td>高通</td><td>keep</td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.CRWD</td><td>CrowdStrike</td><td>keep</td><td></td><td></td><td></td></tr></tbody></table>
+            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>weight</th><th>market_value</th><th>er3</th><th>er8</th><th>er20</th></tr></thead><tbody><tr><td></td><td>US.SNDK</td><td>闪迪</td><td>keep</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td>US.ARM</td><td>Arm Holdings</td><td>keep</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td>US.AMD</td><td>美国超微公司</td><td>keep</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td>US.QCOM</td><td>高通</td><td>keep</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td>US.CRWD</td><td>CrowdStrike</td><td>keep</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
           </div>
           <div class="panel">
             <h2>当前实际持仓</h2>
             <p class="meta">最新信号日对应的 mode_b 实际持仓快照。</p>
-            <table><thead><tr><th>ticker</th><th>name</th><th>shares</th><th>weight</th><th>market_value</th></tr></thead><tbody><tr><td>US.ARM</td><td>Arm Holdings</td><td>1,065.6940</td><td>0.2564</td><td></td></tr>
-<tr><td>US.SNDK</td><td>闪迪</td><td>181.6295</td><td>0.1987</td><td></td></tr>
-<tr><td>US.CRWD</td><td>CrowdStrike</td><td>419.7488</td><td>0.1976</td><td></td></tr>
-<tr><td>US.QCOM</td><td>高通</td><td>1,157.7454</td><td>0.1754</td><td></td></tr>
-<tr><td>US.AMD</td><td>美国超微公司</td><td>525.9269</td><td>0.1721</td><td></td></tr></tbody></table>
+            <table><thead><tr><th>book</th><th>ticker</th><th>name</th><th>shares</th><th>weight</th><th>market_value</th></tr></thead><tbody><tr><td>long</td><td>US.ARM</td><td>Arm Holdings</td><td>1,047.7836</td><td>0.2541</td><td>359,316.4181</td></tr>
+<tr><td>long</td><td>US.CRWD</td><td>CrowdStrike</td><td>417.6142</td><td>0.1981</td><td>280,227.4716</td></tr>
+<tr><td>long</td><td>US.SNDK</td><td>闪迪</td><td>178.5770</td><td>0.1969</td><td>278,458.7187</td></tr>
+<tr><td>long</td><td>US.QCOM</td><td>高通</td><td>1,151.8578</td><td>0.1759</td><td>248,732.1712</td></tr>
+<tr><td>long</td><td>US.AMD</td><td>美国超微公司</td><td>530.8660</td><td>0.1751</td><td>247,585.2960</td></tr></tbody></table>
           </div>
         </section>
 
@@ -559,46 +812,74 @@
           <div id="technicalRiskTable" class="technical-table-wrap"></div>
         </section>
 
+
+        <section class="panel annual-rule-board">
+          <div class="annual-rule-head">
+            <div>
+              <h2>独立年度回测</h2>
+              <p class="meta">每个自然年都从初始资金重新开始。策略内部已包含动态对冲：SPY 高于 MA100 不对冲；低于 MA100 但高于 MA200 对冲 10%；低于 MA200 对冲 25%。</p>
+            </div>
+            <div class="annual-rule-links">
+              <a href="annual_independent_rule_pivot.csv">年度对照 CSV</a>
+              <a href="annual_independent_rule_comparison.csv">明细 CSV</a>
+            </div>
+          </div>
+          <div class="annual-stats"><div class='annual-stat'><div class='label'>独立年度累计</div><div class='value'>641.1%</div></div>
+<div class='annual-stat'><div class='label'>亏损年份</div><div class='value'>0/5</div></div>
+<div class='annual-stat'><div class='label'>最好年份</div><div class='value'>154.4%</div></div>
+<div class='annual-stat'><div class='label'>最差年份</div><div class='value'>12.9%</div></div>
+<div class='annual-stat'><div class='label'>最差回撤</div><div class='value'>-33.3%</div></div>
+<div class='annual-stat'><div class='label'>覆盖年份</div><div class='value'>5</div></div></div>
+          <div class="annual-table-wrap">
+            <table><thead><tr><th>年份</th><th>区间</th><th>策略收益</th><th>基准收益</th><th>超额收益</th><th>最大回撤</th><th>Sharpe</th><th>年化换手</th><th>模式</th></tr></thead><tbody><tr><td>2026</td><td>2026-01-01 - 2026-06-05</td><td>154.4%</td><td>8.5%</td><td>145.9%</td><td>-14.5%</td><td>4.20</td><td>12.52</td><td>mode_b</td></tr>
+<tr><td>2025</td><td>2025-01-01 - 2025-12-31</td><td>67.1%</td><td>17.7%</td><td>49.4%</td><td>-33.3%</td><td>1.66</td><td>15.21</td><td>mode_b</td></tr>
+<tr><td>2024</td><td>2024-01-01 - 2024-12-31</td><td>12.9%</td><td>24.9%</td><td>-12.0%</td><td>-22.9%</td><td>0.58</td><td>19.00</td><td>mode_b</td></tr>
+<tr><td>2023</td><td>2023-01-01 - 2023-12-31</td><td>34.3%</td><td>26.2%</td><td>8.2%</td><td>-13.8%</td><td>1.50</td><td>16.65</td><td>mode_b</td></tr>
+<tr><td>2022</td><td>2022-01-03 - 2022-12-31</td><td>15.0%</td><td>-18.2%</td><td>33.2%</td><td>-14.1%</td><td>0.70</td><td>15.01</td><td>mode_b</td></tr></tbody></table>
+          </div>
+        </section>
+
+
         <section class="stack">
           <div class="panel">
             <h2>最新信号 Top5</h2>
             <p class="meta">每日更新的 top5 名单，按当前策略排序输出。</p>
-            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>planned_holding</th><th>er3</th><th>er8</th><th>er20</th><th>adv20</th></tr></thead><tbody><tr><td>1</td><td>US.GE</td><td>GE航天航空</td><td>watch</td><td>False</td><td>0.0613</td><td>0.0603</td><td>0.0757</td><td>1,493,737,968.0905</td></tr>
-<tr><td>2</td><td>US.CVX</td><td>雪佛龙</td><td>watch</td><td>False</td><td>0.0277</td><td>0.0314</td><td>0.0182</td><td>1,807,903,746.1805</td></tr>
-<tr><td>3</td><td>US.RTX</td><td>雷神技术</td><td>watch</td><td>False</td><td>0.0676</td><td>0.0287</td><td>0.0157</td><td>1,014,679,641.7770</td></tr>
-<tr><td>4</td><td>US.COP</td><td>康菲石油</td><td>watch</td><td>False</td><td>0.0313</td><td>0.0223</td><td>0.0115</td><td>770,192,342.2085</td></tr>
-<tr><td>5</td><td>US.UNP</td><td>联合太平洋</td><td>watch</td><td>False</td><td>0.0579</td><td>0.0219</td><td>0.0199</td><td>832,097,564.6018</td></tr>
-<tr><td>6</td><td>US.SHEL</td><td>壳牌</td><td>watch</td><td>False</td><td>0.0126</td><td>0.0217</td><td>0.0056</td><td>610,212,177.3424</td></tr>
-<tr><td>7</td><td>US.XOM</td><td>埃克森美孚</td><td>watch</td><td>False</td><td>0.0314</td><td>0.0181</td><td>0.0146</td><td>2,559,538,013.5530</td></tr>
-<tr><td>8</td><td>US.ENB</td><td>恩桥</td><td>watch</td><td>False</td><td>0.0288</td><td>0.0051</td><td>0.0348</td><td>277,644,320.7986</td></tr>
-<tr><td>9</td><td>US.LIN</td><td>林德气体</td><td>watch</td><td>False</td><td>0.0532</td><td>0.0036</td><td>0.0203</td><td>1,128,311,073.8972</td></tr>
-<tr><td>10</td><td>US.LMT</td><td>洛克希德马丁</td><td>watch</td><td>False</td><td>0.0491</td><td>0.0002</td><td>0.0140</td><td>628,065,903.3815</td></tr>
-<tr><td></td><td>US.SNDK</td><td>闪迪</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.ARM</td><td>Arm Holdings</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.AMD</td><td>美国超微公司</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.QCOM</td><td>高通</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td>US.CRWD</td><td>CrowdStrike</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td></tr></tbody></table>
+            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>planned_holding</th><th>weight</th><th>market_value</th><th>er3</th><th>er8</th><th>er20</th><th>adv20</th></tr></thead><tbody><tr><td>1</td><td>US.GE</td><td>GE航天航空</td><td>watch</td><td>False</td><td></td><td></td><td>0.0613</td><td>0.0603</td><td>0.0757</td><td>1,493,737,968.0905</td></tr>
+<tr><td>2</td><td>US.CVX</td><td>雪佛龙</td><td>watch</td><td>False</td><td></td><td></td><td>0.0277</td><td>0.0314</td><td>0.0182</td><td>1,807,903,746.1805</td></tr>
+<tr><td>3</td><td>US.RTX</td><td>雷神技术</td><td>watch</td><td>False</td><td></td><td></td><td>0.0676</td><td>0.0287</td><td>0.0157</td><td>1,014,679,641.7770</td></tr>
+<tr><td>4</td><td>US.COP</td><td>康菲石油</td><td>watch</td><td>False</td><td></td><td></td><td>0.0313</td><td>0.0223</td><td>0.0115</td><td>770,192,342.2085</td></tr>
+<tr><td>5</td><td>US.UNP</td><td>联合太平洋</td><td>watch</td><td>False</td><td></td><td></td><td>0.0579</td><td>0.0219</td><td>0.0199</td><td>832,097,564.6018</td></tr>
+<tr><td>6</td><td>US.SHEL</td><td>壳牌</td><td>watch</td><td>False</td><td></td><td></td><td>0.0126</td><td>0.0217</td><td>0.0056</td><td>610,212,177.3424</td></tr>
+<tr><td>7</td><td>US.XOM</td><td>埃克森美孚</td><td>watch</td><td>False</td><td></td><td></td><td>0.0314</td><td>0.0181</td><td>0.0146</td><td>2,559,538,013.5530</td></tr>
+<tr><td>8</td><td>US.ENB</td><td>恩桥</td><td>watch</td><td>False</td><td></td><td></td><td>0.0288</td><td>0.0051</td><td>0.0348</td><td>277,644,320.7986</td></tr>
+<tr><td>9</td><td>US.LIN</td><td>林德气体</td><td>watch</td><td>False</td><td></td><td></td><td>0.0532</td><td>0.0036</td><td>0.0203</td><td>1,128,311,073.8972</td></tr>
+<tr><td>10</td><td>US.LMT</td><td>洛克希德马丁</td><td>watch</td><td>False</td><td></td><td></td><td>0.0491</td><td>0.0002</td><td>0.0140</td><td>628,065,903.3815</td></tr>
+<tr><td></td><td>US.SNDK</td><td>闪迪</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td>US.ARM</td><td>Arm Holdings</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td>US.AMD</td><td>美国超微公司</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td>US.QCOM</td><td>高通</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td>US.CRWD</td><td>CrowdStrike</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
           </div>
 
           <div class="panel">
             <h2>历史触发买入信号标的</h2>
             <p class="meta">这里按策略实际 BUY 事件统计，而不是仅进过 top10 名单。按出现次数排序。</p>
-            <table><thead><tr><th>ticker</th><th>name</th><th>industry_labels</th><th>buy_count</th><th>total_buy_value</th><th>latest_adj_close</th><th>first_signal_date</th><th>last_signal_date</th></tr></thead><tbody><tr><td>US.MU</td><td>美光科技</td><td>半导体</td><td>2</td><td>341,949.3012</td><td>864.0100</td><td>2025-12-31 00:00:00</td><td>2026-05-08 00:00:00</td></tr>
-<tr><td>US.ARM</td><td>Arm Holdings</td><td>半导体</td><td>2</td><td>294,614.9640</td><td>342.9300</td><td>2026-02-26 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
-<tr><td>US.SNDK</td><td>闪迪</td><td>计算机硬件</td><td>2</td><td>268,246.0850</td><td>1,559.3200</td><td>2026-01-28 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
-<tr><td>US.CRWD</td><td>CrowdStrike</td><td>软件基础设施</td><td>1</td><td>279,272.4975</td><td>671.0200</td><td>2026-05-22 00:00:00</td><td>2026-05-22 00:00:00</td></tr>
-<tr><td>US.QCOM</td><td>高通</td><td>半导体</td><td>1</td><td>278,826.0187</td><td>215.9400</td><td>2026-05-22 00:00:00</td><td>2026-05-22 00:00:00</td></tr>
-<tr><td>US.AMD</td><td>美国超微公司</td><td>半导体</td><td>1</td><td>242,336.7301</td><td>466.3800</td><td>2026-05-08 00:00:00</td><td>2026-05-08 00:00:00</td></tr>
-<tr><td>US.INTC</td><td>英特尔</td><td>半导体</td><td>1</td><td>157,567.0007</td><td>99.1700</td><td>2026-04-10 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
-<tr><td>US.STX</td><td>希捷科技</td><td>计算机硬件</td><td>1</td><td>157,063.1893</td><td>847.4700</td><td>2026-04-10 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
-<tr><td>US.MRVL</td><td>迈威尔科技</td><td>半导体</td><td>1</td><td>142,682.7812</td><td>263.4700</td><td>2026-03-26 00:00:00</td><td>2026-03-26 00:00:00</td></tr>
+            <table><thead><tr><th>ticker</th><th>name</th><th>industry_labels</th><th>buy_count</th><th>total_buy_value</th><th>latest_adj_close</th><th>first_signal_date</th><th>last_signal_date</th></tr></thead><tbody><tr><td>US.MU</td><td>美光科技</td><td>半导体</td><td>2</td><td>344,221.5249</td><td>864.0100</td><td>2025-12-31 00:00:00</td><td>2026-05-08 00:00:00</td></tr>
+<tr><td>US.ARM</td><td>Arm Holdings</td><td>半导体</td><td>2</td><td>291,966.8393</td><td>342.9300</td><td>2026-02-26 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
+<tr><td>US.SNDK</td><td>闪迪</td><td>计算机硬件</td><td>2</td><td>265,597.9603</td><td>1,559.3200</td><td>2026-01-28 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
+<tr><td>US.CRWD</td><td>CrowdStrike</td><td>软件基础设施</td><td>1</td><td>277,852.2910</td><td>671.0200</td><td>2026-05-22 00:00:00</td><td>2026-05-22 00:00:00</td></tr>
+<tr><td>US.QCOM</td><td>高通</td><td>半导体</td><td>1</td><td>277,408.0827</td><td>215.9400</td><td>2026-05-22 00:00:00</td><td>2026-05-22 00:00:00</td></tr>
+<tr><td>US.AMD</td><td>美国超微公司</td><td>半导体</td><td>1</td><td>244,612.5922</td><td>466.3800</td><td>2026-05-08 00:00:00</td><td>2026-05-08 00:00:00</td></tr>
+<tr><td>US.INTC</td><td>英特尔</td><td>半导体</td><td>1</td><td>154,918.8760</td><td>99.1700</td><td>2026-04-10 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
+<tr><td>US.STX</td><td>希捷科技</td><td>计算机硬件</td><td>1</td><td>154,918.8760</td><td>847.4700</td><td>2026-04-10 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
+<tr><td>US.MRVL</td><td>迈威尔科技</td><td>半导体</td><td>1</td><td>147,849.6635</td><td>263.4700</td><td>2026-03-26 00:00:00</td><td>2026-03-26 00:00:00</td></tr>
 <tr><td>US.GLW</td><td>康宁</td><td>电子元件</td><td>1</td><td>139,581.7046</td><td>177.5800</td><td>2026-02-11 00:00:00</td><td>2026-02-11 00:00:00</td></tr>
 <tr><td>US.PBR</td><td>巴西石油公司</td><td>综合油气</td><td>1</td><td>139,581.7046</td><td>17.7500</td><td>2026-02-11 00:00:00</td><td>2026-02-11 00:00:00</td></tr>
 <tr><td>US.VRT</td><td>Vertiv Holdings</td><td>电气设备及零件</td><td>1</td><td>139,581.7046</td><td>300.5100</td><td>2026-02-11 00:00:00</td><td>2026-02-11 00:00:00</td></tr>
 <tr><td>US.HWM</td><td>Howmet Aerospace</td><td>航空航天与国防</td><td>1</td><td>136,828.8618</td><td>251.9000</td><td>2026-02-26 00:00:00</td><td>2026-02-26 00:00:00</td></tr>
-<tr><td>US.BP</td><td>英国石油</td><td>综合油气</td><td>1</td><td>130,855.4160</td><td>42.9700</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
-<tr><td>US.DELL</td><td>戴尔科技</td><td>计算机硬件</td><td>1</td><td>130,855.4160</td><td>394.3900</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
-<tr><td>US.SHEL</td><td>壳牌</td><td>综合油气</td><td>1</td><td>130,541.6140</td><td>85.4000</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
+<tr><td>US.DELL</td><td>戴尔科技</td><td>计算机硬件</td><td>1</td><td>130,658.8259</td><td>394.3900</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
+<tr><td>US.BP</td><td>英国石油</td><td>综合油气</td><td>1</td><td>130,658.8259</td><td>42.9700</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
+<tr><td>US.SHEL</td><td>壳牌</td><td>综合油气</td><td>1</td><td>130,658.8259</td><td>85.4000</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
 <tr><td>US.BA</td><td>波音</td><td>航空航天与国防</td><td>1</td><td>100,000.0000</td><td>215.4500</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr>
 <tr><td>US.LMT</td><td>洛克希德马丁</td><td>航空航天与国防</td><td>1</td><td>100,000.0000</td><td>523.7600</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr>
 <tr><td>US.LRCX</td><td>泛林集团</td><td>半导体设备与材料</td><td>1</td><td>100,000.0000</td><td>303.2800</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr>
@@ -640,6 +921,8 @@
             <img src="charts/top10_loss_trade_markers.png" alt="top10 loss trade markers">
           </div>
         </section>
+
+
 
         <div class="footer">
           <div>数据目录：/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_relative_strength/futu_2025q4</div>
@@ -1127,6 +1410,139 @@
       loadTechnicalRisk().catch((error) => {
         setTechnicalRiskStatus(`技术评分读取失败: ${error.message}`);
       });
+    })();
+  </script>
+  <script>
+    (() => {
+      const payloadNode = document.getElementById("etfMonitorPayload");
+      if (!payloadNode) return;
+      const payload = JSON.parse(payloadNode.textContent || "{}");
+      const dateNode = document.getElementById("etfMonitorDate");
+      const statsNode = document.getElementById("etfMonitorStats");
+      const barsNode = document.getElementById("etfReturnBars");
+      const listNode = document.getElementById("etfInflectionList");
+      const tableNode = document.getElementById("etfMonitorTable");
+      const rows = Array.isArray(payload.rows) ? payload.rows : [];
+
+      function escapeHtml(value) {
+        return String(value ?? "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#39;");
+      }
+
+      function fmtPct(value) {
+        const number = Number(value);
+        if (!Number.isFinite(number)) return "";
+        const sign = number > 0 ? "+" : "";
+        return sign + (number * 100).toFixed(2) + "%";
+      }
+
+      function fmtRankDelta(value) {
+        const number = Number(value);
+        if (!Number.isFinite(number) || number === 0) return "0";
+        return number > 0 ? "+" + number : String(number);
+      }
+
+      function chipClass(state) {
+        if (state === "转强") return "state-chip state-strong";
+        if (state === "转弱" || state === "承压") return "state-chip state-weak";
+        if (state === "观察") return "state-chip state-watch";
+        return "state-chip";
+      }
+
+      function gapClass(direction) {
+        if (direction === "up gap") return "gap-chip gap-up";
+        if (direction === "down gap") return "gap-chip gap-down";
+        return "gap-chip";
+      }
+
+      function fmtGap(direction) {
+        return direction === "up gap" || direction === "down gap" ? direction : "no gap";
+      }
+
+      function statCard(label, value) {
+        return '<div class="etf-monitor-stat"><div class="label">' + escapeHtml(label) + '</div><div class="value">' + escapeHtml(value || "N/A") + '</div></div>';
+      }
+
+      function renderStats() {
+        const summary = payload.summary || {};
+        const strongest = summary.strongest_1d || {};
+        const weakest = summary.weakest_1d || {};
+        statsNode.innerHTML = [
+          statCard("转强 / 转弱", String(summary.strong_count || 0) + " / " + String(summary.weak_count || 0)),
+          statCard("1日最强", strongest.label ? strongest.label + " " + fmtPct(strongest.ret_1d) : ""),
+          statCard("1日最弱", weakest.label ? weakest.label + " " + fmtPct(weakest.ret_1d) : ""),
+          statCard("SOXX vs QQQ", "1日 " + fmtPct(summary.soxx_vs_qqq_1d) + " / 5日 " + fmtPct(summary.soxx_vs_qqq_5d)),
+        ].join("");
+      }
+
+      function renderBars() {
+        const periods = [
+          ["ret_1d", "1日"],
+          ["ret_5d", "5日"],
+          ["ret_20d", "20日"],
+          ["ret_60d", "60日"],
+        ];
+        const values = rows.flatMap((row) => periods.map(([key]) => Math.abs(Number(row[key])))).filter(Number.isFinite);
+        const maxAbs = Math.max(0.01, ...values);
+        const header = '<div class="etf-bar-row"><div></div><div class="etf-subhead" style="margin:0;">1日</div><div class="etf-subhead" style="margin:0;">Gap</div>' + periods.slice(1).map(([, label]) => '<div class="etf-subhead" style="margin:0;">' + label + '</div>').join("") + '</div>';
+        const body = rows.map((row) => {
+          const cells = periods.map(([key]) => {
+            const value = Number(row[key]);
+            const width = Number.isFinite(value) ? Math.min(50, Math.abs(value) / maxAbs * 50) : 0;
+            const negative = value < 0 ? " negative" : "";
+            return '<div class="etf-bar-cell"><span class="etf-bar-fill' + negative + '" style="width:' + width.toFixed(2) + '%"></span><span class="etf-bar-value">' + fmtPct(row[key]) + '</span></div>';
+          });
+          cells.splice(1, 0, '<span class="' + gapClass(row.gap_direction) + '">' + escapeHtml(fmtGap(row.gap_direction)) + '</span>');
+          const cellsHtml = cells.join("");
+          return '<div class="etf-bar-row"><div class="etf-bar-label">' + escapeHtml(row.label) + '</div>' + cellsHtml + '</div>';
+        }).join("");
+        barsNode.innerHTML = header + body;
+      }
+
+      function renderInflections() {
+        const strong = (payload.top_strengthening || []).slice(0, 4);
+        const weak = (payload.top_weakening || []).slice(0, 4);
+        const renderItem = (row, direction) => {
+          const rankText = "5日排名 " + fmtRankDelta(row.rank_delta_5d) + "，vs QQQ 1日 " + fmtPct(row.qqq_rel_1d) + "，量能 " + (row.volume_ratio20 ? Number(row.volume_ratio20).toFixed(2) + "x" : "N/A");
+          return '<div class="etf-signal-card"><div class="etf-signal-top"><span>' + escapeHtml(row.label) + '</span><span class="' + chipClass(direction === "weak" ? "转弱" : row.state) + '">' + escapeHtml(direction === "weak" ? "转弱" : row.state) + '</span></div><div class="etf-signal-detail">' + escapeHtml(rankText) + '</div></div>';
+        };
+        listNode.innerHTML =
+          '<div class="etf-subhead">转强候选</div>' +
+          (strong.length ? strong.map((row) => renderItem(row, "strong")).join("") : '<div class="etf-signal-card">暂无明显转强。</div>') +
+          '<div class="etf-subhead" style="margin-top:6px;">转弱候选</div>' +
+          (weak.length ? weak.map((row) => renderItem(row, "weak")).join("") : '<div class="etf-signal-card">暂无明显转弱。</div>');
+      }
+
+      function renderTable() {
+        const sorted = [...rows].sort((a, b) => Number(b.marginal_score || -999) - Number(a.marginal_score || -999));
+        tableNode.innerHTML = sorted.map((row) => {
+          const volumeText = row.volume_ratio20 ? Number(row.volume_ratio20).toFixed(2) + "x" + (row.down_volume_alert ? " 放量下跌" : "") : "";
+          return '<tr>' +
+            '<td><strong>' + escapeHtml(row.label) + '</strong></td>' +
+            '<td><span class="' + chipClass(row.state) + '">' + escapeHtml(row.state || "") + '</span></td>' +
+            '<td>' + fmtPct(row.ret_1d) + '</td>' +
+            '<td><span class="' + gapClass(row.gap_direction) + '">' + escapeHtml(fmtGap(row.gap_direction)) + '</span></td>' +
+            '<td>' + fmtPct(row.ret_5d) + '</td>' +
+            '<td>' + fmtPct(row.ret_20d) + '</td>' +
+            '<td>' + fmtPct(row.ret_60d) + '</td>' +
+            '<td>' + fmtPct(row.qqq_rel_1d) + '</td>' +
+            '<td>' + fmtRankDelta(row.rank_delta_5d) + '</td>' +
+            '<td>' + fmtPct(row.ma20_pct) + '</td>' +
+            '<td>' + fmtPct(row.drawdown_20d) + '</td>' +
+            '<td>' + escapeHtml(volumeText) + '</td>' +
+          '</tr>';
+        }).join("") || '<tr><td colspan="12">暂无 ETF 行情监控数据。</td></tr>';
+      }
+
+      dateNode.textContent = payload.latest_date || "N/A";
+      renderStats();
+      renderBars();
+      renderInflections();
+      renderTable();
     })();
   </script>
 </body>
