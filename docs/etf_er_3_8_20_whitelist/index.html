@@ -801,7 +801,7 @@
           <div class="technical-head">
             <div>
               <h2>技术面评分 / 止盈止损建议</h2>
-              <p class="meta">仅分析当前看板的当前实际持仓与计划买入标的；评分按右侧趋势、MACD、KDJ、成交量、ATR 赔率位置计算。</p>
+              <p class="meta">分析当前 ETF 看板所有历史触发 BUY 事件的标的；评分按右侧趋势、MACD、KDJ、成交量、ATR 赔率位置计算。</p>
             </div>
             <div class="technical-actions">
               <button id="technicalRiskButton" class="refresh-btn" type="button">刷新评分与点位</button>
@@ -1072,8 +1072,11 @@
 
       function renderTechnicalRisk(payload) {
         const strategy = payload.strategy_summary || {};
+        const coverageValue = payload.universe_mode === "historical_buy_signals"
+          ? `${payload.ticker_count || 0}（历史买入 ${payload.historical_buy_count || 0} / 持有 ${payload.current_holding_count || 0} / 买入 ${payload.planned_buy_count || 0}）`
+          : `${payload.ticker_count || 0}（持有 ${payload.current_holding_count || 0} / 买入 ${payload.planned_buy_count || 0}）`;
         const stats = [
-          ["覆盖标的", `${payload.ticker_count || 0}（持有 ${payload.current_holding_count || 0} / 买入 ${payload.planned_buy_count || 0}）`],
+          ["覆盖标的", coverageValue],
           ["高风险", `${payload.risk_high_count || 0}`],
           ["回测胜率", formatPct(strategy.win_rate)],
           ["ATR策略", `${formatNumber(strategy.stop_atr, 2)}止损 / ${formatNumber(strategy.take_atr, 2)}止盈`],
