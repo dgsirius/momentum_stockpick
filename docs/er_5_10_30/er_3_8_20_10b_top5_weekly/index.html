@@ -520,6 +520,86 @@
       gap: 16px;
       align-items: start;
     }
+    .etf-ema-card {
+      margin: 16px 0;
+      border: 1px solid #ece5da;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.62);
+      padding: 14px;
+    }
+    .etf-ema-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .etf-ema-legend {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .etf-ema-legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .etf-ema-swatch {
+      width: 18px;
+      height: 3px;
+      border-radius: 999px;
+      background: currentColor;
+    }
+    .etf-ema-chart {
+      min-height: 300px;
+    }
+    .etf-ema-chart svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .etf-ema-controls {
+      display: grid;
+      grid-template-columns: auto 110px minmax(180px, 1fr) auto;
+      gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .etf-ema-window-label,
+    .etf-ema-range-label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .etf-ema-window {
+      min-height: 32px;
+      border: 1px solid #d8cfc2;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.78);
+      color: var(--ink);
+      font: inherit;
+      font-size: 13px;
+      padding: 4px 8px;
+    }
+    .etf-ema-range {
+      width: 100%;
+      accent-color: var(--accent-2);
+    }
+    .etf-ema-empty {
+      min-height: 180px;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      border: 1px dashed #d8cfc2;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.5);
+    }
     .etf-subhead {
       color: var(--muted);
       font-size: 12px;
@@ -722,6 +802,19 @@
       .etf-monitor-stats,
       .etf-monitor-grid {
         grid-template-columns: 1fr;
+      }
+      .etf-ema-head {
+        flex-direction: column;
+      }
+      .etf-ema-legend {
+        justify-content: flex-start;
+      }
+      .etf-ema-controls {
+        grid-template-columns: auto minmax(90px, 120px);
+      }
+      .etf-ema-range,
+      .etf-ema-range-label {
+        grid-column: 1 / -1;
       }
       .etf-bar-row {
         grid-template-columns: 52px minmax(64px, 1fr) 76px repeat(3, minmax(64px, 1fr));
@@ -1434,6 +1527,11 @@
       const barsNode = document.getElementById("etfReturnBars");
       const listNode = document.getElementById("etfInflectionList");
       const tableNode = document.getElementById("etfMonitorTable");
+      const emaChartNode = document.getElementById("etfEmaChart");
+      const emaLegendNode = document.getElementById("etfEmaLegend");
+      const emaRangeNode = document.getElementById("etfEmaRange");
+      const emaWindowNode = document.getElementById("etfEmaWindow");
+      const emaRangeLabelNode = document.getElementById("etfEmaRangeLabel");
       const rows = Array.isArray(payload.rows) ? payload.rows : [];
 
       function escapeHtml(value) {
@@ -1529,6 +1627,154 @@
           (weak.length ? weak.map((row) => renderItem(row, "weak")).join("") : '<div class="etf-signal-card">暂无明显转弱。</div>');
       }
 
+      function renderEma200DeviationChart() {
+        if (!emaChartNode) return;
+        const colors = {
+          QQQ: "#0f5c73",
+          SOXX: "#b15e1e",
+        };
+        const fullSeries = ((payload.ema200_deviation || {}).series || [])
+          .map((item) => ({
+            ...item,
+            points: Array.isArray(item.points) ? item.points.filter((point) => Number.isFinite(Number(point.value))) : [],
+          }))
+          .filter((item) => item.points.length > 0);
+        if (!fullSeries.length) {
+          emaChartNode.innerHTML = '<div class="etf-ema-empty">暂无 200日EMA 偏离度数据。</div>';
+          if (emaLegendNode) emaLegendNode.innerHTML = "";
+          return;
+        }
+        const allDates = Array.from(new Set(fullSeries.flatMap((item) => item.points.map((point) => point.date)))).sort();
+        const distribution = (payload.ema200_deviation || {}).soxx_distribution || {};
+        const distributionLevels = Array.isArray(distribution.levels)
+          ? distribution.levels.filter((level) => Number.isFinite(Number(level.value)))
+          : [];
+        const distributionValues = distributionLevels.map((level) => Number(level.value));
+        const pctText = (value) => {
+          const sign = value > 0 ? "+" : "";
+          return sign + (value * 100).toFixed(1) + "%";
+        };
+
+        const getWindowSize = () => {
+          const value = emaWindowNode ? emaWindowNode.value : "504";
+          if (value === "all") return allDates.length;
+          return Math.min(allDates.length, Math.max(1, Number(value) || 504));
+        };
+        const syncRange = (resetToLatest) => {
+          if (!emaRangeNode) return 0;
+          const windowSize = getWindowSize();
+          const maxStart = Math.max(0, allDates.length - windowSize);
+          emaRangeNode.min = "0";
+          emaRangeNode.max = String(maxStart);
+          emaRangeNode.disabled = maxStart === 0;
+          if (resetToLatest || !emaRangeNode.value || Number(emaRangeNode.value) > maxStart) {
+            emaRangeNode.value = String(maxStart);
+          }
+          return Number(emaRangeNode.value) || 0;
+        };
+
+        const draw = () => {
+          const windowSize = getWindowSize();
+          const maxStart = Math.max(0, allDates.length - windowSize);
+          const startIndex = emaRangeNode ? Math.min(maxStart, Math.max(0, Number(emaRangeNode.value) || 0)) : maxStart;
+          const visibleDates = allDates.slice(startIndex, startIndex + windowSize);
+          const visibleSet = new Set(visibleDates);
+          const series = fullSeries
+            .map((item) => ({
+              ...item,
+              points: item.points.filter((point) => visibleSet.has(point.date)),
+            }))
+            .filter((item) => item.points.length > 0);
+          const values = series.flatMap((item) => item.points.map((point) => Number(point.value))).filter(Number.isFinite);
+          let minValue = Math.min(0, ...values, ...distributionValues);
+          let maxValue = Math.max(0, ...values, ...distributionValues);
+          const span = Math.max(0.02, maxValue - minValue);
+          minValue -= span * 0.12;
+          maxValue += span * 0.12;
+
+          const width = 920;
+          const height = 340;
+          const margin = { top: 20, right: 88, bottom: 38, left: 62 };
+          const innerWidth = width - margin.left - margin.right;
+          const innerHeight = height - margin.top - margin.bottom;
+          const dateIndex = new Map(visibleDates.map((date, idx) => [date, idx]));
+          const xFor = (date) => {
+            const idx = dateIndex.get(date) || 0;
+            return margin.left + (idx / Math.max(1, visibleDates.length - 1)) * innerWidth;
+          };
+          const yFor = (value) => margin.top + ((maxValue - value) / Math.max(0.000001, maxValue - minValue)) * innerHeight;
+          const ticks = [0, 0.25, 0.5, 0.75, 1].map((ratio) => maxValue - (maxValue - minValue) * ratio);
+          const grid = ticks.map((value) => {
+            const y = yFor(value);
+            return '<g><line x1="' + margin.left + '" y1="' + y.toFixed(2) + '" x2="' + (width - margin.right) + '" y2="' + y.toFixed(2) + '" stroke="rgba(31,42,46,0.10)" />' +
+              '<text x="' + (margin.left - 10) + '" y="' + (y + 4).toFixed(2) + '" text-anchor="end" fill="#647276" font-size="12">' + escapeHtml(pctText(value)) + '</text></g>';
+          }).join("");
+          const maxDateTicks = 8;
+          const dateTickIndexes = Array.from(
+            new Set(Array.from({ length: Math.min(maxDateTicks, visibleDates.length) }, (_, idx) =>
+              Math.round(idx * (visibleDates.length - 1) / Math.max(1, Math.min(maxDateTicks, visibleDates.length) - 1))
+            ))
+          );
+          const xAxisTicks = dateTickIndexes.map((idx) => {
+            const date = visibleDates[idx];
+            const x = xFor(date);
+            const anchor = idx === 0 ? "start" : (idx === visibleDates.length - 1 ? "end" : "middle");
+            return '<line x1="' + x.toFixed(2) + '" y1="' + (height - margin.bottom + 4) + '" x2="' + x.toFixed(2) + '" y2="' + (height - margin.bottom + 9) + '" stroke="rgba(100,114,118,0.55)" />' +
+              '<text x="' + x.toFixed(2) + '" y="' + (height - 12) + '" text-anchor="' + anchor + '" fill="#647276" font-size="11">' + escapeHtml(String(date).slice(0, 7)) + '</text>';
+          }).join("");
+          const zeroLine = yFor(0);
+          const sigmaLines = distributionLevels.map((level) => {
+            const y = yFor(Number(level.value));
+            const isMean = Number(level.sigma) === 0;
+            const color = isMean ? "rgba(31,42,46,0.55)" : "rgba(100,114,118,0.45)";
+            return '<line x1="' + margin.left + '" y1="' + y.toFixed(2) + '" x2="' + (width - margin.right) + '" y2="' + y.toFixed(2) + '" stroke="' + color + '" stroke-width="' + (isMean ? "1.4" : "1") + '" stroke-dasharray="' + (isMean ? "7 5" : "4 6") + '" />' +
+              '<text x="' + (width - margin.right + 8) + '" y="' + (y + 4).toFixed(2) + '" fill="#647276" font-size="11" font-weight="' + (isMean ? "700" : "500") + '">' +
+              escapeHtml(String(level.label || "") + " " + pctText(Number(level.value))) + '</text>';
+          }).join("");
+          const lines = series.map((item) => {
+            const color = colors[item.label] || "#1a7f52";
+            const points = item.points.map((point) => xFor(point.date).toFixed(2) + "," + yFor(Number(point.value)).toFixed(2)).join(" ");
+            const latest = item.points[item.points.length - 1];
+            const latestX = xFor(latest.date);
+            const latestY = yFor(Number(latest.value));
+            return '<polyline points="' + points + '" fill="none" stroke="' + color + '" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />' +
+              '<circle cx="' + latestX.toFixed(2) + '" cy="' + latestY.toFixed(2) + '" r="4.5" fill="' + color + '" stroke="#fffdf9" stroke-width="2" />' +
+              '<text x="' + Math.min(width - margin.right - 68, latestX + 8).toFixed(2) + '" y="' + (latestY - 8).toFixed(2) + '" fill="' + color + '" font-size="12" font-weight="700">' + escapeHtml(item.label + " " + pctText(Number(latest.value))) + '</text>';
+          }).join("");
+          emaChartNode.innerHTML =
+            '<svg viewBox="0 0 ' + width + ' ' + height + '" role="img" aria-label="QQQ and SOXX distance from their own 200 day EMA">' +
+              '<rect x="0" y="0" width="' + width + '" height="' + height + '" rx="12" fill="rgba(255,255,255,0.55)" />' +
+              grid +
+              '<line x1="' + margin.left + '" y1="' + zeroLine.toFixed(2) + '" x2="' + (width - margin.right) + '" y2="' + zeroLine.toFixed(2) + '" stroke="rgba(31,42,46,0.45)" stroke-dasharray="5 5" />' +
+              sigmaLines +
+              xAxisTicks +
+              '<text x="' + margin.left + '" y="18" fill="#647276" font-size="12">close / EMA200 - 1</text>' +
+              lines +
+            '</svg>';
+          if (emaRangeLabelNode) {
+            emaRangeLabelNode.textContent = (visibleDates[0] || "") + " 至 " + (visibleDates[visibleDates.length - 1] || "");
+          }
+        };
+
+        const legend = fullSeries.map((item) => {
+          const color = colors[item.label] || "#1a7f52";
+          const value = Number(item.latest_deviation);
+          return '<span class="etf-ema-legend-item" style="color:' + color + '"><span class="etf-ema-swatch"></span>' +
+            escapeHtml(item.label + " 最新 " + (Number.isFinite(value) ? pctText(value) : "N/A")) + '</span>';
+        }).join("") + '<span class="etf-ema-legend-item">' +
+          escapeHtml("SOXX 均值 " + (Number.isFinite(Number(distribution.mean)) ? pctText(Number(distribution.mean)) : "N/A") +
+            " / σ " + (Number.isFinite(Number(distribution.std)) ? pctText(Number(distribution.std)) : "N/A") +
+            " / n=" + (distribution.count || 0)) + '</span>';
+        if (emaLegendNode) emaLegendNode.innerHTML = legend;
+        syncRange(true);
+        draw();
+        if (emaRangeNode) emaRangeNode.addEventListener("input", draw);
+        if (emaWindowNode) emaWindowNode.addEventListener("change", () => {
+          syncRange(true);
+          draw();
+        });
+      }
+
       function renderTable() {
         const sorted = [...rows].sort((a, b) => Number(b.marginal_score || -999) - Number(a.marginal_score || -999));
         tableNode.innerHTML = sorted.map((row) => {
@@ -1554,6 +1800,7 @@
       renderStats();
       renderBars();
       renderInflections();
+      renderEma200DeviationChart();
       renderTable();
     })();
   </script>

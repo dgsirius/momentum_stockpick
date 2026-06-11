@@ -520,6 +520,86 @@
       gap: 16px;
       align-items: start;
     }
+    .etf-ema-card {
+      margin: 16px 0;
+      border: 1px solid #ece5da;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.62);
+      padding: 14px;
+    }
+    .etf-ema-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .etf-ema-legend {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .etf-ema-legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .etf-ema-swatch {
+      width: 18px;
+      height: 3px;
+      border-radius: 999px;
+      background: currentColor;
+    }
+    .etf-ema-chart {
+      min-height: 300px;
+    }
+    .etf-ema-chart svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .etf-ema-controls {
+      display: grid;
+      grid-template-columns: auto 110px minmax(180px, 1fr) auto;
+      gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .etf-ema-window-label,
+    .etf-ema-range-label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .etf-ema-window {
+      min-height: 32px;
+      border: 1px solid #d8cfc2;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.78);
+      color: var(--ink);
+      font: inherit;
+      font-size: 13px;
+      padding: 4px 8px;
+    }
+    .etf-ema-range {
+      width: 100%;
+      accent-color: var(--accent-2);
+    }
+    .etf-ema-empty {
+      min-height: 180px;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      border: 1px dashed #d8cfc2;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.5);
+    }
     .etf-subhead {
       color: var(--muted);
       font-size: 12px;
@@ -723,6 +803,19 @@
       .etf-monitor-grid {
         grid-template-columns: 1fr;
       }
+      .etf-ema-head {
+        flex-direction: column;
+      }
+      .etf-ema-legend {
+        justify-content: flex-start;
+      }
+      .etf-ema-controls {
+        grid-template-columns: auto minmax(90px, 120px);
+      }
+      .etf-ema-range,
+      .etf-ema-range-label {
+        grid-column: 1 / -1;
+      }
       .etf-bar-row {
         grid-template-columns: 52px minmax(64px, 1fr) 76px repeat(3, minmax(64px, 1fr));
       }
@@ -766,13 +859,13 @@
         </section>
 
         <section class="cards">
-          <div class='card'><div class='label'>最新信号日</div><div class='value'>2026-06-09</div></div>
-<div class='card'><div class='label'>下个交易日</div><div class='value'>2026-06-10</div></div>
+          <div class='card'><div class='label'>最新信号日</div><div class='value'>2026-06-10</div></div>
+<div class='card'><div class='label'>下个交易日</div><div class='value'>2026-06-11</div></div>
 <div class='card'><div class='label'>市场过滤</div><div class='value'>none</div></div>
-<div class='card'><div class='label'>策略净值</div><div class='value'>2.9273</div></div>
-<div class='card'><div class='label'>SPY净值</div><div class='value'>1.0838</div></div>
-<div class='card'><div class='label'>CAGR</div><div class='value'>1097.95%</div></div>
-<div class='card'><div class='label'>Sharpe</div><div class='value'>4.93</div></div>
+<div class='card'><div class='label'>策略净值</div><div class='value'>2.8806</div></div>
+<div class='card'><div class='label'>SPY净值</div><div class='value'>1.0667</div></div>
+<div class='card'><div class='label'>CAGR</div><div class='value'>1028.80%</div></div>
+<div class='card'><div class='label'>Sharpe</div><div class='value'>4.83</div></div>
 <div class='card'><div class='label'>最大回撤</div><div class='value'>-14.06%</div></div>
         </section>
 
@@ -780,20 +873,20 @@
           <div class="panel">
             <h2>当前持有 / 计划持有 Top5</h2>
             <p class="meta">按最新信号日生成，包含 keep / buy 动作。</p>
-            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>weight</th><th>market_value</th><th>er3</th><th>er8</th><th>er20</th></tr></thead><tbody><tr><td>1</td><td>US.AMAT</td><td>应用材料</td><td>keep</td><td>0.2001</td><td>292,912.6141</td><td>0.0215</td><td>0.1334</td><td>0.1284</td></tr>
-<tr><td>2</td><td>US.KLAC</td><td>科磊</td><td>keep</td><td>0.1975</td><td>289,070.0598</td><td>0.0304</td><td>0.1331</td><td>0.1625</td></tr>
-<tr><td>3</td><td>US.ASML</td><td>阿斯麦</td><td>keep</td><td>0.2013</td><td>294,575.9170</td><td>0.0380</td><td>0.1304</td><td>0.1384</td></tr>
-<tr><td>5</td><td>US.GE</td><td>GE航天航空</td><td>keep</td><td>0.2047</td><td>299,635.6050</td><td>0.0350</td><td>0.0532</td><td>0.1017</td></tr>
-<tr><td></td><td>US.CSCO</td><td>思科</td><td>keep</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>weight</th><th>market_value</th><th>er3</th><th>er8</th><th>er20</th></tr></thead><tbody><tr><td>2</td><td>US.AMAT</td><td>应用材料</td><td>keep</td><td>0.2025</td><td>291,621.7591</td><td>0.1136</td><td>0.1454</td><td>0.1699</td></tr>
+<tr><td>1</td><td>US.KLAC</td><td>科磊</td><td>keep</td><td>0.2004</td><td>288,566.0650</td><td>0.1234</td><td>0.1524</td><td>0.1963</td></tr>
+<tr><td>3</td><td>US.ASML</td><td>阿斯麦</td><td>keep</td><td>0.1995</td><td>287,354.7251</td><td>0.0727</td><td>0.1163</td><td>0.1575</td></tr>
+<tr><td></td><td>US.CSCO</td><td>思科</td><td>keep</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td>US.GE</td><td>GE航天航空</td><td>keep</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
           </div>
           <div class="panel">
             <h2>当前实际持仓</h2>
             <p class="meta">最新信号日对应的 mode_b 实际持仓快照。</p>
-            <table><thead><tr><th>book</th><th>ticker</th><th>name</th><th>shares</th><th>weight</th><th>market_value</th></tr></thead><tbody><tr><td>long</td><td>US.GE</td><td>GE航天航空</td><td>906.7776</td><td>0.2047</td><td>299,635.6050</td></tr>
-<tr><td>long</td><td>US.ASML</td><td>阿斯麦</td><td>165.6997</td><td>0.2013</td><td>294,575.9170</td></tr>
-<tr><td>long</td><td>US.AMAT</td><td>应用材料</td><td>586.7523</td><td>0.2001</td><td>292,912.6141</td></tr>
-<tr><td>long</td><td>US.KLAC</td><td>科磊</td><td>135.1192</td><td>0.1975</td><td>289,070.0598</td></tr>
-<tr><td>long</td><td>US.CSCO</td><td>思科</td><td>2,388.3284</td><td>0.1964</td><td>287,459.2100</td></tr></tbody></table>
+            <table><thead><tr><th>book</th><th>ticker</th><th>name</th><th>shares</th><th>weight</th><th>market_value</th></tr></thead><tbody><tr><td>long</td><td>US.AMAT</td><td>应用材料</td><td>586.7523</td><td>0.2025</td><td>291,621.7591</td></tr>
+<tr><td>long</td><td>US.GE</td><td>GE航天航空</td><td>906.7776</td><td>0.2007</td><td>288,999.1032</td></tr>
+<tr><td>long</td><td>US.KLAC</td><td>科磊</td><td>135.1192</td><td>0.2004</td><td>288,566.0650</td></tr>
+<tr><td>long</td><td>US.ASML</td><td>阿斯麦</td><td>165.6997</td><td>0.1995</td><td>287,354.7251</td></tr>
+<tr><td>long</td><td>US.CSCO</td><td>思科</td><td>2,388.3284</td><td>0.1970</td><td>283,733.4176</td></tr></tbody></table>
           </div>
         </section>
 
@@ -824,18 +917,18 @@
               <a href="annual_independent_rule_comparison.csv">明细 CSV</a>
             </div>
           </div>
-          <div class="annual-stats"><div class='annual-stat'><div class='label'>独立年度累计</div><div class='value'>507.9%</div></div>
+          <div class="annual-stats"><div class='annual-stat'><div class='label'>独立年度累计</div><div class='value'>614.3%</div></div>
 <div class='annual-stat'><div class='label'>亏损年份</div><div class='value'>0/5</div></div>
-<div class='annual-stat'><div class='label'>最好年份</div><div class='value'>156.4%</div></div>
-<div class='annual-stat'><div class='label'>最差年份</div><div class='value'>6.8%</div></div>
-<div class='annual-stat'><div class='label'>最差回撤</div><div class='value'>-32.2%</div></div>
+<div class='annual-stat'><div class='label'>最好年份</div><div class='value'>145.2%</div></div>
+<div class='annual-stat'><div class='label'>最差年份</div><div class='value'>12.9%</div></div>
+<div class='annual-stat'><div class='label'>最差回撤</div><div class='value'>-33.3%</div></div>
 <div class='annual-stat'><div class='label'>覆盖年份</div><div class='value'>5</div></div></div>
           <div class="annual-table-wrap">
-            <table><thead><tr><th>年份</th><th>区间</th><th>策略收益</th><th>基准收益</th><th>超额收益</th><th>最大回撤</th><th>Sharpe</th><th>年化换手</th><th>模式</th></tr></thead><tbody><tr><td>2026</td><td>2026-01-01 - 2026-06-09</td><td>156.4%</td><td>8.4%</td><td>148.0%</td><td>-14.5%</td><td>4.16</td><td>12.29</td><td>mode_b</td></tr>
-<tr><td>2025</td><td>2025-01-01 - 2025-12-31</td><td>65.2%</td><td>17.7%</td><td>47.5%</td><td>-32.2%</td><td>1.63</td><td>15.03</td><td>mode_b</td></tr>
-<tr><td>2024</td><td>2024-01-01 - 2024-12-31</td><td>6.8%</td><td>24.9%</td><td>-18.1%</td><td>-24.1%</td><td>0.38</td><td>19.16</td><td>mode_b</td></tr>
-<tr><td>2023</td><td>2023-01-01 - 2023-12-31</td><td>10.5%</td><td>26.2%</td><td>-15.7%</td><td>-14.5%</td><td>0.58</td><td>17.33</td><td>mode_b</td></tr>
-<tr><td>2022</td><td>2022-01-03 - 2022-12-31</td><td>21.6%</td><td>-18.2%</td><td>39.8%</td><td>-14.1%</td><td>0.97</td><td>14.00</td><td>mode_b</td></tr></tbody></table>
+            <table><thead><tr><th>年份</th><th>区间</th><th>策略收益</th><th>基准收益</th><th>超额收益</th><th>最大回撤</th><th>Sharpe</th><th>年化换手</th><th>模式</th></tr></thead><tbody><tr><td>2026</td><td>2026-01-01 - 2026-06-10</td><td>145.2%</td><td>6.7%</td><td>138.5%</td><td>-17.6%</td><td>3.92</td><td>12.18</td><td>mode_b</td></tr>
+<tr><td>2025</td><td>2025-01-01 - 2025-12-31</td><td>67.1%</td><td>17.7%</td><td>49.4%</td><td>-33.3%</td><td>1.66</td><td>15.21</td><td>mode_b</td></tr>
+<tr><td>2024</td><td>2024-01-01 - 2024-12-31</td><td>12.9%</td><td>24.9%</td><td>-12.0%</td><td>-22.9%</td><td>0.58</td><td>19.00</td><td>mode_b</td></tr>
+<tr><td>2023</td><td>2023-01-01 - 2023-12-31</td><td>34.3%</td><td>26.2%</td><td>8.2%</td><td>-13.8%</td><td>1.50</td><td>16.65</td><td>mode_b</td></tr>
+<tr><td>2022</td><td>2022-01-03 - 2022-12-31</td><td>15.0%</td><td>-18.2%</td><td>33.2%</td><td>-14.1%</td><td>0.70</td><td>15.01</td><td>mode_b</td></tr></tbody></table>
           </div>
         </section>
 
@@ -844,51 +937,53 @@
           <div class="panel">
             <h2>最新信号 Top5</h2>
             <p class="meta">每日更新的 top5 名单，按当前策略排序输出。</p>
-            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>planned_holding</th><th>weight</th><th>market_value</th><th>er3</th><th>er8</th><th>er20</th><th>adv20</th></tr></thead><tbody><tr><td>1</td><td>US.AMAT</td><td>应用材料</td><td>keep</td><td>True</td><td>0.2001</td><td>292,912.6141</td><td>0.0215</td><td>0.1334</td><td>0.1284</td><td>3,914,959,037.9031</td></tr>
-<tr><td>2</td><td>US.KLAC</td><td>科磊</td><td>keep</td><td>True</td><td>0.1975</td><td>289,070.0598</td><td>0.0304</td><td>0.1331</td><td>0.1625</td><td>2,009,650,130.7305</td></tr>
-<tr><td>3</td><td>US.ASML</td><td>阿斯麦</td><td>keep</td><td>True</td><td>0.2013</td><td>294,575.9170</td><td>0.0380</td><td>0.1304</td><td>0.1384</td><td>2,787,830,060.1595</td></tr>
-<tr><td>5</td><td>US.GE</td><td>GE航天航空</td><td>keep</td><td>True</td><td>0.2047</td><td>299,635.6050</td><td>0.0350</td><td>0.0532</td><td>0.1017</td><td>1,496,891,611.6115</td></tr>
-<tr><td>4</td><td>US.APH</td><td>安费诺</td><td>watch</td><td>False</td><td></td><td></td><td>0.0762</td><td>0.0665</td><td>0.2611</td><td>1,527,167,966.9005</td></tr>
-<tr><td>6</td><td>US.LIN</td><td>林德气体</td><td>watch</td><td>False</td><td></td><td></td><td>0.0425</td><td>0.0504</td><td>0.0252</td><td>1,165,772,065.0902</td></tr>
-<tr><td>7</td><td>US.UNP</td><td>联合太平洋</td><td>watch</td><td>False</td><td></td><td></td><td>0.0544</td><td>0.0446</td><td>0.0332</td><td>858,449,080.7243</td></tr>
-<tr><td>8</td><td>US.CVX</td><td>雪佛龙</td><td>watch</td><td>False</td><td></td><td></td><td>0.0180</td><td>0.0436</td><td>0.0140</td><td>1,715,070,187.2005</td></tr>
-<tr><td>9</td><td>US.SPGI</td><td>标普全球</td><td>watch</td><td>False</td><td></td><td></td><td>0.0377</td><td>0.0427</td><td>0.0121</td><td>910,873,485.6587</td></tr>
-<tr><td>10</td><td>US.SHEL</td><td>壳牌</td><td>watch</td><td>False</td><td></td><td></td><td>0.0115</td><td>0.0423</td><td>0.0039</td><td>596,566,747.5459</td></tr>
-<tr><td>11</td><td>US.COP</td><td>康菲石油</td><td>watch</td><td>False</td><td></td><td></td><td>0.0060</td><td>0.0389</td><td>0.0138</td><td>753,783,176.9090</td></tr>
-<tr><td>12</td><td>US.RTX</td><td>雷神技术</td><td>watch</td><td>False</td><td></td><td></td><td>0.0385</td><td>0.0378</td><td>0.0196</td><td>1,010,466,245.7560</td></tr>
-<tr><td>13</td><td>US.ENB</td><td>恩桥</td><td>watch</td><td>False</td><td></td><td></td><td>0.0053</td><td>0.0229</td><td>0.0229</td><td>276,731,367.1646</td></tr>
-<tr><td>14</td><td>US.LMT</td><td>洛克希德马丁</td><td>watch</td><td>False</td><td></td><td></td><td>0.0478</td><td>0.0101</td><td>0.0379</td><td>609,472,587.8080</td></tr>
-<tr><td></td><td>US.CSCO</td><td>思科</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+            <table><thead><tr><th>rank</th><th>ticker</th><th>name</th><th>action</th><th>planned_holding</th><th>weight</th><th>market_value</th><th>er3</th><th>er8</th><th>er20</th><th>adv20</th></tr></thead><tbody><tr><td>2</td><td>US.AMAT</td><td>应用材料</td><td>keep</td><td>True</td><td>0.2025</td><td>291,621.7591</td><td>0.1136</td><td>0.1454</td><td>0.1699</td><td>3,997,176,525.8146</td></tr>
+<tr><td>1</td><td>US.KLAC</td><td>科磊</td><td>keep</td><td>True</td><td>0.2004</td><td>288,566.0650</td><td>0.1234</td><td>0.1524</td><td>0.1963</td><td>2,087,587,081.7395</td></tr>
+<tr><td>3</td><td>US.ASML</td><td>阿斯麦</td><td>keep</td><td>True</td><td>0.1995</td><td>287,354.7251</td><td>0.0727</td><td>0.1163</td><td>0.1575</td><td>2,871,645,381.1840</td></tr>
+<tr><td>4</td><td>US.COP</td><td>康菲石油</td><td>watch</td><td>False</td><td></td><td></td><td>0.0402</td><td>0.0932</td><td>0.0347</td><td>765,568,834.2200</td></tr>
+<tr><td>5</td><td>US.CVX</td><td>雪佛龙</td><td>watch</td><td>False</td><td></td><td></td><td>0.0297</td><td>0.0813</td><td>0.0380</td><td>1,726,734,763.6380</td></tr>
+<tr><td>6</td><td>US.XOM</td><td>埃克森美孚</td><td>watch</td><td>False</td><td></td><td></td><td>0.0211</td><td>0.0779</td><td>0.0172</td><td>2,533,653,670.5395</td></tr>
+<tr><td>7</td><td>US.ENB</td><td>恩桥</td><td>watch</td><td>False</td><td></td><td></td><td>0.0187</td><td>0.0721</td><td>0.0464</td><td>281,956,362.9566</td></tr>
+<tr><td>8</td><td>US.LIN</td><td>林德气体</td><td>watch</td><td>False</td><td></td><td></td><td>0.0189</td><td>0.0641</td><td>0.0278</td><td>1,195,205,824.1612</td></tr>
+<tr><td>9</td><td>US.SHEL</td><td>壳牌</td><td>watch</td><td>False</td><td></td><td></td><td>0.0240</td><td>0.0640</td><td>0.0255</td><td>590,325,454.4059</td></tr>
+<tr><td>10</td><td>US.LRCX</td><td>泛林集团</td><td>watch</td><td>False</td><td></td><td></td><td>0.0775</td><td>0.0524</td><td>0.1298</td><td>2,992,499,817.2580</td></tr>
+<tr><td>11</td><td>US.SPOT</td><td>Spotify Technology</td><td>watch</td><td>False</td><td></td><td></td><td>0.0288</td><td>0.0519</td><td>0.1798</td><td>1,156,543,036.5595</td></tr>
+<tr><td>12</td><td>US.SPGI</td><td>标普全球</td><td>watch</td><td>False</td><td></td><td></td><td>0.0210</td><td>0.0467</td><td>0.0225</td><td>902,953,567.8752</td></tr>
+<tr><td>13</td><td>US.APH</td><td>安费诺</td><td>watch</td><td>False</td><td></td><td></td><td>0.0914</td><td>0.0441</td><td>0.1842</td><td>1,515,182,634.5685</td></tr>
+<tr><td>14</td><td>US.LMT</td><td>洛克希德马丁</td><td>watch</td><td>False</td><td></td><td></td><td>0.0188</td><td>0.0308</td><td>0.0250</td><td>603,702,112.8630</td></tr>
+<tr><td>15</td><td>US.SNDK</td><td>闪迪</td><td>watch</td><td>False</td><td></td><td></td><td>0.0702</td><td>0.0105</td><td>0.1490</td><td>17,646,279,752.4330</td></tr>
+<tr><td></td><td>US.CSCO</td><td>思科</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td>US.GE</td><td>GE航天航空</td><td>keep</td><td>True</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
           </div>
 
           <div class="panel">
             <h2>历史触发买入信号标的</h2>
             <p class="meta">这里按策略实际 BUY 事件统计，而不是仅进过 top10 名单。按出现次数排序。</p>
-            <table><thead><tr><th>ticker</th><th>name</th><th>industry_labels</th><th>buy_count</th><th>total_buy_value</th><th>latest_adj_close</th><th>first_signal_date</th><th>last_signal_date</th></tr></thead><tbody><tr><td>US.MU</td><td>美光科技</td><td>半导体</td><td>2</td><td>344,221.5249</td><td>935.8900</td><td>2025-12-31 00:00:00</td><td>2026-05-08 00:00:00</td></tr>
-<tr><td>US.ARM</td><td>Arm Holdings</td><td>半导体</td><td>2</td><td>291,966.8393</td><td>324.8600</td><td>2026-02-26 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
-<tr><td>US.SNDK</td><td>闪迪</td><td>计算机硬件</td><td>2</td><td>265,597.9603</td><td>1,646.5400</td><td>2026-01-28 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
-<tr><td>US.AMAT</td><td>应用材料</td><td>半导体设备与材料</td><td>1</td><td>294,532.5551</td><td>499.2100</td><td>2026-06-08 00:00:00</td><td>2026-06-08 00:00:00</td></tr>
-<tr><td>US.ASML</td><td>阿斯麦</td><td>半导体设备与材料</td><td>1</td><td>294,532.5551</td><td>1,777.7700</td><td>2026-06-08 00:00:00</td><td>2026-06-08 00:00:00</td></tr>
-<tr><td>US.CSCO</td><td>思科</td><td>通讯设备</td><td>1</td><td>294,532.5551</td><td>120.3600</td><td>2026-06-08 00:00:00</td><td>2026-06-08 00:00:00</td></tr>
-<tr><td>US.GE</td><td>GE航天航空</td><td>航空航天与国防</td><td>1</td><td>294,532.5551</td><td>330.4400</td><td>2026-06-08 00:00:00</td><td>2026-06-08 00:00:00</td></tr>
-<tr><td>US.KLAC</td><td>科磊</td><td>半导体设备与材料</td><td>1</td><td>293,355.3666</td><td>2,139.3700</td><td>2026-06-08 00:00:00</td><td>2026-06-08 00:00:00</td></tr>
-<tr><td>US.CRWD</td><td>CrowdStrike</td><td>软件基础设施</td><td>1</td><td>277,852.2910</td><td>644.9300</td><td>2026-05-22 00:00:00</td><td>2026-05-22 00:00:00</td></tr>
-<tr><td>US.QCOM</td><td>高通</td><td>半导体</td><td>1</td><td>277,408.0827</td><td>205.4200</td><td>2026-05-22 00:00:00</td><td>2026-05-22 00:00:00</td></tr>
-<tr><td>US.AMD</td><td>美国超微公司</td><td>半导体</td><td>1</td><td>244,612.5922</td><td>475.5050</td><td>2026-05-08 00:00:00</td><td>2026-05-08 00:00:00</td></tr>
-<tr><td>US.INTC</td><td>英特尔</td><td>半导体</td><td>1</td><td>154,918.8760</td><td>107.9200</td><td>2026-04-10 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
-<tr><td>US.STX</td><td>希捷科技</td><td>计算机硬件</td><td>1</td><td>154,918.8760</td><td>846.0100</td><td>2026-04-10 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
-<tr><td>US.MRVL</td><td>迈威尔科技</td><td>半导体</td><td>1</td><td>147,849.6635</td><td>266.8800</td><td>2026-03-26 00:00:00</td><td>2026-03-26 00:00:00</td></tr>
-<tr><td>US.GLW</td><td>康宁</td><td>电子元件</td><td>1</td><td>139,581.7046</td><td>173.9400</td><td>2026-02-11 00:00:00</td><td>2026-02-11 00:00:00</td></tr>
-<tr><td>US.PBR</td><td>巴西石油公司</td><td>综合油气</td><td>1</td><td>139,581.7046</td><td>17.8200</td><td>2026-02-11 00:00:00</td><td>2026-02-11 00:00:00</td></tr>
-<tr><td>US.VRT</td><td>Vertiv Holdings</td><td>电气设备及零件</td><td>1</td><td>139,581.7046</td><td>289.5200</td><td>2026-02-11 00:00:00</td><td>2026-02-11 00:00:00</td></tr>
-<tr><td>US.HWM</td><td>Howmet Aerospace</td><td>航空航天与国防</td><td>1</td><td>136,828.8618</td><td>257.1600</td><td>2026-02-26 00:00:00</td><td>2026-02-26 00:00:00</td></tr>
-<tr><td>US.DELL</td><td>戴尔科技</td><td>计算机硬件</td><td>1</td><td>130,658.8259</td><td>381.7800</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
-<tr><td>US.BP</td><td>英国石油</td><td>综合油气</td><td>1</td><td>130,658.8259</td><td>42.6700</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
-<tr><td>US.SHEL</td><td>壳牌</td><td>综合油气</td><td>1</td><td>130,658.8259</td><td>85.4300</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
-<tr><td>US.BA</td><td>波音</td><td>航空航天与国防</td><td>1</td><td>100,000.0000</td><td>214.5100</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr>
-<tr><td>US.LMT</td><td>洛克希德马丁</td><td>航空航天与国防</td><td>1</td><td>100,000.0000</td><td>530.1300</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr>
-<tr><td>US.LRCX</td><td>泛林集团</td><td>半导体设备与材料</td><td>1</td><td>100,000.0000</td><td>327.1600</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr>
-<tr><td>US.WDC</td><td>西部数据</td><td>计算机硬件</td><td>1</td><td>99,600.3197</td><td>517.7200</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr></tbody></table>
+            <table><thead><tr><th>ticker</th><th>name</th><th>industry_labels</th><th>buy_count</th><th>total_buy_value</th><th>latest_adj_close</th><th>first_signal_date</th><th>last_signal_date</th></tr></thead><tbody><tr><td>US.MU</td><td>美光科技</td><td>半导体</td><td>2</td><td>344,221.5249</td><td>891.8800</td><td>2025-12-31 00:00:00</td><td>2026-05-08 00:00:00</td></tr>
+<tr><td>US.ARM</td><td>Arm Holdings</td><td>半导体</td><td>2</td><td>291,966.8393</td><td>307.4300</td><td>2026-02-26 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
+<tr><td>US.SNDK</td><td>闪迪</td><td>计算机硬件</td><td>2</td><td>265,597.9603</td><td>1,643.2300</td><td>2026-01-28 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
+<tr><td>US.AMAT</td><td>应用材料</td><td>半导体设备与材料</td><td>1</td><td>294,532.5551</td><td>497.0100</td><td>2026-06-08 00:00:00</td><td>2026-06-08 00:00:00</td></tr>
+<tr><td>US.ASML</td><td>阿斯麦</td><td>半导体设备与材料</td><td>1</td><td>294,532.5551</td><td>1,734.1900</td><td>2026-06-08 00:00:00</td><td>2026-06-08 00:00:00</td></tr>
+<tr><td>US.CSCO</td><td>思科</td><td>通讯设备</td><td>1</td><td>294,532.5551</td><td>118.8000</td><td>2026-06-08 00:00:00</td><td>2026-06-08 00:00:00</td></tr>
+<tr><td>US.GE</td><td>GE航天航空</td><td>航空航天与国防</td><td>1</td><td>294,532.5551</td><td>318.7100</td><td>2026-06-08 00:00:00</td><td>2026-06-08 00:00:00</td></tr>
+<tr><td>US.KLAC</td><td>科磊</td><td>半导体设备与材料</td><td>1</td><td>293,355.3666</td><td>2,135.6400</td><td>2026-06-08 00:00:00</td><td>2026-06-08 00:00:00</td></tr>
+<tr><td>US.CRWD</td><td>CrowdStrike</td><td>软件基础设施</td><td>1</td><td>277,852.2910</td><td>647.7400</td><td>2026-05-22 00:00:00</td><td>2026-05-22 00:00:00</td></tr>
+<tr><td>US.QCOM</td><td>高通</td><td>半导体</td><td>1</td><td>277,408.0827</td><td>191.2000</td><td>2026-05-22 00:00:00</td><td>2026-05-22 00:00:00</td></tr>
+<tr><td>US.AMD</td><td>美国超微公司</td><td>半导体</td><td>1</td><td>244,612.5922</td><td>452.4000</td><td>2026-05-08 00:00:00</td><td>2026-05-08 00:00:00</td></tr>
+<tr><td>US.INTC</td><td>英特尔</td><td>半导体</td><td>1</td><td>154,918.8760</td><td>107.0400</td><td>2026-04-10 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
+<tr><td>US.STX</td><td>希捷科技</td><td>计算机硬件</td><td>1</td><td>154,918.8760</td><td>815.9900</td><td>2026-04-10 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
+<tr><td>US.MRVL</td><td>迈威尔科技</td><td>半导体</td><td>1</td><td>147,849.6635</td><td>252.5900</td><td>2026-03-26 00:00:00</td><td>2026-03-26 00:00:00</td></tr>
+<tr><td>US.GLW</td><td>康宁</td><td>电子元件</td><td>1</td><td>139,581.7046</td><td>168.1700</td><td>2026-02-11 00:00:00</td><td>2026-02-11 00:00:00</td></tr>
+<tr><td>US.PBR</td><td>巴西石油公司</td><td>综合油气</td><td>1</td><td>139,581.7046</td><td>18.1100</td><td>2026-02-11 00:00:00</td><td>2026-02-11 00:00:00</td></tr>
+<tr><td>US.VRT</td><td>Vertiv Holdings</td><td>电气设备及零件</td><td>1</td><td>139,581.7046</td><td>280.9800</td><td>2026-02-11 00:00:00</td><td>2026-02-11 00:00:00</td></tr>
+<tr><td>US.HWM</td><td>Howmet Aerospace</td><td>航空航天与国防</td><td>1</td><td>136,828.8618</td><td>249.4900</td><td>2026-02-26 00:00:00</td><td>2026-02-26 00:00:00</td></tr>
+<tr><td>US.DELL</td><td>戴尔科技</td><td>计算机硬件</td><td>1</td><td>130,658.8259</td><td>369.8300</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
+<tr><td>US.BP</td><td>英国石油</td><td>综合油气</td><td>1</td><td>130,658.8259</td><td>42.9500</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
+<tr><td>US.SHEL</td><td>壳牌</td><td>综合油气</td><td>1</td><td>130,658.8259</td><td>86.0500</td><td>2026-03-12 00:00:00</td><td>2026-03-12 00:00:00</td></tr>
+<tr><td>US.BA</td><td>波音</td><td>航空航天与国防</td><td>1</td><td>100,000.0000</td><td>209.0000</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr>
+<tr><td>US.LMT</td><td>洛克希德马丁</td><td>航空航天与国防</td><td>1</td><td>100,000.0000</td><td>525.0200</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr>
+<tr><td>US.LRCX</td><td>泛林集团</td><td>半导体设备与材料</td><td>1</td><td>100,000.0000</td><td>321.8000</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr>
+<tr><td>US.WDC</td><td>西部数据</td><td>计算机硬件</td><td>1</td><td>99,600.3197</td><td>490.0900</td><td>2025-12-31 00:00:00</td><td>2025-12-31 00:00:00</td></tr></tbody></table>
           </div>
         </section>
 
@@ -931,8 +1026,8 @@
 
         <div class="footer">
           <div>数据目录：/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_relative_strength/futu_2025q4</div>
-          <div>最新信号日：2026-06-09，下个交易日：2026-06-10</div>
-          <div>SPY 收盘：737.05，市场过滤：none</div>
+          <div>最新信号日：2026-06-10，下个交易日：2026-06-11</div>
+          <div>SPY 收盘：725.43，市场过滤：none</div>
           <div>Warnings：Metadata file has no date column. Static metadata is used for all history; this may introduce point-in-time bias.；Using static market_cap across history. This creates look-ahead bias risk for the $100.0B+ market-cap filter.；Using static shares_outstanding across history. This approximates point-in-time market cap and may introduce bias.</div>
         </div>
       </main>
@@ -1018,8 +1113,11 @@
 
       function renderTechnicalRisk(payload) {
         const strategy = payload.strategy_summary || {};
+        const coverageValue = payload.universe_mode === "historical_buy_signals"
+          ? `${payload.ticker_count || 0}（历史买入 ${payload.historical_buy_count || 0} / 持有 ${payload.current_holding_count || 0} / 买入 ${payload.planned_buy_count || 0}）`
+          : `${payload.ticker_count || 0}（持有 ${payload.current_holding_count || 0} / 买入 ${payload.planned_buy_count || 0}）`;
         const stats = [
-          ["覆盖标的", `${payload.ticker_count || 0}（持有 ${payload.current_holding_count || 0} / 买入 ${payload.planned_buy_count || 0}）`],
+          ["覆盖标的", coverageValue],
           ["高风险", `${payload.risk_high_count || 0}`],
           ["回测胜率", formatPct(strategy.win_rate)],
           ["ATR策略", `${formatNumber(strategy.stop_atr, 2)}止损 / ${formatNumber(strategy.take_atr, 2)}止盈`],
@@ -1427,6 +1525,11 @@
       const barsNode = document.getElementById("etfReturnBars");
       const listNode = document.getElementById("etfInflectionList");
       const tableNode = document.getElementById("etfMonitorTable");
+      const emaChartNode = document.getElementById("etfEmaChart");
+      const emaLegendNode = document.getElementById("etfEmaLegend");
+      const emaRangeNode = document.getElementById("etfEmaRange");
+      const emaWindowNode = document.getElementById("etfEmaWindow");
+      const emaRangeLabelNode = document.getElementById("etfEmaRangeLabel");
       const rows = Array.isArray(payload.rows) ? payload.rows : [];
 
       function escapeHtml(value) {
@@ -1522,6 +1625,154 @@
           (weak.length ? weak.map((row) => renderItem(row, "weak")).join("") : '<div class="etf-signal-card">暂无明显转弱。</div>');
       }
 
+      function renderEma200DeviationChart() {
+        if (!emaChartNode) return;
+        const colors = {
+          QQQ: "#0f5c73",
+          SOXX: "#b15e1e",
+        };
+        const fullSeries = ((payload.ema200_deviation || {}).series || [])
+          .map((item) => ({
+            ...item,
+            points: Array.isArray(item.points) ? item.points.filter((point) => Number.isFinite(Number(point.value))) : [],
+          }))
+          .filter((item) => item.points.length > 0);
+        if (!fullSeries.length) {
+          emaChartNode.innerHTML = '<div class="etf-ema-empty">暂无 200日EMA 偏离度数据。</div>';
+          if (emaLegendNode) emaLegendNode.innerHTML = "";
+          return;
+        }
+        const allDates = Array.from(new Set(fullSeries.flatMap((item) => item.points.map((point) => point.date)))).sort();
+        const distribution = (payload.ema200_deviation || {}).soxx_distribution || {};
+        const distributionLevels = Array.isArray(distribution.levels)
+          ? distribution.levels.filter((level) => Number.isFinite(Number(level.value)))
+          : [];
+        const distributionValues = distributionLevels.map((level) => Number(level.value));
+        const pctText = (value) => {
+          const sign = value > 0 ? "+" : "";
+          return sign + (value * 100).toFixed(1) + "%";
+        };
+
+        const getWindowSize = () => {
+          const value = emaWindowNode ? emaWindowNode.value : "504";
+          if (value === "all") return allDates.length;
+          return Math.min(allDates.length, Math.max(1, Number(value) || 504));
+        };
+        const syncRange = (resetToLatest) => {
+          if (!emaRangeNode) return 0;
+          const windowSize = getWindowSize();
+          const maxStart = Math.max(0, allDates.length - windowSize);
+          emaRangeNode.min = "0";
+          emaRangeNode.max = String(maxStart);
+          emaRangeNode.disabled = maxStart === 0;
+          if (resetToLatest || !emaRangeNode.value || Number(emaRangeNode.value) > maxStart) {
+            emaRangeNode.value = String(maxStart);
+          }
+          return Number(emaRangeNode.value) || 0;
+        };
+
+        const draw = () => {
+          const windowSize = getWindowSize();
+          const maxStart = Math.max(0, allDates.length - windowSize);
+          const startIndex = emaRangeNode ? Math.min(maxStart, Math.max(0, Number(emaRangeNode.value) || 0)) : maxStart;
+          const visibleDates = allDates.slice(startIndex, startIndex + windowSize);
+          const visibleSet = new Set(visibleDates);
+          const series = fullSeries
+            .map((item) => ({
+              ...item,
+              points: item.points.filter((point) => visibleSet.has(point.date)),
+            }))
+            .filter((item) => item.points.length > 0);
+          const values = series.flatMap((item) => item.points.map((point) => Number(point.value))).filter(Number.isFinite);
+          let minValue = Math.min(0, ...values, ...distributionValues);
+          let maxValue = Math.max(0, ...values, ...distributionValues);
+          const span = Math.max(0.02, maxValue - minValue);
+          minValue -= span * 0.12;
+          maxValue += span * 0.12;
+
+          const width = 920;
+          const height = 340;
+          const margin = { top: 20, right: 88, bottom: 38, left: 62 };
+          const innerWidth = width - margin.left - margin.right;
+          const innerHeight = height - margin.top - margin.bottom;
+          const dateIndex = new Map(visibleDates.map((date, idx) => [date, idx]));
+          const xFor = (date) => {
+            const idx = dateIndex.get(date) || 0;
+            return margin.left + (idx / Math.max(1, visibleDates.length - 1)) * innerWidth;
+          };
+          const yFor = (value) => margin.top + ((maxValue - value) / Math.max(0.000001, maxValue - minValue)) * innerHeight;
+          const ticks = [0, 0.25, 0.5, 0.75, 1].map((ratio) => maxValue - (maxValue - minValue) * ratio);
+          const grid = ticks.map((value) => {
+            const y = yFor(value);
+            return '<g><line x1="' + margin.left + '" y1="' + y.toFixed(2) + '" x2="' + (width - margin.right) + '" y2="' + y.toFixed(2) + '" stroke="rgba(31,42,46,0.10)" />' +
+              '<text x="' + (margin.left - 10) + '" y="' + (y + 4).toFixed(2) + '" text-anchor="end" fill="#647276" font-size="12">' + escapeHtml(pctText(value)) + '</text></g>';
+          }).join("");
+          const maxDateTicks = 8;
+          const dateTickIndexes = Array.from(
+            new Set(Array.from({ length: Math.min(maxDateTicks, visibleDates.length) }, (_, idx) =>
+              Math.round(idx * (visibleDates.length - 1) / Math.max(1, Math.min(maxDateTicks, visibleDates.length) - 1))
+            ))
+          );
+          const xAxisTicks = dateTickIndexes.map((idx) => {
+            const date = visibleDates[idx];
+            const x = xFor(date);
+            const anchor = idx === 0 ? "start" : (idx === visibleDates.length - 1 ? "end" : "middle");
+            return '<line x1="' + x.toFixed(2) + '" y1="' + (height - margin.bottom + 4) + '" x2="' + x.toFixed(2) + '" y2="' + (height - margin.bottom + 9) + '" stroke="rgba(100,114,118,0.55)" />' +
+              '<text x="' + x.toFixed(2) + '" y="' + (height - 12) + '" text-anchor="' + anchor + '" fill="#647276" font-size="11">' + escapeHtml(String(date).slice(0, 7)) + '</text>';
+          }).join("");
+          const zeroLine = yFor(0);
+          const sigmaLines = distributionLevels.map((level) => {
+            const y = yFor(Number(level.value));
+            const isMean = Number(level.sigma) === 0;
+            const color = isMean ? "rgba(31,42,46,0.55)" : "rgba(100,114,118,0.45)";
+            return '<line x1="' + margin.left + '" y1="' + y.toFixed(2) + '" x2="' + (width - margin.right) + '" y2="' + y.toFixed(2) + '" stroke="' + color + '" stroke-width="' + (isMean ? "1.4" : "1") + '" stroke-dasharray="' + (isMean ? "7 5" : "4 6") + '" />' +
+              '<text x="' + (width - margin.right + 8) + '" y="' + (y + 4).toFixed(2) + '" fill="#647276" font-size="11" font-weight="' + (isMean ? "700" : "500") + '">' +
+              escapeHtml(String(level.label || "") + " " + pctText(Number(level.value))) + '</text>';
+          }).join("");
+          const lines = series.map((item) => {
+            const color = colors[item.label] || "#1a7f52";
+            const points = item.points.map((point) => xFor(point.date).toFixed(2) + "," + yFor(Number(point.value)).toFixed(2)).join(" ");
+            const latest = item.points[item.points.length - 1];
+            const latestX = xFor(latest.date);
+            const latestY = yFor(Number(latest.value));
+            return '<polyline points="' + points + '" fill="none" stroke="' + color + '" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />' +
+              '<circle cx="' + latestX.toFixed(2) + '" cy="' + latestY.toFixed(2) + '" r="4.5" fill="' + color + '" stroke="#fffdf9" stroke-width="2" />' +
+              '<text x="' + Math.min(width - margin.right - 68, latestX + 8).toFixed(2) + '" y="' + (latestY - 8).toFixed(2) + '" fill="' + color + '" font-size="12" font-weight="700">' + escapeHtml(item.label + " " + pctText(Number(latest.value))) + '</text>';
+          }).join("");
+          emaChartNode.innerHTML =
+            '<svg viewBox="0 0 ' + width + ' ' + height + '" role="img" aria-label="QQQ and SOXX distance from their own 200 day EMA">' +
+              '<rect x="0" y="0" width="' + width + '" height="' + height + '" rx="12" fill="rgba(255,255,255,0.55)" />' +
+              grid +
+              '<line x1="' + margin.left + '" y1="' + zeroLine.toFixed(2) + '" x2="' + (width - margin.right) + '" y2="' + zeroLine.toFixed(2) + '" stroke="rgba(31,42,46,0.45)" stroke-dasharray="5 5" />' +
+              sigmaLines +
+              xAxisTicks +
+              '<text x="' + margin.left + '" y="18" fill="#647276" font-size="12">close / EMA200 - 1</text>' +
+              lines +
+            '</svg>';
+          if (emaRangeLabelNode) {
+            emaRangeLabelNode.textContent = (visibleDates[0] || "") + " 至 " + (visibleDates[visibleDates.length - 1] || "");
+          }
+        };
+
+        const legend = fullSeries.map((item) => {
+          const color = colors[item.label] || "#1a7f52";
+          const value = Number(item.latest_deviation);
+          return '<span class="etf-ema-legend-item" style="color:' + color + '"><span class="etf-ema-swatch"></span>' +
+            escapeHtml(item.label + " 最新 " + (Number.isFinite(value) ? pctText(value) : "N/A")) + '</span>';
+        }).join("") + '<span class="etf-ema-legend-item">' +
+          escapeHtml("SOXX 均值 " + (Number.isFinite(Number(distribution.mean)) ? pctText(Number(distribution.mean)) : "N/A") +
+            " / σ " + (Number.isFinite(Number(distribution.std)) ? pctText(Number(distribution.std)) : "N/A") +
+            " / n=" + (distribution.count || 0)) + '</span>';
+        if (emaLegendNode) emaLegendNode.innerHTML = legend;
+        syncRange(true);
+        draw();
+        if (emaRangeNode) emaRangeNode.addEventListener("input", draw);
+        if (emaWindowNode) emaWindowNode.addEventListener("change", () => {
+          syncRange(true);
+          draw();
+        });
+      }
+
       function renderTable() {
         const sorted = [...rows].sort((a, b) => Number(b.marginal_score || -999) - Number(a.marginal_score || -999));
         tableNode.innerHTML = sorted.map((row) => {
@@ -1547,6 +1798,7 @@
       renderStats();
       renderBars();
       renderInflections();
+      renderEma200DeviationChart();
       renderTable();
     })();
   </script>
