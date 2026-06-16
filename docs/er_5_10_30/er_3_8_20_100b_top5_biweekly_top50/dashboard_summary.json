@@ -1,21 +1,19 @@
 {
   "summary": {
-    "signal_date": "2026-06-12",
-    "data_end_date": "2026-06-12",
-    "next_trade_date": "2026-06-15",
+    "signal_date": "2026-06-15",
+    "data_end_date": "2026-06-15",
+    "next_trade_date": "2026-06-16",
     "spy_above_ma100": true,
-    "spy_adj_close": 741.75,
-    "spy_ma100": 698.9791733276401,
-    "strategy_nav": 3.1576530402573515,
-    "benchmark_nav": 1.090708166021774,
+    "spy_adj_close": 754.83,
+    "spy_ma100": 699.69214055991,
+    "strategy_nav": 3.2023056532077905,
+    "benchmark_nav": 1.1099416851475776,
     "data_dir": "/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_relative_strength/futu_2025q4",
     "warnings": [
       "Metadata file has no date column. Static metadata is used for all history; this may introduce point-in-time bias.",
       "Using static market_cap across history. This creates look-ahead bias risk for the $100.0B+ market-cap filter.",
       "Using static shares_outstanding across history. This approximates point-in-time market cap and may introduce bias.",
-      "Auto-adjusted mixed split pricing for US.IONQ before 2025-01-08 as 2-for-1; post-adjustment split-day return=22.00%.",
-      "Auto-adjusted mixed split pricing for US.KLAC before 2026-06-11 as 10-for-1; post-adjustment split-day return=12.92%.",
-      "Auto-adjusted mixed split pricing for US.NBIS before 2025-01-27 as 2-for-1; post-adjustment split-day return=25.11%."
+      "Auto-adjusted mixed split pricing for US.KLAC before 2026-06-11 as 10-for-1; post-adjustment split-day return=12.92%."
     ],
     "config": {
       "start_date": "2026-01-01",
@@ -53,21 +51,21 @@
     "allow_new_buys": true
   },
   "performance": {
-    "CAGR": 12.291375237192563,
-    "Annualized Return": 2.74475100817965,
-    "Annualized Volatility": 0.5398859223664257,
-    "Sharpe Ratio": 5.083946245808501,
-    "Sortino Ratio": 7.332325481825571,
+    "CAGR": 12.403762844354477,
+    "Annualized Return": 2.751997028088371,
+    "Annualized Volatility": 0.5374922152739312,
+    "Sharpe Ratio": 5.120068625897818,
+    "Sortino Ratio": 7.351682493175671,
     "Max Drawdown": -0.140600186490337,
-    "Calmar Ratio": 87.4207605552309,
-    "Win Rate": 0.6517857142857143,
+    "Calmar Ratio": 88.2201023624314,
+    "Win Rate": 0.6548672566371682,
     "Monthly Win Rate": 1.0,
-    "Turnover (Annualized)": 12.060383808041207,
-    "Average Holding Count": 5.223214285714286,
-    "Average Daily Turnover": 0.04785866590492543,
-    "Beta vs SPY": 1.8734464349991535,
-    "Alpha vs SPY": 2.360042538064199,
-    "Information Ratio vs SPY": 5.22161255557952
+    "Turnover (Annualized)": 11.953654747793054,
+    "Average Holding Count": 5.221238938053097,
+    "Average Daily Turnover": 0.04743513788806768,
+    "Beta vs SPY": 1.8216428905981161,
+    "Alpha vs SPY": 2.3095999792288824,
+    "Information Ratio vs SPY": 5.178041184777524
   },
   "paths": {
     "signal_top10_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_100b_top5_biweekly_top50/latest_signal_top10.csv",
