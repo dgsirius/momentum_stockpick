@@ -617,6 +617,14 @@
       border-radius: 12px;
       background: rgba(255,255,255,0.5);
     }
+    .etf-relative-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .etf-relative-grid .etf-ema-card {
+      margin: 16px 0 0;
+    }
     .etf-rsi-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -876,7 +884,8 @@
         flex-direction: column;
       }
       .etf-monitor-stats,
-      .etf-monitor-grid {
+      .etf-monitor-grid,
+      .etf-relative-grid {
         grid-template-columns: 1fr;
       }
       .etf-ema-head {
@@ -1854,6 +1863,16 @@
       const monthlyEmaRangeLabelNode = document.getElementById("etfMonthlyEmaRangeLabel");
       const weeklyRsiLegendNode = document.getElementById("etfWeeklyRsiLegend");
       const weeklyRsiChartsNode = document.getElementById("etfWeeklyRsiCharts");
+      const soxxQqqReturnChartNode = document.getElementById("soxxQqqReturnChart");
+      const soxxQqqReturnLegendNode = document.getElementById("soxxQqqReturnLegend");
+      const soxxQqqReturnRangeNode = document.getElementById("soxxQqqReturnRange");
+      const soxxQqqReturnWindowNode = document.getElementById("soxxQqqReturnWindow");
+      const soxxQqqReturnRangeLabelNode = document.getElementById("soxxQqqReturnRangeLabel");
+      const ewySoxxReturnChartNode = document.getElementById("ewySoxxReturnChart");
+      const ewySoxxReturnLegendNode = document.getElementById("ewySoxxReturnLegend");
+      const ewySoxxReturnRangeNode = document.getElementById("ewySoxxReturnRange");
+      const ewySoxxReturnWindowNode = document.getElementById("ewySoxxReturnWindow");
+      const ewySoxxReturnRangeLabelNode = document.getElementById("ewySoxxReturnRangeLabel");
       const rows = Array.isArray(payload.rows) ? payload.rows : [];
 
       function escapeHtml(value) {
@@ -1947,6 +1966,117 @@
           (strong.length ? strong.map((row) => renderItem(row, "strong")).join("") : '<div class="etf-signal-card">暂无明显转强。</div>') +
           '<div class="etf-subhead" style="margin-top:6px;">转弱候选</div>' +
           (weak.length ? weak.map((row) => renderItem(row, "weak")).join("") : '<div class="etf-signal-card">暂无明显转弱。</div>');
+      }
+
+      function renderSoxxQqqRelativeChart(seriesKey, chartNode, legendNode, rangeNode, windowNode, rangeLabelNode, color, labelText) {
+        if (!chartNode) return;
+        const relativePayload = payload.soxx_qqq_relative_charts || {};
+        const item = ((relativePayload.series || []).find((candidate) => candidate.key === seriesKey)) || {};
+        const points = Array.isArray(item.points) ? item.points.filter((point) => Number.isFinite(Number(point.value))) : [];
+        const positiveColor = "#15803d";
+        const negativeColor = "#d12f2f";
+        const pctText = (value) => {
+          const number = Number(value);
+          if (!Number.isFinite(number)) return "N/A";
+          const sign = number > 0 ? "+" : "";
+          return sign + (number * 100).toFixed(2) + "%";
+        };
+        if (!points.length) {
+          chartNode.innerHTML = '<div class="etf-ema-empty">暂无 SOXX / QQQ 相对数据。</div>';
+          if (legendNode) legendNode.innerHTML = "";
+          if (rangeLabelNode) rangeLabelNode.textContent = "";
+          return;
+        }
+        const dates = points.map((point) => point.date);
+        const getWindowSize = () => {
+          if (!windowNode) return dates.length;
+          const value = windowNode.value || "126";
+          if (value === "all") return dates.length;
+          return Math.min(dates.length, Math.max(1, Number(value) || 126));
+        };
+        const syncRange = (resetToLatest) => {
+          if (!rangeNode) return 0;
+          const windowSize = getWindowSize();
+          const maxStart = Math.max(0, dates.length - windowSize);
+          rangeNode.min = "0";
+          rangeNode.max = String(maxStart);
+          rangeNode.disabled = maxStart === 0;
+          if (resetToLatest || !rangeNode.value || Number(rangeNode.value) > maxStart) {
+            rangeNode.value = String(maxStart);
+          }
+          return Number(rangeNode.value) || 0;
+        };
+        const draw = () => {
+          const windowSize = getWindowSize();
+          const maxStart = Math.max(0, dates.length - windowSize);
+          const startIndex = rangeNode ? Math.min(maxStart, Math.max(0, Number(rangeNode.value) || 0)) : maxStart;
+          const visiblePoints = points.slice(startIndex, startIndex + windowSize);
+          const visibleDates = visiblePoints.map((point) => point.date);
+          const values = visiblePoints.map((point) => Number(point.value)).filter(Number.isFinite);
+          let minValue = Math.min(0, ...values);
+          let maxValue = Math.max(0, ...values);
+          const span = Math.max(0.002, maxValue - minValue);
+          minValue -= span * 0.16;
+          maxValue += span * 0.16;
+
+          const width = 920;
+          const height = 300;
+          const margin = { top: 20, right: 58, bottom: 36, left: 54 };
+          const innerWidth = width - margin.left - margin.right;
+          const innerHeight = height - margin.top - margin.bottom;
+          const xFor = (idx) => margin.left + (idx / Math.max(1, visiblePoints.length - 1)) * innerWidth;
+          const yFor = (value) => margin.top + ((maxValue - value) / Math.max(0.000001, maxValue - minValue)) * innerHeight;
+          const barWidth = Math.max(2.2, Math.min(12, innerWidth / Math.max(1, visiblePoints.length) * 0.68));
+          const ticks = [0, 0.25, 0.5, 0.75, 1].map((ratio) => maxValue - (maxValue - minValue) * ratio);
+          const grid = ticks.map((value) => {
+            const y = yFor(value);
+            return '<g><line x1="' + margin.left + '" y1="' + y.toFixed(2) + '" x2="' + (width - margin.right) + '" y2="' + y.toFixed(2) + '" stroke="rgba(31,42,46,0.10)" />' +
+              '<text x="' + (margin.left - 8) + '" y="' + (y + 4).toFixed(2) + '" text-anchor="end" fill="#647276" font-size="11">' + escapeHtml(pctText(value)) + '</text></g>';
+          }).join("");
+          const zeroY = yFor(0);
+          const maxDateTicks = 6;
+          const dateTickIndexes = Array.from(
+            new Set(Array.from({ length: Math.min(maxDateTicks, visibleDates.length) }, (_, idx) =>
+              Math.round(idx * (visibleDates.length - 1) / Math.max(1, Math.min(maxDateTicks, visibleDates.length) - 1))
+            ))
+          );
+          const xAxisTicks = dateTickIndexes.map((idx) => {
+            const x = xFor(idx);
+            const anchor = idx === 0 ? "start" : (idx === visibleDates.length - 1 ? "end" : "middle");
+            return '<text x="' + x.toFixed(2) + '" y="' + (height - 10) + '" text-anchor="' + anchor + '" fill="#647276" font-size="10">' + escapeHtml(String(visibleDates[idx]).slice(0, 7)) + '</text>';
+          }).join("");
+          const bars = visiblePoints.map((point, idx) => {
+            const value = Number(point.value);
+            const x = xFor(idx);
+            const y = yFor(value);
+            const positive = value >= 0;
+            const top = Math.min(y, zeroY);
+            const heightValue = Math.max(1, Math.abs(zeroY - y));
+            return '<rect x="' + (x - barWidth / 2).toFixed(2) + '" y="' + top.toFixed(2) + '" width="' + barWidth.toFixed(2) + '" height="' + heightValue.toFixed(2) + '" rx="1.8" fill="' + (positive ? positiveColor : negativeColor) + '" opacity="0.86" />';
+          }).join("");
+          chartNode.innerHTML =
+            '<svg viewBox="0 0 ' + width + ' ' + height + '" role="img" aria-label="' + escapeHtml(labelText || item.label || "SOXX relative to QQQ") + '">' +
+              '<rect x="0" y="0" width="' + width + '" height="' + height + '" rx="12" fill="rgba(255,255,255,0.55)" />' +
+              grid +
+              '<line x1="' + margin.left + '" y1="' + zeroY.toFixed(2) + '" x2="' + (width - margin.right) + '" y2="' + zeroY.toFixed(2) + '" stroke="rgba(31,42,46,0.46)" stroke-width="1.4" stroke-dasharray="5 5" />' +
+              bars +
+              xAxisTicks +
+            '</svg>';
+          if (legendNode) {
+            legendNode.innerHTML = '<span class="etf-ema-legend-item" style="color:' + color + '"><span class="etf-ema-swatch"></span>' +
+              escapeHtml((item.label || labelText || "") + " 最新 " + pctText(item.latest) + " / " + (item.latest_date || "")) + '</span>';
+          }
+          if (rangeLabelNode) {
+            rangeLabelNode.textContent = (visibleDates[0] || "") + " 至 " + (visibleDates[visibleDates.length - 1] || "");
+          }
+        };
+        syncRange(true);
+        draw();
+        if (rangeNode) rangeNode.addEventListener("input", draw);
+        if (windowNode) windowNode.addEventListener("change", () => {
+          syncRange(true);
+          draw();
+        });
       }
 
       function renderDeviationChart(dataset, chartNode, legendNode, rangeNode, windowNode, rangeLabelNode, emptyText, yLabel, ariaLabel) {
@@ -2378,6 +2508,26 @@
       renderStats();
       renderBars();
       renderInflections();
+      renderSoxxQqqRelativeChart(
+        "daily_excess_return",
+        soxxQqqReturnChartNode,
+        soxxQqqReturnLegendNode,
+        soxxQqqReturnRangeNode,
+        soxxQqqReturnWindowNode,
+        soxxQqqReturnRangeLabelNode,
+        "#0f5c73",
+        "SOXX minus QQQ daily return"
+      );
+      renderSoxxQqqRelativeChart(
+        "ewy_soxx_daily_excess_return",
+        ewySoxxReturnChartNode,
+        ewySoxxReturnLegendNode,
+        ewySoxxReturnRangeNode,
+        ewySoxxReturnWindowNode,
+        ewySoxxReturnRangeLabelNode,
+        "#15803d",
+        "EWY minus SOXX daily return"
+      );
       renderEma200DeviationChart();
       renderWeeklyRsiCharts();
       renderTable();
