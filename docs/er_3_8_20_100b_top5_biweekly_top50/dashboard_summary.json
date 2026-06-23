@@ -13,7 +13,9 @@
       "Metadata file has no date column. Static metadata is used for all history; this may introduce point-in-time bias.",
       "Using static market_cap across history. This creates look-ahead bias risk for the $100.0B+ market-cap filter.",
       "Using static shares_outstanding across history. This approximates point-in-time market cap and may introduce bias.",
-      "Auto-adjusted mixed split pricing for US.KLAC before 2026-06-11 as 10-for-1; post-adjustment split-day return=12.92%."
+      "Auto-adjusted mixed split pricing for US.IONQ before 2025-01-08 as 2-for-1; post-adjustment split-day return=22.00%.",
+      "Auto-adjusted mixed split pricing for US.KLAC before 2026-06-11 as 10-for-1; post-adjustment split-day return=12.92%.",
+      "Auto-adjusted mixed split pricing for US.NBIS before 2025-01-27 as 2-for-1; post-adjustment split-day return=25.11%."
     ],
     "config": {
       "start_date": "2026-01-01",
@@ -34,6 +36,9 @@
       "market": "US",
       "benchmark_label": "SPY",
       "market_cap_currency": "USD",
+      "stock_connect_only": false,
+      "stock_connect_extra_min_market_cap": 0.0,
+      "universe_tag": "",
       "enable_dynamic_hedge": true,
       "dynamic_hedge_above_ma100": 0.0,
       "dynamic_hedge_between_ma100_ma200": 0.1,

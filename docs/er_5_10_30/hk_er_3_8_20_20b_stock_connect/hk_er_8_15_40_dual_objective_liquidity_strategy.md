@@ -6,7 +6,7 @@ This is the current Hong Kong dashboard strategy for:
 
 - URL: `http://127.0.0.1:8765/hk_er_3_8_20_20b_stock_connect/index.html`
 - Market: Hong Kong stocks only
-- Universe: Southbound Stock Connect constituents only
+- Universe: Southbound Stock Connect constituents plus all HK stocks with market cap >= `100B HKD`
 - Market cap floor: `20,000,000,000 HKD`
 - Industry filter: disabled
 - Selection style: `dual_objective_liquidity`
@@ -36,7 +36,7 @@ The strategy remains an ER relative-strength strategy. Liquidity is used as a se
 A stock must pass all of these filters before ranking:
 
 - It is a Hong Kong stock.
-- It is in the Southbound Stock Connect universe.
+- It is in the Southbound Stock Connect universe, or its latest static market cap is at least `100B HKD`.
 - Latest static market cap is at least `20B HKD`.
 - Adjusted close is at least `5 HKD`.
 - ADV20 is at least `20M HKD`.
