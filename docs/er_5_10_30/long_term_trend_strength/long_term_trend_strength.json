@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23 09:58:25 CST",
+  "generated_at": "2026-06-23 10:50:25 CST",
   "selection_rule": "Top15 by latest weekly close / EMA200 - 1 across the 6 existing dashboards, excluding SOXX / EWY / QQQ; then append SOXX / EWY / QQQ as pinned tickers. Duplicate tickers merge sources and keep the highest visible deviation if source payloads differ.",
   "ranked_top_n": 15,
   "pinned_tickers": [
@@ -44332,7 +44332,7 @@
       "industry_labels": "ETF",
       "source_name": "ETF ER 3/8/20 (白名单日调仓 Top5)",
       "source_slug": "etf_er_3_8_20_whitelist",
-      "latest_deviation": 1.585277,
+      "latest_deviation": 1.611899,
       "latest_date": "2026-06-26",
       "weekly": {
         "ticker": "US.SOXX",
@@ -48524,50 +48524,50 @@
           },
           {
             "date": "2026-06-26",
-            "value": 1.585277
+            "value": 1.611899
           }
         ],
-        "latest_deviation": 1.585277,
+        "latest_deviation": 1.611899,
         "latest_date": "2026-06-26",
         "distribution": {
-          "mean": 0.26232,
-          "std": 0.287178,
+          "mean": 0.262346,
+          "std": 0.287296,
           "count": 1047,
           "levels": [
             {
               "sigma": -3,
               "label": "-3σ",
-              "value": -0.599214
+              "value": -0.599542
             },
             {
               "sigma": -2,
               "label": "-2σ",
-              "value": -0.312036
+              "value": -0.312246
             },
             {
               "sigma": -1,
               "label": "-1σ",
-              "value": -0.024858
+              "value": -0.02495
             },
             {
               "sigma": 0,
               "label": "均值",
-              "value": 0.26232
+              "value": 0.262346
             },
             {
               "sigma": 1,
               "label": "+1σ",
-              "value": 0.549498
+              "value": 0.549642
             },
             {
               "sigma": 2,
               "label": "+2σ",
-              "value": 0.836676
+              "value": 0.836938
             },
             {
               "sigma": 3,
               "label": "+3σ",
-              "value": 1.123854
+              "value": 1.124234
             }
           ]
         }
@@ -48587,74 +48587,59 @@
         "ticker": "US.SOXX",
         "label": "SOXX",
         "name": "SOXX",
-        "start_date": "2024-06-18",
-        "end_date": "2026-06-18",
+        "start_date": "2024-06-24",
+        "end_date": "2026-06-22",
         "peak_date": "2024-07-10",
         "trough_date": "2025-04-08",
         "max_drawdown": -0.41361,
         "peak_close": 262.413354,
         "trough_close": 153.876667,
-        "latest_close": 639.45,
-        "observation_count": 502,
+        "latest_close": 655.01,
+        "observation_count": 500,
         "points": [
           {
-            "date": "2024-06-18",
-            "value": 0.0,
-            "close": 256.275319
-          },
-          {
-            "date": "2024-06-20",
-            "value": -0.027152,
-            "close": 249.316902
-          },
-          {
-            "date": "2024-06-21",
-            "value": -0.03664,
-            "close": 246.88541
-          },
-          {
             "date": "2024-06-24",
-            "value": -0.064139,
+            "value": 0.0,
             "close": 239.838037
           },
           {
             "date": "2024-06-25",
-            "value": -0.049753,
+            "value": 0.0,
             "close": 243.524811
           },
           {
             "date": "2024-06-26",
-            "value": -0.053456,
+            "value": -0.003896,
             "close": 242.575936
           },
           {
             "date": "2024-06-27",
-            "value": -0.058315,
+            "value": -0.00901,
             "close": 241.330538
           },
           {
             "date": "2024-06-28",
-            "value": -0.048789,
+            "value": 0.0,
             "close": 243.771914
           },
           {
             "date": "2024-07-01",
-            "value": -0.048828,
+            "value": -4.1e-05,
             "close": 243.76203
           },
           {
             "date": "2024-07-02",
-            "value": -0.035444,
+            "value": 0.0,
             "close": 247.191818
           },
           {
             "date": "2024-07-03",
-            "value": -0.019361,
+            "value": 0.0,
             "close": 251.313493
           },
           {
             "date": "2024-07-05",
-            "value": -0.017433,
+            "value": 0.0,
             "close": 251.807699
           },
           {
@@ -51106,6 +51091,11 @@
             "date": "2026-06-18",
             "value": 0.0,
             "close": 639.45
+          },
+          {
+            "date": "2026-06-22",
+            "value": 0.0,
+            "close": 655.01
           }
         ]
       }
@@ -51117,7 +51107,7 @@
       "industry_labels": "ETF",
       "source_name": "ETF ER 3/8/20 (白名单日调仓 Top5)",
       "source_slug": "etf_er_3_8_20_whitelist",
-      "latest_deviation": 1.588713,
+      "latest_deviation": 1.593905,
       "latest_date": "2026-06-26",
       "weekly": {
         "ticker": "US.EWY",
@@ -54145,50 +54135,50 @@
           },
           {
             "date": "2026-06-26",
-            "value": 1.588713
+            "value": 1.593905
           }
         ],
-        "latest_deviation": 1.588713,
+        "latest_deviation": 1.593905,
         "latest_date": "2026-06-26",
         "distribution": {
-          "mean": 0.094424,
-          "std": 0.238362,
+          "mean": 0.094431,
+          "std": 0.238406,
           "count": 756,
           "levels": [
             {
               "sigma": -3,
               "label": "-3σ",
-              "value": -0.620662
+              "value": -0.620787
             },
             {
               "sigma": -2,
               "label": "-2σ",
-              "value": -0.3823
+              "value": -0.382381
             },
             {
               "sigma": -1,
               "label": "-1σ",
-              "value": -0.143938
+              "value": -0.143975
             },
             {
               "sigma": 0,
               "label": "均值",
-              "value": 0.094424
+              "value": 0.094431
             },
             {
               "sigma": 1,
               "label": "+1σ",
-              "value": 0.332786
+              "value": 0.332837
             },
             {
               "sigma": 2,
               "label": "+2σ",
-              "value": 0.571148
+              "value": 0.571243
             },
             {
               "sigma": 3,
               "label": "+3σ",
-              "value": 0.80951
+              "value": 0.809649
             }
           ]
         }
@@ -54208,44 +54198,29 @@
         "ticker": "US.EWY",
         "label": "EWY",
         "name": "EWY",
-        "start_date": "2024-06-18",
-        "end_date": "2026-06-18",
+        "start_date": "2024-06-24",
+        "end_date": "2026-06-22",
         "peak_date": "2024-07-05",
         "trough_date": "2025-04-08",
         "max_drawdown": -0.273638,
         "peak_close": 65.869839,
         "trough_close": 47.845337,
-        "latest_close": 219.2,
-        "observation_count": 502,
+        "latest_close": 219.02,
+        "observation_count": 500,
         "points": [
           {
-            "date": "2024-06-18",
-            "value": 0.0,
-            "close": 62.68906
-          },
-          {
-            "date": "2024-06-20",
-            "value": -0.004114,
-            "close": 62.431159
-          },
-          {
-            "date": "2024-06-21",
-            "value": -0.007771,
-            "close": 62.201913
-          },
-          {
             "date": "2024-06-24",
-            "value": -0.009904,
+            "value": 0.0,
             "close": 62.068187
           },
           {
             "date": "2024-06-25",
-            "value": -0.009142,
+            "value": 0.0,
             "close": 62.115946
           },
           {
             "date": "2024-06-26",
-            "value": -0.005942,
+            "value": 0.0,
             "close": 62.316536
           },
           {
@@ -56727,6 +56702,11 @@
             "date": "2026-06-18",
             "value": 0.0,
             "close": 219.2
+          },
+          {
+            "date": "2026-06-22",
+            "value": -0.000821,
+            "close": 219.02
           }
         ]
       }
@@ -56738,7 +56718,7 @@
       "industry_labels": "ETF",
       "source_name": "ETF ER 3/8/20 (白名单日调仓 Top5)",
       "source_slug": "etf_er_3_8_20_whitelist",
-      "latest_deviation": 0.503309,
+      "latest_deviation": 0.507575,
       "latest_date": "2026-06-26",
       "weekly": {
         "ticker": "US.QQQ",
@@ -60930,50 +60910,50 @@
           },
           {
             "date": "2026-06-26",
-            "value": 0.503309
+            "value": 0.507575
           }
         ],
-        "latest_deviation": 0.503309,
+        "latest_deviation": 0.507575,
         "latest_date": "2026-06-26",
         "distribution": {
-          "mean": 0.258807,
-          "std": 0.171456,
+          "mean": 0.258811,
+          "std": 0.171461,
           "count": 1047,
           "levels": [
             {
               "sigma": -3,
               "label": "-3σ",
-              "value": -0.255561
+              "value": -0.255572
             },
             {
               "sigma": -2,
               "label": "-2σ",
-              "value": -0.084105
+              "value": -0.084111
             },
             {
               "sigma": -1,
               "label": "-1σ",
-              "value": 0.087351
+              "value": 0.08735
             },
             {
               "sigma": 0,
               "label": "均值",
-              "value": 0.258807
+              "value": 0.258811
             },
             {
               "sigma": 1,
               "label": "+1σ",
-              "value": 0.430263
+              "value": 0.430272
             },
             {
               "sigma": 2,
               "label": "+2σ",
-              "value": 0.601719
+              "value": 0.601733
             },
             {
               "sigma": 3,
               "label": "+3σ",
-              "value": 0.773175
+              "value": 0.773194
             }
           ]
         }
@@ -60993,59 +60973,44 @@
         "ticker": "US.QQQ",
         "label": "QQQ",
         "name": "QQQ",
-        "start_date": "2024-06-18",
-        "end_date": "2026-06-18",
+        "start_date": "2024-06-24",
+        "end_date": "2026-06-22",
         "peak_date": "2025-02-19",
         "trough_date": "2025-04-08",
         "max_drawdown": -0.227683,
         "peak_close": 536.121923,
         "trough_close": 414.05582,
-        "latest_close": 740.62,
-        "observation_count": 502,
+        "latest_close": 737.95,
+        "observation_count": 500,
         "points": [
           {
-            "date": "2024-06-18",
-            "value": 0.0,
-            "close": 479.266075
-          },
-          {
-            "date": "2024-06-20",
-            "value": -0.007708,
-            "close": 475.57189
-          },
-          {
-            "date": "2024-06-21",
-            "value": -0.010367,
-            "close": 474.297693
-          },
-          {
             "date": "2024-06-24",
-            "value": -0.021634,
+            "value": 0.0,
             "close": 468.897497
           },
           {
             "date": "2024-06-25",
-            "value": -0.010446,
+            "value": 0.0,
             "close": 474.259605
           },
           {
             "date": "2024-06-26",
-            "value": -0.008403,
+            "value": 0.0,
             "close": 475.23903
           },
           {
             "date": "2024-06-27",
-            "value": -0.005843,
+            "value": 0.0,
             "close": 476.465785
           },
           {
             "date": "2024-06-28",
-            "value": -0.011003,
+            "value": -0.005191,
             "close": 473.992489
           },
           {
             "date": "2024-07-01",
-            "value": -0.005203,
+            "value": 0.0,
             "close": 476.772474
           },
           {
@@ -63512,6 +63477,11 @@
             "date": "2026-06-18",
             "value": -0.007425,
             "close": 740.62
+          },
+          {
+            "date": "2026-06-22",
+            "value": -0.011003,
+            "close": 737.95
           }
         ]
       }
@@ -96617,74 +96587,59 @@
         "ticker": "US.SOXX",
         "label": "SOXX",
         "name": "SOXX",
-        "start_date": "2024-06-18",
-        "end_date": "2026-06-18",
+        "start_date": "2024-06-24",
+        "end_date": "2026-06-22",
         "peak_date": "2024-07-10",
         "trough_date": "2025-04-08",
         "max_drawdown": -0.41361,
         "peak_close": 262.413354,
         "trough_close": 153.876667,
-        "latest_close": 639.45,
-        "observation_count": 502,
+        "latest_close": 655.01,
+        "observation_count": 500,
         "points": [
           {
-            "date": "2024-06-18",
-            "value": 0.0,
-            "close": 256.275319
-          },
-          {
-            "date": "2024-06-20",
-            "value": -0.027152,
-            "close": 249.316902
-          },
-          {
-            "date": "2024-06-21",
-            "value": -0.03664,
-            "close": 246.88541
-          },
-          {
             "date": "2024-06-24",
-            "value": -0.064139,
+            "value": 0.0,
             "close": 239.838037
           },
           {
             "date": "2024-06-25",
-            "value": -0.049753,
+            "value": 0.0,
             "close": 243.524811
           },
           {
             "date": "2024-06-26",
-            "value": -0.053456,
+            "value": -0.003896,
             "close": 242.575936
           },
           {
             "date": "2024-06-27",
-            "value": -0.058315,
+            "value": -0.00901,
             "close": 241.330538
           },
           {
             "date": "2024-06-28",
-            "value": -0.048789,
+            "value": 0.0,
             "close": 243.771914
           },
           {
             "date": "2024-07-01",
-            "value": -0.048828,
+            "value": -4.1e-05,
             "close": 243.76203
           },
           {
             "date": "2024-07-02",
-            "value": -0.035444,
+            "value": 0.0,
             "close": 247.191818
           },
           {
             "date": "2024-07-03",
-            "value": -0.019361,
+            "value": 0.0,
             "close": 251.313493
           },
           {
             "date": "2024-07-05",
-            "value": -0.017433,
+            "value": 0.0,
             "close": 251.807699
           },
           {
@@ -99136,6 +99091,11 @@
             "date": "2026-06-18",
             "value": 0.0,
             "close": 639.45
+          },
+          {
+            "date": "2026-06-22",
+            "value": 0.0,
+            "close": 655.01
           }
         ]
       },
@@ -99147,44 +99107,29 @@
         "ticker": "US.EWY",
         "label": "EWY",
         "name": "EWY",
-        "start_date": "2024-06-18",
-        "end_date": "2026-06-18",
+        "start_date": "2024-06-24",
+        "end_date": "2026-06-22",
         "peak_date": "2024-07-05",
         "trough_date": "2025-04-08",
         "max_drawdown": -0.273638,
         "peak_close": 65.869839,
         "trough_close": 47.845337,
-        "latest_close": 219.2,
-        "observation_count": 502,
+        "latest_close": 219.02,
+        "observation_count": 500,
         "points": [
           {
-            "date": "2024-06-18",
-            "value": 0.0,
-            "close": 62.68906
-          },
-          {
-            "date": "2024-06-20",
-            "value": -0.004114,
-            "close": 62.431159
-          },
-          {
-            "date": "2024-06-21",
-            "value": -0.007771,
-            "close": 62.201913
-          },
-          {
             "date": "2024-06-24",
-            "value": -0.009904,
+            "value": 0.0,
             "close": 62.068187
           },
           {
             "date": "2024-06-25",
-            "value": -0.009142,
+            "value": 0.0,
             "close": 62.115946
           },
           {
             "date": "2024-06-26",
-            "value": -0.005942,
+            "value": 0.0,
             "close": 62.316536
           },
           {
@@ -101666,6 +101611,11 @@
             "date": "2026-06-18",
             "value": 0.0,
             "close": 219.2
+          },
+          {
+            "date": "2026-06-22",
+            "value": -0.000821,
+            "close": 219.02
           }
         ]
       },
@@ -101677,59 +101627,44 @@
         "ticker": "US.QQQ",
         "label": "QQQ",
         "name": "QQQ",
-        "start_date": "2024-06-18",
-        "end_date": "2026-06-18",
+        "start_date": "2024-06-24",
+        "end_date": "2026-06-22",
         "peak_date": "2025-02-19",
         "trough_date": "2025-04-08",
         "max_drawdown": -0.227683,
         "peak_close": 536.121923,
         "trough_close": 414.05582,
-        "latest_close": 740.62,
-        "observation_count": 502,
+        "latest_close": 737.95,
+        "observation_count": 500,
         "points": [
           {
-            "date": "2024-06-18",
-            "value": 0.0,
-            "close": 479.266075
-          },
-          {
-            "date": "2024-06-20",
-            "value": -0.007708,
-            "close": 475.57189
-          },
-          {
-            "date": "2024-06-21",
-            "value": -0.010367,
-            "close": 474.297693
-          },
-          {
             "date": "2024-06-24",
-            "value": -0.021634,
+            "value": 0.0,
             "close": 468.897497
           },
           {
             "date": "2024-06-25",
-            "value": -0.010446,
+            "value": 0.0,
             "close": 474.259605
           },
           {
             "date": "2024-06-26",
-            "value": -0.008403,
+            "value": 0.0,
             "close": 475.23903
           },
           {
             "date": "2024-06-27",
-            "value": -0.005843,
+            "value": 0.0,
             "close": 476.465785
           },
           {
             "date": "2024-06-28",
-            "value": -0.011003,
+            "value": -0.005191,
             "close": 473.992489
           },
           {
             "date": "2024-07-01",
-            "value": -0.005203,
+            "value": 0.0,
             "close": 476.772474
           },
           {
@@ -104196,6 +104131,11 @@
             "date": "2026-06-18",
             "value": -0.007425,
             "close": 740.62
+          },
+          {
+            "date": "2026-06-22",
+            "value": -0.011003,
+            "close": 737.95
           }
         ]
       }
