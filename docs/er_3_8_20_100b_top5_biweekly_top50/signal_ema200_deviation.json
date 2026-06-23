@@ -12,15 +12,18 @@
       "industry_labels": "半导体",
       "source_keys": [
         "buy_top20",
-        "profit_top10"
+        "profit_top10",
+        "planned_holdings"
       ],
       "source_labels": [
         "BUY Top20",
-        "盈利贡献 Top10"
+        "盈利贡献 Top10",
+        "计划持有"
       ],
       "source_ranks": {
         "buy_top20": 1,
-        "profit_top10": 10
+        "profit_top10": 8,
+        "planned_holdings": 1
       },
       "buy_count": 2.0,
       "total_buy_value": 344221.52,
@@ -28,8 +31,8 @@
       "profit_trade_count": 4.0,
       "current_weight": null,
       "current_market_value": null,
-      "planned_action": null,
-      "planned_rank": null,
+      "planned_action": "buy",
+      "planned_rank": 3.0,
       "planned_weight": null,
       "planned_market_value": null,
       "timeframes": {
@@ -3718,49 +3721,57 @@
             {
               "date": "2026-06-18",
               "value": 1.420884
+            },
+            {
+              "date": "2026-06-22",
+              "value": 1.545919
+            },
+            {
+              "date": "2026-06-23",
+              "value": 1.184165
             }
           ],
-          "latest_deviation": 1.420884,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 1.184165,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.21093,
-            "std": 0.345863,
-            "count": 920,
+            "mean": 0.213433,
+            "std": 0.349737,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.826659
+                "value": -0.835778
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.480796
+                "value": -0.486041
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.134933
+                "value": -0.136304
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.21093
+                "value": 0.213433
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.556793
+                "value": 0.56317
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.902656
+                "value": 0.912907
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.248519
+                "value": 1.262644
               }
             ]
           }
@@ -3828,7 +3839,7 @@
               "value": -0.222888
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": -0.242698
             },
             {
@@ -4032,7 +4043,7 @@
               "value": -0.234921
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": -0.25409
             },
             {
@@ -4236,7 +4247,7 @@
               "value": 0.430163
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 0.523248
             },
             {
@@ -4456,7 +4467,7 @@
               "value": -0.209183
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": -0.216012
             },
             {
@@ -4500,7 +4511,7 @@
               "value": 0.401662
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 0.368819
             },
             {
@@ -4656,7 +4667,7 @@
               "value": 1.475519
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 1.500795
             },
             {
@@ -4700,51 +4711,55 @@
               "value": 3.928436
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 4.439469
+            },
+            {
+              "date": "2026-06-23",
+              "value": 3.849875
             }
           ],
-          "latest_deviation": 4.439469,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 3.849875,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.343122,
-            "std": 0.885803,
-            "count": 233,
+            "mean": 0.358108,
+            "std": 0.913029,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -2.314287
+                "value": -2.380979
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -1.428484
+                "value": -1.46795
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.542681
+                "value": -0.554921
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.343122
+                "value": 0.358108
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 1.228925
+                "value": 1.271137
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 2.114728
+                "value": 2.184166
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 3.000531
+                "value": 3.097195
               }
             ]
           }
@@ -6760,49 +6775,57 @@
             {
               "date": "2026-06-18",
               "value": 1.322783
+            },
+            {
+              "date": "2026-06-22",
+              "value": 1.130535
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.8973
             }
           ],
-          "latest_deviation": 1.322783,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 0.8973,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.120047,
-            "std": 0.281347,
-            "count": 494,
+            "mean": 0.123651,
+            "std": 0.286532,
+            "count": 496,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.723994
+                "value": -0.735945
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.442647
+                "value": -0.449413
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.1613
+                "value": -0.162881
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.120047
+                "value": 0.123651
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.401394
+                "value": 0.410183
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.682741
+                "value": 0.696715
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.964088
+                "value": 0.983247
               }
             ]
           }
@@ -6926,7 +6949,7 @@
               "value": 1.040862
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 0.884603
             },
             {
@@ -7146,7 +7169,7 @@
               "value": 0.092383
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": 0.057526
             },
             {
@@ -7190,7 +7213,7 @@
               "value": 0.675128
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 0.561284
             },
             {
@@ -7346,7 +7369,7 @@
               "value": 0.304433
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 0.344827
             },
             {
@@ -7390,51 +7413,55 @@
               "value": 2.046171
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 2.42949
+            },
+            {
+              "date": "2026-06-23",
+              "value": 1.807325
             }
           ],
-          "latest_deviation": 2.42949,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 1.807325,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.50982,
-            "std": 0.449976,
-            "count": 145,
+            "mean": 0.518707,
+            "std": 0.461024,
+            "count": 146,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.840108
+                "value": -0.864365
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.390132
+                "value": -0.403341
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 0.059844
+                "value": 0.057683
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.50982
+                "value": 0.518707
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.959796
+                "value": 0.979731
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.409772
+                "value": 1.440755
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.859748
+                "value": 1.901779
               }
             ]
           }
@@ -8030,49 +8057,57 @@
             {
               "date": "2026-06-18",
               "value": 1.788498
+            },
+            {
+              "date": "2026-06-22",
+              "value": 1.848163
+            },
+            {
+              "date": "2026-06-23",
+              "value": 1.424469
             }
           ],
-          "latest_deviation": 1.788498,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 1.424469,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 1.47932,
-            "std": 0.375578,
-            "count": 139,
+            "mean": 1.481547,
+            "std": 0.374218,
+            "count": 141,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": 0.352586
+                "value": 0.358893
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": 0.728164
+                "value": 0.733111
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 1.103742
+                "value": 1.107329
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 1.47932
+                "value": 1.481547
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 1.854898
+                "value": 1.855765
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 2.230476
+                "value": 2.229983
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 2.606054
+                "value": 2.604201
               }
             ]
           }
@@ -8120,7 +8155,7 @@
               "value": -0.144242
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": -0.161088
             },
             {
@@ -8164,7 +8199,7 @@
               "value": 0.256448
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 0.233822
             },
             {
@@ -8320,7 +8355,7 @@
               "value": 4.130549
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 4.576201
             },
             {
@@ -8364,51 +8399,55 @@
               "value": 7.102166
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 7.28503
+            },
+            {
+              "date": "2026-06-23",
+              "value": 5.997539
             }
           ],
-          "latest_deviation": 7.28503,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 5.997539,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 2.693572,
-            "std": 2.552103,
-            "count": 71,
+            "mean": 2.73946,
+            "std": 2.563645,
+            "count": 72,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -4.962737
+                "value": -4.951475
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -2.410634
+                "value": -2.38783
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 0.141469
+                "value": 0.175815
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 2.693572
+                "value": 2.73946
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 5.245675
+                "value": 5.303105
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 7.797778
+                "value": 7.86675
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 10.349881
+                "value": 10.430395
               }
             ]
           }
@@ -8423,31 +8462,28 @@
       "source_keys": [
         "buy_top20",
         "profit_top10",
-        "current_top10",
-        "planned_holdings"
+        "current_top10"
       ],
       "source_labels": [
         "BUY Top20",
         "盈利贡献 Top10",
-        "当前持有 Top10",
-        "计划持有"
+        "当前持有 Top10"
       ],
       "source_ranks": {
         "buy_top20": 4,
-        "profit_top10": 6,
-        "current_top10": 1,
-        "planned_holdings": 1
+        "profit_top10": 9,
+        "current_top10": 1
       },
       "buy_count": 1.0,
       "total_buy_value": 294532.56,
-      "pnl_dollar": 67558.15,
+      "pnl_dollar": 49233.88,
       "profit_trade_count": 1.0,
-      "current_weight": 0.220471,
-      "current_market_value": 362090.71,
-      "planned_action": "keep",
-      "planned_rank": 4.0,
-      "planned_weight": 0.220471,
-      "planned_market_value": 362090.71,
+      "current_weight": 0.217382,
+      "current_market_value": 343766.44,
+      "planned_action": null,
+      "planned_rank": null,
+      "planned_weight": null,
+      "planned_market_value": null,
       "timeframes": {
         "daily": {
           "key": "daily",
@@ -12134,49 +12170,57 @@
             {
               "date": "2026-06-18",
               "value": 0.799348
+            },
+            {
+              "date": "2026-06-22",
+              "value": 0.850656
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.682074
             }
           ],
-          "latest_deviation": 0.799348,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 0.682074,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.125873,
-            "std": 0.180603,
-            "count": 920,
+            "mean": 0.127263,
+            "std": 0.182894,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.415936
+                "value": -0.421419
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.235333
+                "value": -0.238525
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.05473
+                "value": -0.055631
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.125873
+                "value": 0.127263
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.306476
+                "value": 0.310157
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.487079
+                "value": 0.493051
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.667682
+                "value": 0.675945
               }
             ]
           }
@@ -12244,7 +12288,7 @@
               "value": -0.191998
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": -0.234653
             },
             {
@@ -12448,7 +12492,7 @@
               "value": -0.053297
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": -0.116849
             },
             {
@@ -12652,7 +12696,7 @@
               "value": 0.522793
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 0.486376
             },
             {
@@ -12872,7 +12916,7 @@
               "value": -0.080711
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": -0.12704
             },
             {
@@ -12916,7 +12960,7 @@
               "value": 0.162407
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 0.209596
             },
             {
@@ -13072,7 +13116,7 @@
               "value": 0.783984
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 0.828422
             },
             {
@@ -13116,51 +13160,55 @@
               "value": 1.647676
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 1.827497
+            },
+            {
+              "date": "2026-06-23",
+              "value": 1.640157
             }
           ],
-          "latest_deviation": 1.827497,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 1.640157,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.172913,
-            "std": 0.390969,
-            "count": 233,
+            "mean": 0.179184,
+            "std": 0.401701,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.999994
+                "value": -1.025919
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.609025
+                "value": -0.624218
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.218056
+                "value": -0.222517
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.172913
+                "value": 0.179184
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.563882
+                "value": 0.580885
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.954851
+                "value": 0.982586
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.34582
+                "value": 1.384287
               }
             ]
           }
@@ -13174,29 +13222,26 @@
       "industry_labels": "半导体设备与材料",
       "source_keys": [
         "buy_top20",
-        "current_top10",
-        "planned_holdings"
+        "current_top10"
       ],
       "source_labels": [
         "BUY Top20",
-        "当前持有 Top10",
-        "计划持有"
+        "当前持有 Top10"
       ],
       "source_ranks": {
         "buy_top20": 5,
-        "current_top10": 4,
-        "planned_holdings": 3
+        "current_top10": 4
       },
       "buy_count": 1.0,
       "total_buy_value": 294532.56,
       "pnl_dollar": null,
       "profit_trade_count": null,
-      "current_weight": 0.194688,
-      "current_market_value": 319747.36,
-      "planned_action": "keep",
-      "planned_rank": 16.0,
-      "planned_weight": 0.194688,
-      "planned_market_value": 319747.36,
+      "current_weight": 0.186348,
+      "current_market_value": 294690.25,
+      "planned_action": null,
+      "planned_rank": null,
+      "planned_weight": null,
+      "planned_market_value": null,
       "timeframes": {
         "daily": {
           "key": "daily",
@@ -16883,49 +16928,57 @@
             {
               "date": "2026-06-18",
               "value": 0.471407
+            },
+            {
+              "date": "2026-06-22",
+              "value": 0.464215
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.345091
             }
           ],
-          "latest_deviation": 0.471407,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 0.345091,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.095253,
-            "std": 0.158697,
-            "count": 920,
+            "mean": 0.095924,
+            "std": 0.159201,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.380838
+                "value": -0.381679
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.222141
+                "value": -0.222478
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.063444
+                "value": -0.063277
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.095253
+                "value": 0.095924
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.25395
+                "value": 0.255125
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.412647
+                "value": 0.414326
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.571344
+                "value": 0.573527
               }
             ]
           }
@@ -16993,7 +17046,7 @@
               "value": -0.179376
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": -0.195454
             },
             {
@@ -17197,7 +17250,7 @@
               "value": 0.025339
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": -0.010094
             },
             {
@@ -17401,7 +17454,7 @@
               "value": 0.426668
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 0.407072
             },
             {
@@ -17621,7 +17674,7 @@
               "value": -0.085566
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": -0.12365
             },
             {
@@ -17665,7 +17718,7 @@
               "value": 0.091817
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 0.088855
             },
             {
@@ -17821,7 +17874,7 @@
               "value": 0.550624
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 0.55938
             },
             {
@@ -17865,51 +17918,55 @@
               "value": 1.039175
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 1.088439
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.907228
             }
           ],
-          "latest_deviation": 1.088439,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 0.907228,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.101898,
-            "std": 0.300397,
-            "count": 233,
+            "mean": 0.105339,
+            "std": 0.304323,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.799293
+                "value": -0.80763
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.498896
+                "value": -0.503307
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.198499
+                "value": -0.198984
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.101898
+                "value": 0.105339
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.402295
+                "value": 0.409662
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.702692
+                "value": 0.713985
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.003089
+                "value": 1.018308
               }
             ]
           }
@@ -17940,12 +17997,12 @@
       "total_buy_value": 294532.56,
       "pnl_dollar": null,
       "profit_trade_count": null,
-      "current_weight": 0.173836,
-      "current_market_value": 285500.78,
+      "current_weight": 0.182969,
+      "current_market_value": 289345.99,
       "planned_action": "keep",
-      "planned_rank": null,
-      "planned_weight": null,
-      "planned_market_value": null,
+      "planned_rank": 13.0,
+      "planned_weight": 0.182969,
+      "planned_market_value": 289345.99,
       "timeframes": {
         "daily": {
           "key": "daily",
@@ -21632,49 +21689,57 @@
             {
               "date": "2026-06-18",
               "value": 0.381824
+            },
+            {
+              "date": "2026-06-22",
+              "value": 0.399191
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.389358
             }
           ],
-          "latest_deviation": 0.381824,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 0.389358,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.074794,
-            "std": 0.097839,
-            "count": 920,
+            "mean": 0.075487,
+            "std": 0.098857,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.218723
+                "value": -0.221084
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.120884
+                "value": -0.122227
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.023045
+                "value": -0.02337
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.074794
+                "value": 0.075487
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.172633
+                "value": 0.174344
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.270472
+                "value": 0.273201
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.368311
+                "value": 0.372058
               }
             ]
           }
@@ -21742,7 +21807,7 @@
               "value": -0.09673
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": -0.147223
             },
             {
@@ -21946,7 +22011,7 @@
               "value": -0.020067
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": -0.031381
             },
             {
@@ -22150,7 +22215,7 @@
               "value": -0.028577
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": -0.025788
             },
             {
@@ -22370,7 +22435,7 @@
               "value": 0.118599
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": 0.087015
             },
             {
@@ -22414,7 +22479,7 @@
               "value": 0.309473
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 0.326792
             },
             {
@@ -22570,7 +22635,7 @@
               "value": 0.363331
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 0.343327
             },
             {
@@ -22614,51 +22679,55 @@
               "value": 0.914981
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 0.873714
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.882115
             }
           ],
-          "latest_deviation": 0.873714,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 0.882115,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.070655,
-            "std": 0.238317,
-            "count": 233,
+            "mean": 0.074123,
+            "std": 0.243628,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.644296
+                "value": -0.656761
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.405979
+                "value": -0.413133
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.167662
+                "value": -0.169505
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.070655
+                "value": 0.074123
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.308972
+                "value": 0.317751
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.547289
+                "value": 0.561379
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.785606
+                "value": 0.805007
               }
             ]
           }
@@ -22689,12 +22758,12 @@
       "total_buy_value": 294532.56,
       "pnl_dollar": null,
       "profit_trade_count": null,
-      "current_weight": 0.19746,
-      "current_market_value": 324299.96,
+      "current_weight": 0.204401,
+      "current_market_value": 323239.03,
       "planned_action": "keep",
-      "planned_rank": 13.0,
-      "planned_weight": 0.19746,
-      "planned_market_value": 324299.96,
+      "planned_rank": 8.0,
+      "planned_weight": 0.204401,
+      "planned_market_value": 323239.03,
       "timeframes": {
         "daily": {
           "key": "daily",
@@ -26381,29 +26450,37 @@
             {
               "date": "2026-06-18",
               "value": 0.207622
+            },
+            {
+              "date": "2026-06-22",
+              "value": 0.196741
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.19889
             }
           ],
-          "latest_deviation": 0.207622,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 0.19889,
+          "latest_date": "2026-06-23",
           "distribution": {
             "mean": 0.197691,
-            "std": 0.10539,
-            "count": 920,
+            "std": 0.105276,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.118479
+                "value": -0.118137
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.013089
+                "value": -0.012861
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 0.092301
+                "value": 0.092415
               },
               {
                 "sigma": 0,
@@ -26413,17 +26490,17 @@
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.303081
+                "value": 0.302967
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.408471
+                "value": 0.408243
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.513861
+                "value": 0.513519
               }
             ]
           }
@@ -26491,7 +26568,7 @@
               "value": -0.106828
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": -0.095115
             },
             {
@@ -26695,7 +26772,7 @@
               "value": 0.301148
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": 0.270464
             },
             {
@@ -26899,7 +26976,7 @@
               "value": 0.893291
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 0.880606
             },
             {
@@ -27119,7 +27196,7 @@
               "value": 0.553171
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": 0.545674
             },
             {
@@ -27163,7 +27240,7 @@
               "value": 0.980328
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 0.903516
             },
             {
@@ -27319,7 +27396,7 @@
               "value": 0.550103
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 0.532807
             },
             {
@@ -27363,51 +27440,55 @@
               "value": 0.718921
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 0.818368
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.797885
             }
           ],
-          "latest_deviation": 0.818368,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 0.797885,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.492263,
-            "std": 0.430758,
-            "count": 233,
+            "mean": 0.493569,
+            "std": 0.430299,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.800011
+                "value": -0.797328
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.369253
+                "value": -0.367029
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 0.061505
+                "value": 0.06327
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.492263
+                "value": 0.493569
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.923021
+                "value": 0.923868
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.353779
+                "value": 1.354167
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.784537
+                "value": 1.784466
               }
             ]
           }
@@ -27433,20 +27514,20 @@
       ],
       "source_ranks": {
         "buy_top20": 8,
-        "profit_top10": 8,
+        "profit_top10": 10,
         "current_top10": 2,
-        "planned_holdings": 2
+        "planned_holdings": 3
       },
       "buy_count": 1.0,
       "total_buy_value": 293355.37,
-      "pnl_dollar": 57360.15,
+      "pnl_dollar": 36997.68,
       "profit_trade_count": 1.0,
-      "current_weight": 0.213544,
-      "current_market_value": 350715.51,
+      "current_weight": 0.2089,
+      "current_market_value": 330353.04,
       "planned_action": "keep",
-      "planned_rank": 5.0,
-      "planned_weight": 0.213544,
-      "planned_market_value": 350715.51,
+      "planned_rank": 7.0,
+      "planned_weight": 0.2089,
+      "planned_market_value": 330353.04,
       "timeframes": {
         "daily": {
           "key": "daily",
@@ -31133,49 +31214,57 @@
             {
               "date": "2026-06-18",
               "value": 0.712718
+            },
+            {
+              "date": "2026-06-22",
+              "value": 0.762455
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.591401
             }
           ],
-          "latest_deviation": 0.712718,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 0.591401,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.161331,
-            "std": 0.140621,
-            "count": 920,
+            "mean": 0.16245,
+            "std": 0.142557,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.260532
+                "value": -0.265221
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.119911
+                "value": -0.122664
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 0.02071
+                "value": 0.019893
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.161331
+                "value": 0.16245
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.301952
+                "value": 0.305007
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.442573
+                "value": 0.447564
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.583194
+                "value": 0.590121
               }
             ]
           }
@@ -31243,7 +31332,7 @@
               "value": -0.166544
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": -0.213056
             },
             {
@@ -31447,7 +31536,7 @@
               "value": 0.035128
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": -0.028156
             },
             {
@@ -31651,7 +31740,7 @@
               "value": 0.619358
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 0.582709
             },
             {
@@ -31871,7 +31960,7 @@
               "value": 0.208268
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": 0.142113
             },
             {
@@ -31915,7 +32004,7 @@
               "value": 0.545185
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 0.595842
             },
             {
@@ -32071,7 +32160,7 @@
               "value": 0.860262
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 0.936762
             },
             {
@@ -32115,51 +32204,55 @@
               "value": 1.855823
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 1.857773
+            },
+            {
+              "date": "2026-06-23",
+              "value": 1.647286
             }
           ],
-          "latest_deviation": 1.857773,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 1.647286,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.349728,
-            "std": 0.402896,
-            "count": 233,
+            "mean": 0.355273,
+            "std": 0.410848,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.85896
+                "value": -0.877271
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.456064
+                "value": -0.466423
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.053168
+                "value": -0.055575
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.349728
+                "value": 0.355273
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.752624
+                "value": 0.766121
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.15552
+                "value": 1.176969
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.558416
+                "value": 1.587817
               }
             ]
           }
@@ -35876,49 +35969,57 @@
             {
               "date": "2026-06-18",
               "value": 0.380751
+            },
+            {
+              "date": "2026-06-22",
+              "value": 0.356875
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.362894
             }
           ],
-          "latest_deviation": 0.380751,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 0.362894,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.108115,
-            "std": 0.209691,
-            "count": 920,
+            "mean": 0.108661,
+            "std": 0.209791,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.520958
+                "value": -0.520712
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.311267
+                "value": -0.310921
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.101576
+                "value": -0.10113
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.108115
+                "value": 0.108661
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.317806
+                "value": 0.318452
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.527497
+                "value": 0.528243
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.737188
+                "value": 0.738034
               }
             ]
           }
@@ -35986,7 +36087,7 @@
               "value": 0.153815
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": 0.240748
             },
             {
@@ -36190,7 +36291,7 @@
               "value": -0.205402
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": -0.258131
             },
             {
@@ -36394,7 +36495,7 @@
               "value": 0.743387
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 0.69428
             },
             {
@@ -36614,7 +36715,7 @@
               "value": 0.506464
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": 0.490001
             },
             {
@@ -36658,7 +36759,7 @@
               "value": 0.838277
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 0.87599
             },
             {
@@ -36814,7 +36915,7 @@
               "value": 0.111547
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 0.198003
             },
             {
@@ -36858,51 +36959,55 @@
               "value": 0.924976
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 0.913065
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.885139
             }
           ],
-          "latest_deviation": 0.913065,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 0.885139,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.271687,
-            "std": 0.38261,
-            "count": 233,
+            "mean": 0.274308,
+            "std": 0.383883,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.876143
+                "value": -0.877341
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.493533
+                "value": -0.493458
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.110923
+                "value": -0.109575
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.271687
+                "value": 0.274308
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.654297
+                "value": 0.658191
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.036907
+                "value": 1.042074
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.419517
+                "value": 1.425957
               }
             ]
           }
@@ -40619,49 +40724,57 @@
             {
               "date": "2026-06-18",
               "value": 0.335562
+            },
+            {
+              "date": "2026-06-22",
+              "value": 0.306656
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.199606
             }
           ],
-          "latest_deviation": 0.335562,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 0.199606,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.026886,
-            "std": 0.140341,
-            "count": 920,
+            "mean": 0.027377,
+            "std": 0.140606,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.394137
+                "value": -0.394441
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.253796
+                "value": -0.253835
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.113455
+                "value": -0.113229
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.026886
+                "value": 0.027377
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.167227
+                "value": 0.167983
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.307568
+                "value": 0.308589
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.447909
+                "value": 0.449195
               }
             ]
           }
@@ -40729,7 +40842,7 @@
               "value": -0.229829
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": -0.226831
             },
             {
@@ -40933,7 +41046,7 @@
               "value": -0.173269
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": -0.201335
             },
             {
@@ -41137,7 +41250,7 @@
               "value": 0.202767
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 0.194767
             },
             {
@@ -41357,7 +41470,7 @@
               "value": -0.077552
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": -0.093855
             },
             {
@@ -41401,7 +41514,7 @@
               "value": 0.058396
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 0.082005
             },
             {
@@ -41557,7 +41670,7 @@
               "value": -0.153582
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": -0.154337
             },
             {
@@ -41601,51 +41714,55 @@
               "value": 0.373695
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 0.460274
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.31416
             }
           ],
-          "latest_deviation": 0.460274,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 0.31416,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": -0.02454,
-            "std": 0.197735,
-            "count": 233,
+            "mean": -0.023093,
+            "std": 0.198545,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.617745
+                "value": -0.618728
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.42001
+                "value": -0.420183
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.222275
+                "value": -0.221638
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": -0.02454
+                "value": -0.023093
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.173195
+                "value": 0.175452
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.37093
+                "value": 0.373997
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.568665
+                "value": 0.572542
               }
             ]
           }
@@ -45362,49 +45479,57 @@
             {
               "date": "2026-06-18",
               "value": 0.883033
+            },
+            {
+              "date": "2026-06-22",
+              "value": 0.915222
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.790544
             }
           ],
-          "latest_deviation": 0.883033,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 0.790544,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.116515,
-            "std": 0.262487,
-            "count": 920,
+            "mean": 0.118113,
+            "std": 0.264446,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.670946
+                "value": -0.675225
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.408459
+                "value": -0.410779
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.145972
+                "value": -0.146333
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.116515
+                "value": 0.118113
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.379002
+                "value": 0.382559
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.641489
+                "value": 0.647005
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.903976
+                "value": 0.911451
               }
             ]
           }
@@ -45472,7 +45597,7 @@
               "value": -0.222082
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": -0.281211
             },
             {
@@ -45676,7 +45801,7 @@
               "value": -0.109066
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": -0.15809
             },
             {
@@ -45880,7 +46005,7 @@
               "value": 0.520926
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 0.520051
             },
             {
@@ -46100,7 +46225,7 @@
               "value": -0.259535
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": -0.304189
             },
             {
@@ -46144,7 +46269,7 @@
               "value": 0.153472
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 0.104982
             },
             {
@@ -46300,7 +46425,7 @@
               "value": 0.355142
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 0.452561
             },
             {
@@ -46344,51 +46469,55 @@
               "value": 1.93173
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 2.017154
+            },
+            {
+              "date": "2026-06-23",
+              "value": 1.864102
             }
           ],
-          "latest_deviation": 2.017154,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 1.864102,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.126777,
-            "std": 0.459673,
-            "count": 233,
+            "mean": 0.134202,
+            "std": 0.472483,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -1.252242
+                "value": -1.283247
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.792569
+                "value": -0.810764
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.332896
+                "value": -0.338281
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.126777
+                "value": 0.134202
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.58645
+                "value": 0.606685
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.046123
+                "value": 1.079168
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.505796
+                "value": 1.551651
               }
             ]
           }
@@ -50108,49 +50237,57 @@
             {
               "date": "2026-06-18",
               "value": 1.094415
+            },
+            {
+              "date": "2026-06-22",
+              "value": 1.176991
+            },
+            {
+              "date": "2026-06-23",
+              "value": 1.022236
             }
           ],
-          "latest_deviation": 1.094415,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 1.022236,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.058952,
-            "std": 0.323977,
-            "count": 920,
+            "mean": 0.06121,
+            "std": 0.327247,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.912979
+                "value": -0.920531
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.589002
+                "value": -0.593284
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.265025
+                "value": -0.266037
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.058952
+                "value": 0.06121
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.382929
+                "value": 0.388457
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.706906
+                "value": 0.715704
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.030883
+                "value": 1.042951
               }
             ]
           }
@@ -50218,7 +50355,7 @@
               "value": -0.10409
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": -0.128687
             },
             {
@@ -50422,7 +50559,7 @@
               "value": -0.235702
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": -0.230647
             },
             {
@@ -50626,7 +50763,7 @@
               "value": 0.046264
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 0.084664
             },
             {
@@ -50846,7 +50983,7 @@
               "value": -0.414158
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": -0.435736
             },
             {
@@ -50890,7 +51027,7 @@
               "value": -0.298159
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": -0.302232
             },
             {
@@ -51046,7 +51183,7 @@
               "value": 0.279129
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 0.486835
             },
             {
@@ -51090,51 +51227,55 @@
               "value": 2.094393
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 2.253025
+            },
+            {
+              "date": "2026-06-23",
+              "value": 2.142362
             }
           ],
-          "latest_deviation": 2.253025,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 2.142362,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": -0.080236,
-            "std": 0.479908,
-            "count": 233,
+            "mean": -0.070738,
+            "std": 0.500348,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -1.51996
+                "value": -1.571782
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -1.040052
+                "value": -1.071434
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.560144
+                "value": -0.571086
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": -0.080236
+                "value": -0.070738
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.399672
+                "value": 0.42961
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.87958
+                "value": 0.929958
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.359488
+                "value": 1.430306
               }
             ]
           }
@@ -54854,49 +54995,57 @@
             {
               "date": "2026-06-18",
               "value": 1.213734
+            },
+            {
+              "date": "2026-06-22",
+              "value": 1.234898
+            },
+            {
+              "date": "2026-06-23",
+              "value": 1.098208
             }
           ],
-          "latest_deviation": 1.213734,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 1.098208,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.206222,
-            "std": 0.31965,
-            "count": 920,
+            "mean": 0.208305,
+            "std": 0.322429,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.752728
+                "value": -0.758982
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.433078
+                "value": -0.436553
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.113428
+                "value": -0.114124
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.206222
+                "value": 0.208305
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.525872
+                "value": 0.530734
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.845522
+                "value": 0.853163
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.165172
+                "value": 1.175592
               }
             ]
           }
@@ -54964,7 +55113,7 @@
               "value": -0.217893
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": -0.249401
             },
             {
@@ -55168,7 +55317,7 @@
               "value": -0.2487
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": -0.266286
             },
             {
@@ -55372,7 +55521,7 @@
               "value": 0.116647
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 0.165389
             },
             {
@@ -55592,7 +55741,7 @@
               "value": -0.171602
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": -0.10418
             },
             {
@@ -55636,7 +55785,7 @@
               "value": 0.626628
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 0.70643
             },
             {
@@ -55792,7 +55941,7 @@
               "value": 1.569476
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 1.848768
             },
             {
@@ -55836,51 +55985,55 @@
               "value": 3.49181
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 3.957944
+            },
+            {
+              "date": "2026-06-23",
+              "value": 3.635569
             }
           ],
-          "latest_deviation": 3.957944,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 3.635569,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.336617,
-            "std": 0.889693,
-            "count": 233,
+            "mean": 0.350715,
+            "std": 0.913499,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -2.332462
+                "value": -2.389782
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -1.442769
+                "value": -1.476283
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.553076
+                "value": -0.562784
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.336617
+                "value": 0.350715
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 1.22631
+                "value": 1.264214
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 2.116003
+                "value": 2.177713
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 3.005696
+                "value": 3.091212
               }
             ]
           }
@@ -59600,49 +59753,57 @@
             {
               "date": "2026-06-18",
               "value": 1.359324
+            },
+            {
+              "date": "2026-06-22",
+              "value": 1.30792
+            },
+            {
+              "date": "2026-06-23",
+              "value": 1.069384
             }
           ],
-          "latest_deviation": 1.359324,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 1.069384,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.089947,
-            "std": 0.273359,
-            "count": 920,
+            "mean": 0.092331,
+            "std": 0.277861,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.73013
+                "value": -0.741252
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.456771
+                "value": -0.463391
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.183412
+                "value": -0.18553
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.089947
+                "value": 0.092331
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.363306
+                "value": 0.370192
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.636665
+                "value": 0.648053
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.910024
+                "value": 0.925914
               }
             ]
           }
@@ -59710,7 +59871,7 @@
               "value": -0.223894
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": -0.248813
             },
             {
@@ -59914,7 +60075,7 @@
               "value": -0.353128
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": -0.410191
             },
             {
@@ -60118,7 +60279,7 @@
               "value": 0.05086
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 0.118073
             },
             {
@@ -60338,7 +60499,7 @@
               "value": -0.252019
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": -0.273703
             },
             {
@@ -60382,7 +60543,7 @@
               "value": 0.092527
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 0.063809
             },
             {
@@ -60538,7 +60699,7 @@
               "value": 0.279414
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 0.437972
             },
             {
@@ -60582,51 +60743,55 @@
               "value": 2.272105
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 2.540586
+            },
+            {
+              "date": "2026-06-23",
+              "value": 2.113465
             }
           ],
-          "latest_deviation": 2.540586,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 2.113465,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.028984,
-            "std": 0.437495,
-            "count": 233,
+            "mean": 0.037892,
+            "std": 0.457245,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -1.283501
+                "value": -1.333843
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.846006
+                "value": -0.876598
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.408511
+                "value": -0.419353
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.028984
+                "value": 0.037892
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.466479
+                "value": 0.495137
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.903974
+                "value": 0.952382
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.341469
+                "value": 1.409627
               }
             ]
           }
@@ -64343,49 +64508,57 @@
             {
               "date": "2026-06-18",
               "value": 0.503114
+            },
+            {
+              "date": "2026-06-22",
+              "value": 0.608201
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.480233
             }
           ],
-          "latest_deviation": 0.503114,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 0.480233,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.153734,
-            "std": 0.205512,
-            "count": 920,
+            "mean": 0.154581,
+            "std": 0.206113,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.462802
+                "value": -0.463758
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.25729
+                "value": -0.257645
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.051778
+                "value": -0.051532
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.153734
+                "value": 0.154581
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.359246
+                "value": 0.360694
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.564758
+                "value": 0.566807
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.77027
+                "value": 0.77292
               }
             ]
           }
@@ -64453,7 +64626,7 @@
               "value": -0.098594
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": -0.108202
             },
             {
@@ -64657,7 +64830,7 @@
               "value": -0.001338
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": -0.034406
             },
             {
@@ -64861,7 +65034,7 @@
               "value": -0.006692
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 0.00515
             },
             {
@@ -65081,7 +65254,7 @@
               "value": 0.119509
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": 0.125147
             },
             {
@@ -65125,7 +65298,7 @@
               "value": 0.370874
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 0.397543
             },
             {
@@ -65281,7 +65454,7 @@
               "value": 1.489479
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 1.647087
             },
             {
@@ -65325,51 +65498,55 @@
               "value": 1.653907
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 1.833522
+            },
+            {
+              "date": "2026-06-23",
+              "value": 1.770953
             }
           ],
-          "latest_deviation": 1.833522,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 1.770953,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.301105,
-            "std": 0.54201,
-            "count": 233,
+            "mean": 0.307386,
+            "std": 0.549283,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -1.324925
+                "value": -1.340463
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.782915
+                "value": -0.79118
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.240905
+                "value": -0.241897
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.301105
+                "value": 0.307386
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.843115
+                "value": 0.856669
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.385125
+                "value": 1.405952
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.927135
+                "value": 1.955235
               }
             ]
           }
@@ -65391,7 +65568,7 @@
       ],
       "source_ranks": {
         "buy_top20": 16,
-        "profit_top10": 9
+        "profit_top10": 7
       },
       "buy_count": 1.0,
       "total_buy_value": 139581.7,
@@ -69089,49 +69266,57 @@
             {
               "date": "2026-06-18",
               "value": 0.022445
+            },
+            {
+              "date": "2026-06-22",
+              "value": 0.03792
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.038736
             }
           ],
-          "latest_deviation": 0.022445,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 0.038736,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.10839,
-            "std": 0.136785,
-            "count": 920,
+            "mean": 0.108238,
+            "std": 0.136675,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.301965
+                "value": -0.301787
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.16518
+                "value": -0.165112
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.028395
+                "value": -0.028437
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.10839
+                "value": 0.108238
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.245175
+                "value": 0.244913
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.38196
+                "value": 0.381588
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.518745
+                "value": 0.518263
               }
             ]
           }
@@ -69199,7 +69384,7 @@
               "value": 0.37944
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": 0.390129
             },
             {
@@ -69403,7 +69588,7 @@
               "value": 0.223187
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": 0.250523
             },
             {
@@ -69607,7 +69792,7 @@
               "value": 0.499095
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 0.543679
             },
             {
@@ -69827,7 +70012,7 @@
               "value": 0.119537
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": 0.123946
             },
             {
@@ -69871,7 +70056,7 @@
               "value": 0.23838
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 0.30243
             },
             {
@@ -70027,7 +70212,7 @@
               "value": 0.933104
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 0.896321
             },
             {
@@ -70071,51 +70256,55 @@
               "value": 0.570471
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 0.425082
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.442462
             }
           ],
-          "latest_deviation": 0.425082,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 0.442462,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.447274,
-            "std": 0.223595,
-            "count": 233,
+            "mean": 0.447254,
+            "std": 0.223117,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.223511
+                "value": -0.222097
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": 8.4e-05
+                "value": 0.00102
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 0.223679
+                "value": 0.224137
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.447274
+                "value": 0.447254
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.670869
+                "value": 0.670371
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.894464
+                "value": 0.893488
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.118059
+                "value": 1.116605
               }
             ]
           }
@@ -73832,49 +74021,57 @@
             {
               "date": "2026-06-18",
               "value": 0.392514
+            },
+            {
+              "date": "2026-06-22",
+              "value": 0.489305
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.320121
             }
           ],
-          "latest_deviation": 0.392514,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 0.320121,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.308756,
-            "std": 0.258333,
-            "count": 920,
+            "mean": 0.308964,
+            "std": 0.258121,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.466243
+                "value": -0.465399
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.20791
+                "value": -0.207278
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 0.050423
+                "value": 0.050843
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.308756
+                "value": 0.308964
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.567089
+                "value": 0.567085
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.825422
+                "value": 0.825206
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.083755
+                "value": 1.083327
               }
             ]
           }
@@ -73942,7 +74139,7 @@
               "value": -0.379621
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": -0.430317
             },
             {
@@ -74146,7 +74343,7 @@
               "value": -0.214213
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": -0.31802
             },
             {
@@ -74350,7 +74547,7 @@
               "value": 2.01712
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 1.928865
             },
             {
@@ -74570,7 +74767,7 @@
               "value": 0.201268
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": 0.260091
             },
             {
@@ -74614,7 +74811,7 @@
               "value": 1.027225
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 1.01723
             },
             {
@@ -74770,7 +74967,7 @@
               "value": 1.510037
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 1.570967
             },
             {
@@ -74814,51 +75011,55 @@
               "value": 1.472127
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 1.672764
+            },
+            {
+              "date": "2026-06-23",
+              "value": 1.515642
             }
           ],
-          "latest_deviation": 1.672764,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 1.515642,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.725766,
-            "std": 0.810421,
-            "count": 233,
+            "mean": 0.729142,
+            "std": 0.810328,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -1.705497
+                "value": -1.701842
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.895076
+                "value": -0.891514
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.084655
+                "value": -0.081186
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.725766
+                "value": 0.729142
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 1.536187
+                "value": 1.53947
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 2.346608
+                "value": 2.349798
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 3.157029
+                "value": 3.160126
               }
             ]
           }
@@ -78575,49 +78776,57 @@
             {
               "date": "2026-06-18",
               "value": 0.232514
+            },
+            {
+              "date": "2026-06-22",
+              "value": 0.241478
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.215678
             }
           ],
-          "latest_deviation": 0.232514,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 0.215678,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.205074,
-            "std": 0.099328,
-            "count": 920,
+            "mean": 0.205125,
+            "std": 0.099228,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.09291
+                "value": -0.092559
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": 0.006418
+                "value": 0.006669
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 0.105746
+                "value": 0.105897
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.205074
+                "value": 0.205125
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.304402
+                "value": 0.304353
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.40373
+                "value": 0.403581
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.503058
+                "value": 0.502809
               }
             ]
           }
@@ -78685,7 +78894,7 @@
               "value": 0.014222
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": 0.041988
             },
             {
@@ -78889,7 +79098,7 @@
               "value": 0.204161
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": 0.178735
             },
             {
@@ -79093,7 +79302,7 @@
               "value": 0.634101
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 0.631597
             },
             {
@@ -79313,7 +79522,7 @@
               "value": 0.850734
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": 0.800205
             },
             {
@@ -79357,7 +79566,7 @@
               "value": 1.381779
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 1.301799
             },
             {
@@ -79513,7 +79722,7 @@
               "value": 0.912137
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 0.933918
             },
             {
@@ -79557,51 +79766,55 @@
               "value": 0.987322
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 1.062595
+            },
+            {
+              "date": "2026-06-23",
+              "value": 1.022792
             }
           ],
-          "latest_deviation": 1.062595,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 1.022792,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.590243,
-            "std": 0.445006,
-            "count": 233,
+            "mean": 0.592091,
+            "std": 0.444949,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.744775
+                "value": -0.742756
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.299769
+                "value": -0.297807
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 0.145237
+                "value": 0.147142
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.590243
+                "value": 0.592091
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 1.035249
+                "value": 1.03704
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.480255
+                "value": 1.481989
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.925261
+                "value": 1.926938
               }
             ]
           }
@@ -79614,13 +79827,16 @@
       "name": "戴尔科技",
       "industry_labels": "计算机硬件",
       "source_keys": [
-        "buy_top20"
+        "buy_top20",
+        "planned_holdings"
       ],
       "source_labels": [
-        "BUY Top20"
+        "BUY Top20",
+        "计划持有"
       ],
       "source_ranks": {
-        "buy_top20": 19
+        "buy_top20": 19,
+        "planned_holdings": 2
       },
       "buy_count": 1.0,
       "total_buy_value": 130658.83,
@@ -79628,8 +79844,8 @@
       "profit_trade_count": null,
       "current_weight": null,
       "current_market_value": null,
-      "planned_action": null,
-      "planned_rank": null,
+      "planned_action": "buy",
+      "planned_rank": 4.0,
       "planned_weight": null,
       "planned_market_value": null,
       "timeframes": {
@@ -83318,49 +83534,57 @@
             {
               "date": "2026-06-18",
               "value": 1.083152
+            },
+            {
+              "date": "2026-06-22",
+              "value": 1.106321
+            },
+            {
+              "date": "2026-06-23",
+              "value": 1.127561
             }
           ],
-          "latest_deviation": 1.083152,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 1.127561,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.165894,
-            "std": 0.253565,
-            "count": 920,
+            "mean": 0.167957,
+            "std": 0.257126,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.594801
+                "value": -0.603421
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.341236
+                "value": -0.346295
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.087671
+                "value": -0.089169
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.165894
+                "value": 0.167957
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.419459
+                "value": 0.425083
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.673024
+                "value": 0.682209
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.926589
+                "value": 0.939335
               }
             ]
           }
@@ -83428,7 +83652,7 @@
               "value": -0.17643
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": -0.182752
             },
             {
@@ -83632,7 +83856,7 @@
               "value": -0.194448
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": -0.192488
             },
             {
@@ -83836,7 +84060,7 @@
               "value": 0.967714
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 0.980778
             },
             {
@@ -84056,7 +84280,7 @@
               "value": 0.002559
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": 0.03729
             },
             {
@@ -84100,7 +84324,7 @@
               "value": 0.477946
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 0.485327
             },
             {
@@ -84256,7 +84480,7 @@
               "value": 0.728307
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 0.740996
             },
             {
@@ -84300,51 +84524,55 @@
               "value": 2.363662
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 2.398186
+            },
+            {
+              "date": "2026-06-23",
+              "value": 2.462042
             }
           ],
-          "latest_deviation": 2.398186,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 2.462042,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.349365,
-            "std": 0.517648,
-            "count": 233,
+            "mean": 0.358393,
+            "std": 0.534609,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -1.203579
+                "value": -1.245434
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.685931
+                "value": -0.710825
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.168283
+                "value": -0.176216
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.349365
+                "value": 0.358393
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.867013
+                "value": 0.893002
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.384661
+                "value": 1.427611
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.902309
+                "value": 1.96222
               }
             ]
           }
@@ -88061,49 +88289,57 @@
             {
               "date": "2026-06-18",
               "value": -0.007122
+            },
+            {
+              "date": "2026-06-22",
+              "value": 0.010044
+            },
+            {
+              "date": "2026-06-23",
+              "value": -0.001369
             }
           ],
-          "latest_deviation": -0.007122,
-          "latest_date": "2026-06-18",
+          "latest_deviation": -0.001369,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.05082,
-            "std": 0.090782,
-            "count": 920,
+            "mean": 0.050719,
+            "std": 0.09071,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.221526
+                "value": -0.221411
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.130744
+                "value": -0.130701
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.039962
+                "value": -0.039991
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.05082
+                "value": 0.050719
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.141602
+                "value": 0.141429
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.232384
+                "value": 0.232139
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.323166
+                "value": 0.322849
               }
             ]
           }
@@ -88171,7 +88407,7 @@
               "value": 0.032468
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": 0.059618
             },
             {
@@ -88375,7 +88611,7 @@
               "value": 0.263035
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": 0.311188
             },
             {
@@ -88579,7 +88815,7 @@
               "value": 0.200152
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 0.194009
             },
             {
@@ -88799,7 +89035,7 @@
               "value": -0.135916
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": -0.078966
             },
             {
@@ -88843,7 +89079,7 @@
               "value": 0.004637
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 0.023927
             },
             {
@@ -88999,7 +89235,7 @@
               "value": 0.500882
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 0.507305
             },
             {
@@ -89043,51 +89279,55 @@
               "value": 0.316343
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 0.200683
+            },
+            {
+              "date": "2026-06-23",
+              "value": 0.205254
             }
           ],
-          "latest_deviation": 0.200683,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 0.205254,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.130952,
-            "std": 0.123333,
-            "count": 233,
+            "mean": 0.131269,
+            "std": 0.123165,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.239047
+                "value": -0.238226
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.115714
+                "value": -0.115061
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 0.007619
+                "value": 0.008104
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.130952
+                "value": 0.131269
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.254285
+                "value": 0.254434
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.377618
+                "value": 0.377599
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.500951
+                "value": 0.500764
               }
             ]
           }
@@ -89106,7 +89346,7 @@
         "盈利贡献 Top10"
       ],
       "source_ranks": {
-        "profit_top10": 7
+        "profit_top10": 6
       },
       "buy_count": null,
       "total_buy_value": null,
@@ -92804,49 +93044,57 @@
             {
               "date": "2026-06-18",
               "value": 1.437147
+            },
+            {
+              "date": "2026-06-22",
+              "value": 1.359994
+            },
+            {
+              "date": "2026-06-23",
+              "value": 1.136022
             }
           ],
-          "latest_deviation": 1.437147,
-          "latest_date": "2026-06-18",
+          "latest_deviation": 1.136022,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.228432,
-            "std": 0.364858,
-            "count": 920,
+            "mean": 0.230644,
+            "std": 0.367573,
+            "count": 922,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.866142
+                "value": -0.872075
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.501284
+                "value": -0.504502
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.136426
+                "value": -0.136929
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.228432
+                "value": 0.230644
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.59329
+                "value": 0.598217
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.958148
+                "value": 0.96579
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.323006
+                "value": 1.333363
               }
             ]
           }
@@ -92914,7 +93162,7 @@
               "value": -0.264345
             },
             {
-              "date": "2022-04-15",
+              "date": "2022-04-14",
               "value": -0.275747
             },
             {
@@ -93118,7 +93366,7 @@
               "value": -0.317259
             },
             {
-              "date": "2023-04-07",
+              "date": "2023-04-06",
               "value": -0.360624
             },
             {
@@ -93322,7 +93570,7 @@
               "value": 0.234916
             },
             {
-              "date": "2024-03-29",
+              "date": "2024-03-28",
               "value": 0.313808
             },
             {
@@ -93542,7 +93790,7 @@
               "value": -0.210095
             },
             {
-              "date": "2025-04-18",
+              "date": "2025-04-17",
               "value": -0.160294
             },
             {
@@ -93586,7 +93834,7 @@
               "value": 0.432451
             },
             {
-              "date": "2025-07-04",
+              "date": "2025-07-03",
               "value": 0.488259
             },
             {
@@ -93742,7 +93990,7 @@
               "value": 2.236654
             },
             {
-              "date": "2026-04-03",
+              "date": "2026-04-02",
               "value": 2.384318
             },
             {
@@ -93786,51 +94034,55 @@
               "value": 3.584097
             },
             {
-              "date": "2026-06-19",
+              "date": "2026-06-18",
               "value": 4.784602
+            },
+            {
+              "date": "2026-06-23",
+              "value": 3.990946
             }
           ],
-          "latest_deviation": 4.784602,
-          "latest_date": "2026-06-19",
+          "latest_deviation": 3.990946,
+          "latest_date": "2026-06-23",
           "distribution": {
-            "mean": 0.402571,
-            "std": 1.026155,
-            "count": 233,
+            "mean": 0.417906,
+            "std": 1.050374,
+            "count": 234,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -2.675894
+                "value": -2.733216
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -1.649739
+                "value": -1.682842
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.623584
+                "value": -0.632468
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.402571
+                "value": 0.417906
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 1.428726
+                "value": 1.46828
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 2.454881
+                "value": 2.518654
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 3.481036
+                "value": 3.569028
               }
             ]
           }
