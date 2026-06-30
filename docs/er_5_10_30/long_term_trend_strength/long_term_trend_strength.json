@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30 22:14:00 CST",
+  "generated_at": "2026-06-30 22:15:27 CST",
   "selection_rule": "Top15 by latest weekly close / EMA200 - 1 across the 6 existing dashboards, excluding SOXX / EWY / QQQ / 000660 / 005930; then append SOXX / EWY / QQQ / 000660 / 005930 as pinned tickers. Duplicate tickers merge sources and keep the highest visible deviation if source payloads differ.",
   "ranked_top_n": 15,
   "pinned_tickers": [
@@ -17,7 +17,7 @@
       "name": "闪迪",
       "industry_labels": "计算机硬件",
       "source_name": "ER 3/8/20 (10B 日调仓) / ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (10B Top5 周换仓)",
-      "source_slug": "er_3_8_20_10b_top5_weekly",
+      "source_slug": "er_3_8_20",
       "latest_deviation": 5.844749,
       "latest_date": "2026-06-29",
       "weekly": {
@@ -8857,8 +8857,8 @@
       "label": "WDC",
       "name": "西部数据",
       "industry_labels": "计算机硬件",
-      "source_name": "ER 3/8/20 (10B 日调仓) / ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (10B Top5 周换仓)",
-      "source_slug": "er_3_8_20_10b_top5_weekly",
+      "source_name": "ER 3/8/20 (10B 日调仓) / ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer)",
+      "source_slug": "er_3_8_20",
       "latest_deviation": 3.697823,
       "latest_date": "2026-06-29",
       "weekly": {
@@ -9856,8 +9856,7 @@
       "source_names": [
         "ER 3/8/20 (10B 日调仓)",
         "ER 3/8/20 (100B 日调仓)",
-        "ER 3/8/20 (100B Top5 双周 Top50 Buffer)",
-        "ER 3/8/20 (10B Top5 周换仓)"
+        "ER 3/8/20 (100B Top5 双周 Top50 Buffer)"
       ],
       "rank": 5,
       "rank_label": "5",
@@ -17274,7 +17273,7 @@
       "name": "希捷科技",
       "industry_labels": "计算机硬件",
       "source_name": "ER 3/8/20 (10B 日调仓) / ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (10B Top5 周换仓)",
-      "source_slug": "er_3_8_20_10b_top5_weekly",
+      "source_slug": "er_3_8_20",
       "latest_deviation": 3.209162,
       "latest_date": "2026-06-29",
       "weekly": {
@@ -23247,7 +23246,7 @@
       "label": "BE",
       "name": "Bloom Energy",
       "industry_labels": "电气设备及零件",
-      "source_name": "ER 3/8/20 (10B 日调仓)",
+      "source_name": "ER 3/8/20 (10B 日调仓) / ER 3/8/20 (10B Top5 周换仓)",
       "source_slug": "er_3_8_20",
       "latest_deviation": 2.80692,
       "latest_date": "2026-06-29",
@@ -24244,7 +24243,8 @@
         }
       },
       "source_names": [
-        "ER 3/8/20 (10B 日调仓)"
+        "ER 3/8/20 (10B 日调仓)",
+        "ER 3/8/20 (10B Top5 周换仓)"
       ],
       "rank": 10,
       "rank_label": "10",
@@ -26776,7 +26776,7 @@
       "label": "AAOI",
       "name": "Applied Optoelectronics",
       "industry_labels": "通讯设备",
-      "source_name": "ER 3/8/20 (10B 日调仓)",
+      "source_name": "ER 3/8/20 (10B 日调仓) / ER 3/8/20 (10B Top5 周换仓)",
       "source_slug": "er_3_8_20",
       "latest_deviation": 2.784684,
       "latest_date": "2026-06-29",
@@ -27773,7 +27773,8 @@
         }
       },
       "source_names": [
-        "ER 3/8/20 (10B 日调仓)"
+        "ER 3/8/20 (10B 日调仓)",
+        "ER 3/8/20 (10B Top5 周换仓)"
       ],
       "rank": 11,
       "rank_label": "11",
@@ -31049,7 +31050,7 @@
       "label": "ALAB",
       "name": "Astera Labs",
       "industry_labels": "半导体",
-      "source_name": "ER 3/8/20 (10B 日调仓)",
+      "source_name": "ER 3/8/20 (10B 日调仓) / ER 3/8/20 (10B Top5 周换仓)",
       "source_slug": "er_3_8_20",
       "latest_deviation": 2.659083,
       "latest_date": "2026-06-29",
@@ -31586,7 +31587,8 @@
         }
       },
       "source_names": [
-        "ER 3/8/20 (10B 日调仓)"
+        "ER 3/8/20 (10B 日调仓)",
+        "ER 3/8/20 (10B Top5 周换仓)"
       ],
       "rank": 13,
       "rank_label": "13",
