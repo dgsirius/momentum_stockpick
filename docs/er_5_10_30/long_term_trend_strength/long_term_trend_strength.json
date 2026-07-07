@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07 09:20:29 CST",
+  "generated_at": "2026-07-07 09:47:36 CST",
   "selection_rule": "Top15 by latest weekly close / EMA200 - 1 across the 6 existing dashboards, excluding SOXX / EWY / QQQ / 000660 / 005930; then append SOXX / EWY / QQQ / 000660 / 005930 as pinned tickers. Duplicate tickers merge sources and keep the highest visible deviation if source payloads differ.",
   "ranked_top_n": 15,
   "pinned_tickers": [
@@ -8903,10 +8903,10 @@
     {
       "ticker": "US.WDC",
       "label": "WDC",
-      "name": "西部数据",
-      "industry_labels": "计算机硬件",
+      "name": "WDC",
+      "industry_labels": "",
       "source_name": "ER 3/8/20 (10B 日调仓) / ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (10B Top5 周换仓)",
-      "source_slug": "er_3_8_20_100b_weekly",
+      "source_slug": "er_3_8_20_100b_top5_biweekly_top50",
       "latest_deviation": 3.066182,
       "latest_date": "2026-07-06",
       "weekly": {
@@ -9922,7 +9922,7 @@
         "is_pinned": false,
         "ticker": "US.WDC",
         "label": "WDC",
-        "name": "西部数据",
+        "name": "WDC",
         "start_date": "2024-07-08",
         "end_date": "2026-07-06",
         "peak_date": "2024-07-10",
@@ -14894,7 +14894,7 @@
       "name": "希捷科技",
       "industry_labels": "计算机硬件",
       "source_name": "ER 3/8/20 (10B 日调仓) / ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (10B Top5 周换仓)",
-      "source_slug": "er_3_8_20_100b_weekly",
+      "source_slug": "er_3_8_20_100b_top5_biweekly_top50",
       "latest_deviation": 2.694902,
       "latest_date": "2026-07-06",
       "weekly": {
@@ -73946,7 +73946,7 @@
         "is_pinned": false,
         "ticker": "US.WDC",
         "label": "WDC",
-        "name": "西部数据",
+        "name": "WDC",
         "start_date": "2024-07-08",
         "end_date": "2026-07-06",
         "peak_date": "2024-07-10",
