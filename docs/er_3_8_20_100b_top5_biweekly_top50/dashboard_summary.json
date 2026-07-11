@@ -1,13 +1,13 @@
 {
   "summary": {
-    "signal_date": "2026-07-09",
-    "data_end_date": "2026-07-09",
-    "next_trade_date": "2026-07-10",
+    "signal_date": "2026-07-10",
+    "data_end_date": "2026-07-10",
+    "next_trade_date": "2026-07-13",
     "spy_above_ma100": true,
-    "spy_adj_close": 751.71,
-    "spy_ma100": 708.37806345607,
-    "strategy_nav": 3.1582194958496617,
-    "benchmark_nav": 1.10535387324601,
+    "spy_adj_close": 754.95,
+    "spy_ma100": 709.1286312786501,
+    "strategy_nav": 3.183179136333468,
+    "benchmark_nav": 1.1101181394514843,
     "data_dir": "/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_relative_strength/futu_2025q4",
     "warnings": [
       "Metadata file has no date column. Static metadata is used for all history; this may introduce point-in-time bias.",
@@ -45,7 +45,22 @@
       "enable_dynamic_hedge": true,
       "dynamic_hedge_above_ma100": 0.0,
       "dynamic_hedge_between_ma100_ma200": 0.1,
-      "dynamic_hedge_below_ma200": 0.25
+      "dynamic_hedge_below_ma200": 0.25,
+      "ema_spread_filter": false,
+      "ema_spread_source": "none",
+      "ema_spread_windows": [
+        5,
+        10,
+        20,
+        55,
+        144,
+        200
+      ],
+      "ema_spread_relax_shortest": 2,
+      "ema_spread_filter_path": "",
+      "ema_spread_filter_label": "",
+      "ema_spread_filter_stage": "universe",
+      "ema_spread_fill_from_unfiltered": true
     },
     "variant": {
       "name": "ER 3/8/20 (100B Top5 双周 Top50 Buffer)",
@@ -59,21 +74,21 @@
     "allow_new_buys": true
   },
   "performance": {
-    "CAGR": 8.454852224201776,
-    "Annualized Return": 2.4044572057110543,
-    "Annualized Volatility": 0.5458967048299534,
-    "Sharpe Ratio": 4.404601061770544,
-    "Sortino Ratio": 6.519344607212872,
+    "CAGR": 8.435759479534461,
+    "Annualized Return": 2.401281184870083,
+    "Annualized Volatility": 0.5437814943430413,
+    "Sharpe Ratio": 4.415893534168798,
+    "Sortino Ratio": 6.510733277265804,
     "Max Drawdown": -0.140600186490337,
-    "Calmar Ratio": 60.13400433706288,
-    "Win Rate": 0.6434108527131783,
+    "Calmar Ratio": 59.99820974714157,
+    "Win Rate": 0.6461538461538462,
     "Monthly Win Rate": 0.8571428571428571,
-    "Turnover (Annualized)": 12.45441557456698,
-    "Average Holding Count": 5.178294573643411,
-    "Average Daily Turnover": 0.04942228402605944,
-    "Beta vs SPY": 1.933579950524425,
-    "Alpha vs SPY": 2.0065718866111424,
-    "Information Ratio vs SPY": 4.487919565120586
+    "Turnover (Annualized)": 12.358612377839542,
+    "Average Holding Count": 5.161538461538462,
+    "Average Daily Turnover": 0.04904211261047437,
+    "Beta vs SPY": 1.930750902584496,
+    "Alpha vs SPY": 1.9909025705797891,
+    "Information Ratio vs SPY": 4.4845503583739506
   },
   "paths": {
     "signal_top10_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/er_3_8_20_100b_top5_biweekly_top50/latest_signal_top10.csv",
