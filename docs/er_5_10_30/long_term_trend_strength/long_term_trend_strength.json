@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11 23:42:55 CST",
+  "generated_at": "2026-07-11 23:51:22 CST",
   "selection_rule": "Top15 by latest weekly close / EMA200 - 1 across the 6 existing dashboards, excluding SOXX / EWY / QQQ / 000660 / 005930; then append SOXX / EWY / QQQ / 000660 / 005930 as pinned tickers. Duplicate tickers merge sources and keep the highest visible deviation if source payloads differ.",
   "ranked_top_n": 15,
   "pinned_tickers": [
@@ -2166,8 +2166,8 @@
       "industry_labels": "",
       "source_name": "HK ER 8/15/40 Dual Objective Liquidity (20B, Stock Connect + 100B+)",
       "source_slug": "hk_er_3_8_20_20b_stock_connect",
-      "latest_deviation": 4.836349,
-      "latest_date": "2026-07-09",
+      "latest_deviation": 3.763808,
+      "latest_date": "2026-07-10",
       "weekly": {
         "key": "weekly",
         "label": "周线",
@@ -2279,51 +2279,51 @@
             "value": 4.412995
           },
           {
-            "date": "2026-07-09",
-            "value": 4.836349
+            "date": "2026-07-10",
+            "value": 3.763808
           }
         ],
-        "latest_deviation": 4.836349,
-        "latest_date": "2026-07-09",
+        "latest_deviation": 3.763808,
+        "latest_date": "2026-07-10",
         "distribution": {
-          "mean": 2.842817,
-          "std": 1.586214,
+          "mean": 2.803093,
+          "std": 1.548781,
           "count": 27,
           "levels": [
             {
               "sigma": -3,
               "label": "-3σ",
-              "value": -1.915825
+              "value": -1.84325
             },
             {
               "sigma": -2,
               "label": "-2σ",
-              "value": -0.329611
+              "value": -0.294469
             },
             {
               "sigma": -1,
               "label": "-1σ",
-              "value": 1.256603
+              "value": 1.254312
             },
             {
               "sigma": 0,
               "label": "均值",
-              "value": 2.842817
+              "value": 2.803093
             },
             {
               "sigma": 1,
               "label": "+1σ",
-              "value": 4.429031
+              "value": 4.351874
             },
             {
               "sigma": 2,
               "label": "+2σ",
-              "value": 6.015245
+              "value": 5.900655
             },
             {
               "sigma": 3,
               "label": "+3σ",
-              "value": 7.601459
+              "value": 7.449436
             }
           ]
         }
@@ -2344,14 +2344,14 @@
         "label": "02513",
         "name": "智谱",
         "start_date": "2026-01-08",
-        "end_date": "2026-07-09",
+        "end_date": "2026-07-10",
         "peak_date": "2026-06-22",
         "trough_date": "2026-07-06",
         "max_drawdown": -0.365145,
         "peak_close": 2410.0,
         "trough_close": 1530.0,
-        "latest_close": 2032.0,
-        "observation_count": 121,
+        "latest_close": 1640.0,
+        "observation_count": 122,
         "points": [
           {
             "date": "2026-01-08",
@@ -2957,6 +2957,11 @@
             "date": "2026-07-09",
             "value": -0.156846,
             "close": 2032.0
+          },
+          {
+            "date": "2026-07-10",
+            "value": -0.319502,
+            "close": 1640.0
           }
         ]
       }
@@ -2968,8 +2973,8 @@
       "industry_labels": "",
       "source_name": "HK ER 8/15/40 Dual Objective Liquidity (20B, Stock Connect + 100B+)",
       "source_slug": "hk_er_3_8_20_20b_stock_connect",
-      "latest_deviation": 3.574795,
-      "latest_date": "2026-07-09",
+      "latest_deviation": 3.257707,
+      "latest_date": "2026-07-10",
       "weekly": {
         "key": "weekly",
         "label": "周线",
@@ -3325,51 +3330,51 @@
             "value": 4.919335
           },
           {
-            "date": "2026-07-09",
-            "value": 3.574795
+            "date": "2026-07-10",
+            "value": 3.257707
           }
         ],
-        "latest_deviation": 3.574795,
-        "latest_date": "2026-07-09",
+        "latest_deviation": 3.257707,
+        "latest_date": "2026-07-10",
         "distribution": {
-          "mean": 1.025046,
-          "std": 1.338384,
+          "mean": 1.021443,
+          "std": 1.331926,
           "count": 88,
           "levels": [
             {
               "sigma": -3,
               "label": "-3σ",
-              "value": -2.990106
+              "value": -2.974335
             },
             {
               "sigma": -2,
               "label": "-2σ",
-              "value": -1.651722
+              "value": -1.642409
             },
             {
               "sigma": -1,
               "label": "-1σ",
-              "value": -0.313338
+              "value": -0.310483
             },
             {
               "sigma": 0,
               "label": "均值",
-              "value": 1.025046
+              "value": 1.021443
             },
             {
               "sigma": 1,
               "label": "+1σ",
-              "value": 2.36343
+              "value": 2.353369
             },
             {
               "sigma": 2,
               "label": "+2σ",
-              "value": 3.701814
+              "value": 3.685295
             },
             {
               "sigma": 3,
               "label": "+3σ",
-              "value": 5.040198
+              "value": 5.017221
             }
           ]
         }
@@ -3390,14 +3395,14 @@
         "label": "01888",
         "name": "01888",
         "start_date": "2024-11-07",
-        "end_date": "2026-07-09",
+        "end_date": "2026-07-10",
         "peak_date": "2026-06-25",
-        "trough_date": "2026-07-08",
-        "max_drawdown": -0.359405,
+        "trough_date": "2026-07-10",
+        "max_drawdown": -0.397313,
         "peak_close": 104.2,
-        "trough_close": 66.75,
-        "latest_close": 67.7,
-        "observation_count": 408,
+        "trough_close": 62.8,
+        "latest_close": 62.8,
+        "observation_count": 409,
         "points": [
           {
             "date": "2024-11-07",
@@ -5438,6 +5443,11 @@
             "date": "2026-07-09",
             "value": -0.350288,
             "close": 67.7
+          },
+          {
+            "date": "2026-07-10",
+            "value": -0.397313,
+            "close": 62.8
           }
         ]
       }
@@ -16086,8 +16096,8 @@
       "industry_labels": "",
       "source_name": "HK ER 8/15/40 Dual Objective Liquidity (20B, Stock Connect + 100B+)",
       "source_slug": "hk_er_3_8_20_20b_stock_connect",
-      "latest_deviation": 2.699279,
-      "latest_date": "2026-07-09",
+      "latest_deviation": 2.410617,
+      "latest_date": "2026-07-10",
       "weekly": {
         "key": "weekly",
         "label": "周线",
@@ -16443,51 +16453,51 @@
             "value": 2.353979
           },
           {
-            "date": "2026-07-09",
-            "value": 2.699279
+            "date": "2026-07-10",
+            "value": 2.410617
           }
         ],
-        "latest_deviation": 2.699279,
-        "latest_date": "2026-07-09",
+        "latest_deviation": 2.410617,
+        "latest_date": "2026-07-10",
         "distribution": {
-          "mean": 0.973757,
-          "std": 0.749283,
+          "mean": 0.970476,
+          "std": 0.742322,
           "count": 88,
           "levels": [
             {
               "sigma": -3,
               "label": "-3σ",
-              "value": -1.274092
+              "value": -1.25649
             },
             {
               "sigma": -2,
               "label": "-2σ",
-              "value": -0.524809
+              "value": -0.514168
             },
             {
               "sigma": -1,
               "label": "-1σ",
-              "value": 0.224474
+              "value": 0.228154
             },
             {
               "sigma": 0,
               "label": "均值",
-              "value": 0.973757
+              "value": 0.970476
             },
             {
               "sigma": 1,
               "label": "+1σ",
-              "value": 1.72304
+              "value": 1.712798
             },
             {
               "sigma": 2,
               "label": "+2σ",
-              "value": 2.472323
+              "value": 2.45512
             },
             {
               "sigma": 3,
               "label": "+3σ",
-              "value": 3.221606
+              "value": 3.197442
             }
           ]
         }
@@ -16508,14 +16518,14 @@
         "label": "01347",
         "name": "华虹半导体",
         "start_date": "2024-11-07",
-        "end_date": "2026-07-09",
+        "end_date": "2026-07-10",
         "peak_date": "2025-02-24",
         "trough_date": "2025-04-07",
         "max_drawdown": -0.37877,
         "peak_close": 41.45,
         "trough_close": 25.75,
-        "latest_close": 201.8,
-        "observation_count": 408,
+        "latest_close": 185.5,
+        "observation_count": 409,
         "points": [
           {
             "date": "2024-11-07",
@@ -18556,6 +18566,11 @@
             "date": "2026-07-09",
             "value": -0.062268,
             "close": 201.8
+          },
+          {
+            "date": "2026-07-10",
+            "value": -0.138011,
+            "close": 185.5
           }
         ]
       }
@@ -72270,14 +72285,14 @@
         "label": "02513",
         "name": "智谱",
         "start_date": "2026-01-08",
-        "end_date": "2026-07-09",
+        "end_date": "2026-07-10",
         "peak_date": "2026-06-22",
         "trough_date": "2026-07-06",
         "max_drawdown": -0.365145,
         "peak_close": 2410.0,
         "trough_close": 1530.0,
-        "latest_close": 2032.0,
-        "observation_count": 121,
+        "latest_close": 1640.0,
+        "observation_count": 122,
         "points": [
           {
             "date": "2026-01-08",
@@ -72883,6 +72898,11 @@
             "date": "2026-07-09",
             "value": -0.156846,
             "close": 2032.0
+          },
+          {
+            "date": "2026-07-10",
+            "value": -0.319502,
+            "close": 1640.0
           }
         ]
       },
@@ -72895,14 +72915,14 @@
         "label": "01888",
         "name": "01888",
         "start_date": "2024-11-07",
-        "end_date": "2026-07-09",
+        "end_date": "2026-07-10",
         "peak_date": "2026-06-25",
-        "trough_date": "2026-07-08",
-        "max_drawdown": -0.359405,
+        "trough_date": "2026-07-10",
+        "max_drawdown": -0.397313,
         "peak_close": 104.2,
-        "trough_close": 66.75,
-        "latest_close": 67.7,
-        "observation_count": 408,
+        "trough_close": 62.8,
+        "latest_close": 62.8,
+        "observation_count": 409,
         "points": [
           {
             "date": "2024-11-07",
@@ -74943,6 +74963,11 @@
             "date": "2026-07-09",
             "value": -0.350288,
             "close": 67.7
+          },
+          {
+            "date": "2026-07-10",
+            "value": -0.397313,
+            "close": 62.8
           }
         ]
       },
@@ -82545,14 +82570,14 @@
         "label": "01347",
         "name": "华虹半导体",
         "start_date": "2024-11-07",
-        "end_date": "2026-07-09",
+        "end_date": "2026-07-10",
         "peak_date": "2025-02-24",
         "trough_date": "2025-04-07",
         "max_drawdown": -0.37877,
         "peak_close": 41.45,
         "trough_close": 25.75,
-        "latest_close": 201.8,
-        "observation_count": 408,
+        "latest_close": 185.5,
+        "observation_count": 409,
         "points": [
           {
             "date": "2024-11-07",
@@ -84593,6 +84618,11 @@
             "date": "2026-07-09",
             "value": -0.062268,
             "close": 201.8
+          },
+          {
+            "date": "2026-07-10",
+            "value": -0.138011,
+            "close": 185.5
           }
         ]
       },
