@@ -1,13 +1,13 @@
 {
   "summary": {
-    "signal_date": "2026-07-09",
-    "data_end_date": "2026-07-09",
-    "next_trade_date": "2026-07-10",
+    "signal_date": "2026-07-13",
+    "data_end_date": "2026-07-13",
+    "next_trade_date": "2026-07-14",
     "spy_above_ma100": true,
-    "spy_adj_close": 4018.1744,
-    "spy_ma100": 3671.8989109999993,
-    "strategy_nav": 0.7864378243662767,
-    "benchmark_nav": 1.2544361577620078,
+    "spy_adj_close": 3723.5166,
+    "spy_ma100": 3682.5939649999996,
+    "strategy_nav": 0.6927363107735764,
+    "benchmark_nav": 1.1624467711175142,
     "data_dir": "/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_dashboard_variants/a_share_etf_er_ge20b",
     "warnings": [
       "Metadata file has no date column. Static metadata is used for all history; this may introduce point-in-time bias.",
@@ -39,7 +39,22 @@
       "enable_dynamic_hedge": true,
       "dynamic_hedge_above_ma100": 0.0,
       "dynamic_hedge_between_ma100_ma200": 0.1,
-      "dynamic_hedge_below_ma200": 0.25
+      "dynamic_hedge_below_ma200": 0.25,
+      "ema_spread_filter": false,
+      "ema_spread_source": "none",
+      "ema_spread_windows": [
+        5,
+        10,
+        20,
+        55,
+        144,
+        200
+      ],
+      "ema_spread_relax_shortest": 2,
+      "ema_spread_filter_path": "",
+      "ema_spread_filter_label": "",
+      "ema_spread_filter_stage": "universe",
+      "ema_spread_fill_from_unfiltered": true
     },
     "variant": {
       "name": "A股 ETF ER 10/25/50（规模20亿+ 日调仓 Top5）",
@@ -53,21 +68,21 @@
     "allow_new_buys": true
   },
   "performance": {
-    "CAGR": -0.388721326353208,
-    "Annualized Return": -0.16875171334851247,
-    "Annualized Volatility": 0.77494767622337,
-    "Sharpe Ratio": -0.21775884814689303,
-    "Sortino Ratio": -0.2261154444535166,
+    "CAGR": -0.5229268311162176,
+    "Annualized Return": -0.41378674389392334,
+    "Annualized Volatility": 0.778319492595571,
+    "Sharpe Ratio": -0.5316412447978281,
+    "Sortino Ratio": -0.5599098750686302,
     "Max Drawdown": -0.48777462844489383,
-    "Calmar Ratio": -0.7969281378830955,
-    "Win Rate": 0.5040650406504065,
+    "Calmar Ratio": -1.0720664844405599,
+    "Win Rate": 0.496,
     "Monthly Win Rate": 0.5714285714285714,
-    "Turnover (Annualized)": 67.16152994658574,
-    "Average Holding Count": 4.934426229508197,
-    "Average Daily Turnover": 0.2665140077245466,
-    "Beta vs SPY": 0.8787882198855873,
-    "Alpha vs SPY": -0.6216872823415507,
-    "Information Ratio vs SPY": -0.9459050346955071
+    "Turnover (Annualized)": 66.89660699968559,
+    "Average Holding Count": 4.935483870967742,
+    "Average Daily Turnover": 0.2654627261892285,
+    "Beta vs SPY": 0.9174775841821383,
+    "Alpha vs SPY": -0.7409556544901343,
+    "Information Ratio vs SPY": -1.0719054281612315
   },
   "paths": {
     "signal_top10_csv": "/Users/richard/dowork/hk_gap_strategy/results/daily_us_waterfall_dashboard/latest/a_share_etf_er_10_25_50_ge20b/latest_signal_top10.csv",
