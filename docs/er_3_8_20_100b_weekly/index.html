@@ -1030,9 +1030,8 @@
             <div class="toolbar-actions">
               <button id="generateContentButton" class="secondary-btn" type="button">生成内容</button>
               <button id="openTechnicalButton" class="secondary-btn" type="button">技术评分</button>
-              <button id="refreshButton" class="refresh-btn" type="button">更新当前看板</button>
             </div>
-            <div id="refreshStatus" class="refresh-note">当前为静态快照。</div>
+            <div class="refresh-note">数据刷新统一在 <a href="../overview/index.html">策略总览</a> 执行。</div>
             <div id="contentStatus" class="refresh-note content-note"></div>
           </div>
         </section>
@@ -1531,10 +1530,8 @@
   </div>
   <script>
     (() => {
-      const button = document.getElementById("refreshButton");
       const generateButton = document.getElementById("generateContentButton");
       const openTechnicalButton = document.getElementById("openTechnicalButton");
-      const status = document.getElementById("refreshStatus");
       const contentStatus = document.getElementById("contentStatus");
       const contentModal = document.getElementById("contentModal");
       const contentOptionList = document.getElementById("contentOptionList");
@@ -1551,13 +1548,8 @@
       const apiEnabled = new Set(["127.0.0.1", "localhost"]).has(window.location.hostname);
       const activeVariantSlug = "er_3_8_20_100b_weekly";
       const maxContentSelections = 20;
-      let previousRunning = false;
       let contentOptions = [];
       let contentBaseNote = "";
-
-      function setStatus(text) {
-        status.textContent = text;
-      }
 
       function setContentStatus(text) {
         contentStatus.textContent = text || "";
@@ -1682,19 +1674,6 @@
         renderTechnicalRisk(payload);
       }
 
-      async function waitForAllRefreshDone() {
-        for (;;) {
-          const response = await fetch(`/api/status?variant=${encodeURIComponent(activeVariantSlug)}&ts=${Date.now()}`, { cache: "no-store" });
-          const payload = await response.json();
-          if (!payload.running) {
-            if (payload.last_error) throw new Error(payload.last_error);
-            return payload;
-          }
-          setTechnicalRiskStatus(`当前看板数据刷新中，起始时间 ${payload.last_started_at || ""}...`);
-          await new Promise((resolve) => window.setTimeout(resolve, 3000));
-        }
-      }
-
       async function refreshTechnicalRiskBoard() {
         if (!apiEnabled) {
           await loadTechnicalRisk(false);
@@ -1704,89 +1683,6 @@
         technicalRiskButton.textContent = "计算中...";
         setTechnicalRiskStatus("正在按训练期 / 验证期口径计算技术评分...");
         await loadTechnicalRisk(false);
-      }
-
-      function showRefreshComplete(data) {
-        const summary = data.dashboard_summary || {};
-        const signalDate = summary.signal_date || "N/A";
-        const finishedAt = data.last_finished_at || "";
-        setStatus(`完成刷新。当前信号日 ${signalDate}，完成时间 ${finishedAt}`);
-        button.textContent = "更新当前看板数据";
-      }
-
-      function reloadWithRefreshDoneFlag() {
-        const url = new URL(window.location.href);
-        url.searchParams.set("refresh_done", "1");
-        window.location.replace(url.toString());
-      }
-
-      function applyStatus(data) {
-        const running = Boolean(data.running);
-        const busy = Boolean(data.busy);
-        button.disabled = busy || !apiEnabled;
-        generateButton.disabled = busy || !apiEnabled;
-        if (!apiEnabled) {
-          setStatus("这是 GitHub Pages 静态快照。请先在本地服务刷新，再同步发布。");
-          setContentStatus("生成内容按钮仅支持本地服务。");
-          return;
-        }
-        if (running) {
-          const started = data.last_started_at || "";
-          button.textContent = "刷新中...";
-          setStatus(`后台刷新中，起始时间 ${started}`);
-          previousRunning = true;
-          return;
-        }
-        if (busy) {
-          button.textContent = "其他看板刷新中";
-          setStatus(`后台正在刷新 ${data.active_refresh_variant || "其他看板"}，完成后可更新当前页。`);
-          return;
-        }
-        if (data.last_error) {
-          button.textContent = "更新当前看板数据";
-          setStatus(`刷新失败: ${data.last_error}`);
-        } else if (data.last_finished_at && [activeVariantSlug, "all"].includes(data.last_refresh_variant)) {
-          showRefreshComplete(data);
-        } else {
-          button.textContent = "更新当前看板数据";
-          const summary = data.dashboard_summary || {};
-          setStatus(`静态快照：数据截止 ${summary.data_end_date || "N/A"}，页面生成 ${summary.generated_at || "N/A"}。`);
-        }
-        if (previousRunning) {
-          previousRunning = false;
-          setStatus("完成刷新，正在重新加载页面...");
-          reloadWithRefreshDoneFlag();
-        }
-      }
-
-      async function fetchStatus() {
-        if (!apiEnabled) {
-          applyStatus({});
-          return;
-        }
-        const response = await fetch(`/api/status?variant=${encodeURIComponent(activeVariantSlug)}&ts=${Date.now()}`, { cache: "no-store" });
-        if (!response.ok) {
-          throw new Error(`status http ${response.status}`);
-        }
-        applyStatus(await response.json());
-      }
-
-      async function triggerRefresh() {
-        if (!apiEnabled) {
-          applyStatus({});
-          return;
-        }
-        button.disabled = true;
-        generateButton.disabled = true;
-        button.textContent = "刷新中...";
-        setStatus("刷新请求已发送，等待后台执行...");
-        const response = await fetch("/api/refresh", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ variant_slug: activeVariantSlug }),
-        });
-        const payload = await response.json();
-        applyStatus(payload);
       }
 
       function closeContentModal() {
@@ -1926,13 +1822,6 @@
         }
       }
 
-      button.addEventListener("click", () => {
-        triggerRefresh().catch((error) => {
-          button.disabled = false;
-          setStatus(`刷新请求失败: ${error.message}`);
-        });
-      });
-
       generateButton.addEventListener("click", () => {
         openContentGenerator().catch((error) => {
           closeContentModal();
@@ -1974,20 +1863,10 @@
         });
       }
 
-      fetchStatus().then(() => {
-        const url = new URL(window.location.href);
-        if (url.searchParams.get("refresh_done") === "1") {
-          setStatus("完成刷新。页面已更新为最新结果。");
-          url.searchParams.delete("refresh_done");
-          window.history.replaceState(null, "", url.toString());
-        }
-      }).catch((error) => {
-        setStatus(`状态读取失败: ${error.message}`);
-      });
-      if (apiEnabled) {
-        window.setInterval(() => {
-          fetchStatus().catch(() => null);
-        }, 3000);
+      generateButton.disabled = !apiEnabled;
+      if (!apiEnabled) {
+        setContentStatus("生成内容和技术评分仅支持本地服务；数据刷新请在本地策略总览执行。");
+        technicalRiskButton.disabled = true;
       }
     })();
   </script>

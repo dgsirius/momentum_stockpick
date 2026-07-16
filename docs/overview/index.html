@@ -15,8 +15,14 @@
     .nav-links { display:grid; gap:7px; margin-top:10px; }
     .nav-link { padding:9px 11px; border-radius:10px; text-decoration:none; color:var(--ink); background:rgba(15,92,115,.04); font-size:13px; font-weight:650; }
     .nav-link.active { color:white; background:var(--accent); }
+    .header-row { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; margin-bottom:18px; }
+    .header-copy { min-width:0; }
     h1 { margin:0; font-size:32px; }
-    .intro { color:var(--muted); margin:8px 0 18px; line-height:1.6; }
+    .intro { color:var(--muted); margin:8px 0 0; line-height:1.6; }
+    .refresh-box { flex:0 0 240px; text-align:right; }
+    .refresh-btn { width:100%; border:0; border-radius:12px; padding:12px 16px; color:white; background:linear-gradient(135deg,#0f5c73,#1a7f52); font-size:14px; font-weight:750; cursor:pointer; box-shadow:0 10px 22px rgba(15,92,115,.16); }
+    .refresh-btn[disabled] { opacity:.62; cursor:not-allowed; }
+    .refresh-note { margin-top:8px; color:var(--muted); font-size:12px; line-height:1.5; }
     .stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-bottom:18px; }
     .stat,.panel { border:1px solid var(--line); border-radius:16px; background:var(--panel); box-shadow:0 12px 30px rgba(31,42,46,.05); }
     .stat { padding:14px 16px; } .stat strong { display:block; font-size:24px; margin-top:5px; }
@@ -34,6 +40,7 @@
       .layout { grid-template-columns:minmax(0,1fr); } .sidebar { position:static; padding:10px; min-width:0; max-width:100%; }
       .sidebar-title { display:none; } .nav-links { display:flex; overflow-x:auto; max-width:100%; margin:0; }
       .nav-link { flex:0 0 auto; white-space:nowrap; } .stats { grid-template-columns:1fr; }
+      .header-row { flex-direction:column; } .refresh-box { width:100%; flex-basis:auto; text-align:left; }
     }
   </style>
 </head>
@@ -49,18 +56,121 @@
 <a class='nav-link' href='../er_3_8_20_10b_top5_weekly/index.html'>ER 3/8/20 (10B Top5 周换仓)</a>
 <a class='nav-link' href='../long_term_trend_strength/index.html'>长线趋势最强</a></div></aside>
     <main>
-      <h1>策略看板总览</h1>
-      <div class="intro">先看数据是否健康和今天是否有交易，再进入单个策略查看持仓与研究详情。区间收益优先于短样本年化指标。</div>
+      <div class="header-row">
+        <div class="header-copy">
+          <h1>策略看板总览</h1>
+          <div class="intro">统一刷新入口：按美股、港股、A股各自交易日补拉必要数据，再重建 7 个策略与长线页。</div>
+        </div>
+        <div class="refresh-box">
+          <button id="collectionRefreshButton" class="refresh-btn" type="button">刷新全部看板</button>
+          <div id="collectionRefreshStatus" class="refresh-note">当前为静态快照。</div>
+        </div>
+      </div>
       <section class="stats">
         <div class="stat"><span class="sub">策略数量</span><strong>7</strong></div>
         <div class="stat"><span class="sub">数据健康</span><strong>7/7</strong></div>
-        <div class="stat"><span class="sub">最近生成</span><strong style="font-size:16px">2026-07-16T08:57:04+08:00</strong></div>
+        <div class="stat"><span class="sub">最近生成</span><strong style="font-size:16px">2026-07-16T09:57:04+08:00</strong></div>
       </section>
       <section class="panel"><div class="table-scroll"><table>
         <thead><tr><th>策略</th><th>数据 / 信号日</th><th>下次交易</th><th>今日动作</th><th>区间收益</th><th>超额</th><th>最大回撤</th><th>Sharpe</th><th>年化换手</th><th>数据健康</th><th>净敞口</th></tr></thead>
-        <tbody><tr><td><a href='../index.html'><strong>ER 3/8/20 (10B 日调仓)</strong></a><div class='sub'>美股</div></td><td>2026-07-14<div class='sub'>信号 2026-07-14</div></td><td>2026-07-15</td><td><span class='buy'>买 4</span> / <span class='sell'>卖 4</span></td><td>+60.1%</td><td>+49.6%</td><td>-21.2%</td><td>2.00</td><td>97.12</td><td><span class='status status-healthy'>健康</span><div class='sub'>99.6%</div></td><td>99.4%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../er_3_8_20_100b_weekly/index.html'><strong>ER 3/8/20 (100B 日调仓)</strong></a><div class='sub'>美股</div></td><td>2026-07-15<div class='sub'>信号 2026-07-15</div></td><td>2026-07-16</td><td><span class='buy'>买 7</span> / <span class='sell'>卖 5</span></td><td>+134.6%</td><td>+123.6%</td><td>-13.7%</td><td>3.63</td><td>78.94</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>81.0%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../etf_er_3_8_20_whitelist/index.html'><strong>ETF ER 3/8/20 (白名单日调仓 Top5)</strong></a><div class='sub'>美股</div></td><td>2026-07-14<div class='sub'>信号 2026-07-14</div></td><td>2026-07-15</td><td><span class='buy'>买 2</span> / <span class='sell'>卖 2</span></td><td>+70.4%</td><td>+59.9%</td><td>-14.8%</td><td>2.41</td><td>84.30</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>100.0%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../a_share_etf_er_10_25_50_ge20b/index.html'><strong>A股 ETF ER 10/25/50（规模20亿+ 日调仓 Top5）</strong></a><div class='sub'>A股</div></td><td>2026-07-15<div class='sub'>信号 2026-07-15</div></td><td>2026-07-16</td><td><span class='buy'>买 5</span> / <span class='sell'>卖 5</span></td><td>+15.0%</td><td>-3.8%</td><td>-40.8%</td><td>0.76</td><td>64.91</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>100.0%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../hk_er_3_8_20_20b_stock_connect/index.html'><strong>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</strong></a><div class='sub'>港股</div></td><td>2026-07-15<div class='sub'>信号 2026-07-15</div></td><td>2026-07-16</td><td><span class='buy'>买 4</span> / <span class='sell'>卖 4</span></td><td>+56.3%</td><td>+60.0%</td><td>-22.2%</td><td>1.82</td><td>55.97</td><td><span class='status status-healthy'>健康</span><div class='sub'>99.7%</div></td><td>75.7%<div class='sub'>对冲 24.3%</div></td></tr><tr><td><a href='../er_3_8_20_100b_top5_biweekly_top50/index.html'><strong>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</strong></a><div class='sub'>美股</div></td><td>2026-07-14<div class='sub'>信号 2026-07-14</div></td><td>2026-07-15</td><td><span class='buy'>买 0</span> / <span class='sell'>卖 0</span></td><td>+219.4%</td><td>+208.8%</td><td>-14.1%</td><td>4.39</td><td>12.17</td><td><span class='status status-healthy'>健康</span><div class='sub'>99.6%</div></td><td>62.3%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../er_3_8_20_10b_top5_weekly/index.html'><strong>ER 3/8/20 (10B Top5 周换仓)</strong></a><div class='sub'>美股</div></td><td>2026-07-14<div class='sub'>信号 2026-07-14</div></td><td>2026-07-15</td><td><span class='buy'>买 0</span> / <span class='sell'>卖 0</span></td><td>+42.9%</td><td>+32.4%</td><td>-27.8%</td><td>1.40</td><td>35.96</td><td><span class='status status-healthy'>健康</span><div class='sub'>99.6%</div></td><td>100.0%<div class='sub'>对冲 0.0%</div></td></tr></tbody>
+        <tbody><tr><td><a href='../index.html'><strong>ER 3/8/20 (10B 日调仓)</strong></a><div class='sub'>美股</div></td><td>2026-07-15<div class='sub'>信号 2026-07-15</div></td><td>2026-07-16</td><td><span class='buy'>买 2</span> / <span class='sell'>卖 2</span></td><td>+58.0%</td><td>+47.0%</td><td>-21.2%</td><td>1.94</td><td>97.14</td><td><span class='status status-healthy'>健康</span><div class='sub'>99.6%</div></td><td>100.0%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../er_3_8_20_100b_weekly/index.html'><strong>ER 3/8/20 (100B 日调仓)</strong></a><div class='sub'>美股</div></td><td>2026-07-15<div class='sub'>信号 2026-07-15</div></td><td>2026-07-16</td><td><span class='buy'>买 7</span> / <span class='sell'>卖 5</span></td><td>+134.6%</td><td>+123.6%</td><td>-13.7%</td><td>3.63</td><td>78.94</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>81.0%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../etf_er_3_8_20_whitelist/index.html'><strong>ETF ER 3/8/20 (白名单日调仓 Top5)</strong></a><div class='sub'>美股</div></td><td>2026-07-15<div class='sub'>信号 2026-07-15</div></td><td>2026-07-16</td><td><span class='buy'>买 1</span> / <span class='sell'>卖 1</span></td><td>+67.1%</td><td>+55.8%</td><td>-14.8%</td><td>2.32</td><td>84.44</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>100.0%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../a_share_etf_er_10_25_50_ge20b/index.html'><strong>A股 ETF ER 10/25/50（规模20亿+ 日调仓 Top5）</strong></a><div class='sub'>A股</div></td><td>2026-07-15<div class='sub'>信号 2026-07-15</div></td><td>2026-07-16</td><td><span class='buy'>买 5</span> / <span class='sell'>卖 5</span></td><td>+15.0%</td><td>-3.8%</td><td>-40.8%</td><td>0.76</td><td>64.91</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>100.0%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../hk_er_3_8_20_20b_stock_connect/index.html'><strong>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</strong></a><div class='sub'>港股</div></td><td>2026-07-15<div class='sub'>信号 2026-07-15</div></td><td>2026-07-16</td><td><span class='buy'>买 4</span> / <span class='sell'>卖 4</span></td><td>+56.3%</td><td>+60.0%</td><td>-22.2%</td><td>1.82</td><td>55.97</td><td><span class='status status-healthy'>健康</span><div class='sub'>99.7%</div></td><td>75.7%<div class='sub'>对冲 24.3%</div></td></tr><tr><td><a href='../er_3_8_20_100b_top5_biweekly_top50/index.html'><strong>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</strong></a><div class='sub'>美股</div></td><td>2026-07-15<div class='sub'>信号 2026-07-15</div></td><td>2026-07-16</td><td><span class='buy'>买 0</span> / <span class='sell'>卖 0</span></td><td>+211.3%</td><td>+200.3%</td><td>-14.1%</td><td>4.26</td><td>12.08</td><td><span class='status status-healthy'>健康</span><div class='sub'>99.6%</div></td><td>61.4%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../er_3_8_20_10b_top5_weekly/index.html'><strong>ER 3/8/20 (10B Top5 周换仓)</strong></a><div class='sub'>美股</div></td><td>2026-07-15<div class='sub'>信号 2026-07-15</div></td><td>2026-07-16</td><td><span class='buy'>买 4</span> / <span class='sell'>卖 4</span></td><td>+38.5%</td><td>+27.5%</td><td>-27.8%</td><td>1.30</td><td>35.69</td><td><span class='status status-healthy'>健康</span><div class='sub'>99.6%</div></td><td>100.0%<div class='sub'>对冲 0.0%</div></td></tr></tbody>
       </table></div></section>
     </main>
   </div></div>
+  <script>
+    (() => {
+      const button = document.getElementById("collectionRefreshButton");
+      const status = document.getElementById("collectionRefreshStatus");
+      const apiEnabled = new Set(["127.0.0.1", "localhost"]).has(window.location.hostname);
+      let previousRunning = false;
+
+      function setStatus(text) { status.textContent = text; }
+
+      function reloadAsCompleted() {
+        const url = new URL(window.location.href);
+        url.searchParams.set("refresh_done", "1");
+        window.location.replace(url.toString());
+      }
+
+      function applyStatus(payload) {
+        const running = Boolean(payload.running);
+        const busy = Boolean(payload.busy);
+        button.disabled = !apiEnabled || busy;
+        if (!apiEnabled) {
+          setStatus("GitHub Pages 为静态快照；请在本地总览页刷新后再发布。");
+          return;
+        }
+        if (running) {
+          previousRunning = true;
+          button.textContent = "正在刷新全部看板...";
+          setStatus(`正在检查三个市场并重建必要页面，开始于 ${payload.last_started_at || "刚刚"}。`);
+          return;
+        }
+        if (busy) {
+          button.textContent = "后台任务运行中";
+          setStatus(`后台正在处理 ${payload.active_refresh_variant || "看板任务"}。`);
+          return;
+        }
+        button.textContent = "刷新全部看板";
+        if (payload.last_error) {
+          setStatus(`刷新失败：${payload.last_error}`);
+          return;
+        }
+        if (previousRunning) {
+          setStatus("全部刷新完成，正在载入最新总览...");
+          reloadAsCompleted();
+          return;
+        }
+        if (payload.last_finished_at) {
+          setStatus(`最近完成：${payload.last_finished_at}。`);
+        } else {
+          setStatus("一次点击刷新三个市场、7 个策略与长线页。");
+        }
+      }
+
+      async function fetchStatus() {
+        if (!apiEnabled) { applyStatus({}); return; }
+        const response = await fetch(`/api/status?ts=${Date.now()}`, { cache: "no-store" });
+        if (!response.ok) throw new Error(`status http ${response.status}`);
+        applyStatus(await response.json());
+      }
+
+      async function triggerRefresh() {
+        button.disabled = true;
+        button.textContent = "正在提交...";
+        setStatus("已提交全局刷新请求。");
+        const response = await fetch("/api/refresh", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({}),
+        });
+        const payload = await response.json();
+        if (!response.ok && response.status !== 409) {
+          throw new Error(payload.error || `refresh http ${response.status}`);
+        }
+        applyStatus(payload);
+      }
+
+      button.addEventListener("click", () => {
+        triggerRefresh().catch((error) => {
+          button.disabled = false;
+          button.textContent = "刷新全部看板";
+          setStatus(`刷新请求失败：${error.message}`);
+        });
+      });
+
+      const pageUrl = new URL(window.location.href);
+      if (pageUrl.searchParams.get("refresh_done") === "1") {
+        setStatus("全部刷新完成，当前总览已更新。");
+        pageUrl.searchParams.delete("refresh_done");
+        window.history.replaceState({}, "", pageUrl.toString());
+      } else {
+        fetchStatus().catch((error) => setStatus(`状态读取失败：${error.message}`));
+      }
+      if (apiEnabled) {
+        window.setInterval(() => fetchStatus().catch(() => null), 3000);
+      }
+    })();
+  </script>
 </body>
 </html>
