@@ -38,7 +38,7 @@
       <p class="strategy-summary">市值大于1000亿美元，在4、12、36个交易日相较于 SPY 的超额收益排名选股。</p>
       <p class="muted">最近五年：2021-07-16 至 2026-07-15。每个自然周最后一个有效信号日选股，下一交易日开盘执行。</p>
     </div>
-    <div class="status"><span class="eyebrow">最新状态</span><strong>数据截至 2026-07-15</strong><div>模型持仓截至 2026-07-15</div><div>最近模型换仓 2026-07-13</div><p class="muted">网页生成：2026-07-16 16:38:24 CST</p></div>
+    <div class="status"><span class="eyebrow">最新状态</span><strong>数据截至 2026-07-15</strong><div>模型持仓截至 2026-07-15</div><div>最近模型换仓 2026-07-13</div><p class="muted">网页生成：2026-07-16 16:44:58 CST</p></div>
   </section>
   <section class="kpis">
     <div class="panel kpi"><span>五年累计收益</span><strong>548.0%</strong></div>
@@ -52,7 +52,7 @@
     <div class="chart-toolbar"><div><h2>净值与回撤路径</h2><p class="muted">默认显示最近 3 个月；拖动图底部时间滑条，可以放大或缩小查看范围。</p></div>
       <div class="range-buttons" role="group" aria-label="选择图表时间范围"><button type="button" data-range-months="1" aria-pressed="false">1个月</button><button type="button" class="active" data-range-months="3" aria-pressed="true">3个月</button><button type="button" data-range-months="6" aria-pressed="false">6个月</button><button type="button" data-range-months="12" aria-pressed="false">1年</button><button type="button" data-range-months="all" aria-pressed="false">全部</button></div>
     </div>
-    <div class="grid2 chart-grid"><div><h3>净值路径</h3><div id="equityChart" class="interactive-chart" role="img" aria-label="策略与 SPY 净值路径，可通过底部滑条缩放时间范围"></div></div><div><h3>回撤路径</h3><div id="drawdownChart" class="interactive-chart" role="img" aria-label="策略与 SPY 回撤路径，可通过底部滑条缩放时间范围"></div></div></div>
+    <div class="grid2 chart-grid"><div><h3>净值路径（区间涨幅）</h3><div id="equityChart" class="interactive-chart" role="img" aria-label="策略与 SPY 在所选时间范围内的累计涨幅，可通过底部滑条缩放时间范围"></div></div><div><h3>回撤路径</h3><div id="drawdownChart" class="interactive-chart" role="img" aria-label="策略与 SPY 回撤路径，可通过底部滑条缩放时间范围"></div></div></div>
     <p id="chartFallback" class="muted chart-fallback" hidden>交互图表加载失败，请刷新页面后重试。</p>
   </section>
   <section class="panel section"><div class="eyebrow">STOCK CONTRIBUTION</div><h2>历史盈利 / 亏损贡献</h2><p class="muted">按每只股票的模型买入现金流、卖出现金流、期末市值及佣金归因；买卖价格已包含滑点。仅统计多头股票，不含 SPY 对冲与借券成本。</p>
@@ -91,8 +91,13 @@
     };
     const defaultStart = startIndexForMonths(3);
     const palette = {strategy:'#075985',spy:'#8a7768',grid:'#e5ebe8',text:'#64777c'};
-    const valueFormatter = (value, drawdown) => drawdown ? `${(Number(value) * 100).toFixed(1)}%` : Number(value).toFixed(2);
-    const optionFor = (drawdown) => ({
+    const valueFormatter = (value) => `${(Number(value) * 100).toFixed(1)}%`;
+    const periodReturns = (values, startIndex) => {
+      const base = Number(values[startIndex]);
+      if (!Number.isFinite(base) || base === 0) return values.map(() => null);
+      return values.map((value) => value == null ? null : Number(value) / base - 1);
+    };
+    const optionFor = (drawdown, startIndex=defaultStart) => ({
       animation:false,
       color:[palette.strategy,palette.spy],
       grid:{left:58,right:18,top:42,bottom:78},
@@ -105,8 +110,8 @@
         {type:'slider',startValue:defaultStart,endValue:lastIndex,bottom:10,height:26,brushSelect:true,showDetail:true,borderColor:palette.grid,fillerColor:'rgba(7,89,133,.16)',handleStyle:{color:palette.strategy,borderColor:palette.strategy}}
       ],
       series:[
-        {name:'策略',type:'line',data:drawdown ? chartData.strategyDrawdown : chartData.strategyNav,showSymbol:false,sampling:'lttb',lineStyle:{width:2.4,color:palette.strategy},itemStyle:{color:palette.strategy},areaStyle:drawdown ? {color:'rgba(7,89,133,.12)'} : undefined,valueFormatter:(value) => valueFormatter(value,drawdown)},
-        {name:'SPY',type:'line',data:drawdown ? chartData.spyDrawdown : chartData.spyNav,showSymbol:false,sampling:'lttb',lineStyle:{width:1.8,color:palette.spy},itemStyle:{color:palette.spy},valueFormatter:(value) => valueFormatter(value,drawdown)}
+        {name:'策略',type:'line',data:drawdown ? chartData.strategyDrawdown : periodReturns(chartData.strategyNav,startIndex),showSymbol:false,sampling:'lttb',lineStyle:{width:2.4,color:palette.strategy},itemStyle:{color:palette.strategy},areaStyle:drawdown ? {color:'rgba(7,89,133,.12)'} : undefined,valueFormatter:(value) => valueFormatter(value)},
+        {name:'SPY',type:'line',data:drawdown ? chartData.spyDrawdown : periodReturns(chartData.spyNav,startIndex),showSymbol:false,sampling:'lttb',lineStyle:{width:1.8,color:palette.spy},itemStyle:{color:palette.spy},valueFormatter:(value) => valueFormatter(value)}
       ]
     });
 
@@ -124,7 +129,24 @@
       button.classList.toggle('active', active);
       button.setAttribute('aria-pressed', String(active));
     });
-    equityChart.on('datazoom', () => markActive(null));
+    const visibleStartIndex = () => {
+      const zoom = equityChart.getOption().dataZoom?.[0] || {};
+      if (Number.isFinite(Number(zoom.startValue))) return Math.max(0,Math.min(lastIndex,Math.round(Number(zoom.startValue))));
+      const dateIndex = chartData.dates.indexOf(String(zoom.startValue || ''));
+      if (dateIndex >= 0) return dateIndex;
+      return Math.max(0,Math.min(lastIndex,Math.round(Number(zoom.start || 0) / 100 * lastIndex)));
+    };
+    let zoomFrame = 0;
+    const refreshPeriodReturns = () => {
+      window.cancelAnimationFrame(zoomFrame);
+      zoomFrame = window.requestAnimationFrame(() => {
+        const startIndex = visibleStartIndex();
+        equityChart.setOption({series:[{data:periodReturns(chartData.strategyNav,startIndex)},{data:periodReturns(chartData.spyNav,startIndex)}]});
+        markActive(null);
+      });
+    };
+    equityChart.on('datazoom', refreshPeriodReturns);
+    drawdownChart.on('datazoom', refreshPeriodReturns);
     rangeButtons.forEach((button) => button.addEventListener('click', () => {
       equityChart.dispatchAction({type:'dataZoom',startValue:startIndexForMonths(button.dataset.rangeMonths),endValue:lastIndex});
       window.requestAnimationFrame(() => markActive(button));
