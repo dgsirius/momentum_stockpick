@@ -1,0 +1,353 @@
+{
+  "generated_at": "2026-07-16 14:37:45 CST",
+  "data_start": "2021-07-16",
+  "data_end": "2026-07-15",
+  "strategy": {
+    "name": "US $100B ER 4/12/36 no-whitelist weekly",
+    "fast_window": 4,
+    "mid_window": 12,
+    "slow_window": 36,
+    "rebalance": "last signal day of each ISO week; next trading-day open",
+    "industry_whitelist": [],
+    "final_count": 10,
+    "max_weight_per_name": 0.1,
+    "commission_bps_per_side": 8.0,
+    "slippage_bps_per_side": 5.0
+  },
+  "metrics": {
+    "days": 1254.0,
+    "total_return": 4.185314147488683,
+    "cagr": 0.3919992774883929,
+    "annualized_return": 0.36664025984138626,
+    "annualized_volatility": 0.2668315765640615,
+    "sharpe": 1.3740512444686714,
+    "sortino": 1.8947596078441642,
+    "max_drawdown": -0.23823058718513979,
+    "turnover_annualized": 31.610975590698164,
+    "benchmark_total_return": 0.857641331547325,
+    "benchmark_cagr": 0.13253009862167775
+  },
+  "spy_metrics": {
+    "days": 1254.0,
+    "total_return": 0.857641331547325,
+    "cagr": 0.13253009862167775,
+    "annualized_return": 0.13918386484439227,
+    "annualized_volatility": 0.17171111029461883,
+    "sharpe": 0.8105699427694755,
+    "sortino": 1.12028295278003,
+    "max_drawdown": -0.24496334933755126,
+    "turnover_annualized": 0.0,
+    "benchmark_total_return": 0.857641331547325,
+    "benchmark_cagr": 0.13253009862167775
+  },
+  "universe_count": 155,
+  "current_holdings": [
+    {
+      "date": "2026-07-15",
+      "ticker": "US.MUFG",
+      "name": "三菱日联金融",
+      "shares": 11723.990363189776,
+      "weight": 0.10296589675251283,
+      "gross_market_value": 266955.2605698312
+    },
+    {
+      "date": "2026-07-15",
+      "ticker": "US.RY",
+      "name": "加拿大皇家银行",
+      "shares": 1221.7573685008078,
+      "weight": 0.10266852510920224,
+      "gross_market_value": 266184.277875271
+    },
+    {
+      "date": "2026-07-15",
+      "ticker": "US.BMO",
+      "name": "蒙特利尔银行",
+      "shares": 1438.4823597943232,
+      "weight": 0.10189441868403394,
+      "gross_market_value": 264177.28537622746
+    },
+    {
+      "date": "2026-07-15",
+      "ticker": "US.SMFG",
+      "name": "三井住友金融",
+      "shares": 9926.191687204873,
+      "weight": 0.10145733594109264,
+      "gross_market_value": 263044.07971092913
+    },
+    {
+      "date": "2026-07-15",
+      "ticker": "US.TMO",
+      "name": "赛默飞世尔",
+      "shares": 488.77322263826244,
+      "weight": 0.10091400864217638,
+      "gross_market_value": 261635.41834603547
+    },
+    {
+      "date": "2026-07-15",
+      "ticker": "US.DHR",
+      "name": "丹纳赫",
+      "shares": 1299.846541021997,
+      "weight": 0.10066745410139187,
+      "gross_market_value": 260996.18697180675
+    },
+    {
+      "date": "2026-07-15",
+      "ticker": "US.MFG",
+      "name": "瑞穗金融",
+      "shares": 24481.46992427211,
+      "weight": 0.10065830611984575,
+      "gross_market_value": 260972.4693927407
+    },
+    {
+      "date": "2026-07-15",
+      "ticker": "US.SHOP",
+      "name": "Shopify",
+      "shares": 2072.370277630352,
+      "weight": 0.09875634938154518,
+      "gross_market_value": 256041.34780123
+    },
+    {
+      "date": "2026-07-15",
+      "ticker": "US.AMD",
+      "name": "美国超微公司",
+      "shares": 480.52001432757356,
+      "weight": 0.09807018558535577,
+      "gross_market_value": 254262.36038129227
+    },
+    {
+      "date": "2026-07-15",
+      "ticker": "US.ANET",
+      "name": "Arista Networks",
+      "shares": 1386.6239374067634,
+      "weight": 0.09194751968284355,
+      "gross_market_value": 238388.38731897075
+    }
+  ],
+  "latest_rebalance": [
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "卖出",
+      "ticker": "US.ABBV",
+      "name": "艾伯维公司",
+      "shares": 1042.142718119095,
+      "trade_price": 246.49132007630502,
+      "trade_value": 256879.13429708435,
+      "reason": "replacement_sell"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "卖出",
+      "ticker": "US.CRWD",
+      "name": "CrowdStrike",
+      "shares": 1476.2531127984112,
+      "trade_price": 186.76657000000003,
+      "trade_value": 275714.7303291824,
+      "reason": "replacement_sell"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "卖出",
+      "ticker": "US.FTNT",
+      "name": "飞塔信息",
+      "shares": 1711.7313784212888,
+      "trade_price": 157.591165,
+      "trade_value": 269753.74209246674,
+      "reason": "replacement_sell"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "卖出",
+      "ticker": "US.GE",
+      "name": "GE航天航空",
+      "shares": 712.7855951447756,
+      "trade_price": 355.99191500000006,
+      "trade_value": 253745.90900000342,
+      "reason": "replacement_sell"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "卖出",
+      "ticker": "US.HOOD",
+      "name": "Robinhood",
+      "shares": 2292.399676544366,
+      "trade_price": 111.214365,
+      "trade_value": 254947.77435308704,
+      "reason": "replacement_sell"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "卖出",
+      "ticker": "US.IBM",
+      "name": "IBM Corp",
+      "shares": 885.7314951319001,
+      "trade_price": 290.35475,
+      "trade_value": 257176.3468361491,
+      "reason": "replacement_sell"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "卖出",
+      "ticker": "US.JNJ",
+      "name": "强生",
+      "shares": 981.4439349171207,
+      "trade_price": 257.821025,
+      "trade_value": 253036.88128036537,
+      "reason": "replacement_sell"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "卖出",
+      "ticker": "US.PANW",
+      "name": "Palo Alto Networks",
+      "shares": 845.1421614518227,
+      "trade_price": 324.9424475,
+      "trade_value": 274622.56242759543,
+      "reason": "replacement_sell"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "卖出",
+      "ticker": "US.PGR",
+      "name": "前进保险",
+      "shares": 1100.8458963957232,
+      "trade_price": 232.16386000000003,
+      "trade_value": 255576.63257239122,
+      "reason": "replacement_sell"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "卖出",
+      "ticker": "US.VRTX",
+      "name": "福泰制药",
+      "shares": 482.9929453953738,
+      "trade_price": 485.9319125,
+      "trade_value": 234701.68567998207,
+      "reason": "replacement_sell"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "买入",
+      "ticker": "US.AMD",
+      "name": "美国超微公司",
+      "shares": 480.52001432757356,
+      "trade_price": 537.76875,
+      "trade_value": 258408.6474549213,
+      "reason": "replacement_buy"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "买入",
+      "ticker": "US.ANET",
+      "name": "Arista Networks",
+      "shares": 1386.6239374067634,
+      "trade_price": 186.35813249999998,
+      "trade_value": 258408.6474549213,
+      "reason": "replacement_buy"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "买入",
+      "ticker": "US.BMO",
+      "name": "蒙特利尔银行",
+      "shares": 1438.4823597943232,
+      "trade_price": 179.63977500000001,
+      "trade_value": 258408.64745492127,
+      "reason": "replacement_buy"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "买入",
+      "ticker": "US.DHR",
+      "name": "丹纳赫",
+      "shares": 1299.846541021997,
+      "trade_price": 198.79934999999998,
+      "trade_value": 258408.6474549213,
+      "reason": "replacement_buy"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "买入",
+      "ticker": "US.MFG",
+      "name": "瑞穗金融",
+      "shares": 24481.46992427211,
+      "trade_price": 10.555275,
+      "trade_value": 258408.6474549213,
+      "reason": "replacement_buy"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "买入",
+      "ticker": "US.MUFG",
+      "name": "三菱日联金融",
+      "shares": 11723.990363189776,
+      "trade_price": 22.041015,
+      "trade_value": 258408.64745492133,
+      "reason": "replacement_buy"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "买入",
+      "ticker": "US.RY",
+      "name": "加拿大皇家银行",
+      "shares": 1221.7573685008078,
+      "trade_price": 211.5057,
+      "trade_value": 258408.6474549213,
+      "reason": "replacement_buy"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "买入",
+      "ticker": "US.SHOP",
+      "name": "Shopify",
+      "shares": 2072.370277630352,
+      "trade_price": 124.692315,
+      "trade_value": 258408.6474549213,
+      "reason": "replacement_buy"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "买入",
+      "ticker": "US.SMFG",
+      "name": "三井住友金融",
+      "shares": 9926.191687204873,
+      "trade_price": 26.033009999999997,
+      "trade_value": 258408.6474549213,
+      "reason": "replacement_buy"
+    },
+    {
+      "trade_date": "2026-07-13",
+      "signal_date": "2026-07-10",
+      "side": "买入",
+      "ticker": "US.TMO",
+      "name": "赛默飞世尔",
+      "shares": 488.77322263826244,
+      "trade_price": 524.4621,
+      "trade_value": 256343.03076863065,
+      "reason": "replacement_buy"
+    }
+  ],
+  "limitations": [
+    "Current static market cap is used historically.",
+    "Current visible securities create survivorship bias.",
+    "OpenD metadata may not reliably distinguish every ADR or foreign primary listing."
+  ]
+}

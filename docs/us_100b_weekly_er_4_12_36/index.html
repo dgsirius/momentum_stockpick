@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="美国1000亿美元市值股票池 ER 4/12/36 无行业白名单周调仓策略看板">
+  <title>ER 4/12/36 · 无白名单周策略</title>
+  <style>
+    :root{--bg:#eef2f1;--panel:#fffefa;--ink:#20343a;--muted:#64777c;--line:#d6dedb;--blue:#075985;--orange:#b45309;--green:#16835f;}
+    *{box-sizing:border-box} body{margin:0;background:linear-gradient(145deg,#e9f0ef,#f5f1e8 65%,#edf3f2);color:var(--ink);font-family:"Avenir Next","PingFang SC","Helvetica Neue",sans-serif}
+    main{width:min(1240px,calc(100vw - 28px));margin:0 auto;padding:28px 0 52px} a{color:var(--blue);text-decoration:none}
+    .panel{background:rgba(255,254,250,.96);border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 32px rgba(35,52,58,.06)}
+    .hero{padding:26px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(300px,.6fr);gap:24px;align-items:center}
+    .eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--blue)} h1{font-size:36px;line-height:1.16;margin:9px 0 8px} h2{font-size:22px;margin:0 0 12px} p{line-height:1.7} .muted{color:var(--muted)}
+    .status{border-left:5px solid var(--green);padding:4px 0 4px 18px} .status strong{display:block;font-size:23px;margin:6px 0}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px} .tag{background:#e5f0f2;color:#075985;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:750}
+    .kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:16px} .kpi{padding:16px} .kpi span{display:block;color:var(--muted);font-size:12px} .kpi strong{display:block;font-size:25px;margin-top:7px}
+    .section{padding:22px;margin-top:16px} .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px} .grid2 .section{margin-top:0}
+    img{width:100%;display:block;border:1px solid var(--line);border-radius:14px;background:white} .table-wrap{overflow:auto}
+    table{width:100%;border-collapse:collapse;font-size:13px} th,td{padding:10px 9px;border-bottom:1px solid #e8ece9;text-align:right;white-space:nowrap} th:first-child,td:first-child{text-align:left} th{color:var(--muted);background:#f6f4ef}
+    .notice{border-left:4px solid var(--orange);background:#fff7ed;padding:13px 15px;border-radius:10px;line-height:1.7} .footer{font-size:12px;color:var(--muted);line-height:1.7;margin-top:16px}
+    @media(max-width:900px){.hero,.grid2{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}} @media(max-width:560px){h1{font-size:29px}.kpis{grid-template-columns:1fr}}
+  </style>
+</head>
+<body><main>
+  <section class="panel hero">
+    <div><div class="eyebrow">US $100B · WEEKLY ER DASHBOARD</div><h1>ER 4/12/36 无白名单周策略</h1>
+      <p class="muted">最近五年：2021-07-16 至 2026-07-15。每个自然周最后一个有效信号日选股，下一交易日开盘执行。</p>
+      <div class="tags"><span class="tag">OpenD 本地更新</span><span class="tag">当前静态市值 ≥ $100B</span><span class="tag">Top10</span><span class="tag">单股上限 10%</span><span class="tag">Mode B 替换式持仓</span><span class="tag">无行业白名单</span></div>
+    </div>
+    <div class="status"><span class="eyebrow">最新状态</span><strong>数据截至 2026-07-15</strong><div>模型持仓截至 2026-07-15</div><div>最近模型换仓 2026-07-13</div><p class="muted">网页生成：2026-07-16 14:37:45 CST</p></div>
+  </section>
+  <section class="kpis">
+    <div class="panel kpi"><span>五年累计收益</span><strong>418.5%</strong></div>
+    <div class="panel kpi"><span>五年 CAGR</span><strong>39.2%</strong></div>
+    <div class="panel kpi"><span>Sharpe</span><strong>1.37</strong></div>
+    <div class="panel kpi"><span>最大回撤</span><strong>-23.8%</strong></div>
+    <div class="panel kpi"><span>SPY 五年 CAGR</span><strong>13.3%</strong></div>
+  </section>
+  <section class="grid2"><div class="panel section"><h2>净值路径</h2><img src="equity_curve.png" alt="策略与SPY净值"></div><div class="panel section"><h2>回撤路径</h2><img src="drawdown.png" alt="策略与SPY回撤"></div></section>
+  <section class="panel section"><h2>当前模型持仓</h2><p class="muted">这是回测模型持仓，不是富途账户真实持仓；网页不包含账户资料。</p><div class='table-wrap'><table><thead><tr><th>代码</th><th>名称</th><th>模型权重</th><th>模型股数</th><th>模型市值</th></tr></thead><tbody><tr><td>US.MUFG</td><td>三菱日联金融</td><td>10.3%</td><td>11,723.99</td><td>$266,955</td></tr><tr><td>US.RY</td><td>加拿大皇家银行</td><td>10.3%</td><td>1,221.76</td><td>$266,184</td></tr><tr><td>US.BMO</td><td>蒙特利尔银行</td><td>10.2%</td><td>1,438.48</td><td>$264,177</td></tr><tr><td>US.SMFG</td><td>三井住友金融</td><td>10.1%</td><td>9,926.19</td><td>$263,044</td></tr><tr><td>US.TMO</td><td>赛默飞世尔</td><td>10.1%</td><td>488.77</td><td>$261,635</td></tr><tr><td>US.DHR</td><td>丹纳赫</td><td>10.1%</td><td>1,299.85</td><td>$260,996</td></tr><tr><td>US.MFG</td><td>瑞穗金融</td><td>10.1%</td><td>24,481.47</td><td>$260,972</td></tr><tr><td>US.SHOP</td><td>Shopify</td><td>9.9%</td><td>2,072.37</td><td>$256,041</td></tr><tr><td>US.AMD</td><td>美国超微公司</td><td>9.8%</td><td>480.52</td><td>$254,262</td></tr><tr><td>US.ANET</td><td>Arista Networks</td><td>9.2%</td><td>1,386.62</td><td>$238,388</td></tr></tbody></table></div></section>
+  <section class="panel section"><h2>最近一次模型换仓</h2><div class='table-wrap'><table><thead><tr><th>交易日</th><th>信号日</th><th>方向</th><th>代码</th><th>名称</th><th>模型价格</th><th>模型金额</th></tr></thead><tbody><tr><td>2026-07-13</td><td>2026-07-10</td><td>卖出</td><td>US.ABBV</td><td>艾伯维公司</td><td>246.49</td><td>$256,879</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>卖出</td><td>US.CRWD</td><td>CrowdStrike</td><td>186.77</td><td>$275,715</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>卖出</td><td>US.FTNT</td><td>飞塔信息</td><td>157.59</td><td>$269,754</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>卖出</td><td>US.GE</td><td>GE航天航空</td><td>355.99</td><td>$253,746</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>卖出</td><td>US.HOOD</td><td>Robinhood</td><td>111.21</td><td>$254,948</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>卖出</td><td>US.IBM</td><td>IBM Corp</td><td>290.35</td><td>$257,176</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>卖出</td><td>US.JNJ</td><td>强生</td><td>257.82</td><td>$253,037</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>卖出</td><td>US.PANW</td><td>Palo Alto Networks</td><td>324.94</td><td>$274,623</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>卖出</td><td>US.PGR</td><td>前进保险</td><td>232.16</td><td>$255,577</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>卖出</td><td>US.VRTX</td><td>福泰制药</td><td>485.93</td><td>$234,702</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>买入</td><td>US.AMD</td><td>美国超微公司</td><td>537.77</td><td>$258,409</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>买入</td><td>US.ANET</td><td>Arista Networks</td><td>186.36</td><td>$258,409</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>买入</td><td>US.BMO</td><td>蒙特利尔银行</td><td>179.64</td><td>$258,409</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>买入</td><td>US.DHR</td><td>丹纳赫</td><td>198.80</td><td>$258,409</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>买入</td><td>US.MFG</td><td>瑞穗金融</td><td>10.56</td><td>$258,409</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>买入</td><td>US.MUFG</td><td>三菱日联金融</td><td>22.04</td><td>$258,409</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>买入</td><td>US.RY</td><td>加拿大皇家银行</td><td>211.51</td><td>$258,409</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>买入</td><td>US.SHOP</td><td>Shopify</td><td>124.69</td><td>$258,409</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>买入</td><td>US.SMFG</td><td>三井住友金融</td><td>26.03</td><td>$258,409</td></tr><tr><td>2026-07-13</td><td>2026-07-10</td><td>买入</td><td>US.TMO</td><td>赛默飞世尔</td><td>524.46</td><td>$256,343</td></tr></tbody></table></div></section>
+  <section class="grid2"><div class="panel section"><h2>逐年表现</h2><div class='table-wrap'><table><thead><tr><th>年份</th><th>策略收益</th><th>SPY收益</th><th>Sharpe</th><th>最大回撤</th><th>年化换手</th></tr></thead><tbody><tr><td>2021</td><td>1.8%</td><td>10.0%</td><td>0.31</td><td>-10.2%</td><td>30.52</td></tr><tr><td>2022</td><td>-16.4%</td><td>-18.2%</td><td>-0.70</td><td>-23.8%</td><td>35.39</td></tr><tr><td>2023</td><td>49.2%</td><td>26.2%</td><td>2.13</td><td>-10.2%</td><td>30.03</td></tr><tr><td>2024</td><td>17.5%</td><td>24.9%</td><td>0.77</td><td>-9.7%</td><td>32.78</td></tr><tr><td>2025</td><td>54.0%</td><td>17.7%</td><td>1.70</td><td>-16.8%</td><td>30.71</td></tr><tr><td>2026</td><td>125.5%</td><td>11.3%</td><td>3.64</td><td>-12.5%</td><td>27.90</td></tr></tbody></table></div></div><div class="panel section"><h2>年度收益图</h2><img src="annual_returns.png" alt="逐年收益"></div></section>
+  <section class="panel section"><h2>口径与限制</h2>
+    <div class="notice">网页只展示静态回测结果，不连接公网行情服务，也不会把本机 OpenD 端口暴露出去。更新必须在运行 OpenD 的本机完成后再发布。</div>
+    <ul><li>价格与基准来自本机 OpenD 缓存；本次股票历史共覆盖 155 个当前候选代码。</li><li>交易成本：单边佣金 8bps、滑点 5bps；动态 SPY 对冲规则保持不变。</li><li>当前市值及当前可见股票被用于历史期，存在幸存者偏差和前视偏差；海外发行人/ADR 识别也可能不完整。</li><li>页面用于策略研究和纸面跟踪，不构成投资建议，也不代表可复制的实盘收益。</li></ul>
+    <p><a href="yearly_metrics.csv">逐年数据</a> · <a href="current_holdings.csv">当前模型持仓</a> · <a href="latest_rebalance.csv">最近换仓</a> · <a href="daily_nav.csv">每日净值</a> · <a href="dashboard_summary.json">机器可读摘要</a></p>
+  </section>
+  <div class="footer">ER 4/12/36 · 无行业白名单 · 自然周调仓 · 次日开盘执行 · 研究用途</div>
+</main></body></html>
