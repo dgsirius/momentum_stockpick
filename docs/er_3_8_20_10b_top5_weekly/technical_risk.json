@@ -1,0 +1,373 @@
+{
+  "generated_at": "2026-07-15T17:23:49",
+  "variant_name": "ER 3/8/20 (10B Top5 周换仓)",
+  "variant_slug": "er_3_8_20_10b_top5_weekly",
+  "universe_mode": "current_and_planned",
+  "holding_count": 7,
+  "current_holding_count": 5,
+  "planned_buy_count": 0,
+  "historical_buy_count": 0,
+  "ticker_count": 7,
+  "risk_high_count": 2,
+  "backtest_period": "验证期 2025-07-14 至 2026-07-14",
+  "training_period": "训练期 2022-01-03 至 2025-07-13",
+  "validation_method": "参数仅在训练期选择，胜率和平均收益来自随后一年验证期",
+  "strategy_summary": {
+    "stop_atr": 2.0,
+    "take_atr": 1.5,
+    "trades": 555,
+    "win_rate": 0.6072,
+    "avg_return": 0.0053
+  },
+  "rows": [
+    {
+      "ticker": "US.QQQ",
+      "name": "QQQ",
+      "sources": [
+        "基准观察"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-07-14",
+      "close": 719.69,
+      "score": 74,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "高",
+      "risk_reasons": [
+        "MACD动能转弱"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 34,
+        "macd": 15,
+        "kdj": 9,
+        "volume": 6,
+        "atr": 10
+      },
+      "texts": {
+        "trend": "趋势34/40，EMA多头排列",
+        "macd": "MACD15/25，零轴上方动能占优",
+        "kdj": "KDJ9/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR10/10，执行位置可接受"
+      },
+      "atr": 14.977,
+      "stop_loss": 693.4215,
+      "take_profit": 742.1555,
+      "add_price": 708.3985,
+      "invalidation": 685.933,
+      "stop_pct": 0.0379,
+      "take_pct": 0.0312,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 95,
+        "win_rate": 0.5053,
+        "avg_return": -0.002,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.AXON",
+      "name": "Axon Enterprise",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.1848140125,
+      "market_value": 132055.9700450191,
+      "status": "ok",
+      "latest_date": "2026-07-14",
+      "close": 547.26,
+      "score": 68,
+      "rating": "3.5分",
+      "action": "多头观察 / 轻仓试探",
+      "risk_level": "高",
+      "risk_reasons": [
+        "MACD动能转弱"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 35,
+        "macd": 12,
+        "kdj": 5,
+        "volume": 6,
+        "atr": 10
+      },
+      "texts": {
+        "trend": "趋势35/40，EMA多头排列",
+        "macd": "MACD12/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR10/10，执行位置可接受"
+      },
+      "atr": 38.7476,
+      "stop_loss": 469.7647,
+      "take_profit": 605.3815,
+      "add_price": 421.3738,
+      "invalidation": 363.2524,
+      "stop_pct": 0.165,
+      "take_pct": 0.1062,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 26,
+        "win_rate": 0.1923,
+        "avg_return": -0.0437,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.OKTA",
+      "name": "Okta",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.212985507,
+      "market_value": 152185.4720497039,
+      "status": "ok",
+      "latest_date": "2026-07-14",
+      "close": 154.62,
+      "score": 85,
+      "rating": "4.5分",
+      "action": "多头 / 观察回踩",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": "KDJ顶背离预警",
+      "parts": {
+        "trend": 40,
+        "macd": 24,
+        "kdj": 3,
+        "volume": 13,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势40/40，EMA多头排列",
+        "macd": "MACD24/25，零轴上方动能占优",
+        "kdj": "KDJ3/10，顶背离预警",
+        "volume": "量能13/15，量价配合较好",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 8.1069,
+      "stop_loss": 138.4062,
+      "take_profit": 159.6034,
+      "add_price": 111.0534,
+      "invalidation": 98.8931,
+      "stop_pct": 0.1171,
+      "take_pct": 0.0322,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 37,
+        "win_rate": 0.5676,
+        "avg_return": 0.0089,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.ANET",
+      "name": "Arista Networks",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.191922812,
+      "market_value": 137135.4518934137,
+      "status": "ok",
+      "latest_date": "2026-07-14",
+      "close": 182.57,
+      "score": 81,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 22,
+        "kdj": 8,
+        "volume": 6,
+        "atr": 8
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
+      },
+      "atr": 10.4629,
+      "stop_loss": 161.6441,
+      "take_profit": 195.0485,
+      "add_price": 159.9715,
+      "invalidation": 144.2771,
+      "stop_pct": 0.1295,
+      "take_pct": 0.0683,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 107,
+        "win_rate": 0.4953,
+        "avg_return": -0.0113,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.RDDT",
+      "name": "Reddit",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.2070295154,
+      "market_value": 147929.7111965358,
+      "status": "ok",
+      "latest_date": "2026-07-14",
+      "close": 203.27,
+      "score": 80,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 22,
+        "kdj": 7,
+        "volume": 6,
+        "atr": 8
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ7/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
+      },
+      "atr": 11.7374,
+      "stop_loss": 179.7953,
+      "take_profit": 213.9187,
+      "add_price": 158.5187,
+      "invalidation": 140.9126,
+      "stop_pct": 0.1306,
+      "take_pct": 0.0524,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 2.0,
+        "trades": 67,
+        "win_rate": 0.6269,
+        "avg_return": 0.0187,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.TIGO",
+      "name": "Millicom International Cellular",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.2032481531,
+      "market_value": 145227.7977595769,
+      "status": "ok",
+      "latest_date": "2026-07-14",
+      "close": 98.16,
+      "score": 80,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 24,
+        "kdj": 7,
+        "volume": 7,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD24/25，零轴上方动能占优",
+        "kdj": "KDJ7/10，节奏未见明确背离",
+        "volume": "量能7/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 3.2959,
+      "stop_loss": 91.5681,
+      "take_profit": 101.728,
+      "add_price": 85.548,
+      "invalidation": 80.6041,
+      "stop_pct": 0.072,
+      "take_pct": 0.0363,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 129,
+        "win_rate": 0.7984,
+        "avg_return": 0.0279,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.SPY",
+      "name": "SPY",
+      "sources": [
+        "基准观察"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-07-14",
+      "close": 751.83,
+      "score": 78,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "低",
+      "risk_reasons": [],
+      "cap_reason": null,
+      "parts": {
+        "trend": 33,
+        "macd": 22,
+        "kdj": 6,
+        "volume": 7,
+        "atr": 10
+      },
+      "texts": {
+        "trend": "趋势33/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ6/10，节奏未见明确背离",
+        "volume": "量能7/15，量价确认不足",
+        "atr": "ATR10/10，执行位置可接受"
+      },
+      "atr": 8.8775,
+      "stop_loss": 734.075,
+      "take_profit": 761.1187,
+      "add_price": 721.0188,
+      "invalidation": 707.7025,
+      "stop_pct": 0.0242,
+      "take_pct": 0.0124,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 94,
+        "win_rate": 0.6383,
+        "avg_return": 0.0021,
+        "validation": true
+      }
+    }
+  ],
+  "input_version": "8b17669dd6659c3da0fa",
+  "cache_hit": true,
+  "input_fingerprint_version": 2
+}

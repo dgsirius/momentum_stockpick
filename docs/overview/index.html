@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>策略看板总览</title>
+  <style>
+    :root { --bg:#f5f0e8; --panel:#fffdf9; --ink:#1f2a2e; --muted:#647276; --line:#d8cfc2; --accent:#0f5c73; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Avenir Next","PingFang SC",sans-serif; color:var(--ink); background:var(--bg); }
+    .wrap { width:min(1500px,calc(100vw - 32px)); margin:0 auto; padding:26px 0 44px; overflow-x:clip; }
+    .layout { display:grid; grid-template-columns:220px minmax(0,1fr); gap:20px; }
+    .sidebar { position:sticky; top:20px; height:fit-content; padding:16px 14px; border:1px solid var(--line); border-radius:18px; background:var(--panel); }
+    .sidebar-title,.sub { color:var(--muted); font-size:12px; }
+    .nav-links { display:grid; gap:7px; margin-top:10px; }
+    .nav-link { padding:9px 11px; border-radius:10px; text-decoration:none; color:var(--ink); background:rgba(15,92,115,.04); font-size:13px; font-weight:650; }
+    .nav-link.active { color:white; background:var(--accent); }
+    h1 { margin:0; font-size:32px; }
+    .intro { color:var(--muted); margin:8px 0 18px; line-height:1.6; }
+    .stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-bottom:18px; }
+    .stat,.panel { border:1px solid var(--line); border-radius:16px; background:var(--panel); box-shadow:0 12px 30px rgba(31,42,46,.05); }
+    .stat { padding:14px 16px; } .stat strong { display:block; font-size:24px; margin-top:5px; }
+    .panel { padding:16px; overflow:hidden; }
+    .table-scroll { width:100%; overflow-x:auto; }
+    table { width:100%; min-width:1180px; border-collapse:collapse; font-size:13px; }
+    th,td { padding:10px 9px; border-bottom:1px solid #ece5da; text-align:left; vertical-align:top; }
+    th { color:var(--muted); background:rgba(155,95,45,.04); white-space:nowrap; }
+    td a { color:var(--accent); text-decoration:none; }
+    .status { display:inline-block; padding:3px 8px; border-radius:999px; font-weight:700; background:rgba(177,94,30,.14); color:#8a4a18; white-space:nowrap; }
+    .status-healthy { background:rgba(26,127,82,.14); color:#1a7f52; }
+    .status-stale,.status-low_coverage,.status-duplicates,.status-missing { background:rgba(181,54,46,.12); color:#a1322d; }
+    .buy { color:#a1322d; } .sell { color:#1a7f52; }
+    @media(max-width:1024px) {
+      .layout { grid-template-columns:minmax(0,1fr); } .sidebar { position:static; padding:10px; min-width:0; max-width:100%; }
+      .sidebar-title { display:none; } .nav-links { display:flex; overflow-x:auto; max-width:100%; margin:0; }
+      .nav-link { flex:0 0 auto; white-space:nowrap; } .stats { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap"><div class="layout">
+    <aside class="sidebar"><div class="sidebar-title">策略目录</div><div class="nav-links"><a class='nav-link active' href='./index.html'>策略总览</a>
+<a class='nav-link' href='../index.html'>ER 3/8/20 (10B 日调仓)</a>
+<a class='nav-link' href='../er_3_8_20_100b_weekly/index.html'>ER 3/8/20 (100B 日调仓)</a>
+<a class='nav-link' href='../etf_er_3_8_20_whitelist/index.html'>ETF ER 3/8/20 (白名单日调仓 Top5)</a>
+<a class='nav-link' href='../a_share_etf_er_10_25_50_ge20b/index.html'>A股 ETF ER 10/25/50（规模20亿+ 日调仓 Top5）</a>
+<a class='nav-link' href='../hk_er_3_8_20_20b_stock_connect/index.html'>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</a>
+<a class='nav-link' href='../er_3_8_20_100b_top5_biweekly_top50/index.html'>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</a>
+<a class='nav-link' href='../er_3_8_20_10b_top5_weekly/index.html'>ER 3/8/20 (10B Top5 周换仓)</a>
+<a class='nav-link' href='../long_term_trend_strength/index.html'>长线趋势最强</a></div></aside>
+    <main>
+      <h1>策略看板总览</h1>
+      <div class="intro">先看数据是否健康和今天是否有交易，再进入单个策略查看持仓与研究详情。区间收益优先于短样本年化指标。</div>
+      <section class="stats">
+        <div class="stat"><span class="sub">策略数量</span><strong>7</strong></div>
+        <div class="stat"><span class="sub">数据健康</span><strong>7/7</strong></div>
+        <div class="stat"><span class="sub">最近生成</span><strong style="font-size:16px">2026-07-16T08:57:04+08:00</strong></div>
+      </section>
+      <section class="panel"><div class="table-scroll"><table>
+        <thead><tr><th>策略</th><th>数据 / 信号日</th><th>下次交易</th><th>今日动作</th><th>区间收益</th><th>超额</th><th>最大回撤</th><th>Sharpe</th><th>年化换手</th><th>数据健康</th><th>净敞口</th></tr></thead>
+        <tbody><tr><td><a href='../index.html'><strong>ER 3/8/20 (10B 日调仓)</strong></a><div class='sub'>美股</div></td><td>2026-07-14<div class='sub'>信号 2026-07-14</div></td><td>2026-07-15</td><td><span class='buy'>买 4</span> / <span class='sell'>卖 4</span></td><td>+60.1%</td><td>+49.6%</td><td>-21.2%</td><td>2.00</td><td>97.12</td><td><span class='status status-healthy'>健康</span><div class='sub'>99.6%</div></td><td>99.4%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../er_3_8_20_100b_weekly/index.html'><strong>ER 3/8/20 (100B 日调仓)</strong></a><div class='sub'>美股</div></td><td>2026-07-15<div class='sub'>信号 2026-07-15</div></td><td>2026-07-16</td><td><span class='buy'>买 7</span> / <span class='sell'>卖 5</span></td><td>+134.6%</td><td>+123.6%</td><td>-13.7%</td><td>3.63</td><td>78.94</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>81.0%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../etf_er_3_8_20_whitelist/index.html'><strong>ETF ER 3/8/20 (白名单日调仓 Top5)</strong></a><div class='sub'>美股</div></td><td>2026-07-14<div class='sub'>信号 2026-07-14</div></td><td>2026-07-15</td><td><span class='buy'>买 2</span> / <span class='sell'>卖 2</span></td><td>+70.4%</td><td>+59.9%</td><td>-14.8%</td><td>2.41</td><td>84.30</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>100.0%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../a_share_etf_er_10_25_50_ge20b/index.html'><strong>A股 ETF ER 10/25/50（规模20亿+ 日调仓 Top5）</strong></a><div class='sub'>A股</div></td><td>2026-07-15<div class='sub'>信号 2026-07-15</div></td><td>2026-07-16</td><td><span class='buy'>买 5</span> / <span class='sell'>卖 5</span></td><td>+15.0%</td><td>-3.8%</td><td>-40.8%</td><td>0.76</td><td>64.91</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>100.0%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../hk_er_3_8_20_20b_stock_connect/index.html'><strong>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</strong></a><div class='sub'>港股</div></td><td>2026-07-15<div class='sub'>信号 2026-07-15</div></td><td>2026-07-16</td><td><span class='buy'>买 4</span> / <span class='sell'>卖 4</span></td><td>+56.3%</td><td>+60.0%</td><td>-22.2%</td><td>1.82</td><td>55.97</td><td><span class='status status-healthy'>健康</span><div class='sub'>99.7%</div></td><td>75.7%<div class='sub'>对冲 24.3%</div></td></tr><tr><td><a href='../er_3_8_20_100b_top5_biweekly_top50/index.html'><strong>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</strong></a><div class='sub'>美股</div></td><td>2026-07-14<div class='sub'>信号 2026-07-14</div></td><td>2026-07-15</td><td><span class='buy'>买 0</span> / <span class='sell'>卖 0</span></td><td>+219.4%</td><td>+208.8%</td><td>-14.1%</td><td>4.39</td><td>12.17</td><td><span class='status status-healthy'>健康</span><div class='sub'>99.6%</div></td><td>62.3%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../er_3_8_20_10b_top5_weekly/index.html'><strong>ER 3/8/20 (10B Top5 周换仓)</strong></a><div class='sub'>美股</div></td><td>2026-07-14<div class='sub'>信号 2026-07-14</div></td><td>2026-07-15</td><td><span class='buy'>买 0</span> / <span class='sell'>卖 0</span></td><td>+42.9%</td><td>+32.4%</td><td>-27.8%</td><td>1.40</td><td>35.96</td><td><span class='status status-healthy'>健康</span><div class='sub'>99.6%</div></td><td>100.0%<div class='sub'>对冲 0.0%</div></td></tr></tbody>
+      </table></div></section>
+    </main>
+  </div></div>
+</body>
+</html>

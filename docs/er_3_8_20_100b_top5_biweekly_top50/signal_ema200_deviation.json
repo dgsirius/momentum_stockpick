@@ -3775,49 +3775,53 @@
             {
               "date": "2026-07-13",
               "value": 0.706933
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.776965
             }
           ],
-          "latest_deviation": 0.706933,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.776965,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.224331,
-            "std": 0.360298,
-            "count": 935,
+            "mean": 0.224922,
+            "std": 0.360558,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.856563
+                "value": -0.856752
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.496265
+                "value": -0.496194
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.135967
+                "value": -0.135636
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.224331
+                "value": 0.224922
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.584629
+                "value": 0.58548
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.944927
+                "value": 0.946038
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.305225
+                "value": 1.306596
               }
             ]
           }
@@ -4773,51 +4777,51 @@
               "value": 3.208213
             },
             {
-              "date": "2026-07-13",
-              "value": 2.908736
+              "date": "2026-07-14",
+              "value": 3.093291
             }
           ],
-          "latest_deviation": 2.908736,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 3.093291,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.394929,
-            "std": 0.965222,
+            "mean": 0.395708,
+            "std": 0.967322,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -2.500737
+                "value": -2.506258
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -1.535515
+                "value": -1.538936
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.570293
+                "value": -0.571614
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.394929
+                "value": 0.395708
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 1.360151
+                "value": 1.36303
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 2.325373
+                "value": 2.330352
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 3.290595
+                "value": 3.297674
               }
             ]
           }
@@ -4831,29 +4835,32 @@
       "industry_labels": "计算机硬件",
       "source_keys": [
         "buy_top20",
+        "profit_top10",
         "current_top10",
         "planned_holdings"
       ],
       "source_labels": [
         "BUY Top20",
+        "盈利贡献 Top10",
         "当前持有 Top10",
         "计划持有"
       ],
       "source_ranks": {
         "buy_top20": 2,
+        "profit_top10": 8,
         "current_top10": 2,
-        "planned_holdings": 2
+        "planned_holdings": 1
       },
       "buy_count": 2.0,
       "total_buy_value": 444913.12,
-      "pnl_dollar": null,
-      "profit_trade_count": null,
-      "current_weight": 0.202668,
-      "current_market_value": 318077.78,
+      "pnl_dollar": 50878.5,
+      "profit_trade_count": 3.0,
+      "current_weight": 0.213394,
+      "current_market_value": 340739.64,
       "planned_action": "keep",
-      "planned_rank": null,
-      "planned_weight": null,
-      "planned_market_value": null,
+      "planned_rank": 3.0,
+      "planned_weight": 0.213394,
+      "planned_market_value": 340739.64,
       "timeframes": {
         "daily": {
           "key": "daily",
@@ -8600,49 +8607,53 @@
             {
               "date": "2026-07-13",
               "value": 0.873373
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.986938
             }
           ],
-          "latest_deviation": 0.873373,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.986938,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.17893,
-            "std": 0.271691,
-            "count": 935,
+            "mean": 0.179793,
+            "std": 0.272826,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.636143
+                "value": -0.638685
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.364452
+                "value": -0.365859
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.092761
+                "value": -0.093033
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.17893
+                "value": 0.179793
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.450621
+                "value": 0.452619
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.722312
+                "value": 0.725445
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.994003
+                "value": 0.998271
               }
             ]
           }
@@ -9598,51 +9609,51 @@
               "value": 2.370479
             },
             {
-              "date": "2026-07-13",
-              "value": 2.235226
+              "date": "2026-07-14",
+              "value": 2.457793
             }
           ],
-          "latest_deviation": 2.235226,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 2.457793,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.381343,
-            "std": 0.568441,
+            "mean": 0.382282,
+            "std": 0.571678,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -1.32398
+                "value": -1.332752
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.755539
+                "value": -0.761074
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.187098
+                "value": -0.189396
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.381343
+                "value": 0.382282
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.949784
+                "value": 0.95396
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.518225
+                "value": 1.525638
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 2.086666
+                "value": 2.097316
               }
             ]
           }
@@ -11718,49 +11729,53 @@
             {
               "date": "2026-07-13",
               "value": 0.427199
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.337583
             }
           ],
-          "latest_deviation": 0.427199,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.337583,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.136359,
-            "std": 0.294257,
-            "count": 509,
+            "mean": 0.136754,
+            "std": 0.294103,
+            "count": 510,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.746412
+                "value": -0.745555
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.452155
+                "value": -0.451452
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.157898
+                "value": -0.157349
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.136359
+                "value": 0.136754
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.430616
+                "value": 0.430857
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.724873
+                "value": 0.72496
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.01913
+                "value": 1.019063
               }
             ]
           }
@@ -12364,51 +12379,51 @@
               "value": 1.414471
             },
             {
-              "date": "2026-07-13",
-              "value": 1.205258
+              "date": "2026-07-14",
+              "value": 1.076538
             }
           ],
-          "latest_deviation": 1.205258,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 1.076538,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.533551,
-            "std": 0.466798,
+            "mean": 0.532687,
+            "std": 0.465672,
             "count": 149,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.866843
+                "value": -0.864329
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.400045
+                "value": -0.398657
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 0.066753
+                "value": 0.067015
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.533551
+                "value": 0.532687
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 1.000349
+                "value": 0.998359
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.467147
+                "value": 1.464031
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.933945
+                "value": 1.929703
               }
             ]
           }
@@ -13064,49 +13079,53 @@
             {
               "date": "2026-07-13",
               "value": 0.771856
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.844812
             }
           ],
-          "latest_deviation": 0.771856,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.844812,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 1.455353,
-            "std": 0.379533,
-            "count": 154,
+            "mean": 1.451414,
+            "std": 0.381452,
+            "count": 155,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": 0.316754
+                "value": 0.307058
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": 0.696287
+                "value": 0.68851
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 1.07582
+                "value": 1.069962
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 1.455353
+                "value": 1.451414
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 1.834886
+                "value": 1.832866
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 2.214419
+                "value": 2.214318
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 2.593952
+                "value": 2.59577
               }
             ]
           }
@@ -13414,51 +13433,51 @@
               "value": 5.129955
             },
             {
-              "date": "2026-07-13",
-              "value": 4.133352
+              "date": "2026-07-14",
+              "value": 4.376728
             }
           ],
-          "latest_deviation": 4.133352,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 4.376728,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 2.824141,
-            "std": 2.550408,
+            "mean": 2.827386,
+            "std": 2.552225,
             "count": 75,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -4.827083
+                "value": -4.829289
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -2.276675
+                "value": -2.277064
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 0.273733
+                "value": 0.275161
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 2.824141
+                "value": 2.827386
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 5.374549
+                "value": 5.379611
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 7.924957
+                "value": 7.931836
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 10.475365
+                "value": 10.484061
               }
             ]
           }
@@ -13489,8 +13508,8 @@
       "total_buy_value": 310747.63,
       "pnl_dollar": null,
       "profit_trade_count": null,
-      "current_weight": 0.191708,
-      "current_market_value": 300875.95,
+      "current_weight": 0.189906,
+      "current_market_value": 303234.45,
       "planned_action": "keep",
       "planned_rank": null,
       "planned_weight": null,
@@ -17241,49 +17260,53 @@
             {
               "date": "2026-07-13",
               "value": 0.257622
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.264116
             }
           ],
-          "latest_deviation": 0.257622,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.264116,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.168025,
-            "std": 0.134582,
-            "count": 935,
+            "mean": 0.168128,
+            "std": 0.134547,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.235721
+                "value": -0.235513
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.101139
+                "value": -0.100966
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 0.033443
+                "value": 0.033581
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.168025
+                "value": 0.168128
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.302607
+                "value": 0.302675
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.437189
+                "value": 0.437222
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.571771
+                "value": 0.571769
               }
             ]
           }
@@ -18239,51 +18262,51 @@
               "value": 0.929378
             },
             {
-              "date": "2026-07-13",
-              "value": 0.853387
+              "date": "2026-07-14",
+              "value": 0.867645
             }
           ],
-          "latest_deviation": 0.853387,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.867645,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.462119,
-            "std": 0.384951,
+            "mean": 0.462179,
+            "std": 0.385013,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.692734
+                "value": -0.69286
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.307783
+                "value": -0.307847
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 0.077168
+                "value": 0.077166
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.462119
+                "value": 0.462179
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.84707
+                "value": 0.847192
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.232021
+                "value": 1.232205
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.616972
+                "value": 1.617218
               }
             ]
           }
@@ -18309,20 +18332,20 @@
       ],
       "source_ranks": {
         "buy_top20": 6,
-        "profit_top10": 9,
+        "profit_top10": 10,
         "current_top10": 1,
-        "planned_holdings": 1
+        "planned_holdings": 2
       },
       "buy_count": 1.0,
       "total_buy_value": 310747.63,
-      "pnl_dollar": 38531.13,
+      "pnl_dollar": 40823.38,
       "profit_trade_count": 1.0,
-      "current_weight": 0.222549,
-      "current_market_value": 349278.76,
+      "current_weight": 0.220178,
+      "current_market_value": 351571.02,
       "planned_action": "keep",
-      "planned_rank": 1.0,
-      "planned_weight": 0.222549,
-      "planned_market_value": 349278.76,
+      "planned_rank": 2.0,
+      "planned_weight": 0.220178,
+      "planned_market_value": 351571.02,
       "timeframes": {
         "daily": {
           "key": "daily",
@@ -22069,49 +22092,53 @@
             {
               "date": "2026-07-13",
               "value": 0.041264
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.047596
             }
           ],
-          "latest_deviation": 0.041264,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.047596,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.123842,
-            "std": 0.189842,
-            "count": 935,
+            "mean": 0.123761,
+            "std": 0.189757,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.445684
+                "value": -0.44551
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.255842
+                "value": -0.255753
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.066
+                "value": -0.065996
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.123842
+                "value": 0.123761
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.313684
+                "value": 0.313518
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.503526
+                "value": 0.503275
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.693368
+                "value": 0.693032
               }
             ]
           }
@@ -23067,51 +23094,51 @@
               "value": 0.282414
             },
             {
-              "date": "2026-07-13",
-              "value": 0.25527
+              "date": "2026-07-14",
+              "value": 0.263404
             }
           ],
-          "latest_deviation": 0.25527,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.263404,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.193377,
-            "std": 0.426527,
+            "mean": 0.193411,
+            "std": 0.426532,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -1.086204
+                "value": -1.086185
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.659677
+                "value": -0.659653
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.23315
+                "value": -0.233121
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.193377
+                "value": 0.193411
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.619904
+                "value": 0.619943
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.046431
+                "value": 1.046475
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.472958
+                "value": 1.473007
               }
             ]
           }
@@ -23133,7 +23160,7 @@
       ],
       "source_ranks": {
         "buy_top20": 7,
-        "profit_top10": 8
+        "profit_top10": 9
       },
       "buy_count": 1.0,
       "total_buy_value": 294532.56,
@@ -26891,49 +26918,53 @@
             {
               "date": "2026-07-13",
               "value": 0.50976
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.554343
             }
           ],
-          "latest_deviation": 0.50976,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.554343,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.135037,
-            "std": 0.193992,
-            "count": 935,
+            "mean": 0.135485,
+            "std": 0.194371,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.446939
+                "value": -0.447628
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.252947
+                "value": -0.253257
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.058955
+                "value": -0.058886
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.135037
+                "value": 0.135485
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.329029
+                "value": 0.329856
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.523021
+                "value": 0.524227
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.717013
+                "value": 0.718598
               }
             ]
           }
@@ -27889,51 +27920,51 @@
               "value": 1.621251
             },
             {
-              "date": "2026-07-13",
-              "value": 1.466412
+              "date": "2026-07-14",
+              "value": 1.551261
             }
           ],
-          "latest_deviation": 1.466412,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 1.551261,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.197735,
-            "std": 0.431777,
+            "mean": 0.198093,
+            "std": 0.432863,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -1.097596
+                "value": -1.100496
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.665819
+                "value": -0.667633
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.234042
+                "value": -0.23477
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.197735
+                "value": 0.198093
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.629512
+                "value": 0.630956
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.061289
+                "value": 1.063819
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.493066
+                "value": 1.496682
               }
             ]
           }
@@ -31710,49 +31741,53 @@
             {
               "date": "2026-07-13",
               "value": 0.249178
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.281439
             }
           ],
-          "latest_deviation": 0.249178,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.281439,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.099271,
-            "std": 0.160724,
-            "count": 935,
+            "mean": 0.099465,
+            "std": 0.160749,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.382901
+                "value": -0.382782
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.222177
+                "value": -0.222033
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.061453
+                "value": -0.061284
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.099271
+                "value": 0.099465
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.259995
+                "value": 0.260214
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.420719
+                "value": 0.420963
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.581443
+                "value": 0.581712
               }
             ]
           }
@@ -32708,51 +32743,51 @@
               "value": 0.89293
             },
             {
-              "date": "2026-07-13",
-              "value": 0.803184
+              "date": "2026-07-14",
+              "value": 0.854045
             }
           ],
-          "latest_deviation": 0.803184,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.854045,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.114948,
-            "std": 0.314118,
+            "mean": 0.115163,
+            "std": 0.314605,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.827406
+                "value": -0.828652
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.513288
+                "value": -0.514047
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.19917
+                "value": -0.199442
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.114948
+                "value": 0.115163
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.429066
+                "value": 0.429768
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.743184
+                "value": 0.744373
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.057302
+                "value": 1.058978
               }
             ]
           }
@@ -36529,49 +36564,53 @@
             {
               "date": "2026-07-13",
               "value": 0.313573
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.286072
             }
           ],
-          "latest_deviation": 0.313573,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.286072,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.078717,
-            "std": 0.101955,
-            "count": 935,
+            "mean": 0.078939,
+            "std": 0.102126,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.227148
+                "value": -0.227439
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.125193
+                "value": -0.125313
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.023238
+                "value": -0.023187
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.078717
+                "value": 0.078939
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.180672
+                "value": 0.181065
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.282627
+                "value": 0.283191
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.384582
+                "value": 0.385317
               }
             ]
           }
@@ -37527,51 +37566,51 @@
               "value": 0.856605
             },
             {
-              "date": "2026-07-13",
-              "value": 0.810216
+              "date": "2026-07-14",
+              "value": 0.778007
             }
           ],
-          "latest_deviation": 0.810216,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.778007,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.082863,
-            "std": 0.254069,
+            "mean": 0.082727,
+            "std": 0.253688,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.679344
+                "value": -0.678337
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.425275
+                "value": -0.424649
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.171206
+                "value": -0.170961
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.082863
+                "value": 0.082727
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.336932
+                "value": 0.336415
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.591001
+                "value": 0.590103
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.84507
+                "value": 0.843791
               }
             ]
           }
@@ -37584,21 +37623,18 @@
       "name": "GE航天航空",
       "industry_labels": "航空航天与国防",
       "source_keys": [
-        "buy_top20",
-        "profit_top10"
+        "buy_top20"
       ],
       "source_labels": [
-        "BUY Top20",
-        "盈利贡献 Top10"
+        "BUY Top20"
       ],
       "source_ranks": {
-        "buy_top20": 10,
-        "profit_top10": 10
+        "buy_top20": 10
       },
       "buy_count": 1.0,
       "total_buy_value": 294532.56,
-      "pnl_dollar": 33185.23,
-      "profit_trade_count": 2.0,
+      "pnl_dollar": null,
+      "profit_trade_count": null,
       "current_weight": null,
       "current_market_value": null,
       "planned_action": null,
@@ -41351,24 +41387,28 @@
             {
               "date": "2026-07-13",
               "value": 0.155406
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.154623
             }
           ],
-          "latest_deviation": 0.155406,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.154623,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.197956,
-            "std": 0.104639,
-            "count": 935,
+            "mean": 0.19791,
+            "std": 0.104593,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.115961
+                "value": -0.115869
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.011322
+                "value": -0.011276
               },
               {
                 "sigma": -1,
@@ -41378,22 +41418,22 @@
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.197956
+                "value": 0.19791
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.302595
+                "value": 0.302503
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.407234
+                "value": 0.407096
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.511873
+                "value": 0.511689
               }
             ]
           }
@@ -42349,21 +42389,21 @@
               "value": 0.780664
             },
             {
-              "date": "2026-07-13",
-              "value": 0.738665
+              "date": "2026-07-14",
+              "value": 0.740164
             }
           ],
-          "latest_deviation": 0.738665,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.740164,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.497732,
-            "std": 0.429212,
+            "mean": 0.497738,
+            "std": 0.429215,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.789904
+                "value": -0.789907
               },
               {
                 "sigma": -2,
@@ -42373,27 +42413,27 @@
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 0.06852
+                "value": 0.068523
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.497732
+                "value": 0.497738
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.926944
+                "value": 0.926953
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.356156
+                "value": 1.356168
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.785368
+                "value": 1.785383
               }
             ]
           }
@@ -46170,49 +46210,53 @@
             {
               "date": "2026-07-13",
               "value": 0.349463
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.393238
             }
           ],
-          "latest_deviation": 0.349463,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.393238,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.167569,
-            "std": 0.149318,
-            "count": 935,
+            "mean": 0.16781,
+            "std": 0.14942,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.280385
+                "value": -0.28045
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.131067
+                "value": -0.13103
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 0.018251
+                "value": 0.01839
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.167569
+                "value": 0.16781
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.316887
+                "value": 0.31723
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.466205
+                "value": 0.46665
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.615523
+                "value": 0.61607
               }
             ]
           }
@@ -47168,51 +47212,51 @@
               "value": 1.432167
             },
             {
-              "date": "2026-07-13",
-              "value": 1.304181
+              "date": "2026-07-14",
+              "value": 1.386366
             }
           ],
-          "latest_deviation": 1.304181,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 1.386366,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.36888,
-            "std": 0.425774,
+            "mean": 0.369227,
+            "std": 0.426569,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.908442
+                "value": -0.91048
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.482668
+                "value": -0.483911
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.056894
+                "value": -0.057342
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.36888
+                "value": 0.369227
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.794654
+                "value": 0.795796
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.220428
+                "value": 1.222365
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.646202
+                "value": 1.648934
               }
             ]
           }
@@ -50989,49 +51033,53 @@
             {
               "date": "2026-07-13",
               "value": 0.417702
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.580592
             }
           ],
-          "latest_deviation": 0.417702,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.580592,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.113456,
-            "std": 0.21233,
-            "count": 935,
+            "mean": 0.113955,
+            "std": 0.212764,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.523534
+                "value": -0.524337
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.311204
+                "value": -0.311573
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.098874
+                "value": -0.098809
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.113456
+                "value": 0.113955
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.325786
+                "value": 0.326719
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.538116
+                "value": 0.539483
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.750446
+                "value": 0.752247
               }
             ]
           }
@@ -51987,51 +52035,51 @@
               "value": 1.027172
             },
             {
-              "date": "2026-07-13",
-              "value": 1.014331
+              "date": "2026-07-14",
+              "value": 1.253469
             }
           ],
-          "latest_deviation": 1.014331,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 1.253469,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.284418,
-            "std": 0.391705,
+            "mean": 0.285427,
+            "std": 0.393886,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.890697
+                "value": -0.896231
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.498992
+                "value": -0.502345
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.107287
+                "value": -0.108459
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.284418
+                "value": 0.285427
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.676123
+                "value": 0.679313
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.067828
+                "value": 1.073199
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.459533
+                "value": 1.467085
               }
             ]
           }
@@ -55808,49 +55856,53 @@
             {
               "date": "2026-07-13",
               "value": 0.067661
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.033194
             }
           ],
-          "latest_deviation": 0.067661,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.033194,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.028336,
-            "std": 0.139946,
-            "count": 935,
+            "mean": 0.028341,
+            "std": 0.139872,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.391502
+                "value": -0.391275
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.251556
+                "value": -0.251403
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.11161
+                "value": -0.111531
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.028336
+                "value": 0.028341
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.168282
+                "value": 0.168213
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.308228
+                "value": 0.308085
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.448174
+                "value": 0.447957
               }
             ]
           }
@@ -56806,51 +56858,51 @@
               "value": 0.214666
             },
             {
-              "date": "2026-07-13",
-              "value": 0.179274
+              "date": "2026-07-14",
+              "value": 0.142013
             }
           ],
-          "latest_deviation": 0.179274,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.142013,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": -0.020967,
-            "std": 0.197997,
+            "mean": -0.021124,
+            "std": 0.197853,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.614958
+                "value": -0.614683
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.416961
+                "value": -0.41683
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.218964
+                "value": -0.218977
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": -0.020967
+                "value": -0.021124
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.17703
+                "value": 0.176729
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.375027
+                "value": 0.374582
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.573024
+                "value": 0.572435
               }
             ]
           }
@@ -60627,49 +60679,53 @@
             {
               "date": "2026-07-13",
               "value": 0.667984
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.698854
             }
           ],
-          "latest_deviation": 0.667984,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.698854,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.126911,
-            "std": 0.272987,
-            "count": 935,
+            "mean": 0.127522,
+            "std": 0.27348,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.69205
+                "value": -0.692918
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.419063
+                "value": -0.419438
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.146076
+                "value": -0.145958
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.126911
+                "value": 0.127522
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.399898
+                "value": 0.401002
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.672885
+                "value": 0.674482
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.945872
+                "value": 0.947962
               }
             ]
           }
@@ -61625,51 +61681,51 @@
               "value": 1.958365
             },
             {
-              "date": "2026-07-13",
-              "value": 1.782971
+              "date": "2026-07-14",
+              "value": 1.852495
             }
           ],
-          "latest_deviation": 1.782971,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 1.852495,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.155927,
-            "std": 0.507259,
+            "mean": 0.156221,
+            "std": 0.508219,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -1.36585
+                "value": -1.368436
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.858591
+                "value": -0.860217
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.351332
+                "value": -0.351998
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.155927
+                "value": 0.156221
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.663186
+                "value": 0.66444
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.170445
+                "value": 1.172659
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.677704
+                "value": 1.680878
               }
             ]
           }
@@ -65449,49 +65505,53 @@
             {
               "date": "2026-07-13",
               "value": 0.428079
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.485062
             }
           ],
-          "latest_deviation": 0.428079,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.485062,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.070835,
-            "std": 0.335756,
-            "count": 935,
+            "mean": 0.071277,
+            "std": 0.335849,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.936433
+                "value": -0.93627
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.600677
+                "value": -0.600421
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.264921
+                "value": -0.264572
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.070835
+                "value": 0.071277
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.406591
+                "value": 0.407126
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.742347
+                "value": 0.742975
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.078103
+                "value": 1.078824
               }
             ]
           }
@@ -66447,51 +66507,51 @@
               "value": 1.524937
             },
             {
-              "date": "2026-07-13",
-              "value": 1.338572
+              "date": "2026-07-14",
+              "value": 1.441242
             }
           ],
-          "latest_deviation": 1.338572,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 1.441242,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": -0.05051,
-            "std": 0.52834,
+            "mean": -0.050077,
+            "std": 0.52952,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -1.63553
+                "value": -1.638637
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -1.10719
+                "value": -1.109117
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.57885
+                "value": -0.579597
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": -0.05051
+                "value": -0.050077
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.47783
+                "value": 0.479443
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.00617
+                "value": 1.008963
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.53451
+                "value": 1.538483
               }
             ]
           }
@@ -70271,49 +70331,53 @@
             {
               "date": "2026-07-13",
               "value": 0.578758
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.601396
             }
           ],
-          "latest_deviation": 0.578758,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.601396,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.215641,
-            "std": 0.326595,
-            "count": 935,
+            "mean": 0.216053,
+            "std": 0.326664,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.764144
+                "value": -0.763939
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.437549
+                "value": -0.437275
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.110954
+                "value": -0.110611
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.215641
+                "value": 0.216053
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.542236
+                "value": 0.542717
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.868831
+                "value": 0.869381
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.195426
+                "value": 1.196045
               }
             ]
           }
@@ -71269,51 +71333,51 @@
               "value": 2.867262
             },
             {
-              "date": "2026-07-13",
-              "value": 2.562068
+              "date": "2026-07-14",
+              "value": 2.632477
             }
           ],
-          "latest_deviation": 2.562068,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 2.632477,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.377595,
-            "std": 0.936313,
+            "mean": 0.377892,
+            "std": 0.937017,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -2.431344
+                "value": -2.433159
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -1.495031
+                "value": -1.496142
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.558718
+                "value": -0.559125
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.377595
+                "value": 0.377892
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 1.313908
+                "value": 1.314909
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 2.250221
+                "value": 2.251926
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 3.186534
+                "value": 3.188943
               }
             ]
           }
@@ -75093,49 +75157,53 @@
             {
               "date": "2026-07-13",
               "value": 0.455049
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.480703
             }
           ],
-          "latest_deviation": 0.455049,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.480703,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.101982,
-            "std": 0.288687,
-            "count": 935,
+            "mean": 0.102386,
+            "std": 0.288797,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.764079
+                "value": -0.764005
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.475392
+                "value": -0.475208
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.186705
+                "value": -0.186411
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.101982
+                "value": 0.102386
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.390669
+                "value": 0.391183
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.679356
+                "value": 0.67998
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.968043
+                "value": 0.968777
               }
             ]
           }
@@ -76091,51 +76159,51 @@
               "value": 1.549516
             },
             {
-              "date": "2026-07-13",
-              "value": 1.320661
+              "date": "2026-07-14",
+              "value": 1.371806
             }
           ],
-          "latest_deviation": 1.320661,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 1.371806,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.05611,
-            "std": 0.481662,
+            "mean": 0.056325,
+            "std": 0.48224,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -1.388876
+                "value": -1.390395
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.907214
+                "value": -0.908155
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.425552
+                "value": -0.425915
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.05611
+                "value": 0.056325
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.537772
+                "value": 0.538565
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.019434
+                "value": 1.020805
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.501096
+                "value": 1.503045
               }
             ]
           }
@@ -79912,49 +79980,53 @@
             {
               "date": "2026-07-13",
               "value": 0.30329
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.331088
             }
           ],
-          "latest_deviation": 0.30329,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.331088,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.159771,
-            "std": 0.210607,
-            "count": 935,
+            "mean": 0.159954,
+            "std": 0.210569,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.47205
+                "value": -0.471753
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.261443
+                "value": -0.261184
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.050836
+                "value": -0.050615
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.159771
+                "value": 0.159954
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.370378
+                "value": 0.370523
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.580985
+                "value": 0.581092
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.791592
+                "value": 0.791661
               }
             ]
           }
@@ -80910,51 +80982,51 @@
               "value": 1.623859
             },
             {
-              "date": "2026-07-13",
-              "value": 1.479495
+              "date": "2026-07-14",
+              "value": 1.539286
             }
           ],
-          "latest_deviation": 1.479495,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 1.539286,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.325548,
-            "std": 0.569779,
+            "mean": 0.3258,
+            "std": 0.570303,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -1.383789
+                "value": -1.385109
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.81401
+                "value": -0.814806
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.244231
+                "value": -0.244503
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.325548
+                "value": 0.3258
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.895327
+                "value": 0.896103
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 1.465106
+                "value": 1.466406
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 2.034885
+                "value": 2.036709
               }
             ]
           }
@@ -84734,49 +84806,53 @@
             {
               "date": "2026-07-13",
               "value": 0.088554
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.090003
             }
           ],
-          "latest_deviation": 0.088554,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.090003,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.106931,
-            "std": 0.136222,
-            "count": 935,
+            "mean": 0.106913,
+            "std": 0.136151,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.301735
+                "value": -0.30154
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.165513
+                "value": -0.165389
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.029291
+                "value": -0.029238
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.106931
+                "value": 0.106913
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.243153
+                "value": 0.243064
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.379375
+                "value": 0.379215
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 0.515597
+                "value": 0.515366
               }
             ]
           }
@@ -85732,51 +85808,51 @@
               "value": 0.455921
             },
             {
-              "date": "2026-07-13",
-              "value": 0.49551
+              "date": "2026-07-14",
+              "value": 0.498805
             }
           ],
-          "latest_deviation": 0.49551,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.498805,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.446867,
-            "std": 0.221837,
+            "mean": 0.446881,
+            "std": 0.22184,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.218644
+                "value": -0.218639
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": 0.003193
+                "value": 0.003201
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 0.22503
+                "value": 0.225041
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.446867
+                "value": 0.446881
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.668704
+                "value": 0.668721
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.890541
+                "value": 0.890561
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.112378
+                "value": 1.112401
               }
             ]
           }
@@ -89553,49 +89629,53 @@
             {
               "date": "2026-07-13",
               "value": 0.223057
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.211323
             }
           ],
-          "latest_deviation": 0.223057,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.211323,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.308544,
-            "std": 0.256393,
-            "count": 935,
+            "mean": 0.30844,
+            "std": 0.256275,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.460635
+                "value": -0.460385
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.204242
+                "value": -0.20411
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": 0.052151
+                "value": 0.052165
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.308544
+                "value": 0.30844
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.564937
+                "value": 0.564715
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.82133
+                "value": 0.82099
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.077723
+                "value": 1.077265
               }
             ]
           }
@@ -90551,51 +90631,51 @@
               "value": 1.452319
             },
             {
-              "date": "2026-07-13",
-              "value": 1.321179
+              "date": "2026-07-14",
+              "value": 1.304199
             }
           ],
-          "latest_deviation": 1.321179,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 1.304199,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.736825,
-            "std": 0.808001,
+            "mean": 0.736753,
+            "std": 0.80795,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -1.687178
+                "value": -1.687097
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.879177
+                "value": -0.879147
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.071176
+                "value": -0.071197
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.736825
+                "value": 0.736753
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 1.544826
+                "value": 1.544703
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 2.352827
+                "value": 2.352653
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 3.160828
+                "value": 3.160603
               }
             ]
           }
@@ -94372,49 +94452,53 @@
             {
               "date": "2026-07-13",
               "value": 0.596921
+            },
+            {
+              "date": "2026-07-14",
+              "value": 0.609339
             }
           ],
-          "latest_deviation": 0.596921,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 0.609339,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.238292,
+            "mean": 0.238689,
             "std": 0.37122,
-            "count": 935,
+            "count": 936,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -0.875368
+                "value": -0.874971
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -0.504148
+                "value": -0.503751
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.132928
+                "value": -0.132531
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.238292
+                "value": 0.238689
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 0.609512
+                "value": 0.609909
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 0.980732
+                "value": 0.981129
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 1.351952
+                "value": 1.352349
               }
             ]
           }
@@ -95370,51 +95454,51 @@
               "value": 3.10223
             },
             {
-              "date": "2026-07-13",
-              "value": 2.801715
+              "date": "2026-07-14",
+              "value": 2.852848
             }
           ],
-          "latest_deviation": 2.801715,
-          "latest_date": "2026-07-13",
+          "latest_deviation": 2.852848,
+          "latest_date": "2026-07-14",
           "distribution": {
-            "mean": 0.447306,
-            "std": 1.073606,
+            "mean": 0.447522,
+            "std": 1.074084,
             "count": 237,
             "levels": [
               {
                 "sigma": -3,
                 "label": "-3σ",
-                "value": -2.773512
+                "value": -2.77473
               },
               {
                 "sigma": -2,
                 "label": "-2σ",
-                "value": -1.699906
+                "value": -1.700646
               },
               {
                 "sigma": -1,
                 "label": "-1σ",
-                "value": -0.6263
+                "value": -0.626562
               },
               {
                 "sigma": 0,
                 "label": "均值",
-                "value": 0.447306
+                "value": 0.447522
               },
               {
                 "sigma": 1,
                 "label": "+1σ",
-                "value": 1.520912
+                "value": 1.521606
               },
               {
                 "sigma": 2,
                 "label": "+2σ",
-                "value": 2.594518
+                "value": 2.59569
               },
               {
                 "sigma": 3,
                 "label": "+3σ",
-                "value": 3.668124
+                "value": 3.669774
               }
             ]
           }

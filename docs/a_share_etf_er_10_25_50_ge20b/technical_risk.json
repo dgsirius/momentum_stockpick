@@ -1,0 +1,644 @@
+{
+  "generated_at": "2026-07-15T17:22:25",
+  "variant_name": "A股 ETF ER 10/25/50（规模20亿+ 日调仓 Top5）",
+  "variant_slug": "a_share_etf_er_10_25_50_ge20b",
+  "universe_mode": "current_and_planned",
+  "holding_count": 12,
+  "current_holding_count": 5,
+  "planned_buy_count": 5,
+  "historical_buy_count": 0,
+  "ticker_count": 12,
+  "risk_high_count": 11,
+  "backtest_period": "验证期 2025-07-15 至 2026-07-15",
+  "training_period": "训练期 2022-01-03 至 2025-07-14",
+  "validation_method": "参数仅在训练期选择，胜率和平均收益来自随后一年验证期",
+  "strategy_summary": {
+    "stop_atr": 2.0,
+    "take_atr": 1.5,
+    "trades": 1279,
+    "win_rate": 0.749,
+    "avg_return": 0.016
+  },
+  "rows": [
+    {
+      "ticker": "US.QQQ",
+      "name": "QQQ",
+      "sources": [
+        "基准观察"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-07-14",
+      "close": 719.69,
+      "score": 74,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "高",
+      "risk_reasons": [
+        "MACD动能转弱"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 34,
+        "macd": 15,
+        "kdj": 9,
+        "volume": 6,
+        "atr": 10
+      },
+      "texts": {
+        "trend": "趋势34/40，EMA多头排列",
+        "macd": "MACD15/25，零轴上方动能占优",
+        "kdj": "KDJ9/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR10/10，执行位置可接受"
+      },
+      "atr": 14.977,
+      "stop_loss": 693.4215,
+      "take_profit": 742.1555,
+      "add_price": 708.3985,
+      "invalidation": 685.933,
+      "stop_pct": 0.0379,
+      "take_pct": 0.0312,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 95,
+        "win_rate": 0.5053,
+        "avg_return": -0.002,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SZ.159509",
+      "name": "纳指科技ETF景顺",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-07-15",
+      "close": 2.7,
+      "score": 50,
+      "rating": "2分",
+      "action": "不交易",
+      "risk_level": "高",
+      "risk_reasons": [
+        "评分低于52",
+        "MACD动能转弱"
+      ],
+      "cap_reason": "MACD零轴下方死叉",
+      "parts": {
+        "trend": 34,
+        "macd": 9,
+        "kdj": 8,
+        "volume": 8,
+        "atr": 8
+      },
+      "texts": {
+        "trend": "趋势34/40，EMA多头排列",
+        "macd": "MACD9/25，仍处修复或弱势区",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能8/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
+      },
+      "atr": 0.0564,
+      "stop_loss": 2.5871,
+      "take_profit": 2.7846,
+      "add_price": 2.5882,
+      "invalidation": 2.5036,
+      "stop_pct": 0.0436,
+      "take_pct": 0.0313,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 91,
+        "win_rate": 0.6923,
+        "avg_return": 0.0081,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.512930",
+      "name": "AI人工智能ETF平安",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-07-15",
+      "close": 0.722,
+      "score": 47,
+      "rating": "2分",
+      "action": "不交易",
+      "risk_level": "高",
+      "risk_reasons": [
+        "评分低于52",
+        "MACD动能转弱",
+        "ATR赔率位置差"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 26,
+        "macd": 12,
+        "kdj": 5,
+        "volume": 2,
+        "atr": 2
+      },
+      "texts": {
+        "trend": "趋势26/40，均线结构偏震荡或转弱",
+        "macd": "MACD12/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能2/15，量价确认不足",
+        "atr": "ATR2/10，追价风险偏高"
+      },
+      "atr": 0.0408,
+      "stop_loss": 0.6656,
+      "take_profit": 0.7832,
+      "add_price": 0.7064,
+      "invalidation": 0.6452,
+      "stop_pct": 0.0847,
+      "take_pct": 0.0847,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 111,
+        "win_rate": 0.7748,
+        "avg_return": 0.015,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.515070",
+      "name": "人工智能ETF华夏",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-07-15",
+      "close": 1.282,
+      "score": 47,
+      "rating": "2分",
+      "action": "不交易",
+      "risk_level": "高",
+      "risk_reasons": [
+        "评分低于52",
+        "MACD动能转弱",
+        "ATR赔率位置差"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 26,
+        "macd": 12,
+        "kdj": 5,
+        "volume": 2,
+        "atr": 2
+      },
+      "texts": {
+        "trend": "趋势26/40，均线结构偏震荡或转弱",
+        "macd": "MACD12/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能2/15，量价确认不足",
+        "atr": "ATR2/10，追价风险偏高"
+      },
+      "atr": 0.0723,
+      "stop_loss": 1.1848,
+      "take_profit": 1.3905,
+      "add_price": 1.2572,
+      "invalidation": 1.1487,
+      "stop_pct": 0.082,
+      "take_pct": 0.0846,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 109,
+        "win_rate": 0.7798,
+        "avg_return": 0.0157,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.515980",
+      "name": "人工智能ETF华富",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-07-15",
+      "close": 1.17,
+      "score": 47,
+      "rating": "2分",
+      "action": "不交易",
+      "risk_level": "高",
+      "risk_reasons": [
+        "评分低于52",
+        "MACD动能转弱",
+        "ATR赔率位置差"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 26,
+        "macd": 12,
+        "kdj": 5,
+        "volume": 2,
+        "atr": 2
+      },
+      "texts": {
+        "trend": "趋势26/40，均线结构偏震荡或转弱",
+        "macd": "MACD12/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能2/15，量价确认不足",
+        "atr": "ATR2/10，追价风险偏高"
+      },
+      "atr": 0.0699,
+      "stop_loss": 1.08,
+      "take_profit": 1.2749,
+      "add_price": 1.15,
+      "invalidation": 1.0451,
+      "stop_pct": 0.0833,
+      "take_pct": 0.0897,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 108,
+        "win_rate": 0.787,
+        "avg_return": 0.0176,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.561980",
+      "name": "半导体设备ETF招商",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.1982804863,
+      "market_value": 113973.7417337916,
+      "status": "ok",
+      "latest_date": "2026-07-15",
+      "close": 0.787,
+      "score": 47,
+      "rating": "2分",
+      "action": "不交易",
+      "risk_level": "高",
+      "risk_reasons": [
+        "评分低于52",
+        "MACD动能转弱",
+        "ATR赔率位置差"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 26,
+        "macd": 12,
+        "kdj": 5,
+        "volume": 2,
+        "atr": 2
+      },
+      "texts": {
+        "trend": "趋势26/40，均线结构偏震荡或转弱",
+        "macd": "MACD12/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能2/15，量价确认不足",
+        "atr": "ATR2/10，追价风险偏高"
+      },
+      "atr": 0.0666,
+      "stop_loss": 0.6537,
+      "take_profit": 0.887,
+      "add_price": 0.6965,
+      "invalidation": 0.5966,
+      "stop_pct": 0.2039,
+      "take_pct": 0.127,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 123,
+        "win_rate": 0.7642,
+        "avg_return": 0.021,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.588200",
+      "name": "科创芯片ETF嘉实",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.2012036602,
+      "market_value": 115654.0133551793,
+      "status": "ok",
+      "latest_date": "2026-07-15",
+      "close": 4.14,
+      "score": 47,
+      "rating": "2分",
+      "action": "不交易",
+      "risk_level": "高",
+      "risk_reasons": [
+        "评分低于52",
+        "MACD动能转弱",
+        "ATR赔率位置差"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 26,
+        "macd": 12,
+        "kdj": 5,
+        "volume": 2,
+        "atr": 2
+      },
+      "texts": {
+        "trend": "趋势26/40，均线结构偏震荡或转弱",
+        "macd": "MACD12/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能2/15，量价确认不足",
+        "atr": "ATR2/10，追价风险偏高"
+      },
+      "atr": 0.3296,
+      "stop_loss": 3.4932,
+      "take_profit": 4.6344,
+      "add_price": 3.8228,
+      "invalidation": 3.3284,
+      "stop_pct": 0.1852,
+      "take_pct": 0.1194,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 123,
+        "win_rate": 0.813,
+        "avg_return": 0.0246,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.588750",
+      "name": "科创芯片ETF汇添富",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.1998786328,
+      "market_value": 114892.3734288637,
+      "status": "ok",
+      "latest_date": "2026-07-15",
+      "close": 2.756,
+      "score": 47,
+      "rating": "2分",
+      "action": "不交易",
+      "risk_level": "高",
+      "risk_reasons": [
+        "评分低于52",
+        "MACD动能转弱",
+        "ATR赔率位置差"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 26,
+        "macd": 12,
+        "kdj": 5,
+        "volume": 2,
+        "atr": 2
+      },
+      "texts": {
+        "trend": "趋势26/40，均线结构偏震荡或转弱",
+        "macd": "MACD12/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能2/15，量价确认不足",
+        "atr": "ATR2/10，追价风险偏高"
+      },
+      "atr": 0.2183,
+      "stop_loss": 2.3229,
+      "take_profit": 3.0834,
+      "add_price": 2.5411,
+      "invalidation": 2.2137,
+      "stop_pct": 0.1865,
+      "take_pct": 0.1188,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 72,
+        "win_rate": 0.7778,
+        "avg_return": 0.0218,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.588890",
+      "name": "科创芯片ETF南方",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.1998207664,
+      "market_value": 114859.1111990062,
+      "status": "ok",
+      "latest_date": "2026-07-15",
+      "close": 4.675,
+      "score": 47,
+      "rating": "2分",
+      "action": "不交易",
+      "risk_level": "高",
+      "risk_reasons": [
+        "评分低于52",
+        "MACD动能转弱",
+        "ATR赔率位置差"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 26,
+        "macd": 12,
+        "kdj": 5,
+        "volume": 2,
+        "atr": 2
+      },
+      "texts": {
+        "trend": "趋势26/40，均线结构偏震荡或转弱",
+        "macd": "MACD12/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能2/15，量价确认不足",
+        "atr": "ATR2/10，追价风险偏高"
+      },
+      "atr": 0.3711,
+      "stop_loss": 4.2111,
+      "take_profit": 5.2317,
+      "add_price": 4.2936,
+      "invalidation": 3.7369,
+      "stop_pct": 0.1102,
+      "take_pct": 0.1191,
+      "exit_strategy": {
+        "stop_atr": 1.25,
+        "take_atr": 1.5,
+        "trades": 122,
+        "win_rate": 0.7377,
+        "avg_return": 0.0224,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SZ.159819",
+      "name": "人工智能ETF易方达",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-07-15",
+      "close": 2.029,
+      "score": 47,
+      "rating": "2分",
+      "action": "不交易",
+      "risk_level": "高",
+      "risk_reasons": [
+        "评分低于52",
+        "MACD动能转弱",
+        "ATR赔率位置差"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 26,
+        "macd": 12,
+        "kdj": 5,
+        "volume": 2,
+        "atr": 2
+      },
+      "texts": {
+        "trend": "趋势26/40，均线结构偏震荡或转弱",
+        "macd": "MACD12/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能2/15，量价确认不足",
+        "atr": "ATR2/10，追价风险偏高"
+      },
+      "atr": 0.1148,
+      "stop_loss": 1.8746,
+      "take_profit": 2.2012,
+      "add_price": 1.9894,
+      "invalidation": 1.8172,
+      "stop_pct": 0.0824,
+      "take_pct": 0.0849,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 108,
+        "win_rate": 0.7685,
+        "avg_return": 0.0149,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.588290",
+      "name": "科创芯片ETF华安",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.2008164543,
+      "market_value": 115431.4432653297,
+      "status": "ok",
+      "latest_date": "2026-07-15",
+      "close": 4.047,
+      "score": 46,
+      "rating": "2分",
+      "action": "不交易",
+      "risk_level": "高",
+      "risk_reasons": [
+        "评分低于52",
+        "MACD动能转弱",
+        "ATR赔率位置差"
+      ],
+      "cap_reason": "放量转弱",
+      "parts": {
+        "trend": 26,
+        "macd": 12,
+        "kdj": 5,
+        "volume": 1,
+        "atr": 2
+      },
+      "texts": {
+        "trend": "趋势26/40，均线结构偏震荡或转弱",
+        "macd": "MACD12/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能1/15，量价确认不足",
+        "atr": "ATR2/10，追价风险偏高"
+      },
+      "atr": 0.3179,
+      "stop_loss": 3.4131,
+      "take_profit": 4.5238,
+      "add_price": 3.7309,
+      "invalidation": 3.2541,
+      "stop_pct": 0.1857,
+      "take_pct": 0.1178,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 124,
+        "win_rate": 0.8065,
+        "avg_return": 0.0219,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.SPY",
+      "name": "SPY",
+      "sources": [
+        "基准观察"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-07-14",
+      "close": 751.83,
+      "score": 78,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "低",
+      "risk_reasons": [],
+      "cap_reason": null,
+      "parts": {
+        "trend": 33,
+        "macd": 22,
+        "kdj": 6,
+        "volume": 7,
+        "atr": 10
+      },
+      "texts": {
+        "trend": "趋势33/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ6/10，节奏未见明确背离",
+        "volume": "量能7/15，量价确认不足",
+        "atr": "ATR10/10，执行位置可接受"
+      },
+      "atr": 8.8775,
+      "stop_loss": 734.075,
+      "take_profit": 761.1187,
+      "add_price": 721.0188,
+      "invalidation": 707.7025,
+      "stop_pct": 0.0242,
+      "take_pct": 0.0124,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 93,
+        "win_rate": 0.6344,
+        "avg_return": 0.002,
+        "validation": true
+      }
+    }
+  ],
+  "input_version": "7810fd8a79e3d535b847",
+  "cache_hit": true,
+  "input_fingerprint_version": 2
+}
