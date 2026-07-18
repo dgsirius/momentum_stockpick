@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T15:55:49",
+  "generated_at": "2026-07-18T10:44:21",
   "variant_name": "ER 3/8/20 (100B Top5 双周 Top50 Buffer)",
   "variant_slug": "er_3_8_20_100b_top5_biweekly_top50",
   "universe_mode": "current_and_planned",
@@ -8,18 +8,70 @@
   "planned_buy_count": 0,
   "historical_buy_count": 0,
   "ticker_count": 5,
-  "risk_high_count": 3,
-  "backtest_period": "验证期 2025-07-16 至 2026-07-16",
-  "training_period": "训练期 2021-07-16 至 2025-07-15",
+  "risk_high_count": 4,
+  "backtest_period": "验证期 2025-07-17 至 2026-07-17",
+  "training_period": "训练期 2021-07-17 至 2025-07-16",
   "validation_method": "参数仅在训练期选择，胜率和平均收益来自随后一年验证期",
   "strategy_summary": {
     "stop_atr": 2.0,
     "take_atr": 1.5,
-    "trades": 441,
-    "win_rate": 0.5125,
-    "avg_return": -0.0033
+    "trades": 442,
+    "win_rate": 0.4977,
+    "avg_return": -0.0043
   },
   "rows": [
+    {
+      "ticker": "US.SPY",
+      "name": "SPY",
+      "sources": [
+        "基准观察"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-07-17",
+      "close": 743.29,
+      "score": 50,
+      "rating": "2分",
+      "action": "不交易",
+      "risk_level": "高",
+      "risk_reasons": [
+        "评分低于52",
+        "MACD动能转弱",
+        "ATR赔率位置差"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 30,
+        "macd": 12,
+        "kdj": 5,
+        "volume": 1,
+        "atr": 2
+      },
+      "texts": {
+        "trend": "趋势30/40，EMA多头排列",
+        "macd": "MACD12/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能1/15，量价确认不足",
+        "atr": "ATR2/10，追价风险偏高"
+      },
+      "atr": 7.6921,
+      "stop_loss": 727.9057,
+      "take_profit": 754.8282,
+      "add_price": 720.4261,
+      "invalidation": 708.8879,
+      "stop_pct": 0.0211,
+      "take_pct": 0.0155,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 96,
+        "win_rate": 0.5625,
+        "avg_return": 0.0009,
+        "validation": true
+      }
+    },
     {
       "ticker": "US.ANET",
       "name": "Arista Networks",
@@ -27,62 +79,11 @@
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.1834533465,
-      "market_value": 279964.942757418,
+      "weight": 0.1842415798,
+      "market_value": 280047.9888367834,
       "status": "ok",
-      "latest_date": "2026-07-16",
-      "close": 168.56,
-      "score": 54,
-      "rating": "3分",
-      "action": "持有观察",
-      "risk_level": "高",
-      "risk_reasons": [
-        "MACD动能转弱",
-        "ATR赔率位置差"
-      ],
-      "cap_reason": null,
-      "parts": {
-        "trend": 33,
-        "macd": 12,
-        "kdj": 5,
-        "volume": 2,
-        "atr": 2
-      },
-      "texts": {
-        "trend": "趋势33/40，EMA多头排列",
-        "macd": "MACD12/25，零轴上方动能占优",
-        "kdj": "KDJ5/10，节奏未见明确背离",
-        "volume": "量能2/15，量价确认不足",
-        "atr": "ATR2/10，追价风险偏高"
-      },
-      "atr": 11.3301,
-      "stop_loss": 149.075,
-      "take_profit": 185.5551,
-      "add_price": 160.405,
-      "invalidation": 143.4099,
-      "stop_pct": 0.1307,
-      "take_pct": 0.1008,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 107,
-        "win_rate": 0.4579,
-        "avg_return": -0.0161,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "US.DELL",
-      "name": "戴尔科技",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.1909915721,
-      "market_value": 291468.8969084655,
-      "status": "ok",
-      "latest_date": "2026-07-16",
-      "close": 391.38,
+      "latest_date": "2026-07-17",
+      "close": 168.61,
       "score": 47,
       "rating": "2分",
       "action": "不交易",
@@ -107,13 +108,65 @@
         "volume": "量能2/15，量价确认不足",
         "atr": "ATR2/10，追价风险偏高"
       },
-      "atr": 32.2616,
-      "stop_loss": 362.5292,
-      "take_profit": 439.7725,
-      "add_price": 394.7908,
-      "invalidation": 346.3984,
-      "stop_pct": 0.0796,
-      "take_pct": 0.1236,
+      "atr": 11.5865,
+      "stop_loss": 148.9468,
+      "take_profit": 185.9898,
+      "add_price": 160.5333,
+      "invalidation": 143.1535,
+      "stop_pct": 0.132,
+      "take_pct": 0.1031,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 106,
+        "win_rate": 0.4528,
+        "avg_return": -0.0184,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.DELL",
+      "name": "戴尔科技",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.1941854493,
+      "market_value": 295162.712966174,
+      "status": "ok",
+      "latest_date": "2026-07-17",
+      "close": 396.34,
+      "score": 47,
+      "rating": "2分",
+      "action": "不交易",
+      "risk_level": "高",
+      "risk_reasons": [
+        "评分低于52",
+        "MACD动能转弱",
+        "ATR赔率位置差"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 26,
+        "macd": 12,
+        "kdj": 5,
+        "volume": 2,
+        "atr": 2
+      },
+      "texts": {
+        "trend": "趋势26/40，均线结构偏震荡或转弱",
+        "macd": "MACD12/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能2/15，量价确认不足",
+        "atr": "ATR2/10，追价风险偏高"
+      },
+      "atr": 33.3106,
+      "stop_loss": 351.4897,
+      "take_profit": 446.3059,
+      "add_price": 384.8003,
+      "invalidation": 334.8344,
+      "stop_pct": 0.1276,
+      "take_pct": 0.1261,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
@@ -133,39 +186,40 @@
       "weight": null,
       "market_value": null,
       "status": "ok",
-      "latest_date": "2026-07-16",
-      "close": 705.94,
-      "score": 41,
-      "rating": "2分",
-      "action": "不交易",
+      "latest_date": "2026-07-17",
+      "close": 695.33,
+      "score": 34,
+      "rating": "1分",
+      "action": "不交易 / 空头观察",
       "risk_level": "高",
       "risk_reasons": [
         "评分低于52",
+        "跌破EMA55",
         "MACD动能转弱",
         "ATR赔率位置差"
       ],
-      "cap_reason": "MACD零轴下方死叉",
+      "cap_reason": "放量转弱",
       "parts": {
-        "trend": 26,
-        "macd": 6,
+        "trend": 22,
+        "macd": 4,
         "kdj": 5,
-        "volume": 2,
+        "volume": 1,
         "atr": 2
       },
       "texts": {
-        "trend": "趋势26/40，均线结构偏震荡或转弱",
-        "macd": "MACD6/25，仍处修复或弱势区",
+        "trend": "趋势22/40，均线结构偏震荡或转弱",
+        "macd": "MACD4/25，仍处修复或弱势区",
         "kdj": "KDJ5/10，节奏未见明确背离",
-        "volume": "量能2/15，量价确认不足",
+        "volume": "量能1/15，量价确认不足",
         "atr": "ATR2/10，追价风险偏高"
       },
-      "atr": 14.4234,
-      "stop_loss": 693.6983,
-      "take_profit": 727.5751,
-      "add_price": 708.1217,
-      "invalidation": 686.4866,
-      "stop_pct": 0.0176,
-      "take_pct": 0.0306,
+      "atr": 14.8241,
+      "stop_loss": 679.3479,
+      "take_profit": 717.5662,
+      "add_price": 694.1721,
+      "invalidation": 671.9359,
+      "stop_pct": 0.0235,
+      "take_pct": 0.032,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
@@ -182,12 +236,12 @@
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.2315946054,
-      "market_value": 353432.4757535612,
+      "weight": 0.2260371159,
+      "market_value": 343577.3823420079,
       "status": "ok",
-      "latest_date": "2026-07-16",
-      "close": 664.54,
-      "score": 78,
+      "latest_date": "2026-07-17",
+      "close": 646.01,
+      "score": 77,
       "rating": "4分",
       "action": "多头",
       "risk_level": "中",
@@ -198,83 +252,35 @@
       "parts": {
         "trend": 35,
         "macd": 22,
-        "kdj": 7,
-        "volume": 6,
-        "atr": 8
+        "kdj": 6,
+        "volume": 4,
+        "atr": 10
       },
       "texts": {
         "trend": "趋势35/40，EMA多头排列",
         "macd": "MACD22/25，零轴上方动能占优",
-        "kdj": "KDJ7/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR8/10，执行位置可接受"
-      },
-      "atr": 29.0846,
-      "stop_loss": 606.3708,
-      "take_profit": 700.6223,
-      "add_price": 554.7223,
-      "invalidation": 511.0954,
-      "stop_pct": 0.0959,
-      "take_pct": 0.0543,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 50,
-        "win_rate": 0.22,
-        "avg_return": -0.0307,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "US.SPY",
-      "name": "SPY",
-      "sources": [
-        "基准观察"
-      ],
-      "source_count": 1,
-      "weight": null,
-      "market_value": null,
-      "status": "ok",
-      "latest_date": "2026-07-16",
-      "close": 750.72,
-      "score": 78,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "低",
-      "risk_reasons": [],
-      "cap_reason": null,
-      "parts": {
-        "trend": 33,
-        "macd": 22,
-        "kdj": 6,
-        "volume": 7,
-        "atr": 10
-      },
-      "texts": {
-        "trend": "趋势33/40，EMA多头排列",
-        "macd": "MACD22/25，零轴上方动能占优",
         "kdj": "KDJ6/10，节奏未见明确背离",
-        "volume": "量能7/15，量价确认不足",
+        "volume": "量能4/15，量价确认不足",
         "atr": "ATR10/10，执行位置可接受"
       },
-      "atr": 8.4086,
-      "stop_loss": 733.9029,
-      "take_profit": 759.7843,
-      "add_price": 720.7843,
-      "invalidation": 708.1714,
-      "stop_pct": 0.0229,
-      "take_pct": 0.0121,
+      "atr": 30.6625,
+      "stop_loss": 584.6851,
+      "take_profit": 692.0037,
+      "add_price": 555.5112,
+      "invalidation": 509.5175,
+      "stop_pct": 0.1049,
+      "take_pct": 0.0712,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 95,
-        "win_rate": 0.6,
-        "avg_return": 0.0018,
+        "trades": 51,
+        "win_rate": 0.1765,
+        "avg_return": -0.0328,
         "validation": true
       }
     }
   ],
-  "input_version": "08a40cbc9f47e29cd54e",
+  "input_version": "04c868b797b9fa6a82d5",
   "input_fingerprint_version": 2,
   "cache_hit": false
 }
