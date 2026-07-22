@@ -40,7 +40,7 @@
       <p class="strategy-summary">市值大于1000亿美元，在4、12、36个交易日相较于 SPY 的超额收益排名选股。</p>
       <p class="muted">最近五年：2021-07-16 至 2026-07-21。每个自然周最后一个有效信号日选股，下一交易日开盘执行。</p>
     </div>
-    <div class="status"><span class="eyebrow">最新状态</span><strong>数据截至 2026-07-21</strong><div>模型持仓截至 2026-07-21</div><div>最近模型换仓 2026-07-20</div><p class="muted">网页生成：2026-07-22 10:24:54 CST</p></div>
+    <div class="status"><span class="eyebrow">最新状态</span><strong>数据截至 2026-07-21</strong><div>模型持仓截至 2026-07-21</div><div>最近模型换仓 2026-07-20</div><p class="muted">网页生成：2026-07-22 10:43:33 CST</p></div>
   </section>
   <section class="kpis">
     <div class="panel kpi"><span>五年累计收益</span><strong>534.2%</strong></div>
@@ -56,7 +56,7 @@
     <div class="grid2 chart-grid"><div><h3>净值路径（区间涨幅）</h3><div id="equityChart" class="interactive-chart" role="img" aria-label="策略与 SPY 在所选时间范围内的累计涨幅，可通过底部滑条缩放时间范围"></div></div><div><h3>回撤路径</h3><div id="drawdownChart" class="interactive-chart" role="img" aria-label="策略与 SPY 回撤路径，可通过底部滑条缩放时间范围"></div></div></div>
     <p id="chartFallback" class="muted chart-fallback" hidden>交互图表加载失败，请刷新页面后重试。</p>
   </section>
-  <section class="panel section" id="dailySignalSection"><div class="eyebrow">DAILY SIGNAL MONITOR</div><h2>每日最新 ER Top 10 排名</h2><p class="muted" id="dailySignalNote">每日收盘后更新观察排名；这里只显示名次，不展示 ER 数值，也不会触发日内换仓。</p>
+  <section class="panel section" id="dailySignalSection"><div class="eyebrow">DAILY SIGNAL MONITOR</div><h2>每日最新 ER Top 10 排名</h2><p class="muted" id="dailySignalNote">每日收盘后更新观察排名；该监控不会触发日内换仓。</p>
     <div class="table-wrap"><table class="signal-table"><thead><tr><th>排名</th><th>代码</th><th>名称</th></tr></thead><tbody id="dailySignalBody"><tr><td colspan="3">信号将在每日数据刷新后更新</td></tr></tbody></table></div>
   </section>
   <section class="panel section" id="currentHoldingsSection"><h2>当前模型持仓</h2><p class="muted" id="currentHoldingsNote">这是回测模型持仓，不是富途账户真实持仓；持仓盈亏按当前模型价格相对本轮持仓成本计算，未计退出费用。</p><div class='table-wrap'><table><thead><tr><th>类型</th><th>代码</th><th>名称</th><th>模型权重</th><th>模型股数</th><th>模型市值</th><th>持仓盈亏幅度</th></tr></thead><tbody><tr><td>多头</td><td>US.UNP</td><td>联合太平洋</td><td>10.9%</td><td>1,174.40</td><td>$344,253</td><td class='positive'>3.6%</td></tr><tr><td>多头</td><td>US.CVX</td><td>雪佛龙</td><td>10.3%</td><td>1,711.28</td><td>$326,975</td><td class='positive'>2.5%</td></tr><tr><td>多头</td><td>US.HWM</td><td>Howmet Aerospace</td><td>10.2%</td><td>1,160.94</td><td>$323,903</td><td class='positive'>1.6%</td></tr><tr><td>多头</td><td>US.SHEL</td><td>壳牌</td><td>10.2%</td><td>3,701.75</td><td>$322,793</td><td class='positive'>1.2%</td></tr><tr><td>多头</td><td>US.TMUS</td><td>T-Mobile US</td><td>10.0%</td><td>1,658.03</td><td>$316,303</td><td class='negative'>-0.1%</td></tr><tr><td>多头</td><td>US.FTNT</td><td>飞塔信息</td><td>9.9%</td><td>1,984.59</td><td>$313,764</td><td class='negative'>-1.6%</td></tr><tr><td>多头</td><td>US.ENB</td><td>恩桥</td><td>9.8%</td><td>5,623.48</td><td>$311,878</td><td class='negative'>-2.2%</td></tr><tr><td>多头</td><td>US.PANW</td><td>Palo Alto Networks</td><td>9.7%</td><td>898.72</td><td>$307,498</td><td class='negative'>-3.6%</td></tr><tr><td>多头</td><td>US.SPGI</td><td>标普全球</td><td>9.6%</td><td>703.84</td><td>$303,536</td><td class='negative'>-4.8%</td></tr><tr><td>多头</td><td>US.CRWD</td><td>CrowdStrike</td><td>9.5%</td><td>1,569.80</td><td>$300,067</td><td class='negative'>-5.9%</td></tr></tbody></table></div></section>
@@ -86,7 +86,7 @@
         addCell(row,item.ticker || '—');addCell(row,item.name || '—');nextBody.appendChild(row);
       });
       if (nextBody.children.length) body.replaceWith(nextBody);
-      if (note && data.signal_date) note.textContent=`截至 ${data.signal_date} 收盘后的观察排名；这里只显示名次，不展示 ER 数值。该监控不会触发日内换仓，模型仍按每个自然周最后一个有效信号日选股，并在下一交易日开盘执行。`;
+      if (note && data.signal_date) note.textContent=`截至 ${data.signal_date} 收盘后的观察排名。该监控不会触发日内换仓，模型仍按每个自然周最后一个有效信号日选股，并在下一交易日开盘执行。`;
     }).catch(() => null);
   })();
 
