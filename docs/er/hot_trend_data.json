@@ -1,7 +1,7 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "title": "热门资产跟踪+趋势资产判断",
-  "generated_at": "2026-07-25T21:26:21+08:00",
+  "generated_at": "2026-07-25T21:41:27+08:00",
   "heat_as_of": "2026-07-24",
   "er_signal_date": "2026-07-24",
   "opend_last_refresh": "2026-07-25T20:34:35+08:00",
@@ -23,7 +23,13 @@
       36
     ],
     "trend_strength": "股票池内0–100横截面排名",
-    "trend_candidate_rule": "当前双门槛达标、原日周结构共振规则通过、趋势强度≥85、入场质量A/B",
+    "opportunity_score": "趋势强度与历史延续分位按模型AUC自适应融合",
+    "trend_candidate_rule": "当前双门槛达标、趋势机会分≥90、入场质量A/B",
+    "opportunity_weights": {
+      "trend_strength": 0.952,
+      "historical_continuation": 0.048,
+      "model_reliability": 0.24
+    },
     "continuation_target": {
       "horizon_trading_days": 40,
       "take_profit": 0.08,
@@ -113,7 +119,7 @@
     "active": 105,
     "retained": 0,
     "high_probability": 0,
-    "trend_candidates": 4,
+    "trend_candidates": 6,
     "er_hits": 3,
     "computing": 5
   },
@@ -368,6 +374,275 @@
         }
       ],
       "continuation_probability_percentile": 44.8,
+      "opportunity_score": 95.5,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
+      "high_probability": false,
+      "continuation_high_confidence": false,
+      "trend_candidate": true
+    },
+    {
+      "code": "US.LLY",
+      "ticker": "LLY",
+      "name": "礼来",
+      "heat": 3.3675,
+      "last_qualified_heat": 3.3675,
+      "market_cap": 1126350973818.18,
+      "last_qualified_market_cap": 1126350973818.18,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 3.3675
+        }
+      ],
+      "daily": {
+        "ma_score": 4,
+        "ma_facts": [
+          true,
+          false,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 13.35906413936732,
+        "dea": 18.12690185812817,
+        "hist": -4.767837718760852,
+        "rsi": 57.0082172264708,
+        "volume_ratio": 0.9048263628935458,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 1196.03,
+        "previous_close": 1185.87,
+        "ma5": 1173.444,
+        "ma10": 1170.654,
+        "ma20": 1190.3325,
+        "ma60": 1100.4055487183832,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "daily_confirmed": {
+        "ma_score": 4,
+        "ma_facts": [
+          true,
+          false,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 13.35906413936732,
+        "dea": 18.12690185812817,
+        "hist": -4.767837718760852,
+        "rsi": 57.0082172264708,
+        "volume_ratio": 0.9048263628935458,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 1196.03,
+        "previous_close": 1185.87,
+        "ma5": 1173.444,
+        "ma10": 1170.654,
+        "ma20": 1190.3325,
+        "ma60": 1100.4055487183832,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "daily_is_partial": false,
+      "weekly": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 2,
+        "macd_facts": [
+          true,
+          true,
+          false
+        ],
+        "dif": 64.68074475596177,
+        "dea": 49.45534693557633,
+        "hist": 15.225397820385439,
+        "rsi": 65.39090919434305,
+        "volume_ratio": 0.7250388130358041,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 1196.03,
+        "previous_close": 1179.11,
+        "ma5": 1197.15,
+        "ma10": 1151.874,
+        "ma20": 1043.8559987869498,
+        "ma60": 939.4788434712001,
+        "ma_label": "强多头结构",
+        "macd_label": "多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "weekly_confirmed": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 2,
+        "macd_facts": [
+          true,
+          true,
+          false
+        ],
+        "dif": 64.68074475596177,
+        "dea": 49.45534693557633,
+        "hist": 15.225397820385439,
+        "rsi": 65.39090919434305,
+        "volume_ratio": 0.7250388130358041,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 1196.03,
+        "previous_close": 1179.11,
+        "ma5": 1197.15,
+        "ma10": 1151.874,
+        "ma20": 1043.8559987869498,
+        "ma60": 939.4788434712001,
+        "ma_label": "强多头结构",
+        "macd_label": "多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "weekly_is_partial": false,
+      "entry": {
+        "label": "回踩转强",
+        "close_distance_ma20_pct": 0.004786477727861671,
+        "close_distance_ma60_pct": 0.08689928126315638,
+        "distance_ma20_atr": 0.15474011206320173,
+        "distance_ma60_atr": 2.597093164949465,
+        "distance_20d_high_pct": -0.042754812117331675,
+        "distance_52w_high_pct": -0.042754812117331675,
+        "gap_pct": 0.007150868139003341,
+        "breakout_recent": false,
+        "breakout_days_since": 18,
+        "pullback_ma10_reclaim": true,
+        "pullback_ma20_reclaim": true,
+        "atr_pct": 0.03078501387192533,
+        "intraday_range_pct": 0.016394461450243352,
+        "max_drawdown_20d_pct": -0.07175693612612888,
+        "quality_grade": "A",
+        "quality_score": 85.0,
+        "quality_label": "触发明确",
+        "positive_reasons": [
+          "回踩 MA10/MA20 后重新转强",
+          "收盘位于 MA20 上方 0–1.5 ATR",
+          "RSI 位于健康强势区"
+        ],
+        "risk_reasons": []
+      },
+      "er_rank": null,
+      "er_hits_last5": 0,
+      "er_streak": 0,
+      "er_price_momentum_aligned": null,
+      "price_momentum": {
+        "returns": {
+          "4w": -0.010007284044631248,
+          "12w": 0.24369520330540828,
+          "36w": 0.17049833118111546
+        },
+        "mean": 0.1347287501472975,
+        "positive": true
+      },
+      "legacy_trend_score": 64.3,
+      "legacy_high_probability": false,
+      "legacy_trend_reasons": [
+        "日线MA 16.0",
+        "日线MACD 5.0",
+        "周线MA 25.0",
+        "周线MACD 13.3",
+        "RSI质量 5.0",
+        "未通过：日线MACD≥2"
+      ],
+      "confirmed_legacy_trend_score": 64.3,
+      "confirmed_legacy_high_probability": false,
+      "confirmed_legacy_trend_reasons": [
+        "日线MA 16.0",
+        "日线MACD 5.0",
+        "周线MA 25.0",
+        "周线MACD 13.3",
+        "RSI质量 5.0",
+        "未通过：日线MACD≥2"
+      ],
+      "continuation_probability": 0.412,
+      "sector": "一般药品制造商",
+      "trend_strength": 95.2,
+      "trend_strength_percentile": 4.8,
+      "trend_components": [
+        {
+          "name": "多周期波动调整动量",
+          "percentile": 83.7,
+          "weight": 30,
+          "contribution": 25.1
+        },
+        {
+          "name": "均线斜率与位置",
+          "percentile": 86.2,
+          "weight": 20,
+          "contribution": 17.2
+        },
+        {
+          "name": "趋势平滑度",
+          "percentile": 80.7,
+          "weight": 15,
+          "contribution": 12.1
+        },
+        {
+          "name": "ER持续性与同向性",
+          "percentile": 0.0,
+          "weight": 15,
+          "contribution": 0.0
+        },
+        {
+          "name": "相对SPY/行业强度",
+          "percentile": 86.8,
+          "weight": 10,
+          "contribution": 8.7
+        },
+        {
+          "name": "前高位置与风险",
+          "percentile": 88.1,
+          "weight": 10,
+          "contribution": 8.8
+        }
+      ],
+      "continuation_probability_percentile": 37.6,
+      "opportunity_score": 92.4,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": true
@@ -623,6 +898,275 @@
         }
       ],
       "continuation_probability_percentile": 57.1,
+      "opportunity_score": 92.5,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
+      "high_probability": false,
+      "continuation_high_confidence": false,
+      "trend_candidate": true
+    },
+    {
+      "code": "US.JNJ",
+      "ticker": "JNJ",
+      "name": "强生",
+      "heat": 1.4854,
+      "last_qualified_heat": 1.4854,
+      "market_cap": 634767290449.8,
+      "last_qualified_market_cap": 634767290449.8,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 1.4854
+        }
+      ],
+      "daily": {
+        "ma_score": 4,
+        "ma_facts": [
+          true,
+          false,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 4.077318317474209,
+        "dea": 4.41397497094619,
+        "hist": -0.33665665347198104,
+        "rsi": 62.71692344799372,
+        "volume_ratio": 0.7345069816500889,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 263.4,
+        "previous_close": 259.27,
+        "ma5": 255.546,
+        "ma10": 253.93800000000002,
+        "ma20": 256.47950000000003,
+        "ma60": 238.69049396026668,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "daily_confirmed": {
+        "ma_score": 4,
+        "ma_facts": [
+          true,
+          false,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 4.077318317474209,
+        "dea": 4.41397497094619,
+        "hist": -0.33665665347198104,
+        "rsi": 62.71692344799372,
+        "volume_ratio": 0.7345069816500889,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 263.4,
+        "previous_close": 259.27,
+        "ma5": 255.546,
+        "ma10": 253.93800000000002,
+        "ma20": 256.47950000000003,
+        "ma60": 238.69049396026668,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "daily_is_partial": false,
+      "weekly": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 3,
+        "macd_facts": [
+          true,
+          true,
+          true
+        ],
+        "dif": 11.231804753676698,
+        "dea": 9.621436030277337,
+        "hist": 1.610368723399361,
+        "rsi": 65.1657653163357,
+        "volume_ratio": 0.9343139438668904,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 263.4,
+        "previous_close": 253.04,
+        "ma5": 258.224,
+        "ma10": 245.1479999824,
+        "ma20": 238.69318996905,
+        "ma60": 206.01771935588334,
+        "ma_label": "强多头结构",
+        "macd_label": "强多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "weekly_confirmed": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 3,
+        "macd_facts": [
+          true,
+          true,
+          true
+        ],
+        "dif": 11.231804753676698,
+        "dea": 9.621436030277337,
+        "hist": 1.610368723399361,
+        "rsi": 65.1657653163357,
+        "volume_ratio": 0.9343139438668904,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 263.4,
+        "previous_close": 253.04,
+        "ma5": 258.224,
+        "ma10": 245.1479999824,
+        "ma20": 238.69318996905,
+        "ma60": 206.01771935588334,
+        "ma_label": "强多头结构",
+        "macd_label": "强多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "weekly_is_partial": false,
+      "entry": {
+        "label": "回踩转强",
+        "close_distance_ma20_pct": 0.02698266333176713,
+        "close_distance_ma60_pct": 0.1035211148536419,
+        "distance_ma20_atr": 1.1612016154134324,
+        "distance_ma60_atr": 4.146047009523371,
+        "distance_20d_high_pct": -0.022380581227035012,
+        "distance_52w_high_pct": -0.022380581227035012,
+        "gap_pct": 0.008331083426543762,
+        "breakout_recent": false,
+        "breakout_days_since": 13,
+        "pullback_ma10_reclaim": true,
+        "pullback_ma20_reclaim": true,
+        "atr_pct": 0.0226263276086891,
+        "intraday_range_pct": 0.015813630578161632,
+        "max_drawdown_20d_pct": -0.07566232599910194,
+        "quality_grade": "A",
+        "quality_score": 85.0,
+        "quality_label": "触发明确",
+        "positive_reasons": [
+          "回踩 MA10/MA20 后重新转强",
+          "收盘位于 MA20 上方 0–1.5 ATR",
+          "RSI 位于健康强势区"
+        ],
+        "risk_reasons": []
+      },
+      "er_rank": null,
+      "er_hits_last5": 0,
+      "er_streak": 0,
+      "er_price_momentum_aligned": null,
+      "price_momentum": {
+        "returns": {
+          "4w": 0.0343202701641403,
+          "12w": 0.16604970649399386,
+          "36w": 0.3679073584529602
+        },
+        "mean": 0.18942577837036478,
+        "positive": true
+      },
+      "legacy_trend_score": 71.0,
+      "legacy_high_probability": false,
+      "legacy_trend_reasons": [
+        "日线MA 16.0",
+        "日线MACD 5.0",
+        "周线MA 25.0",
+        "周线MACD 20.0",
+        "RSI质量 5.0",
+        "未通过：日线MACD≥2"
+      ],
+      "confirmed_legacy_trend_score": 71.0,
+      "confirmed_legacy_high_probability": false,
+      "confirmed_legacy_trend_reasons": [
+        "日线MA 16.0",
+        "日线MACD 5.0",
+        "周线MA 25.0",
+        "周线MACD 20.0",
+        "RSI质量 5.0",
+        "未通过：日线MACD≥2"
+      ],
+      "continuation_probability": 0.4345,
+      "sector": "一般药品制造商",
+      "trend_strength": 97.1,
+      "trend_strength_percentile": 2.9,
+      "trend_components": [
+        {
+          "name": "多周期波动调整动量",
+          "percentile": 91.5,
+          "weight": 30,
+          "contribution": 27.5
+        },
+        {
+          "name": "均线斜率与位置",
+          "percentile": 86.7,
+          "weight": 20,
+          "contribution": 17.3
+        },
+        {
+          "name": "趋势平滑度",
+          "percentile": 81.4,
+          "weight": 15,
+          "contribution": 12.2
+        },
+        {
+          "name": "ER持续性与同向性",
+          "percentile": 0.0,
+          "weight": 15,
+          "contribution": 0.0
+        },
+        {
+          "name": "相对SPY/行业强度",
+          "percentile": 62.7,
+          "weight": 10,
+          "contribution": 6.3
+        },
+        {
+          "name": "前高位置与风险",
+          "percentile": 94.5,
+          "weight": 10,
+          "contribution": 9.5
+        }
+      ],
+      "continuation_probability_percentile": 80.0,
+      "opportunity_score": 96.3,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": true
@@ -884,6 +1428,12 @@
         }
       ],
       "continuation_probability_percentile": 55.2,
+      "opportunity_score": 97.9,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": true
@@ -1141,6 +1691,12 @@
         }
       ],
       "continuation_probability_percentile": 68.6,
+      "opportunity_score": 97.5,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": true
@@ -1227,6 +1783,12 @@
         }
       ],
       "continuation_probability_percentile": 78.1,
+      "opportunity_score": 37.3,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -1476,6 +2038,12 @@
         }
       ],
       "continuation_probability_percentile": 58.1,
+      "opportunity_score": 16.4,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -1730,6 +2298,12 @@
         }
       ],
       "continuation_probability_percentile": 65.7,
+      "opportunity_score": 82.1,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -1982,6 +2556,12 @@
         }
       ],
       "continuation_probability_percentile": 98.1,
+      "opportunity_score": 28.3,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -2068,6 +2648,12 @@
         }
       ],
       "continuation_probability_percentile": 15.7,
+      "opportunity_score": 48.8,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -2322,6 +2908,12 @@
         }
       ],
       "continuation_probability_percentile": 99.0,
+      "opportunity_score": 59.1,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -2574,6 +3166,12 @@
         }
       ],
       "continuation_probability_percentile": 42.9,
+      "opportunity_score": 34.7,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -2830,6 +3428,12 @@
         }
       ],
       "continuation_probability_percentile": 70.5,
+      "opportunity_score": 72.3,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -3088,6 +3692,12 @@
         }
       ],
       "continuation_probability_percentile": 51.4,
+      "opportunity_score": 88.6,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -3338,6 +3948,12 @@
         }
       ],
       "continuation_probability_percentile": 13.3,
+      "opportunity_score": 1.6,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -3591,6 +4207,12 @@
         }
       ],
       "continuation_probability_percentile": 86.7,
+      "opportunity_score": 49.5,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -3843,6 +4465,12 @@
         }
       ],
       "continuation_probability_percentile": 50.5,
+      "opportunity_score": 36.9,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -4096,6 +4724,12 @@
         }
       ],
       "continuation_probability_percentile": 17.1,
+      "opportunity_score": 37.1,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -4350,6 +4984,12 @@
         }
       ],
       "continuation_probability_percentile": 75.2,
+      "opportunity_score": 50.7,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -4603,6 +5243,12 @@
         }
       ],
       "continuation_probability_percentile": 30.0,
+      "opportunity_score": 50.4,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -4856,6 +5502,12 @@
         }
       ],
       "continuation_probability_percentile": 46.7,
+      "opportunity_score": 9.5,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -5110,6 +5762,12 @@
         }
       ],
       "continuation_probability_percentile": 97.1,
+      "opportunity_score": 44.6,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -5365,6 +6023,12 @@
         }
       ],
       "continuation_probability_percentile": 56.2,
+      "opportunity_score": 46.2,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -5547,6 +6211,12 @@
         }
       ],
       "continuation_probability_percentile": 1.9,
+      "opportunity_score": 19.1,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -5803,6 +6473,12 @@
         }
       ],
       "continuation_probability_percentile": 28.6,
+      "opportunity_score": 69.3,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -6055,6 +6731,12 @@
         }
       ],
       "continuation_probability_percentile": 82.4,
+      "opportunity_score": 12.1,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -6308,6 +6990,12 @@
         }
       ],
       "continuation_probability_percentile": 79.0,
+      "opportunity_score": 20.1,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -6563,6 +7251,12 @@
         }
       ],
       "continuation_probability_percentile": 92.4,
+      "opportunity_score": 22.5,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -6814,6 +7508,12 @@
         }
       ],
       "continuation_probability_percentile": 4.8,
+      "opportunity_score": 46.5,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -7061,6 +7761,12 @@
         }
       ],
       "continuation_probability_percentile": 22.9,
+      "opportunity_score": 43.7,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -7312,6 +8018,12 @@
         }
       ],
       "continuation_probability_percentile": 59.5,
+      "opportunity_score": 47.3,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -7564,6 +8276,12 @@
         }
       ],
       "continuation_probability_percentile": 84.8,
+      "opportunity_score": 13.1,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -7818,6 +8536,12 @@
         }
       ],
       "continuation_probability_percentile": 20.0,
+      "opportunity_score": 23.6,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -8072,6 +8796,12 @@
         }
       ],
       "continuation_probability_percentile": 39.0,
+      "opportunity_score": 58.0,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -8327,6 +9057,12 @@
         }
       ],
       "continuation_probability_percentile": 67.1,
+      "opportunity_score": 62.2,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -8579,6 +9315,12 @@
         }
       ],
       "continuation_probability_percentile": 30.0,
+      "opportunity_score": 36.8,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -8832,6 +9574,12 @@
         }
       ],
       "continuation_probability_percentile": 96.2,
+      "opportunity_score": 29.1,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -9082,6 +9830,12 @@
         }
       ],
       "continuation_probability_percentile": 26.7,
+      "opportunity_score": 5.8,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -9339,6 +10093,12 @@
         }
       ],
       "continuation_probability_percentile": 49.5,
+      "opportunity_score": 40.5,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -9589,6 +10349,12 @@
         }
       ],
       "continuation_probability_percentile": 3.8,
+      "opportunity_score": 17.4,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -9848,6 +10614,12 @@
         }
       ],
       "continuation_probability_percentile": 83.8,
+      "opportunity_score": 95.6,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -10104,6 +10876,12 @@
         }
       ],
       "continuation_probability_percentile": 59.5,
+      "opportunity_score": 72.6,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -10190,6 +10968,12 @@
         }
       ],
       "continuation_probability_percentile": 31.4,
+      "opportunity_score": 53.2,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -10445,6 +11229,12 @@
         }
       ],
       "continuation_probability_percentile": 67.1,
+      "opportunity_score": 84.8,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -10690,6 +11480,12 @@
         }
       ],
       "continuation_probability_percentile": 36.2,
+      "opportunity_score": 13.5,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -10944,6 +11740,12 @@
         }
       ],
       "continuation_probability_percentile": 100.0,
+      "opportunity_score": 66.5,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -11199,6 +12001,12 @@
         }
       ],
       "continuation_probability_percentile": 8.6,
+      "opportunity_score": 32.1,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -11456,6 +12264,12 @@
         }
       ],
       "continuation_probability_percentile": 52.4,
+      "opportunity_score": 82.3,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -11708,6 +12522,12 @@
         }
       ],
       "continuation_probability_percentile": 73.8,
+      "opportunity_score": 44.4,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -11963,6 +12783,12 @@
         }
       ],
       "continuation_probability_percentile": 19.0,
+      "opportunity_score": 31.8,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -12212,6 +13038,12 @@
         }
       ],
       "continuation_probability_percentile": 12.4,
+      "opportunity_score": 39.6,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -12468,6 +13300,12 @@
         }
       ],
       "continuation_probability_percentile": 90.0,
+      "opportunity_score": 41.4,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -12721,6 +13559,12 @@
         }
       ],
       "continuation_probability_percentile": 62.9,
+      "opportunity_score": 67.4,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -12975,263 +13819,12 @@
         }
       ],
       "continuation_probability_percentile": 2.9,
-      "high_probability": false,
-      "continuation_high_confidence": false,
-      "trend_candidate": false
-    },
-    {
-      "code": "US.LLY",
-      "ticker": "LLY",
-      "name": "礼来",
-      "heat": 3.3675,
-      "last_qualified_heat": 3.3675,
-      "market_cap": 1126350973818.18,
-      "last_qualified_market_cap": 1126350973818.18,
-      "active": true,
-      "trading_days_since_hit": 0,
-      "last_hit_date": "2026-07-24",
-      "heat_history": [
-        {
-          "date": "2026-07-24",
-          "heat": 3.3675
-        }
-      ],
-      "daily": {
-        "ma_score": 4,
-        "ma_facts": [
-          true,
-          false,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 1,
-        "macd_facts": [
-          true,
-          false,
-          false
-        ],
-        "dif": 13.35906413936732,
-        "dea": 18.12690185812817,
-        "hist": -4.767837718760852,
-        "rsi": 57.0082172264708,
-        "volume_ratio": 0.9048263628935458,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 1196.03,
-        "previous_close": 1185.87,
-        "ma5": 1173.444,
-        "ma10": 1170.654,
-        "ma20": 1190.3325,
-        "ma60": 1100.4055487183832,
-        "ma_label": "偏多",
-        "macd_label": "动能分化",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
+      "opportunity_score": 15.6,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
       },
-      "daily_confirmed": {
-        "ma_score": 4,
-        "ma_facts": [
-          true,
-          false,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 1,
-        "macd_facts": [
-          true,
-          false,
-          false
-        ],
-        "dif": 13.35906413936732,
-        "dea": 18.12690185812817,
-        "hist": -4.767837718760852,
-        "rsi": 57.0082172264708,
-        "volume_ratio": 0.9048263628935458,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 1196.03,
-        "previous_close": 1185.87,
-        "ma5": 1173.444,
-        "ma10": 1170.654,
-        "ma20": 1190.3325,
-        "ma60": 1100.4055487183832,
-        "ma_label": "偏多",
-        "macd_label": "动能分化",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "daily_is_partial": false,
-      "weekly": {
-        "ma_score": 5,
-        "ma_facts": [
-          true,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 2,
-        "macd_facts": [
-          true,
-          true,
-          false
-        ],
-        "dif": 64.68074475596177,
-        "dea": 49.45534693557633,
-        "hist": 15.225397820385439,
-        "rsi": 65.39090919434305,
-        "volume_ratio": 0.7250388130358041,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 1196.03,
-        "previous_close": 1179.11,
-        "ma5": 1197.15,
-        "ma10": 1151.874,
-        "ma20": 1043.8559987869498,
-        "ma60": 939.4788434712001,
-        "ma_label": "强多头结构",
-        "macd_label": "多头动能",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "weekly_confirmed": {
-        "ma_score": 5,
-        "ma_facts": [
-          true,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 2,
-        "macd_facts": [
-          true,
-          true,
-          false
-        ],
-        "dif": 64.68074475596177,
-        "dea": 49.45534693557633,
-        "hist": 15.225397820385439,
-        "rsi": 65.39090919434305,
-        "volume_ratio": 0.7250388130358041,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 1196.03,
-        "previous_close": 1179.11,
-        "ma5": 1197.15,
-        "ma10": 1151.874,
-        "ma20": 1043.8559987869498,
-        "ma60": 939.4788434712001,
-        "ma_label": "强多头结构",
-        "macd_label": "多头动能",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "weekly_is_partial": false,
-      "entry": {
-        "label": "回踩转强",
-        "close_distance_ma20_pct": 0.004786477727861671,
-        "close_distance_ma60_pct": 0.08689928126315638,
-        "distance_ma20_atr": 0.15474011206320173,
-        "distance_ma60_atr": 2.597093164949465,
-        "distance_20d_high_pct": -0.042754812117331675,
-        "distance_52w_high_pct": -0.042754812117331675,
-        "gap_pct": 0.007150868139003341,
-        "breakout_recent": false,
-        "breakout_days_since": 18,
-        "pullback_ma10_reclaim": true,
-        "pullback_ma20_reclaim": true,
-        "atr_pct": 0.03078501387192533,
-        "intraday_range_pct": 0.016394461450243352,
-        "max_drawdown_20d_pct": -0.07175693612612888,
-        "quality_grade": "A",
-        "quality_score": 85.0,
-        "quality_label": "触发明确",
-        "positive_reasons": [
-          "回踩 MA10/MA20 后重新转强",
-          "收盘位于 MA20 上方 0–1.5 ATR",
-          "RSI 位于健康强势区"
-        ],
-        "risk_reasons": []
-      },
-      "er_rank": null,
-      "er_hits_last5": 0,
-      "er_streak": 0,
-      "er_price_momentum_aligned": null,
-      "price_momentum": {
-        "returns": {
-          "4w": -0.010007284044631248,
-          "12w": 0.24369520330540828,
-          "36w": 0.17049833118111546
-        },
-        "mean": 0.1347287501472975,
-        "positive": true
-      },
-      "legacy_trend_score": 64.3,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0",
-        "未通过：日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 64.3,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0",
-        "未通过：日线MACD≥2"
-      ],
-      "continuation_probability": 0.412,
-      "sector": "一般药品制造商",
-      "trend_strength": 95.2,
-      "trend_strength_percentile": 4.8,
-      "trend_components": [
-        {
-          "name": "多周期波动调整动量",
-          "percentile": 83.7,
-          "weight": 30,
-          "contribution": 25.1
-        },
-        {
-          "name": "均线斜率与位置",
-          "percentile": 86.2,
-          "weight": 20,
-          "contribution": 17.2
-        },
-        {
-          "name": "趋势平滑度",
-          "percentile": 80.7,
-          "weight": 15,
-          "contribution": 12.1
-        },
-        {
-          "name": "ER持续性与同向性",
-          "percentile": 0.0,
-          "weight": 15,
-          "contribution": 0.0
-        },
-        {
-          "name": "相对SPY/行业强度",
-          "percentile": 86.8,
-          "weight": 10,
-          "contribution": 8.7
-        },
-        {
-          "name": "前高位置与风险",
-          "percentile": 88.1,
-          "weight": 10,
-          "contribution": 8.8
-        }
-      ],
-      "continuation_probability_percentile": 37.6,
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -13486,6 +14079,12 @@
         }
       ],
       "continuation_probability_percentile": 87.6,
+      "opportunity_score": 79.4,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -13741,6 +14340,12 @@
         }
       ],
       "continuation_probability_percentile": 71.4,
+      "opportunity_score": 8.9,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -13995,6 +14600,12 @@
         }
       ],
       "continuation_probability_percentile": 81.0,
+      "opportunity_score": 29.3,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -14249,6 +14860,12 @@
         }
       ],
       "continuation_probability_percentile": 94.3,
+      "opportunity_score": 70.7,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -14494,6 +15111,12 @@
         }
       ],
       "continuation_probability_percentile": 45.7,
+      "opportunity_score": 30.3,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -14744,6 +15367,12 @@
         }
       ],
       "continuation_probability_percentile": 25.2,
+      "opportunity_score": 11.2,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -14991,6 +15620,12 @@
         }
       ],
       "continuation_probability_percentile": 10.5,
+      "opportunity_score": 15.0,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -15241,6 +15876,12 @@
         }
       ],
       "continuation_probability_percentile": 47.6,
+      "opportunity_score": 14.9,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -15423,6 +16064,12 @@
         }
       ],
       "continuation_probability_percentile": 6.7,
+      "opportunity_score": 65.6,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -15678,6 +16325,12 @@
         }
       ],
       "continuation_probability_percentile": 21.9,
+      "opportunity_score": 88.1,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -15924,6 +16577,12 @@
         }
       ],
       "continuation_probability_percentile": 82.4,
+      "opportunity_score": 7.6,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -16181,6 +16840,12 @@
         }
       ],
       "continuation_probability_percentile": 40.0,
+      "opportunity_score": 65.4,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -16432,6 +17097,12 @@
         }
       ],
       "continuation_probability_percentile": 34.3,
+      "opportunity_score": 27.9,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -16690,6 +17361,12 @@
         }
       ],
       "continuation_probability_percentile": 32.4,
+      "opportunity_score": 75.9,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -16936,6 +17613,12 @@
         }
       ],
       "continuation_probability_percentile": 21.0,
+      "opportunity_score": 3.8,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -17196,6 +17879,12 @@
         }
       ],
       "continuation_probability_percentile": 37.6,
+      "opportunity_score": 85.2,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -17445,6 +18134,12 @@
         }
       ],
       "continuation_probability_percentile": 15.7,
+      "opportunity_score": 20.7,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -17701,6 +18396,12 @@
         }
       ],
       "continuation_probability_percentile": 90.0,
+      "opportunity_score": 76.9,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -17957,6 +18658,12 @@
         }
       ],
       "continuation_probability_percentile": 88.6,
+      "opportunity_score": 77.7,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -18210,6 +18917,12 @@
         }
       ],
       "continuation_probability_percentile": 27.6,
+      "opportunity_score": 30.4,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -18466,6 +19179,12 @@
         }
       ],
       "continuation_probability_percentile": 77.1,
+      "opportunity_score": 84.4,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -18720,6 +19439,12 @@
         }
       ],
       "continuation_probability_percentile": 64.8,
+      "opportunity_score": 60.2,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -18977,6 +19702,12 @@
         }
       ],
       "continuation_probability_percentile": 53.3,
+      "opportunity_score": 87.8,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -19231,6 +19962,12 @@
         }
       ],
       "continuation_probability_percentile": 85.7,
+      "opportunity_score": 64.0,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -19480,6 +20217,12 @@
         }
       ],
       "continuation_probability_percentile": 14.3,
+      "opportunity_score": 42.4,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -19732,6 +20475,12 @@
         }
       ],
       "continuation_probability_percentile": 43.8,
+      "opportunity_score": 52.0,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -19986,6 +20735,12 @@
         }
       ],
       "continuation_probability_percentile": 91.4,
+      "opportunity_score": 55.1,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -20247,6 +21002,12 @@
         }
       ],
       "continuation_probability_percentile": 35.2,
+      "opportunity_score": 54.2,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -20501,6 +21262,12 @@
         }
       ],
       "continuation_probability_percentile": 93.3,
+      "opportunity_score": 58.0,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -20748,263 +21515,12 @@
         }
       ],
       "continuation_probability_percentile": 54.3,
-      "high_probability": false,
-      "continuation_high_confidence": false,
-      "trend_candidate": false
-    },
-    {
-      "code": "US.JNJ",
-      "ticker": "JNJ",
-      "name": "强生",
-      "heat": 1.4854,
-      "last_qualified_heat": 1.4854,
-      "market_cap": 634767290449.8,
-      "last_qualified_market_cap": 634767290449.8,
-      "active": true,
-      "trading_days_since_hit": 0,
-      "last_hit_date": "2026-07-24",
-      "heat_history": [
-        {
-          "date": "2026-07-24",
-          "heat": 1.4854
-        }
-      ],
-      "daily": {
-        "ma_score": 4,
-        "ma_facts": [
-          true,
-          false,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 1,
-        "macd_facts": [
-          true,
-          false,
-          false
-        ],
-        "dif": 4.077318317474209,
-        "dea": 4.41397497094619,
-        "hist": -0.33665665347198104,
-        "rsi": 62.71692344799372,
-        "volume_ratio": 0.7345069816500889,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 263.4,
-        "previous_close": 259.27,
-        "ma5": 255.546,
-        "ma10": 253.93800000000002,
-        "ma20": 256.47950000000003,
-        "ma60": 238.69049396026668,
-        "ma_label": "偏多",
-        "macd_label": "动能分化",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
+      "opportunity_score": 4.4,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
       },
-      "daily_confirmed": {
-        "ma_score": 4,
-        "ma_facts": [
-          true,
-          false,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 1,
-        "macd_facts": [
-          true,
-          false,
-          false
-        ],
-        "dif": 4.077318317474209,
-        "dea": 4.41397497094619,
-        "hist": -0.33665665347198104,
-        "rsi": 62.71692344799372,
-        "volume_ratio": 0.7345069816500889,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 263.4,
-        "previous_close": 259.27,
-        "ma5": 255.546,
-        "ma10": 253.93800000000002,
-        "ma20": 256.47950000000003,
-        "ma60": 238.69049396026668,
-        "ma_label": "偏多",
-        "macd_label": "动能分化",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "daily_is_partial": false,
-      "weekly": {
-        "ma_score": 5,
-        "ma_facts": [
-          true,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 3,
-        "macd_facts": [
-          true,
-          true,
-          true
-        ],
-        "dif": 11.231804753676698,
-        "dea": 9.621436030277337,
-        "hist": 1.610368723399361,
-        "rsi": 65.1657653163357,
-        "volume_ratio": 0.9343139438668904,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 263.4,
-        "previous_close": 253.04,
-        "ma5": 258.224,
-        "ma10": 245.1479999824,
-        "ma20": 238.69318996905,
-        "ma60": 206.01771935588334,
-        "ma_label": "强多头结构",
-        "macd_label": "强多头动能",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "weekly_confirmed": {
-        "ma_score": 5,
-        "ma_facts": [
-          true,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 3,
-        "macd_facts": [
-          true,
-          true,
-          true
-        ],
-        "dif": 11.231804753676698,
-        "dea": 9.621436030277337,
-        "hist": 1.610368723399361,
-        "rsi": 65.1657653163357,
-        "volume_ratio": 0.9343139438668904,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 263.4,
-        "previous_close": 253.04,
-        "ma5": 258.224,
-        "ma10": 245.1479999824,
-        "ma20": 238.69318996905,
-        "ma60": 206.01771935588334,
-        "ma_label": "强多头结构",
-        "macd_label": "强多头动能",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "weekly_is_partial": false,
-      "entry": {
-        "label": "回踩转强",
-        "close_distance_ma20_pct": 0.02698266333176713,
-        "close_distance_ma60_pct": 0.1035211148536419,
-        "distance_ma20_atr": 1.1612016154134324,
-        "distance_ma60_atr": 4.146047009523371,
-        "distance_20d_high_pct": -0.022380581227035012,
-        "distance_52w_high_pct": -0.022380581227035012,
-        "gap_pct": 0.008331083426543762,
-        "breakout_recent": false,
-        "breakout_days_since": 13,
-        "pullback_ma10_reclaim": true,
-        "pullback_ma20_reclaim": true,
-        "atr_pct": 0.0226263276086891,
-        "intraday_range_pct": 0.015813630578161632,
-        "max_drawdown_20d_pct": -0.07566232599910194,
-        "quality_grade": "A",
-        "quality_score": 85.0,
-        "quality_label": "触发明确",
-        "positive_reasons": [
-          "回踩 MA10/MA20 后重新转强",
-          "收盘位于 MA20 上方 0–1.5 ATR",
-          "RSI 位于健康强势区"
-        ],
-        "risk_reasons": []
-      },
-      "er_rank": null,
-      "er_hits_last5": 0,
-      "er_streak": 0,
-      "er_price_momentum_aligned": null,
-      "price_momentum": {
-        "returns": {
-          "4w": 0.0343202701641403,
-          "12w": 0.16604970649399386,
-          "36w": 0.3679073584529602
-        },
-        "mean": 0.18942577837036478,
-        "positive": true
-      },
-      "legacy_trend_score": 71.0,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 20.0",
-        "RSI质量 5.0",
-        "未通过：日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 71.0,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 20.0",
-        "RSI质量 5.0",
-        "未通过：日线MACD≥2"
-      ],
-      "continuation_probability": 0.4345,
-      "sector": "一般药品制造商",
-      "trend_strength": 97.1,
-      "trend_strength_percentile": 2.9,
-      "trend_components": [
-        {
-          "name": "多周期波动调整动量",
-          "percentile": 91.5,
-          "weight": 30,
-          "contribution": 27.5
-        },
-        {
-          "name": "均线斜率与位置",
-          "percentile": 86.7,
-          "weight": 20,
-          "contribution": 17.3
-        },
-        {
-          "name": "趋势平滑度",
-          "percentile": 81.4,
-          "weight": 15,
-          "contribution": 12.2
-        },
-        {
-          "name": "ER持续性与同向性",
-          "percentile": 0.0,
-          "weight": 15,
-          "contribution": 0.0
-        },
-        {
-          "name": "相对SPY/行业强度",
-          "percentile": 62.7,
-          "weight": 10,
-          "contribution": 6.3
-        },
-        {
-          "name": "前高位置与风险",
-          "percentile": 94.5,
-          "weight": 10,
-          "contribution": 9.5
-        }
-      ],
-      "continuation_probability_percentile": 80.0,
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -21263,6 +21779,12 @@
         }
       ],
       "continuation_probability_percentile": 9.5,
+      "opportunity_score": 76.6,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -21520,6 +22042,12 @@
         }
       ],
       "continuation_probability_percentile": 11.4,
+      "opportunity_score": 89.4,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -21775,6 +22303,12 @@
         }
       ],
       "continuation_probability_percentile": 41.4,
+      "opportunity_score": 80.0,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -22029,6 +22563,12 @@
         }
       ],
       "continuation_probability_percentile": 23.8,
+      "opportunity_score": 68.3,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -22284,6 +22824,12 @@
         }
       ],
       "continuation_probability_percentile": 7.6,
+      "opportunity_score": 88.3,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -22546,6 +23092,12 @@
         }
       ],
       "continuation_probability_percentile": 61.0,
+      "opportunity_score": 74.5,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -22791,6 +23343,12 @@
         }
       ],
       "continuation_probability_percentile": 48.6,
+      "opportunity_score": 29.6,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -23047,6 +23605,12 @@
         }
       ],
       "continuation_probability_percentile": 41.4,
+      "opportunity_score": 8.4,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -23294,6 +23858,12 @@
         }
       ],
       "continuation_probability_percentile": 1.0,
+      "opportunity_score": 21.8,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -23545,6 +24115,12 @@
         }
       ],
       "continuation_probability_percentile": 61.9,
+      "opportunity_score": 13.8,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -23799,6 +24375,12 @@
         }
       ],
       "continuation_probability_percentile": 76.2,
+      "opportunity_score": 66.2,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -24052,6 +24634,12 @@
         }
       ],
       "continuation_probability_percentile": 5.7,
+      "opportunity_score": 82.8,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -24301,6 +24889,12 @@
         }
       ],
       "continuation_probability_percentile": 25.2,
+      "opportunity_score": 31.1,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -24555,6 +25149,12 @@
         }
       ],
       "continuation_probability_percentile": 95.2,
+      "opportunity_score": 59.9,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -24810,6 +25410,12 @@
         }
       ],
       "continuation_probability_percentile": 69.5,
+      "opportunity_score": 74.1,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -25061,6 +25667,12 @@
         }
       ],
       "continuation_probability_percentile": 73.8,
+      "opportunity_score": 64.3,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -25309,6 +25921,12 @@
         }
       ],
       "continuation_probability_percentile": 63.8,
+      "opportunity_score": 23.9,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -25564,6 +26182,12 @@
         }
       ],
       "continuation_probability_percentile": 18.1,
+      "opportunity_score": 85.2,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -25821,6 +26445,12 @@
         }
       ],
       "continuation_probability_percentile": 72.4,
+      "opportunity_score": 80.6,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
@@ -26075,6 +26705,12 @@
         }
       ],
       "continuation_probability_percentile": 33.3,
+      "opportunity_score": 59.7,
+      "opportunity_weights": {
+        "trend_strength": 0.952,
+        "historical_continuation": 0.048,
+        "model_reliability": 0.24
+      },
       "high_probability": false,
       "continuation_high_confidence": false,
       "trend_candidate": false
