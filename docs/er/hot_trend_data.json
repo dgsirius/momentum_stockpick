@@ -1,7 +1,7 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "title": "热门资产跟踪+趋势资产判断",
-  "generated_at": "2026-07-25T22:15:36+08:00",
+  "generated_at": "2026-07-25T22:31:15+08:00",
   "heat_as_of": "2026-07-24",
   "er_signal_date": "2026-07-24",
   "opend_last_refresh": "2026-07-25T20:34:35+08:00",
@@ -24,23 +24,21 @@
       36
     ],
     "trend_strength": "不含ER和入场质量的核心趋势横截面排名",
-    "opportunity_score": "核心趋势、ER、入场质量与历史延续的股票池内综合排名",
+    "opportunity_score": "核心趋势、ER与入场质量在当前双门槛达标标的中的综合排名；历史延续仅在样本外AUC>0.55后启用",
     "opportunity_candidate_threshold": 95.0,
-    "opportunity_threshold_purpose": "收窄内部做工队列，不代表更高统计胜率",
     "trend_candidate_rule": "当前双门槛达标、趋势机会分≥95、入场质量A/B",
     "opportunity_weights": {
-      "trend_core": 0.702,
+      "trend_core": 0.75,
       "er_signal": 0.15,
       "entry_quality": 0.1,
-      "historical_continuation": 0.048,
-      "model_reliability": 0.24
+      "historical_continuation": 0.0,
+      "model_reliability": 0.0
     },
     "continuation_target": {
       "horizon_trading_days": 40,
       "take_profit": 0.08,
       "stop_loss": -0.05
-    },
-    "high_probability_rule": "模型样本外AUC≥0.55、延续概率前20%、高于历史基准3个百分点、趋势强度≥70、入场质量A/B、市场非逆风"
+    }
   },
   "market_environment": {
     "label": "中性",
@@ -123,7 +121,6 @@
     "pool": 105,
     "active": 105,
     "retained": 0,
-    "high_probability": 0,
     "trend_candidates": 5,
     "er_hits": 3,
     "computing": 5
@@ -318,24 +315,6 @@
         "mean": 0.19604651090618241,
         "positive": true
       },
-      "legacy_trend_score": 85.0,
-      "legacy_high_probability": true,
-      "legacy_trend_reasons": [
-        "日线MA 20.0",
-        "日线MACD 15.0",
-        "周线MA 25.0",
-        "周线MACD 20.0",
-        "RSI质量 5.0"
-      ],
-      "confirmed_legacy_trend_score": 85.0,
-      "confirmed_legacy_high_probability": true,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 20.0",
-        "日线MACD 15.0",
-        "周线MA 25.0",
-        "周线MACD 20.0",
-        "RSI质量 5.0"
-      ],
       "continuation_probability": 0.4155,
       "sector": "消费电子产品",
       "trend_strength": 97.1,
@@ -368,287 +347,32 @@
         }
       ],
       "continuation_probability_percentile": 44.8,
-      "opportunity_raw_score": 77.8,
-      "opportunity_score": 96.2,
+      "opportunity_raw_score": 80.3,
+      "opportunity_score": 97.1,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": true
     },
     {
-      "code": "US.JPM",
-      "ticker": "JPM",
-      "name": "摩根大通",
-      "heat": 1.7713,
-      "last_qualified_heat": 1.7713,
-      "market_cap": 938902822000.0,
-      "last_qualified_market_cap": 938902822000.0,
+      "code": "US.LLY",
+      "ticker": "LLY",
+      "name": "礼来",
+      "heat": 3.3675,
+      "last_qualified_heat": 3.3675,
+      "market_cap": 1126350973818.18,
+      "last_qualified_market_cap": 1126350973818.18,
       "active": true,
       "trading_days_since_hit": 0,
       "last_hit_date": "2026-07-24",
       "heat_history": [
         {
           "date": "2026-07-24",
-          "heat": 1.7713
-        }
-      ],
-      "daily": {
-        "ma_score": 5,
-        "ma_facts": [
-          true,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 3,
-        "macd_facts": [
-          true,
-          true,
-          true
-        ],
-        "dif": 7.52324475785656,
-        "dea": 7.02414446862316,
-        "hist": 0.49910028923339933,
-        "rsi": 68.57773999263776,
-        "volume_ratio": 0.8965599068939335,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 353.21,
-        "previous_close": 349.9,
-        "ma5": 347.084,
-        "ma10": 344.4,
-        "ma20": 338.5195451353,
-        "ma60": 318.91466628725,
-        "ma_label": "强多头结构",
-        "macd_label": "强多头动能",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "daily_confirmed": {
-        "ma_score": 5,
-        "ma_facts": [
-          true,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 3,
-        "macd_facts": [
-          true,
-          true,
-          true
-        ],
-        "dif": 7.52324475785656,
-        "dea": 7.02414446862316,
-        "hist": 0.49910028923339933,
-        "rsi": 68.57773999263776,
-        "volume_ratio": 0.8965599068939335,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 353.21,
-        "previous_close": 349.9,
-        "ma5": 347.084,
-        "ma10": 344.4,
-        "ma20": 338.5195451353,
-        "ma60": 318.91466628725,
-        "ma_label": "强多头结构",
-        "macd_label": "强多头动能",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "daily_is_partial": false,
-      "weekly": {
-        "ma_score": 5,
-        "ma_facts": [
-          true,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 3,
-        "macd_facts": [
-          true,
-          true,
-          true
-        ],
-        "dif": 11.231250836106994,
-        "dea": 6.656495108417288,
-        "hist": 4.574755727689706,
-        "rsi": 70.5796567389932,
-        "volume_ratio": 0.7892677325053467,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 353.21,
-        "previous_close": 341.1,
-        "ma5": 338.26486130940003,
-        "ma10": 324.83102232330003,
-        "ma20": 310.86762937345,
-        "ma60": 301.96653206745003,
-        "ma_label": "强多头结构",
-        "macd_label": "强多头动能",
-        "rsi_label": "强势/偏热",
-        "volume_label": "缩量"
-      },
-      "weekly_confirmed": {
-        "ma_score": 5,
-        "ma_facts": [
-          true,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 3,
-        "macd_facts": [
-          true,
-          true,
-          true
-        ],
-        "dif": 11.231250836106994,
-        "dea": 6.656495108417288,
-        "hist": 4.574755727689706,
-        "rsi": 70.5796567389932,
-        "volume_ratio": 0.7892677325053467,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 353.21,
-        "previous_close": 341.1,
-        "ma5": 338.26486130940003,
-        "ma10": 324.83102232330003,
-        "ma20": 310.86762937345,
-        "ma60": 301.96653206745003,
-        "ma_label": "强多头结构",
-        "macd_label": "强多头动能",
-        "rsi_label": "强势/偏热",
-        "volume_label": "缩量"
-      },
-      "weekly_is_partial": false,
-      "entry": {
-        "label": "回踩转强",
-        "close_distance_ma20_pct": 0.043396179262938706,
-        "close_distance_ma60_pct": 0.10753764984223024,
-        "distance_ma20_atr": 1.9855258433560612,
-        "distance_ma60_atr": 4.635273177062118,
-        "distance_20d_high_pct": -0.0004527832017432454,
-        "distance_52w_high_pct": -0.0004527832017432454,
-        "gap_pct": 0.002114889968562572,
-        "breakout_recent": true,
-        "breakout_days_since": 0,
-        "pullback_ma10_reclaim": true,
-        "pullback_ma20_reclaim": true,
-        "atr_pct": 0.02094723516192074,
-        "intraday_range_pct": 0.01677622177765077,
-        "max_drawdown_20d_pct": -0.02535227875714885,
-        "quality_grade": "A",
-        "quality_score": 90.0,
-        "quality_label": "触发明确",
-        "positive_reasons": [
-          "回踩 MA10/MA20 后重新转强",
-          "突破发生在最近 1–4 根日 K",
-          "RSI 位于健康强势区"
-        ],
-        "risk_reasons": []
-      },
-      "er_rank": null,
-      "er_hits_last5": 0,
-      "er_streak": 0,
-      "er_price_momentum_aligned": null,
-      "price_momentum": {
-        "returns": {
-          "4w": 0.0782591693955641,
-          "12w": 0.13547278039246713,
-          "36w": 0.179887202630435
-        },
-        "mean": 0.13120638413948874,
-        "positive": true
-      },
-      "legacy_trend_score": 84.2,
-      "legacy_high_probability": true,
-      "legacy_trend_reasons": [
-        "日线MA 20.0",
-        "日线MACD 15.0",
-        "周线MA 25.0",
-        "周线MACD 20.0",
-        "RSI质量 4.2"
-      ],
-      "confirmed_legacy_trend_score": 84.2,
-      "confirmed_legacy_high_probability": true,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 20.0",
-        "日线MACD 15.0",
-        "周线MA 25.0",
-        "周线MACD 20.0",
-        "RSI质量 4.2"
-      ],
-      "continuation_probability": 0.4225,
-      "sector": "多元化银行",
-      "trend_strength": 93.3,
-      "trend_strength_percentile": 6.7,
-      "er_signal_score": 0.0,
-      "trend_components": [
-        {
-          "name": "多周期波动调整动量",
-          "percentile": 81.0,
-          "weight": 40,
-          "contribution": 32.4
-        },
-        {
-          "name": "MA20/MA60斜率",
-          "percentile": 82.4,
-          "weight": 25,
-          "contribution": 20.6
-        },
-        {
-          "name": "趋势平滑度",
-          "percentile": 89.0,
-          "weight": 20,
-          "contribution": 17.8
-        },
-        {
-          "name": "相对SPY/行业强度",
-          "percentile": 72.5,
-          "weight": 15,
-          "contribution": 10.9
-        }
-      ],
-      "continuation_probability_percentile": 57.1,
-      "opportunity_raw_score": 77.2,
-      "opportunity_score": 95.2,
-      "opportunity_weights": {
-        "trend_core": 0.702,
-        "er_signal": 0.15,
-        "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
-      },
-      "high_probability": false,
-      "continuation_high_confidence": false,
-      "trend_candidate": true
-    },
-    {
-      "code": "US.JNJ",
-      "ticker": "JNJ",
-      "name": "强生",
-      "heat": 1.4854,
-      "last_qualified_heat": 1.4854,
-      "market_cap": 634767290449.8,
-      "last_qualified_market_cap": 634767290449.8,
-      "active": true,
-      "trading_days_since_hit": 0,
-      "last_hit_date": "2026-07-24",
-      "heat_history": [
-        {
-          "date": "2026-07-24",
-          "heat": 1.4854
+          "heat": 3.3675
         }
       ],
       "daily": {
@@ -666,19 +390,19 @@
           false,
           false
         ],
-        "dif": 4.077318317474209,
-        "dea": 4.41397497094619,
-        "hist": -0.33665665347198104,
-        "rsi": 62.71692344799372,
-        "volume_ratio": 0.7345069816500889,
+        "dif": 13.35906413936732,
+        "dea": 18.12690185812817,
+        "hist": -4.767837718760852,
+        "rsi": 57.0082172264708,
+        "volume_ratio": 0.9048263628935458,
         "volume_basis": "full_period",
         "close_up": true,
-        "close": 263.4,
-        "previous_close": 259.27,
-        "ma5": 255.546,
-        "ma10": 253.93800000000002,
-        "ma20": 256.47950000000003,
-        "ma60": 238.69049396026668,
+        "close": 1196.03,
+        "previous_close": 1185.87,
+        "ma5": 1173.444,
+        "ma10": 1170.654,
+        "ma20": 1190.3325,
+        "ma60": 1100.4055487183832,
         "ma_label": "偏多",
         "macd_label": "动能分化",
         "rsi_label": "健康强势",
@@ -699,19 +423,19 @@
           false,
           false
         ],
-        "dif": 4.077318317474209,
-        "dea": 4.41397497094619,
-        "hist": -0.33665665347198104,
-        "rsi": 62.71692344799372,
-        "volume_ratio": 0.7345069816500889,
+        "dif": 13.35906413936732,
+        "dea": 18.12690185812817,
+        "hist": -4.767837718760852,
+        "rsi": 57.0082172264708,
+        "volume_ratio": 0.9048263628935458,
         "volume_basis": "full_period",
         "close_up": true,
-        "close": 263.4,
-        "previous_close": 259.27,
-        "ma5": 255.546,
-        "ma10": 253.93800000000002,
-        "ma20": 256.47950000000003,
-        "ma60": 238.69049396026668,
+        "close": 1196.03,
+        "previous_close": 1185.87,
+        "ma5": 1173.444,
+        "ma10": 1170.654,
+        "ma20": 1190.3325,
+        "ma60": 1100.4055487183832,
         "ma_label": "偏多",
         "macd_label": "动能分化",
         "rsi_label": "健康强势",
@@ -727,27 +451,27 @@
           true,
           true
         ],
-        "macd_score": 3,
+        "macd_score": 2,
         "macd_facts": [
           true,
           true,
-          true
+          false
         ],
-        "dif": 11.231804753676698,
-        "dea": 9.621436030277337,
-        "hist": 1.610368723399361,
-        "rsi": 65.1657653163357,
-        "volume_ratio": 0.9343139438668904,
+        "dif": 64.68074475596177,
+        "dea": 49.45534693557633,
+        "hist": 15.225397820385439,
+        "rsi": 65.39090919434305,
+        "volume_ratio": 0.7250388130358041,
         "volume_basis": "full_period",
         "close_up": true,
-        "close": 263.4,
-        "previous_close": 253.04,
-        "ma5": 258.224,
-        "ma10": 245.1479999824,
-        "ma20": 238.69318996905,
-        "ma60": 206.01771935588334,
+        "close": 1196.03,
+        "previous_close": 1179.11,
+        "ma5": 1197.15,
+        "ma10": 1151.874,
+        "ma20": 1043.8559987869498,
+        "ma60": 939.4788434712001,
         "ma_label": "强多头结构",
-        "macd_label": "强多头动能",
+        "macd_label": "多头动能",
         "rsi_label": "健康强势",
         "volume_label": "缩量"
       },
@@ -760,47 +484,47 @@
           true,
           true
         ],
-        "macd_score": 3,
+        "macd_score": 2,
         "macd_facts": [
           true,
           true,
-          true
+          false
         ],
-        "dif": 11.231804753676698,
-        "dea": 9.621436030277337,
-        "hist": 1.610368723399361,
-        "rsi": 65.1657653163357,
-        "volume_ratio": 0.9343139438668904,
+        "dif": 64.68074475596177,
+        "dea": 49.45534693557633,
+        "hist": 15.225397820385439,
+        "rsi": 65.39090919434305,
+        "volume_ratio": 0.7250388130358041,
         "volume_basis": "full_period",
         "close_up": true,
-        "close": 263.4,
-        "previous_close": 253.04,
-        "ma5": 258.224,
-        "ma10": 245.1479999824,
-        "ma20": 238.69318996905,
-        "ma60": 206.01771935588334,
+        "close": 1196.03,
+        "previous_close": 1179.11,
+        "ma5": 1197.15,
+        "ma10": 1151.874,
+        "ma20": 1043.8559987869498,
+        "ma60": 939.4788434712001,
         "ma_label": "强多头结构",
-        "macd_label": "强多头动能",
+        "macd_label": "多头动能",
         "rsi_label": "健康强势",
         "volume_label": "缩量"
       },
       "weekly_is_partial": false,
       "entry": {
         "label": "回踩转强",
-        "close_distance_ma20_pct": 0.02698266333176713,
-        "close_distance_ma60_pct": 0.1035211148536419,
-        "distance_ma20_atr": 1.1612016154134324,
-        "distance_ma60_atr": 4.146047009523371,
-        "distance_20d_high_pct": -0.022380581227035012,
-        "distance_52w_high_pct": -0.022380581227035012,
-        "gap_pct": 0.008331083426543762,
+        "close_distance_ma20_pct": 0.004786477727861671,
+        "close_distance_ma60_pct": 0.08689928126315638,
+        "distance_ma20_atr": 0.15474011206320173,
+        "distance_ma60_atr": 2.597093164949465,
+        "distance_20d_high_pct": -0.042754812117331675,
+        "distance_52w_high_pct": -0.042754812117331675,
+        "gap_pct": 0.007150868139003341,
         "breakout_recent": false,
-        "breakout_days_since": 13,
+        "breakout_days_since": 18,
         "pullback_ma10_reclaim": true,
         "pullback_ma20_reclaim": true,
-        "atr_pct": 0.0226263276086891,
-        "intraday_range_pct": 0.015813630578161632,
-        "max_drawdown_20d_pct": -0.07566232599910194,
+        "atr_pct": 0.03078501387192533,
+        "intraday_range_pct": 0.016394461450243352,
+        "max_drawdown_20d_pct": -0.07175693612612888,
         "quality_grade": "A",
         "quality_score": 85.0,
         "quality_label": "触发明确",
@@ -817,76 +541,287 @@
       "er_price_momentum_aligned": null,
       "price_momentum": {
         "returns": {
-          "4w": 0.0343202701641403,
-          "12w": 0.16604970649399386,
-          "36w": 0.3679073584529602
+          "4w": -0.010007284044631248,
+          "12w": 0.24369520330540828,
+          "36w": 0.17049833118111546
         },
-        "mean": 0.18942577837036478,
+        "mean": 0.1347287501472975,
         "positive": true
       },
-      "legacy_trend_score": 71.0,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 20.0",
-        "RSI质量 5.0",
-        "未通过：日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 71.0,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 20.0",
-        "RSI质量 5.0",
-        "未通过：日线MACD≥2"
-      ],
-      "continuation_probability": 0.4345,
+      "continuation_probability": 0.412,
       "sector": "一般药品制造商",
-      "trend_strength": 94.3,
-      "trend_strength_percentile": 5.7,
+      "trend_strength": 95.2,
+      "trend_strength_percentile": 4.8,
       "er_signal_score": 0.0,
       "trend_components": [
         {
           "name": "多周期波动调整动量",
-          "percentile": 91.5,
+          "percentile": 83.7,
           "weight": 40,
-          "contribution": 36.6
+          "contribution": 33.5
         },
         {
           "name": "MA20/MA60斜率",
-          "percentile": 80.4,
+          "percentile": 86.9,
           "weight": 25,
-          "contribution": 20.1
+          "contribution": 21.7
         },
         {
           "name": "趋势平滑度",
-          "percentile": 84.6,
+          "percentile": 82.6,
           "weight": 20,
-          "contribution": 16.9
+          "contribution": 16.5
         },
         {
           "name": "相对SPY/行业强度",
-          "percentile": 62.7,
+          "percentile": 86.8,
           "weight": 15,
-          "contribution": 9.4
+          "contribution": 13.0
         }
       ],
-      "continuation_probability_percentile": 80.0,
-      "opportunity_raw_score": 78.5,
-      "opportunity_score": 97.1,
+      "continuation_probability_percentile": 37.6,
+      "opportunity_raw_score": 79.9,
+      "opportunity_score": 96.2,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
+      "trend_candidate": true
+    },
+    {
+      "code": "US.SNOW",
+      "ticker": "SNOW",
+      "name": "Snowflake",
+      "heat": 1.3551,
+      "last_qualified_heat": 1.3551,
+      "market_cap": 92909596000.0,
+      "last_qualified_market_cap": 92909596000.0,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 1.3551
+        }
+      ],
+      "daily": {
+        "ma_score": 4,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 10.086541408904566,
+        "dea": 12.175207689215142,
+        "hist": -2.0886662803105764,
+        "rsi": 60.48789282635154,
+        "volume_ratio": 0.9293823480243647,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 268.06,
+        "previous_close": 265.13,
+        "ma5": 269.412,
+        "ma10": 270.244,
+        "ma20": 264.6985,
+        "ma60": 220.14666666666665,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "daily_confirmed": {
+        "ma_score": 4,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 10.086541408904566,
+        "dea": 12.175207689215142,
+        "hist": -2.0886662803105764,
+        "rsi": 60.48789282635154,
+        "volume_ratio": 0.9293823480243647,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 268.06,
+        "previous_close": 265.13,
+        "ma5": 269.412,
+        "ma10": 270.244,
+        "ma20": 264.6985,
+        "ma60": 220.14666666666665,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "daily_is_partial": false,
+      "weekly": {
+        "ma_score": 4,
+        "ma_facts": [
+          true,
+          true,
+          false,
+          true,
+          true
+        ],
+        "macd_score": 2,
+        "macd_facts": [
+          true,
+          true,
+          false
+        ],
+        "dif": 20.19059268655863,
+        "dea": 9.047709313367935,
+        "hist": 11.142883373190696,
+        "rsi": 67.48250085263983,
+        "volume_ratio": 0.5847424987384726,
+        "volume_basis": "full_period",
+        "close_up": false,
+        "close": 268.06,
+        "previous_close": 268.9,
+        "ma5": 261.504,
+        "ma10": 243.85999999999999,
+        "ma20": 197.313,
+        "ma60": 211.19116666666667,
+        "ma_label": "偏多",
+        "macd_label": "多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "weekly_confirmed": {
+        "ma_score": 4,
+        "ma_facts": [
+          true,
+          true,
+          false,
+          true,
+          true
+        ],
+        "macd_score": 2,
+        "macd_facts": [
+          true,
+          true,
+          false
+        ],
+        "dif": 20.19059268655863,
+        "dea": 9.047709313367935,
+        "hist": 11.142883373190696,
+        "rsi": 67.48250085263983,
+        "volume_ratio": 0.5847424987384726,
+        "volume_basis": "full_period",
+        "close_up": false,
+        "close": 268.06,
+        "previous_close": 268.9,
+        "ma5": 261.504,
+        "ma10": 243.85999999999999,
+        "ma20": 197.313,
+        "ma60": 211.19116666666667,
+        "ma_label": "偏多",
+        "macd_label": "多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "weekly_is_partial": false,
+      "entry": {
+        "label": "回踩转强",
+        "close_distance_ma20_pct": 0.012699354170877308,
+        "close_distance_ma60_pct": 0.21764278359881306,
+        "distance_ma20_atr": 0.26417892785791536,
+        "distance_ma60_atr": 3.765489522564036,
+        "distance_20d_high_pct": -0.04089557440179403,
+        "distance_52w_high_pct": -0.05940559317870808,
+        "gap_pct": 0.0142194395202353,
+        "breakout_recent": false,
+        "breakout_days_since": 8,
+        "pullback_ma10_reclaim": false,
+        "pullback_ma20_reclaim": true,
+        "atr_pct": 0.04746821808879416,
+        "intraday_range_pct": 0.025609700901444533,
+        "max_drawdown_20d_pct": -0.039175183010799475,
+        "quality_grade": "A",
+        "quality_score": 85.0,
+        "quality_label": "触发明确",
+        "positive_reasons": [
+          "回踩 MA10/MA20 后重新转强",
+          "收盘位于 MA20 上方 0–1.5 ATR",
+          "RSI 位于健康强势区"
+        ],
+        "risk_reasons": []
+      },
+      "er_rank": null,
+      "er_hits_last5": 0,
+      "er_streak": 0,
+      "er_price_momentum_aligned": null,
+      "price_momentum": {
+        "returns": {
+          "4w": 0.07671915167095111,
+          "12w": 0.9011347517730497,
+          "36w": 0.04295385573107158
+        },
+        "mean": 0.3402692530583575,
+        "positive": true
+      },
+      "continuation_probability": 0.3958,
+      "sector": "应用软件",
+      "trend_strength": 96.2,
+      "trend_strength_percentile": 3.8,
+      "er_signal_score": 0.0,
+      "trend_components": [
+        {
+          "name": "多周期波动调整动量",
+          "percentile": 75.5,
+          "weight": 40,
+          "contribution": 30.2
+        },
+        {
+          "name": "MA20/MA60斜率",
+          "percentile": 97.1,
+          "weight": 25,
+          "contribution": 24.3
+        },
+        {
+          "name": "趋势平滑度",
+          "percentile": 78.2,
+          "weight": 20,
+          "contribution": 15.6
+        },
+        {
+          "name": "相对SPY/行业强度",
+          "percentile": 99.5,
+          "weight": 15,
+          "contribution": 14.9
+        }
+      ],
+      "continuation_probability_percentile": 11.4,
+      "opportunity_raw_score": 80.7,
+      "opportunity_score": 98.1,
+      "opportunity_weights": {
+        "trend_core": 0.75,
+        "er_signal": 0.15,
+        "entry_quality": 0.1,
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
+      },
       "trend_candidate": true
     },
     {
@@ -1057,12 +992,10 @@
         "intraday_range_pct": 0.026916236374067783,
         "max_drawdown_20d_pct": -0.039628544470378,
         "quality_grade": "B",
-        "quality_score": 65.0,
+        "quality_score": 45.0,
         "quality_label": "顺势观察",
         "positive_reasons": [
-          "回踩 MA10/MA20 后重新转强",
-          "突破发生在最近 1–4 根日 K",
-          "上涨且量能温和确认"
+          "刚突破，且回踩 MA10/MA20 后重新转强"
         ],
         "risk_reasons": [
           "距 MA20 超过 2.5 ATR，位置延伸"
@@ -1081,33 +1014,11 @@
         "mean": 0.1953099562779963,
         "positive": true
       },
-      "legacy_trend_score": 96.2,
-      "legacy_high_probability": true,
-      "legacy_trend_reasons": [
-        "日线MA 20.0",
-        "日线MACD 15.0",
-        "周线MA 25.0",
-        "周线MACD 20.0",
-        "RSI质量 4.2",
-        "量价确认 2.0",
-        "残差动量Top10 10.0"
-      ],
-      "confirmed_legacy_trend_score": 96.2,
-      "confirmed_legacy_high_probability": true,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 20.0",
-        "日线MACD 15.0",
-        "周线MA 25.0",
-        "周线MACD 20.0",
-        "RSI质量 4.2",
-        "量价确认 2.0",
-        "残差动量Top10 10.0"
-      ],
       "continuation_probability": 0.4222,
       "sector": "航空航天与国防",
       "trend_strength": 92.4,
       "trend_strength_percentile": 7.6,
-      "er_signal_score": 72.0,
+      "er_signal_score": 80.0,
       "trend_components": [
         {
           "name": "多周期波动调整动量",
@@ -1135,17 +1046,15 @@
         }
       ],
       "continuation_probability_percentile": 55.2,
-      "opportunity_raw_score": 84.8,
+      "opportunity_raw_score": 85.8,
       "opportunity_score": 100.0,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": true
     },
     {
@@ -1316,11 +1225,10 @@
         "intraday_range_pct": 0.009238329238329216,
         "max_drawdown_20d_pct": -0.02683816082641277,
         "quality_grade": "A",
-        "quality_score": 90.0,
+        "quality_score": 75.0,
         "quality_label": "触发明确",
         "positive_reasons": [
-          "回踩 MA10/MA20 后重新转强",
-          "突破发生在最近 1–4 根日 K",
+          "刚突破，且回踩 MA10/MA20 后重新转强",
           "RSI 位于健康强势区"
         ],
         "risk_reasons": []
@@ -1338,26 +1246,6 @@
         "mean": 0.2356537141287541,
         "positive": true
       },
-      "legacy_trend_score": 85.2,
-      "legacy_high_probability": true,
-      "legacy_trend_reasons": [
-        "日线MA 20.0",
-        "日线MACD 15.0",
-        "周线MA 25.0",
-        "周线MACD 20.0",
-        "RSI质量 4.2",
-        "量价确认 1.0"
-      ],
-      "confirmed_legacy_trend_score": 85.2,
-      "confirmed_legacy_high_probability": true,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 20.0",
-        "日线MACD 15.0",
-        "周线MA 25.0",
-        "周线MACD 20.0",
-        "RSI质量 4.2",
-        "量价确认 1.0"
-      ],
       "continuation_probability": 0.4283,
       "sector": "多元化银行",
       "trend_strength": 100.0,
@@ -1393,14 +1281,12 @@
       "opportunity_raw_score": 82.5,
       "opportunity_score": 99.0,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": true
     },
     {
@@ -1432,16 +1318,6 @@
       "er_streak": 0,
       "er_price_momentum_aligned": null,
       "price_momentum": null,
-      "legacy_trend_score": null,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "技术历史不足，仍在计算"
-      ],
-      "confirmed_legacy_trend_score": null,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "技术历史不足，仍在计算"
-      ],
       "continuation_probability": 0.4335,
       "sector": "航空航天与国防",
       "trend_strength": 51.9,
@@ -1474,17 +1350,15 @@
         }
       ],
       "continuation_probability_percentile": 78.1,
-      "opportunity_raw_score": 45.2,
-      "opportunity_score": 53.3,
+      "opportunity_raw_score": 43.9,
+      "opportunity_score": 51.9,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -1677,18 +1551,6 @@
         "mean": -0.20016489513491734,
         "positive": false
       },
-      "legacy_trend_score": 5.0,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "周线MA 5.0",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 5.0,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "周线MA 5.0",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4231,
       "sector": "汽车制造",
       "trend_strength": 27.6,
@@ -1721,17 +1583,15 @@
         }
       ],
       "continuation_probability_percentile": 58.1,
-      "opportunity_raw_score": 22.2,
-      "opportunity_score": 22.9,
+      "opportunity_raw_score": 20.7,
+      "opportunity_score": 24.8,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -1923,29 +1783,11 @@
         "mean": 1.0823269673389095,
         "positive": true
       },
-      "legacy_trend_score": 53.6,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 12.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 3.2",
-        "未通过：日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 53.6,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 12.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 3.2",
-        "未通过：日线MACD≥2"
-      ],
       "continuation_probability": 0.4273,
       "sector": "半导体",
       "trend_strength": 86.7,
       "trend_strength_percentile": 13.3,
-      "er_signal_score": 4.0,
+      "er_signal_score": 5.0,
       "trend_components": [
         {
           "name": "多周期波动调整动量",
@@ -1973,17 +1815,15 @@
         }
       ],
       "continuation_probability_percentile": 65.7,
-      "opportunity_raw_score": 67.1,
-      "opportunity_score": 85.7,
+      "opportunity_raw_score": 68.3,
+      "opportunity_score": 84.8,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -2175,22 +2015,6 @@
         "mean": 0.4150906708430784,
         "positive": true
       },
-      "legacy_trend_score": 24.2,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 2.5",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 24.2,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 2.5",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4551,
       "sector": "半导体",
       "trend_strength": 39.0,
@@ -2223,17 +2047,15 @@
         }
       ],
       "continuation_probability_percentile": 98.1,
-      "opportunity_raw_score": 34.6,
-      "opportunity_score": 39.0,
+      "opportunity_raw_score": 31.8,
+      "opportunity_score": 37.1,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -2265,16 +2087,6 @@
       "er_streak": 0,
       "er_price_momentum_aligned": null,
       "price_momentum": null,
-      "legacy_trend_score": null,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "技术历史不足，仍在计算"
-      ],
-      "confirmed_legacy_trend_score": null,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "技术历史不足，仍在计算"
-      ],
       "continuation_probability": 0.3991,
       "sector": "半导体",
       "trend_strength": 51.9,
@@ -2307,17 +2119,15 @@
         }
       ],
       "continuation_probability_percentile": 15.7,
-      "opportunity_raw_score": 42.2,
-      "opportunity_score": 49.5,
+      "opportunity_raw_score": 43.9,
+      "opportunity_score": 51.9,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -2509,24 +2319,6 @@
         "mean": 1.5165159239735624,
         "positive": true
       },
-      "legacy_trend_score": 33.9,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 33.9,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.466,
       "sector": "计算机硬件",
       "trend_strength": 74.3,
@@ -2559,17 +2351,15 @@
         }
       ],
       "continuation_probability_percentile": 99.0,
-      "opportunity_raw_score": 59.4,
-      "opportunity_score": 74.3,
+      "opportunity_raw_score": 58.2,
+      "opportunity_score": 72.4,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -2761,22 +2551,6 @@
         "mean": -0.01972121145819065,
         "positive": false
       },
-      "legacy_trend_score": 22.4,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 22.4,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4146,
       "sector": "互联网内容与信息",
       "trend_strength": 44.8,
@@ -2809,17 +2583,15 @@
         }
       ],
       "continuation_probability_percentile": 42.9,
-      "opportunity_raw_score": 35.0,
+      "opportunity_raw_score": 35.1,
       "opportunity_score": 40.0,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -3011,26 +2783,6 @@
         "mean": 0.06895472213043703,
         "positive": true
       },
-      "legacy_trend_score": 53.7,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 12.0",
-        "日线MACD 10.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 5.0",
-        "未通过：周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 53.7,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 12.0",
-        "日线MACD 10.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 5.0",
-        "未通过：周线MACD≥2"
-      ],
       "continuation_probability": 0.4306,
       "sector": "半导体",
       "trend_strength": 50.5,
@@ -3063,17 +2815,15 @@
         }
       ],
       "continuation_probability_percentile": 70.5,
-      "opportunity_raw_score": 45.3,
-      "opportunity_score": 54.3,
+      "opportunity_raw_score": 44.4,
+      "opportunity_score": 53.3,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -3267,31 +3017,11 @@
         "mean": 0.521061203978688,
         "positive": true
       },
-      "legacy_trend_score": 60.3,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 12.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0",
-        "未通过：日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 60.3,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 12.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0",
-        "未通过：日线MACD≥2"
-      ],
       "continuation_probability": 0.4205,
       "sector": "半导体",
       "trend_strength": 91.4,
       "trend_strength_percentile": 8.6,
-      "er_signal_score": 4.0,
+      "er_signal_score": 5.0,
       "trend_components": [
         {
           "name": "多周期波动调整动量",
@@ -3319,17 +3049,15 @@
         }
       ],
       "continuation_probability_percentile": 51.4,
-      "opportunity_raw_score": 70.2,
-      "opportunity_score": 90.5,
+      "opportunity_raw_score": 72.3,
+      "opportunity_score": 89.5,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -3521,20 +3249,6 @@
         "mean": -0.34353635481597383,
         "positive": false
       },
-      "legacy_trend_score": 10.0,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MACD 5.0",
-        "周线MA 5.0",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 10.0,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MACD 5.0",
-        "周线MA 5.0",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.3973,
       "sector": "软件基础设施",
       "trend_strength": 1.0,
@@ -3567,17 +3281,15 @@
         }
       ],
       "continuation_probability_percentile": 13.3,
-      "opportunity_raw_score": 3.8,
-      "opportunity_score": 1.0,
+      "opportunity_raw_score": 3.2,
+      "opportunity_score": 1.9,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -3768,24 +3480,6 @@
         "mean": 0.12568465059146064,
         "positive": true
       },
-      "legacy_trend_score": 33.9,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 33.9,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4415,
       "sector": "半导体",
       "trend_strength": 49.5,
@@ -3818,17 +3512,15 @@
         }
       ],
       "continuation_probability_percentile": 86.7,
-      "opportunity_raw_score": 42.9,
-      "opportunity_score": 50.5,
+      "opportunity_raw_score": 41.1,
+      "opportunity_score": 48.6,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -4020,22 +3712,6 @@
         "mean": -0.0212623843604625,
         "positive": false
       },
-      "legacy_trend_score": 22.4,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 22.4,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4196,
       "sector": "互联网内容与信息",
       "trend_strength": 47.6,
@@ -4068,17 +3744,15 @@
         }
       ],
       "continuation_probability_percentile": 50.5,
-      "opportunity_raw_score": 37.3,
-      "opportunity_score": 44.8,
+      "opportunity_raw_score": 37.2,
+      "opportunity_score": 45.7,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -4271,22 +3945,6 @@
         "mean": -0.17400622358404205,
         "positive": false
       },
-      "legacy_trend_score": 24.5,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 12.0",
-        "日线MACD 10.0",
-        "RSI质量 2.5",
-        "未通过：周线MA≥3、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 24.5,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 12.0",
-        "日线MACD 10.0",
-        "RSI质量 2.5",
-        "未通过：周线MA≥3、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4,
       "sector": "旅游服务",
       "trend_strength": 21.0,
@@ -4319,17 +3977,15 @@
         }
       ],
       "continuation_probability_percentile": 17.1,
-      "opportunity_raw_score": 24.1,
-      "opportunity_score": 26.7,
+      "opportunity_raw_score": 24.2,
+      "opportunity_score": 27.6,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -4521,24 +4177,6 @@
         "mean": 0.4148275049053513,
         "positive": true
       },
-      "legacy_trend_score": 33.9,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 33.9,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4327,
       "sector": "互联网内容与信息",
       "trend_strength": 60.0,
@@ -4571,17 +4209,15 @@
         }
       ],
       "continuation_probability_percentile": 75.2,
-      "opportunity_raw_score": 48.2,
-      "opportunity_score": 59.0,
+      "opportunity_raw_score": 47.5,
+      "opportunity_score": 57.1,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -4770,26 +4406,6 @@
         "mean": -0.1002303360288344,
         "positive": false
       },
-      "legacy_trend_score": 22.2,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "日线MACD 5.0",
-        "周线MA 5.0",
-        "周线MACD 6.7",
-        "RSI质量 1.5",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 22.2,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "日线MACD 5.0",
-        "周线MA 5.0",
-        "周线MACD 6.7",
-        "RSI质量 1.5",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4079,
       "sector": "软件基础设施",
       "trend_strength": 42.9,
@@ -4822,17 +4438,15 @@
         }
       ],
       "continuation_probability_percentile": 30.0,
-      "opportunity_raw_score": 36.6,
-      "opportunity_score": 42.9,
+      "opportunity_raw_score": 37.2,
+      "opportunity_score": 44.8,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -5025,22 +4639,6 @@
         "mean": -0.08364045956281896,
         "positive": false
       },
-      "legacy_trend_score": 22.4,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 22.4,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.418,
       "sector": "通讯设备",
       "trend_strength": 16.2,
@@ -5073,17 +4671,15 @@
         }
       ],
       "continuation_probability_percentile": 46.7,
-      "opportunity_raw_score": 13.6,
+      "opportunity_raw_score": 12.1,
       "opportunity_score": 14.3,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -5275,24 +4871,6 @@
         "mean": 0.3853626404575578,
         "positive": true
       },
-      "legacy_trend_score": 33.2,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 2.5",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 33.2,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 2.5",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.454,
       "sector": "半导体",
       "trend_strength": 62.9,
@@ -5325,17 +4903,15 @@
         }
       ],
       "continuation_probability_percentile": 97.1,
-      "opportunity_raw_score": 51.3,
-      "opportunity_score": 62.9,
+      "opportunity_raw_score": 49.7,
+      "opportunity_score": 61.9,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -5526,26 +5102,6 @@
         "mean": 0.013145599975604308,
         "positive": true
       },
-      "legacy_trend_score": 26.2,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 5.0",
-        "周线MA 5.0",
-        "周线MACD 6.7",
-        "RSI质量 1.5",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 26.2,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 5.0",
-        "周线MA 5.0",
-        "周线MACD 6.7",
-        "RSI质量 1.5",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4224,
       "sector": "互联网内容与信息",
       "trend_strength": 43.8,
@@ -5578,17 +5134,15 @@
         }
       ],
       "continuation_probability_percentile": 56.2,
-      "opportunity_raw_score": 37.4,
-      "opportunity_score": 45.7,
+      "opportunity_raw_score": 36.8,
+      "opportunity_score": 43.8,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -5716,16 +5270,6 @@
         "mean": -0.25512870654282843,
         "positive": false
       },
-      "legacy_trend_score": null,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "技术历史不足，仍在计算"
-      ],
-      "confirmed_legacy_trend_score": null,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "技术历史不足，仍在计算"
-      ],
       "continuation_probability": 0.3838,
       "sector": "资本市场",
       "trend_strength": 14.3,
@@ -5758,17 +5302,15 @@
         }
       ],
       "continuation_probability_percentile": 1.9,
-      "opportunity_raw_score": 12.6,
-      "opportunity_score": 12.4,
+      "opportunity_raw_score": 13.2,
+      "opportunity_score": 15.2,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -5960,26 +5502,6 @@
         "mean": 0.6745822433018889,
         "positive": true
       },
-      "legacy_trend_score": 32.9,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 5.0",
-        "周线MA 10.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 32.9,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 5.0",
-        "周线MA 10.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4051,
       "sector": "通讯设备",
       "trend_strength": 73.3,
@@ -6012,17 +5534,15 @@
         }
       ],
       "continuation_probability_percentile": 28.6,
-      "opportunity_raw_score": 55.3,
-      "opportunity_score": 68.6,
+      "opportunity_raw_score": 57.5,
+      "opportunity_score": 70.5,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -6214,22 +5734,6 @@
         "mean": -0.009902385186459214,
         "positive": false
       },
-      "legacy_trend_score": 17.4,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "周线MA 10.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 17.4,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "周线MA 10.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4355,
       "sector": "航空航天与国防",
       "trend_strength": 20.0,
@@ -6262,17 +5766,15 @@
         }
       ],
       "continuation_probability_percentile": 82.4,
-      "opportunity_raw_score": 20.5,
-      "opportunity_score": 21.0,
+      "opportunity_raw_score": 17.5,
+      "opportunity_score": 19.0,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -6465,22 +5967,6 @@
         "mean": -0.19079300234034294,
         "positive": false
       },
-      "legacy_trend_score": 9.8,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 5.0",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 9.8,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 5.0",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4338,
       "sector": "信息技术服务",
       "trend_strength": 23.8,
@@ -6513,17 +5999,15 @@
         }
       ],
       "continuation_probability_percentile": 79.0,
-      "opportunity_raw_score": 20.5,
-      "opportunity_score": 21.9,
+      "opportunity_raw_score": 17.9,
+      "opportunity_score": 21.0,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -6716,24 +6200,6 @@
         "mean": 0.1282236988155571,
         "positive": true
       },
-      "legacy_trend_score": 26.4,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 26.4,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4457,
       "sector": "电子元件",
       "trend_strength": 29.5,
@@ -6766,17 +6232,15 @@
         }
       ],
       "continuation_probability_percentile": 92.4,
-      "opportunity_raw_score": 25.1,
-      "opportunity_score": 28.6,
+      "opportunity_raw_score": 22.1,
+      "opportunity_score": 26.7,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -6967,22 +6431,6 @@
         "mean": -0.07359361714610409,
         "positive": false
       },
-      "legacy_trend_score": 23.5,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 12.0",
-        "日线MACD 10.0",
-        "RSI质量 1.5",
-        "未通过：周线MA≥3、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 23.5,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 12.0",
-        "日线MACD 10.0",
-        "RSI质量 1.5",
-        "未通过：周线MA≥3、周线MACD≥2"
-      ],
       "continuation_probability": 0.3886,
       "sector": "互联网零售",
       "trend_strength": 37.1,
@@ -7015,17 +6463,15 @@
         }
       ],
       "continuation_probability_percentile": 4.8,
-      "opportunity_raw_score": 32.3,
-      "opportunity_score": 37.1,
+      "opportunity_raw_score": 33.8,
+      "opportunity_score": 39.0,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -7214,20 +6660,6 @@
         "mean": -0.11731519131779389,
         "positive": false
       },
-      "legacy_trend_score": 5.5,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "RSI质量 1.5",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 5.5,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "RSI质量 1.5",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4029,
       "sector": "软件基础设施",
       "trend_strength": 41.9,
@@ -7260,17 +6692,15 @@
         }
       ],
       "continuation_probability_percentile": 22.9,
-      "opportunity_raw_score": 35.5,
+      "opportunity_raw_score": 36.4,
       "opportunity_score": 41.9,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -7459,24 +6889,6 @@
         "mean": -0.049414378930674165,
         "positive": false
       },
-      "legacy_trend_score": 26.4,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 26.4,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4234,
       "sector": "互联网零售",
       "trend_strength": 56.2,
@@ -7509,17 +6921,15 @@
         }
       ],
       "continuation_probability_percentile": 59.5,
-      "opportunity_raw_score": 47.3,
-      "opportunity_score": 57.1,
+      "opportunity_raw_score": 47.2,
+      "opportunity_score": 56.2,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -7711,22 +7121,6 @@
         "mean": 0.0074897719515034655,
         "positive": true
       },
-      "legacy_trend_score": 22.4,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 22.4,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4372,
       "sector": "电气设备及零件",
       "trend_strength": 22.9,
@@ -7759,17 +7153,15 @@
         }
       ],
       "continuation_probability_percentile": 84.8,
-      "opportunity_raw_score": 22.6,
+      "opportunity_raw_score": 19.7,
       "opportunity_score": 23.8,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -7961,24 +7353,6 @@
         "mean": 0.9831870629629563,
         "positive": true
       },
-      "legacy_trend_score": 27.4,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MACD 5.0",
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 27.4,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MACD 5.0",
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4018,
       "sector": "通讯设备",
       "trend_strength": 32.4,
@@ -8011,17 +7385,15 @@
         }
       ],
       "continuation_probability_percentile": 20.0,
-      "opportunity_raw_score": 26.2,
+      "opportunity_raw_score": 26.8,
       "opportunity_score": 29.5,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -8213,24 +7585,6 @@
         "mean": -0.11039046958912146,
         "positive": false
       },
-      "legacy_trend_score": 17.2,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 5.0",
-        "周线MACD 6.7",
-        "RSI质量 1.5",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 17.2,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 5.0",
-        "周线MACD 6.7",
-        "RSI质量 1.5",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4133,
       "sector": "应用软件",
       "trend_strength": 61.0,
@@ -8263,17 +7617,15 @@
         }
       ],
       "continuation_probability_percentile": 39.0,
-      "opportunity_raw_score": 47.2,
-      "opportunity_score": 56.2,
+      "opportunity_raw_score": 48.2,
+      "opportunity_score": 59.5,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -8464,26 +7816,6 @@
         "mean": 0.025259702903228987,
         "positive": true
       },
-      "legacy_trend_score": 46.9,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 12.0",
-        "日线MACD 5.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 46.9,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 12.0",
-        "日线MACD 5.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4274,
       "sector": "半导体",
       "trend_strength": 45.7,
@@ -8516,17 +7848,15 @@
         }
       ],
       "continuation_probability_percentile": 67.1,
-      "opportunity_raw_score": 41.3,
-      "opportunity_score": 48.6,
+      "opportunity_raw_score": 40.3,
+      "opportunity_score": 47.6,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -8718,22 +8048,6 @@
         "mean": -0.06574181333340808,
         "positive": false
       },
-      "legacy_trend_score": 22.4,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 22.4,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4079,
       "sector": "半导体",
       "trend_strength": 40.0,
@@ -8766,17 +8080,15 @@
         }
       ],
       "continuation_probability_percentile": 30.0,
-      "opportunity_raw_score": 32.0,
-      "opportunity_score": 36.2,
+      "opportunity_raw_score": 32.5,
+      "opportunity_score": 38.1,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -8969,22 +8281,6 @@
         "mean": 0.266980451084164,
         "positive": true
       },
-      "legacy_trend_score": 24.9,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 24.9,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4512,
       "sector": "半导体设备与材料",
       "trend_strength": 24.8,
@@ -9017,17 +8313,15 @@
         }
       ],
       "continuation_probability_percentile": 96.2,
-      "opportunity_raw_score": 23.0,
-      "opportunity_score": 24.8,
+      "opportunity_raw_score": 19.6,
+      "opportunity_score": 22.9,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -9219,20 +8513,6 @@
         "mean": -0.2408671049939968,
         "positive": false
       },
-      "legacy_trend_score": 4.8,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 4.8,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4047,
       "sector": "软件基础设施",
       "trend_strength": 4.8,
@@ -9265,17 +8545,15 @@
         }
       ],
       "continuation_probability_percentile": 26.7,
-      "opportunity_raw_score": 7.2,
-      "opportunity_score": 3.8,
+      "opportunity_raw_score": 6.1,
+      "opportunity_score": 4.8,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -9470,24 +8748,6 @@
         "mean": -0.026574404406003376,
         "positive": false
       },
-      "legacy_trend_score": 31.2,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 10.0",
-        "周线MA 10.0",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、周线MA≥3、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 31.2,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 10.0",
-        "周线MA 10.0",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、周线MA≥3、周线MACD≥2"
-      ],
       "continuation_probability": 0.4195,
       "sector": "计算机硬件",
       "trend_strength": 31.4,
@@ -9520,17 +8780,15 @@
         }
       ],
       "continuation_probability_percentile": 49.5,
-      "opportunity_raw_score": 28.4,
-      "opportunity_score": 31.4,
+      "opportunity_raw_score": 27.5,
+      "opportunity_score": 30.5,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -9722,20 +8980,6 @@
         "mean": -0.3033157510207641,
         "positive": false
       },
-      "legacy_trend_score": 13.0,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 5.0",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 13.0,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 5.0",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.3878,
       "sector": "应用软件",
       "trend_strength": 7.6,
@@ -9768,17 +9012,15 @@
         }
       ],
       "continuation_probability_percentile": 3.8,
-      "opportunity_raw_score": 8.0,
-      "opportunity_score": 4.8,
+      "opportunity_raw_score": 8.2,
+      "opportunity_score": 5.7,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -9973,31 +9215,11 @@
         "mean": 1.160915484532702,
         "positive": true
       },
-      "legacy_trend_score": 63.6,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 4.2",
-        "未通过：日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 63.6,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 4.2",
-        "未通过：日线MACD≥2"
-      ],
       "continuation_probability": 0.4358,
       "sector": "计算机硬件",
       "trend_strength": 99.0,
       "trend_strength_percentile": 1.0,
-      "er_signal_score": 8.0,
+      "er_signal_score": 10.0,
       "trend_components": [
         {
           "name": "多周期波动调整动量",
@@ -10025,17 +9247,15 @@
         }
       ],
       "continuation_probability_percentile": 83.8,
-      "opportunity_raw_score": 78.7,
-      "opportunity_score": 98.1,
+      "opportunity_raw_score": 79.8,
+      "opportunity_score": 95.2,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -10227,26 +9447,6 @@
         "mean": 0.008320467727021589,
         "positive": true
       },
-      "legacy_trend_score": 44.6,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 5.0",
-        "周线MA 15.0",
-        "周线MACD 13.3",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 44.6,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 5.0",
-        "周线MA 15.0",
-        "周线MACD 13.3",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2"
-      ],
       "continuation_probability": 0.4234,
       "sector": "资本市场",
       "trend_strength": 81.0,
@@ -10279,17 +9479,15 @@
         }
       ],
       "continuation_probability_percentile": 59.5,
-      "opportunity_raw_score": 62.2,
-      "opportunity_score": 79.0,
+      "opportunity_raw_score": 63.2,
+      "opportunity_score": 80.0,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -10321,16 +9519,6 @@
       "er_streak": 0,
       "er_price_momentum_aligned": null,
       "price_momentum": null,
-      "legacy_trend_score": null,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "技术历史不足，仍在计算"
-      ],
-      "confirmed_legacy_trend_score": null,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "技术历史不足，仍在计算"
-      ],
       "continuation_probability": 0.4081,
       "sector": "半导体",
       "trend_strength": 54.3,
@@ -10363,17 +9551,15 @@
         }
       ],
       "continuation_probability_percentile": 31.4,
-      "opportunity_raw_score": 44.6,
-      "opportunity_score": 52.4,
+      "opportunity_raw_score": 45.7,
+      "opportunity_score": 54.3,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -10564,26 +9750,6 @@
         "mean": 0.0761324957352885,
         "positive": true
       },
-      "legacy_trend_score": 56.3,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0",
-        "未通过：日线MA≥3、日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 56.3,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0",
-        "未通过：日线MA≥3、日线MACD≥2"
-      ],
       "continuation_probability": 0.4274,
       "sector": "非酒精饮料",
       "trend_strength": 81.9,
@@ -10616,17 +9782,15 @@
         }
       ],
       "continuation_probability_percentile": 67.1,
-      "opportunity_raw_score": 66.2,
-      "opportunity_score": 84.8,
+      "opportunity_raw_score": 66.9,
+      "opportunity_score": 83.8,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -10817,16 +9981,6 @@
         "mean": -0.21961299059123698,
         "positive": false
       },
-      "legacy_trend_score": 0.0,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 0.0,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4116,
       "sector": "娱乐",
       "trend_strength": 5.7,
@@ -10859,17 +10013,15 @@
         }
       ],
       "continuation_probability_percentile": 36.2,
-      "opportunity_raw_score": 9.7,
+      "opportunity_raw_score": 8.3,
       "opportunity_score": 6.7,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -11061,24 +10213,6 @@
         "mean": 1.273009643513342,
         "positive": true
       },
-      "legacy_trend_score": 33.9,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 33.9,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4802,
       "sector": "半导体",
       "trend_strength": 80.0,
@@ -11111,17 +10245,15 @@
         }
       ],
       "continuation_probability_percentile": 100.0,
-      "opportunity_raw_score": 63.5,
-      "opportunity_score": 81.9,
+      "opportunity_raw_score": 62.5,
+      "opportunity_score": 79.0,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -11292,11 +10424,10 @@
         "intraday_range_pct": 0.019907033144704923,
         "max_drawdown_20d_pct": -0.06720708832123679,
         "quality_grade": "A",
-        "quality_score": 95.0,
+        "quality_score": 80.0,
         "quality_label": "触发明确",
         "positive_reasons": [
-          "回踩 MA10/MA20 后重新转强",
-          "突破发生在最近 1–4 根日 K",
+          "刚突破，且回踩 MA10/MA20 后重新转强",
           "收盘位于 MA20 上方 0–1.5 ATR"
         ],
         "risk_reasons": []
@@ -11314,24 +10445,6 @@
         "mean": -0.2395480230582501,
         "positive": false
       },
-      "legacy_trend_score": 22.8,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 12.0",
-        "日线MACD 5.0",
-        "周线MA 5.0",
-        "RSI质量 0.8",
-        "未通过：周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 22.8,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 12.0",
-        "日线MACD 5.0",
-        "周线MA 5.0",
-        "RSI质量 0.8",
-        "未通过：周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.3944,
       "sector": "资本市场",
       "trend_strength": 26.7,
@@ -11364,17 +10477,15 @@
         }
       ],
       "continuation_probability_percentile": 8.6,
-      "opportunity_raw_score": 28.7,
+      "opportunity_raw_score": 28.0,
       "opportunity_score": 32.4,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -11545,12 +10656,11 @@
         "intraday_range_pct": 0.0143422634205969,
         "max_drawdown_20d_pct": -0.03826460278073174,
         "quality_grade": "A",
-        "quality_score": 80.0,
+        "quality_score": 75.0,
         "quality_label": "触发明确",
         "positive_reasons": [
           "回踩 MA10/MA20 后重新转强",
-          "RSI 位于健康强势区",
-          "上涨且量能温和确认"
+          "RSI 位于健康强势区"
         ],
         "risk_reasons": []
       },
@@ -11567,26 +10677,6 @@
         "mean": 0.0037778885231430546,
         "positive": true
       },
-      "legacy_trend_score": 51.3,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 5.0",
-        "周线MA 20.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0",
-        "未通过：日线MA≥3、日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 51.3,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 5.0",
-        "周线MA 20.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0",
-        "未通过：日线MA≥3、日线MACD≥2"
-      ],
       "continuation_probability": 0.4208,
       "sector": "多元化保险",
       "trend_strength": 75.2,
@@ -11619,17 +10709,15 @@
         }
       ],
       "continuation_probability_percentile": 52.4,
-      "opportunity_raw_score": 63.3,
-      "opportunity_score": 81.0,
+      "opportunity_raw_score": 63.9,
+      "opportunity_score": 81.9,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -11821,22 +10909,6 @@
         "mean": 0.2897797499055135,
         "positive": true
       },
-      "legacy_trend_score": 29.2,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 2.5",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 29.2,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 2.5",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4321,
       "sector": "半导体",
       "trend_strength": 58.1,
@@ -11869,17 +10941,15 @@
         }
       ],
       "continuation_probability_percentile": 73.8,
-      "opportunity_raw_score": 46.8,
+      "opportunity_raw_score": 46.1,
       "opportunity_score": 55.2,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -12070,26 +11140,6 @@
         "mean": -0.18435311346936334,
         "positive": false
       },
-      "legacy_trend_score": 28.8,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 5.0",
-        "周线MACD 13.3",
-        "RSI质量 1.5",
-        "量价确认 1.0",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 28.8,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 5.0",
-        "周线MACD 13.3",
-        "RSI质量 1.5",
-        "量价确认 1.0",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2"
-      ],
       "continuation_probability": 0.4005,
       "sector": "金融数据与证券交易所",
       "trend_strength": 28.6,
@@ -12122,17 +11172,15 @@
         }
       ],
       "continuation_probability_percentile": 19.0,
-      "opportunity_raw_score": 24.5,
-      "opportunity_score": 27.6,
+      "opportunity_raw_score": 25.0,
+      "opportunity_score": 28.6,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -12321,22 +11369,6 @@
         "mean": -0.1533428710368884,
         "positive": false
       },
-      "legacy_trend_score": 14.8,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "日线MACD 10.0",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 14.8,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "日线MACD 10.0",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.3972,
       "sector": "互联网零售",
       "trend_strength": 30.5,
@@ -12369,17 +11401,15 @@
         }
       ],
       "continuation_probability_percentile": 12.4,
-      "opportunity_raw_score": 27.0,
-      "opportunity_score": 30.5,
+      "opportunity_raw_score": 27.9,
+      "opportunity_score": 31.4,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -12571,26 +11601,6 @@
         "mean": -0.12931824859563856,
         "positive": false
       },
-      "legacy_trend_score": 38.1,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "日线MACD 5.0",
-        "周线MA 15.0",
-        "周线MACD 13.3",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 38.1,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "日线MACD 5.0",
-        "周线MA 15.0",
-        "周线MACD 13.3",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4433,
       "sector": "专业与通用药品制造商",
       "trend_strength": 64.8,
@@ -12623,17 +11633,15 @@
         }
       ],
       "continuation_probability_percentile": 90.0,
-      "opportunity_raw_score": 52.3,
-      "opportunity_score": 65.7,
+      "opportunity_raw_score": 51.1,
+      "opportunity_score": 64.8,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -12822,26 +11830,6 @@
         "mean": -0.03178576929018114,
         "positive": false
       },
-      "legacy_trend_score": 42.1,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 5.0",
-        "周线MA 15.0",
-        "周线MACD 13.3",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 42.1,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 5.0",
-        "周线MA 15.0",
-        "周线MACD 13.3",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4263,
       "sector": "信贷",
       "trend_strength": 70.5,
@@ -12874,17 +11862,15 @@
         }
       ],
       "continuation_probability_percentile": 62.9,
-      "opportunity_raw_score": 57.5,
-      "opportunity_score": 70.5,
+      "opportunity_raw_score": 57.9,
+      "opportunity_score": 71.4,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -13076,24 +12062,6 @@
         "mean": -0.20115845483175596,
         "positive": false
       },
-      "legacy_trend_score": 19.8,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "日线MACD 5.0",
-        "周线MA 10.0",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 19.8,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "日线MACD 5.0",
-        "周线MA 10.0",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.3847,
       "sector": "资本市场",
       "trend_strength": 11.4,
@@ -13126,272 +12094,15 @@
         }
       ],
       "continuation_probability_percentile": 2.9,
-      "opportunity_raw_score": 10.6,
-      "opportunity_score": 9.5,
+      "opportunity_raw_score": 11.1,
+      "opportunity_score": 11.4,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
-      "trend_candidate": false
-    },
-    {
-      "code": "US.LLY",
-      "ticker": "LLY",
-      "name": "礼来",
-      "heat": 3.3675,
-      "last_qualified_heat": 3.3675,
-      "market_cap": 1126350973818.18,
-      "last_qualified_market_cap": 1126350973818.18,
-      "active": true,
-      "trading_days_since_hit": 0,
-      "last_hit_date": "2026-07-24",
-      "heat_history": [
-        {
-          "date": "2026-07-24",
-          "heat": 3.3675
-        }
-      ],
-      "daily": {
-        "ma_score": 4,
-        "ma_facts": [
-          true,
-          false,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 1,
-        "macd_facts": [
-          true,
-          false,
-          false
-        ],
-        "dif": 13.35906413936732,
-        "dea": 18.12690185812817,
-        "hist": -4.767837718760852,
-        "rsi": 57.0082172264708,
-        "volume_ratio": 0.9048263628935458,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 1196.03,
-        "previous_close": 1185.87,
-        "ma5": 1173.444,
-        "ma10": 1170.654,
-        "ma20": 1190.3325,
-        "ma60": 1100.4055487183832,
-        "ma_label": "偏多",
-        "macd_label": "动能分化",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "daily_confirmed": {
-        "ma_score": 4,
-        "ma_facts": [
-          true,
-          false,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 1,
-        "macd_facts": [
-          true,
-          false,
-          false
-        ],
-        "dif": 13.35906413936732,
-        "dea": 18.12690185812817,
-        "hist": -4.767837718760852,
-        "rsi": 57.0082172264708,
-        "volume_ratio": 0.9048263628935458,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 1196.03,
-        "previous_close": 1185.87,
-        "ma5": 1173.444,
-        "ma10": 1170.654,
-        "ma20": 1190.3325,
-        "ma60": 1100.4055487183832,
-        "ma_label": "偏多",
-        "macd_label": "动能分化",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "daily_is_partial": false,
-      "weekly": {
-        "ma_score": 5,
-        "ma_facts": [
-          true,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 2,
-        "macd_facts": [
-          true,
-          true,
-          false
-        ],
-        "dif": 64.68074475596177,
-        "dea": 49.45534693557633,
-        "hist": 15.225397820385439,
-        "rsi": 65.39090919434305,
-        "volume_ratio": 0.7250388130358041,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 1196.03,
-        "previous_close": 1179.11,
-        "ma5": 1197.15,
-        "ma10": 1151.874,
-        "ma20": 1043.8559987869498,
-        "ma60": 939.4788434712001,
-        "ma_label": "强多头结构",
-        "macd_label": "多头动能",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "weekly_confirmed": {
-        "ma_score": 5,
-        "ma_facts": [
-          true,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 2,
-        "macd_facts": [
-          true,
-          true,
-          false
-        ],
-        "dif": 64.68074475596177,
-        "dea": 49.45534693557633,
-        "hist": 15.225397820385439,
-        "rsi": 65.39090919434305,
-        "volume_ratio": 0.7250388130358041,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 1196.03,
-        "previous_close": 1179.11,
-        "ma5": 1197.15,
-        "ma10": 1151.874,
-        "ma20": 1043.8559987869498,
-        "ma60": 939.4788434712001,
-        "ma_label": "强多头结构",
-        "macd_label": "多头动能",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "weekly_is_partial": false,
-      "entry": {
-        "label": "回踩转强",
-        "close_distance_ma20_pct": 0.004786477727861671,
-        "close_distance_ma60_pct": 0.08689928126315638,
-        "distance_ma20_atr": 0.15474011206320173,
-        "distance_ma60_atr": 2.597093164949465,
-        "distance_20d_high_pct": -0.042754812117331675,
-        "distance_52w_high_pct": -0.042754812117331675,
-        "gap_pct": 0.007150868139003341,
-        "breakout_recent": false,
-        "breakout_days_since": 18,
-        "pullback_ma10_reclaim": true,
-        "pullback_ma20_reclaim": true,
-        "atr_pct": 0.03078501387192533,
-        "intraday_range_pct": 0.016394461450243352,
-        "max_drawdown_20d_pct": -0.07175693612612888,
-        "quality_grade": "A",
-        "quality_score": 85.0,
-        "quality_label": "触发明确",
-        "positive_reasons": [
-          "回踩 MA10/MA20 后重新转强",
-          "收盘位于 MA20 上方 0–1.5 ATR",
-          "RSI 位于健康强势区"
-        ],
-        "risk_reasons": []
-      },
-      "er_rank": null,
-      "er_hits_last5": 0,
-      "er_streak": 0,
-      "er_price_momentum_aligned": null,
-      "price_momentum": {
-        "returns": {
-          "4w": -0.010007284044631248,
-          "12w": 0.24369520330540828,
-          "36w": 0.17049833118111546
-        },
-        "mean": 0.1347287501472975,
-        "positive": true
-      },
-      "legacy_trend_score": 64.3,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0",
-        "未通过：日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 64.3,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0",
-        "未通过：日线MACD≥2"
-      ],
-      "continuation_probability": 0.412,
-      "sector": "一般药品制造商",
-      "trend_strength": 95.2,
-      "trend_strength_percentile": 4.8,
-      "er_signal_score": 0.0,
-      "trend_components": [
-        {
-          "name": "多周期波动调整动量",
-          "percentile": 83.7,
-          "weight": 40,
-          "contribution": 33.5
-        },
-        {
-          "name": "MA20/MA60斜率",
-          "percentile": 86.9,
-          "weight": 25,
-          "contribution": 21.7
-        },
-        {
-          "name": "趋势平滑度",
-          "percentile": 82.6,
-          "weight": 20,
-          "contribution": 16.5
-        },
-        {
-          "name": "相对SPY/行业强度",
-          "percentile": 86.8,
-          "weight": 15,
-          "contribution": 13.0
-        }
-      ],
-      "continuation_probability_percentile": 37.6,
-      "opportunity_raw_score": 77.1,
-      "opportunity_score": 94.3,
-      "opportunity_weights": {
-        "trend_core": 0.702,
-        "er_signal": 0.15,
-        "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
-      },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -13583,29 +12294,11 @@
         "mean": 0.5395679333155726,
         "positive": true
       },
-      "legacy_trend_score": 49.6,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 8.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 49.6,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 8.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2"
-      ],
       "continuation_probability": 0.4422,
       "sector": "半导体设备与材料",
       "trend_strength": 87.6,
       "trend_strength_percentile": 12.4,
-      "er_signal_score": 8.0,
+      "er_signal_score": 10.0,
       "trend_components": [
         {
           "name": "多周期波动调整动量",
@@ -13633,17 +12326,15 @@
         }
       ],
       "continuation_probability_percentile": 87.6,
-      "opportunity_raw_score": 69.4,
+      "opportunity_raw_score": 69.7,
       "opportunity_score": 86.7,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -13836,24 +12527,6 @@
         "mean": -0.28000137086734556,
         "positive": false
       },
-      "legacy_trend_score": 21.4,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 10.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 21.4,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 10.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4307,
       "sector": "健康信息服务",
       "trend_strength": 13.3,
@@ -13886,17 +12559,15 @@
         }
       ],
       "continuation_probability_percentile": 71.4,
-      "opportunity_raw_score": 12.8,
-      "opportunity_score": 13.3,
+      "opportunity_raw_score": 10.0,
+      "opportunity_score": 8.6,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -14088,24 +12759,6 @@
         "mean": 0.20861160707815363,
         "positive": true
       },
-      "legacy_trend_score": 26.4,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 26.4,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4348,
       "sector": "科技仪器",
       "trend_strength": 38.1,
@@ -14138,17 +12791,15 @@
         }
       ],
       "continuation_probability_percentile": 81.0,
-      "opportunity_raw_score": 33.1,
-      "opportunity_score": 38.1,
+      "opportunity_raw_score": 31.1,
+      "opportunity_score": 35.2,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -14340,24 +12991,6 @@
         "mean": 0.7965818467182052,
         "positive": true
       },
-      "legacy_trend_score": 37.9,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 8.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 37.9,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 8.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4499,
       "sector": "计算机硬件",
       "trend_strength": 72.4,
@@ -14390,17 +13023,15 @@
         }
       ],
       "continuation_probability_percentile": 94.3,
-      "opportunity_raw_score": 57.9,
-      "opportunity_score": 71.4,
+      "opportunity_raw_score": 56.8,
+      "opportunity_score": 69.5,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -14589,18 +13220,6 @@
         "mean": -0.07011333448150732,
         "positive": false
       },
-      "legacy_trend_score": 0.8,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 0.8,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4174,
       "sector": "餐厅",
       "trend_strength": 9.5,
@@ -14633,17 +13252,15 @@
         }
       ],
       "continuation_probability_percentile": 45.7,
-      "opportunity_raw_score": 13.9,
-      "opportunity_score": 15.2,
+      "opportunity_raw_score": 12.1,
+      "opportunity_score": 13.3,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -14835,20 +13452,6 @@
         "mean": -0.1684496600944735,
         "positive": false
       },
-      "legacy_trend_score": 5.8,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "周线MA 5.0",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 5.8,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "周线MA 5.0",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4038,
       "sector": "通讯设备",
       "trend_strength": 18.1,
@@ -14881,17 +13484,15 @@
         }
       ],
       "continuation_probability_percentile": 25.2,
-      "opportunity_raw_score": 16.4,
+      "opportunity_raw_score": 16.1,
       "opportunity_score": 16.2,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -15082,18 +13683,6 @@
         "mean": -0.19583543697568892,
         "positive": false
       },
-      "legacy_trend_score": 5.0,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "周线MA 5.0",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 5.0,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "周线MA 5.0",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.3957,
       "sector": "汽车制造",
       "trend_strength": 10.5,
@@ -15127,16 +13716,14 @@
       ],
       "continuation_probability_percentile": 10.5,
       "opportunity_raw_score": 11.9,
-      "opportunity_score": 10.5,
+      "opportunity_score": 12.4,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -15328,20 +13915,6 @@
         "mean": -0.17904609627588372,
         "positive": false
       },
-      "legacy_trend_score": 11.7,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "周线MA 5.0",
-        "周线MACD 6.7",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 11.7,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "周线MA 5.0",
-        "周线MACD 6.7",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4181,
       "sector": "应用软件",
       "trend_strength": 12.4,
@@ -15374,17 +13947,15 @@
         }
       ],
       "continuation_probability_percentile": 47.6,
-      "opportunity_raw_score": 12.5,
-      "opportunity_score": 11.4,
+      "opportunity_raw_score": 10.8,
+      "opportunity_score": 10.5,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -15512,16 +14083,6 @@
         "mean": -0.06353013253837925,
         "positive": false
       },
-      "legacy_trend_score": null,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "技术历史不足，仍在计算"
-      ],
-      "confirmed_legacy_trend_score": null,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "技术历史不足，仍在计算"
-      ],
       "continuation_probability": 0.392,
       "sector": "应用软件",
       "trend_strength": 67.6,
@@ -15554,17 +14115,15 @@
         }
       ],
       "continuation_probability_percentile": 6.7,
-      "opportunity_raw_score": 50.3,
-      "opportunity_score": 61.9,
+      "opportunity_raw_score": 53.2,
+      "opportunity_score": 65.7,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -15755,26 +14314,6 @@
         "mean": 0.1548374612109027,
         "positive": true
       },
-      "legacy_trend_score": 64.3,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0",
-        "未通过：日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 64.3,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0",
-        "未通过：日线MACD≥2"
-      ],
       "continuation_probability": 0.4025,
       "sector": "医疗计划",
       "trend_strength": 90.5,
@@ -15807,17 +14346,15 @@
         }
       ],
       "continuation_probability_percentile": 21.9,
-      "opportunity_raw_score": 70.1,
-      "opportunity_score": 88.6,
+      "opportunity_raw_score": 73.4,
+      "opportunity_score": 91.4,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -16009,16 +14546,6 @@
         "mean": -0.2715372257124675,
         "positive": false
       },
-      "legacy_trend_score": 0.0,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 0.0,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4355,
       "sector": "医疗设备和用品",
       "trend_strength": 3.8,
@@ -16051,17 +14578,15 @@
         }
       ],
       "continuation_probability_percentile": 82.4,
-      "opportunity_raw_score": 8.1,
-      "opportunity_score": 5.7,
+      "opportunity_raw_score": 4.3,
+      "opportunity_score": 2.9,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -16256,24 +14781,6 @@
         "mean": -0.10395072544042545,
         "positive": false
       },
-      "legacy_trend_score": 39.6,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 15.0",
-        "周线MACD 13.3",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、周线MA≥3"
-      ],
-      "confirmed_legacy_trend_score": 39.6,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 15.0",
-        "周线MACD 13.3",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、周线MA≥3"
-      ],
       "continuation_probability": 0.4135,
       "sector": "应用软件",
       "trend_strength": 55.2,
@@ -16306,17 +14813,15 @@
         }
       ],
       "continuation_probability_percentile": 40.0,
-      "opportunity_raw_score": 48.2,
-      "opportunity_score": 58.1,
+      "opportunity_raw_score": 48.9,
+      "opportunity_score": 61.0,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -16487,11 +14992,9 @@
         "intraday_range_pct": 0.030861185655037825,
         "max_drawdown_20d_pct": -0.0803230872784384,
         "quality_grade": "B",
-        "quality_score": 55.0,
+        "quality_score": 50.0,
         "quality_label": "顺势观察",
-        "positive_reasons": [
-          "上涨且量能温和确认"
-        ],
+        "positive_reasons": [],
         "risk_reasons": []
       },
       "er_rank": null,
@@ -16507,22 +15010,6 @@
         "mean": -0.12162576643923802,
         "positive": false
       },
-      "legacy_trend_score": 11.4,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 11.4,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4101,
       "sector": "鞋类及配饰",
       "trend_strength": 15.2,
@@ -16555,17 +15042,15 @@
         }
       ],
       "continuation_probability_percentile": 34.3,
-      "opportunity_raw_score": 17.8,
+      "opportunity_raw_score": 16.4,
       "opportunity_score": 17.1,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -16736,7 +15221,7 @@
         "intraday_range_pct": 0.019095486111111077,
         "max_drawdown_20d_pct": -0.041008201640328146,
         "quality_grade": "B",
-        "quality_score": 45.0,
+        "quality_score": 50.0,
         "quality_label": "顺势观察",
         "positive_reasons": [
           "突破发生在最近 1–4 根日 K",
@@ -16759,26 +15244,6 @@
         "mean": 0.16239936680336567,
         "positive": true
       },
-      "legacy_trend_score": 52.7,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 10.0",
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 5.0",
-        "未通过：周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 52.7,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 10.0",
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 5.0",
-        "未通过：周线MACD≥2"
-      ],
       "continuation_probability": 0.409,
       "sector": "油气勘探与开发",
       "trend_strength": 66.7,
@@ -16811,17 +15276,15 @@
         }
       ],
       "continuation_probability_percentile": 32.4,
-      "opportunity_raw_score": 52.9,
-      "opportunity_score": 66.7,
+      "opportunity_raw_score": 55.0,
+      "opportunity_score": 67.6,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -17013,16 +15476,6 @@
         "mean": -0.4035809013187113,
         "positive": false
       },
-      "legacy_trend_score": 0.0,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 0.0,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4024,
       "sector": "独立电力生产商",
       "trend_strength": 2.9,
@@ -17055,17 +15508,15 @@
         }
       ],
       "continuation_probability_percentile": 21.0,
-      "opportunity_raw_score": 5.5,
-      "opportunity_score": 2.9,
+      "opportunity_raw_score": 4.7,
+      "opportunity_score": 3.8,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -17239,8 +15690,7 @@
         "quality_score": 45.0,
         "quality_label": "顺势观察",
         "positive_reasons": [
-          "突破发生在最近 1–4 根日 K",
-          "上涨且量能温和确认"
+          "突破发生在最近 1–4 根日 K"
         ],
         "risk_reasons": [
           "距 MA20 超过 2.5 ATR，位置延伸"
@@ -17259,33 +15709,11 @@
         "mean": 0.1890304656003734,
         "positive": true
       },
-      "legacy_trend_score": 70.2,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 20.0",
-        "日线MACD 15.0",
-        "周线MA 20.0",
-        "RSI质量 4.2",
-        "量价确认 1.0",
-        "残差动量Top10 10.0",
-        "未通过：周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 70.2,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 20.0",
-        "日线MACD 15.0",
-        "周线MA 20.0",
-        "RSI质量 4.2",
-        "量价确认 1.0",
-        "残差动量Top10 10.0",
-        "未通过：周线MACD≥2"
-      ],
       "continuation_probability": 0.412,
       "sector": "航空航天与国防",
       "trend_strength": 65.7,
       "trend_strength_percentile": 34.3,
-      "er_signal_score": 52.0,
+      "er_signal_score": 56.0,
       "trend_components": [
         {
           "name": "多周期波动调整动量",
@@ -17313,17 +15741,15 @@
         }
       ],
       "continuation_probability_percentile": 37.6,
-      "opportunity_raw_score": 60.2,
-      "opportunity_score": 75.2,
+      "opportunity_raw_score": 62.2,
+      "opportunity_score": 78.1,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -17514,20 +15940,6 @@
         "mean": -0.236081754422907,
         "positive": false
       },
-      "legacy_trend_score": 9.0,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "日线MACD 5.0",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 9.0,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "日线MACD 5.0",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.3991,
       "sector": "汽车制造",
       "trend_strength": 19.0,
@@ -17560,17 +15972,15 @@
         }
       ],
       "continuation_probability_percentile": 15.7,
-      "opportunity_raw_score": 18.1,
-      "opportunity_score": 18.1,
+      "opportunity_raw_score": 18.2,
+      "opportunity_score": 21.9,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -17762,26 +16172,6 @@
         "mean": 0.5500887536794224,
         "positive": true
       },
-      "legacy_trend_score": 43.9,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 43.9,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4433,
       "sector": "半导体",
       "trend_strength": 82.9,
@@ -17814,17 +16204,15 @@
         }
       ],
       "continuation_probability_percentile": 90.0,
-      "opportunity_raw_score": 65.0,
+      "opportunity_raw_score": 64.7,
       "opportunity_score": 82.9,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -18016,26 +16404,6 @@
         "mean": 0.8113708253409899,
         "positive": true
       },
-      "legacy_trend_score": 42.9,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 5.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 42.9,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 5.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4424,
       "sector": "计算机硬件",
       "trend_strength": 79.0,
@@ -18068,17 +16436,15 @@
         }
       ],
       "continuation_probability_percentile": 88.6,
-      "opportunity_raw_score": 62.2,
-      "opportunity_score": 78.1,
+      "opportunity_raw_score": 61.8,
+      "opportunity_score": 77.1,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -18269,24 +16635,6 @@
         "mean": -0.16197724685534398,
         "positive": false
       },
-      "legacy_trend_score": 22.2,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 10.0",
-        "周线MACD 6.7",
-        "RSI质量 1.5",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 22.2,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 10.0",
-        "周线MACD 6.7",
-        "RSI质量 1.5",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4049,
       "sector": "信贷",
       "trend_strength": 33.3,
@@ -18319,17 +16667,15 @@
         }
       ],
       "continuation_probability_percentile": 27.6,
-      "opportunity_raw_score": 28.7,
+      "opportunity_raw_score": 29.0,
       "opportunity_score": 33.3,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -18500,11 +16846,10 @@
         "intraday_range_pct": 0.016915732669157427,
         "max_drawdown_20d_pct": -0.0641025641025641,
         "quality_grade": "B",
-        "quality_score": 60.0,
+        "quality_score": 55.0,
         "quality_label": "顺势观察",
         "positive_reasons": [
-          "RSI 位于健康强势区",
-          "上涨且量能温和确认"
+          "RSI 位于健康强势区"
         ],
         "risk_reasons": []
       },
@@ -18521,26 +16866,6 @@
         "mean": 0.05729968356648311,
         "positive": true
       },
-      "legacy_trend_score": 50.3,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 12.0",
-        "日线MACD 5.0",
-        "周线MA 15.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0",
-        "未通过：日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 50.3,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 12.0",
-        "日线MACD 5.0",
-        "周线MA 15.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0",
-        "未通过：日线MACD≥2"
-      ],
       "continuation_probability": 0.4331,
       "sector": "一般药品制造商",
       "trend_strength": 88.6,
@@ -18574,16 +16899,14 @@
       ],
       "continuation_probability_percentile": 77.1,
       "opportunity_raw_score": 71.9,
-      "opportunity_score": 91.4,
+      "opportunity_score": 88.6,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -18775,24 +17098,6 @@
         "mean": 0.2279901016816994,
         "positive": true
       },
-      "legacy_trend_score": 38.9,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 25.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 38.9,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 25.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4272,
       "sector": "专用工业机械",
       "trend_strength": 53.3,
@@ -18825,17 +17130,15 @@
         }
       ],
       "continuation_probability_percentile": 64.8,
-      "opportunity_raw_score": 43.0,
-      "opportunity_score": 51.4,
+      "opportunity_raw_score": 42.5,
+      "opportunity_score": 50.5,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -19026,28 +17329,6 @@
         "mean": 0.32047814710242944,
         "positive": true
       },
-      "legacy_trend_score": 61.9,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 12.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "残差动量Top10 10.0",
-        "未通过：日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 61.9,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 12.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "残差动量Top10 10.0",
-        "未通过：日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4218,
       "sector": "半导体设备与材料",
       "trend_strength": 83.8,
@@ -19080,17 +17361,247 @@
         }
       ],
       "continuation_probability_percentile": 53.3,
-      "opportunity_raw_score": 70.2,
-      "opportunity_score": 89.5,
+      "opportunity_raw_score": 71.6,
+      "opportunity_score": 87.6,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
+      "trend_candidate": false
+    },
+    {
+      "code": "US.JPM",
+      "ticker": "JPM",
+      "name": "摩根大通",
+      "heat": 1.7713,
+      "last_qualified_heat": 1.7713,
+      "market_cap": 938902822000.0,
+      "last_qualified_market_cap": 938902822000.0,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 1.7713
+        }
+      ],
+      "daily": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 3,
+        "macd_facts": [
+          true,
+          true,
+          true
+        ],
+        "dif": 7.52324475785656,
+        "dea": 7.02414446862316,
+        "hist": 0.49910028923339933,
+        "rsi": 68.57773999263776,
+        "volume_ratio": 0.8965599068939335,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 353.21,
+        "previous_close": 349.9,
+        "ma5": 347.084,
+        "ma10": 344.4,
+        "ma20": 338.5195451353,
+        "ma60": 318.91466628725,
+        "ma_label": "强多头结构",
+        "macd_label": "强多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "daily_confirmed": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 3,
+        "macd_facts": [
+          true,
+          true,
+          true
+        ],
+        "dif": 7.52324475785656,
+        "dea": 7.02414446862316,
+        "hist": 0.49910028923339933,
+        "rsi": 68.57773999263776,
+        "volume_ratio": 0.8965599068939335,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 353.21,
+        "previous_close": 349.9,
+        "ma5": 347.084,
+        "ma10": 344.4,
+        "ma20": 338.5195451353,
+        "ma60": 318.91466628725,
+        "ma_label": "强多头结构",
+        "macd_label": "强多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "daily_is_partial": false,
+      "weekly": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 3,
+        "macd_facts": [
+          true,
+          true,
+          true
+        ],
+        "dif": 11.231250836106994,
+        "dea": 6.656495108417288,
+        "hist": 4.574755727689706,
+        "rsi": 70.5796567389932,
+        "volume_ratio": 0.7892677325053467,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 353.21,
+        "previous_close": 341.1,
+        "ma5": 338.26486130940003,
+        "ma10": 324.83102232330003,
+        "ma20": 310.86762937345,
+        "ma60": 301.96653206745003,
+        "ma_label": "强多头结构",
+        "macd_label": "强多头动能",
+        "rsi_label": "强势/偏热",
+        "volume_label": "缩量"
+      },
+      "weekly_confirmed": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 3,
+        "macd_facts": [
+          true,
+          true,
+          true
+        ],
+        "dif": 11.231250836106994,
+        "dea": 6.656495108417288,
+        "hist": 4.574755727689706,
+        "rsi": 70.5796567389932,
+        "volume_ratio": 0.7892677325053467,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 353.21,
+        "previous_close": 341.1,
+        "ma5": 338.26486130940003,
+        "ma10": 324.83102232330003,
+        "ma20": 310.86762937345,
+        "ma60": 301.96653206745003,
+        "ma_label": "强多头结构",
+        "macd_label": "强多头动能",
+        "rsi_label": "强势/偏热",
+        "volume_label": "缩量"
+      },
+      "weekly_is_partial": false,
+      "entry": {
+        "label": "回踩转强",
+        "close_distance_ma20_pct": 0.043396179262938706,
+        "close_distance_ma60_pct": 0.10753764984223024,
+        "distance_ma20_atr": 1.9855258433560612,
+        "distance_ma60_atr": 4.635273177062118,
+        "distance_20d_high_pct": -0.0004527832017432454,
+        "distance_52w_high_pct": -0.0004527832017432454,
+        "gap_pct": 0.002114889968562572,
+        "breakout_recent": true,
+        "breakout_days_since": 0,
+        "pullback_ma10_reclaim": true,
+        "pullback_ma20_reclaim": true,
+        "atr_pct": 0.02094723516192074,
+        "intraday_range_pct": 0.01677622177765077,
+        "max_drawdown_20d_pct": -0.02535227875714885,
+        "quality_grade": "A",
+        "quality_score": 75.0,
+        "quality_label": "触发明确",
+        "positive_reasons": [
+          "刚突破，且回踩 MA10/MA20 后重新转强",
+          "RSI 位于健康强势区"
+        ],
+        "risk_reasons": []
+      },
+      "er_rank": null,
+      "er_hits_last5": 0,
+      "er_streak": 0,
+      "er_price_momentum_aligned": null,
+      "price_momentum": {
+        "returns": {
+          "4w": 0.0782591693955641,
+          "12w": 0.13547278039246713,
+          "36w": 0.179887202630435
+        },
+        "mean": 0.13120638413948874,
+        "positive": true
+      },
+      "continuation_probability": 0.4225,
+      "sector": "多元化银行",
+      "trend_strength": 93.3,
+      "trend_strength_percentile": 6.7,
+      "er_signal_score": 0.0,
+      "trend_components": [
+        {
+          "name": "多周期波动调整动量",
+          "percentile": 81.0,
+          "weight": 40,
+          "contribution": 32.4
+        },
+        {
+          "name": "MA20/MA60斜率",
+          "percentile": 82.4,
+          "weight": 25,
+          "contribution": 20.6
+        },
+        {
+          "name": "趋势平滑度",
+          "percentile": 89.0,
+          "weight": 20,
+          "contribution": 17.8
+        },
+        {
+          "name": "相对SPY/行业强度",
+          "percentile": 72.5,
+          "weight": 15,
+          "contribution": 10.9
+        }
+      ],
+      "continuation_probability_percentile": 57.1,
+      "opportunity_raw_score": 77.5,
+      "opportunity_score": 92.4,
+      "opportunity_weights": {
+        "trend_core": 0.75,
+        "er_signal": 0.15,
+        "entry_quality": 0.1,
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
+      },
       "trend_candidate": false
     },
     {
@@ -19282,24 +17793,6 @@
         "mean": 0.17212393185405214,
         "positive": true
       },
-      "legacy_trend_score": 44.6,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 8.0",
-        "周线MA 20.0",
-        "周线MACD 13.3",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 44.6,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 8.0",
-        "周线MA 20.0",
-        "周线MACD 13.3",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2"
-      ],
       "continuation_probability": 0.4396,
       "sector": "半导体",
       "trend_strength": 69.5,
@@ -19332,17 +17825,15 @@
         }
       ],
       "continuation_probability_percentile": 85.7,
-      "opportunity_raw_score": 55.4,
-      "opportunity_score": 69.5,
+      "opportunity_raw_score": 54.6,
+      "opportunity_score": 66.7,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -19531,22 +18022,6 @@
         "mean": -0.13259691765425272,
         "positive": false
       },
-      "legacy_trend_score": 18.8,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MACD 13.3",
-        "RSI质量 1.5",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 18.8,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MACD 13.3",
-        "RSI质量 1.5",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2"
-      ],
       "continuation_probability": 0.3987,
       "sector": "应用软件",
       "trend_strength": 35.2,
@@ -19579,17 +18054,15 @@
         }
       ],
       "continuation_probability_percentile": 14.3,
-      "opportunity_raw_score": 30.4,
-      "opportunity_score": 35.2,
+      "opportunity_raw_score": 31.4,
+      "opportunity_score": 36.2,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -19781,22 +18254,6 @@
         "mean": 0.1798564961860946,
         "positive": true
       },
-      "legacy_trend_score": 24.9,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 24.9,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4153,
       "sector": "电气设备及零件",
       "trend_strength": 48.6,
@@ -19829,17 +18286,15 @@
         }
       ],
       "continuation_probability_percentile": 43.8,
-      "opportunity_raw_score": 38.7,
+      "opportunity_raw_score": 39.0,
       "opportunity_score": 46.7,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -20031,24 +18486,6 @@
         "mean": 0.35358658215143807,
         "positive": true
       },
-      "legacy_trend_score": 38.9,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 25.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 38.9,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 25.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4447,
       "sector": "半导体设备与材料",
       "trend_strength": 63.8,
@@ -20081,17 +18518,15 @@
         }
       ],
       "continuation_probability_percentile": 91.4,
-      "opportunity_raw_score": 51.7,
-      "opportunity_score": 63.8,
+      "opportunity_raw_score": 50.3,
+      "opportunity_score": 62.9,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -20262,13 +18697,12 @@
         "intraday_range_pct": 0.05530127066539144,
         "max_drawdown_20d_pct": -0.10069423112367148,
         "quality_grade": "B",
-        "quality_score": 65.0,
+        "quality_score": 60.0,
         "quality_label": "顺势观察",
         "positive_reasons": [
           "回踩 MA10/MA20 后重新转强",
           "收盘位于 MA20 上方 0–1.5 ATR",
-          "RSI 位于健康强势区",
-          "上涨且量能温和确认"
+          "RSI 位于健康强势区"
         ],
         "risk_reasons": [
           "向上跳空超过 5%",
@@ -20288,26 +18722,6 @@
         "mean": -0.11687330565738285,
         "positive": false
       },
-      "legacy_trend_score": 33.6,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "日线MACD 10.0",
-        "周线MACD 13.3",
-        "RSI质量 2.5",
-        "量价确认 3.8",
-        "未通过：日线MA≥3、周线MA≥3、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 33.6,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "日线MACD 10.0",
-        "周线MACD 13.3",
-        "RSI质量 2.5",
-        "量价确认 3.8",
-        "未通过：日线MA≥3、周线MA≥3、日周RSI不弱"
-      ],
       "continuation_probability": 0.4106,
       "sector": "应用软件",
       "trend_strength": 41.0,
@@ -20340,17 +18754,15 @@
         }
       ],
       "continuation_probability_percentile": 35.2,
-      "opportunity_raw_score": 37.0,
-      "opportunity_score": 43.8,
+      "opportunity_raw_score": 36.8,
+      "opportunity_score": 42.9,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -20542,24 +18954,6 @@
         "mean": 0.4010113740586059,
         "positive": true
       },
-      "legacy_trend_score": 44.8,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 2.5",
-        "未通过：日线MA≥3、日线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 44.8,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 2.5",
-        "未通过：日线MA≥3、日线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.449,
       "sector": "半导体",
       "trend_strength": 78.1,
@@ -20592,17 +18986,15 @@
         }
       ],
       "continuation_probability_percentile": 93.3,
-      "opportunity_raw_score": 61.8,
-      "opportunity_score": 77.1,
+      "opportunity_raw_score": 61.1,
+      "opportunity_score": 76.2,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -20795,16 +19187,6 @@
         "mean": -0.30320930445055677,
         "positive": false
       },
-      "legacy_trend_score": 0.0,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 0.0,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4219,
       "sector": "其他工业金属与采矿",
       "trend_strength": 1.9,
@@ -20837,17 +19219,248 @@
         }
       ],
       "continuation_probability_percentile": 54.3,
-      "opportunity_raw_score": 3.9,
-      "opportunity_score": 1.9,
+      "opportunity_raw_score": 1.4,
+      "opportunity_score": 1.0,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
+      "trend_candidate": false
+    },
+    {
+      "code": "US.JNJ",
+      "ticker": "JNJ",
+      "name": "强生",
+      "heat": 1.4854,
+      "last_qualified_heat": 1.4854,
+      "market_cap": 634767290449.8,
+      "last_qualified_market_cap": 634767290449.8,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 1.4854
+        }
+      ],
+      "daily": {
+        "ma_score": 4,
+        "ma_facts": [
+          true,
+          false,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 4.077318317474209,
+        "dea": 4.41397497094619,
+        "hist": -0.33665665347198104,
+        "rsi": 62.71692344799372,
+        "volume_ratio": 0.7345069816500889,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 263.4,
+        "previous_close": 259.27,
+        "ma5": 255.546,
+        "ma10": 253.93800000000002,
+        "ma20": 256.47950000000003,
+        "ma60": 238.69049396026668,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "daily_confirmed": {
+        "ma_score": 4,
+        "ma_facts": [
+          true,
+          false,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 4.077318317474209,
+        "dea": 4.41397497094619,
+        "hist": -0.33665665347198104,
+        "rsi": 62.71692344799372,
+        "volume_ratio": 0.7345069816500889,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 263.4,
+        "previous_close": 259.27,
+        "ma5": 255.546,
+        "ma10": 253.93800000000002,
+        "ma20": 256.47950000000003,
+        "ma60": 238.69049396026668,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "daily_is_partial": false,
+      "weekly": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 3,
+        "macd_facts": [
+          true,
+          true,
+          true
+        ],
+        "dif": 11.231804753676698,
+        "dea": 9.621436030277337,
+        "hist": 1.610368723399361,
+        "rsi": 65.1657653163357,
+        "volume_ratio": 0.9343139438668904,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 263.4,
+        "previous_close": 253.04,
+        "ma5": 258.224,
+        "ma10": 245.1479999824,
+        "ma20": 238.69318996905,
+        "ma60": 206.01771935588334,
+        "ma_label": "强多头结构",
+        "macd_label": "强多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "weekly_confirmed": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 3,
+        "macd_facts": [
+          true,
+          true,
+          true
+        ],
+        "dif": 11.231804753676698,
+        "dea": 9.621436030277337,
+        "hist": 1.610368723399361,
+        "rsi": 65.1657653163357,
+        "volume_ratio": 0.9343139438668904,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 263.4,
+        "previous_close": 253.04,
+        "ma5": 258.224,
+        "ma10": 245.1479999824,
+        "ma20": 238.69318996905,
+        "ma60": 206.01771935588334,
+        "ma_label": "强多头结构",
+        "macd_label": "强多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "weekly_is_partial": false,
+      "entry": {
+        "label": "回踩转强",
+        "close_distance_ma20_pct": 0.02698266333176713,
+        "close_distance_ma60_pct": 0.1035211148536419,
+        "distance_ma20_atr": 1.1612016154134324,
+        "distance_ma60_atr": 4.146047009523371,
+        "distance_20d_high_pct": -0.022380581227035012,
+        "distance_52w_high_pct": -0.022380581227035012,
+        "gap_pct": 0.008331083426543762,
+        "breakout_recent": false,
+        "breakout_days_since": 13,
+        "pullback_ma10_reclaim": true,
+        "pullback_ma20_reclaim": true,
+        "atr_pct": 0.0226263276086891,
+        "intraday_range_pct": 0.015813630578161632,
+        "max_drawdown_20d_pct": -0.07566232599910194,
+        "quality_grade": "A",
+        "quality_score": 85.0,
+        "quality_label": "触发明确",
+        "positive_reasons": [
+          "回踩 MA10/MA20 后重新转强",
+          "收盘位于 MA20 上方 0–1.5 ATR",
+          "RSI 位于健康强势区"
+        ],
+        "risk_reasons": []
+      },
+      "er_rank": null,
+      "er_hits_last5": 0,
+      "er_streak": 0,
+      "er_price_momentum_aligned": null,
+      "price_momentum": {
+        "returns": {
+          "4w": 0.0343202701641403,
+          "12w": 0.16604970649399386,
+          "36w": 0.3679073584529602
+        },
+        "mean": 0.18942577837036478,
+        "positive": true
+      },
+      "continuation_probability": 0.4345,
+      "sector": "一般药品制造商",
+      "trend_strength": 94.3,
+      "trend_strength_percentile": 5.7,
+      "er_signal_score": 0.0,
+      "trend_components": [
+        {
+          "name": "多周期波动调整动量",
+          "percentile": 91.5,
+          "weight": 40,
+          "contribution": 36.6
+        },
+        {
+          "name": "MA20/MA60斜率",
+          "percentile": 80.4,
+          "weight": 25,
+          "contribution": 20.1
+        },
+        {
+          "name": "趋势平滑度",
+          "percentile": 84.6,
+          "weight": 20,
+          "contribution": 16.9
+        },
+        {
+          "name": "相对SPY/行业强度",
+          "percentile": 62.7,
+          "weight": 15,
+          "contribution": 9.4
+        }
+      ],
+      "continuation_probability_percentile": 80.0,
+      "opportunity_raw_score": 79.2,
+      "opportunity_score": 94.3,
+      "opportunity_weights": {
+        "trend_core": 0.75,
+        "er_signal": 0.15,
+        "entry_quality": 0.1,
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
+      },
       "trend_candidate": false
     },
     {
@@ -21041,26 +19654,6 @@
         "mean": 0.08782419557309533,
         "positive": true
       },
-      "legacy_trend_score": 54.3,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 10.0",
-        "周线MA 10.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0",
-        "未通过：周线MA≥3"
-      ],
-      "confirmed_legacy_trend_score": 54.3,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 10.0",
-        "周线MA 10.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0",
-        "未通过：周线MA≥3"
-      ],
       "continuation_probability": 0.3947,
       "sector": "互联网零售",
       "trend_strength": 68.6,
@@ -21093,272 +19686,15 @@
         }
       ],
       "continuation_probability_percentile": 9.5,
-      "opportunity_raw_score": 53.6,
-      "opportunity_score": 67.6,
+      "opportunity_raw_score": 56.4,
+      "opportunity_score": 68.6,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
-      "trend_candidate": false
-    },
-    {
-      "code": "US.SNOW",
-      "ticker": "SNOW",
-      "name": "Snowflake",
-      "heat": 1.3551,
-      "last_qualified_heat": 1.3551,
-      "market_cap": 92909596000.0,
-      "last_qualified_market_cap": 92909596000.0,
-      "active": true,
-      "trading_days_since_hit": 0,
-      "last_hit_date": "2026-07-24",
-      "heat_history": [
-        {
-          "date": "2026-07-24",
-          "heat": 1.3551
-        }
-      ],
-      "daily": {
-        "ma_score": 4,
-        "ma_facts": [
-          false,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 1,
-        "macd_facts": [
-          true,
-          false,
-          false
-        ],
-        "dif": 10.086541408904566,
-        "dea": 12.175207689215142,
-        "hist": -2.0886662803105764,
-        "rsi": 60.48789282635154,
-        "volume_ratio": 0.9293823480243647,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 268.06,
-        "previous_close": 265.13,
-        "ma5": 269.412,
-        "ma10": 270.244,
-        "ma20": 264.6985,
-        "ma60": 220.14666666666665,
-        "ma_label": "偏多",
-        "macd_label": "动能分化",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "daily_confirmed": {
-        "ma_score": 4,
-        "ma_facts": [
-          false,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 1,
-        "macd_facts": [
-          true,
-          false,
-          false
-        ],
-        "dif": 10.086541408904566,
-        "dea": 12.175207689215142,
-        "hist": -2.0886662803105764,
-        "rsi": 60.48789282635154,
-        "volume_ratio": 0.9293823480243647,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 268.06,
-        "previous_close": 265.13,
-        "ma5": 269.412,
-        "ma10": 270.244,
-        "ma20": 264.6985,
-        "ma60": 220.14666666666665,
-        "ma_label": "偏多",
-        "macd_label": "动能分化",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "daily_is_partial": false,
-      "weekly": {
-        "ma_score": 4,
-        "ma_facts": [
-          true,
-          true,
-          false,
-          true,
-          true
-        ],
-        "macd_score": 2,
-        "macd_facts": [
-          true,
-          true,
-          false
-        ],
-        "dif": 20.19059268655863,
-        "dea": 9.047709313367935,
-        "hist": 11.142883373190696,
-        "rsi": 67.48250085263983,
-        "volume_ratio": 0.5847424987384726,
-        "volume_basis": "full_period",
-        "close_up": false,
-        "close": 268.06,
-        "previous_close": 268.9,
-        "ma5": 261.504,
-        "ma10": 243.85999999999999,
-        "ma20": 197.313,
-        "ma60": 211.19116666666667,
-        "ma_label": "偏多",
-        "macd_label": "多头动能",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "weekly_confirmed": {
-        "ma_score": 4,
-        "ma_facts": [
-          true,
-          true,
-          false,
-          true,
-          true
-        ],
-        "macd_score": 2,
-        "macd_facts": [
-          true,
-          true,
-          false
-        ],
-        "dif": 20.19059268655863,
-        "dea": 9.047709313367935,
-        "hist": 11.142883373190696,
-        "rsi": 67.48250085263983,
-        "volume_ratio": 0.5847424987384726,
-        "volume_basis": "full_period",
-        "close_up": false,
-        "close": 268.06,
-        "previous_close": 268.9,
-        "ma5": 261.504,
-        "ma10": 243.85999999999999,
-        "ma20": 197.313,
-        "ma60": 211.19116666666667,
-        "ma_label": "偏多",
-        "macd_label": "多头动能",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "weekly_is_partial": false,
-      "entry": {
-        "label": "回踩转强",
-        "close_distance_ma20_pct": 0.012699354170877308,
-        "close_distance_ma60_pct": 0.21764278359881306,
-        "distance_ma20_atr": 0.26417892785791536,
-        "distance_ma60_atr": 3.765489522564036,
-        "distance_20d_high_pct": -0.04089557440179403,
-        "distance_52w_high_pct": -0.05940559317870808,
-        "gap_pct": 0.0142194395202353,
-        "breakout_recent": false,
-        "breakout_days_since": 8,
-        "pullback_ma10_reclaim": false,
-        "pullback_ma20_reclaim": true,
-        "atr_pct": 0.04746821808879416,
-        "intraday_range_pct": 0.025609700901444533,
-        "max_drawdown_20d_pct": -0.039175183010799475,
-        "quality_grade": "A",
-        "quality_score": 85.0,
-        "quality_label": "触发明确",
-        "positive_reasons": [
-          "回踩 MA10/MA20 后重新转强",
-          "收盘位于 MA20 上方 0–1.5 ATR",
-          "RSI 位于健康强势区"
-        ],
-        "risk_reasons": []
-      },
-      "er_rank": null,
-      "er_hits_last5": 0,
-      "er_streak": 0,
-      "er_price_momentum_aligned": null,
-      "price_momentum": {
-        "returns": {
-          "4w": 0.07671915167095111,
-          "12w": 0.9011347517730497,
-          "36w": 0.04295385573107158
-        },
-        "mean": 0.3402692530583575,
-        "positive": true
-      },
-      "legacy_trend_score": 59.3,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 5.0",
-        "周线MA 20.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0",
-        "未通过：日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 59.3,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 5.0",
-        "周线MA 20.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0",
-        "未通过：日线MACD≥2"
-      ],
-      "continuation_probability": 0.3958,
-      "sector": "应用软件",
-      "trend_strength": 96.2,
-      "trend_strength_percentile": 3.8,
-      "er_signal_score": 0.0,
-      "trend_components": [
-        {
-          "name": "多周期波动调整动量",
-          "percentile": 75.5,
-          "weight": 40,
-          "contribution": 30.2
-        },
-        {
-          "name": "MA20/MA60斜率",
-          "percentile": 97.1,
-          "weight": 25,
-          "contribution": 24.3
-        },
-        {
-          "name": "趋势平滑度",
-          "percentile": 78.2,
-          "weight": 20,
-          "contribution": 15.6
-        },
-        {
-          "name": "相对SPY/行业强度",
-          "percentile": 99.5,
-          "weight": 15,
-          "contribution": 14.9
-        }
-      ],
-      "continuation_probability_percentile": 11.4,
-      "opportunity_raw_score": 76.6,
-      "opportunity_score": 93.3,
-      "opportunity_weights": {
-        "trend_core": 0.702,
-        "er_signal": 0.15,
-        "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
-      },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -21549,26 +19885,6 @@
         "mean": 0.09545402939609937,
         "positive": true
       },
-      "legacy_trend_score": 57.6,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 20.0",
-        "日线MACD 10.0",
-        "周线MA 10.0",
-        "周线MACD 13.3",
-        "RSI质量 4.2",
-        "未通过：周线MA≥3"
-      ],
-      "confirmed_legacy_trend_score": 57.6,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 20.0",
-        "日线MACD 10.0",
-        "周线MA 10.0",
-        "周线MACD 13.3",
-        "RSI质量 4.2",
-        "未通过：周线MA≥3"
-      ],
       "continuation_probability": 0.4137,
       "sector": "信贷",
       "trend_strength": 76.2,
@@ -21601,17 +19917,15 @@
         }
       ],
       "continuation_probability_percentile": 41.4,
-      "opportunity_raw_score": 58.0,
-      "opportunity_score": 72.4,
+      "opportunity_raw_score": 59.7,
+      "opportunity_score": 74.3,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -21803,24 +20117,6 @@
         "mean": -0.002627921263756957,
         "positive": false
       },
-      "legacy_trend_score": 63.3,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 20.0",
-        "日线MACD 10.0",
-        "周线MA 15.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0"
-      ],
-      "confirmed_legacy_trend_score": 63.3,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 20.0",
-        "日线MACD 10.0",
-        "周线MA 15.0",
-        "周线MACD 13.3",
-        "RSI质量 5.0"
-      ],
       "continuation_probability": 0.4032,
       "sector": "独立电力生产商",
       "trend_strength": 46.7,
@@ -21853,17 +20149,15 @@
         }
       ],
       "continuation_probability_percentile": 23.8,
-      "opportunity_raw_score": 40.4,
-      "opportunity_score": 47.6,
+      "opportunity_raw_score": 41.5,
+      "opportunity_score": 49.5,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -22054,31 +20348,11 @@
         "mean": 0.33949762523627786,
         "positive": true
       },
-      "legacy_trend_score": 58.6,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 12.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 3.2",
-        "未通过：日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 58.6,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 12.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 3.2",
-        "未通过：日线MACD≥2"
-      ],
       "continuation_probability": 0.3939,
       "sector": "软件基础设施",
       "trend_strength": 98.1,
       "trend_strength_percentile": 1.9,
-      "er_signal_score": 8.0,
+      "er_signal_score": 10.0,
       "trend_components": [
         {
           "name": "多周期波动调整动量",
@@ -22106,17 +20380,15 @@
         }
       ],
       "continuation_probability_percentile": 7.6,
-      "opportunity_raw_score": 74.4,
-      "opportunity_score": 92.4,
+      "opportunity_raw_score": 79.1,
+      "opportunity_score": 93.3,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -22287,13 +20559,11 @@
         "intraday_range_pct": 0.06184390689183023,
         "max_drawdown_20d_pct": -0.09776536312611106,
         "quality_grade": "B",
-        "quality_score": 70.0,
+        "quality_score": 50.0,
         "quality_label": "顺势观察",
         "positive_reasons": [
-          "回踩 MA10/MA20 后重新转强",
-          "突破发生在最近 1–4 根日 K",
-          "RSI 位于健康强势区",
-          "上涨且量能温和确认"
+          "刚突破，且回踩 MA10/MA20 后重新转强",
+          "RSI 位于健康强势区"
         ],
         "risk_reasons": [
           "距 MA20 超过 2.5 ATR，位置延伸"
@@ -22312,28 +20582,6 @@
         "mean": 0.06010254310488827,
         "positive": true
       },
-      "legacy_trend_score": 54.5,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 10.0",
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 5.0",
-        "量价确认 1.9",
-        "未通过：周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 54.5,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 10.0",
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 5.0",
-        "量价确认 1.9",
-        "未通过：周线MACD≥2"
-      ],
       "continuation_probability": 0.4245,
       "sector": "电信服务",
       "trend_strength": 57.1,
@@ -22366,17 +20614,15 @@
         }
       ],
       "continuation_probability_percentile": 61.0,
-      "opportunity_raw_score": 50.0,
-      "opportunity_score": 61.0,
+      "opportunity_raw_score": 47.8,
+      "opportunity_score": 58.1,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -22565,18 +20811,6 @@
         "mean": -0.048573415141670316,
         "positive": false
       },
-      "legacy_trend_score": 5.0,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "周线MA 5.0",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 5.0,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "周线MA 5.0",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4191,
       "sector": "折扣店",
       "trend_strength": 17.1,
@@ -22609,17 +20843,15 @@
         }
       ],
       "continuation_probability_percentile": 48.6,
-      "opportunity_raw_score": 19.3,
+      "opportunity_raw_score": 17.8,
       "opportunity_score": 20.0,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -22811,26 +21043,6 @@
         "mean": -0.11518466134224736,
         "positive": false
       },
-      "legacy_trend_score": 31.4,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "日线MACD 5.0",
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 31.4,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "日线MACD 5.0",
-        "周线MA 15.0",
-        "周线MACD 6.7",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4137,
       "sector": "信息技术服务",
       "trend_strength": 8.6,
@@ -22863,17 +21075,15 @@
         }
       ],
       "continuation_probability_percentile": 41.4,
-      "opportunity_raw_score": 10.5,
-      "opportunity_score": 8.6,
+      "opportunity_raw_score": 8.9,
+      "opportunity_score": 7.6,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -23062,20 +21272,6 @@
         "mean": -0.23016440866767338,
         "positive": false
       },
-      "legacy_trend_score": 9.0,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "日线MACD 5.0",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 9.0,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "日线MACD 5.0",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.3825,
       "sector": "汽车制造",
       "trend_strength": 6.7,
@@ -23108,17 +21304,15 @@
         }
       ],
       "continuation_probability_percentile": 1.0,
-      "opportunity_raw_score": 9.8,
-      "opportunity_score": 7.6,
+      "opportunity_raw_score": 10.0,
+      "opportunity_score": 9.5,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -23311,20 +21505,6 @@
         "mean": -0.20779845407032113,
         "positive": false
       },
-      "legacy_trend_score": 5.8,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "周线MA 5.0",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 5.8,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "周线MA 5.0",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.425,
       "sector": "广告代理",
       "trend_strength": 21.9,
@@ -23357,17 +21537,15 @@
         }
       ],
       "continuation_probability_percentile": 61.9,
-      "opportunity_raw_score": 18.3,
-      "opportunity_score": 19.0,
+      "opportunity_raw_score": 16.4,
+      "opportunity_score": 18.1,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -23559,24 +21737,6 @@
         "mean": 0.05565728410103732,
         "positive": true
       },
-      "legacy_trend_score": 45.6,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 45.6,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2"
-      ],
       "continuation_probability": 0.4328,
       "sector": "航空服务",
       "trend_strength": 77.1,
@@ -23612,14 +21772,12 @@
       "opportunity_raw_score": 59.3,
       "opportunity_score": 73.3,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -23790,11 +21948,9 @@
         "intraday_range_pct": 0.02102341255764452,
         "max_drawdown_20d_pct": -0.09603495177644061,
         "quality_grade": "B",
-        "quality_score": 55.0,
+        "quality_score": 50.0,
         "quality_label": "顺势观察",
-        "positive_reasons": [
-          "上涨且量能温和确认"
-        ],
+        "positive_reasons": [],
         "risk_reasons": []
       },
       "er_rank": null,
@@ -23810,24 +21966,6 @@
         "mean": 0.24666136131465555,
         "positive": true
       },
-      "legacy_trend_score": 37.9,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 8.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 37.9,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 8.0",
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.3895,
       "sector": "通讯设备",
       "trend_strength": 85.7,
@@ -23860,17 +21998,15 @@
         }
       ],
       "continuation_probability_percentile": 5.7,
-      "opportunity_raw_score": 65.9,
-      "opportunity_score": 83.8,
+      "opportunity_raw_score": 69.3,
+      "opportunity_score": 85.7,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -24061,20 +22197,6 @@
         "mean": -0.08144044272014424,
         "positive": false
       },
-      "legacy_trend_score": 5.8,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "周线MA 5.0",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 5.8,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "周线MA 5.0",
-        "RSI质量 0.8",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4038,
       "sector": "互联网内容与信息",
       "trend_strength": 34.3,
@@ -24107,17 +22229,15 @@
         }
       ],
       "continuation_probability_percentile": 25.2,
-      "opportunity_raw_score": 29.3,
+      "opportunity_raw_score": 29.7,
       "opportunity_score": 34.3,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -24309,29 +22429,11 @@
         "mean": 0.3105255144026282,
         "positive": true
       },
-      "legacy_trend_score": 38.9,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 25.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 38.9,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 25.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4504,
       "sector": "半导体设备与材料",
       "trend_strength": 61.9,
       "trend_strength_percentile": 38.1,
-      "er_signal_score": 8.0,
+      "er_signal_score": 10.0,
       "trend_components": [
         {
           "name": "多周期波动调整动量",
@@ -24359,17 +22461,15 @@
         }
       ],
       "continuation_probability_percentile": 95.2,
-      "opportunity_raw_score": 51.7,
-      "opportunity_score": 64.8,
+      "opportunity_raw_score": 50.4,
+      "opportunity_score": 63.8,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -24562,24 +22662,6 @@
         "mean": 0.6900793761419735,
         "positive": true
       },
-      "legacy_trend_score": 44.8,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 2.5",
-        "未通过：日线MA≥3、日线MACD≥2、日周RSI不弱"
-      ],
-      "confirmed_legacy_trend_score": 44.8,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 4.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 2.5",
-        "未通过：日线MA≥3、日线MACD≥2、日周RSI不弱"
-      ],
       "continuation_probability": 0.4293,
       "sector": "半导体",
       "trend_strength": 84.8,
@@ -24612,17 +22694,15 @@
         }
       ],
       "continuation_probability_percentile": 69.5,
-      "opportunity_raw_score": 62.9,
-      "opportunity_score": 80.0,
+      "opportunity_raw_score": 63.6,
+      "opportunity_score": 81.0,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -24813,22 +22893,6 @@
         "mean": 0.25153433426336524,
         "positive": true
       },
-      "legacy_trend_score": 29.9,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 29.9,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "周线MA 20.0",
-        "周线MACD 6.7",
-        "RSI质量 3.2",
-        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4321,
       "sector": "半导体",
       "trend_strength": 59.0,
@@ -24861,17 +22925,15 @@
         }
       ],
       "continuation_probability_percentile": 73.8,
-      "opportunity_raw_score": 49.0,
-      "opportunity_score": 60.0,
+      "opportunity_raw_score": 48.2,
+      "opportunity_score": 59.5,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -25063,18 +23125,6 @@
         "mean": -0.1398995050066569,
         "positive": false
       },
-      "legacy_trend_score": 1.5,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "RSI质量 1.5",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 1.5,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "RSI质量 1.5",
-        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
-      ],
       "continuation_probability": 0.4268,
       "sector": "生物技术",
       "trend_strength": 25.7,
@@ -25107,17 +23157,15 @@
         }
       ],
       "continuation_probability_percentile": 63.8,
-      "opportunity_raw_score": 23.6,
+      "opportunity_raw_score": 21.8,
       "opportunity_score": 25.7,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -25308,26 +23356,6 @@
         "mean": 0.1854222211589199,
         "positive": true
       },
-      "legacy_trend_score": 62.6,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 3.2",
-        "未通过：日线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 62.6,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 5.0",
-        "周线MA 25.0",
-        "周线MACD 13.3",
-        "RSI质量 3.2",
-        "未通过：日线MACD≥2"
-      ],
       "continuation_probability": 0.4002,
       "sector": "资本市场",
       "trend_strength": 89.5,
@@ -25360,17 +23388,15 @@
         }
       ],
       "continuation_probability_percentile": 18.1,
-      "opportunity_raw_score": 69.7,
-      "opportunity_score": 87.6,
+      "opportunity_raw_score": 73.1,
+      "opportunity_score": 90.5,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -25541,12 +23567,11 @@
         "intraday_range_pct": 0.02316965273169667,
         "max_drawdown_20d_pct": -0.04254641909814327,
         "quality_grade": "A",
-        "quality_score": 80.0,
+        "quality_score": 75.0,
         "quality_label": "触发明确",
         "positive_reasons": [
           "回踩 MA10/MA20 后重新转强",
-          "RSI 位于健康强势区",
-          "上涨且量能温和确认"
+          "RSI 位于健康强势区"
         ],
         "risk_reasons": []
       },
@@ -25563,26 +23588,6 @@
         "mean": 0.08405154107802737,
         "positive": true
       },
-      "legacy_trend_score": 67.0,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 10.0",
-        "周线MA 15.0",
-        "周线MACD 20.0",
-        "RSI质量 5.0",
-        "量价确认 1.0"
-      ],
-      "confirmed_legacy_trend_score": 67.0,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 16.0",
-        "日线MACD 10.0",
-        "周线MA 15.0",
-        "周线MACD 20.0",
-        "RSI质量 5.0",
-        "量价确认 1.0"
-      ],
       "continuation_probability": 0.4319,
       "sector": "金融数据与证券交易所",
       "trend_strength": 71.4,
@@ -25615,17 +23620,15 @@
         }
       ],
       "continuation_probability_percentile": 72.4,
-      "opportunity_raw_score": 61.6,
-      "opportunity_score": 76.2,
+      "opportunity_raw_score": 61.1,
+      "opportunity_score": 75.2,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     },
     {
@@ -25817,24 +23820,6 @@
         "mean": -0.024536328935477303,
         "positive": false
       },
-      "legacy_trend_score": 24.5,
-      "legacy_high_probability": false,
-      "legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 10.0",
-        "周线MA 5.0",
-        "RSI质量 1.5",
-        "未通过：日线MA≥3、周线MA≥3、周线MACD≥2"
-      ],
-      "confirmed_legacy_trend_score": 24.5,
-      "confirmed_legacy_high_probability": false,
-      "confirmed_legacy_trend_reasons": [
-        "日线MA 8.0",
-        "日线MACD 10.0",
-        "周线MA 5.0",
-        "RSI质量 1.5",
-        "未通过：日线MA≥3、周线MA≥3、周线MACD≥2"
-      ],
       "continuation_probability": 0.4098,
       "sector": "折扣店",
       "trend_strength": 36.2,
@@ -25867,17 +23852,15 @@
         }
       ],
       "continuation_probability_percentile": 33.3,
-      "opportunity_raw_score": 35.0,
+      "opportunity_raw_score": 35.2,
       "opportunity_score": 41.0,
       "opportunity_weights": {
-        "trend_core": 0.702,
+        "trend_core": 0.75,
         "er_signal": 0.15,
         "entry_quality": 0.1,
-        "historical_continuation": 0.048,
-        "model_reliability": 0.24
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
       },
-      "high_probability": false,
-      "continuation_high_confidence": false,
       "trend_candidate": false
     }
   ]
