@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "title": "热门资产跟踪+趋势资产判断",
+  "generated_at": "2026-07-25T14:03:10+08:00",
+  "heat_as_of": null,
+  "opend_last_refresh": null,
+  "refresh_error": null,
+  "definitions": {
+    "market": "美国",
+    "security_type": "单股",
+    "heat_type": "OpenD 综合热度 0–100",
+    "heat_threshold": 5.0,
+    "retention_trading_days": 50,
+    "partial_bars": true,
+    "high_probability_threshold": 75
+  },
+  "counts": {
+    "pool": 0,
+    "active": 0,
+    "retained": 0,
+    "high_probability": 0,
+    "er_hits": 0,
+    "computing": 0
+  },
+  "rows": []
+}
