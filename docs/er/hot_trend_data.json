@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "title": "热门资产跟踪+趋势资产判断",
-  "generated_at": "2026-07-25T14:03:10+08:00",
-  "heat_as_of": null,
-  "opend_last_refresh": null,
+  "generated_at": "2026-07-25T14:11:18+08:00",
+  "heat_as_of": "2026-07-24",
+  "opend_last_refresh": "2026-07-25T14:11:08+08:00",
   "refresh_error": null,
   "definitions": {
     "market": "美国",
@@ -15,12 +15,3737 @@
     "high_probability_threshold": 75
   },
   "counts": {
-    "pool": 0,
-    "active": 0,
+    "pool": 51,
+    "active": 51,
     "retained": 0,
-    "high_probability": 0,
+    "high_probability": 1,
     "er_hits": 0,
-    "computing": 0
+    "computing": 9
   },
-  "rows": []
+  "rows": [
+    {
+      "code": "US.AAPL",
+      "ticker": "AAPL",
+      "name": "苹果",
+      "heat": 22.2082,
+      "last_qualified_heat": 22.2082,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 22.2082
+        }
+      ],
+      "daily": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 3,
+        "macd_facts": [
+          true,
+          true,
+          true
+        ],
+        "dif": 8.451111983160786,
+        "dea": 7.545179622120958,
+        "hist": 0.9059323610398273,
+        "rsi": 65.23906203174349,
+        "volume_ratio": 0.9984709854781086,
+        "close_up": true,
+        "close": 333.02,
+        "previous_close": 321.66,
+        "ma_label": "强多头结构",
+        "macd_label": "强多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 3,
+        "macd_facts": [
+          true,
+          true,
+          true
+        ],
+        "dif": 16.51653253400883,
+        "dea": 12.862058719137302,
+        "hist": 3.6544738148715297,
+        "rsi": 69.06950086183082,
+        "volume_ratio": 0.7511621677324262,
+        "close_up": false,
+        "close": 333.02,
+        "previous_close": 333.74,
+        "ma_label": "强多头结构",
+        "macd_label": "强多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 85.0,
+      "high_probability": true,
+      "trend_reasons": [
+        "日线MA 20.0",
+        "日线MACD 15.0",
+        "周线MA 25.0",
+        "周线MACD 20.0",
+        "RSI质量 5.0"
+      ]
+    },
+    {
+      "code": "US.SPCX",
+      "ticker": "SPCX",
+      "name": "SpaceX",
+      "heat": 77.5846,
+      "last_qualified_heat": 77.5846,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 77.5846
+        }
+      ],
+      "daily": null,
+      "weekly": null,
+      "er_rank": null,
+      "trend_score": null,
+      "high_probability": false,
+      "trend_reasons": [
+        "技术历史不足，仍在计算"
+      ]
+    },
+    {
+      "code": "US.TSLA",
+      "ticker": "TSLA",
+      "name": "特斯拉",
+      "heat": 68.2461,
+      "last_qualified_heat": 68.2461,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 68.2461
+        }
+      ],
+      "daily": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -16.102526197366444,
+        "dea": -7.73726315259819,
+        "hist": -8.365263044768255,
+        "rsi": 27.987234588046263,
+        "volume_ratio": 1.2845706612256331,
+        "close_up": false,
+        "close": 313.03,
+        "previous_close": 319.69,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "正常"
+      },
+      "weekly": {
+        "ma_score": 1,
+        "ma_facts": [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -8.819128831628916,
+        "dea": -2.3058826290582335,
+        "hist": -6.5132462025706825,
+        "rsi": 35.179315886073596,
+        "volume_ratio": 1.4234255753828797,
+        "close_up": false,
+        "close": 313.03,
+        "previous_close": 380.84,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "正常"
+      },
+      "er_rank": null,
+      "trend_score": 5.0,
+      "high_probability": false,
+      "trend_reasons": [
+        "周线MA 5.0",
+        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.INTC",
+      "ticker": "INTC",
+      "name": "英特尔",
+      "heat": 57.1974,
+      "last_qualified_heat": 57.1974,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 57.1974
+        }
+      ],
+      "daily": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -5.74364146010214,
+        "dea": -3.9813158880090627,
+        "hist": -1.762325572093077,
+        "rsi": 37.12453258082478,
+        "volume_ratio": 1.67347475369003,
+        "close_up": false,
+        "close": 92.32,
+        "previous_close": 100.23,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "放量"
+      },
+      "weekly": {
+        "ma_score": 3,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          false,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 15.705816047677828,
+        "dea": 18.47590161494615,
+        "hist": -2.770085567268321,
+        "rsi": 52.145903672729965,
+        "volume_ratio": 1.0962384342334461,
+        "close_up": false,
+        "close": 92.32,
+        "previous_close": 95.04,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "正常"
+      },
+      "er_rank": null,
+      "trend_score": 24.2,
+      "high_probability": false,
+      "trend_reasons": [
+        "周线MA 15.0",
+        "周线MACD 6.7",
+        "RSI质量 2.5",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.MU",
+      "ticker": "MU",
+      "name": "美光科技",
+      "heat": 56.4352,
+      "last_qualified_heat": 56.4352,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 56.4352
+        }
+      ],
+      "daily": {
+        "ma_score": 3,
+        "ma_facts": [
+          true,
+          false,
+          true,
+          false,
+          true
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -12.033245123888719,
+        "dea": -5.650755868708472,
+        "hist": -6.382489255180247,
+        "rsi": 47.14040627045026,
+        "volume_ratio": 0.9181382695893865,
+        "close_up": false,
+        "close": 920.95,
+        "previous_close": 990.21,
+        "ma_label": "偏多",
+        "macd_label": "空头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 2,
+        "macd_facts": [
+          true,
+          true,
+          false
+        ],
+        "dif": 166.45999497865932,
+        "dea": 163.36727502116867,
+        "hist": 3.092719957490658,
+        "rsi": 62.42582321559871,
+        "volume_ratio": 0.8280429902191617,
+        "close_up": true,
+        "close": 920.95,
+        "previous_close": 848.95,
+        "ma_label": "强多头结构",
+        "macd_label": "多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 53.6,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 12.0",
+        "周线MA 25.0",
+        "周线MACD 13.3",
+        "RSI质量 3.2",
+        "未通过：日线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.SKHY",
+      "ticker": "SKHY",
+      "name": "SK海力士",
+      "heat": 50.8626,
+      "last_qualified_heat": 50.8626,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 50.8626
+        }
+      ],
+      "daily": null,
+      "weekly": null,
+      "er_rank": null,
+      "trend_score": null,
+      "high_probability": false,
+      "trend_reasons": [
+        "技术历史不足，仍在计算"
+      ]
+    },
+    {
+      "code": "US.SNDK",
+      "ticker": "SNDK",
+      "name": "闪迪",
+      "heat": 36.0674,
+      "last_qualified_heat": 36.0674,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 36.0674
+        }
+      ],
+      "daily": {
+        "ma_score": 1,
+        "ma_facts": [
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -85.57608794239377,
+        "dea": -52.46771055517005,
+        "hist": -33.10837738722372,
+        "rsi": 42.140904614278966,
+        "volume_ratio": 1.006159094069647,
+        "close_up": false,
+        "close": 1436.56,
+        "previous_close": 1610.33,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "正常"
+      },
+      "weekly": {
+        "ma_score": 4,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 310.4893411926596,
+        "dea": 343.6247635214332,
+        "hist": -33.135422328773586,
+        "rsi": 54.41690061470098,
+        "volume_ratio": 1.0838327453483136,
+        "close_up": true,
+        "close": 1436.56,
+        "previous_close": 1354.82,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "正常"
+      },
+      "er_rank": null,
+      "trend_score": 33.9,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 4.0",
+        "周线MA 20.0",
+        "周线MACD 6.7",
+        "RSI质量 3.2",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.GOOG",
+      "ticker": "GOOG",
+      "name": "谷歌-C",
+      "heat": 34.082,
+      "last_qualified_heat": 34.082,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 34.082
+        }
+      ],
+      "daily": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -7.487760264545898,
+        "dea": -3.8678522805833566,
+        "hist": -3.619907983962541,
+        "rsi": 32.78801840182598,
+        "volume_ratio": 0.8816470277527607,
+        "close_up": true,
+        "close": 319.09,
+        "previous_close": 318.34,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 3,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          false,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 11.44389287489696,
+        "dea": 18.156739395022747,
+        "hist": -6.712846520125787,
+        "rsi": 45.3239836716645,
+        "volume_ratio": 1.1768590609222185,
+        "close_up": false,
+        "close": 319.09,
+        "previous_close": 346.12,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "正常"
+      },
+      "er_rank": null,
+      "trend_score": 22.4,
+      "high_probability": false,
+      "trend_reasons": [
+        "周线MA 15.0",
+        "周线MACD 6.7",
+        "RSI质量 0.8",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.NVDA",
+      "ticker": "NVDA",
+      "name": "英伟达",
+      "heat": 32.2675,
+      "last_qualified_heat": 32.2675,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 32.2675
+        }
+      ],
+      "daily": {
+        "ma_score": 3,
+        "ma_facts": [
+          true,
+          true,
+          false,
+          true,
+          false
+        ],
+        "macd_score": 2,
+        "macd_facts": [
+          true,
+          true,
+          false
+        ],
+        "dif": 0.8594011722878463,
+        "dea": 0.09951462989993116,
+        "hist": 0.7598865423879151,
+        "rsi": 51.087192068551346,
+        "volume_ratio": 0.9734903637209537,
+        "close_up": false,
+        "close": 206.84,
+        "previous_close": 208.76,
+        "ma_label": "偏多",
+        "macd_label": "多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 4,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 5.757746277316642,
+        "dea": 6.641194846457956,
+        "hist": -0.8834485691413141,
+        "rsi": 54.88255029191447,
+        "volume_ratio": 0.8478050117948802,
+        "close_up": true,
+        "close": 206.84,
+        "previous_close": 202.81,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 53.7,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 12.0",
+        "日线MACD 10.0",
+        "周线MA 20.0",
+        "周线MACD 6.7",
+        "RSI质量 5.0",
+        "未通过：周线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.QQQ",
+      "ticker": "QQQ",
+      "name": "纳指100ETF-Invesco QQQ Trust",
+      "heat": 29.1248,
+      "last_qualified_heat": 29.1248,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 29.1248
+        }
+      ],
+      "daily": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -5.925902448045576,
+        "dea": -2.5853239260639906,
+        "hist": -3.340578521981586,
+        "rsi": 39.32973158099679,
+        "volume_ratio": 1.1572901993491658,
+        "close_up": false,
+        "close": 684.23,
+        "previous_close": 691.96,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "正常"
+      },
+      "weekly": {
+        "ma_score": 4,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 26.578136255532854,
+        "dea": 29.155708231412873,
+        "hist": -2.5775719758800193,
+        "rsi": 53.44465257079106,
+        "volume_ratio": 0.8878870439780893,
+        "close_up": false,
+        "close": 684.23,
+        "previous_close": 695.33,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 29.2,
+      "high_probability": false,
+      "trend_reasons": [
+        "周线MA 20.0",
+        "周线MACD 6.7",
+        "RSI质量 2.5",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.SOXL",
+      "ticker": "SOXL",
+      "name": "三倍做多半导体ETF-Direxion",
+      "heat": 24.2504,
+      "last_qualified_heat": 24.2504,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 24.2504
+        }
+      ],
+      "daily": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -18.103322007364227,
+        "dea": -14.667371960095608,
+        "hist": -3.4359500472686193,
+        "rsi": 40.58006216134359,
+        "volume_ratio": 1.1242898057003605,
+        "close_up": false,
+        "close": 136.81,
+        "previous_close": 157.5,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "正常"
+      },
+      "weekly": {
+        "ma_score": 3,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          false,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 30.036677728296326,
+        "dea": 36.72748651635915,
+        "hist": -6.690808788062824,
+        "rsi": 49.79812630410381,
+        "volume_ratio": 1.0701875791835052,
+        "close_up": true,
+        "close": 136.81,
+        "previous_close": 135.47,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "正常"
+      },
+      "er_rank": null,
+      "trend_score": 23.2,
+      "high_probability": false,
+      "trend_reasons": [
+        "周线MA 15.0",
+        "周线MACD 6.7",
+        "RSI质量 1.5",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.AMD",
+      "ticker": "AMD",
+      "name": "美国超微公司",
+      "heat": 22.8864,
+      "last_qualified_heat": 22.8864,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 22.8864
+        }
+      ],
+      "daily": {
+        "ma_score": 3,
+        "ma_facts": [
+          true,
+          false,
+          true,
+          false,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 7.025447381843264,
+        "dea": 9.889433942663166,
+        "hist": -2.8639865608199013,
+        "rsi": 50.04475534180128,
+        "volume_ratio": 0.9961195008977578,
+        "close_up": false,
+        "close": 521.95,
+        "previous_close": 539.69,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 2,
+        "macd_facts": [
+          true,
+          true,
+          false
+        ],
+        "dif": 80.6757703287555,
+        "dea": 74.9181894162628,
+        "hist": 5.757580912492699,
+        "rsi": 66.73924627481631,
+        "volume_ratio": 0.9742743957534572,
+        "close_up": true,
+        "close": 521.95,
+        "previous_close": 495.76,
+        "ma_label": "强多头结构",
+        "macd_label": "多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 60.3,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 12.0",
+        "日线MACD 5.0",
+        "周线MA 25.0",
+        "周线MACD 13.3",
+        "RSI质量 5.0",
+        "未通过：日线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.ORCL",
+      "ticker": "ORCL",
+      "name": "甲骨文",
+      "heat": 22.0156,
+      "last_qualified_heat": 22.0156,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 22.0156
+        }
+      ],
+      "daily": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          false,
+          true,
+          false
+        ],
+        "dif": -14.20683986185557,
+        "dea": -14.240199402768702,
+        "hist": 0.03335954091313198,
+        "rsi": 27.51459252916193,
+        "volume_ratio": 1.4830292124947346,
+        "close_up": false,
+        "close": 114.99,
+        "previous_close": 120.04,
+        "ma_label": "偏空",
+        "macd_label": "动能分化",
+        "rsi_label": "弱势",
+        "volume_label": "正常"
+      },
+      "weekly": {
+        "ma_score": 1,
+        "ma_facts": [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -12.961139234791318,
+        "dea": -7.052148215266684,
+        "hist": -5.908991019524634,
+        "rsi": 33.58227065612019,
+        "volume_ratio": 0.9586175993327796,
+        "close_up": false,
+        "close": 114.99,
+        "previous_close": 126.41,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 10.0,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MACD 5.0",
+        "周线MA 5.0",
+        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.GOOGL",
+      "ticker": "GOOGL",
+      "name": "谷歌-A",
+      "heat": 20.3641,
+      "last_qualified_heat": 20.3641,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 20.3641
+        }
+      ],
+      "daily": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -8.073229302480001,
+        "dea": -4.264028273054358,
+        "hist": -3.809201029425643,
+        "rsi": 32.4626843888054,
+        "volume_ratio": 0.8512638127905209,
+        "close_up": true,
+        "close": 319.74,
+        "previous_close": 317.69,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 3,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          false,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 11.772206788441338,
+        "dea": 18.78570833848607,
+        "hist": -7.013501550044733,
+        "rsi": 45.186678098138735,
+        "volume_ratio": 1.2026348797504784,
+        "close_up": false,
+        "close": 319.74,
+        "previous_close": 346.77,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "正常"
+      },
+      "er_rank": null,
+      "trend_score": 22.4,
+      "high_probability": false,
+      "trend_reasons": [
+        "周线MA 15.0",
+        "周线MACD 6.7",
+        "RSI质量 0.8",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.TSM",
+      "ticker": "TSM",
+      "name": "台积电",
+      "heat": 19.3465,
+      "last_qualified_heat": 19.3465,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 19.3465
+        }
+      ],
+      "daily": {
+        "ma_score": 1,
+        "ma_facts": [
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -5.617531832600548,
+        "dea": -2.804653540760753,
+        "hist": -2.812878291839795,
+        "rsi": 42.44089873836817,
+        "volume_ratio": 0.798597385545482,
+        "close_up": false,
+        "close": 403.41,
+        "previous_close": 415.58,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 4,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 25.927210326865065,
+        "dea": 29.942728300499695,
+        "hist": -4.01551797363463,
+        "rsi": 55.81604832063077,
+        "volume_ratio": 0.8848762674017621,
+        "close_up": true,
+        "close": 403.41,
+        "previous_close": 398.37,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 33.9,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 4.0",
+        "周线MA 20.0",
+        "周线MACD 6.7",
+        "RSI质量 3.2",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.SNXX",
+      "ticker": "SNXX",
+      "name": "2倍做多SNDK ETF-Tradr",
+      "heat": 16.7127,
+      "last_qualified_heat": 16.7127,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 16.7127
+        }
+      ],
+      "daily": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -3.77197721360918,
+        "dea": -2.8986049474229914,
+        "hist": -0.8733722661861885,
+        "rsi": 40.30153549483867,
+        "volume_ratio": 0.909184827921103,
+        "close_up": false,
+        "close": 14.42,
+        "previous_close": 18.32,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "weekly": null,
+      "er_rank": null,
+      "trend_score": null,
+      "high_probability": false,
+      "trend_reasons": [
+        "技术历史不足，仍在计算"
+      ]
+    },
+    {
+      "code": "US.NBIS",
+      "ticker": "NBIS",
+      "name": "NEBIUS",
+      "heat": 15.1209,
+      "last_qualified_heat": 15.1209,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 15.1209
+        }
+      ],
+      "daily": {
+        "ma_score": 1,
+        "ma_facts": [
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -8.741181125231947,
+        "dea": -8.144860423538681,
+        "hist": -0.5963207016932657,
+        "rsi": 42.462186299204994,
+        "volume_ratio": 1.208668463726732,
+        "close_up": false,
+        "close": 187.77,
+        "previous_close": 220.97,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "正常"
+      },
+      "weekly": {
+        "ma_score": 4,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 27.753950012805973,
+        "dea": 32.03479348147587,
+        "hist": -4.2808434686699,
+        "rsi": 53.13934020860954,
+        "volume_ratio": 1.155052546490606,
+        "close_up": true,
+        "close": 187.77,
+        "previous_close": 177.71,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "正常"
+      },
+      "er_rank": null,
+      "trend_score": 33.9,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 4.0",
+        "周线MA 20.0",
+        "周线MACD 6.7",
+        "RSI质量 3.2",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.TQQQ",
+      "ticker": "TQQQ",
+      "name": "三倍做多纳指ETF-ProShares",
+      "heat": 14.6192,
+      "last_qualified_heat": 14.6192,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 14.6192
+        }
+      ],
+      "daily": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -2.419380331216189,
+        "dea": -1.4715848540242982,
+        "hist": -0.9477954771918908,
+        "rsi": 38.20973656281584,
+        "volume_ratio": 1.2384533789249275,
+        "close_up": false,
+        "close": 64.0,
+        "previous_close": 66.3,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "正常"
+      },
+      "weekly": {
+        "ma_score": 3,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          false,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 5.325332322160989,
+        "dea": 6.287885246166805,
+        "hist": -0.9625529240058164,
+        "rsi": 49.5364762925428,
+        "volume_ratio": 0.8681474043870318,
+        "close_up": false,
+        "close": 64.0,
+        "previous_close": 67.53,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 22.4,
+      "high_probability": false,
+      "trend_reasons": [
+        "周线MA 15.0",
+        "周线MACD 6.7",
+        "RSI质量 0.8",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.DRAM",
+      "ticker": "DRAM",
+      "name": "Roundhill Memory ETF",
+      "heat": 14.5118,
+      "last_qualified_heat": 14.5118,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 14.5118
+        }
+      ],
+      "daily": {
+        "ma_score": 2,
+        "ma_facts": [
+          true,
+          false,
+          true,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -2.361354857530742,
+        "dea": -1.5286774318963663,
+        "hist": -0.8326774256343756,
+        "rsi": 41.89325871380196,
+        "volume_ratio": 1.029675550002201,
+        "close_up": false,
+        "close": 53.2,
+        "previous_close": 58.3,
+        "ma_label": "均线缠绕",
+        "macd_label": "空头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "正常"
+      },
+      "weekly": null,
+      "er_rank": null,
+      "trend_score": null,
+      "high_probability": false,
+      "trend_reasons": [
+        "技术历史不足，仍在计算"
+      ]
+    },
+    {
+      "code": "US.NOK",
+      "ticker": "NOK",
+      "name": "诺基亚",
+      "heat": 14.1724,
+      "last_qualified_heat": 14.1724,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 14.1724
+        }
+      ],
+      "daily": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -1.0359054003884278,
+        "dea": -0.8301440428254689,
+        "hist": -0.20576135756295888,
+        "rsi": 28.97421517773411,
+        "volume_ratio": 1.0349809706159772,
+        "close_up": false,
+        "close": 9.1,
+        "previous_close": 9.73,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "正常"
+      },
+      "weekly": {
+        "ma_score": 3,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          false,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 0.9802918058806611,
+        "dea": 1.5713642858995174,
+        "hist": -0.5910724800188563,
+        "rsi": 42.065306153085665,
+        "volume_ratio": 1.3289428239180994,
+        "close_up": false,
+        "close": 9.1,
+        "previous_close": 10.12,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "正常"
+      },
+      "er_rank": null,
+      "trend_score": 22.4,
+      "high_probability": false,
+      "trend_reasons": [
+        "周线MA 15.0",
+        "周线MACD 6.7",
+        "RSI质量 0.8",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.MSFT",
+      "ticker": "MSFT",
+      "name": "微软",
+      "heat": 13.9546,
+      "last_qualified_heat": 13.9546,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 13.9546
+        }
+      ],
+      "daily": {
+        "ma_score": 1,
+        "ma_facts": [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          false,
+          true,
+          false
+        ],
+        "dif": -1.1024255159339305,
+        "dea": -1.5380267756915398,
+        "hist": 0.4356012597576093,
+        "rsi": 44.76075274249518,
+        "volume_ratio": 0.9631611674019575,
+        "close_up": true,
+        "close": 381.7,
+        "previous_close": 381.58,
+        "ma_label": "偏空",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 1,
+        "ma_facts": [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          false,
+          true,
+          false
+        ],
+        "dif": -13.61838152838294,
+        "dea": -13.731891474497173,
+        "hist": 0.11350994611423282,
+        "rsi": 42.11286731485891,
+        "volume_ratio": 0.6624360662235331,
+        "close_up": false,
+        "close": 381.7,
+        "previous_close": 393.82,
+        "ma_label": "偏空",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 22.2,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 4.0",
+        "日线MACD 5.0",
+        "周线MA 5.0",
+        "周线MACD 6.7",
+        "RSI质量 1.5",
+        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.TSLL",
+      "ticker": "TSLL",
+      "name": "2倍做多TSLA ETF-Direxion",
+      "heat": 13.868,
+      "last_qualified_heat": 13.868,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 13.868
+        }
+      ],
+      "daily": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -1.11003346003816,
+        "dea": -0.6322665549775691,
+        "hist": -0.47776690506059094,
+        "rsi": 27.940233530221164,
+        "volume_ratio": 1.4787575109517515,
+        "close_up": false,
+        "close": 7.42,
+        "previous_close": 7.76,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "正常"
+      },
+      "weekly": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -1.1785603132958293,
+        "dea": -0.7866200412558404,
+        "hist": -0.39194027203998894,
+        "rsi": 33.54103623001171,
+        "volume_ratio": 1.8933729315263763,
+        "close_up": false,
+        "close": 7.42,
+        "previous_close": 11.385,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "放量"
+      },
+      "er_rank": null,
+      "trend_score": 0.0,
+      "high_probability": false,
+      "trend_reasons": [
+        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.SOXS",
+      "ticker": "SOXS",
+      "name": "三倍做空半导体ETF-Direxion",
+      "heat": 12.7561,
+      "last_qualified_heat": 12.7561,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 12.7561
+        }
+      ],
+      "daily": {
+        "ma_score": 2,
+        "ma_facts": [
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        "macd_score": 2,
+        "macd_facts": [
+          false,
+          true,
+          true
+        ],
+        "dif": -2.385640379299012,
+        "dea": -4.560858020211005,
+        "hist": 2.1752176409119928,
+        "rsi": 51.08554756296516,
+        "volume_ratio": 0.8869153984003599,
+        "close_up": true,
+        "close": 51.53,
+        "previous_close": 45.61,
+        "ma_label": "均线缠绕",
+        "macd_label": "多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 2,
+        "macd_facts": [
+          false,
+          true,
+          true
+        ],
+        "dif": -161.46727930764425,
+        "dea": -193.55121652655754,
+        "hist": 32.08393721891329,
+        "rsi": 27.10581507374161,
+        "volume_ratio": 0.9891209167721831,
+        "close_up": false,
+        "close": 51.53,
+        "previous_close": 54.85,
+        "ma_label": "偏空",
+        "macd_label": "多头动能",
+        "rsi_label": "弱势",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 33.8,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 8.0",
+        "日线MACD 10.0",
+        "周线MACD 13.3",
+        "RSI质量 2.5",
+        "未通过：日线MA≥3、周线MA≥3、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.MRVL",
+      "ticker": "MRVL",
+      "name": "迈威尔科技",
+      "heat": 11.7006,
+      "last_qualified_heat": 11.7006,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 11.7006
+        }
+      ],
+      "daily": {
+        "ma_score": 1,
+        "ma_facts": [
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -14.491832307445009,
+        "dea": -10.779607973655628,
+        "hist": -3.712224333789381,
+        "rsi": 39.06142190473796,
+        "volume_ratio": 0.9006181266476848,
+        "close_up": false,
+        "close": 194.23,
+        "previous_close": 209.32,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 4,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 34.744499534691926,
+        "dea": 37.844555912340546,
+        "hist": -3.1000563776486203,
+        "rsi": 53.96198911758783,
+        "volume_ratio": 0.4862524471856438,
+        "close_up": true,
+        "close": 194.23,
+        "previous_close": 188.68,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 33.2,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 4.0",
+        "周线MA 20.0",
+        "周线MACD 6.7",
+        "RSI质量 2.5",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.TCOM",
+      "ticker": "TCOM",
+      "name": "携程网",
+      "heat": 11.1676,
+      "last_qualified_heat": 11.1676,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 11.1676
+        }
+      ],
+      "daily": {
+        "ma_score": 3,
+        "ma_facts": [
+          true,
+          true,
+          false,
+          true,
+          false
+        ],
+        "macd_score": 2,
+        "macd_facts": [
+          false,
+          true,
+          true
+        ],
+        "dif": -0.5084634228707401,
+        "dea": -0.9141728831756665,
+        "hist": 0.4057094603049264,
+        "rsi": 50.315059556468746,
+        "volume_ratio": 0.7218162352380564,
+        "close_up": true,
+        "close": 43.64,
+        "previous_close": 43.02,
+        "ma_label": "偏多",
+        "macd_label": "多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -4.774053681651594,
+        "dea": -4.687840444114859,
+        "hist": -0.08621323753673504,
+        "rsi": 35.14625153091647,
+        "volume_ratio": 0.7722790177091399,
+        "close_up": true,
+        "close": 43.64,
+        "previous_close": 42.45,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 24.5,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 12.0",
+        "日线MACD 10.0",
+        "RSI质量 2.5",
+        "未通过：周线MA≥3、周线MACD≥2、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.SQQQ",
+      "ticker": "SQQQ",
+      "name": "三倍做空纳指ETF-ProShares",
+      "heat": 10.8508,
+      "last_qualified_heat": 10.8508,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 10.8508
+        }
+      ],
+      "daily": {
+        "ma_score": 4,
+        "ma_facts": [
+          true,
+          true,
+          false,
+          true,
+          true
+        ],
+        "macd_score": 3,
+        "macd_facts": [
+          true,
+          true,
+          true
+        ],
+        "dif": 0.7007718970169989,
+        "dea": 0.0510777754637876,
+        "hist": 0.6496941215532114,
+        "rsi": 60.10821685009122,
+        "volume_ratio": 1.1771497657469545,
+        "close_up": true,
+        "close": 44.79,
+        "previous_close": 43.27,
+        "ma_label": "偏多",
+        "macd_label": "强多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "正常"
+      },
+      "weekly": {
+        "ma_score": 1,
+        "ma_facts": [
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 2,
+        "macd_facts": [
+          false,
+          true,
+          true
+        ],
+        "dif": -8.126646935816765,
+        "dea": -8.695014699679605,
+        "hist": 0.5683677638628399,
+        "rsi": 42.03928596267992,
+        "volume_ratio": 0.8752947219540081,
+        "close_up": true,
+        "close": 44.79,
+        "previous_close": 42.79,
+        "ma_label": "偏空",
+        "macd_label": "多头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 53.6,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 16.0",
+        "日线MACD 15.0",
+        "周线MA 5.0",
+        "周线MACD 13.3",
+        "RSI质量 3.2",
+        "量价确认 1.0",
+        "未通过：周线MA≥3"
+      ]
+    },
+    {
+      "code": "US.VOO",
+      "ticker": "VOO",
+      "name": "标普500ETF-Vanguard",
+      "heat": 10.5938,
+      "last_qualified_heat": 10.5938,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 10.5938
+        }
+      ],
+      "daily": {
+        "ma_score": 2,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          false,
+          false
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 0.5553760271255896,
+        "dea": 1.9579056508207882,
+        "hist": -1.4025296236951985,
+        "rsi": 45.39227699350618,
+        "volume_ratio": 1.3419446804372301,
+        "close_up": true,
+        "close": 679.14,
+        "previous_close": 678.61,
+        "ma_label": "均线缠绕",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "正常"
+      },
+      "weekly": {
+        "ma_score": 4,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 18.16032271159645,
+        "dea": 18.275228120922566,
+        "hist": -0.11490540932611637,
+        "rsi": 59.163234140001,
+        "volume_ratio": 0.5558249613332649,
+        "close_up": false,
+        "close": 679.14,
+        "previous_close": 683.17,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 42.9,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 8.0",
+        "日线MACD 5.0",
+        "周线MA 20.0",
+        "周线MACD 6.7",
+        "RSI质量 3.2",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.META",
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "heat": 10.0845,
+      "last_qualified_heat": 10.0845,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 10.0845
+        }
+      ],
+      "daily": {
+        "ma_score": 2,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          false,
+          false
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 7.892678568147176,
+        "dea": 12.407273634460964,
+        "hist": -4.514595066313788,
+        "rsi": 43.840303670785566,
+        "volume_ratio": 0.8440078362498133,
+        "close_up": false,
+        "close": 595.19,
+        "previous_close": 606.1,
+        "ma_label": "均线缠绕",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 1,
+        "ma_facts": [
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          false,
+          true,
+          false
+        ],
+        "dif": -9.487026545995946,
+        "dea": -13.30454785699304,
+        "hist": 3.817521310997094,
+        "rsi": 47.02085185798577,
+        "volume_ratio": 0.6134324594004157,
+        "close_up": false,
+        "close": 595.19,
+        "previous_close": 646.01,
+        "ma_label": "偏空",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 26.2,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 8.0",
+        "日线MACD 5.0",
+        "周线MA 5.0",
+        "周线MACD 6.7",
+        "RSI质量 1.5",
+        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.CRCL",
+      "ticker": "CRCL",
+      "name": "Circle",
+      "heat": 9.4528,
+      "last_qualified_heat": 9.4528,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 9.4528
+        }
+      ],
+      "daily": {
+        "ma_score": 1,
+        "ma_facts": [
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          false,
+          true,
+          false
+        ],
+        "dif": -4.719118487971187,
+        "dea": -5.836920518160993,
+        "hist": 1.1178020301898064,
+        "rsi": 41.19688053403857,
+        "volume_ratio": 0.6734378021082663,
+        "close_up": true,
+        "close": 62.36,
+        "previous_close": 62.18,
+        "ma_label": "偏空",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "weekly": null,
+      "er_rank": null,
+      "trend_score": null,
+      "high_probability": false,
+      "trend_reasons": [
+        "技术历史不足，仍在计算"
+      ]
+    },
+    {
+      "code": "US.MUU",
+      "ticker": "MUU",
+      "name": "2倍做多MU ETF-Direxion",
+      "heat": 9.0976,
+      "last_qualified_heat": 9.0976,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 9.0976
+        }
+      ],
+      "daily": {
+        "ma_score": 2,
+        "ma_facts": [
+          true,
+          false,
+          true,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -2.397607303735576,
+        "dea": -1.9512968544211136,
+        "hist": -0.4463104493144625,
+        "rsi": 44.60644367190971,
+        "volume_ratio": 0.8310607652251928,
+        "close_up": false,
+        "close": 31.27,
+        "previous_close": 36.49,
+        "ma_label": "均线缠绕",
+        "macd_label": "空头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 4,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 7.6583591858575595,
+        "dea": 7.981867087738461,
+        "hist": -0.3235079018809017,
+        "rsi": 55.02740648384451,
+        "volume_ratio": 0.7752364549665289,
+        "close_up": true,
+        "close": 31.27,
+        "previous_close": 27.24,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 37.9,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 8.0",
+        "周线MA 20.0",
+        "周线MACD 6.7",
+        "RSI质量 3.2",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.SOXX",
+      "ticker": "SOXX",
+      "name": "半导体ETF-iShares",
+      "heat": 8.9468,
+      "last_qualified_heat": 8.9468,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 8.9468
+        }
+      ],
+      "daily": {
+        "ma_score": 1,
+        "ma_facts": [
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -10.38120002955975,
+        "dea": -6.020333285019127,
+        "hist": -4.360866744540623,
+        "rsi": 42.7822484396303,
+        "volume_ratio": 1.2129157217553517,
+        "close_up": false,
+        "close": 527.01,
+        "previous_close": 551.24,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "正常"
+      },
+      "weekly": {
+        "ma_score": 4,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 59.93085409327506,
+        "dea": 63.913659518893205,
+        "hist": -3.982805425618146,
+        "rsi": 58.357083266330044,
+        "volume_ratio": 0.8644124531987704,
+        "close_up": true,
+        "close": 527.01,
+        "previous_close": 521.81,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 33.9,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 4.0",
+        "周线MA 20.0",
+        "周线MACD 6.7",
+        "RSI质量 3.2",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.IBM",
+      "ticker": "IBM",
+      "name": "IBM Corp",
+      "heat": 8.6008,
+      "last_qualified_heat": 8.6008,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 8.6008
+        }
+      ],
+      "daily": {
+        "ma_score": 1,
+        "ma_facts": [
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -17.275795894368002,
+        "dea": -10.847175549391995,
+        "hist": -6.428620344976007,
+        "rsi": 34.93604535385019,
+        "volume_ratio": 0.8187612370138238,
+        "close_up": true,
+        "close": 214.19,
+        "previous_close": 206.65,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 1,
+        "ma_facts": [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -4.862726112287419,
+        "dea": -2.6472226426804277,
+        "hist": -2.215503469606991,
+        "rsi": 40.614940616280336,
+        "volume_ratio": 1.0762512112107794,
+        "close_up": true,
+        "close": 214.19,
+        "previous_close": 212.67,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "正常"
+      },
+      "er_rank": null,
+      "trend_score": 9.8,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 4.0",
+        "周线MA 5.0",
+        "RSI质量 0.8",
+        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.LITE",
+      "ticker": "LITE",
+      "name": "Lumentum",
+      "heat": 8.413,
+      "last_qualified_heat": 8.413,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 8.413
+        }
+      ],
+      "daily": {
+        "ma_score": 2,
+        "ma_facts": [
+          true,
+          true,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          false,
+          true,
+          false
+        ],
+        "dif": -15.16762277802411,
+        "dea": -24.077311756654765,
+        "hist": 8.909688978630655,
+        "rsi": 45.90524782406381,
+        "volume_ratio": 0.8360356586963295,
+        "close_up": false,
+        "close": 762.99,
+        "previous_close": 833.64,
+        "ma_label": "均线缠绕",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 2,
+        "ma_facts": [
+          false,
+          false,
+          true,
+          false,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 71.23904203300526,
+        "dea": 109.64097315133722,
+        "hist": -38.40193111833196,
+        "rsi": 52.880945925704665,
+        "volume_ratio": 0.9020429412215133,
+        "close_up": true,
+        "close": 762.99,
+        "previous_close": 732.82,
+        "ma_label": "均线缠绕",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 32.9,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 8.0",
+        "日线MACD 5.0",
+        "周线MA 10.0",
+        "周线MACD 6.7",
+        "RSI质量 3.2",
+        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.GLW",
+      "ticker": "GLW",
+      "name": "康宁",
+      "heat": 8.1,
+      "last_qualified_heat": 8.1,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 8.1
+        }
+      ],
+      "daily": {
+        "ma_score": 1,
+        "ma_facts": [
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -11.86469578868224,
+        "dea": -7.225822379433762,
+        "hist": -4.638873409248479,
+        "rsi": 36.43535107605688,
+        "volume_ratio": 0.8758866090034391,
+        "close_up": false,
+        "close": 146.65,
+        "previous_close": 156.06,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 3,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          false,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 15.661510856839527,
+        "dea": 21.62246190492312,
+        "hist": -5.960951048083594,
+        "rsi": 46.5822948928117,
+        "volume_ratio": 0.5995903810770403,
+        "close_up": false,
+        "close": 146.65,
+        "previous_close": 154.61,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 26.4,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 4.0",
+        "周线MA 15.0",
+        "周线MACD 6.7",
+        "RSI质量 0.8",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.RKLB",
+      "ticker": "RKLB",
+      "name": "Rocket Lab",
+      "heat": 8.036,
+      "last_qualified_heat": 8.036,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 8.036
+        }
+      ],
+      "daily": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -9.518637418543292,
+        "dea": -8.900262884700785,
+        "hist": -0.6183745338425073,
+        "rsi": 31.31144166528928,
+        "volume_ratio": 0.9920974835630063,
+        "close_up": false,
+        "close": 63.91,
+        "previous_close": 69.99,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 2,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          false,
+          false
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 2.834469184306201,
+        "dea": 8.677571985291697,
+        "hist": -5.843102800985497,
+        "rsi": 42.46848917887131,
+        "volume_ratio": 0.7484760971576462,
+        "close_up": false,
+        "close": 63.91,
+        "previous_close": 67.62,
+        "ma_label": "均线缠绕",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 17.4,
+      "high_probability": false,
+      "trend_reasons": [
+        "周线MA 10.0",
+        "周线MACD 6.7",
+        "RSI质量 0.8",
+        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.SNDQ",
+      "ticker": "SNDQ",
+      "name": "2倍做空SNDK ETF-Tradr",
+      "heat": 8.004,
+      "last_qualified_heat": 8.004,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 8.004
+        }
+      ],
+      "daily": null,
+      "weekly": null,
+      "er_rank": null,
+      "trend_score": null,
+      "high_probability": false,
+      "trend_reasons": [
+        "技术历史不足，仍在计算"
+      ]
+    },
+    {
+      "code": "US.BABA",
+      "ticker": "BABA",
+      "name": "阿里巴巴",
+      "heat": 7.9426,
+      "last_qualified_heat": 7.9426,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 7.9426
+        }
+      ],
+      "daily": {
+        "ma_score": 3,
+        "ma_facts": [
+          true,
+          true,
+          false,
+          true,
+          false
+        ],
+        "macd_score": 2,
+        "macd_facts": [
+          true,
+          true,
+          false
+        ],
+        "dif": 1.2053443216103261,
+        "dea": 0.009677245074615863,
+        "hist": 1.1956670765357102,
+        "rsi": 49.808377137807426,
+        "volume_ratio": 0.681259817777651,
+        "close_up": false,
+        "close": 112.14,
+        "previous_close": 114.06,
+        "ma_label": "偏多",
+        "macd_label": "多头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -9.26192120947772,
+        "dea": -8.422490599709736,
+        "hist": -0.8394306097679838,
+        "rsi": 42.27814733654432,
+        "volume_ratio": 0.6963603533307375,
+        "close_up": false,
+        "close": 112.14,
+        "previous_close": 114.97,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 23.5,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 12.0",
+        "日线MACD 10.0",
+        "RSI质量 1.5",
+        "未通过：周线MA≥3、周线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.PLTR",
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "heat": 7.4869,
+      "last_qualified_heat": 7.4869,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 7.4869
+        }
+      ],
+      "daily": {
+        "ma_score": 1,
+        "ma_facts": [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -0.7566273241680506,
+        "dea": -0.32252869974088916,
+        "hist": -0.4340986244271614,
+        "rsi": 42.07775353637076,
+        "volume_ratio": 0.6877693063331004,
+        "close_up": false,
+        "close": 122.92,
+        "previous_close": 123.37,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -7.448266618011161,
+        "dea": -6.768713632631646,
+        "hist": -0.679552985379515,
+        "rsi": 43.1459475029796,
+        "volume_ratio": 0.7112028673276078,
+        "close_up": false,
+        "close": 122.92,
+        "previous_close": 132.38,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 5.5,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 4.0",
+        "RSI质量 1.5",
+        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.SKDD",
+      "ticker": "SKDD",
+      "name": "2倍做空海力士ETF-GraniteShares",
+      "heat": 7.2076,
+      "last_qualified_heat": 7.2076,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 7.2076
+        }
+      ],
+      "daily": null,
+      "weekly": null,
+      "er_rank": null,
+      "trend_score": null,
+      "high_probability": false,
+      "trend_reasons": [
+        "技术历史不足，仍在计算"
+      ]
+    },
+    {
+      "code": "US.AMZN",
+      "ticker": "AMZN",
+      "name": "亚马逊",
+      "heat": 6.9499,
+      "last_qualified_heat": 6.9499,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 6.9499
+        }
+      ],
+      "daily": {
+        "ma_score": 1,
+        "ma_facts": [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -1.5004720711929451,
+        "dea": -0.48611758170995717,
+        "hist": -1.014354489482988,
+        "rsi": 37.49403206772276,
+        "volume_ratio": 0.9449390337444524,
+        "close_up": false,
+        "close": 232.11,
+        "previous_close": 233.66,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 3,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          false,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 3.561874037532192,
+        "dea": 5.855395554128063,
+        "hist": -2.293521516595871,
+        "rsi": 46.68029151366408,
+        "volume_ratio": 0.6557374396614339,
+        "close_up": false,
+        "close": 232.11,
+        "previous_close": 247.23,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 26.4,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 4.0",
+        "周线MA 15.0",
+        "周线MACD 6.7",
+        "RSI质量 0.8",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.SPCH",
+      "ticker": "SPCH",
+      "name": "2倍做多SpaceX ETF-Leverage Shares",
+      "heat": 6.8409,
+      "last_qualified_heat": 6.8409,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 6.8409
+        }
+      ],
+      "daily": null,
+      "weekly": null,
+      "er_rank": null,
+      "trend_score": null,
+      "high_probability": false,
+      "trend_reasons": [
+        "技术历史不足，仍在计算"
+      ]
+    },
+    {
+      "code": "US.AMKR",
+      "ticker": "AMKR",
+      "name": "艾马克技术",
+      "heat": 6.4423,
+      "last_qualified_heat": 6.4423,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 6.4423
+        }
+      ],
+      "daily": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -3.1226900306157006,
+        "dea": -2.680595350762829,
+        "hist": -0.44209467985287176,
+        "rsi": 42.71488427273657,
+        "volume_ratio": 2.7606254045242498,
+        "close_up": false,
+        "close": 64.96,
+        "previous_close": 65.33,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "放量"
+      },
+      "weekly": {
+        "ma_score": 3,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          false,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 6.523618902197825,
+        "dea": 8.305986815924555,
+        "hist": -1.7823679137267305,
+        "rsi": 51.974920406787895,
+        "volume_ratio": 0.826487774495617,
+        "close_up": true,
+        "close": 64.96,
+        "previous_close": 62.94,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 24.9,
+      "high_probability": false,
+      "trend_reasons": [
+        "周线MA 15.0",
+        "周线MACD 6.7",
+        "RSI质量 3.2",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.NOW",
+      "ticker": "NOW",
+      "name": "ServiceNow",
+      "heat": 6.4218,
+      "last_qualified_heat": 6.4218,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 6.4218
+        }
+      ],
+      "daily": {
+        "ma_score": 1,
+        "ma_facts": [
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -1.3587184696982888,
+        "dea": -0.1529271234641967,
+        "hist": -1.2057913462340921,
+        "rsi": 45.70192788691406,
+        "volume_ratio": 0.9974075826146398,
+        "close_up": true,
+        "close": 98.78,
+        "previous_close": 91.94,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 1,
+        "ma_facts": [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          false,
+          true,
+          false
+        ],
+        "dif": -7.929911253622649,
+        "dea": -10.611829966912897,
+        "hist": 2.681918713290248,
+        "rsi": 43.06232598910748,
+        "volume_ratio": 1.6352943355903296,
+        "close_up": false,
+        "close": 98.78,
+        "previous_close": 103.24,
+        "ma_label": "偏空",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "放量"
+      },
+      "er_rank": null,
+      "trend_score": 17.2,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 4.0",
+        "周线MA 5.0",
+        "周线MACD 6.7",
+        "RSI质量 1.5",
+        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.SPY",
+      "ticker": "SPY",
+      "name": "标普500ETF-SPDR",
+      "heat": 6.3568,
+      "last_qualified_heat": 6.3568,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 6.3568
+        }
+      ],
+      "daily": {
+        "ma_score": 2,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          false,
+          false
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 0.5692210060840353,
+        "dea": 2.0945297273429335,
+        "hist": -1.5253087212588983,
+        "rsi": 45.506464740535854,
+        "volume_ratio": 0.9500950050812133,
+        "close_up": true,
+        "close": 738.93,
+        "previous_close": 738.18,
+        "ma_label": "均线缠绕",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 4,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 19.705787327007442,
+        "dea": 19.834085066210697,
+        "hist": -0.12829773920325493,
+        "rsi": 59.106561836714796,
+        "volume_ratio": 0.8627243875567165,
+        "close_up": false,
+        "close": 738.93,
+        "previous_close": 743.29,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 42.9,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 8.0",
+        "日线MACD 5.0",
+        "周线MA 20.0",
+        "周线MACD 6.7",
+        "RSI质量 3.2",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.BE",
+      "ticker": "BE",
+      "name": "Bloom Energy",
+      "heat": 6.2289,
+      "last_qualified_heat": 6.2289,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 6.2289
+        }
+      ],
+      "daily": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -20.23585881055172,
+        "dea": -14.933657109374664,
+        "hist": -5.302201701177054,
+        "rsi": 36.11176819505298,
+        "volume_ratio": 1.1772497736768646,
+        "close_up": false,
+        "close": 184.89,
+        "previous_close": 217.3,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "正常"
+      },
+      "weekly": {
+        "ma_score": 3,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          false,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 25.297567222023645,
+        "dea": 36.89143366815474,
+        "hist": -11.593866446131095,
+        "rsi": 46.064895371208735,
+        "volume_ratio": 0.9662141647250199,
+        "close_up": false,
+        "close": 184.89,
+        "previous_close": 214.96,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 22.4,
+      "high_probability": false,
+      "trend_reasons": [
+        "周线MA 15.0",
+        "周线MACD 6.7",
+        "RSI质量 0.8",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.AAOI",
+      "ticker": "AAOI",
+      "name": "Applied Optoelectronics",
+      "heat": 6.0349,
+      "last_qualified_heat": 6.0349,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 6.0349
+        }
+      ],
+      "daily": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          false,
+          true,
+          false
+        ],
+        "dif": -13.198208452720422,
+        "dea": -13.690252593780453,
+        "hist": 0.49204414106003114,
+        "rsi": 38.60257237180918,
+        "volume_ratio": 0.9003798530522359,
+        "close_up": false,
+        "close": 100.15,
+        "previous_close": 112.02,
+        "ma_label": "偏空",
+        "macd_label": "动能分化",
+        "rsi_label": "弱势",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 3,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          false,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 12.113922817452277,
+        "dea": 23.35007527020691,
+        "hist": -11.236152452754634,
+        "rsi": 44.844161302621735,
+        "volume_ratio": 0.7290757001460753,
+        "close_up": false,
+        "close": 100.15,
+        "previous_close": 102.41,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 27.4,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MACD 5.0",
+        "周线MA 15.0",
+        "周线MACD 6.7",
+        "RSI质量 0.8",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.SMCI",
+      "ticker": "SMCI",
+      "name": "超微电脑",
+      "heat": 5.87,
+      "last_qualified_heat": 5.87,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 5.87
+        }
+      ],
+      "daily": {
+        "ma_score": 2,
+        "ma_facts": [
+          true,
+          false,
+          false,
+          true,
+          false
+        ],
+        "macd_score": 2,
+        "macd_facts": [
+          false,
+          true,
+          true
+        ],
+        "dif": -0.992549878012607,
+        "dea": -1.676779827894844,
+        "hist": 0.6842299498822371,
+        "rsi": 52.36824423687272,
+        "volume_ratio": 0.6938758097332615,
+        "close_up": false,
+        "close": 30.1,
+        "previous_close": 31.2,
+        "ma_label": "均线缠绕",
+        "macd_label": "多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 2,
+        "ma_facts": [
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -1.2706557842131438,
+        "dea": -0.9961741073478921,
+        "hist": -0.2744816768652517,
+        "rsi": 48.43920874718355,
+        "volume_ratio": 1.6752494620022143,
+        "close_up": true,
+        "close": 30.1,
+        "previous_close": 24.18,
+        "ma_label": "均线缠绕",
+        "macd_label": "空头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "放量"
+      },
+      "er_rank": null,
+      "trend_score": 31.2,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 8.0",
+        "日线MACD 10.0",
+        "周线MA 10.0",
+        "RSI质量 3.2",
+        "未通过：日线MA≥3、周线MA≥3、周线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.AVGO",
+      "ticker": "AVGO",
+      "name": "博通",
+      "heat": 5.6408,
+      "last_qualified_heat": 5.6408,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 5.6408
+        }
+      ],
+      "daily": {
+        "ma_score": 3,
+        "ma_facts": [
+          true,
+          true,
+          false,
+          true,
+          false
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          false,
+          true,
+          false
+        ],
+        "dif": -1.7122472417516406,
+        "dea": -3.295715745620768,
+        "hist": 1.5834685038691276,
+        "rsi": 47.86767538141231,
+        "volume_ratio": 0.8578496434153418,
+        "close_up": false,
+        "close": 381.92,
+        "previous_close": 392.47,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "weekly": {
+        "ma_score": 4,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 10.841784030713029,
+        "dea": 15.763801104467843,
+        "hist": -4.922017073754814,
+        "rsi": 51.66072769087143,
+        "volume_ratio": 0.638911658941378,
+        "close_up": true,
+        "close": 381.92,
+        "previous_close": 370.825,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 46.9,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 12.0",
+        "日线MACD 5.0",
+        "周线MA 20.0",
+        "周线MACD 6.7",
+        "RSI质量 3.2",
+        "未通过：日线MACD≥2、周线MACD≥2"
+      ]
+    },
+    {
+      "code": "US.KORU",
+      "ticker": "KORU",
+      "name": "3倍做多韩国ETF-Direxion",
+      "heat": 5.4015,
+      "last_qualified_heat": 5.4015,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 5.4015
+        }
+      ],
+      "daily": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -5.257065344967813,
+        "dea": -5.067924708093825,
+        "hist": -0.1891406368739883,
+        "rsi": 37.67512758206418,
+        "volume_ratio": 1.1330418704314917,
+        "close_up": false,
+        "close": 17.85,
+        "previous_close": 22.01,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "正常"
+      },
+      "weekly": {
+        "ma_score": 3,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          false,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 2.609782213319626,
+        "dea": 5.557549415901923,
+        "hist": -2.9477672025822974,
+        "rsi": 45.07234780169361,
+        "volume_ratio": 0.8900218978351184,
+        "close_up": false,
+        "close": 17.85,
+        "previous_close": 18.26,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 22.4,
+      "high_probability": false,
+      "trend_reasons": [
+        "周线MA 15.0",
+        "周线MACD 6.7",
+        "RSI质量 0.8",
+        "未通过：日线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
+      ]
+    },
+    {
+      "code": "US.SKUU",
+      "ticker": "SKUU",
+      "name": "2倍做多海力士ETF-GraniteShares",
+      "heat": 5.369,
+      "last_qualified_heat": 5.369,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 5.369
+        }
+      ],
+      "daily": null,
+      "weekly": null,
+      "er_rank": null,
+      "trend_score": null,
+      "high_probability": false,
+      "trend_reasons": [
+        "技术历史不足，仍在计算"
+      ]
+    },
+    {
+      "code": "US.CRWV",
+      "ticker": "CRWV",
+      "name": "CoreWeave",
+      "heat": 5.154,
+      "last_qualified_heat": 5.154,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 5.154
+        }
+      ],
+      "daily": {
+        "ma_score": 1,
+        "ma_facts": [
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -6.675869136061706,
+        "dea": -6.6652863344995525,
+        "hist": -0.010582801562153854,
+        "rsi": 35.42954704180589,
+        "volume_ratio": 1.0176409032340874,
+        "close_up": false,
+        "close": 71.88,
+        "previous_close": 81.1,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "弱势",
+        "volume_label": "正常"
+      },
+      "weekly": {
+        "ma_score": 0,
+        "ma_facts": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "macd_score": 0,
+        "macd_facts": [
+          false,
+          false,
+          false
+        ],
+        "dif": -3.312835606044743,
+        "dea": 0.4919615900312085,
+        "hist": -3.8047971960759517,
+        "rsi": 40.7641576591004,
+        "volume_ratio": 0.8510139250893762,
+        "close_up": false,
+        "close": 71.88,
+        "previous_close": 73.21,
+        "ma_label": "偏空",
+        "macd_label": "空头动能",
+        "rsi_label": "中性偏弱",
+        "volume_label": "缩量"
+      },
+      "er_rank": null,
+      "trend_score": 4.8,
+      "high_probability": false,
+      "trend_reasons": [
+        "日线MA 4.0",
+        "RSI质量 0.8",
+        "未通过：日线MA≥3、周线MA≥3、日线MACD≥2、周线MACD≥2、日周RSI不弱"
+      ]
+    }
+  ]
 }
