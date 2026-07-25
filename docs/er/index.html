@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="基于 OpenD 综合热度的美股单股池，以及日周趋势、动量、RSI、量能和残差动量共振判断。">
+  <meta name="description" content="基于 OpenD 综合热度与50亿美元市值门槛的美股单股池，以及日周趋势、动量、RSI、量能和残差动量共振判断。">
   <meta name="theme-color" content="#102c33">
   <link rel="canonical" href="https://strategy-er.vercel.app/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="热门资产跟踪+趋势资产判断">
-  <meta property="og:description" content="OpenD 综合热度股票池、日周技术结构与残差动量共振看板。">
+  <meta property="og:description" content="OpenD 综合热度与50亿美元市值双门槛股票池、日周技术结构与残差动量共振看板。">
   <meta property="og:url" content="https://strategy-er.vercel.app/">
   <meta property="og:image" content="https://strategy-er.vercel.app/hot-trend-og.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -35,9 +35,9 @@
 <body>
 <nav class="suite-nav" aria-label="量化看板导航"><a class="active" href="./">热门资产跟踪</a><a href="./residual-momentum/">残差动量</a></nav>
 <main class="page">
-  <section class="hero"><div><div class="eyebrow">OPEND HEAT × MULTI-TIMEFRAME TREND</div><h1>🔥 热门资产跟踪+趋势资产判断</h1><p>美股单股 · OpenD 综合热度 ≥ 1 入池 · 50 个交易日保留 · 日线与周线均包含盘中未完成 K 线。趋势资产“高概率”为规则打分，不代表统计胜率或投资建议。</p></div><div class="refresh"><a href="http://127.0.0.1:8766/" target="_blank" rel="noreferrer">↻ 本机刷新 OpenD</a><small>仅安装本地刷新服务的这台 Mac 可用</small></div></section>
-  <section class="stats"><div class="stat"><b id="pool">—</b><span>总股票池</span></div><div class="stat"><b id="active">—</b><span>当前热度达标</span></div><div class="stat"><b id="retained">—</b><span>保留观察</span></div><div class="stat"><b id="high">—</b><span>趋势高概率</span></div><div class="stat"><b id="erHits">—</b><span>ER Top10 共振</span></div><div class="stat"><b id="computing">—</b><span>技术指标计算中</span></div></section>
-  <div class="controls"><input id="search" type="search" placeholder="搜索 Ticker 或公司名称"><select id="status"><option value="all">全部池内标的</option><option value="active">当前热度达标</option><option value="retained">50日保留观察</option></select><label class="check"><input id="highOnly" type="checkbox">只看趋势高概率</label><label class="check"><input id="erOnly" type="checkbox">只看 ER Top10</label><span class="meta" id="meta">正在载入…</span></div>
+  <section class="hero"><div><div class="eyebrow">OPEND HEAT × MULTI-TIMEFRAME TREND</div><h1>🔥 热门资产跟踪+趋势资产判断</h1><p>美股单股 · OpenD 综合热度 ≥ 1 且总市值 ≥ 50 亿美元入池 · 50 个交易日保留 · 日线与周线均包含盘中未完成 K 线。趋势资产“高概率”为规则打分，不代表统计胜率或投资建议。</p></div><div class="refresh"><a href="http://127.0.0.1:8766/" target="_blank" rel="noreferrer">↻ 本机刷新 OpenD</a><small>仅安装本地刷新服务的这台 Mac 可用</small></div></section>
+  <section class="stats"><div class="stat"><b id="pool">—</b><span>总股票池</span></div><div class="stat"><b id="active">—</b><span>当前双门槛达标</span></div><div class="stat"><b id="retained">—</b><span>保留观察</span></div><div class="stat"><b id="high">—</b><span>趋势高概率</span></div><div class="stat"><b id="erHits">—</b><span>ER Top10 共振</span></div><div class="stat"><b id="computing">—</b><span>技术指标计算中</span></div></section>
+  <div class="controls"><input id="search" type="search" placeholder="搜索 Ticker 或公司名称"><select id="status"><option value="all">全部池内标的</option><option value="active">当前双门槛达标</option><option value="retained">50日保留观察</option></select><label class="check"><input id="highOnly" type="checkbox">只看趋势高概率</label><label class="check"><input id="erOnly" type="checkbox">只看 ER Top10</label><span class="meta" id="meta">正在载入…</span></div>
   <div class="notice" id="notice"></div>
   <section class="table-shell"><table><colgroup><col class="c-ticker"><col class="c-heat"><col class="c-tech" span="8"><col class="c-er"><col class="c-trend"></colgroup><thead><tr><th class="ticker-col" rowspan="2">Ticker</th><th class="heat-col" rowspan="2">综合热度 · 30日走势</th><th colspan="4">日 K <span class="partial">含盘中</span></th><th colspan="4">周 K <span class="partial">含本周</span></th><th rowspan="2">残差动量 Top10</th><th rowspan="2">趋势资产概率</th></tr><tr><th>Trend · MA</th><th>MACD</th><th>RSI(14)</th><th>Volume</th><th>Trend · MA</th><th>MACD</th><th>RSI(14)</th><th>Volume</th></tr></thead><tbody id="body"><tr><td class="empty" colspan="12">正在加载最新快照…</td></tr></tbody></table></section>
   <p class="foot">MA：5 个客观条件计数；MACD：DIF&gt;0、DIF&gt;DEA、柱体为正且不弱于前一根；RSI 使用 Wilder(14)；量能为当前累计量 ÷ 前 5 个完整周期平均量。趋势评分：日 MA 20、日 MACD 15、周 MA 25、周 MACD 20、RSI 5、量价 5、ER Top10 10；总分 ≥75 且日周 MA≥3、日周 MACD≥2、日周 RSI 均≥40 才显示“高概率”。</p>
