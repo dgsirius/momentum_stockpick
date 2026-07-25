@@ -1,7 +1,7 @@
 {
-  "schema_version": 8,
+  "schema_version": 9,
   "title": "热门资产跟踪+趋势资产判断",
-  "generated_at": "2026-07-25T23:00:17+08:00",
+  "generated_at": "2026-07-25T23:32:51+08:00",
   "heat_as_of": "2026-07-24",
   "er_signal_date": "2026-07-24",
   "opend_last_refresh": "2026-07-25T20:34:35+08:00",
@@ -24,7 +24,7 @@
       36
     ],
     "trend_strength": "不含当前确认、ER和入场质量的趋势主体横截面排名",
-    "trend_confirmation": "日周MA与MACD当前状态的等权确认分",
+    "trend_confirmation": "日线和周线各由MA与MACD等权合成，再取两者较低分，防止较强周期掩盖较弱周期",
     "trend_confirmation_minimum": 70.0,
     "opportunity_score": "趋势主体、当前确认、ER与入场质量在当前双门槛达标标的中的综合排名；历史延续仅在样本外AUC>0.55后启用",
     "opportunity_candidate_threshold": 95.0,
@@ -124,7 +124,7 @@
     "pool": 105,
     "active": 105,
     "retained": 0,
-    "trend_candidates": 5,
+    "trend_candidates": 4,
     "er_hits": 3,
     "computing": 5
   },
@@ -322,6 +322,8 @@
       "sector": "消费电子产品",
       "trend_strength": 97.1,
       "trend_strength_percentile": 2.9,
+      "daily_confirmation_score": 100.0,
+      "weekly_confirmation_score": 100.0,
       "trend_confirmation_score": 100.0,
       "er_signal_score": 0.0,
       "trend_components": [
@@ -556,6 +558,8 @@
       "sector": "多元化银行",
       "trend_strength": 93.3,
       "trend_strength_percentile": 6.7,
+      "daily_confirmation_score": 100.0,
+      "weekly_confirmation_score": 100.0,
       "trend_confirmation_score": 100.0,
       "er_signal_score": 0.0,
       "trend_components": [
@@ -587,241 +591,6 @@
       "continuation_probability_percentile": 57.1,
       "opportunity_raw_score": 78.1,
       "opportunity_score": 97.1,
-      "opportunity_weights": {
-        "trend_core": 0.65,
-        "trend_confirmation": 0.1,
-        "er_signal": 0.15,
-        "entry_quality": 0.1,
-        "historical_continuation": 0.0,
-        "model_reliability": 0.0
-      },
-      "trend_candidate": true
-    },
-    {
-      "code": "US.JNJ",
-      "ticker": "JNJ",
-      "name": "强生",
-      "heat": 1.4854,
-      "last_qualified_heat": 1.4854,
-      "market_cap": 634767290449.8,
-      "last_qualified_market_cap": 634767290449.8,
-      "active": true,
-      "trading_days_since_hit": 0,
-      "last_hit_date": "2026-07-24",
-      "heat_history": [
-        {
-          "date": "2026-07-24",
-          "heat": 1.4854
-        }
-      ],
-      "daily": {
-        "ma_score": 4,
-        "ma_facts": [
-          true,
-          false,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 1,
-        "macd_facts": [
-          true,
-          false,
-          false
-        ],
-        "dif": 4.077318317474209,
-        "dea": 4.41397497094619,
-        "hist": -0.33665665347198104,
-        "rsi": 62.71692344799372,
-        "volume_ratio": 0.7345069816500889,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 263.4,
-        "previous_close": 259.27,
-        "ma5": 255.546,
-        "ma10": 253.93800000000002,
-        "ma20": 256.47950000000003,
-        "ma60": 238.69049396026668,
-        "ma_label": "偏多",
-        "macd_label": "动能分化",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "daily_confirmed": {
-        "ma_score": 4,
-        "ma_facts": [
-          true,
-          false,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 1,
-        "macd_facts": [
-          true,
-          false,
-          false
-        ],
-        "dif": 4.077318317474209,
-        "dea": 4.41397497094619,
-        "hist": -0.33665665347198104,
-        "rsi": 62.71692344799372,
-        "volume_ratio": 0.7345069816500889,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 263.4,
-        "previous_close": 259.27,
-        "ma5": 255.546,
-        "ma10": 253.93800000000002,
-        "ma20": 256.47950000000003,
-        "ma60": 238.69049396026668,
-        "ma_label": "偏多",
-        "macd_label": "动能分化",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "daily_is_partial": false,
-      "weekly": {
-        "ma_score": 5,
-        "ma_facts": [
-          true,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 3,
-        "macd_facts": [
-          true,
-          true,
-          true
-        ],
-        "dif": 11.231804753676698,
-        "dea": 9.621436030277337,
-        "hist": 1.610368723399361,
-        "rsi": 65.1657653163357,
-        "volume_ratio": 0.9343139438668904,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 263.4,
-        "previous_close": 253.04,
-        "ma5": 258.224,
-        "ma10": 245.1479999824,
-        "ma20": 238.69318996905,
-        "ma60": 206.01771935588334,
-        "ma_label": "强多头结构",
-        "macd_label": "强多头动能",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "weekly_confirmed": {
-        "ma_score": 5,
-        "ma_facts": [
-          true,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 3,
-        "macd_facts": [
-          true,
-          true,
-          true
-        ],
-        "dif": 11.231804753676698,
-        "dea": 9.621436030277337,
-        "hist": 1.610368723399361,
-        "rsi": 65.1657653163357,
-        "volume_ratio": 0.9343139438668904,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 263.4,
-        "previous_close": 253.04,
-        "ma5": 258.224,
-        "ma10": 245.1479999824,
-        "ma20": 238.69318996905,
-        "ma60": 206.01771935588334,
-        "ma_label": "强多头结构",
-        "macd_label": "强多头动能",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "weekly_is_partial": false,
-      "entry": {
-        "label": "回踩转强",
-        "close_distance_ma20_pct": 0.02698266333176713,
-        "close_distance_ma60_pct": 0.1035211148536419,
-        "distance_ma20_atr": 1.1612016154134324,
-        "distance_ma60_atr": 4.146047009523371,
-        "distance_20d_high_pct": -0.022380581227035012,
-        "distance_52w_high_pct": -0.022380581227035012,
-        "gap_pct": 0.008331083426543762,
-        "breakout_recent": false,
-        "breakout_days_since": 13,
-        "pullback_ma10_reclaim": true,
-        "pullback_ma20_reclaim": true,
-        "atr_pct": 0.0226263276086891,
-        "intraday_range_pct": 0.015813630578161632,
-        "max_drawdown_20d_pct": -0.07566232599910194,
-        "quality_grade": "A",
-        "quality_score": 85.0,
-        "quality_label": "触发明确",
-        "positive_reasons": [
-          "回踩 MA10/MA20 后重新转强",
-          "收盘位于 MA20 上方 0–1.5 ATR",
-          "RSI 位于健康强势区"
-        ],
-        "risk_reasons": []
-      },
-      "er_rank": null,
-      "er_hits_last5": 0,
-      "er_streak": 0,
-      "er_price_momentum_aligned": null,
-      "price_momentum": {
-        "returns": {
-          "4w": 0.0343202701641403,
-          "12w": 0.16604970649399386,
-          "36w": 0.3679073584529602
-        },
-        "mean": 0.18942577837036478,
-        "positive": true
-      },
-      "continuation_probability": 0.4345,
-      "sector": "一般药品制造商",
-      "trend_strength": 94.3,
-      "trend_strength_percentile": 5.7,
-      "trend_confirmation_score": 78.3,
-      "er_signal_score": 0.0,
-      "trend_components": [
-        {
-          "name": "多周期波动调整动量",
-          "percentile": 91.5,
-          "weight": 40,
-          "contribution": 36.6
-        },
-        {
-          "name": "MA20/MA60斜率",
-          "percentile": 80.4,
-          "weight": 25,
-          "contribution": 20.1
-        },
-        {
-          "name": "趋势平滑度",
-          "percentile": 84.6,
-          "weight": 20,
-          "contribution": 16.9
-        },
-        {
-          "name": "相对SPY/行业强度",
-          "percentile": 62.7,
-          "weight": 15,
-          "contribution": 9.4
-        }
-      ],
-      "continuation_probability_percentile": 80.0,
-      "opportunity_raw_score": 77.6,
-      "opportunity_score": 96.2,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -1026,6 +795,8 @@
       "sector": "航空航天与国防",
       "trend_strength": 92.4,
       "trend_strength_percentile": 7.6,
+      "daily_confirmation_score": 100.0,
+      "weekly_confirmation_score": 100.0,
       "trend_confirmation_score": 100.0,
       "er_signal_score": 80.0,
       "trend_components": [
@@ -1260,6 +1031,8 @@
       "sector": "多元化银行",
       "trend_strength": 100.0,
       "trend_strength_percentile": 0.0,
+      "daily_confirmation_score": 100.0,
+      "weekly_confirmation_score": 100.0,
       "trend_confirmation_score": 100.0,
       "er_signal_score": 0.0,
       "trend_components": [
@@ -1334,6 +1107,8 @@
       "sector": "航空航天与国防",
       "trend_strength": 51.9,
       "trend_strength_percentile": 48.1,
+      "daily_confirmation_score": null,
+      "weekly_confirmation_score": null,
       "trend_confirmation_score": null,
       "er_signal_score": 0.0,
       "trend_components": [
@@ -1364,7 +1139,7 @@
       ],
       "continuation_probability_percentile": 78.1,
       "opportunity_raw_score": 43.7,
-      "opportunity_score": 51.9,
+      "opportunity_score": 56.7,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -1569,7 +1344,9 @@
       "sector": "汽车制造",
       "trend_strength": 27.6,
       "trend_strength_percentile": 72.4,
-      "trend_confirmation_score": 5.0,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 10.0,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -1598,8 +1375,8 @@
         }
       ],
       "continuation_probability_percentile": 58.1,
-      "opportunity_raw_score": 18.4,
-      "opportunity_score": 22.9,
+      "opportunity_raw_score": 17.9,
+      "opportunity_score": 24.8,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -1803,7 +1580,9 @@
       "sector": "半导体",
       "trend_strength": 86.7,
       "trend_strength_percentile": 13.3,
-      "trend_confirmation_score": 56.7,
+      "daily_confirmation_score": 30.0,
+      "weekly_confirmation_score": 83.3,
+      "trend_confirmation_score": 30.0,
       "er_signal_score": 5.0,
       "trend_components": [
         {
@@ -1832,8 +1611,8 @@
         }
       ],
       "continuation_probability_percentile": 65.7,
-      "opportunity_raw_score": 65.3,
-      "opportunity_score": 85.7,
+      "opportunity_raw_score": 62.6,
+      "opportunity_score": 84.8,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -2037,7 +1816,9 @@
       "sector": "半导体",
       "trend_strength": 39.0,
       "trend_strength_percentile": 61.0,
-      "trend_confirmation_score": 23.3,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 46.7,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -2066,8 +1847,8 @@
         }
       ],
       "continuation_probability_percentile": 98.1,
-      "opportunity_raw_score": 30.2,
-      "opportunity_score": 37.1,
+      "opportunity_raw_score": 27.9,
+      "opportunity_score": 35.2,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -2111,6 +1892,8 @@
       "sector": "半导体",
       "trend_strength": 51.9,
       "trend_strength_percentile": 48.1,
+      "daily_confirmation_score": null,
+      "weekly_confirmation_score": null,
       "trend_confirmation_score": null,
       "er_signal_score": 0.0,
       "trend_components": [
@@ -2141,7 +1924,7 @@
       ],
       "continuation_probability_percentile": 15.7,
       "opportunity_raw_score": 43.7,
-      "opportunity_score": 51.9,
+      "opportunity_score": 56.7,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -2345,7 +2128,9 @@
       "sector": "计算机硬件",
       "trend_strength": 74.3,
       "trend_strength_percentile": 25.7,
-      "trend_confirmation_score": 33.3,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 56.7,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -2374,8 +2159,8 @@
         }
       ],
       "continuation_probability_percentile": 99.0,
-      "opportunity_raw_score": 54.1,
-      "opportunity_score": 69.5,
+      "opportunity_raw_score": 51.8,
+      "opportunity_score": 68.6,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -2579,7 +2364,9 @@
       "sector": "互联网内容与信息",
       "trend_strength": 44.8,
       "trend_strength_percentile": 55.2,
-      "trend_confirmation_score": 23.3,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 46.7,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -2608,7 +2395,7 @@
         }
       ],
       "continuation_probability_percentile": 42.9,
-      "opportunity_raw_score": 32.9,
+      "opportunity_raw_score": 30.6,
       "opportunity_score": 40.0,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -2813,7 +2600,9 @@
       "sector": "半导体",
       "trend_strength": 50.5,
       "trend_strength_percentile": 49.5,
-      "trend_confirmation_score": 60.0,
+      "daily_confirmation_score": 63.3,
+      "weekly_confirmation_score": 56.7,
+      "trend_confirmation_score": 56.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -2842,8 +2631,8 @@
         }
       ],
       "continuation_probability_percentile": 70.5,
-      "opportunity_raw_score": 45.3,
-      "opportunity_score": 59.0,
+      "opportunity_raw_score": 45.0,
+      "opportunity_score": 60.0,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -3049,7 +2838,9 @@
       "sector": "半导体",
       "trend_strength": 91.4,
       "trend_strength_percentile": 8.6,
-      "trend_confirmation_score": 65.0,
+      "daily_confirmation_score": 46.7,
+      "weekly_confirmation_score": 83.3,
+      "trend_confirmation_score": 46.7,
       "er_signal_score": 5.0,
       "trend_components": [
         {
@@ -3078,8 +2869,8 @@
         }
       ],
       "continuation_probability_percentile": 51.4,
-      "opportunity_raw_score": 69.7,
-      "opportunity_score": 89.5,
+      "opportunity_raw_score": 67.8,
+      "opportunity_score": 88.6,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -3283,7 +3074,9 @@
       "sector": "软件基础设施",
       "trend_strength": 1.0,
       "trend_strength_percentile": 99.0,
-      "trend_confirmation_score": 13.3,
+      "daily_confirmation_score": 16.7,
+      "weekly_confirmation_score": 10.0,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -3312,8 +3105,8 @@
         }
       ],
       "continuation_probability_percentile": 13.3,
-      "opportunity_raw_score": 4.5,
-      "opportunity_score": 3.8,
+      "opportunity_raw_score": 4.2,
+      "opportunity_score": 2.9,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -3516,7 +3309,9 @@
       "sector": "半导体",
       "trend_strength": 49.5,
       "trend_strength_percentile": 50.5,
-      "trend_confirmation_score": 33.3,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 56.7,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -3545,7 +3340,7 @@
         }
       ],
       "continuation_probability_percentile": 86.7,
-      "opportunity_raw_score": 39.5,
+      "opportunity_raw_score": 37.2,
       "opportunity_score": 47.6,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -3750,7 +3545,9 @@
       "sector": "互联网内容与信息",
       "trend_strength": 47.6,
       "trend_strength_percentile": 52.4,
-      "trend_confirmation_score": 23.3,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 46.7,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -3779,8 +3576,8 @@
         }
       ],
       "continuation_probability_percentile": 50.5,
-      "opportunity_raw_score": 34.8,
-      "opportunity_score": 42.9,
+      "opportunity_raw_score": 32.4,
+      "opportunity_score": 41.9,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -3985,7 +3782,9 @@
       "sector": "旅游服务",
       "trend_strength": 21.0,
       "trend_strength_percentile": 79.0,
-      "trend_confirmation_score": 31.7,
+      "daily_confirmation_score": 63.3,
+      "weekly_confirmation_score": 0.0,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -4014,7 +3813,7 @@
         }
       ],
       "continuation_probability_percentile": 17.1,
-      "opportunity_raw_score": 25.3,
+      "opportunity_raw_score": 22.1,
       "opportunity_score": 27.6,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -4219,7 +4018,9 @@
       "sector": "互联网内容与信息",
       "trend_strength": 60.0,
       "trend_strength_percentile": 40.0,
-      "trend_confirmation_score": 33.3,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 56.7,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -4248,8 +4049,8 @@
         }
       ],
       "continuation_probability_percentile": 75.2,
-      "opportunity_raw_score": 44.8,
-      "opportunity_score": 56.2,
+      "opportunity_raw_score": 42.5,
+      "opportunity_score": 52.4,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -4450,6 +4251,8 @@
       "sector": "软件基础设施",
       "trend_strength": 42.9,
       "trend_strength_percentile": 57.1,
+      "daily_confirmation_score": 26.7,
+      "weekly_confirmation_score": 26.7,
       "trend_confirmation_score": 26.7,
       "er_signal_score": 0.0,
       "trend_components": [
@@ -4480,7 +4283,7 @@
       ],
       "continuation_probability_percentile": 30.0,
       "opportunity_raw_score": 35.6,
-      "opportunity_score": 43.8,
+      "opportunity_score": 45.7,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -4685,7 +4488,9 @@
       "sector": "通讯设备",
       "trend_strength": 16.2,
       "trend_strength_percentile": 83.8,
-      "trend_confirmation_score": 23.3,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 46.7,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -4714,8 +4519,8 @@
         }
       ],
       "continuation_probability_percentile": 46.7,
-      "opportunity_raw_score": 12.9,
-      "opportunity_score": 14.3,
+      "opportunity_raw_score": 10.5,
+      "opportunity_score": 10.5,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -4919,7 +4724,9 @@
       "sector": "半导体",
       "trend_strength": 62.9,
       "trend_strength_percentile": 37.1,
-      "trend_confirmation_score": 33.3,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 56.7,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -4948,8 +4755,8 @@
         }
       ],
       "continuation_probability_percentile": 97.1,
-      "opportunity_raw_score": 46.7,
-      "opportunity_score": 60.0,
+      "opportunity_raw_score": 44.4,
+      "opportunity_score": 58.1,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -5152,7 +4959,9 @@
       "sector": "互联网内容与信息",
       "trend_strength": 43.8,
       "trend_strength_percentile": 56.2,
-      "trend_confirmation_score": 31.7,
+      "daily_confirmation_score": 36.7,
+      "weekly_confirmation_score": 26.7,
+      "trend_confirmation_score": 26.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -5181,7 +4990,7 @@
         }
       ],
       "continuation_probability_percentile": 56.2,
-      "opportunity_raw_score": 35.6,
+      "opportunity_raw_score": 35.1,
       "opportunity_score": 44.8,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -5322,6 +5131,8 @@
       "sector": "资本市场",
       "trend_strength": 14.3,
       "trend_strength_percentile": 85.7,
+      "daily_confirmation_score": 26.7,
+      "weekly_confirmation_score": null,
       "trend_confirmation_score": null,
       "er_signal_score": 0.0,
       "trend_components": [
@@ -5352,7 +5163,7 @@
       ],
       "continuation_probability_percentile": 1.9,
       "opportunity_raw_score": 16.8,
-      "opportunity_score": 20.0,
+      "opportunity_score": 21.9,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -5556,6 +5367,8 @@
       "sector": "通讯设备",
       "trend_strength": 73.3,
       "trend_strength_percentile": 26.7,
+      "daily_confirmation_score": 36.7,
+      "weekly_confirmation_score": 36.7,
       "trend_confirmation_score": 36.7,
       "er_signal_score": 0.0,
       "trend_components": [
@@ -5586,7 +5399,7 @@
       ],
       "continuation_probability_percentile": 28.6,
       "opportunity_raw_score": 53.8,
-      "opportunity_score": 68.6,
+      "opportunity_score": 71.4,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -5790,7 +5603,9 @@
       "sector": "航空航天与国防",
       "trend_strength": 20.0,
       "trend_strength_percentile": 80.0,
-      "trend_confirmation_score": 18.3,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 36.7,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -5819,8 +5634,8 @@
         }
       ],
       "continuation_probability_percentile": 82.4,
-      "opportunity_raw_score": 17.3,
-      "opportunity_score": 21.0,
+      "opportunity_raw_score": 15.5,
+      "opportunity_score": 17.1,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -6025,6 +5840,8 @@
       "sector": "信息技术服务",
       "trend_strength": 23.8,
       "trend_strength_percentile": 76.2,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 10.0,
       "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
@@ -6055,7 +5872,7 @@
       ],
       "continuation_probability_percentile": 79.0,
       "opportunity_raw_score": 16.5,
-      "opportunity_score": 18.1,
+      "opportunity_score": 21.0,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -6260,7 +6077,9 @@
       "sector": "电子元件",
       "trend_strength": 29.5,
       "trend_strength_percentile": 70.5,
-      "trend_confirmation_score": 28.3,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 46.7,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -6289,7 +6108,7 @@
         }
       ],
       "continuation_probability_percentile": 92.4,
-      "opportunity_raw_score": 22.0,
+      "opportunity_raw_score": 20.2,
       "opportunity_score": 26.7,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -6493,7 +6312,9 @@
       "sector": "互联网零售",
       "trend_strength": 37.1,
       "trend_strength_percentile": 62.9,
-      "trend_confirmation_score": 31.7,
+      "daily_confirmation_score": 63.3,
+      "weekly_confirmation_score": 0.0,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -6522,8 +6343,8 @@
         }
       ],
       "continuation_probability_percentile": 4.8,
-      "opportunity_raw_score": 33.3,
-      "opportunity_score": 41.0,
+      "opportunity_raw_score": 30.1,
+      "opportunity_score": 39.0,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -6724,7 +6545,9 @@
       "sector": "软件基础设施",
       "trend_strength": 41.9,
       "trend_strength_percentile": 58.1,
-      "trend_confirmation_score": 5.0,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 0.0,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -6753,8 +6576,8 @@
         }
       ],
       "continuation_probability_percentile": 22.9,
-      "opportunity_raw_score": 32.7,
-      "opportunity_score": 39.0,
+      "opportunity_raw_score": 32.2,
+      "opportunity_score": 41.0,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -6955,7 +6778,9 @@
       "sector": "互联网零售",
       "trend_strength": 56.2,
       "trend_strength_percentile": 43.8,
-      "trend_confirmation_score": 28.3,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 46.7,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -6984,8 +6809,8 @@
         }
       ],
       "continuation_probability_percentile": 59.5,
-      "opportunity_raw_score": 44.4,
-      "opportunity_score": 55.2,
+      "opportunity_raw_score": 42.5,
+      "opportunity_score": 53.3,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -7189,7 +7014,9 @@
       "sector": "电气设备及零件",
       "trend_strength": 22.9,
       "trend_strength_percentile": 77.1,
-      "trend_confirmation_score": 23.3,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 46.7,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -7218,8 +7045,8 @@
         }
       ],
       "continuation_probability_percentile": 84.8,
-      "opportunity_raw_score": 19.7,
-      "opportunity_score": 25.7,
+      "opportunity_raw_score": 17.4,
+      "opportunity_score": 23.8,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -7423,7 +7250,9 @@
       "sector": "通讯设备",
       "trend_strength": 32.4,
       "trend_strength_percentile": 67.6,
-      "trend_confirmation_score": 31.7,
+      "daily_confirmation_score": 16.7,
+      "weekly_confirmation_score": 46.7,
+      "trend_confirmation_score": 16.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -7452,7 +7281,7 @@
         }
       ],
       "continuation_probability_percentile": 20.0,
-      "opportunity_raw_score": 26.7,
+      "opportunity_raw_score": 25.2,
       "opportunity_score": 29.5,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -7657,7 +7486,9 @@
       "sector": "应用软件",
       "trend_strength": 61.0,
       "trend_strength_percentile": 39.0,
-      "trend_confirmation_score": 18.3,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 26.7,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -7686,8 +7517,8 @@
         }
       ],
       "continuation_probability_percentile": 39.0,
-      "opportunity_raw_score": 44.0,
-      "opportunity_score": 53.3,
+      "opportunity_raw_score": 43.1,
+      "opportunity_score": 54.3,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -7890,7 +7721,9 @@
       "sector": "半导体",
       "trend_strength": 45.7,
       "trend_strength_percentile": 54.3,
-      "trend_confirmation_score": 51.7,
+      "daily_confirmation_score": 46.7,
+      "weekly_confirmation_score": 56.7,
+      "trend_confirmation_score": 46.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -7919,8 +7752,8 @@
         }
       ],
       "continuation_probability_percentile": 67.1,
-      "opportunity_raw_score": 40.9,
-      "opportunity_score": 48.6,
+      "opportunity_raw_score": 40.4,
+      "opportunity_score": 50.5,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -8124,7 +7957,9 @@
       "sector": "半导体",
       "trend_strength": 40.0,
       "trend_strength_percentile": 60.0,
-      "trend_confirmation_score": 23.3,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 46.7,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -8153,8 +7988,8 @@
         }
       ],
       "continuation_probability_percentile": 30.0,
-      "opportunity_raw_score": 30.8,
-      "opportunity_score": 38.1,
+      "opportunity_raw_score": 28.5,
+      "opportunity_score": 37.1,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -8359,7 +8194,9 @@
       "sector": "半导体设备与材料",
       "trend_strength": 24.8,
       "trend_strength_percentile": 75.2,
-      "trend_confirmation_score": 23.3,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 46.7,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -8388,8 +8225,8 @@
         }
       ],
       "continuation_probability_percentile": 96.2,
-      "opportunity_raw_score": 19.5,
-      "opportunity_score": 24.8,
+      "opportunity_raw_score": 17.1,
+      "opportunity_score": 22.9,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -8593,7 +8430,9 @@
       "sector": "软件基础设施",
       "trend_strength": 4.8,
       "trend_strength_percentile": 95.2,
-      "trend_confirmation_score": 5.0,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 0.0,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -8622,7 +8461,7 @@
         }
       ],
       "continuation_probability_percentile": 26.7,
-      "opportunity_raw_score": 6.1,
+      "opportunity_raw_score": 5.6,
       "opportunity_score": 4.8,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -8830,7 +8669,9 @@
       "sector": "计算机硬件",
       "trend_strength": 31.4,
       "trend_strength_percentile": 68.6,
-      "trend_confirmation_score": 36.7,
+      "daily_confirmation_score": 53.3,
+      "weekly_confirmation_score": 20.0,
+      "trend_confirmation_score": 20.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -8859,7 +8700,7 @@
         }
       ],
       "continuation_probability_percentile": 49.5,
-      "opportunity_raw_score": 28.1,
+      "opportunity_raw_score": 26.4,
       "opportunity_score": 33.3,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -9064,7 +8905,9 @@
       "sector": "应用软件",
       "trend_strength": 7.6,
       "trend_strength_percentile": 92.4,
-      "trend_confirmation_score": 18.3,
+      "daily_confirmation_score": 36.7,
+      "weekly_confirmation_score": 0.0,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -9093,8 +8936,8 @@
         }
       ],
       "continuation_probability_percentile": 3.8,
-      "opportunity_raw_score": 9.3,
-      "opportunity_score": 6.7,
+      "opportunity_raw_score": 7.4,
+      "opportunity_score": 5.7,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -9301,7 +9144,9 @@
       "sector": "计算机硬件",
       "trend_strength": 99.0,
       "trend_strength_percentile": 1.0,
-      "trend_confirmation_score": 70.0,
+      "daily_confirmation_score": 56.7,
+      "weekly_confirmation_score": 83.3,
+      "trend_confirmation_score": 56.7,
       "er_signal_score": 10.0,
       "trend_components": [
         {
@@ -9330,8 +9175,8 @@
         }
       ],
       "continuation_probability_percentile": 83.8,
-      "opportunity_raw_score": 76.9,
-      "opportunity_score": 93.3,
+      "opportunity_raw_score": 75.5,
+      "opportunity_score": 94.3,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -9535,7 +9380,9 @@
       "sector": "资本市场",
       "trend_strength": 81.0,
       "trend_strength_percentile": 19.0,
-      "trend_confirmation_score": 50.0,
+      "daily_confirmation_score": 36.7,
+      "weekly_confirmation_score": 63.3,
+      "trend_confirmation_score": 36.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -9564,7 +9411,7 @@
         }
       ],
       "continuation_probability_percentile": 59.5,
-      "opportunity_raw_score": 60.1,
+      "opportunity_raw_score": 58.8,
       "opportunity_score": 79.0,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -9609,6 +9456,8 @@
       "sector": "半导体",
       "trend_strength": 54.3,
       "trend_strength_percentile": 45.7,
+      "daily_confirmation_score": null,
+      "weekly_confirmation_score": null,
       "trend_confirmation_score": null,
       "er_signal_score": 0.0,
       "trend_components": [
@@ -9639,7 +9488,7 @@
       ],
       "continuation_probability_percentile": 31.4,
       "opportunity_raw_score": 45.3,
-      "opportunity_score": 58.1,
+      "opportunity_score": 61.9,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -9842,7 +9691,9 @@
       "sector": "非酒精饮料",
       "trend_strength": 81.9,
       "trend_strength_percentile": 18.1,
-      "trend_confirmation_score": 60.0,
+      "daily_confirmation_score": 36.7,
+      "weekly_confirmation_score": 83.3,
+      "trend_confirmation_score": 36.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -9871,8 +9722,8 @@
         }
       ],
       "continuation_probability_percentile": 67.1,
-      "opportunity_raw_score": 64.7,
-      "opportunity_score": 84.8,
+      "opportunity_raw_score": 62.4,
+      "opportunity_score": 83.8,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -10075,6 +9926,8 @@
       "sector": "娱乐",
       "trend_strength": 5.7,
       "trend_strength_percentile": 94.3,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 0.0,
       "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
@@ -10105,7 +9958,7 @@
       ],
       "continuation_probability_percentile": 36.2,
       "opportunity_raw_score": 7.7,
-      "opportunity_score": 5.7,
+      "opportunity_score": 6.7,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -10309,7 +10162,9 @@
       "sector": "半导体",
       "trend_strength": 80.0,
       "trend_strength_percentile": 20.0,
-      "trend_confirmation_score": 33.3,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 56.7,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -10338,8 +10193,8 @@
         }
       ],
       "continuation_probability_percentile": 100.0,
-      "opportunity_raw_score": 57.8,
-      "opportunity_score": 74.3,
+      "opportunity_raw_score": 55.5,
+      "opportunity_score": 75.2,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -10543,7 +10398,9 @@
       "sector": "资本市场",
       "trend_strength": 26.7,
       "trend_strength_percentile": 73.3,
-      "trend_confirmation_score": 28.3,
+      "daily_confirmation_score": 46.7,
+      "weekly_confirmation_score": 10.0,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -10572,8 +10429,8 @@
         }
       ],
       "continuation_probability_percentile": 8.6,
-      "opportunity_raw_score": 28.2,
-      "opportunity_score": 34.3,
+      "opportunity_raw_score": 26.4,
+      "opportunity_score": 32.4,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -10777,7 +10634,9 @@
       "sector": "多元化保险",
       "trend_strength": 75.2,
       "trend_strength_percentile": 24.8,
-      "trend_confirmation_score": 55.0,
+      "daily_confirmation_score": 36.7,
+      "weekly_confirmation_score": 73.3,
+      "trend_confirmation_score": 36.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -10806,7 +10665,7 @@
         }
       ],
       "continuation_probability_percentile": 52.4,
-      "opportunity_raw_score": 61.9,
+      "opportunity_raw_score": 60.1,
       "opportunity_score": 81.9,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -11011,7 +10870,9 @@
       "sector": "半导体",
       "trend_strength": 58.1,
       "trend_strength_percentile": 41.9,
-      "trend_confirmation_score": 28.3,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 56.7,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -11040,8 +10901,8 @@
         }
       ],
       "continuation_probability_percentile": 73.8,
-      "opportunity_raw_score": 43.1,
-      "opportunity_score": 50.5,
+      "opportunity_raw_score": 40.3,
+      "opportunity_score": 49.5,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -11244,7 +11105,9 @@
       "sector": "金融数据与证券交易所",
       "trend_strength": 28.6,
       "trend_strength_percentile": 71.4,
-      "trend_confirmation_score": 35.0,
+      "daily_confirmation_score": 36.7,
+      "weekly_confirmation_score": 33.3,
+      "trend_confirmation_score": 33.3,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -11273,8 +11136,8 @@
         }
       ],
       "continuation_probability_percentile": 19.0,
-      "opportunity_raw_score": 25.6,
-      "opportunity_score": 28.6,
+      "opportunity_raw_score": 25.4,
+      "opportunity_score": 30.5,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -11475,7 +11338,9 @@
       "sector": "互联网零售",
       "trend_strength": 30.5,
       "trend_strength_percentile": 69.5,
-      "trend_confirmation_score": 21.7,
+      "daily_confirmation_score": 43.3,
+      "weekly_confirmation_score": 0.0,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -11504,8 +11369,8 @@
         }
       ],
       "continuation_probability_percentile": 12.4,
-      "opportunity_raw_score": 27.0,
-      "opportunity_score": 31.4,
+      "opportunity_raw_score": 24.8,
+      "opportunity_score": 28.6,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -11709,7 +11574,9 @@
       "sector": "专业与通用药品制造商",
       "trend_strength": 64.8,
       "trend_strength_percentile": 35.2,
-      "trend_confirmation_score": 45.0,
+      "daily_confirmation_score": 26.7,
+      "weekly_confirmation_score": 63.3,
+      "trend_confirmation_score": 26.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -11738,7 +11605,7 @@
         }
       ],
       "continuation_probability_percentile": 90.0,
-      "opportunity_raw_score": 49.1,
+      "opportunity_raw_score": 47.3,
       "opportunity_score": 64.8,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -11940,7 +11807,9 @@
       "sector": "信贷",
       "trend_strength": 70.5,
       "trend_strength_percentile": 29.5,
-      "trend_confirmation_score": 50.0,
+      "daily_confirmation_score": 36.7,
+      "weekly_confirmation_score": 63.3,
+      "trend_confirmation_score": 36.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -11969,8 +11838,8 @@
         }
       ],
       "continuation_probability_percentile": 62.9,
-      "opportunity_raw_score": 55.8,
-      "opportunity_score": 71.4,
+      "opportunity_raw_score": 54.5,
+      "opportunity_score": 73.3,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -12174,7 +12043,9 @@
       "sector": "资本市场",
       "trend_strength": 11.4,
       "trend_strength_percentile": 88.6,
-      "trend_confirmation_score": 23.3,
+      "daily_confirmation_score": 26.7,
+      "weekly_confirmation_score": 20.0,
+      "trend_confirmation_score": 20.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -12203,8 +12074,8 @@
         }
       ],
       "continuation_probability_percentile": 2.9,
-      "opportunity_raw_score": 12.2,
-      "opportunity_score": 13.3,
+      "opportunity_raw_score": 11.9,
+      "opportunity_score": 14.3,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -12409,7 +12280,9 @@
       "sector": "一般药品制造商",
       "trend_strength": 95.2,
       "trend_strength_percentile": 4.8,
-      "trend_confirmation_score": 70.0,
+      "daily_confirmation_score": 56.7,
+      "weekly_confirmation_score": 83.3,
+      "trend_confirmation_score": 56.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -12438,8 +12311,8 @@
         }
       ],
       "continuation_probability_percentile": 37.6,
-      "opportunity_raw_score": 77.4,
-      "opportunity_score": 94.3,
+      "opportunity_raw_score": 76.0,
+      "opportunity_score": 95.2,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -12643,7 +12516,9 @@
       "sector": "半导体设备与材料",
       "trend_strength": 87.6,
       "trend_strength_percentile": 12.4,
-      "trend_confirmation_score": 51.7,
+      "daily_confirmation_score": 20.0,
+      "weekly_confirmation_score": 83.3,
+      "trend_confirmation_score": 20.0,
       "er_signal_score": 10.0,
       "trend_components": [
         {
@@ -12672,7 +12547,7 @@
         }
       ],
       "continuation_probability_percentile": 87.6,
-      "opportunity_raw_score": 66.1,
+      "opportunity_raw_score": 62.9,
       "opportunity_score": 86.7,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -12878,7 +12753,9 @@
       "sector": "健康信息服务",
       "trend_strength": 13.3,
       "trend_strength_percentile": 86.7,
-      "trend_confirmation_score": 23.3,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 36.7,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -12907,7 +12784,7 @@
         }
       ],
       "continuation_probability_percentile": 71.4,
-      "opportunity_raw_score": 11.0,
+      "opportunity_raw_score": 9.6,
       "opportunity_score": 9.5,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -13112,7 +12989,9 @@
       "sector": "科技仪器",
       "trend_strength": 38.1,
       "trend_strength_percentile": 61.9,
-      "trend_confirmation_score": 28.3,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 46.7,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -13141,7 +13020,7 @@
         }
       ],
       "continuation_probability_percentile": 81.0,
-      "opportunity_raw_score": 30.1,
+      "opportunity_raw_score": 28.3,
       "opportunity_score": 36.2,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -13346,7 +13225,9 @@
       "sector": "计算机硬件",
       "trend_strength": 72.4,
       "trend_strength_percentile": 27.6,
-      "trend_confirmation_score": 38.3,
+      "daily_confirmation_score": 20.0,
+      "weekly_confirmation_score": 56.7,
+      "trend_confirmation_score": 20.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -13375,7 +13256,7 @@
         }
       ],
       "continuation_probability_percentile": 94.3,
-      "opportunity_raw_score": 53.4,
+      "opportunity_raw_score": 51.6,
       "opportunity_score": 67.6,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -13577,6 +13458,8 @@
       "sector": "餐厅",
       "trend_strength": 9.5,
       "trend_strength_percentile": 90.5,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 0.0,
       "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
@@ -13607,7 +13490,7 @@
       ],
       "continuation_probability_percentile": 45.7,
       "opportunity_raw_score": 11.2,
-      "opportunity_score": 10.5,
+      "opportunity_score": 13.3,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -13811,7 +13694,9 @@
       "sector": "通讯设备",
       "trend_strength": 18.1,
       "trend_strength_percentile": 81.9,
-      "trend_confirmation_score": 5.0,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 10.0,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -13840,7 +13725,7 @@
         }
       ],
       "continuation_probability_percentile": 25.2,
-      "opportunity_raw_score": 14.8,
+      "opportunity_raw_score": 14.3,
       "opportunity_score": 16.2,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -14044,7 +13929,9 @@
       "sector": "汽车制造",
       "trend_strength": 10.5,
       "trend_strength_percentile": 89.5,
-      "trend_confirmation_score": 5.0,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 10.0,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -14073,8 +13960,8 @@
         }
       ],
       "continuation_probability_percentile": 10.5,
-      "opportunity_raw_score": 11.3,
-      "opportunity_score": 11.4,
+      "opportunity_raw_score": 10.8,
+      "opportunity_score": 12.4,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -14278,7 +14165,9 @@
       "sector": "应用软件",
       "trend_strength": 12.4,
       "trend_strength_percentile": 87.6,
-      "trend_confirmation_score": 13.3,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 26.7,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -14307,7 +14196,7 @@
         }
       ],
       "continuation_probability_percentile": 47.6,
-      "opportunity_raw_score": 10.9,
+      "opportunity_raw_score": 9.6,
       "opportunity_score": 8.6,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -14448,6 +14337,8 @@
       "sector": "应用软件",
       "trend_strength": 67.6,
       "trend_strength_percentile": 32.4,
+      "daily_confirmation_score": 46.7,
+      "weekly_confirmation_score": null,
       "trend_confirmation_score": null,
       "er_signal_score": 0.0,
       "trend_components": [
@@ -14478,7 +14369,7 @@
       ],
       "continuation_probability_percentile": 6.7,
       "opportunity_raw_score": 51.4,
-      "opportunity_score": 65.7,
+      "opportunity_score": 66.7,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -14681,7 +14572,9 @@
       "sector": "医疗计划",
       "trend_strength": 90.5,
       "trend_strength_percentile": 9.5,
-      "trend_confirmation_score": 70.0,
+      "daily_confirmation_score": 56.7,
+      "weekly_confirmation_score": 83.3,
+      "trend_confirmation_score": 56.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -14710,7 +14603,7 @@
         }
       ],
       "continuation_probability_percentile": 21.9,
-      "opportunity_raw_score": 71.3,
+      "opportunity_raw_score": 70.0,
       "opportunity_score": 91.4,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -14915,6 +14808,8 @@
       "sector": "医疗设备和用品",
       "trend_strength": 3.8,
       "trend_strength_percentile": 96.2,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 0.0,
       "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
@@ -15152,7 +15047,9 @@
       "sector": "应用软件",
       "trend_strength": 55.2,
       "trend_strength_percentile": 44.8,
-      "trend_confirmation_score": 51.7,
+      "daily_confirmation_score": 70.0,
+      "weekly_confirmation_score": 33.3,
+      "trend_confirmation_score": 33.3,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -15181,8 +15078,8 @@
         }
       ],
       "continuation_probability_percentile": 40.0,
-      "opportunity_raw_score": 48.6,
-      "opportunity_score": 63.8,
+      "opportunity_raw_score": 46.7,
+      "opportunity_score": 62.9,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -15383,7 +15280,9 @@
       "sector": "鞋类及配饰",
       "trend_strength": 15.2,
       "trend_strength_percentile": 84.8,
-      "trend_confirmation_score": 13.3,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 16.7,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -15412,8 +15311,8 @@
         }
       ],
       "continuation_probability_percentile": 34.3,
-      "opportunity_raw_score": 16.2,
-      "opportunity_score": 17.1,
+      "opportunity_raw_score": 15.9,
+      "opportunity_score": 18.1,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -15619,7 +15518,9 @@
       "sector": "油气勘探与开发",
       "trend_strength": 66.7,
       "trend_strength_percentile": 33.3,
-      "trend_confirmation_score": 60.0,
+      "daily_confirmation_score": 73.3,
+      "weekly_confirmation_score": 46.7,
+      "trend_confirmation_score": 46.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -15648,7 +15549,7 @@
         }
       ],
       "continuation_probability_percentile": 32.4,
-      "opportunity_raw_score": 54.4,
+      "opportunity_raw_score": 53.0,
       "opportunity_score": 70.5,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -15853,6 +15754,8 @@
       "sector": "独立电力生产商",
       "trend_strength": 2.9,
       "trend_strength_percentile": 97.1,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 0.0,
       "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
@@ -15883,7 +15786,7 @@
       ],
       "continuation_probability_percentile": 21.0,
       "opportunity_raw_score": 4.4,
-      "opportunity_score": 2.9,
+      "opportunity_score": 3.8,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -16088,7 +15991,9 @@
       "sector": "航空航天与国防",
       "trend_strength": 65.7,
       "trend_strength_percentile": 34.3,
-      "trend_confirmation_score": 70.0,
+      "daily_confirmation_score": 100.0,
+      "weekly_confirmation_score": 40.0,
+      "trend_confirmation_score": 40.0,
       "er_signal_score": 56.0,
       "trend_components": [
         {
@@ -16117,8 +16022,8 @@
         }
       ],
       "continuation_probability_percentile": 37.6,
-      "opportunity_raw_score": 62.6,
-      "opportunity_score": 82.9,
+      "opportunity_raw_score": 59.6,
+      "opportunity_score": 81.0,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -16321,7 +16226,9 @@
       "sector": "汽车制造",
       "trend_strength": 19.0,
       "trend_strength_percentile": 81.0,
-      "trend_confirmation_score": 13.3,
+      "daily_confirmation_score": 26.7,
+      "weekly_confirmation_score": 0.0,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -16350,8 +16257,8 @@
         }
       ],
       "continuation_probability_percentile": 15.7,
-      "opportunity_raw_score": 17.7,
-      "opportunity_score": 21.9,
+      "opportunity_raw_score": 16.4,
+      "opportunity_score": 20.0,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -16555,7 +16462,9 @@
       "sector": "半导体",
       "trend_strength": 82.9,
       "trend_strength_percentile": 17.1,
-      "trend_confirmation_score": 46.7,
+      "daily_confirmation_score": 26.7,
+      "weekly_confirmation_score": 66.7,
+      "trend_confirmation_score": 26.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -16584,7 +16493,7 @@
         }
       ],
       "continuation_probability_percentile": 90.0,
-      "opportunity_raw_score": 61.1,
+      "opportunity_raw_score": 59.1,
       "opportunity_score": 80.0,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -16789,7 +16698,9 @@
       "sector": "计算机硬件",
       "trend_strength": 79.0,
       "trend_strength_percentile": 21.0,
-      "trend_confirmation_score": 46.7,
+      "daily_confirmation_score": 36.7,
+      "weekly_confirmation_score": 56.7,
+      "trend_confirmation_score": 36.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -16818,8 +16729,8 @@
         }
       ],
       "continuation_probability_percentile": 88.6,
-      "opportunity_raw_score": 58.5,
-      "opportunity_score": 76.2,
+      "opportunity_raw_score": 57.5,
+      "opportunity_score": 78.1,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -17022,7 +16933,9 @@
       "sector": "信贷",
       "trend_strength": 33.3,
       "trend_strength_percentile": 66.7,
-      "trend_confirmation_score": 23.3,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 36.7,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -17051,8 +16964,8 @@
         }
       ],
       "continuation_probability_percentile": 27.6,
-      "opportunity_raw_score": 28.0,
-      "opportunity_score": 32.4,
+      "opportunity_raw_score": 26.6,
+      "opportunity_score": 34.3,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -17255,7 +17168,9 @@
       "sector": "一般药品制造商",
       "trend_strength": 88.6,
       "trend_strength_percentile": 11.4,
-      "trend_confirmation_score": 55.0,
+      "daily_confirmation_score": 46.7,
+      "weekly_confirmation_score": 63.3,
+      "trend_confirmation_score": 46.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -17284,7 +17199,7 @@
         }
       ],
       "continuation_probability_percentile": 77.1,
-      "opportunity_raw_score": 68.6,
+      "opportunity_raw_score": 67.8,
       "opportunity_score": 87.6,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -17489,7 +17404,9 @@
       "sector": "专用工业机械",
       "trend_strength": 53.3,
       "trend_strength_percentile": 46.7,
-      "trend_confirmation_score": 38.3,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 66.7,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -17518,8 +17435,8 @@
         }
       ],
       "continuation_probability_percentile": 64.8,
-      "opportunity_raw_score": 41.0,
-      "opportunity_score": 49.5,
+      "opportunity_raw_score": 38.1,
+      "opportunity_score": 48.6,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -17722,7 +17639,9 @@
       "sector": "半导体设备与材料",
       "trend_strength": 83.8,
       "trend_strength_percentile": 16.2,
-      "trend_confirmation_score": 56.7,
+      "daily_confirmation_score": 46.7,
+      "weekly_confirmation_score": 66.7,
+      "trend_confirmation_score": 46.7,
       "er_signal_score": 32.0,
       "trend_components": [
         {
@@ -17751,8 +17670,8 @@
         }
       ],
       "continuation_probability_percentile": 53.3,
-      "opportunity_raw_score": 68.9,
-      "opportunity_score": 88.6,
+      "opportunity_raw_score": 67.9,
+      "opportunity_score": 89.5,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -17956,7 +17875,9 @@
       "sector": "半导体",
       "trend_strength": 69.5,
       "trend_strength_percentile": 30.5,
-      "trend_confirmation_score": 46.7,
+      "daily_confirmation_score": 20.0,
+      "weekly_confirmation_score": 73.3,
+      "trend_confirmation_score": 20.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -17985,8 +17906,8 @@
         }
       ],
       "continuation_probability_percentile": 85.7,
-      "opportunity_raw_score": 52.3,
-      "opportunity_score": 66.7,
+      "opportunity_raw_score": 49.7,
+      "opportunity_score": 65.7,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -18187,7 +18108,9 @@
       "sector": "应用软件",
       "trend_strength": 35.2,
       "trend_strength_percentile": 64.8,
-      "trend_confirmation_score": 21.7,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 33.3,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -18216,8 +18139,8 @@
         }
       ],
       "continuation_probability_percentile": 14.3,
-      "opportunity_raw_score": 30.1,
-      "opportunity_score": 35.2,
+      "opportunity_raw_score": 28.9,
+      "opportunity_score": 38.1,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -18421,7 +18344,9 @@
       "sector": "电气设备及零件",
       "trend_strength": 48.6,
       "trend_strength_percentile": 51.4,
-      "trend_confirmation_score": 23.3,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 46.7,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -18450,8 +18375,8 @@
         }
       ],
       "continuation_probability_percentile": 43.8,
-      "opportunity_raw_score": 36.4,
-      "opportunity_score": 45.7,
+      "opportunity_raw_score": 34.1,
+      "opportunity_score": 43.8,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -18655,7 +18580,9 @@
       "sector": "半导体设备与材料",
       "trend_strength": 63.8,
       "trend_strength_percentile": 36.2,
-      "trend_confirmation_score": 38.3,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 66.7,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -18684,8 +18611,8 @@
         }
       ],
       "continuation_probability_percentile": 91.4,
-      "opportunity_raw_score": 47.8,
-      "opportunity_score": 61.0,
+      "opportunity_raw_score": 45.0,
+      "opportunity_score": 59.0,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -18893,7 +18820,9 @@
       "sector": "应用软件",
       "trend_strength": 41.0,
       "trend_strength_percentile": 59.0,
-      "trend_confirmation_score": 38.3,
+      "daily_confirmation_score": 43.3,
+      "weekly_confirmation_score": 33.3,
+      "trend_confirmation_score": 33.3,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -18922,7 +18851,7 @@
         }
       ],
       "continuation_probability_percentile": 35.2,
-      "opportunity_raw_score": 36.5,
+      "opportunity_raw_score": 36.0,
       "opportunity_score": 46.7,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -19127,7 +19056,9 @@
       "sector": "半导体",
       "trend_strength": 78.1,
       "trend_strength_percentile": 21.9,
-      "trend_confirmation_score": 46.7,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 83.3,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -19156,8 +19087,8 @@
         }
       ],
       "continuation_probability_percentile": 93.3,
-      "opportunity_raw_score": 57.9,
-      "opportunity_score": 75.2,
+      "opportunity_raw_score": 54.3,
+      "opportunity_score": 72.4,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -19362,6 +19293,8 @@
       "sector": "其他工业金属与采矿",
       "trend_strength": 1.9,
       "trend_strength_percentile": 98.1,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 0.0,
       "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
@@ -19393,6 +19326,243 @@
       "continuation_probability_percentile": 54.3,
       "opportunity_raw_score": 1.2,
       "opportunity_score": 1.0,
+      "opportunity_weights": {
+        "trend_core": 0.65,
+        "trend_confirmation": 0.1,
+        "er_signal": 0.15,
+        "entry_quality": 0.1,
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
+      },
+      "trend_candidate": false
+    },
+    {
+      "code": "US.JNJ",
+      "ticker": "JNJ",
+      "name": "强生",
+      "heat": 1.4854,
+      "last_qualified_heat": 1.4854,
+      "market_cap": 634767290449.8,
+      "last_qualified_market_cap": 634767290449.8,
+      "active": true,
+      "trading_days_since_hit": 0,
+      "last_hit_date": "2026-07-24",
+      "heat_history": [
+        {
+          "date": "2026-07-24",
+          "heat": 1.4854
+        }
+      ],
+      "daily": {
+        "ma_score": 4,
+        "ma_facts": [
+          true,
+          false,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 4.077318317474209,
+        "dea": 4.41397497094619,
+        "hist": -0.33665665347198104,
+        "rsi": 62.71692344799372,
+        "volume_ratio": 0.7345069816500889,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 263.4,
+        "previous_close": 259.27,
+        "ma5": 255.546,
+        "ma10": 253.93800000000002,
+        "ma20": 256.47950000000003,
+        "ma60": 238.69049396026668,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "daily_confirmed": {
+        "ma_score": 4,
+        "ma_facts": [
+          true,
+          false,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 4.077318317474209,
+        "dea": 4.41397497094619,
+        "hist": -0.33665665347198104,
+        "rsi": 62.71692344799372,
+        "volume_ratio": 0.7345069816500889,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 263.4,
+        "previous_close": 259.27,
+        "ma5": 255.546,
+        "ma10": 253.93800000000002,
+        "ma20": 256.47950000000003,
+        "ma60": 238.69049396026668,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "daily_is_partial": false,
+      "weekly": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 3,
+        "macd_facts": [
+          true,
+          true,
+          true
+        ],
+        "dif": 11.231804753676698,
+        "dea": 9.621436030277337,
+        "hist": 1.610368723399361,
+        "rsi": 65.1657653163357,
+        "volume_ratio": 0.9343139438668904,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 263.4,
+        "previous_close": 253.04,
+        "ma5": 258.224,
+        "ma10": 245.1479999824,
+        "ma20": 238.69318996905,
+        "ma60": 206.01771935588334,
+        "ma_label": "强多头结构",
+        "macd_label": "强多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "weekly_confirmed": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 3,
+        "macd_facts": [
+          true,
+          true,
+          true
+        ],
+        "dif": 11.231804753676698,
+        "dea": 9.621436030277337,
+        "hist": 1.610368723399361,
+        "rsi": 65.1657653163357,
+        "volume_ratio": 0.9343139438668904,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 263.4,
+        "previous_close": 253.04,
+        "ma5": 258.224,
+        "ma10": 245.1479999824,
+        "ma20": 238.69318996905,
+        "ma60": 206.01771935588334,
+        "ma_label": "强多头结构",
+        "macd_label": "强多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "weekly_is_partial": false,
+      "entry": {
+        "label": "回踩转强",
+        "close_distance_ma20_pct": 0.02698266333176713,
+        "close_distance_ma60_pct": 0.1035211148536419,
+        "distance_ma20_atr": 1.1612016154134324,
+        "distance_ma60_atr": 4.146047009523371,
+        "distance_20d_high_pct": -0.022380581227035012,
+        "distance_52w_high_pct": -0.022380581227035012,
+        "gap_pct": 0.008331083426543762,
+        "breakout_recent": false,
+        "breakout_days_since": 13,
+        "pullback_ma10_reclaim": true,
+        "pullback_ma20_reclaim": true,
+        "atr_pct": 0.0226263276086891,
+        "intraday_range_pct": 0.015813630578161632,
+        "max_drawdown_20d_pct": -0.07566232599910194,
+        "quality_grade": "A",
+        "quality_score": 85.0,
+        "quality_label": "触发明确",
+        "positive_reasons": [
+          "回踩 MA10/MA20 后重新转强",
+          "收盘位于 MA20 上方 0–1.5 ATR",
+          "RSI 位于健康强势区"
+        ],
+        "risk_reasons": []
+      },
+      "er_rank": null,
+      "er_hits_last5": 0,
+      "er_streak": 0,
+      "er_price_momentum_aligned": null,
+      "price_momentum": {
+        "returns": {
+          "4w": 0.0343202701641403,
+          "12w": 0.16604970649399386,
+          "36w": 0.3679073584529602
+        },
+        "mean": 0.18942577837036478,
+        "positive": true
+      },
+      "continuation_probability": 0.4345,
+      "sector": "一般药品制造商",
+      "trend_strength": 94.3,
+      "trend_strength_percentile": 5.7,
+      "daily_confirmation_score": 56.7,
+      "weekly_confirmation_score": 100.0,
+      "trend_confirmation_score": 56.7,
+      "er_signal_score": 0.0,
+      "trend_components": [
+        {
+          "name": "多周期波动调整动量",
+          "percentile": 91.5,
+          "weight": 40,
+          "contribution": 36.6
+        },
+        {
+          "name": "MA20/MA60斜率",
+          "percentile": 80.4,
+          "weight": 25,
+          "contribution": 20.1
+        },
+        {
+          "name": "趋势平滑度",
+          "percentile": 84.6,
+          "weight": 20,
+          "contribution": 16.9
+        },
+        {
+          "name": "相对SPY/行业强度",
+          "percentile": 62.7,
+          "weight": 15,
+          "contribution": 9.4
+        }
+      ],
+      "continuation_probability_percentile": 80.0,
+      "opportunity_raw_score": 75.5,
+      "opportunity_score": 93.3,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -19598,7 +19768,9 @@
       "sector": "互联网零售",
       "trend_strength": 68.6,
       "trend_strength_percentile": 31.4,
-      "trend_confirmation_score": 63.3,
+      "daily_confirmation_score": 73.3,
+      "weekly_confirmation_score": 53.3,
+      "trend_confirmation_score": 53.3,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -19627,8 +19799,8 @@
         }
       ],
       "continuation_probability_percentile": 9.5,
-      "opportunity_raw_score": 55.9,
-      "opportunity_score": 72.4,
+      "opportunity_raw_score": 54.9,
+      "opportunity_score": 74.3,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -19833,7 +20005,9 @@
       "sector": "应用软件",
       "trend_strength": 96.2,
       "trend_strength_percentile": 3.8,
-      "trend_confirmation_score": 65.0,
+      "daily_confirmation_score": 56.7,
+      "weekly_confirmation_score": 73.3,
+      "trend_confirmation_score": 56.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -19862,8 +20036,8 @@
         }
       ],
       "continuation_probability_percentile": 11.4,
-      "opportunity_raw_score": 77.5,
-      "opportunity_score": 95.2,
+      "opportunity_raw_score": 76.7,
+      "opportunity_score": 96.2,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -20066,7 +20240,9 @@
       "sector": "信贷",
       "trend_strength": 76.2,
       "trend_strength_percentile": 23.8,
-      "trend_confirmation_score": 68.3,
+      "daily_confirmation_score": 83.3,
+      "weekly_confirmation_score": 53.3,
+      "trend_confirmation_score": 53.3,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -20095,7 +20271,7 @@
         }
       ],
       "continuation_probability_percentile": 41.4,
-      "opportunity_raw_score": 58.9,
+      "opportunity_raw_score": 57.4,
       "opportunity_score": 77.1,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -20300,7 +20476,9 @@
       "sector": "独立电力生产商",
       "trend_strength": 46.7,
       "trend_strength_percentile": 53.3,
-      "trend_confirmation_score": 73.3,
+      "daily_confirmation_score": 83.3,
+      "weekly_confirmation_score": 63.3,
+      "trend_confirmation_score": 63.3,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -20329,8 +20507,8 @@
         }
       ],
       "continuation_probability_percentile": 23.8,
-      "opportunity_raw_score": 44.2,
-      "opportunity_score": 54.3,
+      "opportunity_raw_score": 43.2,
+      "opportunity_score": 55.2,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -20533,7 +20711,9 @@
       "sector": "软件基础设施",
       "trend_strength": 98.1,
       "trend_strength_percentile": 1.9,
-      "trend_confirmation_score": 65.0,
+      "daily_confirmation_score": 46.7,
+      "weekly_confirmation_score": 83.3,
+      "trend_confirmation_score": 46.7,
       "er_signal_score": 10.0,
       "trend_components": [
         {
@@ -20562,7 +20742,7 @@
         }
       ],
       "continuation_probability_percentile": 7.6,
-      "opportunity_raw_score": 75.8,
+      "opportunity_raw_score": 73.9,
       "opportunity_score": 92.4,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -20769,7 +20949,9 @@
       "sector": "电信服务",
       "trend_strength": 57.1,
       "trend_strength_percentile": 42.9,
-      "trend_confirmation_score": 60.0,
+      "daily_confirmation_score": 73.3,
+      "weekly_confirmation_score": 46.7,
+      "trend_confirmation_score": 46.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -20798,8 +20980,8 @@
         }
       ],
       "continuation_probability_percentile": 61.0,
-      "opportunity_raw_score": 48.1,
-      "opportunity_score": 62.9,
+      "opportunity_raw_score": 46.8,
+      "opportunity_score": 63.8,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -21000,7 +21182,9 @@
       "sector": "折扣店",
       "trend_strength": 17.1,
       "trend_strength_percentile": 82.9,
-      "trend_confirmation_score": 5.0,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 10.0,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -21029,7 +21213,7 @@
         }
       ],
       "continuation_probability_percentile": 48.6,
-      "opportunity_raw_score": 16.6,
+      "opportunity_raw_score": 16.1,
       "opportunity_score": 19.0,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -21234,7 +21418,9 @@
       "sector": "信息技术服务",
       "trend_strength": 8.6,
       "trend_strength_percentile": 91.4,
-      "trend_confirmation_score": 36.7,
+      "daily_confirmation_score": 26.7,
+      "weekly_confirmation_score": 46.7,
+      "trend_confirmation_score": 26.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -21263,8 +21449,8 @@
         }
       ],
       "continuation_probability_percentile": 41.4,
-      "opportunity_raw_score": 11.8,
-      "opportunity_score": 12.4,
+      "opportunity_raw_score": 10.8,
+      "opportunity_score": 11.4,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -21465,7 +21651,9 @@
       "sector": "汽车制造",
       "trend_strength": 6.7,
       "trend_strength_percentile": 93.3,
-      "trend_confirmation_score": 13.3,
+      "daily_confirmation_score": 26.7,
+      "weekly_confirmation_score": 0.0,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -21494,7 +21682,7 @@
         }
       ],
       "continuation_probability_percentile": 1.0,
-      "opportunity_raw_score": 10.7,
+      "opportunity_raw_score": 9.4,
       "opportunity_score": 7.6,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -21700,7 +21888,9 @@
       "sector": "广告代理",
       "trend_strength": 21.9,
       "trend_strength_percentile": 78.1,
-      "trend_confirmation_score": 5.0,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 10.0,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -21729,7 +21919,7 @@
         }
       ],
       "continuation_probability_percentile": 61.9,
-      "opportunity_raw_score": 14.7,
+      "opportunity_raw_score": 14.2,
       "opportunity_score": 15.2,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -21934,7 +22124,9 @@
       "sector": "航空服务",
       "trend_strength": 77.1,
       "trend_strength_percentile": 22.9,
-      "trend_confirmation_score": 46.7,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 83.3,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -21963,8 +22155,8 @@
         }
       ],
       "continuation_probability_percentile": 76.2,
-      "opportunity_raw_score": 56.3,
-      "opportunity_score": 73.3,
+      "opportunity_raw_score": 52.6,
+      "opportunity_score": 69.5,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -22165,7 +22357,9 @@
       "sector": "通讯设备",
       "trend_strength": 85.7,
       "trend_strength_percentile": 14.3,
-      "trend_confirmation_score": 38.3,
+      "daily_confirmation_score": 20.0,
+      "weekly_confirmation_score": 56.7,
+      "trend_confirmation_score": 20.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -22194,8 +22388,8 @@
         }
       ],
       "continuation_probability_percentile": 5.7,
-      "opportunity_raw_score": 64.5,
-      "opportunity_score": 83.8,
+      "opportunity_raw_score": 62.7,
+      "opportunity_score": 85.7,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -22398,7 +22592,9 @@
       "sector": "互联网内容与信息",
       "trend_strength": 34.3,
       "trend_strength_percentile": 65.7,
-      "trend_confirmation_score": 5.0,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 10.0,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -22427,8 +22623,8 @@
         }
       ],
       "continuation_probability_percentile": 25.2,
-      "opportunity_raw_score": 26.8,
-      "opportunity_score": 30.5,
+      "opportunity_raw_score": 26.3,
+      "opportunity_score": 31.4,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -22632,7 +22828,9 @@
       "sector": "半导体设备与材料",
       "trend_strength": 61.9,
       "trend_strength_percentile": 38.1,
-      "trend_confirmation_score": 38.3,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 66.7,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 10.0,
       "trend_components": [
         {
@@ -22661,8 +22859,8 @@
         }
       ],
       "continuation_probability_percentile": 95.2,
-      "opportunity_raw_score": 48.1,
-      "opportunity_score": 61.9,
+      "opportunity_raw_score": 45.2,
+      "opportunity_score": 61.0,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -22867,7 +23065,9 @@
       "sector": "半导体",
       "trend_strength": 84.8,
       "trend_strength_percentile": 15.2,
-      "trend_confirmation_score": 46.7,
+      "daily_confirmation_score": 10.0,
+      "weekly_confirmation_score": 83.3,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -22896,8 +23096,8 @@
         }
       ],
       "continuation_probability_percentile": 69.5,
-      "opportunity_raw_score": 59.8,
-      "opportunity_score": 78.1,
+      "opportunity_raw_score": 56.1,
+      "opportunity_score": 76.2,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -23100,7 +23300,9 @@
       "sector": "半导体",
       "trend_strength": 59.0,
       "trend_strength_percentile": 41.0,
-      "trend_confirmation_score": 28.3,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 56.7,
+      "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -23129,8 +23331,8 @@
         }
       ],
       "continuation_probability_percentile": 73.8,
-      "opportunity_raw_score": 45.2,
-      "opportunity_score": 57.1,
+      "opportunity_raw_score": 42.4,
+      "opportunity_score": 51.4,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -23334,6 +23536,8 @@
       "sector": "生物技术",
       "trend_strength": 25.7,
       "trend_strength_percentile": 74.3,
+      "daily_confirmation_score": 0.0,
+      "weekly_confirmation_score": 0.0,
       "trend_confirmation_score": 0.0,
       "er_signal_score": 0.0,
       "trend_components": [
@@ -23364,7 +23568,7 @@
       ],
       "continuation_probability_percentile": 63.8,
       "opportunity_raw_score": 19.2,
-      "opportunity_score": 23.8,
+      "opportunity_score": 25.7,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -23567,7 +23771,9 @@
       "sector": "资本市场",
       "trend_strength": 89.5,
       "trend_strength_percentile": 10.5,
-      "trend_confirmation_score": 70.0,
+      "daily_confirmation_score": 56.7,
+      "weekly_confirmation_score": 83.3,
+      "trend_confirmation_score": 56.7,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -23596,7 +23802,7 @@
         }
       ],
       "continuation_probability_percentile": 18.1,
-      "opportunity_raw_score": 71.2,
+      "opportunity_raw_score": 69.8,
       "opportunity_score": 90.5,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -23801,7 +24007,9 @@
       "sector": "金融数据与证券交易所",
       "trend_strength": 71.4,
       "trend_strength_percentile": 28.6,
-      "trend_confirmation_score": 76.7,
+      "daily_confirmation_score": 73.3,
+      "weekly_confirmation_score": 80.0,
+      "trend_confirmation_score": 73.3,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -23830,8 +24038,8 @@
         }
       ],
       "continuation_probability_percentile": 72.4,
-      "opportunity_raw_score": 61.6,
-      "opportunity_score": 81.0,
+      "opportunity_raw_score": 61.2,
+      "opportunity_score": 82.9,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -24035,7 +24243,9 @@
       "sector": "折扣店",
       "trend_strength": 36.2,
       "trend_strength_percentile": 63.8,
-      "trend_confirmation_score": 31.7,
+      "daily_confirmation_score": 53.3,
+      "weekly_confirmation_score": 10.0,
+      "trend_confirmation_score": 10.0,
       "er_signal_score": 0.0,
       "trend_components": [
         {
@@ -24064,8 +24274,8 @@
         }
       ],
       "continuation_probability_percentile": 33.3,
-      "opportunity_raw_score": 34.7,
-      "opportunity_score": 41.9,
+      "opportunity_raw_score": 32.5,
+      "opportunity_score": 42.9,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
