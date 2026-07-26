@@ -1,7 +1,7 @@
 {
   "schema_version": 9,
   "title": "热门资产跟踪+趋势资产判断",
-  "generated_at": "2026-07-26T10:24:26+08:00",
+  "generated_at": "2026-07-26T11:18:01+08:00",
   "heat_as_of": "2026-07-24",
   "er_signal_date": "2026-07-24",
   "opend_last_refresh": "2026-07-25T20:34:35+08:00",
@@ -26,9 +26,9 @@
     "trend_strength": "不含当前确认、ER和入场质量的趋势主体横截面排名",
     "trend_confirmation": "日线和周线各由MA与MACD等权合成，再取两者较低分，防止较强周期掩盖较弱周期",
     "trend_confirmation_minimum": 70.0,
-    "opportunity_score": "趋势主体、当前确认、ER与入场质量在当前双门槛达标标的中的综合排名；历史延续仅在样本外AUC>0.55后启用",
+    "opportunity_score": "趋势评分：趋势主体、当前确认、ER与入场质量在当前双门槛达标标的中的综合排名；历史延续仅在样本外AUC>0.55后启用",
     "opportunity_candidate_threshold": 95.0,
-    "trend_candidate_rule": "当前双门槛达标、趋势机会分≥95、当前确认≥70、入场质量A/B",
+    "trend_candidate_rule": "当前双门槛达标、趋势评分≥95、当前确认≥70、入场质量A/B",
     "opportunity_weights": {
       "trend_core": 0.65,
       "trend_confirmation": 0.1,
