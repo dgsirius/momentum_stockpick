@@ -1,9 +1,9 @@
 {
   "schema_version": 15,
   "title": "自选股双引擎雷达",
-  "generated_at": "2026-08-06T19:41:02+08:00",
+  "generated_at": "2026-08-07T09:20:38+08:00",
   "heat_as_of": "2026-07-31",
-  "er_signal_date": "2026-08-05",
+  "er_signal_date": "2026-08-06",
   "opend_last_refresh": "2026-08-01T11:58:54+08:00",
   "refresh_error": "ValueError: signal only works in main thread of the main interpreter",
   "definitions": {
@@ -179,7 +179,7 @@
     "left_arming": 24,
     "left_watch": 15,
     "left_breakdown": 47,
-    "gap_active": 37,
+    "gap_active": 38,
     "right_gap_confirmed": 3,
     "left_gap_context": 3,
     "risk_watch": 80,
@@ -355,9 +355,9 @@
           "近 20 日最大回撤超过 10%"
         ]
       },
-      "er_rank": 7,
-      "er_hits_last5": 2,
-      "er_streak": 2,
+      "er_rank": 5,
+      "er_hits_last5": 3,
+      "er_streak": 3,
       "er_history_available": true,
       "er_price_momentum_aligned": true,
       "price_momentum": {
@@ -376,7 +376,7 @@
       "daily_confirmation_score": 100.0,
       "weekly_confirmation_score": 100.0,
       "trend_confirmation_score": 100.0,
-      "er_signal_score": 49.0,
+      "er_signal_score": 66.0,
       "trend_components": [
         {
           "name": "多周期波动调整动量",
@@ -408,7 +408,7 @@
         }
       ],
       "continuation_probability_percentile": 62.1,
-      "opportunity_raw_score": 84.9,
+      "opportunity_raw_score": 87.5,
       "opportunity_score": 100.0,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -434,10 +434,16 @@
       "data_source": "OpenD",
       "er_sources": [
         {
+          "board": "第1看板",
+          "name": "100B 日调仓",
+          "slug": "er_3_8_20_100b_daily",
+          "rank": 9
+        },
+        {
           "board": "第4看板",
           "name": "Top5 双周 Top50 Buffer",
           "slug": "er_3_8_20_100b_top5_biweekly_top50",
-          "rank": 7
+          "rank": 5
         }
       ],
       "left_edge": {
@@ -480,7 +486,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 83.0,
+        "rank": 80.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -492,10 +498,10 @@
         "last_gap_atr": 0.5048,
         "sequence_start_time": "2026-07-29",
         "last_opposite_gap_time": "2026-06-23",
-        "ema5": 165.8515,
-        "ema20": 159.1574,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 1280625409.2,
+        "ema5": 167.4376,
+        "ema20": 160.2481,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 1270211939.75,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -506,7 +512,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "缺口确认",
         "detail": "右侧加强层",
         "priority": 4,
@@ -1496,7 +1502,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 16:24:33",
+        "source_updated_at": "2026-08-06 21:18:41",
         "label": "缺口确认",
         "detail": "右侧加强层",
         "priority": 4,
@@ -1852,7 +1858,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 16:24:33",
+        "source_updated_at": "2026-08-06 21:18:41",
         "label": "缺口确认",
         "detail": "右侧加强层",
         "priority": 4,
@@ -2698,7 +2704,7 @@
       },
       "er_rank": 1,
       "er_hits_last5": 5,
-      "er_streak": 6,
+      "er_streak": 7,
       "er_history_available": true,
       "er_price_momentum_aligned": true,
       "price_momentum": {
@@ -2784,13 +2790,13 @@
           "board": "第4看板",
           "name": "Top5 双周 Top50 Buffer",
           "slug": "er_3_8_20_100b_top5_biweekly_top50",
-          "rank": 2
+          "rank": 1
         },
         {
           "board": "第5看板",
           "name": "Top5 周换仓",
           "slug": "er_3_8_20_100b_top5_weekly",
-          "rank": 2
+          "rank": 1
         }
       ],
       "left_edge": {
@@ -2844,10 +2850,10 @@
         "last_gap_atr": 0.5101,
         "sequence_start_time": "2026-07-30",
         "last_opposite_gap_time": "2026-07-08",
-        "ema5": 471.207,
-        "ema20": 424.8032,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 21586530543.3,
+        "ema5": 480.758,
+        "ema20": 431.9515,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 22181953206.96,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -2864,7 +2870,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -3537,7 +3543,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 16:24:33",
+        "source_updated_at": "2026-08-06 21:18:41",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -4790,10 +4796,10 @@
         "last_gap_atr": 2.3482,
         "sequence_start_time": "2026-07-30",
         "last_opposite_gap_time": null,
-        "ema5": 313.9887,
-        "ema20": 318.8983,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 20644156701.6,
+        "ema5": 313.4624,
+        "ema20": 318.2804,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 20751933780.86,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -4810,7 +4816,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -5777,7 +5783,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 14.0,
+        "rank": 12.0,
         "count_10d": 2,
         "count_50d": 2,
         "strong_count_10d": 1,
@@ -5789,10 +5795,10 @@
         "last_gap_atr": 0.2632,
         "sequence_start_time": "2026-08-04",
         "last_opposite_gap_time": "2026-06-24",
-        "ema5": 65.9756,
-        "ema20": 63.2572,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 919011639.2,
+        "ema5": 66.7104,
+        "ema20": 63.726,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 878267480.86,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -5809,7 +5815,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -7103,10 +7109,10 @@
         "last_gap_atr": 0.2272,
         "sequence_start_time": "2026-07-27",
         "last_opposite_gap_time": null,
-        "ema5": 98.2948,
-        "ema20": 93.227,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 314547118.1,
+        "ema5": 99.2965,
+        "ema20": 93.9958,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 309309947.53,
         "fresh": true,
         "strong_fresh": false,
         "events": [
@@ -7123,7 +7129,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -8112,7 +8118,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 16:24:33",
+        "source_updated_at": "2026-08-06 21:18:41",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -8323,9 +8329,9 @@
           "距 MA20 超过 2.5 ATR，位置延伸"
         ]
       },
-      "er_rank": 1,
-      "er_hits_last5": 2,
-      "er_streak": 2,
+      "er_rank": 2,
+      "er_hits_last5": 3,
+      "er_streak": 3,
       "er_history_available": true,
       "er_price_momentum_aligned": true,
       "price_momentum": {
@@ -8344,7 +8350,7 @@
       "daily_confirmation_score": 90.0,
       "weekly_confirmation_score": 63.3,
       "trend_confirmation_score": 63.3,
-      "er_signal_score": 85.0,
+      "er_signal_score": 84.0,
       "trend_components": [
         {
           "name": "多周期波动调整动量",
@@ -8376,7 +8382,7 @@
         }
       ],
       "continuation_probability_percentile": 64.3,
-      "opportunity_raw_score": 69.7,
+      "opportunity_raw_score": 69.6,
       "opportunity_score": 89.8,
       "opportunity_weights": {
         "trend_core": 0.65,
@@ -8411,13 +8417,13 @@
           "board": "第4看板",
           "name": "Top5 双周 Top50 Buffer",
           "slug": "er_3_8_20_100b_top5_biweekly_top50",
-          "rank": 1
+          "rank": 2
         },
         {
           "board": "第5看板",
           "name": "Top5 周换仓",
           "slug": "er_3_8_20_100b_top5_weekly",
-          "rank": 1
+          "rank": 2
         }
       ],
       "left_edge": {
@@ -8460,7 +8466,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 30.0,
+        "rank": 31.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -8472,10 +8478,10 @@
         "last_gap_atr": 2.5915,
         "sequence_start_time": "2026-08-04",
         "last_opposite_gap_time": null,
-        "ema5": 144.2829,
-        "ema20": 132.9036,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 7458404810.2,
+        "ema5": 148.162,
+        "ema20": 135.0956,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 7716542247.49,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -8486,7 +8492,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -8513,6 +8519,374 @@
         "close_down": true,
         "volume_ratio": 0.9441296649441864,
         "down_volume_share_5d": 0.24492269716304998,
+        "as_of": "2026-08-05",
+        "score_5d_date": "2026-07-29",
+        "score_10d_date": "2026-07-22",
+        "level": "normal",
+        "label": "正常",
+        "severity": 0,
+        "slope_alert": false,
+        "true_divergence": false,
+        "cross_sectional_rollover": false,
+        "volume_price_confirmation": false,
+        "reasons": [
+          "未形成顺序触发"
+        ]
+      }
+    },
+    {
+      "code": "US.NVDA",
+      "ticker": "NVDA",
+      "name": "英伟达",
+      "market_cap": 4858150000000.0,
+      "last_qualified_market_cap": 4858150000000.0,
+      "active": true,
+      "daily": {
+        "ma_score": 3,
+        "ma_facts": [
+          true,
+          false,
+          false,
+          true,
+          true
+        ],
+        "macd_score": 3,
+        "macd_facts": [
+          true,
+          true,
+          true
+        ],
+        "dif": 0.9015985267900248,
+        "dea": -0.5613458553088345,
+        "hist": 1.4629443820988595,
+        "rsi": 61.595338856915,
+        "volume_ratio": 1.1635281904950006,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 219.22,
+        "previous_close": 211.94,
+        "ma5": 206.718,
+        "ma10": 203.272,
+        "ma20": 205.3565,
+        "ma60": 208.60516666434998,
+        "ma_label": "偏多",
+        "macd_label": "强多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "正常"
+      },
+      "daily_confirmed": {
+        "ma_score": 3,
+        "ma_facts": [
+          true,
+          false,
+          false,
+          true,
+          true
+        ],
+        "macd_score": 3,
+        "macd_facts": [
+          true,
+          true,
+          true
+        ],
+        "dif": 0.9015985267900248,
+        "dea": -0.5613458553088345,
+        "hist": 1.4629443820988595,
+        "rsi": 61.595338856915,
+        "volume_ratio": 1.1635281904950006,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 219.22,
+        "previous_close": 211.94,
+        "ma5": 206.718,
+        "ma10": 203.272,
+        "ma20": 205.3565,
+        "ma60": 208.60516666434998,
+        "ma_label": "偏多",
+        "macd_label": "强多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "正常"
+      },
+      "daily_is_partial": false,
+      "weekly": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 6.017515281643682,
+        "dea": 6.252734353815857,
+        "hist": -0.23521907217217475,
+        "rsi": 59.346060611020256,
+        "volume_ratio": null,
+        "volume_basis": "same_time",
+        "close_up": true,
+        "close": 219.22,
+        "previous_close": 200.75,
+        "ma5": 208.11600000000004,
+        "ma10": 204.892,
+        "ma20": 202.72403500000001,
+        "ma60": 187.08185667226664,
+        "ma_label": "强多头结构",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "盘中校准中"
+      },
+      "weekly_confirmed": {
+        "ma_score": 4,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 5.099820306714349,
+        "dea": 6.3115391218589,
+        "hist": -1.2117188151445504,
+        "rsi": 51.67983107416225,
+        "volume_ratio": 1.0946964080442223,
+        "volume_basis": "full_period",
+        "close_up": false,
+        "close": 200.75,
+        "previous_close": 206.84,
+        "ma5": 203.238,
+        "ma10": 204.084,
+        "ma20": 200.398035,
+        "ma60": 185.79396344138334,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "正常"
+      },
+      "weekly_is_partial": true,
+      "entry": {
+        "label": "回踩转强",
+        "close_distance_ma20_pct": 0.06750942872516807,
+        "close_distance_ma60_pct": 0.050884805517446674,
+        "distance_ma20_atr": 1.7601150666981693,
+        "distance_ma60_atr": 1.3476631503276661,
+        "distance_20d_high_pct": -0.013500135001350055,
+        "distance_52w_high_pct": -0.07322228798511876,
+        "gap_pct": 0.023214117202982054,
+        "breakout_recent": true,
+        "breakout_days_since": 0,
+        "pullback_ma10_reclaim": true,
+        "pullback_ma20_reclaim": true,
+        "atr_pct": 0.03592953964930464,
+        "intraday_range_pct": 0.027460602057185965,
+        "max_drawdown_20d_pct": -0.10583529411764714,
+        "quality_grade": "B",
+        "quality_score": 65.0,
+        "quality_label": "顺势观察",
+        "positive_reasons": [
+          "刚突破，且回踩 MA10/MA20 后重新转强",
+          "RSI 位于健康强势区"
+        ],
+        "risk_reasons": [
+          "近 20 日最大回撤超过 10%"
+        ]
+      },
+      "er_rank": 7,
+      "er_hits_last5": 2,
+      "er_streak": 2,
+      "er_history_available": true,
+      "er_price_momentum_aligned": true,
+      "price_momentum": {
+        "returns": {
+          "4w": 0.03915434205536594,
+          "12w": -0.027072607846618135,
+          "36w": 0.238667081569218
+        },
+        "mean": 0.08358293859265527,
+        "positive": true
+      },
+      "continuation_probability": 0.4242,
+      "sector": null,
+      "trend_strength": 75.3,
+      "trend_strength_percentile": 24.7,
+      "daily_confirmation_score": 80.0,
+      "weekly_confirmation_score": 66.7,
+      "trend_confirmation_score": 66.7,
+      "er_signal_score": 49.0,
+      "trend_components": [
+        {
+          "name": "多周期波动调整动量",
+          "percentile": 64.0,
+          "weight": 40,
+          "effective_weight": 40.0,
+          "contribution": 25.6
+        },
+        {
+          "name": "MA20/MA60斜率",
+          "percentile": 63.4,
+          "weight": 25,
+          "effective_weight": 25.0,
+          "contribution": 15.9
+        },
+        {
+          "name": "趋势平滑度",
+          "percentile": 55.6,
+          "weight": 20,
+          "effective_weight": 20.0,
+          "contribution": 11.1
+        },
+        {
+          "name": "相对SPY/行业强度",
+          "percentile": 61.3,
+          "weight": 15,
+          "effective_weight": 15.0,
+          "contribution": 9.2
+        }
+      ],
+      "continuation_probability_percentile": 32.5,
+      "opportunity_raw_score": 69.5,
+      "opportunity_score": 89.4,
+      "opportunity_weights": {
+        "trend_core": 0.65,
+        "trend_confirmation": 0.1,
+        "er_signal": 0.15,
+        "entry_quality": 0.1,
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
+      },
+      "opportunity_base_weights": {
+        "trend_core": 0.65,
+        "trend_confirmation": 0.1,
+        "er_signal": 0.15,
+        "entry_quality": 0.1,
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
+      },
+      "opportunity_missing_blocks": [],
+      "trend_candidate": false,
+      "instrument_type": "正股",
+      "market": "美股",
+      "source_group": "美股",
+      "data_source": "OpenD",
+      "er_sources": [
+        {
+          "board": "第1看板",
+          "name": "100B 日调仓",
+          "slug": "er_3_8_20_100b_daily",
+          "rank": 7
+        },
+        {
+          "board": "第4看板",
+          "name": "Top5 双周 Top50 Buffer",
+          "slug": "er_3_8_20_100b_top5_biweekly_top50",
+          "rank": 9
+        }
+      ],
+      "left_edge": {
+        "level": "neutral",
+        "label": "观望",
+        "priority": 1,
+        "ready": false,
+        "triggered": false,
+        "score": 32.3,
+        "location_score": 9.3,
+        "exhaustion_score": 2.9,
+        "trigger_score": 68.0,
+        "context_score": 76.7,
+        "rsi14": 61.6,
+        "stochastic14": 90.7,
+        "drawdown_20d": -0.0135,
+        "position_60d": 0.6294,
+        "volume_ratio": 1.22,
+        "downside_volume_share_5d": 0.0,
+        "bullish_divergence": false,
+        "histogram_turn": true,
+        "rsi_turn": true,
+        "bullish_reversal": true,
+        "hammer_reversal": false,
+        "capitulation": false,
+        "breakdown": false,
+        "recent_trigger_days": null,
+        "signal_date": "2026-06-29",
+        "as_of": "2026-08-05",
+        "support_price": 208.6052,
+        "invalidation_price": 190.01,
+        "repair_price": 222.22,
+        "reward_risk": 0.1,
+        "data_confidence": "高",
+        "history_bars": 1497,
+        "reasons": [
+          "MACD 柱体由弱转强",
+          "RSI 连续回升形成拐点",
+          "收盘出现反转确认 K 线"
+        ]
+      },
+      "gap_layer": {
+        "direction": "up",
+        "rank": 87.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 0,
+        "strong_count_50d": 0,
+        "atr_score_10d": 0.434,
+        "atr_score_50d": 0.434,
+        "last_gap_time": "08-05",
+        "last_gap_pct": 1.5676,
+        "last_gap_atr": 0.434,
+        "sequence_start_time": "2026-08-05",
+        "last_opposite_gap_time": "2026-06-23",
+        "ema5": 212.6639,
+        "ema20": 206.211,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 27684062222.32,
+        "fresh": true,
+        "strong_fresh": false,
+        "events": [
+          {
+            "time": "2026-08-05",
+            "gap_pct": 1.5676,
+            "gap_atr": 0.434,
+            "strong": false
+          }
+        ],
+        "source_updated_at": "2026-08-07 09:04:12",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
+      "risk": {
+        "current_score": 89.4,
+        "score_5d_ago": 70.6,
+        "score_10d_ago": 72.7,
+        "score_change_5d": 18.80000000000001,
+        "score_change_10d": 16.700000000000003,
+        "score_reference_high": 72.7,
+        "score_reference_gap": 16.700000000000003,
+        "price_distance_20d_high": -0.013500135001350055,
+        "rank_5": 80.8,
+        "rank_20": 76.9,
+        "rank_60": 61.5,
+        "medium_rank": 70.74000000000001,
+        "short_rank_gap": -10.059999999999988,
+        "rollover_hits_last3": 0,
+        "close_below_ma20": false,
+        "close_down": false,
+        "volume_ratio": 1.1635281904950006,
+        "down_volume_share_5d": 0.0,
         "as_of": "2026-08-05",
         "score_5d_date": "2026-07-29",
         "score_10d_date": "2026-07-22",
@@ -8750,7 +9124,7 @@
       ],
       "continuation_probability_percentile": 5.6,
       "opportunity_raw_score": 69.0,
-      "opportunity_score": 89.4,
+      "opportunity_score": 88.9,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -8815,7 +9189,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 75.0,
+        "rank": 74.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -8827,10 +9201,10 @@
         "last_gap_atr": 0.5529,
         "sequence_start_time": "2026-07-31",
         "last_opposite_gap_time": "2026-07-29",
-        "ema5": 835.986,
-        "ema20": 801.135,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 61842184.1,
+        "ema5": 842.3673,
+        "ema20": 806.2773,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 61245371.27,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -8841,7 +9215,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -8850,13 +9224,13 @@
         "score_effect": 0
       },
       "risk": {
-        "current_score": 89.4,
+        "current_score": 88.9,
         "score_5d_ago": 73.6,
         "score_10d_ago": 48.6,
-        "score_change_5d": 15.800000000000011,
-        "score_change_10d": 40.800000000000004,
+        "score_change_5d": 15.300000000000011,
+        "score_change_10d": 40.300000000000004,
         "score_reference_high": 73.6,
-        "score_reference_gap": 15.800000000000011,
+        "score_reference_gap": 15.300000000000011,
         "price_distance_20d_high": -0.003780805496000128,
         "rank_5": 73.6,
         "rank_20": 84.1,
@@ -9104,7 +9478,7 @@
       ],
       "continuation_probability_percentile": 81.4,
       "opportunity_raw_score": 67.8,
-      "opportunity_score": 88.9,
+      "opportunity_score": 88.5,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -9169,13 +9543,13 @@
       },
       "gap_layer": null,
       "risk": {
-        "current_score": 88.9,
+        "current_score": 88.5,
         "score_5d_ago": 89.4,
         "score_10d_ago": 46.3,
-        "score_change_5d": -0.5,
-        "score_change_10d": 42.60000000000001,
+        "score_change_5d": -0.9000000000000057,
+        "score_change_10d": 42.2,
         "score_reference_high": 89.4,
-        "score_reference_gap": -0.5,
+        "score_reference_gap": -0.9000000000000057,
         "price_distance_20d_high": -0.021318714786051518,
         "rank_5": 63.5,
         "rank_20": 90.9,
@@ -9427,7 +9801,7 @@
       ],
       "continuation_probability_percentile": 30.3,
       "opportunity_raw_score": 67.7,
-      "opportunity_score": 88.5,
+      "opportunity_score": 88.1,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -9490,13 +9864,13 @@
       },
       "gap_layer": null,
       "risk": {
-        "current_score": 88.5,
+        "current_score": 88.1,
         "score_5d_ago": 77.9,
         "score_10d_ago": 57.9,
-        "score_change_5d": 10.599999999999994,
-        "score_change_10d": 30.6,
+        "score_change_5d": 10.199999999999989,
+        "score_change_10d": 30.199999999999996,
         "score_reference_high": 77.9,
-        "score_reference_gap": 10.599999999999994,
+        "score_reference_gap": 10.199999999999989,
         "price_distance_20d_high": -0.23416477119395507,
         "rank_5": 78.4,
         "rank_20": 68.3,
@@ -9742,7 +10116,7 @@
       ],
       "continuation_probability_percentile": 68.4,
       "opportunity_raw_score": 67.7,
-      "opportunity_score": 88.1,
+      "opportunity_score": 87.7,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -9806,13 +10180,13 @@
       },
       "gap_layer": null,
       "risk": {
-        "current_score": 88.1,
+        "current_score": 87.7,
         "score_5d_ago": 89.8,
         "score_10d_ago": 90.3,
-        "score_change_5d": -1.7000000000000028,
-        "score_change_10d": -2.200000000000003,
+        "score_change_5d": -2.0999999999999943,
+        "score_change_10d": -2.5999999999999943,
         "score_reference_high": 90.3,
-        "score_reference_gap": -2.200000000000003,
+        "score_reference_gap": -2.5999999999999943,
         "price_distance_20d_high": -0.1994578523959426,
         "rank_5": 31.7,
         "rank_20": 70.2,
@@ -10056,7 +10430,7 @@
       ],
       "continuation_probability_percentile": 87.0,
       "opportunity_raw_score": 67.1,
-      "opportunity_score": 87.7,
+      "opportunity_score": 87.2,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -10119,13 +10493,13 @@
       },
       "gap_layer": null,
       "risk": {
-        "current_score": 87.7,
+        "current_score": 87.2,
         "score_5d_ago": 88.1,
         "score_10d_ago": 93.5,
-        "score_change_5d": -0.3999999999999915,
-        "score_change_10d": -5.799999999999997,
+        "score_change_5d": -0.8999999999999915,
+        "score_change_10d": -6.299999999999997,
         "score_reference_high": 93.5,
-        "score_reference_gap": -5.799999999999997,
+        "score_reference_gap": -6.299999999999997,
         "price_distance_20d_high": -0.07564056666496188,
         "rank_5": 31.2,
         "rank_20": 62.5,
@@ -10373,7 +10747,7 @@
       ],
       "continuation_probability_percentile": 34.8,
       "opportunity_raw_score": 66.2,
-      "opportunity_score": 87.2,
+      "opportunity_score": 86.8,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -10436,13 +10810,13 @@
       },
       "gap_layer": null,
       "risk": {
-        "current_score": 87.2,
+        "current_score": 86.8,
         "score_5d_ago": 88.9,
         "score_10d_ago": 57.4,
-        "score_change_5d": -1.7000000000000028,
-        "score_change_10d": 29.800000000000004,
+        "score_change_5d": -2.1000000000000085,
+        "score_change_10d": 29.4,
         "score_reference_high": 88.9,
-        "score_reference_gap": -1.7000000000000028,
+        "score_reference_gap": -2.1000000000000085,
         "price_distance_20d_high": -0.01742344244984162,
         "rank_5": 41.3,
         "rank_20": 88.5,
@@ -10466,368 +10840,6 @@
         "volume_price_confirmation": false,
         "reasons": [
           "短期横截面相对强弱持续掉队"
-        ]
-      }
-    },
-    {
-      "code": "US.NVDA",
-      "ticker": "NVDA",
-      "name": "英伟达",
-      "market_cap": 4858150000000.0,
-      "last_qualified_market_cap": 4858150000000.0,
-      "active": true,
-      "daily": {
-        "ma_score": 3,
-        "ma_facts": [
-          true,
-          false,
-          false,
-          true,
-          true
-        ],
-        "macd_score": 3,
-        "macd_facts": [
-          true,
-          true,
-          true
-        ],
-        "dif": 0.9015985267900248,
-        "dea": -0.5613458553088345,
-        "hist": 1.4629443820988595,
-        "rsi": 61.595338856915,
-        "volume_ratio": 1.1635281904950006,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 219.22,
-        "previous_close": 211.94,
-        "ma5": 206.718,
-        "ma10": 203.272,
-        "ma20": 205.3565,
-        "ma60": 208.60516666434998,
-        "ma_label": "偏多",
-        "macd_label": "强多头动能",
-        "rsi_label": "健康强势",
-        "volume_label": "正常"
-      },
-      "daily_confirmed": {
-        "ma_score": 3,
-        "ma_facts": [
-          true,
-          false,
-          false,
-          true,
-          true
-        ],
-        "macd_score": 3,
-        "macd_facts": [
-          true,
-          true,
-          true
-        ],
-        "dif": 0.9015985267900248,
-        "dea": -0.5613458553088345,
-        "hist": 1.4629443820988595,
-        "rsi": 61.595338856915,
-        "volume_ratio": 1.1635281904950006,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 219.22,
-        "previous_close": 211.94,
-        "ma5": 206.718,
-        "ma10": 203.272,
-        "ma20": 205.3565,
-        "ma60": 208.60516666434998,
-        "ma_label": "偏多",
-        "macd_label": "强多头动能",
-        "rsi_label": "健康强势",
-        "volume_label": "正常"
-      },
-      "daily_is_partial": false,
-      "weekly": {
-        "ma_score": 5,
-        "ma_facts": [
-          true,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 1,
-        "macd_facts": [
-          true,
-          false,
-          false
-        ],
-        "dif": 6.017515281643682,
-        "dea": 6.252734353815857,
-        "hist": -0.23521907217217475,
-        "rsi": 59.346060611020256,
-        "volume_ratio": null,
-        "volume_basis": "same_time",
-        "close_up": true,
-        "close": 219.22,
-        "previous_close": 200.75,
-        "ma5": 208.11600000000004,
-        "ma10": 204.892,
-        "ma20": 202.72403500000001,
-        "ma60": 187.08185667226664,
-        "ma_label": "强多头结构",
-        "macd_label": "动能分化",
-        "rsi_label": "健康强势",
-        "volume_label": "盘中校准中"
-      },
-      "weekly_confirmed": {
-        "ma_score": 4,
-        "ma_facts": [
-          false,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 1,
-        "macd_facts": [
-          true,
-          false,
-          false
-        ],
-        "dif": 5.099820306714349,
-        "dea": 6.3115391218589,
-        "hist": -1.2117188151445504,
-        "rsi": 51.67983107416225,
-        "volume_ratio": 1.0946964080442223,
-        "volume_basis": "full_period",
-        "close_up": false,
-        "close": 200.75,
-        "previous_close": 206.84,
-        "ma5": 203.238,
-        "ma10": 204.084,
-        "ma20": 200.398035,
-        "ma60": 185.79396344138334,
-        "ma_label": "偏多",
-        "macd_label": "动能分化",
-        "rsi_label": "健康强势",
-        "volume_label": "正常"
-      },
-      "weekly_is_partial": true,
-      "entry": {
-        "label": "回踩转强",
-        "close_distance_ma20_pct": 0.06750942872516807,
-        "close_distance_ma60_pct": 0.050884805517446674,
-        "distance_ma20_atr": 1.7601150666981693,
-        "distance_ma60_atr": 1.3476631503276661,
-        "distance_20d_high_pct": -0.013500135001350055,
-        "distance_52w_high_pct": -0.07322228798511876,
-        "gap_pct": 0.023214117202982054,
-        "breakout_recent": true,
-        "breakout_days_since": 0,
-        "pullback_ma10_reclaim": true,
-        "pullback_ma20_reclaim": true,
-        "atr_pct": 0.03592953964930464,
-        "intraday_range_pct": 0.027460602057185965,
-        "max_drawdown_20d_pct": -0.10583529411764714,
-        "quality_grade": "B",
-        "quality_score": 65.0,
-        "quality_label": "顺势观察",
-        "positive_reasons": [
-          "刚突破，且回踩 MA10/MA20 后重新转强",
-          "RSI 位于健康强势区"
-        ],
-        "risk_reasons": [
-          "近 20 日最大回撤超过 10%"
-        ]
-      },
-      "er_rank": 10,
-      "er_hits_last5": 1,
-      "er_streak": 1,
-      "er_history_available": true,
-      "er_price_momentum_aligned": true,
-      "price_momentum": {
-        "returns": {
-          "4w": 0.03915434205536594,
-          "12w": -0.027072607846618135,
-          "36w": 0.238667081569218
-        },
-        "mean": 0.08358293859265527,
-        "positive": true
-      },
-      "continuation_probability": 0.4242,
-      "sector": null,
-      "trend_strength": 75.3,
-      "trend_strength_percentile": 24.7,
-      "daily_confirmation_score": 80.0,
-      "weekly_confirmation_score": 66.7,
-      "trend_confirmation_score": 66.7,
-      "er_signal_score": 26.0,
-      "trend_components": [
-        {
-          "name": "多周期波动调整动量",
-          "percentile": 64.0,
-          "weight": 40,
-          "effective_weight": 40.0,
-          "contribution": 25.6
-        },
-        {
-          "name": "MA20/MA60斜率",
-          "percentile": 63.4,
-          "weight": 25,
-          "effective_weight": 25.0,
-          "contribution": 15.9
-        },
-        {
-          "name": "趋势平滑度",
-          "percentile": 55.6,
-          "weight": 20,
-          "effective_weight": 20.0,
-          "contribution": 11.1
-        },
-        {
-          "name": "相对SPY/行业强度",
-          "percentile": 61.3,
-          "weight": 15,
-          "effective_weight": 15.0,
-          "contribution": 9.2
-        }
-      ],
-      "continuation_probability_percentile": 32.5,
-      "opportunity_raw_score": 66.0,
-      "opportunity_score": 86.8,
-      "opportunity_weights": {
-        "trend_core": 0.65,
-        "trend_confirmation": 0.1,
-        "er_signal": 0.15,
-        "entry_quality": 0.1,
-        "historical_continuation": 0.0,
-        "model_reliability": 0.0
-      },
-      "opportunity_base_weights": {
-        "trend_core": 0.65,
-        "trend_confirmation": 0.1,
-        "er_signal": 0.15,
-        "entry_quality": 0.1,
-        "historical_continuation": 0.0,
-        "model_reliability": 0.0
-      },
-      "opportunity_missing_blocks": [],
-      "trend_candidate": false,
-      "instrument_type": "正股",
-      "market": "美股",
-      "source_group": "美股",
-      "data_source": "OpenD",
-      "er_sources": [
-        {
-          "board": "第4看板",
-          "name": "Top5 双周 Top50 Buffer",
-          "slug": "er_3_8_20_100b_top5_biweekly_top50",
-          "rank": 17
-        }
-      ],
-      "left_edge": {
-        "level": "neutral",
-        "label": "观望",
-        "priority": 1,
-        "ready": false,
-        "triggered": false,
-        "score": 32.3,
-        "location_score": 9.3,
-        "exhaustion_score": 2.9,
-        "trigger_score": 68.0,
-        "context_score": 76.7,
-        "rsi14": 61.6,
-        "stochastic14": 90.7,
-        "drawdown_20d": -0.0135,
-        "position_60d": 0.6294,
-        "volume_ratio": 1.22,
-        "downside_volume_share_5d": 0.0,
-        "bullish_divergence": false,
-        "histogram_turn": true,
-        "rsi_turn": true,
-        "bullish_reversal": true,
-        "hammer_reversal": false,
-        "capitulation": false,
-        "breakdown": false,
-        "recent_trigger_days": null,
-        "signal_date": "2026-06-29",
-        "as_of": "2026-08-05",
-        "support_price": 208.6052,
-        "invalidation_price": 190.01,
-        "repair_price": 222.22,
-        "reward_risk": 0.1,
-        "data_confidence": "高",
-        "history_bars": 1497,
-        "reasons": [
-          "MACD 柱体由弱转强",
-          "RSI 连续回升形成拐点",
-          "收盘出现反转确认 K 线"
-        ]
-      },
-      "gap_layer": {
-        "direction": "up",
-        "rank": 89.0,
-        "count_10d": 1,
-        "count_50d": 1,
-        "strong_count_10d": 0,
-        "strong_count_50d": 0,
-        "atr_score_10d": 0.434,
-        "atr_score_50d": 0.434,
-        "last_gap_time": "08-05",
-        "last_gap_pct": 1.5676,
-        "last_gap_atr": 0.434,
-        "sequence_start_time": "2026-08-05",
-        "last_opposite_gap_time": "2026-06-23",
-        "ema5": 209.5008,
-        "ema20": 204.8658,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 27500116237.3,
-        "fresh": true,
-        "strong_fresh": false,
-        "events": [
-          {
-            "time": "2026-08-05",
-            "gap_pct": 1.5676,
-            "gap_atr": 0.434,
-            "strong": false
-          }
-        ],
-        "source_updated_at": "2026-08-06 16:30:25",
-        "label": "向上缺口",
-        "detail": "等待右侧候选",
-        "priority": 2,
-        "right_confirmation": false,
-        "left_environment": false,
-        "score_effect": 0
-      },
-      "risk": {
-        "current_score": 86.8,
-        "score_5d_ago": 70.6,
-        "score_10d_ago": 72.7,
-        "score_change_5d": 16.200000000000003,
-        "score_change_10d": 14.099999999999994,
-        "score_reference_high": 72.7,
-        "score_reference_gap": 14.099999999999994,
-        "price_distance_20d_high": -0.013500135001350055,
-        "rank_5": 80.8,
-        "rank_20": 76.9,
-        "rank_60": 61.5,
-        "medium_rank": 70.74000000000001,
-        "short_rank_gap": -10.059999999999988,
-        "rollover_hits_last3": 0,
-        "close_below_ma20": false,
-        "close_down": false,
-        "volume_ratio": 1.1635281904950006,
-        "down_volume_share_5d": 0.0,
-        "as_of": "2026-08-05",
-        "score_5d_date": "2026-07-29",
-        "score_10d_date": "2026-07-22",
-        "level": "normal",
-        "label": "正常",
-        "severity": 0,
-        "slope_alert": false,
-        "true_divergence": false,
-        "cross_sectional_rollover": false,
-        "volume_price_confirmation": false,
-        "reasons": [
-          "未形成顺序触发"
         ]
       }
     },
@@ -11149,323 +11161,6 @@
       }
     },
     {
-      "code": "US.EQNR",
-      "ticker": "EQNR",
-      "name": "Equinor",
-      "market_cap": 97655097396.3,
-      "last_qualified_market_cap": 97655097396.3,
-      "active": true,
-      "daily": {
-        "ma_score": 4,
-        "ma_facts": [
-          false,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 1,
-        "macd_facts": [
-          true,
-          false,
-          false
-        ],
-        "dif": 1.2536742966232381,
-        "dea": 1.275033507622433,
-        "hist": -0.02135921099919491,
-        "rsi": 51.95797291996695,
-        "volume_ratio": 1.2161426631368526,
-        "volume_basis": "full_period",
-        "close_up": false,
-        "close": 38.13,
-        "previous_close": 39.17,
-        "ma5": 39.80800000000001,
-        "ma10": 39.80800000000001,
-        "ma20": 38.1015,
-        "ma60": 36.510499999783335,
-        "ma_label": "偏多",
-        "macd_label": "动能分化",
-        "rsi_label": "健康强势",
-        "volume_label": "正常"
-      },
-      "daily_confirmed": {
-        "ma_score": 4,
-        "ma_facts": [
-          false,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 1,
-        "macd_facts": [
-          true,
-          false,
-          false
-        ],
-        "dif": 1.2536742966232381,
-        "dea": 1.275033507622433,
-        "hist": -0.02135921099919491,
-        "rsi": 51.95797291996695,
-        "volume_ratio": 1.2161426631368526,
-        "volume_basis": "full_period",
-        "close_up": false,
-        "close": 38.13,
-        "previous_close": 39.17,
-        "ma5": 39.80800000000001,
-        "ma10": 39.80800000000001,
-        "ma20": 38.1015,
-        "ma60": 36.510499999783335,
-        "ma_label": "偏多",
-        "macd_label": "动能分化",
-        "rsi_label": "健康强势",
-        "volume_label": "正常"
-      },
-      "daily_is_partial": false,
-      "weekly": {
-        "ma_score": 4,
-        "ma_facts": [
-          true,
-          false,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 1,
-        "macd_facts": [
-          true,
-          false,
-          false
-        ],
-        "dif": 1.9192329082679294,
-        "dea": 1.9860316063487558,
-        "hist": -0.06679869808082639,
-        "rsi": 56.593369324772645,
-        "volume_ratio": null,
-        "volume_basis": "same_time",
-        "close_up": false,
-        "close": 38.13,
-        "previous_close": 41.1,
-        "ma5": 38.174,
-        "ma10": 35.944,
-        "ma20": 37.28525,
-        "ma60": 29.304650671300003,
-        "ma_label": "偏多",
-        "macd_label": "动能分化",
-        "rsi_label": "健康强势",
-        "volume_label": "盘中校准中"
-      },
-      "weekly_confirmed": {
-        "ma_score": 4,
-        "ma_facts": [
-          true,
-          false,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 1,
-        "macd_facts": [
-          true,
-          false,
-          false
-        ],
-        "dif": 1.9473282215365941,
-        "dea": 2.002731280868962,
-        "hist": -0.055403059332368,
-        "rsi": 63.610256570763475,
-        "volume_ratio": 0.9919323781317194,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 41.1,
-        "previous_close": 40.35,
-        "ma5": 36.956,
-        "ma10": 35.730000000000004,
-        "ma20": 37.458749999999995,
-        "ma60": 29.11182939713333,
-        "ma_label": "偏多",
-        "macd_label": "动能分化",
-        "rsi_label": "健康强势",
-        "volume_label": "缩量"
-      },
-      "weekly_is_partial": true,
-      "entry": {
-        "label": "位置观察",
-        "close_distance_ma20_pct": 0.0007480020471635207,
-        "close_distance_ma60_pct": 0.044357102757460964,
-        "distance_ma20_atr": 0.021622043186927536,
-        "distance_ma60_atr": 1.228663120909215,
-        "distance_20d_high_pct": -0.08407398510689401,
-        "distance_52w_high_pct": -0.1226011321275714,
-        "gap_pct": 0.013020168496298057,
-        "breakout_recent": false,
-        "breakout_days_since": 9,
-        "pullback_ma10_reclaim": false,
-        "pullback_ma20_reclaim": false,
-        "atr_pct": 0.03456856282446403,
-        "intraday_range_pct": 0.04340056165432736,
-        "max_drawdown_20d_pct": -0.07226277372262768,
-        "quality_grade": "B",
-        "quality_score": 65.0,
-        "quality_label": "顺势观察",
-        "positive_reasons": [
-          "收盘位于 MA20 上方 0–1.5 ATR",
-          "RSI 位于健康强势区"
-        ],
-        "risk_reasons": []
-      },
-      "er_rank": null,
-      "er_hits_last5": 4,
-      "er_streak": 0,
-      "er_history_available": true,
-      "er_price_momentum_aligned": null,
-      "price_momentum": {
-        "returns": {
-          "4w": 0.12411556603773577,
-          "12w": -0.03419452887537977,
-          "36w": 0.6865459051825107
-        },
-        "mean": 0.25882231411495554,
-        "positive": true
-      },
-      "continuation_probability": 0.4204,
-      "sector": null,
-      "trend_strength": 77.0,
-      "trend_strength_percentile": 23.0,
-      "daily_confirmation_score": 56.7,
-      "weekly_confirmation_score": 56.7,
-      "trend_confirmation_score": 56.7,
-      "er_signal_score": 20.0,
-      "trend_components": [
-        {
-          "name": "多周期波动调整动量",
-          "percentile": 79.1,
-          "weight": 40,
-          "effective_weight": 40.0,
-          "contribution": 31.6
-        },
-        {
-          "name": "MA20/MA60斜率",
-          "percentile": 73.1,
-          "weight": 25,
-          "effective_weight": 25.0,
-          "contribution": 18.3
-        },
-        {
-          "name": "趋势平滑度",
-          "percentile": 14.3,
-          "weight": 20,
-          "effective_weight": 20.0,
-          "contribution": 2.9
-        },
-        {
-          "name": "相对SPY/行业强度",
-          "percentile": 65.1,
-          "weight": 15,
-          "effective_weight": 15.0,
-          "contribution": 9.8
-        }
-      ],
-      "continuation_probability_percentile": 11.3,
-      "opportunity_raw_score": 65.2,
-      "opportunity_score": 86.0,
-      "opportunity_weights": {
-        "trend_core": 0.65,
-        "trend_confirmation": 0.1,
-        "er_signal": 0.15,
-        "entry_quality": 0.1,
-        "historical_continuation": 0.0,
-        "model_reliability": 0.0
-      },
-      "opportunity_base_weights": {
-        "trend_core": 0.65,
-        "trend_confirmation": 0.1,
-        "er_signal": 0.15,
-        "entry_quality": 0.1,
-        "historical_continuation": 0.0,
-        "model_reliability": 0.0
-      },
-      "opportunity_missing_blocks": [],
-      "trend_candidate": false,
-      "instrument_type": "正股",
-      "market": "美股",
-      "source_group": "美股",
-      "data_source": "OpenD",
-      "er_sources": [],
-      "left_edge": {
-        "level": "neutral",
-        "label": "观望",
-        "priority": 1,
-        "ready": false,
-        "triggered": false,
-        "score": 26.1,
-        "location_score": 16.1,
-        "exhaustion_score": 27.3,
-        "trigger_score": 0.0,
-        "context_score": 88.4,
-        "rsi14": 52.0,
-        "stochastic14": 27.7,
-        "drawdown_20d": -0.0841,
-        "position_60d": 0.6759,
-        "volume_ratio": 1.03,
-        "downside_volume_share_5d": 0.8429,
-        "bullish_divergence": false,
-        "histogram_turn": false,
-        "rsi_turn": false,
-        "bullish_reversal": false,
-        "hammer_reversal": false,
-        "capitulation": false,
-        "breakdown": false,
-        "recent_trigger_days": null,
-        "signal_date": "2026-06-22",
-        "as_of": "2026-08-05",
-        "support_price": 36.5105,
-        "invalidation_price": 33.43,
-        "repair_price": 41.63,
-        "reward_risk": 0.74,
-        "data_confidence": "高",
-        "history_bars": 1497,
-        "reasons": [
-          "尚未形成左侧共振"
-        ]
-      },
-      "gap_layer": null,
-      "risk": {
-        "current_score": 86.0,
-        "score_5d_ago": 99.6,
-        "score_10d_ago": 81.5,
-        "score_change_5d": -13.599999999999994,
-        "score_change_10d": 4.5,
-        "score_reference_high": 99.6,
-        "score_reference_gap": -13.599999999999994,
-        "price_distance_20d_high": -0.08407398510689401,
-        "rank_5": 6.7,
-        "rank_20": 85.1,
-        "rank_60": 64.4,
-        "medium_rank": 76.82,
-        "short_rank_gap": 70.11999999999999,
-        "rollover_hits_last3": 2,
-        "close_below_ma20": false,
-        "close_down": true,
-        "volume_ratio": 1.2161426631368526,
-        "down_volume_share_5d": 0.8428532393141716,
-        "as_of": "2026-08-05",
-        "score_5d_date": "2026-07-29",
-        "score_10d_date": "2026-07-22",
-        "level": "warning",
-        "label": "预警",
-        "severity": 2,
-        "slope_alert": true,
-        "true_divergence": false,
-        "cross_sectional_rollover": true,
-        "volume_price_confirmation": false,
-        "reasons": [
-          "趋势评分斜率转弱",
-          "短期横截面相对强弱持续掉队"
-        ]
-      }
-    },
-    {
       "code": "US.AMAT",
       "ticker": "AMAT",
       "name": "应用材料",
@@ -11685,7 +11380,7 @@
       ],
       "continuation_probability_percentile": 51.9,
       "opportunity_raw_score": 64.7,
-      "opportunity_score": 85.5,
+      "opportunity_score": 86.0,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -11748,13 +11443,13 @@
       },
       "gap_layer": null,
       "risk": {
-        "current_score": 85.5,
+        "current_score": 86.0,
         "score_5d_ago": 76.6,
         "score_10d_ago": 90.7,
-        "score_change_5d": 8.900000000000006,
-        "score_change_10d": -5.200000000000003,
+        "score_change_5d": 9.400000000000006,
+        "score_change_10d": -4.700000000000003,
         "score_reference_high": 90.7,
-        "score_reference_gap": -5.200000000000003,
+        "score_reference_gap": -4.700000000000003,
         "price_distance_20d_high": -0.15197307851042896,
         "rank_5": 88.9,
         "rank_20": 46.2,
@@ -12001,7 +11696,7 @@
       ],
       "continuation_probability_percentile": 31.4,
       "opportunity_raw_score": 64.7,
-      "opportunity_score": 85.1,
+      "opportunity_score": 85.5,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -12064,13 +11759,13 @@
       },
       "gap_layer": null,
       "risk": {
-        "current_score": 85.1,
+        "current_score": 85.5,
         "score_5d_ago": 91.5,
         "score_10d_ago": 69.0,
-        "score_change_5d": -6.400000000000006,
-        "score_change_10d": 16.099999999999994,
+        "score_change_5d": -6.0,
+        "score_change_10d": 16.5,
         "score_reference_high": 91.5,
-        "score_reference_gap": -6.400000000000006,
+        "score_reference_gap": -6.0,
         "price_distance_20d_high": -0.05951964444444435,
         "rank_5": 38.5,
         "rank_20": 81.7,
@@ -12259,7 +11954,7 @@
       ],
       "continuation_probability_percentile": 46.1,
       "opportunity_raw_score": 64.7,
-      "opportunity_score": 84.7,
+      "opportunity_score": 85.1,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -12325,13 +12020,13 @@
       },
       "gap_layer": null,
       "risk": {
-        "current_score": 84.7,
+        "current_score": 85.1,
         "score_5d_ago": 88.5,
         "score_10d_ago": 66.7,
-        "score_change_5d": -3.799999999999997,
-        "score_change_10d": 18.0,
+        "score_change_5d": -3.4000000000000057,
+        "score_change_10d": 18.39999999999999,
         "score_reference_high": 88.5,
-        "score_reference_gap": -3.799999999999997,
+        "score_reference_gap": -3.4000000000000057,
         "price_distance_20d_high": -0.10672295938882181,
         "rank_5": 6.2,
         "rank_20": 93.8,
@@ -12579,7 +12274,7 @@
       ],
       "continuation_probability_percentile": 9.5,
       "opportunity_raw_score": 64.6,
-      "opportunity_score": 84.3,
+      "opportunity_score": 84.7,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -12642,13 +12337,13 @@
       },
       "gap_layer": null,
       "risk": {
-        "current_score": 84.3,
+        "current_score": 84.7,
         "score_5d_ago": 90.6,
         "score_10d_ago": 80.1,
-        "score_change_5d": -6.299999999999997,
-        "score_change_10d": 4.200000000000003,
+        "score_change_5d": -5.8999999999999915,
+        "score_change_10d": 4.6000000000000085,
         "score_reference_high": 90.6,
-        "score_reference_gap": -6.299999999999997,
+        "score_reference_gap": -5.8999999999999915,
         "price_distance_20d_high": -0.06410122346543967,
         "rank_5": 19.2,
         "rank_20": 71.6,
@@ -12672,6 +12367,323 @@
         "volume_price_confirmation": false,
         "reasons": [
           "趋势评分斜率转弱"
+        ]
+      }
+    },
+    {
+      "code": "US.EQNR",
+      "ticker": "EQNR",
+      "name": "Equinor",
+      "market_cap": 97655097396.3,
+      "last_qualified_market_cap": 97655097396.3,
+      "active": true,
+      "daily": {
+        "ma_score": 4,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 1.2536742966232381,
+        "dea": 1.275033507622433,
+        "hist": -0.02135921099919491,
+        "rsi": 51.95797291996695,
+        "volume_ratio": 1.2161426631368526,
+        "volume_basis": "full_period",
+        "close_up": false,
+        "close": 38.13,
+        "previous_close": 39.17,
+        "ma5": 39.80800000000001,
+        "ma10": 39.80800000000001,
+        "ma20": 38.1015,
+        "ma60": 36.510499999783335,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "正常"
+      },
+      "daily_confirmed": {
+        "ma_score": 4,
+        "ma_facts": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 1.2536742966232381,
+        "dea": 1.275033507622433,
+        "hist": -0.02135921099919491,
+        "rsi": 51.95797291996695,
+        "volume_ratio": 1.2161426631368526,
+        "volume_basis": "full_period",
+        "close_up": false,
+        "close": 38.13,
+        "previous_close": 39.17,
+        "ma5": 39.80800000000001,
+        "ma10": 39.80800000000001,
+        "ma20": 38.1015,
+        "ma60": 36.510499999783335,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "正常"
+      },
+      "daily_is_partial": false,
+      "weekly": {
+        "ma_score": 4,
+        "ma_facts": [
+          true,
+          false,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 1.9192329082679294,
+        "dea": 1.9860316063487558,
+        "hist": -0.06679869808082639,
+        "rsi": 56.593369324772645,
+        "volume_ratio": null,
+        "volume_basis": "same_time",
+        "close_up": false,
+        "close": 38.13,
+        "previous_close": 41.1,
+        "ma5": 38.174,
+        "ma10": 35.944,
+        "ma20": 37.28525,
+        "ma60": 29.304650671300003,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "盘中校准中"
+      },
+      "weekly_confirmed": {
+        "ma_score": 4,
+        "ma_facts": [
+          true,
+          false,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 1.9473282215365941,
+        "dea": 2.002731280868962,
+        "hist": -0.055403059332368,
+        "rsi": 63.610256570763475,
+        "volume_ratio": 0.9919323781317194,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 41.1,
+        "previous_close": 40.35,
+        "ma5": 36.956,
+        "ma10": 35.730000000000004,
+        "ma20": 37.458749999999995,
+        "ma60": 29.11182939713333,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "缩量"
+      },
+      "weekly_is_partial": true,
+      "entry": {
+        "label": "位置观察",
+        "close_distance_ma20_pct": 0.0007480020471635207,
+        "close_distance_ma60_pct": 0.044357102757460964,
+        "distance_ma20_atr": 0.021622043186927536,
+        "distance_ma60_atr": 1.228663120909215,
+        "distance_20d_high_pct": -0.08407398510689401,
+        "distance_52w_high_pct": -0.1226011321275714,
+        "gap_pct": 0.013020168496298057,
+        "breakout_recent": false,
+        "breakout_days_since": 9,
+        "pullback_ma10_reclaim": false,
+        "pullback_ma20_reclaim": false,
+        "atr_pct": 0.03456856282446403,
+        "intraday_range_pct": 0.04340056165432736,
+        "max_drawdown_20d_pct": -0.07226277372262768,
+        "quality_grade": "B",
+        "quality_score": 65.0,
+        "quality_label": "顺势观察",
+        "positive_reasons": [
+          "收盘位于 MA20 上方 0–1.5 ATR",
+          "RSI 位于健康强势区"
+        ],
+        "risk_reasons": []
+      },
+      "er_rank": null,
+      "er_hits_last5": 3,
+      "er_streak": 0,
+      "er_history_available": true,
+      "er_price_momentum_aligned": null,
+      "price_momentum": {
+        "returns": {
+          "4w": 0.12411556603773577,
+          "12w": -0.03419452887537977,
+          "36w": 0.6865459051825107
+        },
+        "mean": 0.25882231411495554,
+        "positive": true
+      },
+      "continuation_probability": 0.4204,
+      "sector": null,
+      "trend_strength": 77.0,
+      "trend_strength_percentile": 23.0,
+      "daily_confirmation_score": 56.7,
+      "weekly_confirmation_score": 56.7,
+      "trend_confirmation_score": 56.7,
+      "er_signal_score": 15.0,
+      "trend_components": [
+        {
+          "name": "多周期波动调整动量",
+          "percentile": 79.1,
+          "weight": 40,
+          "effective_weight": 40.0,
+          "contribution": 31.6
+        },
+        {
+          "name": "MA20/MA60斜率",
+          "percentile": 73.1,
+          "weight": 25,
+          "effective_weight": 25.0,
+          "contribution": 18.3
+        },
+        {
+          "name": "趋势平滑度",
+          "percentile": 14.3,
+          "weight": 20,
+          "effective_weight": 20.0,
+          "contribution": 2.9
+        },
+        {
+          "name": "相对SPY/行业强度",
+          "percentile": 65.1,
+          "weight": 15,
+          "effective_weight": 15.0,
+          "contribution": 9.8
+        }
+      ],
+      "continuation_probability_percentile": 11.3,
+      "opportunity_raw_score": 64.5,
+      "opportunity_score": 84.3,
+      "opportunity_weights": {
+        "trend_core": 0.65,
+        "trend_confirmation": 0.1,
+        "er_signal": 0.15,
+        "entry_quality": 0.1,
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
+      },
+      "opportunity_base_weights": {
+        "trend_core": 0.65,
+        "trend_confirmation": 0.1,
+        "er_signal": 0.15,
+        "entry_quality": 0.1,
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
+      },
+      "opportunity_missing_blocks": [],
+      "trend_candidate": false,
+      "instrument_type": "正股",
+      "market": "美股",
+      "source_group": "美股",
+      "data_source": "OpenD",
+      "er_sources": [],
+      "left_edge": {
+        "level": "neutral",
+        "label": "观望",
+        "priority": 1,
+        "ready": false,
+        "triggered": false,
+        "score": 26.1,
+        "location_score": 16.1,
+        "exhaustion_score": 27.3,
+        "trigger_score": 0.0,
+        "context_score": 88.4,
+        "rsi14": 52.0,
+        "stochastic14": 27.7,
+        "drawdown_20d": -0.0841,
+        "position_60d": 0.6759,
+        "volume_ratio": 1.03,
+        "downside_volume_share_5d": 0.8429,
+        "bullish_divergence": false,
+        "histogram_turn": false,
+        "rsi_turn": false,
+        "bullish_reversal": false,
+        "hammer_reversal": false,
+        "capitulation": false,
+        "breakdown": false,
+        "recent_trigger_days": null,
+        "signal_date": "2026-06-22",
+        "as_of": "2026-08-05",
+        "support_price": 36.5105,
+        "invalidation_price": 33.43,
+        "repair_price": 41.63,
+        "reward_risk": 0.74,
+        "data_confidence": "高",
+        "history_bars": 1497,
+        "reasons": [
+          "尚未形成左侧共振"
+        ]
+      },
+      "gap_layer": null,
+      "risk": {
+        "current_score": 84.3,
+        "score_5d_ago": 99.6,
+        "score_10d_ago": 81.5,
+        "score_change_5d": -15.299999999999997,
+        "score_change_10d": 2.799999999999997,
+        "score_reference_high": 99.6,
+        "score_reference_gap": -15.299999999999997,
+        "price_distance_20d_high": -0.08407398510689401,
+        "rank_5": 6.7,
+        "rank_20": 85.1,
+        "rank_60": 64.4,
+        "medium_rank": 76.82,
+        "short_rank_gap": 70.11999999999999,
+        "rollover_hits_last3": 2,
+        "close_below_ma20": false,
+        "close_down": true,
+        "volume_ratio": 1.2161426631368526,
+        "down_volume_share_5d": 0.8428532393141716,
+        "as_of": "2026-08-05",
+        "score_5d_date": "2026-07-29",
+        "score_10d_date": "2026-07-22",
+        "level": "warning",
+        "label": "预警",
+        "severity": 2,
+        "slope_alert": true,
+        "true_divergence": false,
+        "cross_sectional_rollover": true,
+        "volume_price_confirmation": false,
+        "reasons": [
+          "趋势评分斜率转弱",
+          "短期横截面相对强弱持续掉队"
         ]
       }
     },
@@ -14861,7 +14873,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 27.0,
+        "rank": 28.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -14873,10 +14885,10 @@
         "last_gap_atr": 3.0291,
         "sequence_start_time": "2026-07-31",
         "last_opposite_gap_time": "2026-07-23",
-        "ema5": 267.4914,
-        "ema20": 251.7483,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 16466731010.7,
+        "ema5": 269.0809,
+        "ema20": 253.7018,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 16139681197.43,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -14887,7 +14899,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -15415,7 +15427,7 @@
       },
       "er_rank": 10,
       "er_hits_last5": 4,
-      "er_streak": 2,
+      "er_streak": 3,
       "er_history_available": true,
       "er_price_momentum_aligned": true,
       "price_momentum": {
@@ -15492,10 +15504,16 @@
       "data_source": "OpenD",
       "er_sources": [
         {
+          "board": "第1看板",
+          "name": "100B 日调仓",
+          "slug": "er_3_8_20_100b_daily",
+          "rank": 10
+        },
+        {
           "board": "第4看板",
           "name": "Top5 双周 Top50 Buffer",
           "slug": "er_3_8_20_100b_top5_biweekly_top50",
-          "rank": 13
+          "rank": 11
         }
       ],
       "left_edge": {
@@ -15538,7 +15556,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 85.0,
+        "rank": 83.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -15550,10 +15568,10 @@
         "last_gap_atr": 0.485,
         "sequence_start_time": "2026-08-04",
         "last_opposite_gap_time": "2026-06-04",
-        "ema5": 404.4013,
-        "ema20": 391.366,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 7813003745.0,
+        "ema5": 409.7892,
+        "ema20": 394.1468,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 7742853281.97,
         "fresh": true,
         "strong_fresh": false,
         "events": [
@@ -15564,7 +15582,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -17791,42 +17809,7 @@
           "MACD 柱体由弱转强"
         ]
       },
-      "gap_layer": {
-        "direction": "up",
-        "rank": 95.0,
-        "count_10d": 1,
-        "count_50d": 1,
-        "strong_count_10d": 0,
-        "strong_count_50d": 0,
-        "atr_score_10d": 0.3796,
-        "atr_score_50d": 0.3796,
-        "last_gap_time": "08-04",
-        "last_gap_pct": 3.3666,
-        "last_gap_atr": 0.3796,
-        "sequence_start_time": "2026-08-04",
-        "last_opposite_gap_time": "2026-07-07",
-        "ema5": 377.9347,
-        "ema20": 365.4273,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 1607678402.9,
-        "fresh": true,
-        "strong_fresh": false,
-        "events": [
-          {
-            "time": "2026-08-04",
-            "gap_pct": 3.3666,
-            "gap_atr": 0.3796,
-            "strong": false
-          }
-        ],
-        "source_updated_at": "2026-08-06 16:30:25",
-        "label": "向上缺口",
-        "detail": "等待右侧候选",
-        "priority": 2,
-        "right_confirmation": false,
-        "left_environment": false,
-        "score_effect": 0
-      },
+      "gap_layer": null,
       "risk": {
         "current_score": 77.4,
         "score_5d_ago": 37.9,
@@ -18460,7 +18443,42 @@
           "尚未形成左侧共振"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "down",
+        "rank": 23.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 0.79,
+        "atr_score_50d": 0.79,
+        "last_gap_time": "08-06",
+        "last_gap_pct": -7.8433,
+        "last_gap_atr": 0.79,
+        "sequence_start_time": "2026-08-06",
+        "last_opposite_gap_time": "2026-07-21",
+        "ema5": 501.3882,
+        "ema20": 523.8912,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 4537582916.36,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-06",
+            "gap_pct": -7.8433,
+            "gap_atr": 0.79,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 09:04:12",
+        "label": "向下缺口",
+        "detail": "等待左侧机会",
+        "priority": 1,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 76.6,
         "score_5d_ago": 77.4,
@@ -19417,7 +19435,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 100.0,
+        "rank": 96.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -19429,10 +19447,10 @@
         "last_gap_atr": 0.3556,
         "sequence_start_time": "2026-08-04",
         "last_opposite_gap_time": "2026-07-28",
-        "ema5": 786.2669,
-        "ema20": 766.7322,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 3572816077.8,
+        "ema5": 803.5313,
+        "ema20": 773.5253,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 3532648439.28,
         "fresh": true,
         "strong_fresh": false,
         "events": [
@@ -19443,7 +19461,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -21678,7 +21696,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 64.0,
+        "rank": 65.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -21690,10 +21708,10 @@
         "last_gap_atr": 0.759,
         "sequence_start_time": "2026-08-04",
         "last_opposite_gap_time": null,
-        "ema5": 300.2115,
-        "ema20": 298.2492,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 1623319489.2,
+        "ema5": 311.5477,
+        "ema20": 301.675,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 1735368394.12,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -21704,7 +21722,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -22067,323 +22085,6 @@
       }
     },
     {
-      "code": "US.PBR",
-      "ticker": "PBR",
-      "name": "巴西石油公司",
-      "market_cap": 125020707772.0,
-      "last_qualified_market_cap": 125020707772.0,
-      "active": true,
-      "daily": {
-        "ma_score": 5,
-        "ma_facts": [
-          true,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 2,
-        "macd_facts": [
-          true,
-          true,
-          false
-        ],
-        "dif": 0.32984633435602717,
-        "dea": 0.28775020330305606,
-        "hist": 0.04209613105297111,
-        "rsi": 51.59461786695669,
-        "volume_ratio": 1.1309875477392652,
-        "volume_basis": "full_period",
-        "close_up": false,
-        "close": 18.36,
-        "previous_close": 18.72,
-        "ma5": 18.932,
-        "ma10": 18.709,
-        "ma20": 18.308,
-        "ma60": 18.18441199975,
-        "ma_label": "强多头结构",
-        "macd_label": "多头动能",
-        "rsi_label": "健康强势",
-        "volume_label": "正常"
-      },
-      "daily_confirmed": {
-        "ma_score": 5,
-        "ma_facts": [
-          true,
-          true,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 2,
-        "macd_facts": [
-          true,
-          true,
-          false
-        ],
-        "dif": 0.32984633435602717,
-        "dea": 0.28775020330305606,
-        "hist": 0.04209613105297111,
-        "rsi": 51.59461786695669,
-        "volume_ratio": 1.1309875477392652,
-        "volume_basis": "full_period",
-        "close_up": false,
-        "close": 18.36,
-        "previous_close": 18.72,
-        "ma5": 18.932,
-        "ma10": 18.709,
-        "ma20": 18.308,
-        "ma60": 18.18441199975,
-        "ma_label": "强多头结构",
-        "macd_label": "多头动能",
-        "rsi_label": "健康强势",
-        "volume_label": "正常"
-      },
-      "daily_is_partial": false,
-      "weekly": {
-        "ma_score": 3,
-        "ma_facts": [
-          true,
-          false,
-          true,
-          false,
-          true
-        ],
-        "macd_score": 1,
-        "macd_facts": [
-          true,
-          false,
-          false
-        ],
-        "dif": 0.5597480365645637,
-        "dea": 0.8010014918815003,
-        "hist": -0.24125345531693654,
-        "rsi": 53.791535439931614,
-        "volume_ratio": null,
-        "volume_basis": "same_time",
-        "close_up": false,
-        "close": 18.36,
-        "previous_close": 19.4,
-        "ma5": 18.363999999999997,
-        "ma10": 17.71,
-        "ma20": 19.077,
-        "ma60": 14.9722954556,
-        "ma_label": "偏多",
-        "macd_label": "动能分化",
-        "rsi_label": "健康强势",
-        "volume_label": "盘中校准中"
-      },
-      "weekly_confirmed": {
-        "ma_score": 4,
-        "ma_facts": [
-          true,
-          false,
-          true,
-          true,
-          true
-        ],
-        "macd_score": 1,
-        "macd_facts": [
-          true,
-          false,
-          false
-        ],
-        "dif": 0.5931771091813935,
-        "dea": 0.8613148557107344,
-        "hist": -0.26813774652934086,
-        "rsi": 59.77929847723943,
-        "volume_ratio": 1.0789791628706675,
-        "volume_basis": "full_period",
-        "close_up": true,
-        "close": 19.4,
-        "previous_close": 18.77,
-        "ma5": 17.913999999999998,
-        "ma10": 17.750999999999998,
-        "ma20": 19.099,
-        "ma60": 14.867293303316668,
-        "ma_label": "偏多",
-        "macd_label": "动能分化",
-        "rsi_label": "健康强势",
-        "volume_label": "正常"
-      },
-      "weekly_is_partial": true,
-      "entry": {
-        "label": "刚突破",
-        "close_distance_ma20_pct": 0.0028402883985143568,
-        "close_distance_ma60_pct": 0.009655962494273362,
-        "distance_ma20_atr": 0.10136612311363856,
-        "distance_ma60_atr": 0.34228220866575165,
-        "distance_20d_high_pct": -0.05628373168851186,
-        "distance_52w_high_pct": -0.17446043165467617,
-        "gap_pct": 0.013354700854700807,
-        "breakout_recent": true,
-        "breakout_days_since": 3,
-        "pullback_ma10_reclaim": false,
-        "pullback_ma20_reclaim": false,
-        "atr_pct": 0.027940735244845367,
-        "intraday_range_pct": 0.036324786324786314,
-        "max_drawdown_20d_pct": -0.05360824742268033,
-        "quality_grade": "A",
-        "quality_score": 85.0,
-        "quality_label": "触发明确",
-        "positive_reasons": [
-          "突破发生在最近 1–4 根日 K",
-          "收盘位于 MA20 上方 0–1.5 ATR",
-          "RSI 位于健康强势区"
-        ],
-        "risk_reasons": []
-      },
-      "er_rank": null,
-      "er_hits_last5": 4,
-      "er_streak": 0,
-      "er_history_available": true,
-      "er_price_momentum_aligned": null,
-      "price_momentum": {
-        "returns": {
-          "4w": 0.06004618937644346,
-          "12w": -0.0787757150025088,
-          "36w": 0.5111337002590266
-        },
-        "mean": 0.16413472487765376,
-        "positive": true
-      },
-      "continuation_probability": 0.4192,
-      "sector": null,
-      "trend_strength": 59.1,
-      "trend_strength_percentile": 40.9,
-      "daily_confirmation_score": 83.3,
-      "weekly_confirmation_score": 46.7,
-      "trend_confirmation_score": 46.7,
-      "er_signal_score": 20.0,
-      "trend_components": [
-        {
-          "name": "多周期波动调整动量",
-          "percentile": 62.9,
-          "weight": 40,
-          "effective_weight": 40.0,
-          "contribution": 25.2
-        },
-        {
-          "name": "MA20/MA60斜率",
-          "percentile": 56.0,
-          "weight": 25,
-          "effective_weight": 25.0,
-          "contribution": 14.0
-        },
-        {
-          "name": "趋势平滑度",
-          "percentile": 39.5,
-          "weight": 20,
-          "effective_weight": 20.0,
-          "contribution": 7.9
-        },
-        {
-          "name": "相对SPY/行业强度",
-          "percentile": 40.6,
-          "weight": 15,
-          "effective_weight": 15.0,
-          "contribution": 6.1
-        }
-      ],
-      "continuation_probability_percentile": 9.1,
-      "opportunity_raw_score": 54.6,
-      "opportunity_score": 71.5,
-      "opportunity_weights": {
-        "trend_core": 0.65,
-        "trend_confirmation": 0.1,
-        "er_signal": 0.15,
-        "entry_quality": 0.1,
-        "historical_continuation": 0.0,
-        "model_reliability": 0.0
-      },
-      "opportunity_base_weights": {
-        "trend_core": 0.65,
-        "trend_confirmation": 0.1,
-        "er_signal": 0.15,
-        "entry_quality": 0.1,
-        "historical_continuation": 0.0,
-        "model_reliability": 0.0
-      },
-      "opportunity_missing_blocks": [],
-      "trend_candidate": false,
-      "instrument_type": "正股",
-      "market": "美股",
-      "source_group": "美股",
-      "data_source": "OpenD",
-      "er_sources": [],
-      "left_edge": {
-        "level": "neutral",
-        "label": "观望",
-        "priority": 1,
-        "ready": false,
-        "triggered": false,
-        "score": 20.7,
-        "location_score": 16.4,
-        "exhaustion_score": 13.9,
-        "trigger_score": 0.0,
-        "context_score": 76.8,
-        "rsi14": 51.6,
-        "stochastic14": 37.8,
-        "drawdown_20d": -0.0563,
-        "position_60d": 0.4975,
-        "volume_ratio": 0.99,
-        "downside_volume_share_5d": 0.6086,
-        "bullish_divergence": false,
-        "histogram_turn": false,
-        "rsi_turn": false,
-        "bullish_reversal": false,
-        "hammer_reversal": false,
-        "capitulation": false,
-        "breakdown": false,
-        "recent_trigger_days": null,
-        "signal_date": "2026-07-06",
-        "as_of": "2026-08-05",
-        "support_price": 18.1844,
-        "invalidation_price": 16.88,
-        "repair_price": 19.455,
-        "reward_risk": 0.74,
-        "data_confidence": "高",
-        "history_bars": 1497,
-        "reasons": [
-          "尚未形成左侧共振"
-        ]
-      },
-      "gap_layer": null,
-      "risk": {
-        "current_score": 71.5,
-        "score_5d_ago": 91.9,
-        "score_10d_ago": 65.3,
-        "score_change_5d": -20.400000000000006,
-        "score_change_10d": 6.200000000000003,
-        "score_reference_high": 91.9,
-        "score_reference_gap": -20.400000000000006,
-        "price_distance_20d_high": -0.05628373168851186,
-        "rank_5": 32.7,
-        "rank_20": 74.5,
-        "rank_60": 38.0,
-        "medium_rank": 59.9,
-        "short_rank_gap": 27.199999999999996,
-        "rollover_hits_last3": 1,
-        "close_below_ma20": false,
-        "close_down": true,
-        "volume_ratio": 1.1309875477392652,
-        "down_volume_share_5d": 0.6086033731858809,
-        "as_of": "2026-08-05",
-        "score_5d_date": "2026-07-29",
-        "score_10d_date": "2026-07-22",
-        "level": "watch",
-        "label": "观察",
-        "severity": 1,
-        "slope_alert": true,
-        "true_divergence": false,
-        "cross_sectional_rollover": false,
-        "volume_price_confirmation": false,
-        "reasons": [
-          "趋势评分斜率转弱"
-        ]
-      }
-    },
-    {
       "code": "US.DOCN",
       "ticker": "DOCN",
       "name": "DigitalOcean",
@@ -22604,7 +22305,7 @@
       ],
       "continuation_probability_percentile": 54.3,
       "opportunity_raw_score": 54.3,
-      "opportunity_score": 71.1,
+      "opportunity_score": 71.5,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -22668,13 +22369,13 @@
       },
       "gap_layer": null,
       "risk": {
-        "current_score": 71.1,
+        "current_score": 71.5,
         "score_5d_ago": 78.3,
         "score_10d_ago": 79.2,
-        "score_change_5d": -7.200000000000003,
-        "score_change_10d": -8.100000000000009,
+        "score_change_5d": -6.799999999999997,
+        "score_change_10d": -7.700000000000003,
         "score_reference_high": 79.2,
-        "score_reference_gap": -8.100000000000009,
+        "score_reference_gap": -7.700000000000003,
         "price_distance_20d_high": -0.26852091882219786,
         "rank_5": 22.6,
         "rank_20": 22.1,
@@ -22922,7 +22623,7 @@
       ],
       "continuation_probability_percentile": 83.5,
       "opportunity_raw_score": 54.2,
-      "opportunity_score": 70.6,
+      "opportunity_score": 71.1,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -22987,13 +22688,13 @@
       },
       "gap_layer": null,
       "risk": {
-        "current_score": 70.6,
+        "current_score": 71.1,
         "score_5d_ago": 63.4,
         "score_10d_ago": 23.6,
-        "score_change_5d": 7.199999999999996,
-        "score_change_10d": 46.99999999999999,
+        "score_change_5d": 7.699999999999996,
+        "score_change_10d": 47.49999999999999,
         "score_reference_high": 63.4,
-        "score_reference_gap": 7.199999999999996,
+        "score_reference_gap": 7.699999999999996,
         "price_distance_20d_high": -0.006448531167900673,
         "rank_5": 63.0,
         "rank_20": 72.1,
@@ -23241,7 +22942,7 @@
       ],
       "continuation_probability_percentile": 77.1,
       "opportunity_raw_score": 54.1,
-      "opportunity_score": 70.2,
+      "opportunity_score": 70.6,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -23304,7 +23005,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 77.0,
+        "rank": 75.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -23316,10 +23017,10 @@
         "last_gap_atr": 0.5276,
         "sequence_start_time": "2026-08-04",
         "last_opposite_gap_time": "2026-06-23",
-        "ema5": 328.2664,
-        "ema20": 323.1857,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 378307039.3,
+        "ema5": 331.8043,
+        "ema20": 324.6804,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 361357777.66,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -23330,7 +23031,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -23339,13 +23040,13 @@
         "score_effect": 0
       },
       "risk": {
-        "current_score": 70.2,
+        "current_score": 70.6,
         "score_5d_ago": 34.9,
         "score_10d_ago": 47.7,
-        "score_change_5d": 35.300000000000004,
-        "score_change_10d": 22.5,
+        "score_change_5d": 35.699999999999996,
+        "score_change_10d": 22.89999999999999,
         "score_reference_high": 47.7,
-        "score_reference_gap": 22.5,
+        "score_reference_gap": 22.89999999999999,
         "price_distance_20d_high": -0.02282839445139162,
         "rank_5": 76.0,
         "rank_20": 72.6,
@@ -23591,7 +23292,7 @@
       ],
       "continuation_probability_percentile": 34.8,
       "opportunity_raw_score": 53.9,
-      "opportunity_score": 69.8,
+      "opportunity_score": 70.2,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -23655,13 +23356,13 @@
       },
       "gap_layer": null,
       "risk": {
-        "current_score": 69.8,
+        "current_score": 70.2,
         "score_5d_ago": 65.5,
         "score_10d_ago": 74.1,
-        "score_change_5d": 4.299999999999997,
-        "score_change_10d": -4.299999999999997,
+        "score_change_5d": 4.700000000000003,
+        "score_change_10d": -3.8999999999999915,
         "score_reference_high": 74.1,
-        "score_reference_gap": -4.299999999999997,
+        "score_reference_gap": -3.8999999999999915,
         "price_distance_20d_high": -0.08351425676653645,
         "rank_5": 14.4,
         "rank_20": 64.9,
@@ -23910,7 +23611,7 @@
       ],
       "continuation_probability_percentile": 21.6,
       "opportunity_raw_score": 53.8,
-      "opportunity_score": 69.4,
+      "opportunity_score": 69.8,
       "opportunity_weights": {
         "trend_core": 0.65,
         "trend_confirmation": 0.1,
@@ -23974,13 +23675,13 @@
       },
       "gap_layer": null,
       "risk": {
-        "current_score": 69.4,
+        "current_score": 69.8,
         "score_5d_ago": 82.6,
         "score_10d_ago": 85.6,
-        "score_change_5d": -13.199999999999989,
-        "score_change_10d": -16.19999999999999,
+        "score_change_5d": -12.799999999999997,
+        "score_change_10d": -15.799999999999997,
         "score_reference_high": 85.6,
-        "score_reference_gap": -16.19999999999999,
+        "score_reference_gap": -15.799999999999997,
         "price_distance_20d_high": -0.21649312786339026,
         "rank_5": 14.9,
         "rank_20": 51.4,
@@ -24006,6 +23707,323 @@
           "趋势评分斜率转弱",
           "短期横截面相对强弱持续掉队",
           "跌破 MA20 且量价确认"
+        ]
+      }
+    },
+    {
+      "code": "US.PBR",
+      "ticker": "PBR",
+      "name": "巴西石油公司",
+      "market_cap": 125020707772.0,
+      "last_qualified_market_cap": 125020707772.0,
+      "active": true,
+      "daily": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 2,
+        "macd_facts": [
+          true,
+          true,
+          false
+        ],
+        "dif": 0.32984633435602717,
+        "dea": 0.28775020330305606,
+        "hist": 0.04209613105297111,
+        "rsi": 51.59461786695669,
+        "volume_ratio": 1.1309875477392652,
+        "volume_basis": "full_period",
+        "close_up": false,
+        "close": 18.36,
+        "previous_close": 18.72,
+        "ma5": 18.932,
+        "ma10": 18.709,
+        "ma20": 18.308,
+        "ma60": 18.18441199975,
+        "ma_label": "强多头结构",
+        "macd_label": "多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "正常"
+      },
+      "daily_confirmed": {
+        "ma_score": 5,
+        "ma_facts": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 2,
+        "macd_facts": [
+          true,
+          true,
+          false
+        ],
+        "dif": 0.32984633435602717,
+        "dea": 0.28775020330305606,
+        "hist": 0.04209613105297111,
+        "rsi": 51.59461786695669,
+        "volume_ratio": 1.1309875477392652,
+        "volume_basis": "full_period",
+        "close_up": false,
+        "close": 18.36,
+        "previous_close": 18.72,
+        "ma5": 18.932,
+        "ma10": 18.709,
+        "ma20": 18.308,
+        "ma60": 18.18441199975,
+        "ma_label": "强多头结构",
+        "macd_label": "多头动能",
+        "rsi_label": "健康强势",
+        "volume_label": "正常"
+      },
+      "daily_is_partial": false,
+      "weekly": {
+        "ma_score": 3,
+        "ma_facts": [
+          true,
+          false,
+          true,
+          false,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 0.5597480365645637,
+        "dea": 0.8010014918815003,
+        "hist": -0.24125345531693654,
+        "rsi": 53.791535439931614,
+        "volume_ratio": null,
+        "volume_basis": "same_time",
+        "close_up": false,
+        "close": 18.36,
+        "previous_close": 19.4,
+        "ma5": 18.363999999999997,
+        "ma10": 17.71,
+        "ma20": 19.077,
+        "ma60": 14.9722954556,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "盘中校准中"
+      },
+      "weekly_confirmed": {
+        "ma_score": 4,
+        "ma_facts": [
+          true,
+          false,
+          true,
+          true,
+          true
+        ],
+        "macd_score": 1,
+        "macd_facts": [
+          true,
+          false,
+          false
+        ],
+        "dif": 0.5931771091813935,
+        "dea": 0.8613148557107344,
+        "hist": -0.26813774652934086,
+        "rsi": 59.77929847723943,
+        "volume_ratio": 1.0789791628706675,
+        "volume_basis": "full_period",
+        "close_up": true,
+        "close": 19.4,
+        "previous_close": 18.77,
+        "ma5": 17.913999999999998,
+        "ma10": 17.750999999999998,
+        "ma20": 19.099,
+        "ma60": 14.867293303316668,
+        "ma_label": "偏多",
+        "macd_label": "动能分化",
+        "rsi_label": "健康强势",
+        "volume_label": "正常"
+      },
+      "weekly_is_partial": true,
+      "entry": {
+        "label": "刚突破",
+        "close_distance_ma20_pct": 0.0028402883985143568,
+        "close_distance_ma60_pct": 0.009655962494273362,
+        "distance_ma20_atr": 0.10136612311363856,
+        "distance_ma60_atr": 0.34228220866575165,
+        "distance_20d_high_pct": -0.05628373168851186,
+        "distance_52w_high_pct": -0.17446043165467617,
+        "gap_pct": 0.013354700854700807,
+        "breakout_recent": true,
+        "breakout_days_since": 3,
+        "pullback_ma10_reclaim": false,
+        "pullback_ma20_reclaim": false,
+        "atr_pct": 0.027940735244845367,
+        "intraday_range_pct": 0.036324786324786314,
+        "max_drawdown_20d_pct": -0.05360824742268033,
+        "quality_grade": "A",
+        "quality_score": 85.0,
+        "quality_label": "触发明确",
+        "positive_reasons": [
+          "突破发生在最近 1–4 根日 K",
+          "收盘位于 MA20 上方 0–1.5 ATR",
+          "RSI 位于健康强势区"
+        ],
+        "risk_reasons": []
+      },
+      "er_rank": null,
+      "er_hits_last5": 3,
+      "er_streak": 0,
+      "er_history_available": true,
+      "er_price_momentum_aligned": null,
+      "price_momentum": {
+        "returns": {
+          "4w": 0.06004618937644346,
+          "12w": -0.0787757150025088,
+          "36w": 0.5111337002590266
+        },
+        "mean": 0.16413472487765376,
+        "positive": true
+      },
+      "continuation_probability": 0.4192,
+      "sector": null,
+      "trend_strength": 59.1,
+      "trend_strength_percentile": 40.9,
+      "daily_confirmation_score": 83.3,
+      "weekly_confirmation_score": 46.7,
+      "trend_confirmation_score": 46.7,
+      "er_signal_score": 15.0,
+      "trend_components": [
+        {
+          "name": "多周期波动调整动量",
+          "percentile": 62.9,
+          "weight": 40,
+          "effective_weight": 40.0,
+          "contribution": 25.2
+        },
+        {
+          "name": "MA20/MA60斜率",
+          "percentile": 56.0,
+          "weight": 25,
+          "effective_weight": 25.0,
+          "contribution": 14.0
+        },
+        {
+          "name": "趋势平滑度",
+          "percentile": 39.5,
+          "weight": 20,
+          "effective_weight": 20.0,
+          "contribution": 7.9
+        },
+        {
+          "name": "相对SPY/行业强度",
+          "percentile": 40.6,
+          "weight": 15,
+          "effective_weight": 15.0,
+          "contribution": 6.1
+        }
+      ],
+      "continuation_probability_percentile": 9.1,
+      "opportunity_raw_score": 53.8,
+      "opportunity_score": 69.4,
+      "opportunity_weights": {
+        "trend_core": 0.65,
+        "trend_confirmation": 0.1,
+        "er_signal": 0.15,
+        "entry_quality": 0.1,
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
+      },
+      "opportunity_base_weights": {
+        "trend_core": 0.65,
+        "trend_confirmation": 0.1,
+        "er_signal": 0.15,
+        "entry_quality": 0.1,
+        "historical_continuation": 0.0,
+        "model_reliability": 0.0
+      },
+      "opportunity_missing_blocks": [],
+      "trend_candidate": false,
+      "instrument_type": "正股",
+      "market": "美股",
+      "source_group": "美股",
+      "data_source": "OpenD",
+      "er_sources": [],
+      "left_edge": {
+        "level": "neutral",
+        "label": "观望",
+        "priority": 1,
+        "ready": false,
+        "triggered": false,
+        "score": 20.7,
+        "location_score": 16.4,
+        "exhaustion_score": 13.9,
+        "trigger_score": 0.0,
+        "context_score": 76.8,
+        "rsi14": 51.6,
+        "stochastic14": 37.8,
+        "drawdown_20d": -0.0563,
+        "position_60d": 0.4975,
+        "volume_ratio": 0.99,
+        "downside_volume_share_5d": 0.6086,
+        "bullish_divergence": false,
+        "histogram_turn": false,
+        "rsi_turn": false,
+        "bullish_reversal": false,
+        "hammer_reversal": false,
+        "capitulation": false,
+        "breakdown": false,
+        "recent_trigger_days": null,
+        "signal_date": "2026-07-06",
+        "as_of": "2026-08-05",
+        "support_price": 18.1844,
+        "invalidation_price": 16.88,
+        "repair_price": 19.455,
+        "reward_risk": 0.74,
+        "data_confidence": "高",
+        "history_bars": 1497,
+        "reasons": [
+          "尚未形成左侧共振"
+        ]
+      },
+      "gap_layer": null,
+      "risk": {
+        "current_score": 69.4,
+        "score_5d_ago": 91.9,
+        "score_10d_ago": 65.3,
+        "score_change_5d": -22.5,
+        "score_change_10d": 4.1000000000000085,
+        "score_reference_high": 91.9,
+        "score_reference_gap": -22.5,
+        "price_distance_20d_high": -0.05628373168851186,
+        "rank_5": 32.7,
+        "rank_20": 74.5,
+        "rank_60": 38.0,
+        "medium_rank": 59.9,
+        "short_rank_gap": 27.199999999999996,
+        "rollover_hits_last3": 1,
+        "close_below_ma20": false,
+        "close_down": true,
+        "volume_ratio": 1.1309875477392652,
+        "down_volume_share_5d": 0.6086033731858809,
+        "as_of": "2026-08-05",
+        "score_5d_date": "2026-07-29",
+        "score_10d_date": "2026-07-22",
+        "level": "watch",
+        "label": "观察",
+        "severity": 1,
+        "slope_alert": true,
+        "true_divergence": false,
+        "cross_sectional_rollover": false,
+        "volume_price_confirmation": false,
+        "reasons": [
+          "趋势评分斜率转弱"
         ]
       }
     },
@@ -30583,7 +30601,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 46.0,
+        "rank": 45.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -30595,10 +30613,10 @@
         "last_gap_atr": 0.7428,
         "sequence_start_time": "2026-06-23",
         "last_opposite_gap_time": "2026-06-15",
-        "ema5": 277.4071,
-        "ema20": 283.5703,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 2530208959.6,
+        "ema5": 277.7381,
+        "ema20": 283.0779,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 2330760034.96,
         "fresh": false,
         "strong_fresh": false,
         "events": [
@@ -30609,7 +30627,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -32839,7 +32857,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 122.0,
+        "rank": 117.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -32851,10 +32869,10 @@
         "last_gap_atr": 0.2561,
         "sequence_start_time": "2026-08-03",
         "last_opposite_gap_time": "2026-06-03",
-        "ema5": 104.8753,
-        "ema20": 100.6807,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 448841597.7,
+        "ema5": 104.3202,
+        "ema20": 100.9216,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 448696264.22,
         "fresh": true,
         "strong_fresh": false,
         "events": [
@@ -32865,7 +32883,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -36700,7 +36718,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 102.0,
+        "rank": 98.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -36712,10 +36730,10 @@
         "last_gap_atr": 0.3331,
         "sequence_start_time": "2026-07-31",
         "last_opposite_gap_time": "2026-07-23",
-        "ema5": 359.6171,
-        "ema20": 350.4285,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 8745070730.2,
+        "ema5": 358.6181,
+        "ema20": 351.0182,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 7829875318.15,
         "fresh": true,
         "strong_fresh": false,
         "events": [
@@ -36726,7 +36744,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -37079,7 +37097,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 16:24:33",
+        "source_updated_at": "2026-08-06 21:18:41",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -38820,10 +38838,10 @@
         "last_gap_atr": 1.5802,
         "sequence_start_time": "2026-07-30",
         "last_opposite_gap_time": "2026-07-23",
-        "ema5": 284.5282,
-        "ema20": 288.6845,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 569471722.4,
+        "ema5": 286.1954,
+        "ema20": 288.765,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 538200342.95,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -38834,7 +38852,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -41341,7 +41359,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 16:24:33",
+        "source_updated_at": "2026-08-06 21:18:41",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -42363,7 +42381,7 @@
         "dea": -17404.536053911725,
         "hist": 824.2299557752267,
         "rsi": 42.655589102085685,
-        "volume_ratio": 0.7052449434112327,
+        "volume_ratio": 0.7054184209819098,
         "volume_basis": "full_period",
         "close_up": false,
         "close": 230500.0,
@@ -42396,7 +42414,7 @@
         "dea": -17404.536053911725,
         "hist": 824.2299557752267,
         "rsi": 42.655589102085685,
-        "volume_ratio": 0.7052449434112327,
+        "volume_ratio": 0.7054184209819098,
         "volume_basis": "full_period",
         "close_up": false,
         "close": 230500.0,
@@ -42636,8 +42654,8 @@
         "rollover_hits_last3": 0,
         "close_below_ma20": true,
         "close_down": true,
-        "volume_ratio": 0.7052449434112327,
-        "down_volume_share_5d": 0.3279646079523562,
+        "volume_ratio": 0.7054184209819098,
+        "down_volume_share_5d": 0.3279908448473297,
         "as_of": "2026-08-06",
         "score_5d_date": "2026-07-29",
         "score_10d_date": "2026-07-22",
@@ -42938,7 +42956,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 45.0,
+        "rank": 44.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -42950,10 +42968,10 @@
         "last_gap_atr": 0.4998,
         "sequence_start_time": "2026-07-22",
         "last_opposite_gap_time": "2026-06-18",
-        "ema5": 1004.0338,
-        "ema20": 1016.4375,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 2809561571.7,
+        "ema5": 1002.7892,
+        "ema20": 1014.9006,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 2617440429.19,
         "fresh": false,
         "strong_fresh": false,
         "events": [
@@ -42964,7 +42982,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "缺口环境",
         "detail": "左侧观察层",
         "priority": 3,
@@ -44559,7 +44577,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 118.0,
+        "rank": 114.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -44571,10 +44589,10 @@
         "last_gap_atr": 0.2687,
         "sequence_start_time": "2026-08-04",
         "last_opposite_gap_time": "2026-07-16",
-        "ema5": 64.9361,
-        "ema20": 64.7084,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 761982301.6,
+        "ema5": 65.7441,
+        "ema20": 64.9609,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 778061477.1,
         "fresh": true,
         "strong_fresh": false,
         "events": [
@@ -44585,7 +44603,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -46499,23 +46517,23 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 37.0,
-        "count_10d": 1,
+        "rank": 40.0,
+        "count_10d": 0,
         "count_50d": 2,
         "strong_count_10d": 0,
         "strong_count_50d": 0,
-        "atr_score_10d": 0.3785,
+        "atr_score_10d": 0.0,
         "atr_score_50d": 0.6931,
         "last_gap_time": "07-23",
         "last_gap_pct": -1.4984,
         "last_gap_atr": 0.3785,
         "sequence_start_time": "2026-07-17",
         "last_opposite_gap_time": "2026-07-10",
-        "ema5": 583.615,
-        "ema20": 598.7297,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 11350885900.0,
-        "fresh": true,
+        "ema5": 585.71,
+        "ema20": 597.8888,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 11099724545.87,
+        "fresh": false,
         "strong_fresh": false,
         "events": [
           {
@@ -46531,7 +46549,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -48122,7 +48140,42 @@
           "放量宣泄/承接"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 68.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 0.7335,
+        "atr_score_50d": 0.7335,
+        "last_gap_time": "08-06",
+        "last_gap_pct": 5.9141,
+        "last_gap_atr": 0.7335,
+        "sequence_start_time": "2026-08-06",
+        "last_opposite_gap_time": null,
+        "ema5": 593.7953,
+        "ema20": 578.9508,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 331524141.6,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-06",
+            "gap_pct": 5.9141,
+            "gap_atr": 0.7335,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 09:04:12",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 30.2,
         "score_5d_ago": 30.2,
@@ -48184,7 +48237,7 @@
         "dea": -166598.54076751982,
         "hist": -8595.815371491859,
         "rsi": 40.579737460198665,
-        "volume_ratio": 0.7606091485751177,
+        "volume_ratio": 0.789700689622485,
         "volume_basis": "full_period",
         "close_up": false,
         "close": 1495000.0,
@@ -48217,7 +48270,7 @@
         "dea": -166598.54076751982,
         "hist": -8595.815371491859,
         "rsi": 40.579737460198665,
-        "volume_ratio": 0.7606091485751177,
+        "volume_ratio": 0.789700689622485,
         "volume_basis": "full_period",
         "close_up": false,
         "close": 1495000.0,
@@ -48408,17 +48461,17 @@
         "priority": 1,
         "ready": false,
         "triggered": false,
-        "score": 44.2,
+        "score": 44.3,
         "location_score": 71.9,
-        "exhaustion_score": 25.5,
+        "exhaustion_score": 25.7,
         "trigger_score": 25.0,
         "context_score": 52.3,
         "rsi14": 40.6,
         "stochastic14": 32.8,
         "drawdown_20d": -0.3514,
         "position_60d": 0.143,
-        "volume_ratio": 0.8,
-        "downside_volume_share_5d": 0.351,
+        "volume_ratio": 0.83,
+        "downside_volume_share_5d": 0.3553,
         "bullish_divergence": false,
         "histogram_turn": true,
         "rsi_turn": false,
@@ -48458,8 +48511,8 @@
         "rollover_hits_last3": 0,
         "close_below_ma20": true,
         "close_down": true,
-        "volume_ratio": 0.7606091485751177,
-        "down_volume_share_5d": 0.35100767441120145,
+        "volume_ratio": 0.789700689622485,
+        "down_volume_share_5d": 0.35528013190225793,
         "as_of": "2026-08-06",
         "score_5d_date": "2026-07-29",
         "score_10d_date": "2026-07-22",
@@ -49081,7 +49134,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 125.0,
+        "rank": 120.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -49093,10 +49146,10 @@
         "last_gap_atr": 0.2487,
         "sequence_start_time": "2026-08-04",
         "last_opposite_gap_time": null,
-        "ema5": 91.1999,
-        "ema20": 91.1608,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 327045970.7,
+        "ema5": 92.0133,
+        "ema20": 91.3969,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 316017597.5,
         "fresh": true,
         "strong_fresh": false,
         "events": [
@@ -49107,7 +49160,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -49707,7 +49760,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 16:24:33",
+        "source_updated_at": "2026-08-06 21:18:41",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -50380,7 +50433,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 16:24:33",
+        "source_updated_at": "2026-08-06 21:18:41",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -51688,7 +51741,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 16:24:33",
+        "source_updated_at": "2026-08-06 21:18:41",
         "label": "缺口环境",
         "detail": "左侧观察层",
         "priority": 3,
@@ -53213,7 +53266,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 48.0,
+        "rank": 47.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -53225,10 +53278,10 @@
         "last_gap_atr": 0.5203,
         "sequence_start_time": "2026-07-01",
         "last_opposite_gap_time": "2026-06-15",
-        "ema5": 150.0132,
-        "ema20": 157.4279,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 2438250119.2,
+        "ema5": 152.4021,
+        "ema20": 157.4043,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 2480504200.22,
         "fresh": false,
         "strong_fresh": false,
         "events": [
@@ -53239,7 +53292,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -54202,42 +54255,7 @@
           "跌穿长期支撑且尚未出现动能拐点"
         ]
       },
-      "gap_layer": {
-        "direction": "down",
-        "rank": 23.0,
-        "count_10d": 1,
-        "count_50d": 1,
-        "strong_count_10d": 1,
-        "strong_count_50d": 1,
-        "atr_score_10d": 0.7548,
-        "atr_score_50d": 0.7548,
-        "last_gap_time": "08-05",
-        "last_gap_pct": -2.4171,
-        "last_gap_atr": 0.7548,
-        "sequence_start_time": "2026-08-05",
-        "last_opposite_gap_time": "2026-08-03",
-        "ema5": 70.1401,
-        "ema20": 70.9506,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 1517090062.4,
-        "fresh": true,
-        "strong_fresh": true,
-        "events": [
-          {
-            "time": "2026-08-05",
-            "gap_pct": -2.4171,
-            "gap_atr": 0.7548,
-            "strong": true
-          }
-        ],
-        "source_updated_at": "2026-08-06 16:30:25",
-        "label": "向下缺口",
-        "detail": "等待左侧机会",
-        "priority": 1,
-        "right_confirmation": false,
-        "left_environment": false,
-        "score_effect": 0
-      },
+      "gap_layer": null,
       "risk": {
         "current_score": 22.1,
         "score_5d_ago": 37.4,
@@ -55118,7 +55136,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 16:24:33",
+        "source_updated_at": "2026-08-06 21:18:41",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -57254,7 +57272,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 16:24:33",
+        "source_updated_at": "2026-08-06 21:18:41",
         "label": "缺口环境",
         "detail": "左侧观察层",
         "priority": 3,
@@ -58217,7 +58235,42 @@
           "跌穿长期支撑且尚未出现动能拐点"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "down",
+        "rank": 5.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 2.5387,
+        "atr_score_50d": 2.5387,
+        "last_gap_time": "08-06",
+        "last_gap_pct": -15.4029,
+        "last_gap_atr": 2.5387,
+        "sequence_start_time": "2026-08-06",
+        "last_opposite_gap_time": "2026-06-15",
+        "ema5": 386.6927,
+        "ema20": 420.8646,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 3203031542.73,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-06",
+            "gap_pct": -15.4029,
+            "gap_atr": 2.5387,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 09:04:12",
+        "label": "向下缺口",
+        "detail": "等待左侧机会",
+        "priority": 1,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 16.6,
         "score_5d_ago": 28.5,
@@ -59428,7 +59481,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 30.0,
+        "rank": 29.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -59440,10 +59493,10 @@
         "last_gap_atr": 0.5877,
         "sequence_start_time": "2026-07-31",
         "last_opposite_gap_time": "2026-07-21",
-        "ema5": 151.9162,
-        "ema20": 158.167,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 1262273097.0,
+        "ema5": 149.7475,
+        "ema20": 156.9521,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 1256440641.57,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -59454,7 +59507,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -60419,24 +60472,24 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 10.0,
-        "count_10d": 1,
+        "rank": 43.0,
+        "count_10d": 0,
         "count_50d": 1,
-        "strong_count_10d": 1,
+        "strong_count_10d": 0,
         "strong_count_50d": 1,
-        "atr_score_10d": 1.9257,
+        "atr_score_10d": 0.0,
         "atr_score_50d": 1.9257,
         "last_gap_time": "07-23",
         "last_gap_pct": -8.2569,
         "last_gap_atr": 1.9257,
         "sequence_start_time": "2026-07-23",
         "last_opposite_gap_time": null,
-        "ema5": 320.2633,
-        "ema20": 343.4737,
-        "ema_as_of": "2026-08-05",
-        "average_turnover_10d": 15027238422.8,
-        "fresh": true,
-        "strong_fresh": true,
+        "ema5": 320.0189,
+        "ema20": 341.1934,
+        "ema_as_of": "2026-08-06",
+        "average_turnover_10d": 12087334044.53,
+        "fresh": false,
+        "strong_fresh": false,
         "events": [
           {
             "time": "2026-07-23",
@@ -60445,7 +60498,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 16:30:25",
+        "source_updated_at": "2026-08-07 09:04:12",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -69710,7 +69763,7 @@
   "gap_sources": {
     "US": {
       "status": "ready",
-      "updated_at": "2026-08-06 16:30:25",
+      "updated_at": "2026-08-07 09:04:12",
       "window_days": 50,
       "ranking_days": 10,
       "minimum_gap_atr": 0.2,
@@ -69720,7 +69773,7 @@
     },
     "HK": {
       "status": "ready",
-      "updated_at": "2026-08-06 16:24:33",
+      "updated_at": "2026-08-06 21:18:41",
       "window_days": 50,
       "ranking_days": 10,
       "minimum_gap_atr": 0.2,
