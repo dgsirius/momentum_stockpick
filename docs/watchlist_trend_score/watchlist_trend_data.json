@@ -1,7 +1,7 @@
 {
   "schema_version": 15,
   "title": "自选股双引擎雷达",
-  "generated_at": "2026-08-07T10:09:20+08:00",
+  "generated_at": "2026-08-07T14:23:47+08:00",
   "heat_as_of": "2026-08-06",
   "er_signal_date": "2026-08-06",
   "opend_last_refresh": "2026-08-07T09:39:31+08:00",
@@ -179,9 +179,9 @@
     "left_arming": 25,
     "left_watch": 18,
     "left_breakdown": 51,
-    "gap_active": 40,
+    "gap_active": 62,
     "right_gap_confirmed": 6,
-    "left_gap_context": 4,
+    "left_gap_context": 5,
     "risk_watch": 75,
     "risk_warning": 5,
     "risk_confirmed": 7
@@ -509,7 +509,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "缺口确认",
         "detail": "右侧加强层",
         "priority": 4,
@@ -887,7 +887,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "缺口确认",
         "detail": "右侧加强层",
         "priority": 4,
@@ -2168,7 +2168,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 6.0,
+        "rank": 3.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -2194,7 +2194,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 21:18:41",
+        "source_updated_at": "2026-08-07 14:00:05",
         "label": "缺口确认",
         "detail": "右侧加强层",
         "priority": 4,
@@ -2520,7 +2520,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 2.0,
+        "rank": 1.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -2546,7 +2546,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 21:18:41",
+        "source_updated_at": "2026-08-07 14:00:05",
         "label": "缺口确认",
         "detail": "右侧加强层",
         "priority": 4,
@@ -2873,7 +2873,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 168.0,
+        "rank": 150.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -2899,7 +2899,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "缺口确认",
         "detail": "右侧加强层",
         "priority": 4,
@@ -3254,7 +3254,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 21:18:41",
+        "source_updated_at": "2026-08-07 14:00:05",
         "label": "缺口确认",
         "detail": "右侧加强层",
         "priority": 4,
@@ -3891,7 +3891,42 @@
           "长下影显示低位承接"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "down",
+        "rank": 18.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 1.6923,
+        "atr_score_50d": 1.6923,
+        "last_gap_time": "08-06 10:00",
+        "last_gap_pct": -1.4198,
+        "last_gap_atr": 1.6923,
+        "sequence_start_time": "2026-08-06 10:00",
+        "last_opposite_gap_time": "2026-07-31 10:00",
+        "ema5": 160.6779,
+        "ema20": 160.681,
+        "ema_as_of": "2026-08-07 14:00",
+        "average_turnover_10d": 2852514862.88,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-06 10:00",
+            "gap_pct": -1.4198,
+            "gap_atr": 1.6923,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 14:00:05",
+        "label": "向下缺口",
+        "detail": "等待左侧机会",
+        "priority": 1,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 95.9,
         "score_5d_ago": 97.8,
@@ -4208,7 +4243,48 @@
           "RSI 连续回升形成拐点"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 39.0,
+        "count_10d": 1,
+        "count_50d": 2,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 1.946,
+        "atr_score_50d": 2.8025,
+        "last_gap_time": "08-04 10:00",
+        "last_gap_pct": 2.0229,
+        "last_gap_atr": 1.946,
+        "sequence_start_time": "2026-07-02 10:00",
+        "last_opposite_gap_time": null,
+        "ema5": 26.7193,
+        "ema20": 25.6177,
+        "ema_as_of": "2026-08-07 14:00",
+        "average_turnover_10d": 144895320.88,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-04 10:00",
+            "gap_pct": 2.0229,
+            "gap_atr": 1.946,
+            "strong": true
+          },
+          {
+            "time": "2026-07-02 10:00",
+            "gap_pct": 1.2188,
+            "gap_atr": 0.8564,
+            "strong": false
+          }
+        ],
+        "source_updated_at": "2026-08-07 14:00:05",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 95.5,
         "score_5d_ago": 75.8,
@@ -5201,7 +5277,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -6483,7 +6559,42 @@
           "RSI 连续回升形成拐点"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 205.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 1.505,
+        "atr_score_50d": 1.505,
+        "last_gap_time": "07-28 10:00",
+        "last_gap_pct": 0.4565,
+        "last_gap_atr": 1.505,
+        "sequence_start_time": "2026-07-28 10:00",
+        "last_opposite_gap_time": "2026-07-21 10:00",
+        "ema5": 523.6726,
+        "ema20": 520.4452,
+        "ema_as_of": "2026-08-06 16:00",
+        "average_turnover_10d": 2008734822.65,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-07-28 10:00",
+            "gap_pct": 0.4565,
+            "gap_atr": 1.505,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 13:58:13",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 92.6,
         "score_5d_ago": 87.0,
@@ -6803,7 +6914,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 7.0,
+        "rank": 4.0,
         "count_10d": 1,
         "count_50d": 3,
         "strong_count_10d": 0,
@@ -6841,7 +6952,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 21:18:41",
+        "source_updated_at": "2026-08-07 14:00:05",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -7201,7 +7312,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -9799,7 +9910,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -10123,7 +10234,42 @@
           "收盘出现反转确认 K 线"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 204.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 1.5063,
+        "atr_score_50d": 1.5063,
+        "last_gap_time": "08-06 10:00",
+        "last_gap_pct": 0.9126,
+        "last_gap_atr": 1.5063,
+        "sequence_start_time": "2026-08-06 10:00",
+        "last_opposite_gap_time": "2026-08-04 10:00",
+        "ema5": 39.3837,
+        "ema20": 39.129,
+        "ema_as_of": "2026-08-06 16:00",
+        "average_turnover_10d": 140613987.46,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-06 10:00",
+            "gap_pct": 0.9126,
+            "gap_atr": 1.5063,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 13:58:13",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 88.0,
         "score_5d_ago": 93.3,
@@ -10441,7 +10587,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 28.0,
+        "rank": 18.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -10467,7 +10613,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 21:18:41",
+        "source_updated_at": "2026-08-07 14:00:05",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -11467,7 +11613,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -12772,7 +12918,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -13455,7 +13601,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -14097,7 +14243,42 @@
           "收盘出现反转确认 K 线"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 234.0,
+        "count_10d": 0,
+        "count_50d": 1,
+        "strong_count_10d": 0,
+        "strong_count_50d": 1,
+        "atr_score_10d": 0.0,
+        "atr_score_50d": 9.0648,
+        "last_gap_time": "07-15 10:00",
+        "last_gap_pct": 4.5703,
+        "last_gap_atr": 9.0648,
+        "sequence_start_time": "2026-07-15 10:00",
+        "last_opposite_gap_time": "2026-06-05 10:00",
+        "ema5": 1127.2227,
+        "ema20": 1126.581,
+        "ema_as_of": "2026-08-06 16:00",
+        "average_turnover_10d": 731879054.23,
+        "fresh": false,
+        "strong_fresh": false,
+        "events": [
+          {
+            "time": "2026-07-15 10:00",
+            "gap_pct": 4.5703,
+            "gap_atr": 9.0648,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 13:58:13",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 83.1,
         "score_5d_ago": 79.4,
@@ -17581,7 +17762,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -18228,7 +18409,42 @@
           "收盘出现反转确认 K 线"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 189.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 2.7006,
+        "atr_score_50d": 2.7006,
+        "last_gap_time": "08-04 10:00",
+        "last_gap_pct": 4.8084,
+        "last_gap_atr": 2.7006,
+        "sequence_start_time": "2026-08-04 10:00",
+        "last_opposite_gap_time": "2026-08-03 10:00",
+        "ema5": 287.8847,
+        "ema20": 284.3132,
+        "ema_as_of": "2026-08-06 16:00",
+        "average_turnover_10d": 1654928068.19,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-04 10:00",
+            "gap_pct": 4.8084,
+            "gap_atr": 2.7006,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 13:58:13",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 77.7,
         "score_5d_ago": 49.3,
@@ -18576,7 +18792,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -21759,7 +21975,42 @@
           "RSI 连续回升形成拐点"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 186.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 3.0466,
+        "atr_score_50d": 3.0466,
+        "last_gap_time": "08-04 10:00",
+        "last_gap_pct": 2.6002,
+        "last_gap_atr": 3.0466,
+        "sequence_start_time": "2026-08-04 10:00",
+        "last_opposite_gap_time": "2026-07-28 10:00",
+        "ema5": 1711.5591,
+        "ema20": 1709.3749,
+        "ema_as_of": "2026-08-06 16:00",
+        "average_turnover_10d": 2934919497.83,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-04 10:00",
+            "gap_pct": 2.6002,
+            "gap_atr": 3.0466,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 13:58:13",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 73.1,
         "score_5d_ago": 78.9,
@@ -22078,7 +22329,48 @@
           "MACD 柱体由弱转强"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "down",
+        "rank": 95.0,
+        "count_10d": 0,
+        "count_50d": 2,
+        "strong_count_10d": 0,
+        "strong_count_50d": 0,
+        "atr_score_10d": 0.0,
+        "atr_score_50d": 1.1299,
+        "last_gap_time": "07-16 10:00",
+        "last_gap_pct": -0.6045,
+        "last_gap_atr": 0.5801,
+        "sequence_start_time": "2026-07-08 10:00",
+        "last_opposite_gap_time": "2026-07-02 10:00",
+        "ema5": 54.1925,
+        "ema20": 55.143,
+        "ema_as_of": "2026-08-06 16:00",
+        "average_turnover_10d": 275283015.34,
+        "fresh": false,
+        "strong_fresh": false,
+        "events": [
+          {
+            "time": "2026-07-16 10:00",
+            "gap_pct": -0.6045,
+            "gap_atr": 0.5801,
+            "strong": false
+          },
+          {
+            "time": "2026-07-08 10:00",
+            "gap_pct": -0.9362,
+            "gap_atr": 0.5497,
+            "strong": false
+          }
+        ],
+        "source_updated_at": "2026-08-07 13:58:13",
+        "label": "缺口环境",
+        "detail": "左侧观察层",
+        "priority": 3,
+        "right_confirmation": false,
+        "left_environment": true,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 72.7,
         "score_5d_ago": 78.5,
@@ -24655,7 +24947,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -24979,7 +25271,42 @@
           "收盘出现反转确认 K 线"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "down",
+        "rank": 70.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 2.6386,
+        "atr_score_50d": 2.6386,
+        "last_gap_time": "08-05 10:00",
+        "last_gap_pct": -3.1972,
+        "last_gap_atr": 2.6386,
+        "sequence_start_time": "2026-08-05 10:00",
+        "last_opposite_gap_time": "2026-08-04 10:00",
+        "ema5": 491.3968,
+        "ema20": 491.9096,
+        "ema_as_of": "2026-08-06 16:00",
+        "average_turnover_10d": 14773198034.76,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-05 10:00",
+            "gap_pct": -3.1972,
+            "gap_atr": 2.6386,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 13:58:13",
+        "label": "向下缺口",
+        "detail": "等待左侧机会",
+        "priority": 1,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 69.0,
         "score_5d_ago": 82.1,
@@ -25646,7 +25973,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -26639,7 +26966,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -27532,7 +27859,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 7.0,
+        "rank": 9.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -27558,7 +27885,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 21:18:41",
+        "source_updated_at": "2026-08-07 14:00:05",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -27885,7 +28212,48 @@
           "RSI 连续回升形成拐点"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 201.0,
+        "count_10d": 2,
+        "count_50d": 2,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 2.1838,
+        "atr_score_50d": 2.1838,
+        "last_gap_time": "08-04 10:00",
+        "last_gap_pct": 1.2307,
+        "last_gap_atr": 1.6036,
+        "sequence_start_time": "2026-07-30 10:00",
+        "last_opposite_gap_time": "2026-07-28 10:00",
+        "ema5": 419.249,
+        "ema20": 418.7098,
+        "ema_as_of": "2026-08-06 16:00",
+        "average_turnover_10d": 5533572623.02,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-04 10:00",
+            "gap_pct": 1.2307,
+            "gap_atr": 1.6036,
+            "strong": true
+          },
+          {
+            "time": "2026-07-30 10:00",
+            "gap_pct": 0.7905,
+            "gap_atr": 0.5802,
+            "strong": false
+          }
+        ],
+        "source_updated_at": "2026-08-07 13:58:13",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 65.3,
         "score_5d_ago": 44.4,
@@ -29079,7 +29447,42 @@
           "收盘出现反转确认 K 线"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "down",
+        "rank": 84.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 1.1523,
+        "atr_score_50d": 1.1523,
+        "last_gap_time": "08-05 10:00",
+        "last_gap_pct": -1.041,
+        "last_gap_atr": 1.1523,
+        "sequence_start_time": "2026-08-05 10:00",
+        "last_opposite_gap_time": "2026-08-04 10:00",
+        "ema5": 37.3201,
+        "ema20": 37.3394,
+        "ema_as_of": "2026-08-06 16:00",
+        "average_turnover_10d": 349085109.54,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-05 10:00",
+            "gap_pct": -1.041,
+            "gap_atr": 1.1523,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 13:58:13",
+        "label": "向下缺口",
+        "detail": "等待左侧机会",
+        "priority": 1,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 63.6,
         "score_5d_ago": 68.6,
@@ -29428,7 +29831,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -31027,7 +31430,42 @@
           "MACD 柱体由弱转强"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "down",
+        "rank": 68.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 2.8251,
+        "atr_score_50d": 2.8251,
+        "last_gap_time": "08-05 10:00",
+        "last_gap_pct": -3.1326,
+        "last_gap_atr": 2.8251,
+        "sequence_start_time": "2026-08-05 10:00",
+        "last_opposite_gap_time": "2026-08-04 10:00",
+        "ema5": 19.2044,
+        "ema20": 19.3166,
+        "ema_as_of": "2026-08-06 16:00",
+        "average_turnover_10d": 320993798.81,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-05 10:00",
+            "gap_pct": -3.1326,
+            "gap_atr": 2.8251,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 13:58:13",
+        "label": "向下缺口",
+        "detail": "等待左侧机会",
+        "priority": 1,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 61.2,
         "score_5d_ago": 75.3,
@@ -33572,7 +34010,42 @@
           "尚未形成左侧共振"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "down",
+        "rank": 80.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 1.2208,
+        "atr_score_50d": 1.2208,
+        "last_gap_time": "08-06 10:00",
+        "last_gap_pct": -2.4962,
+        "last_gap_atr": 1.2208,
+        "sequence_start_time": "2026-08-06 10:00",
+        "last_opposite_gap_time": "2026-07-30 10:00",
+        "ema5": 194.065,
+        "ema20": 205.6391,
+        "ema_as_of": "2026-08-06 16:00",
+        "average_turnover_10d": 4700694614.16,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-06 10:00",
+            "gap_pct": -2.4962,
+            "gap_atr": 1.2208,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 13:58:13",
+        "label": "向下缺口",
+        "detail": "等待左侧机会",
+        "priority": 1,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 57.9,
         "score_5d_ago": 48.0,
@@ -34527,7 +35000,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 45.0,
+        "rank": 48.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -34553,7 +35026,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -35226,7 +35699,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -35871,7 +36344,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 19.0,
+        "rank": 13.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -35897,7 +36370,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 21:18:41",
+        "source_updated_at": "2026-08-07 14:00:05",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -36231,7 +36704,42 @@
       "data_source": "OpenD",
       "er_sources": [],
       "left_edge": null,
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 31.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 3.0956,
+        "atr_score_50d": 3.0956,
+        "last_gap_time": "07-31 10:00",
+        "last_gap_pct": 8.6702,
+        "last_gap_atr": 3.0956,
+        "sequence_start_time": "2026-07-31 10:00",
+        "last_opposite_gap_time": "2026-07-28 10:00",
+        "ema5": 254.3386,
+        "ema20": 239.8326,
+        "ema_as_of": "2026-08-07 14:00",
+        "average_turnover_10d": 1554285296.84,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-07-31 10:00",
+            "gap_pct": 8.6702,
+            "gap_atr": 3.0956,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 14:00:05",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "level": "pending",
         "label": "待计算",
@@ -38803,7 +39311,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "缺口环境",
         "detail": "左侧观察层",
         "priority": 3,
@@ -39473,7 +39981,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -40153,7 +40661,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -43377,7 +43885,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 9.0,
+        "rank": 11.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -43403,7 +43911,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 21:18:41",
+        "source_updated_at": "2026-08-07 14:00:05",
         "label": "缺口环境",
         "detail": "左侧观察层",
         "priority": 3,
@@ -43660,7 +44168,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 8.0,
+        "rank": 10.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -43686,7 +44194,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 21:18:41",
+        "source_updated_at": "2026-08-07 14:00:05",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -44013,7 +44521,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 44.0,
+        "rank": 47.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -44039,7 +44547,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "缺口环境",
         "detail": "左侧观察层",
         "priority": 3,
@@ -46220,7 +46728,42 @@
           "MACD 柱体由弱转强"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "down",
+        "rank": 71.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 2.4926,
+        "atr_score_50d": 2.4926,
+        "last_gap_time": "08-06 10:00",
+        "last_gap_pct": -4.9822,
+        "last_gap_atr": 2.4926,
+        "sequence_start_time": "2026-08-06 10:00",
+        "last_opposite_gap_time": "2026-08-04 10:00",
+        "ema5": 1276.2016,
+        "ema20": 1312.5989,
+        "ema_as_of": "2026-08-06 16:00",
+        "average_turnover_10d": 21452111829.42,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-06 10:00",
+            "gap_pct": -4.9822,
+            "gap_atr": 2.4926,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 13:58:13",
+        "label": "向下缺口",
+        "detail": "等待左侧机会",
+        "priority": 1,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 34.7,
         "score_5d_ago": 51.6,
@@ -47489,7 +48032,42 @@
           "随机指标与短线跌幅显示卖压耗竭"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 49.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 1.116,
+        "atr_score_50d": 1.116,
+        "last_gap_time": "08-07 10:00",
+        "last_gap_pct": 0.7036,
+        "last_gap_atr": 1.116,
+        "sequence_start_time": "2026-08-07 10:00",
+        "last_opposite_gap_time": "2026-08-05 10:00",
+        "ema5": 23.1954,
+        "ema20": 23.013,
+        "ema_as_of": "2026-08-07 14:00",
+        "average_turnover_10d": 1769922585.0,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-07 10:00",
+            "gap_pct": 0.7036,
+            "gap_atr": 1.116,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 14:00:05",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 33.1,
         "score_5d_ago": 61.0,
@@ -49711,7 +50289,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 40.0,
+        "rank": 41.0,
         "count_10d": 0,
         "count_50d": 2,
         "strong_count_10d": 0,
@@ -49743,7 +50321,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -50706,7 +51284,42 @@
           "RSI 连续回升形成拐点"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 199.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 1.7111,
+        "atr_score_50d": 1.7111,
+        "last_gap_time": "08-04 10:00",
+        "last_gap_pct": 2.5361,
+        "last_gap_atr": 1.7111,
+        "sequence_start_time": "2026-08-04 10:00",
+        "last_opposite_gap_time": "2026-07-28 10:00",
+        "ema5": 76.1542,
+        "ema20": 76.1045,
+        "ema_as_of": "2026-08-06 16:00",
+        "average_turnover_10d": 1092611659.78,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-04 10:00",
+            "gap_pct": 2.5361,
+            "gap_atr": 1.7111,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 13:58:13",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 28.9,
         "score_5d_ago": 25.1,
@@ -52613,42 +53226,7 @@
           "随机指标与短线跌幅显示卖压耗竭"
         ]
       },
-      "gap_layer": {
-        "direction": "up",
-        "rank": 5.0,
-        "count_10d": 1,
-        "count_50d": 1,
-        "strong_count_10d": 0,
-        "strong_count_50d": 0,
-        "atr_score_10d": 0.4011,
-        "atr_score_50d": 0.4011,
-        "last_gap_time": "07-31",
-        "last_gap_pct": 2.1477,
-        "last_gap_atr": 0.4011,
-        "sequence_start_time": "2026-07-31",
-        "last_opposite_gap_time": "2026-06-22",
-        "ema5": 31.4771,
-        "ema20": 31.3181,
-        "ema_as_of": "2026-08-06",
-        "average_turnover_10d": 146733459.4,
-        "fresh": true,
-        "strong_fresh": false,
-        "events": [
-          {
-            "time": "2026-07-31",
-            "gap_pct": 2.1477,
-            "gap_atr": 0.4011,
-            "strong": false
-          }
-        ],
-        "source_updated_at": "2026-08-06 21:18:41",
-        "label": "向上缺口",
-        "detail": "等待右侧候选",
-        "priority": 2,
-        "right_confirmation": false,
-        "left_environment": false,
-        "score_effect": 0
-      },
+      "gap_layer": null,
       "risk": {
         "current_score": 26.4,
         "score_5d_ago": 67.3,
@@ -52900,7 +53478,42 @@
           "跌穿长期支撑且尚未出现动能拐点"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 26.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 3.5079,
+        "atr_score_50d": 3.5079,
+        "last_gap_time": "07-31 10:00",
+        "last_gap_pct": 12.3529,
+        "last_gap_atr": 3.5079,
+        "sequence_start_time": "2026-07-31 10:00",
+        "last_opposite_gap_time": "2026-07-17 10:00",
+        "ema5": 343.8298,
+        "ema20": 314.6764,
+        "ema_as_of": "2026-08-07 14:00",
+        "average_turnover_10d": 3070756263.43,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-07-31 10:00",
+            "gap_pct": 12.3529,
+            "gap_atr": 3.5079,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 14:00:05",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 26.0,
         "score_5d_ago": 5.8,
@@ -55470,7 +56083,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -56141,7 +56754,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-06 21:18:41",
+        "source_updated_at": "2026-08-07 14:00:05",
         "label": "缺口环境",
         "detail": "左侧观察层",
         "priority": 3,
@@ -56471,7 +57084,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 47.0,
+        "rank": 49.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -56497,7 +57110,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -57805,7 +58418,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -58700,7 +59313,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 11.0,
+        "rank": 12.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -58726,7 +59339,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-06 21:18:41",
+        "source_updated_at": "2026-08-07 14:00:05",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -59305,7 +59918,48 @@
           "跌穿长期支撑且尚未出现动能拐点"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 30.0,
+        "count_10d": 2,
+        "count_50d": 2,
+        "strong_count_10d": 2,
+        "strong_count_50d": 2,
+        "atr_score_10d": 4.3818,
+        "atr_score_50d": 4.3818,
+        "last_gap_time": "08-04 10:00",
+        "last_gap_pct": 3.3863,
+        "last_gap_atr": 1.2778,
+        "sequence_start_time": "2026-07-31 10:00",
+        "last_opposite_gap_time": "2026-07-28 10:00",
+        "ema5": 87.6542,
+        "ema20": 84.897,
+        "ema_as_of": "2026-08-07 14:00",
+        "average_turnover_10d": 1011682839.0,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-04 10:00",
+            "gap_pct": 3.3863,
+            "gap_atr": 1.2778,
+            "strong": true
+          },
+          {
+            "time": "2026-07-31 10:00",
+            "gap_pct": 10.9325,
+            "gap_atr": 3.104,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 14:00:05",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 17.8,
         "score_5d_ago": 3.1,
@@ -59624,7 +60278,42 @@
           "尚未形成左侧共振"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "down",
+        "rank": 88.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 0,
+        "strong_count_50d": 0,
+        "atr_score_10d": 0.915,
+        "atr_score_50d": 0.915,
+        "last_gap_time": "08-06 10:00",
+        "last_gap_pct": -1.5038,
+        "last_gap_atr": 0.915,
+        "sequence_start_time": "2026-08-06 10:00",
+        "last_opposite_gap_time": "2026-07-30 10:00",
+        "ema5": 86.2642,
+        "ema20": 87.9483,
+        "ema_as_of": "2026-08-06 16:00",
+        "average_turnover_10d": 2114399794.4,
+        "fresh": true,
+        "strong_fresh": false,
+        "events": [
+          {
+            "time": "2026-08-06 10:00",
+            "gap_pct": -1.5038,
+            "gap_atr": 0.915,
+            "strong": false
+          }
+        ],
+        "source_updated_at": "2026-08-07 13:58:13",
+        "label": "向下缺口",
+        "detail": "等待左侧机会",
+        "priority": 1,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 17.4,
         "score_5d_ago": 9.4,
@@ -60581,7 +61270,42 @@
           "收盘出现反转确认 K 线"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 193.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 2.1447,
+        "atr_score_50d": 2.1447,
+        "last_gap_time": "08-04 10:00",
+        "last_gap_pct": 2.3947,
+        "last_gap_atr": 2.1447,
+        "sequence_start_time": "2026-08-04 10:00",
+        "last_opposite_gap_time": "2026-07-30 10:00",
+        "ema5": 160.6016,
+        "ema20": 159.8963,
+        "ema_as_of": "2026-08-06 16:00",
+        "average_turnover_10d": 2037490584.06,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-04 10:00",
+            "gap_pct": 2.3947,
+            "gap_atr": 2.1447,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 13:58:13",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 16.1,
         "score_5d_ago": 38.6,
@@ -62109,7 +62833,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 43.0,
+        "rank": 45.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -62135,7 +62859,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -65525,7 +66249,48 @@
           "跌穿长期支撑且尚未出现动能拐点"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 221.0,
+        "count_10d": 2,
+        "count_50d": 2,
+        "strong_count_10d": 0,
+        "strong_count_50d": 0,
+        "atr_score_10d": 1.4662,
+        "atr_score_50d": 1.4662,
+        "last_gap_time": "08-04 10:00",
+        "last_gap_pct": 0.3809,
+        "last_gap_atr": 0.598,
+        "sequence_start_time": "2026-07-31 10:00",
+        "last_opposite_gap_time": "2026-07-17 10:00",
+        "ema5": 406.0769,
+        "ema20": 405.0435,
+        "ema_as_of": "2026-08-06 16:00",
+        "average_turnover_10d": 669057644.36,
+        "fresh": true,
+        "strong_fresh": false,
+        "events": [
+          {
+            "time": "2026-08-04 10:00",
+            "gap_pct": 0.3809,
+            "gap_atr": 0.598,
+            "strong": false
+          },
+          {
+            "time": "2026-07-31 10:00",
+            "gap_pct": 0.7053,
+            "gap_atr": 0.8683,
+            "strong": false
+          }
+        ],
+        "source_updated_at": "2026-08-07 13:58:13",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 9.5,
         "score_5d_ago": 7.2,
@@ -67399,7 +68164,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -69795,7 +70560,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 09:04:12",
+        "source_updated_at": "2026-08-07 13:58:13",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -70441,7 +71206,42 @@
           "跌穿长期支撑且尚未出现动能拐点"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 197.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 1.7972,
+        "atr_score_50d": 1.7972,
+        "last_gap_time": "08-03 10:00",
+        "last_gap_pct": 1.1419,
+        "last_gap_atr": 1.7972,
+        "sequence_start_time": "2026-08-03 10:00",
+        "last_opposite_gap_time": "2026-07-30 10:00",
+        "ema5": 73.6457,
+        "ema20": 73.5962,
+        "ema_as_of": "2026-08-06 16:00",
+        "average_turnover_10d": 2590146328.21,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-03 10:00",
+            "gap_pct": 1.1419,
+            "gap_atr": 1.7972,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-07 13:58:13",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 2.9,
         "score_5d_ago": 19.3,
@@ -72214,21 +73014,21 @@
   "gap_sources": {
     "US": {
       "status": "ready",
-      "updated_at": "2026-08-07 09:04:12",
+      "updated_at": "2026-08-07 13:58:13",
       "window_days": 50,
       "ranking_days": 10,
-      "minimum_gap_atr": 0.2,
-      "strong_gap_atr": 0.5,
+      "minimum_gap_atr": null,
+      "strong_gap_atr": null,
       "turnover_threshold": 10000000.0,
       "path": "/Users/richard/dowork/hk-us-gap-monitor/.data/gap_results_us.json"
     },
     "HK": {
       "status": "ready",
-      "updated_at": "2026-08-06 21:18:41",
+      "updated_at": "2026-08-07 14:00:05",
       "window_days": 50,
       "ranking_days": 10,
-      "minimum_gap_atr": 0.2,
-      "strong_gap_atr": 0.5,
+      "minimum_gap_atr": null,
+      "strong_gap_atr": null,
       "turnover_threshold": 10000000.0,
       "path": "/Users/richard/dowork/hk-us-gap-monitor/.data/gap_results_hk.json"
     }
