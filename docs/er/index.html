@@ -48,7 +48,7 @@
   <script defer data-vercel-analytics src="/_vercel/insights/script.js"></script>
 </head>
 <body>
-<nav class="suite-nav" aria-label="量化看板导航"><a class="active" href="#asset-priority" data-dashboard-nav data-i18n="navPriority">资产内容优先级</a><a href="#hot-trend" data-dashboard-nav data-i18n="navHot">热门追踪&趋势判断</a><a href="./residual-momentum/" data-i18n="navEr">残差动量</a><button class="lang-toggle" id="langToggle" type="button" data-active="zh" aria-label="切换为英文" title="切换为英文"><span data-lang-code="zh">中</span><i aria-hidden="true">/</i><span data-lang-code="en">EN</span></button></nav>
+<nav class="suite-nav" aria-label="量化看板导航"><a class="active" href="#asset-priority" data-dashboard-nav data-i18n="navPriority">资产内容优先级</a><a href="#hot-trend" data-dashboard-nav data-i18n="navHot">热门追踪&趋势判断</a><a href="./residual-momentum/" data-i18n="navEr">残差动量</a><a href="./hot-target-pain/" data-i18n="navPain">热门标的交易痛点</a><button class="lang-toggle" id="langToggle" type="button" data-active="zh" aria-label="切换为英文" title="切换为英文"><span data-lang-code="zh">中</span><i aria-hidden="true">/</i><span data-lang-code="en">EN</span></button></nav>
 <main class="page">
   <section class="priority-board dashboard-pane" id="asset-priority" data-dashboard-pane>
     <header class="priority-header">
@@ -112,7 +112,7 @@
 <div class="metric-tooltip" id="metricTooltip" role="tooltip" hidden></div>
 <script>
 const textEN={
-  navPriority:'Asset Content Priority',navHot:'Hot Tracking & Trend Assessment',navEr:'Residual Momentum',heroTitle:'🔥 Hot Tracking & 🎯 Trend Assessment',
+  navPriority:'Asset Content Priority',navHot:'Hot Tracking & Trend Assessment',navPain:'Popular-symbol Trading Pain',navEr:'Residual Momentum',heroTitle:'🔥 Hot Tracking & 🎯 Trend Assessment',
   priorityTitle:'Asset Content Priority',priorityIntro:'Stocks are placed into four quadrants using user attention and price-trend strength: high heat with a strong trend gets opportunity content first; high heat with a weak trend calls for risk guidance; low heat with a strong trend is used for targeted activation; stocks low on both are deprioritized. The lower-left quadrant shows only its count by default; click the count to reveal the stocks. See the second tab, “Hot Tracking & Trend Assessment,” for each stock’s detailed heat and trend data.',
   priorityReset:'↺ Restore Defaults',priorityMinHeat:'Minimum Heat Filter',priorityHighHeat:'High-Heat Threshold',priorityMinTrend:'Minimum Trend Filter',priorityHighTrend:'High-Trend Threshold',
   priorityIncluded:'in quadrants',priorityExcluded:'filtered out',prioritySelectHint:'Click a ticker to view Latest Composite Heat, Trend Score, Entry Quality, and ER status',stocksUnit:'stocks',
