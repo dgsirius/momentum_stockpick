@@ -1,7 +1,7 @@
 {
   "schema_version": 16,
   "title": "自选股双引擎雷达",
-  "generated_at": "2026-08-10T22:19:25+08:00",
+  "generated_at": "2026-08-10T22:59:18+08:00",
   "heat_as_of": "2026-08-07",
   "er_signal_date": "2026-08-07",
   "opend_last_refresh": "2026-08-07T22:19:55+08:00",
@@ -200,8 +200,8 @@
     "left_arming": 19,
     "left_watch": 11,
     "left_breakdown": 52,
-    "gap_active": 40,
-    "right_gap_confirmed": 6,
+    "gap_active": 45,
+    "right_gap_confirmed": 5,
     "left_gap_context": 1,
     "risk_watch": 69,
     "risk_warning": 10,
@@ -514,7 +514,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 14.0,
+        "rank": 19.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -540,7 +540,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "缺口确认",
         "detail": "右侧加强层",
         "priority": 4,
@@ -951,7 +951,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 42.0,
+        "rank": 46.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -977,7 +977,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "缺口确认",
         "detail": "右侧加强层",
         "priority": 4,
@@ -1794,7 +1794,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 39.0,
+        "rank": 45.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -1820,7 +1820,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "缺口确认",
         "detail": "右侧加强层",
         "priority": 4,
@@ -2641,7 +2641,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 110.0,
+        "rank": 114.0,
         "count_10d": 1,
         "count_50d": 3,
         "strong_count_10d": 0,
@@ -2653,10 +2653,10 @@
         "last_gap_atr": 1.2805,
         "sequence_start_time": "2026-07-24 10:00",
         "last_opposite_gap_time": null,
-        "ema5": 104.6903,
-        "ema20": 103.3403,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 272116077.61,
+        "ema5": 105.0169,
+        "ema20": 103.5622,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 273266684.89,
         "fresh": true,
         "strong_fresh": false,
         "events": [
@@ -2679,7 +2679,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -3092,33 +3092,33 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 1.0,
+        "rank": 4.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
         "strong_count_50d": 1,
-        "atr_score_10d": 1.6185,
-        "atr_score_50d": 1.6185,
+        "atr_score_10d": 1.633,
+        "atr_score_50d": 1.633,
         "last_gap_time": "08-04",
         "last_gap_pct": 7.0567,
-        "last_gap_atr": 1.6185,
+        "last_gap_atr": 1.633,
         "sequence_start_time": "2026-08-04",
         "last_opposite_gap_time": null,
-        "ema5": 180.7246,
-        "ema20": 165.1715,
-        "ema_as_of": "2026-08-07",
-        "average_turnover_10d": 1304800775.9,
+        "ema5": 186.4831,
+        "ema20": 168.293,
+        "ema_as_of": "2026-08-10",
+        "average_turnover_10d": 1556577684.9,
         "fresh": true,
         "strong_fresh": true,
         "events": [
           {
             "time": "2026-08-04",
             "gap_pct": 7.0567,
-            "gap_atr": 1.6185,
+            "gap_atr": 1.633,
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 17:12:10",
+        "source_updated_at": "2026-08-10 22:54:27",
         "label": "缺口确认",
         "detail": "右侧加强层",
         "priority": 4,
@@ -3534,33 +3534,33 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 2.0,
+        "rank": 3.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
         "strong_count_50d": 1,
         "atr_score_10d": 0.0,
-        "atr_score_50d": 3.1315,
+        "atr_score_50d": 3.1472,
         "last_gap_time": "05-29",
         "last_gap_pct": 14.6068,
-        "last_gap_atr": 3.1315,
+        "last_gap_atr": 3.1472,
         "sequence_start_time": "2026-05-29",
         "last_opposite_gap_time": null,
-        "ema5": 26.0656,
-        "ema20": 24.0532,
-        "ema_as_of": "2026-08-07",
-        "average_turnover_10d": 2357027333.9,
+        "ema5": 27.066,
+        "ema20": 24.5327,
+        "ema_as_of": "2026-08-10",
+        "average_turnover_10d": 2611846432.9,
         "fresh": false,
         "strong_fresh": false,
         "events": [
           {
             "time": "2026-05-29",
             "gap_pct": 14.6068,
-            "gap_atr": 3.1315,
+            "gap_atr": 3.1472,
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 17:12:10",
+        "source_updated_at": "2026-08-10 22:54:27",
         "label": "缺口确认",
         "detail": "右侧加强层",
         "priority": 4,
@@ -3971,7 +3971,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 132.0,
+        "rank": 137.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -3983,10 +3983,10 @@
         "last_gap_atr": 1.505,
         "sequence_start_time": "2026-07-28 10:00",
         "last_opposite_gap_time": null,
-        "ema5": 525.8719,
-        "ema20": 521.8807,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 1865585389.4,
+        "ema5": 528.7247,
+        "ema20": 523.0759,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 1883421604.58,
         "fresh": true,
         "strong_fresh": false,
         "events": [
@@ -3997,7 +3997,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -4429,7 +4429,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 6.0,
+        "rank": 4.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -4455,7 +4455,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -6484,42 +6484,7 @@
           "收盘出现反转确认 K 线"
         ]
       },
-      "gap_layer": {
-        "direction": "up",
-        "rank": 10.0,
-        "count_10d": 1,
-        "count_50d": 1,
-        "strong_count_10d": 1,
-        "strong_count_50d": 1,
-        "atr_score_10d": 2.8971,
-        "atr_score_50d": 2.8971,
-        "last_gap_time": "08-04 10:00",
-        "last_gap_pct": 2.4717,
-        "last_gap_atr": 2.8971,
-        "sequence_start_time": "2026-08-04 10:00",
-        "last_opposite_gap_time": "2026-06-08 10:00",
-        "ema5": 45.3375,
-        "ema20": 43.6083,
-        "ema_as_of": "2026-08-07 16:00",
-        "average_turnover_10d": 1309906191.45,
-        "fresh": true,
-        "strong_fresh": true,
-        "events": [
-          {
-            "time": "2026-08-04 10:00",
-            "gap_pct": 2.4717,
-            "gap_atr": 2.8971,
-            "strong": true
-          }
-        ],
-        "source_updated_at": "2026-08-07 17:12:10",
-        "label": "缺口确认",
-        "detail": "右侧加强层",
-        "priority": 4,
-        "right_confirmation": true,
-        "left_environment": false,
-        "score_effect": 0
-      },
+      "gap_layer": null,
       "risk": {
         "current_score": 95.0,
         "score_5d_ago": 92.7,
@@ -7735,7 +7700,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 17.0,
+        "rank": 18.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -7747,10 +7712,10 @@
         "last_gap_atr": 1.946,
         "sequence_start_time": "2026-08-04 10:00",
         "last_opposite_gap_time": null,
-        "ema5": 27.2194,
-        "ema20": 26.1773,
-        "ema_as_of": "2026-08-07 16:00",
-        "average_turnover_10d": 153220580.12,
+        "ema5": 27.457,
+        "ema20": 27.0847,
+        "ema_as_of": "2026-08-10 16:00",
+        "average_turnover_10d": 202438746.63,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -7761,7 +7726,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 17:12:10",
+        "source_updated_at": "2026-08-10 22:54:27",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -8174,7 +8139,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 38.0,
+        "rank": 45.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -8186,10 +8151,10 @@
         "last_gap_atr": 1.3769,
         "sequence_start_time": "2026-07-13 10:00",
         "last_opposite_gap_time": null,
-        "ema5": 148.541,
-        "ema20": 147.1461,
-        "ema_as_of": "2026-08-07 16:00",
-        "average_turnover_10d": 134773388.7,
+        "ema5": 149.8966,
+        "ema20": 148.9296,
+        "ema_as_of": "2026-08-10 16:00",
+        "average_turnover_10d": 144585888.7,
         "fresh": false,
         "strong_fresh": false,
         "events": [
@@ -8200,7 +8165,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-07 17:12:10",
+        "source_updated_at": "2026-08-10 22:54:27",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -8614,7 +8579,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 27.0,
+        "rank": 25.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -8626,10 +8591,10 @@
         "last_gap_atr": 1.2898,
         "sequence_start_time": "2026-08-05 10:00",
         "last_opposite_gap_time": "2026-07-24 10:00",
-        "ema5": 213.0581,
-        "ema20": 207.9842,
-        "ema_as_of": "2026-08-07 16:00",
-        "average_turnover_10d": 541180144.1,
+        "ema5": 211.4579,
+        "ema20": 209.5387,
+        "ema_as_of": "2026-08-10 16:00",
+        "average_turnover_10d": 596206400.87,
         "fresh": true,
         "strong_fresh": false,
         "events": [
@@ -8640,7 +8605,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-07 17:12:10",
+        "source_updated_at": "2026-08-10 22:54:27",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -10262,7 +10227,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 158.0,
+        "rank": 163.0,
         "count_10d": 0,
         "count_50d": 2,
         "strong_count_10d": 0,
@@ -10274,10 +10239,10 @@
         "last_gap_atr": 2.1723,
         "sequence_start_time": "2026-07-08 10:00",
         "last_opposite_gap_time": "2026-06-15 10:00",
-        "ema5": 301.6703,
-        "ema20": 300.5095,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 718100872.71,
+        "ema5": 304.3452,
+        "ema20": 301.3843,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 720433734.07,
         "fresh": false,
         "strong_fresh": false,
         "events": [
@@ -10294,7 +10259,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -11112,7 +11077,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 113.0,
+        "rank": 117.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -11124,10 +11089,10 @@
         "last_gap_atr": 1.3722,
         "sequence_start_time": "2026-08-07 10:00",
         "last_opposite_gap_time": "2026-07-08 10:00",
-        "ema5": 137.1654,
-        "ema20": 136.3531,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 574415686.03,
+        "ema5": 137.4219,
+        "ema20": 136.5037,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 576814240.21,
         "fresh": true,
         "strong_fresh": false,
         "events": [
@@ -11138,7 +11103,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -13167,7 +13132,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 3.0,
+        "rank": 2.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -13193,7 +13158,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -16051,7 +16016,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 108.0,
+        "rank": 107.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -16063,10 +16028,10 @@
         "last_gap_atr": 2.309,
         "sequence_start_time": "2026-08-04 10:00",
         "last_opposite_gap_time": "2026-07-16 10:00",
-        "ema5": 426.9842,
-        "ema20": 424.7527,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 6442540373.02,
+        "ema5": 428.1128,
+        "ema20": 425.2877,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 6484974370.14,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -16077,7 +16042,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -16486,7 +16451,60 @@
           "MACD 柱体由弱转强"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 38.0,
+        "count_10d": 4,
+        "count_50d": 4,
+        "strong_count_10d": 3,
+        "strong_count_50d": 3,
+        "atr_score_10d": 9.9538,
+        "atr_score_50d": 9.9538,
+        "last_gap_time": "08-07 10:00",
+        "last_gap_pct": 1.3326,
+        "last_gap_atr": 1.8085,
+        "sequence_start_time": "2026-07-30 10:00",
+        "last_opposite_gap_time": "2026-07-28 10:00",
+        "ema5": 69.5246,
+        "ema20": 69.2921,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 759170378.74,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-07 10:00",
+            "gap_pct": 1.3326,
+            "gap_atr": 1.8085,
+            "strong": true
+          },
+          {
+            "time": "2026-08-05 10:00",
+            "gap_pct": 1.8176,
+            "gap_atr": 2.3357,
+            "strong": true
+          },
+          {
+            "time": "2026-08-04 10:00",
+            "gap_pct": 3.1858,
+            "gap_atr": 4.2652,
+            "strong": true
+          },
+          {
+            "time": "2026-07-30 10:00",
+            "gap_pct": 2.134,
+            "gap_atr": 1.5443,
+            "strong": false
+          }
+        ],
+        "source_updated_at": "2026-08-10 22:53:38",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 83.5,
         "score_5d_ago": 78.1,
@@ -17295,7 +17313,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 65.0,
+        "rank": 67.0,
         "count_10d": 2,
         "count_50d": 2,
         "strong_count_10d": 1,
@@ -17307,10 +17325,10 @@
         "last_gap_atr": 1.2534,
         "sequence_start_time": "2026-08-04 10:00",
         "last_opposite_gap_time": "2026-07-28 10:00",
-        "ema5": 1744.6538,
-        "ema20": 1730.8161,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 2404182170.98,
+        "ema5": 1750.4225,
+        "ema20": 1733.7822,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 2416466281.7,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -17327,7 +17345,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -18544,7 +18562,42 @@
           "随机指标与短线跌幅显示卖压耗竭"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 110.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 1.7504,
+        "atr_score_50d": 1.7504,
+        "last_gap_time": "08-07 10:00",
+        "last_gap_pct": 1.689,
+        "last_gap_atr": 1.7504,
+        "sequence_start_time": "2026-08-07 10:00",
+        "last_opposite_gap_time": "2026-07-28 10:00",
+        "ema5": 93.4082,
+        "ema20": 93.1137,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 1525432997.46,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-07 10:00",
+            "gap_pct": 1.689,
+            "gap_atr": 1.7504,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-10 22:53:38",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 78.9,
         "score_5d_ago": 88.0,
@@ -20173,42 +20226,7 @@
           "MACD 柱体由弱转强"
         ]
       },
-      "gap_layer": {
-        "direction": "up",
-        "rank": 134.0,
-        "count_10d": 1,
-        "count_50d": 1,
-        "strong_count_10d": 1,
-        "strong_count_50d": 1,
-        "atr_score_10d": 2.0279,
-        "atr_score_50d": 2.0279,
-        "last_gap_time": "07-30 10:00",
-        "last_gap_pct": 4.3802,
-        "last_gap_atr": 2.0279,
-        "sequence_start_time": "2026-07-30 10:00",
-        "last_opposite_gap_time": "2026-07-28 10:00",
-        "ema5": 538.8582,
-        "ema20": 537.0636,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 3138621265.2,
-        "fresh": true,
-        "strong_fresh": true,
-        "events": [
-          {
-            "time": "2026-07-30 10:00",
-            "gap_pct": 4.3802,
-            "gap_atr": 2.0279,
-            "strong": true
-          }
-        ],
-        "source_updated_at": "2026-08-10 22:10:32",
-        "label": "向上缺口",
-        "detail": "等待右侧候选",
-        "priority": 2,
-        "right_confirmation": false,
-        "left_environment": false,
-        "score_effect": 0
-      },
+      "gap_layer": null,
       "risk": {
         "current_score": 83.9,
         "score_5d_ago": 79.0,
@@ -21015,7 +21033,42 @@
           "收盘出现反转确认 K 线"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 136.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 2.6231,
+        "atr_score_50d": 2.6231,
+        "last_gap_time": "07-31 10:00",
+        "last_gap_pct": 1.9036,
+        "last_gap_atr": 2.6231,
+        "sequence_start_time": "2026-07-31 10:00",
+        "last_opposite_gap_time": "2026-07-29 10:00",
+        "ema5": 859.0684,
+        "ema20": 857.6086,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 56062525.34,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-07-31 10:00",
+            "gap_pct": 1.9036,
+            "gap_atr": 2.6231,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-10 22:53:38",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 79.8,
         "score_5d_ago": 66.1,
@@ -22242,7 +22295,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 47.0,
+        "rank": 52.0,
         "count_10d": 2,
         "count_50d": 2,
         "strong_count_10d": 1,
@@ -22254,10 +22307,10 @@
         "last_gap_atr": 3.1259,
         "sequence_start_time": "2026-08-06 10:00",
         "last_opposite_gap_time": "2026-08-04 10:00",
-        "ema5": 39.4999,
-        "ema20": 39.2905,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 115910204.11,
+        "ema5": 39.7799,
+        "ema20": 39.3904,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 116596576.12,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -22274,7 +22327,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -23098,7 +23151,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 99.0,
+        "rank": 102.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -23124,7 +23177,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -28668,42 +28721,7 @@
           "长下影显示低位承接"
         ]
       },
-      "gap_layer": {
-        "direction": "up",
-        "rank": 63.0,
-        "count_10d": 1,
-        "count_50d": 1,
-        "strong_count_10d": 1,
-        "strong_count_50d": 1,
-        "atr_score_10d": 4.4905,
-        "atr_score_50d": 4.4905,
-        "last_gap_time": "08-04 10:00",
-        "last_gap_pct": 7.2829,
-        "last_gap_atr": 4.4905,
-        "sequence_start_time": "2026-08-04 10:00",
-        "last_opposite_gap_time": "2026-07-28 10:00",
-        "ema5": 217.6996,
-        "ema20": 215.971,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 3859385719.86,
-        "fresh": true,
-        "strong_fresh": true,
-        "events": [
-          {
-            "time": "2026-08-04 10:00",
-            "gap_pct": 7.2829,
-            "gap_atr": 4.4905,
-            "strong": true
-          }
-        ],
-        "source_updated_at": "2026-08-10 22:10:32",
-        "label": "向上缺口",
-        "detail": "等待右侧候选",
-        "priority": 2,
-        "right_confirmation": false,
-        "left_environment": false,
-        "score_effect": 0
-      },
+      "gap_layer": null,
       "risk": {
         "current_score": 75.6,
         "score_5d_ago": 56.7,
@@ -29107,7 +29125,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 64.0,
+        "rank": 62.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -29119,10 +29137,10 @@
         "last_gap_atr": 2.9424,
         "sequence_start_time": "2026-08-10 10:00",
         "last_opposite_gap_time": "2026-08-04 10:00",
-        "ema5": 45.9911,
-        "ema20": 45.625,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 255404730.31,
+        "ema5": 46.3328,
+        "ema20": 45.7575,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 255939932.16,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -29133,7 +29151,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -29544,7 +29562,42 @@
           "MACD 柱体由弱转强"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 91.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 3.3766,
+        "atr_score_50d": 3.3766,
+        "last_gap_time": "08-04 10:00",
+        "last_gap_pct": 2.6453,
+        "last_gap_atr": 3.3766,
+        "sequence_start_time": "2026-08-04 10:00",
+        "last_opposite_gap_time": "2026-07-07 10:00",
+        "ema5": 340.7607,
+        "ema20": 340.0429,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 311024014.64,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-04 10:00",
+            "gap_pct": 2.6453,
+            "gap_atr": 3.3766,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-10 22:53:38",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 69.0,
         "score_5d_ago": 59.7,
@@ -32370,7 +32423,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 86.0,
+        "rank": 84.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -32382,10 +32435,10 @@
         "last_gap_atr": 2.3045,
         "sequence_start_time": "2026-08-10 10:00",
         "last_opposite_gap_time": "2026-07-28 10:00",
-        "ema5": 37.6528,
-        "ema20": 37.3425,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 305267020.48,
+        "ema5": 38.0052,
+        "ema20": 37.4728,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 306380929.62,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -32396,7 +32449,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -33622,7 +33675,42 @@
           "收盘出现反转确认 K 线"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 36.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 8.309,
+        "atr_score_50d": 8.309,
+        "last_gap_time": "08-06 10:00",
+        "last_gap_pct": 12.407,
+        "last_gap_atr": 8.309,
+        "sequence_start_time": "2026-08-06 10:00",
+        "last_opposite_gap_time": "2026-07-28 10:00",
+        "ema5": 725.5726,
+        "ema20": 706.965,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 330449813.03,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-06 10:00",
+            "gap_pct": 12.407,
+            "gap_atr": 8.309,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-10 22:53:38",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 64.0,
         "score_5d_ago": 46.4,
@@ -34833,7 +34921,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 34.0,
+        "rank": 37.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -34845,10 +34933,10 @@
         "last_gap_atr": 2.6386,
         "sequence_start_time": "2026-08-05 10:00",
         "last_opposite_gap_time": "2026-08-04 10:00",
-        "ema5": 479.6502,
-        "ema20": 483.3639,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 13245498711.91,
+        "ema5": 478.5368,
+        "ema20": 482.6921,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 13326814885.01,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -34859,7 +34947,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -35272,7 +35360,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 38.0,
+        "rank": 44.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -35298,7 +35386,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -37740,7 +37828,42 @@
           "收盘出现反转确认 K 线"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 112.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 2.3943,
+        "atr_score_50d": 2.3943,
+        "last_gap_time": "08-04 10:00",
+        "last_gap_pct": 2.1422,
+        "last_gap_atr": 2.3943,
+        "sequence_start_time": "2026-08-04 10:00",
+        "last_opposite_gap_time": "2026-07-23 10:00",
+        "ema5": 284.6308,
+        "ema20": 283.6657,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 1796869870.51,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-04 10:00",
+            "gap_pct": 2.1422,
+            "gap_atr": 2.3943,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-10 22:53:38",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 64.5,
         "score_5d_ago": 61.8,
@@ -40166,7 +40289,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 129.0,
+        "rank": 133.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -40178,10 +40301,10 @@
         "last_gap_atr": 1.6036,
         "sequence_start_time": "2026-08-04 10:00",
         "last_opposite_gap_time": "2026-07-17 10:00",
-        "ema5": 419.9459,
-        "ema20": 419.0359,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 4840650170.69,
+        "ema5": 420.5273,
+        "ema20": 419.2887,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 4882162204.8,
         "fresh": true,
         "strong_fresh": false,
         "events": [
@@ -40192,7 +40315,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -47163,7 +47286,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 55.0,
+        "rank": 58.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -47189,7 +47312,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -48819,7 +48942,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 19.0,
+        "rank": 15.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -48831,10 +48954,10 @@
         "last_gap_atr": 1.8234,
         "sequence_start_time": "2026-08-05 10:00",
         "last_opposite_gap_time": "2026-07-24 10:00",
-        "ema5": 36.4398,
-        "ema20": 35.8732,
-        "ema_as_of": "2026-08-07 16:00",
-        "average_turnover_10d": 1874030903.8,
+        "ema5": 37.4746,
+        "ema20": 36.8359,
+        "ema_as_of": "2026-08-10 16:00",
+        "average_turnover_10d": 2134042644.8,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -48845,7 +48968,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 17:12:10",
+        "source_updated_at": "2026-08-10 22:54:27",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -58234,7 +58357,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 109.0,
+        "rank": 111.0,
         "count_10d": 0,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -58260,7 +58383,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -61096,7 +61219,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 26.0,
+        "rank": 25.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -61122,7 +61245,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "缺口环境",
         "detail": "左侧观察层",
         "priority": 3,
@@ -63113,7 +63236,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -63529,7 +63652,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 117.0,
+        "rank": 123.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 0,
@@ -63541,10 +63664,10 @@
         "last_gap_atr": 1.7111,
         "sequence_start_time": "2026-08-04 10:00",
         "last_opposite_gap_time": "2026-07-16 10:00",
-        "ema5": 82.4598,
-        "ema20": 80.4331,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 1097444744.1,
+        "ema5": 82.7965,
+        "ema20": 80.7223,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 1109705976.94,
         "fresh": true,
         "strong_fresh": false,
         "events": [
@@ -63555,7 +63678,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -63969,7 +64092,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 74.0,
+        "rank": 75.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -63981,10 +64104,10 @@
         "last_gap_atr": 2.416,
         "sequence_start_time": "2026-08-07 10:00",
         "last_opposite_gap_time": "2026-07-28 10:00",
-        "ema5": 97.5441,
-        "ema20": 96.4767,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 279564539.38,
+        "ema5": 98.0061,
+        "ema20": 96.7104,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 280346533.74,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -63995,7 +64118,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -67172,7 +67295,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 40.0,
+        "rank": 43.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -67184,10 +67307,10 @@
         "last_gap_atr": 2.532,
         "sequence_start_time": "2026-08-06 10:00",
         "last_opposite_gap_time": "2026-08-04 10:00",
-        "ema5": 303.4634,
-        "ema20": 304.7805,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 539584574.31,
+        "ema5": 301.8656,
+        "ema20": 304.1985,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 541785151.07,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -67198,7 +67321,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -67623,10 +67746,10 @@
         "last_gap_atr": 1.3482,
         "sequence_start_time": "2026-08-10 10:00",
         "last_opposite_gap_time": "2026-08-04 10:00",
-        "ema5": 99.9612,
-        "ema20": 100.5171,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 8495203689.09,
+        "ema5": 99.1141,
+        "ema20": 100.2221,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 8550115037.66,
         "fresh": true,
         "strong_fresh": false,
         "events": [
@@ -67637,7 +67760,7 @@
             "strong": false
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -68047,7 +68170,42 @@
           "长下影显示低位承接"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 12.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 4.3676,
+        "atr_score_50d": 4.3676,
+        "last_gap_time": "07-31 10:00",
+        "last_gap_pct": 10.4335,
+        "last_gap_atr": 4.3676,
+        "sequence_start_time": "2026-07-31 10:00",
+        "last_opposite_gap_time": "2026-07-28 10:00",
+        "ema5": 165.9463,
+        "ema20": 162.823,
+        "ema_as_of": "2026-08-10 16:00",
+        "average_turnover_10d": 700118430.53,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-07-31 10:00",
+            "gap_pct": 10.4335,
+            "gap_atr": 4.3676,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-10 22:54:27",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 26.9,
         "score_5d_ago": 27.5,
@@ -69601,7 +69759,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 21.0,
+        "rank": 22.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -69613,10 +69771,10 @@
         "last_gap_atr": 3.0956,
         "sequence_start_time": "2026-07-31 10:00",
         "last_opposite_gap_time": "2026-07-28 10:00",
-        "ema5": 254.9928,
-        "ema20": 244.7074,
-        "ema_as_of": "2026-08-07 16:00",
-        "average_turnover_10d": 1604037350.97,
+        "ema5": 254.6822,
+        "ema20": 250.8703,
+        "ema_as_of": "2026-08-10 16:00",
+        "average_turnover_10d": 1744628929.16,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -69627,7 +69785,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 17:12:10",
+        "source_updated_at": "2026-08-10 22:54:27",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -74918,7 +75076,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 127.0,
+        "rank": 132.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -74930,10 +75088,10 @@
         "last_gap_atr": 2.7837,
         "sequence_start_time": "2026-07-30 10:00",
         "last_opposite_gap_time": "2026-07-01 10:00",
-        "ema5": 90.2162,
-        "ema20": 89.2194,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 1991259493.63,
+        "ema5": 90.4149,
+        "ema20": 89.3712,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 2004105376.94,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -74944,7 +75102,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -77678,10 +77836,10 @@
         "last_gap_atr": 3.5755,
         "sequence_start_time": "2026-07-31 10:00",
         "last_opposite_gap_time": "2026-07-28 10:00",
-        "ema5": 123.5888,
-        "ema20": 120.9958,
-        "ema_as_of": "2026-08-07 16:00",
-        "average_turnover_10d": 4050433276.55,
+        "ema5": 124.2383,
+        "ema20": 122.8402,
+        "ema_as_of": "2026-08-10 16:00",
+        "average_turnover_10d": 4144322016.9,
         "fresh": true,
         "strong_fresh": true,
         "events": [
@@ -77692,7 +77850,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-07 17:12:10",
+        "source_updated_at": "2026-08-10 22:54:27",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -93082,7 +93240,42 @@
           "跌穿长期支撑且尚未出现动能拐点"
         ]
       },
-      "gap_layer": null,
+      "gap_layer": {
+        "direction": "up",
+        "rank": 141.0,
+        "count_10d": 1,
+        "count_50d": 1,
+        "strong_count_10d": 1,
+        "strong_count_50d": 1,
+        "atr_score_10d": 1.7972,
+        "atr_score_50d": 1.7972,
+        "last_gap_time": "08-03 10:00",
+        "last_gap_pct": 1.1419,
+        "last_gap_atr": 1.7972,
+        "sequence_start_time": "2026-08-03 10:00",
+        "last_opposite_gap_time": "2026-07-30 10:00",
+        "ema5": 74.3228,
+        "ema20": 74.0852,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 2335272649.97,
+        "fresh": true,
+        "strong_fresh": true,
+        "events": [
+          {
+            "time": "2026-08-03 10:00",
+            "gap_pct": 1.1419,
+            "gap_atr": 1.7972,
+            "strong": true
+          }
+        ],
+        "source_updated_at": "2026-08-10 22:53:38",
+        "label": "向上缺口",
+        "detail": "等待右侧候选",
+        "priority": 2,
+        "right_confirmation": false,
+        "left_environment": false,
+        "score_effect": 0
+      },
       "risk": {
         "current_score": 2.5,
         "score_5d_ago": 18.9,
@@ -94300,7 +94493,7 @@
       },
       "gap_layer": {
         "direction": "up",
-        "rank": 157.0,
+        "rank": 162.0,
         "count_10d": 0,
         "count_50d": 4,
         "strong_count_10d": 0,
@@ -94312,10 +94505,10 @@
         "last_gap_atr": 1.5488,
         "sequence_start_time": "2026-07-08 10:00",
         "last_opposite_gap_time": "2026-06-25 10:00",
-        "ema5": 46.2265,
-        "ema20": 46.1453,
-        "ema_as_of": "2026-08-10 10:00",
-        "average_turnover_10d": 133193969.73,
+        "ema5": 46.3643,
+        "ema20": 46.1924,
+        "ema_as_of": "2026-08-10 10:30",
+        "average_turnover_10d": 133356419.08,
         "fresh": false,
         "strong_fresh": false,
         "events": [
@@ -94344,7 +94537,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向上缺口",
         "detail": "等待右侧候选",
         "priority": 2,
@@ -94757,7 +94950,7 @@
       },
       "gap_layer": {
         "direction": "down",
-        "rank": 1.0,
+        "rank": 5.0,
         "count_10d": 1,
         "count_50d": 1,
         "strong_count_10d": 1,
@@ -94783,7 +94976,7 @@
             "strong": true
           }
         ],
-        "source_updated_at": "2026-08-10 22:10:32",
+        "source_updated_at": "2026-08-10 22:53:38",
         "label": "向下缺口",
         "detail": "等待左侧机会",
         "priority": 1,
@@ -94933,17 +95126,17 @@
   "gap_sources": {
     "US": {
       "status": "ready",
-      "updated_at": "2026-08-10 22:10:32",
+      "updated_at": "2026-08-10 22:53:38",
       "window_days": 50,
       "ranking_days": 10,
       "minimum_gap_atr": null,
       "strong_gap_atr": null,
-      "turnover_threshold": 10000000.0,
+      "turnover_threshold": 50000000.0,
       "path": "/Users/richard/dowork/hk-us-gap-monitor/.data/gap_results_us.json"
     },
     "HK": {
       "status": "ready",
-      "updated_at": "2026-08-07 17:12:10",
+      "updated_at": "2026-08-10 22:54:27",
       "window_days": 50,
       "ranking_days": 10,
       "minimum_gap_atr": null,
