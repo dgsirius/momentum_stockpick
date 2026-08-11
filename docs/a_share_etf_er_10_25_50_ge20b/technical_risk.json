@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-08-10T21:14:07",
+  "generated_at": "2026-08-11T22:01:30",
   "variant_name": "A股 ETF ER 10/25/50（规模20亿+ 日调仓 Top5）",
   "variant_slug": "a_share_etf_er_10_25_50_ge20b",
   "universe_mode": "current_and_planned",
-  "holding_count": 8,
+  "holding_count": 11,
   "current_holding_count": 5,
-  "planned_buy_count": 1,
+  "planned_buy_count": 4,
   "historical_buy_count": 0,
-  "ticker_count": 8,
-  "risk_high_count": 1,
-  "backtest_period": "验证期 2025-08-10 至 2026-08-10",
-  "training_period": "训练期 2022-01-03 至 2025-08-09",
+  "ticker_count": 11,
+  "risk_high_count": 0,
+  "backtest_period": "验证期 2025-08-11 至 2026-08-11",
+  "training_period": "训练期 2022-01-03 至 2025-08-10",
   "validation_method": "参数仅在训练期选择，胜率和平均收益来自随后一年验证期",
   "strategy_summary": {
     "stop_atr": 2.0,
     "take_atr": 1.5,
-    "trades": 452,
-    "win_rate": 0.5487,
-    "avg_return": 0.0001
+    "trades": 591,
+    "win_rate": 0.5296,
+    "avg_return": 0.0003
   },
   "rows": [
     {
-      "ticker": "SH.517520",
-      "name": "黄金股ETF永赢",
+      "ticker": "SH.512290",
+      "name": "生物医药ETF国泰",
       "sources": [
         "计划买入"
       ],
@@ -30,250 +30,8 @@
       "weight": null,
       "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-10",
-      "close": 2.173,
-      "score": 83,
-      "rating": "4.5分",
-      "action": "多头 / 观察回踩",
-      "risk_level": "高",
-      "risk_reasons": [
-        "ATR赔率位置差"
-      ],
-      "cap_reason": "价格偏离均线过大",
-      "parts": {
-        "trend": 38,
-        "macd": 24,
-        "kdj": 6,
-        "volume": 13,
-        "atr": 2
-      },
-      "texts": {
-        "trend": "趋势38/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ6/10，节奏未见明确背离",
-        "volume": "量能13/15，量价配合较好",
-        "atr": "ATR2/10，追价风险偏高"
-      },
-      "atr": 0.0916,
-      "stop_loss": 1.9899,
-      "take_profit": 2.2288,
-      "add_price": 1.6428,
-      "invalidation": 1.5054,
-      "stop_pct": 0.092,
-      "take_pct": 0.0257,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 80,
-        "win_rate": 0.85,
-        "avg_return": 0.0267,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "SZ.159859",
-      "name": "生物医药ETF天弘",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.2012829913,
-      "market_value": 102422.4479330145,
-      "status": "ok",
-      "latest_date": "2026-08-10",
-      "close": 0.418,
-      "score": 90,
-      "rating": "5分",
-      "action": "多头",
-      "risk_level": "中",
-      "risk_reasons": [],
-      "cap_reason": null,
-      "parts": {
-        "trend": 40,
-        "macd": 24,
-        "kdj": 8,
-        "volume": 13,
-        "atr": 5
-      },
-      "texts": {
-        "trend": "趋势40/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能13/15，量价配合较好",
-        "atr": "ATR5/10，追价风险偏高"
-      },
-      "atr": 0.0136,
-      "stop_loss": 0.3976,
-      "take_profit": 0.4348,
-      "add_price": 0.3728,
-      "invalidation": 0.3524,
-      "stop_pct": 0.0512,
-      "take_pct": 0.0402,
-      "exit_strategy": {
-        "stop_atr": 1.5,
-        "take_atr": 1.5,
-        "trades": 32,
-        "win_rate": 0.3125,
-        "avg_return": -0.0143,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "SH.512010",
-      "name": "医药ETF易方达",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.2018148396,
-      "market_value": 102693.0778390005,
-      "status": "ok",
-      "latest_date": "2026-08-10",
-      "close": 0.405,
-      "score": 88,
-      "rating": "4.5分",
-      "action": "多头 / 观察回踩",
-      "risk_level": "中",
-      "risk_reasons": [],
-      "cap_reason": null,
-      "parts": {
-        "trend": 38,
-        "macd": 24,
-        "kdj": 8,
-        "volume": 13,
-        "atr": 5
-      },
-      "texts": {
-        "trend": "趋势38/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能13/15，量价配合较好",
-        "atr": "ATR5/10，追价风险偏高"
-      },
-      "atr": 0.0111,
-      "stop_loss": 0.3827,
-      "take_profit": 0.4176,
-      "add_price": 0.3616,
-      "invalidation": 0.3449,
-      "stop_pct": 0.0582,
-      "take_pct": 0.031,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 29,
-        "win_rate": 0.5172,
-        "avg_return": -0.0,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "SH.513120",
-      "name": "港股创新药ETF广发",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.1995422754,
-      "market_value": 101536.6881081012,
-      "status": "ok",
-      "latest_date": "2026-08-10",
-      "close": 1.283,
-      "score": 88,
-      "rating": "4.5分",
-      "action": "多头 / 观察回踩",
-      "risk_level": "中",
-      "risk_reasons": [],
-      "cap_reason": null,
-      "parts": {
-        "trend": 38,
-        "macd": 24,
-        "kdj": 8,
-        "volume": 13,
-        "atr": 5
-      },
-      "texts": {
-        "trend": "趋势38/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能13/15，量价配合较好",
-        "atr": "ATR5/10，追价风险偏高"
-      },
-      "atr": 0.0376,
-      "stop_loss": 1.2077,
-      "take_profit": 1.3318,
-      "add_price": 1.1368,
-      "invalidation": 1.0804,
-      "stop_pct": 0.0623,
-      "take_pct": 0.0381,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 34,
-        "win_rate": 0.2941,
-        "avg_return": -0.0256,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "SH.513780",
-      "name": "港股创新药ETF景顺",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.199958544,
-      "market_value": 101748.5055322032,
-      "status": "ok",
-      "latest_date": "2026-08-10",
-      "close": 1.66,
-      "score": 88,
-      "rating": "4.5分",
-      "action": "多头 / 观察回踩",
-      "risk_level": "中",
-      "risk_reasons": [],
-      "cap_reason": null,
-      "parts": {
-        "trend": 38,
-        "macd": 24,
-        "kdj": 8,
-        "volume": 13,
-        "atr": 5
-      },
-      "texts": {
-        "trend": "趋势38/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能13/15，量价配合较好",
-        "atr": "ATR5/10，追价风险偏高"
-      },
-      "atr": 0.0495,
-      "stop_loss": 1.561,
-      "take_profit": 1.7278,
-      "add_price": 1.4758,
-      "invalidation": 1.4015,
-      "stop_pct": 0.0634,
-      "take_pct": 0.0408,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 35,
-        "win_rate": 0.3429,
-        "avg_return": -0.0181,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "SH.516080",
-      "name": "创新药ETF易方达",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.1976238191,
-      "market_value": 100560.485434448,
-      "status": "ok",
-      "latest_date": "2026-08-10",
-      "close": 0.733,
+      "latest_date": "2026-08-11",
+      "close": 1.093,
       "score": 82,
       "rating": "4.5分",
       "action": "多头 / 观察回踩",
@@ -294,19 +52,211 @@
         "volume": "量能8/15，量价确认不足",
         "atr": "ATR5/10，追价风险偏高"
       },
-      "atr": 0.0257,
-      "stop_loss": 0.6816,
-      "take_profit": 0.7649,
-      "add_price": 0.6689,
-      "invalidation": 0.6303,
-      "stop_pct": 0.0755,
-      "take_pct": 0.0435,
+      "atr": 0.0326,
+      "stop_loss": 1.0279,
+      "take_profit": 1.1343,
+      "add_price": 0.9913,
+      "invalidation": 0.9424,
+      "stop_pct": 0.0634,
+      "take_pct": 0.0378,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 48,
-        "win_rate": 0.4375,
-        "avg_return": -0.0043,
+        "trades": 35,
+        "win_rate": 0.5714,
+        "avg_return": 0.0077,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SZ.159859",
+      "name": "生物医药ETF天弘",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.2043864232,
+      "market_value": 102235.2991443179,
+      "status": "ok",
+      "latest_date": "2026-08-11",
+      "close": 0.42,
+      "score": 82,
+      "rating": "4.5分",
+      "action": "多头 / 观察回踩",
+      "risk_level": "中",
+      "risk_reasons": [],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 24,
+        "kdj": 8,
+        "volume": 8,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD24/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能8/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 0.0136,
+      "stop_loss": 0.3996,
+      "take_profit": 0.4378,
+      "add_price": 0.3758,
+      "invalidation": 0.3554,
+      "stop_pct": 0.0509,
+      "take_pct": 0.0423,
+      "exit_strategy": {
+        "stop_atr": 1.5,
+        "take_atr": 1.5,
+        "trades": 33,
+        "win_rate": 0.3333,
+        "avg_return": -0.0128,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.513120",
+      "name": "港股创新药ETF广发",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.2021248043,
+      "market_value": 101104.0239794302,
+      "status": "ok",
+      "latest_date": "2026-08-11",
+      "close": 1.283,
+      "score": 80,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [],
+      "cap_reason": null,
+      "parts": {
+        "trend": 35,
+        "macd": 24,
+        "kdj": 8,
+        "volume": 8,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势35/40，EMA多头排列",
+        "macd": "MACD24/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能8/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 0.0368,
+      "stop_loss": 1.2094,
+      "take_profit": 1.3324,
+      "add_price": 1.1364,
+      "invalidation": 1.0812,
+      "stop_pct": 0.0608,
+      "take_pct": 0.0385,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 35,
+        "win_rate": 0.2857,
+        "avg_return": -0.0249,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.513780",
+      "name": "港股创新药ETF景顺",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.2023180808,
+      "market_value": 101200.7020536705,
+      "status": "ok",
+      "latest_date": "2026-08-11",
+      "close": 1.661,
+      "score": 80,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [],
+      "cap_reason": null,
+      "parts": {
+        "trend": 35,
+        "macd": 24,
+        "kdj": 8,
+        "volume": 8,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势35/40，EMA多头排列",
+        "macd": "MACD24/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能8/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 0.0484,
+      "stop_loss": 1.5643,
+      "take_profit": 1.7292,
+      "add_price": 1.4752,
+      "invalidation": 1.4026,
+      "stop_pct": 0.0618,
+      "take_pct": 0.041,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 36,
+        "win_rate": 0.3611,
+        "avg_return": -0.0176,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.512010",
+      "name": "医药ETF易方达",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.203449561,
+      "market_value": 101766.6751629652,
+      "status": "ok",
+      "latest_date": "2026-08-11",
+      "close": 0.403,
+      "score": 78,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [],
+      "cap_reason": null,
+      "parts": {
+        "trend": 35,
+        "macd": 24,
+        "kdj": 8,
+        "volume": 6,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势35/40，EMA多头排列",
+        "macd": "MACD24/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 0.0109,
+      "stop_loss": 0.3811,
+      "take_profit": 0.4175,
+      "add_price": 0.3645,
+      "invalidation": 0.3481,
+      "stop_pct": 0.0573,
+      "take_pct": 0.0359,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 30,
+        "win_rate": 0.5,
+        "avg_return": -0.0004,
         "validation": true
       }
     },
@@ -320,9 +270,9 @@
       "weight": null,
       "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-07",
-      "close": 773.26,
-      "score": 80,
+      "latest_date": "2026-08-10",
+      "close": 773.03,
+      "score": 77,
       "rating": "4分",
       "action": "多头",
       "risk_level": "中",
@@ -330,31 +280,225 @@
       "cap_reason": null,
       "parts": {
         "trend": 37,
-        "macd": 24,
-        "kdj": 7,
+        "macd": 22,
+        "kdj": 6,
         "volume": 7,
         "atr": 5
       },
       "texts": {
         "trend": "趋势37/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ7/10，节奏未见明确背离",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ6/10，节奏未见明确背离",
         "volume": "量能7/15，量价确认不足",
         "atr": "ATR5/10，追价风险偏高"
       },
-      "atr": 9.1307,
-      "stop_loss": 754.9986,
-      "take_profit": 781.4154,
-      "add_price": 733.6654,
-      "invalidation": 719.9693,
-      "stop_pct": 0.0242,
-      "take_pct": 0.0105,
+      "atr": 8.8793,
+      "stop_loss": 755.2714,
+      "take_profit": 781.2896,
+      "add_price": 733.5396,
+      "invalidation": 720.2207,
+      "stop_pct": 0.0235,
+      "take_pct": 0.0107,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 98,
-        "win_rate": 0.6122,
+        "trades": 99,
+        "win_rate": 0.6061,
         "avg_return": 0.001,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.517520",
+      "name": "黄金股ETF永赢",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.1884276533,
+      "market_value": 94252.6279421568,
+      "status": "ok",
+      "latest_date": "2026-08-11",
+      "close": 2.044,
+      "score": 60,
+      "rating": "3分",
+      "action": "持有观察",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": "放量转弱",
+      "parts": {
+        "trend": 35,
+        "macd": 22,
+        "kdj": 6,
+        "volume": 6,
+        "atr": 8
+      },
+      "texts": {
+        "trend": "趋势35/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ6/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
+      },
+      "atr": 0.0951,
+      "stop_loss": 1.8537,
+      "take_profit": 2.1867,
+      "add_price": 1.6446,
+      "invalidation": 1.5019,
+      "stop_pct": 0.1027,
+      "take_pct": 0.0698,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 81,
+        "win_rate": 0.8272,
+        "avg_return": 0.0249,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.515120",
+      "name": "创新药ETF广发",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-08-11",
+      "close": 0.691,
+      "score": 85,
+      "rating": "4.5分",
+      "action": "多头 / 观察回踩",
+      "risk_level": "低",
+      "risk_reasons": [],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 24,
+        "kdj": 8,
+        "volume": 8,
+        "atr": 8
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD24/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能8/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
+      },
+      "atr": 0.0238,
+      "stop_loss": 0.6434,
+      "take_profit": 0.7219,
+      "add_price": 0.6279,
+      "invalidation": 0.5922,
+      "stop_pct": 0.0739,
+      "take_pct": 0.0447,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 48,
+        "win_rate": 0.4375,
+        "avg_return": -0.0029,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.516080",
+      "name": "创新药ETF易方达",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-08-11",
+      "close": 0.735,
+      "score": 85,
+      "rating": "4.5分",
+      "action": "多头 / 观察回踩",
+      "risk_level": "低",
+      "risk_reasons": [],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 24,
+        "kdj": 8,
+        "volume": 8,
+        "atr": 8
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD24/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能8/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
+      },
+      "atr": 0.0258,
+      "stop_loss": 0.6834,
+      "take_profit": 0.7689,
+      "add_price": 0.6689,
+      "invalidation": 0.6302,
+      "stop_pct": 0.0755,
+      "take_pct": 0.0461,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 49,
+        "win_rate": 0.449,
+        "avg_return": -0.0028,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SZ.159992",
+      "name": "创新药ETF银华",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-08-11",
+      "close": 0.922,
+      "score": 85,
+      "rating": "4.5分",
+      "action": "多头 / 观察回踩",
+      "risk_level": "低",
+      "risk_reasons": [],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 24,
+        "kdj": 8,
+        "volume": 8,
+        "atr": 8
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD24/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能8/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
+      },
+      "atr": 0.0317,
+      "stop_loss": 0.8586,
+      "take_profit": 0.9639,
+      "add_price": 0.8389,
+      "invalidation": 0.7913,
+      "stop_pct": 0.0739,
+      "take_pct": 0.0454,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 48,
+        "win_rate": 0.4583,
+        "avg_return": -0.001,
         "validation": true
       }
     },
@@ -368,9 +512,9 @@
       "weight": null,
       "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-07",
-      "close": 723.03,
-      "score": 75,
+      "latest_date": "2026-08-10",
+      "close": 720.87,
+      "score": 73,
       "rating": "4分",
       "action": "多头",
       "risk_level": "低",
@@ -379,35 +523,35 @@
       "parts": {
         "trend": 30,
         "macd": 22,
-        "kdj": 8,
-        "volume": 7,
+        "kdj": 7,
+        "volume": 6,
         "atr": 8
       },
       "texts": {
         "trend": "趋势30/40，EMA多头排列",
         "macd": "MACD22/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能7/15，量价确认不足",
+        "kdj": "KDJ7/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
         "atr": "ATR8/10，执行位置可接受"
       },
-      "atr": 14.9374,
-      "stop_loss": 693.1552,
-      "take_profit": 736.0087,
-      "add_price": 668.6087,
-      "invalidation": 646.2026,
-      "stop_pct": 0.0431,
-      "take_pct": 0.018,
+      "atr": 14.2481,
+      "stop_loss": 692.3737,
+      "take_profit": 735.6641,
+      "add_price": 668.2641,
+      "invalidation": 646.8919,
+      "stop_pct": 0.0412,
+      "take_pct": 0.0205,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 96,
-        "win_rate": 0.5104,
-        "avg_return": -0.0018,
+        "trades": 97,
+        "win_rate": 0.5052,
+        "avg_return": -0.0019,
         "validation": true
       }
     }
   ],
-  "input_version": "9cf29e87fc56345b1b3b",
+  "input_version": "8c3c7b8f99e1a10b15ae",
   "input_fingerprint_version": 2,
   "cache_hit": false
 }
