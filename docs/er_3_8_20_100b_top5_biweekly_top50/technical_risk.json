@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-12T14:52:41",
+  "generated_at": "2026-08-13T09:02:40",
   "variant_name": "ER 3/8/20 (100B Top5 双周 Top50 Buffer)",
   "variant_slug": "er_3_8_20_100b_top5_biweekly_top50",
   "universe_mode": "current_and_planned",
@@ -8,115 +8,65 @@
   "planned_buy_count": 0,
   "historical_buy_count": 0,
   "ticker_count": 7,
-  "risk_high_count": 2,
-  "backtest_period": "验证期 2025-08-11 至 2026-08-11",
-  "training_period": "训练期 2021-08-11 至 2025-08-10",
+  "risk_high_count": 0,
+  "backtest_period": "验证期 2025-08-12 至 2026-08-12",
+  "training_period": "训练期 2021-08-12 至 2025-08-11",
   "validation_method": "参数仅在训练期选择，胜率和平均收益来自随后一年验证期",
   "strategy_summary": {
     "stop_atr": 2.0,
     "take_atr": 1.5,
-    "trades": 656,
-    "win_rate": 0.6387,
-    "avg_return": 0.0066
+    "trades": 661,
+    "win_rate": 0.6475,
+    "avg_return": 0.0073
   },
   "rows": [
     {
-      "ticker": "US.MSFT",
-      "name": "微软",
+      "ticker": "US.DELL",
+      "name": "戴尔科技",
       "sources": [
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.1951903715,
-      "market_value": 300735.9875970749,
+      "weight": 0.2312425729,
+      "market_value": 360817.3145080269,
       "status": "ok",
-      "latest_date": "2026-08-11",
-      "close": 503.81,
-      "score": 73,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "高",
+      "latest_date": "2026-08-12",
+      "close": 484.5,
+      "score": 82,
+      "rating": "4.5分",
+      "action": "多头 / 观察回踩",
+      "risk_level": "中",
       "risk_reasons": [
-        "ATR赔率位置差"
+        "止损距离偏宽"
       ],
-      "cap_reason": "价格偏离均线过大",
+      "cap_reason": null,
       "parts": {
-        "trend": 37,
-        "macd": 22,
-        "kdj": 6,
-        "volume": 6,
-        "atr": 2
-      },
-      "texts": {
-        "trend": "趋势37/40，EMA多头排列",
-        "macd": "MACD22/25，零轴上方动能占优",
-        "kdj": "KDJ6/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR2/10，追价风险偏高"
-      },
-      "atr": 17.5153,
-      "stop_loss": 468.7793,
-      "take_profit": 522.4877,
-      "add_price": 386.1477,
-      "invalidation": 359.8746,
-      "stop_pct": 0.0747,
-      "take_pct": 0.0371,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 34,
-        "win_rate": 0.6471,
-        "avg_return": 0.0034,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "US.PLTR",
-      "name": "Palantir",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.2124355579,
-      "market_value": 327306.1924909247,
-      "status": "ok",
-      "latest_date": "2026-08-11",
-      "close": 174.94,
-      "score": 73,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "高",
-      "risk_reasons": [
-        "ATR赔率位置差"
-      ],
-      "cap_reason": "价格偏离均线过大",
-      "parts": {
-        "trend": 35,
+        "trend": 33,
         "macd": 24,
-        "kdj": 6,
-        "volume": 6,
-        "atr": 2
+        "kdj": 8,
+        "volume": 9,
+        "atr": 8
       },
       "texts": {
-        "trend": "趋势35/40，EMA多头排列",
+        "trend": "趋势33/40，EMA多头排列",
         "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ6/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR2/10，追价风险偏高"
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能9/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
       },
-      "atr": 9.3475,
-      "stop_loss": 156.245,
-      "take_profit": 184.2737,
-      "add_price": 122.5637,
-      "invalidation": 108.5425,
-      "stop_pct": 0.1197,
-      "take_pct": 0.0534,
+      "atr": 36.8312,
+      "stop_loss": 410.8376,
+      "take_profit": 504.1156,
+      "add_price": 377.2957,
+      "invalidation": 322.0489,
+      "stop_pct": 0.1793,
+      "take_pct": 0.0405,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 64,
-        "win_rate": 0.4375,
-        "avg_return": -0.0159,
+        "trades": 94,
+        "win_rate": 0.7128,
+        "avg_return": 0.0273,
         "validation": true
       }
     },
@@ -127,11 +77,11 @@
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.1883630708,
-      "market_value": 290216.9491393496,
+      "weight": 0.1863879386,
+      "market_value": 290828.7804286705,
       "status": "ok",
-      "latest_date": "2026-08-11",
-      "close": 194.48,
+      "latest_date": "2026-08-12",
+      "close": 194.89,
       "score": 81,
       "rating": "4分",
       "action": "多头",
@@ -154,84 +104,34 @@
         "volume": "量能6/15，量价确认不足",
         "atr": "ATR8/10，执行位置可接受"
       },
-      "atr": 8.0909,
-      "stop_loss": 178.2983,
-      "take_profit": 205.8868,
-      "add_price": 173.0954,
-      "invalidation": 160.9591,
-      "stop_pct": 0.0908,
-      "take_pct": 0.0587,
+      "atr": 7.5948,
+      "stop_loss": 179.7004,
+      "take_profit": 205.6388,
+      "add_price": 172.8474,
+      "invalidation": 161.4552,
+      "stop_pct": 0.0845,
+      "take_pct": 0.0552,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 136,
-        "win_rate": 0.6912,
+        "trades": 137,
+        "win_rate": 0.6934,
         "avg_return": 0.0089,
         "validation": true
       }
     },
     {
-      "ticker": "US.DELL",
-      "name": "戴尔科技",
+      "ticker": "US.MSFT",
+      "name": "微软",
       "sources": [
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.2131452322,
-      "market_value": 328399.6102757577,
+      "weight": 0.1883837961,
+      "market_value": 293942.9990917759,
       "status": "ok",
-      "latest_date": "2026-08-11",
-      "close": 440.97,
-      "score": 76,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "中",
-      "risk_reasons": [
-        "止损距离偏宽"
-      ],
-      "cap_reason": null,
-      "parts": {
-        "trend": 33,
-        "macd": 22,
-        "kdj": 5,
-        "volume": 6,
-        "atr": 10
-      },
-      "texts": {
-        "trend": "趋势33/40，EMA多头排列",
-        "macd": "MACD22/25，零轴上方动能占优",
-        "kdj": "KDJ5/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR10/10，执行位置可接受"
-      },
-      "atr": 35.1812,
-      "stop_loss": 370.6076,
-      "take_profit": 493.7418,
-      "add_price": 376.4707,
-      "invalidation": 323.6989,
-      "stop_pct": 0.1899,
-      "take_pct": 0.1197,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 94,
-        "win_rate": 0.6596,
-        "avg_return": 0.0205,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "US.RIO",
-      "name": "力拓",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.1908657676,
-      "market_value": 294072.9334954564,
-      "status": "ok",
-      "latest_date": "2026-08-11",
-      "close": 100.99,
+      "latest_date": "2026-08-12",
+      "close": 492.43,
       "score": 76,
       "rating": "4分",
       "action": "多头",
@@ -241,30 +141,80 @@
       "parts": {
         "trend": 37,
         "macd": 22,
-        "kdj": 5,
-        "volume": 7,
+        "kdj": 6,
+        "volume": 6,
         "atr": 5
       },
       "texts": {
         "trend": "趋势37/40，EMA多头排列",
         "macd": "MACD22/25，零轴上方动能占优",
-        "kdj": "KDJ5/10，节奏未见明确背离",
-        "volume": "量能7/15，量价确认不足",
+        "kdj": "KDJ6/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
         "atr": "ATR5/10，追价风险偏高"
       },
-      "atr": 2.202,
-      "stop_loss": 96.586,
-      "take_profit": 103.6642,
-      "add_price": 89.721,
-      "invalidation": 86.418,
-      "stop_pct": 0.0456,
-      "take_pct": 0.0265,
+      "atr": 17.3653,
+      "stop_loss": 457.6993,
+      "take_profit": 518.478,
+      "add_price": 386.0727,
+      "invalidation": 360.0247,
+      "stop_pct": 0.0759,
+      "take_pct": 0.0529,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 130,
-        "win_rate": 0.8077,
-        "avg_return": 0.0168,
+        "trades": 35,
+        "win_rate": 0.5429,
+        "avg_return": -0.0013,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.PLTR",
+      "name": "Palantir",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.2050893983,
+      "market_value": 320009.4384568867,
+      "status": "ok",
+      "latest_date": "2026-08-12",
+      "close": 171.04,
+      "score": 74,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 35,
+        "macd": 22,
+        "kdj": 6,
+        "volume": 6,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势35/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ6/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 9.4246,
+      "stop_loss": 152.1907,
+      "take_profit": 184.3123,
+      "add_price": 122.6023,
+      "invalidation": 108.4654,
+      "stop_pct": 0.1239,
+      "take_pct": 0.0776,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 64,
+        "win_rate": 0.4219,
+        "avg_return": -0.0158,
         "validation": true
       }
     },
@@ -278,8 +228,8 @@
       "weight": null,
       "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-11",
-      "close": 770.56,
+      "latest_date": "2026-08-12",
+      "close": 772.49,
       "score": 79,
       "rating": "4分",
       "action": "多头",
@@ -300,19 +250,67 @@
         "volume": "量能7/15，量价确认不足",
         "atr": "ATR8/10，执行位置可接受"
       },
-      "atr": 9.005,
-      "stop_loss": 752.55,
-      "take_profit": 781.3525,
-      "add_price": 733.6025,
-      "invalidation": 720.095,
-      "stop_pct": 0.0239,
-      "take_pct": 0.014,
+      "atr": 8.4436,
+      "stop_loss": 755.6028,
+      "take_profit": 781.0718,
+      "add_price": 733.3218,
+      "invalidation": 720.6564,
+      "stop_pct": 0.0223,
+      "take_pct": 0.0111,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 100,
-        "win_rate": 0.59,
-        "avg_return": 0.0008,
+        "trades": 101,
+        "win_rate": 0.604,
+        "avg_return": 0.0009,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.RIO",
+      "name": "力拓",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.1888962941,
+      "market_value": 294742.6708427577,
+      "status": "ok",
+      "latest_date": "2026-08-12",
+      "close": 101.22,
+      "score": 77,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "低",
+      "risk_reasons": [],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 22,
+        "kdj": 4,
+        "volume": 6,
+        "atr": 8
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ4/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
+      },
+      "atr": 2.242,
+      "stop_loss": 96.736,
+      "take_profit": 103.961,
+      "add_price": 89.741,
+      "invalidation": 86.378,
+      "stop_pct": 0.0464,
+      "take_pct": 0.0271,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 131,
+        "win_rate": 0.8168,
+        "avg_return": 0.0168,
         "validation": true
       }
     },
@@ -326,46 +324,46 @@
       "weight": null,
       "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-11",
-      "close": 718.45,
-      "score": 73,
+      "latest_date": "2026-08-12",
+      "close": 723.7,
+      "score": 75,
       "rating": "4分",
       "action": "多头",
       "risk_level": "低",
       "risk_reasons": [],
       "cap_reason": null,
       "parts": {
-        "trend": 30,
+        "trend": 33,
         "macd": 20,
         "kdj": 7,
-        "volume": 6,
-        "atr": 10
+        "volume": 7,
+        "atr": 8
       },
       "texts": {
-        "trend": "趋势30/40，EMA多头排列",
+        "trend": "趋势33/40，EMA多头排列",
         "macd": "MACD20/25，零轴上方动能占优",
         "kdj": "KDJ7/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR10/10，执行位置可接受"
+        "volume": "量能7/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
       },
-      "atr": 14.3781,
-      "stop_loss": 689.6937,
-      "take_profit": 735.7291,
-      "add_price": 668.3291,
-      "invalidation": 646.7619,
-      "stop_pct": 0.0417,
-      "take_pct": 0.0241,
+      "atr": 13.7524,
+      "stop_loss": 696.1952,
+      "take_profit": 735.4162,
+      "add_price": 668.0162,
+      "invalidation": 647.3876,
+      "stop_pct": 0.0395,
+      "take_pct": 0.0162,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 98,
-        "win_rate": 0.5,
-        "avg_return": -0.002,
+        "trades": 99,
+        "win_rate": 0.5253,
+        "avg_return": -0.0016,
         "validation": true
       }
     }
   ],
-  "input_version": "f347a2122634212b986e",
+  "input_version": "740eb5167ef0df327d65",
   "input_fingerprint_version": 2,
   "cache_hit": false
 }
