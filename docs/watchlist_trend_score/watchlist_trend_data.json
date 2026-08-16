@@ -1,10 +1,10 @@
 {
   "schema_version": 16,
   "title": "自选股双引擎雷达",
-  "generated_at": "2026-08-16T21:40:18+08:00",
+  "generated_at": "2026-08-16T21:54:32+08:00",
   "heat_as_of": "2026-08-16",
   "er_signal_date": "2026-08-14",
-  "opend_last_refresh": "2026-08-16T21:36:11+08:00",
+  "opend_last_refresh": "2026-08-16T21:43:47+08:00",
   "refresh_error": null,
   "definitions": {
     "market": "美股、港股、OpenD 可见韩股，以及固定手动韩股",
@@ -97871,8 +97871,9 @@
     "refreshed": 0,
     "deferred": 143,
     "intraday_30m_requested": 250,
-    "intraday_30m_refreshed": 246,
+    "intraday_30m_refreshed": 245,
     "intraday_30m_failed": {
+      "HK.00005": "RuntimeError: 获取历史K线频率太高，请求失败，每30秒最多60次。",
       "US.BESIY": "RuntimeError: 暂不提供美股 OTC 市场行情 BESIY",
       "US.KXIAY": "RuntimeError: 暂不提供美股 OTC 市场行情 KXIAY",
       "US.LYSDY": "RuntimeError: 暂不提供美股 OTC 市场行情 LYSDY",
