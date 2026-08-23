@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>每日期权信号看板</title>
+  <style>
+    :root { --bg:#f4f7f5; --panel:#fff; --ink:#17353c; --muted:#667a7c; --line:#dce6e1; --navy:#163f46; --teal:#168a7c; --mint:#e4f1ec; --red:#bd514e; --amber:#a56a18; --blue:#3e78a8; --shadow:0 14px 34px rgba(32,65,60,.08); }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif; }
+    a { color:inherit; } button { font:inherit; }
+    .layout { display:grid; grid-template-columns:252px minmax(0,1fr); gap:18px; max-width:1640px; margin:0 auto; padding:18px; }
+    .sidebar { position:sticky; top:18px; align-self:start; padding:16px; border:1px solid var(--line); border-radius:18px; background:rgba(255,255,255,.9); box-shadow:var(--shadow); }
+    .sidebar-title { margin:2px 8px 12px; color:#718283; font-size:12px; font-weight:850; letter-spacing:.12em; }
+    .nav-links { display:grid; gap:6px; } .nav-link { padding:10px 12px; border-radius:10px; color:#53686b; text-decoration:none; font-size:13px; font-weight:730; line-height:1.35; }
+    .nav-link:hover { background:#edf3f0; } .nav-link.active { background:var(--navy); color:white; }
+    main { min-width:0; }
+    .hero { position:relative; overflow:hidden; padding:28px; border-radius:22px; color:white; background:linear-gradient(135deg,#153f47 0%,#176b68 65%,#1c8576 100%); box-shadow:0 18px 42px rgba(17,66,68,.18); }
+    .hero:after { content:""; position:absolute; width:300px; height:300px; right:-90px; top:-170px; border-radius:50%; border:58px solid rgba(255,255,255,.07); }
+    .hero-row { position:relative; z-index:1; display:flex; justify-content:space-between; align-items:flex-start; gap:24px; }
+    .kicker { color:#aee9d8; font-size:12px; font-weight:850; letter-spacing:.13em; }
+    h1 { margin:8px 0 10px; font-size:clamp(28px,4vw,46px); letter-spacing:-.04em; }
+    .hero p { max-width:850px; margin:0; color:#d6ebe7; line-height:1.75; font-size:14px; }
+    .refresh { flex:0 0 210px; padding:12px 16px; border:1px solid rgba(255,255,255,.28); border-radius:12px; color:#123c41; background:#f1fffa; font-weight:850; cursor:pointer; box-shadow:0 10px 25px rgba(0,0,0,.12); }
+    .refresh:disabled { opacity:.62; cursor:wait; }
+    .status-line { position:relative; z-index:1; display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:18px; color:#cce4df; font-size:12px; } .status-line b { color:white; }
+    .cards { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:14px 0; }
+    .card { padding:17px 18px; border:1px solid var(--line); border-radius:16px; background:var(--panel); box-shadow:var(--shadow); }
+    .card small { display:block; color:var(--muted); font-size:11px; } .card b { display:block; margin-top:7px; font-size:23px; letter-spacing:-.03em; }
+    .board { overflow:hidden; border:1px solid var(--line); border-radius:18px; background:var(--panel); box-shadow:var(--shadow); }
+    .board-head { display:flex; justify-content:space-between; gap:20px; padding:18px 20px; border-bottom:1px solid var(--line); }
+    .board-head h2 { margin:0; font-size:19px; } .board-head p { margin:5px 0 0; color:var(--muted); font-size:12px; line-height:1.55; }
+    .live { align-self:center; display:inline-flex; align-items:center; gap:7px; color:var(--teal); font-size:12px; font-weight:850; white-space:nowrap; } .dot { width:8px; height:8px; border-radius:50%; background:#2bbd8f; box-shadow:0 0 0 5px rgba(43,189,143,.13); }
+    .table-wrap { overflow-x:auto; } table { width:100%; border-collapse:collapse; min-width:1060px; }
+    th { padding:12px 14px; color:#6c7f80; background:#f7f9f8; border-bottom:1px solid var(--line); text-align:right; font-size:11px; letter-spacing:.05em; white-space:nowrap; } th:nth-child(-n+3) { text-align:left; }
+    td { padding:14px; border-bottom:1px solid #e8eeeb; text-align:right; font-size:13px; vertical-align:top; } td:nth-child(-n+3) { text-align:left; } tr:last-child td { border-bottom:0; } tbody tr:hover { background:#fbfdfc; }
+    .rank { display:inline-grid; place-items:center; width:28px; height:28px; border-radius:9px; color:white; background:var(--navy); font-weight:900; }
+    .ticker { color:#176f70; font-size:15px; font-weight:900; } .name { margin-top:3px; color:var(--muted); font-size:11px; }
+    .ratio { color:var(--teal); font-weight:900; } .money { font-weight:850; } .sub { display:block; margin-top:4px; color:var(--muted); font-size:10px; }
+    .split { display:flex; justify-content:flex-end; gap:5px; } .pill { display:inline-flex; padding:4px 7px; border-radius:99px; font-size:10px; font-weight:800; } .call { color:#196c56; background:#e3f3eb; } .put { color:#a24445; background:#f8e7e6; }
+    .details-row td { padding:0 14px 14px 56px; background:#fbfcfb; text-align:left !important; } details summary { cursor:pointer; color:#3f696d; font-size:11px; font-weight:800; }
+    .trade-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:8px; margin-top:10px; } .trade { padding:10px 11px; border:1px solid #e0e8e4; border-radius:10px; background:white; color:#506567; font-size:11px; line-height:1.55; } .trade b { color:var(--ink); }
+    .empty { padding:52px 20px; text-align:center; color:var(--muted); } .error { margin:14px 0; padding:13px 15px; border:1px solid #f0c8c5; border-radius:12px; color:#913f3c; background:#fff0ef; font-size:12px; }
+    .method { margin-top:14px; padding:18px 20px; border:1px solid var(--line); border-radius:16px; background:#f9fbfa; color:#53696a; font-size:12px; line-height:1.75; } .method b { color:var(--ink); }
+    @media (max-width:1050px) { .layout { grid-template-columns:1fr; padding:10px; } .sidebar { position:static; padding:10px; } .sidebar-title { display:none; } .nav-links { display:flex; overflow:auto; } .nav-link { flex:0 0 auto; white-space:nowrap; } .cards { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media (max-width:680px) { .hero { padding:21px; } .hero-row { display:block; } .refresh { width:100%; margin-top:18px; } .cards { grid-template-columns:1fr 1fr; } .card b { font-size:19px; } }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar"><div class="sidebar-title">策略目录</div><div class="nav-links"><a class='nav-link' href='../overview/index.html'>策略总览</a>
+<a class='nav-link' href='../er_3_8_20_100b_daily/index.html'>ER 3/8/20 (100B 日调仓)</a>
+<a class='nav-link' href='../etf_er_3_8_20_whitelist/index.html'>ETF ER 3/8/20 (白名单日调仓 Top5)</a>
+<a class='nav-link' href='../hk_er_3_8_20_20b_stock_connect/index.html'>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</a>
+<a class='nav-link' href='../er_3_8_20_100b_top5_biweekly_top50/index.html'>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</a>
+<a class='nav-link' href='../er_3_8_20_100b_top5_weekly/index.html'>ER 3/8/20 (100B Top5 周换仓)</a>
+<a class='nav-link active' href='./index.html'>每日期权信号</a>
+<a class='nav-link' href='../watchlist_trend_score/index.html'>自选股趋势评分</a>
+<a class='nav-link' href='../long_term_trend_strength/index.html'>长线趋势最强</a></div></aside>
+    <main>
+      <section class="hero">
+        <div class="hero-row">
+          <div><div class="kicker">DAILY OPTIONS FLOW</div><h1>每日期权信号</h1><p>筛选美股正股市值 100 亿—10,000 亿美元、到期不足 30 天的期权大单异动，按当日异动权利金总额 ÷ 正股实时市值从高到低展示前 10 名。</p></div>
+          <button id="refreshButton" class="refresh" type="button">刷新最新信号</button>
+        </div>
+        <div class="status-line"><span>美股交易日 <b id="marketDate">—</b></span><span>上海时间 <b id="generatedAt">等待刷新</b></span><span id="autoStatus">每 60 秒自动刷新</span></div>
+      </section>
+      <div id="errorBox"></div>
+      <section class="cards">
+        <div class="card"><small>入选个股</small><b id="matchedCount">—</b></div>
+        <div class="card"><small>候选正股</small><b id="candidateCount">—</b></div>
+        <div class="card"><small>候选期权合约</small><b id="contractCount">—</b></div>
+        <div class="card"><small>本次刷新耗时</small><b id="elapsed">—</b></div>
+      </section>
+      <section class="board">
+        <div class="board-head"><div><h2>权利金 / 正股市值比率排名</h2><p>仅统计 OpenD 判定的当日期权大单异动；展开个股可查看逐笔方向、V/OI、行权价和到期日。</p></div><div class="live"><span class="dot"></span><span id="liveLabel">等待数据</span></div></div>
+        <div class="table-wrap"><table><thead><tr><th>排名</th><th>股票</th><th>公司</th><th>权利金总额</th><th>正股市值</th><th>比率 (bps)</th><th>Call / Put</th><th>异动笔数</th><th>最近到期</th><th>最新异动</th></tr></thead><tbody id="signalBody"><tr><td colspan="10"><div class="empty">正在读取最新数据…</div></td></tr></tbody></table></div>
+      </section>
+      <div class="method"><b>计算口径：</b>先以合约当日成交量 ≥ 1,000 张建立候选池，再逐股调用 <code>get_derivative_unusual</code> 的“期权大单异动”结果复核；只汇总当前美股交易日且 0 ≤ 到期剩余天数 &lt; 30 的美元交易金额。候选预筛不参与最终权利金计算，ETF 不在正股池内。数据仅供研究，不构成投资建议。</div>
+    </main>
+  </div>
+  <script>
+    const body = document.getElementById('signalBody');
+    const refreshButton = document.getElementById('refreshButton');
+    let loading = false;
+    const fmtMoney = value => new Intl.NumberFormat('en-US', {style:'currency',currency:'USD',maximumFractionDigits:0}).format(Number(value || 0));
+    const fmtCap = value => '$' + (Number(value || 0) / 1e9).toLocaleString('en-US', {maximumFractionDigits:1}) + 'B';
+    const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+    function tradeCard(trade) {
+      const voi = trade.vol_oi_ratio == null ? '—' : Number(trade.vol_oi_ratio).toFixed(1);
+      return `<div class="trade"><b>${esc(trade.time)} · ${esc(trade.side)}${esc(trade.option_type)}</b><br>${fmtMoney(trade.premium)} · ${Number(trade.volume || 0).toLocaleString()} 张 · V/OI ${voi}<br>行权价 ${Number(trade.strike || 0).toLocaleString()} · 到期 ${esc(trade.expiry)} (${trade.days_to_expiry}天)</div>`;
+    }
+    function renderRows(rows) {
+      if (!rows.length) { body.innerHTML = '<tr><td colspan="10"><div class="empty">当前交易日暂无满足全部条件的期权大单异动。</div></td></tr>'; return; }
+      body.innerHTML = rows.map(row => {
+        const callPct = row.premium_total ? row.call_premium / row.premium_total * 100 : 0;
+        const putPct = row.premium_total ? row.put_premium / row.premium_total * 100 : 0;
+        return `<tr><td><span class="rank">${row.rank}</span></td><td><div class="ticker">${esc(row.ticker)}</div></td><td><div>${esc(row.name)}</div><span class="sub">${esc(row.symbol)}</span></td><td><span class="money">${fmtMoney(row.premium_total)}</span></td><td>${fmtCap(row.market_cap)}</td><td><span class="ratio">${Number(row.ratio_bps).toFixed(3)}</span></td><td><div class="split"><span class="pill call">C ${callPct.toFixed(0)}%</span><span class="pill put">P ${putPct.toFixed(0)}%</span></div></td><td>${row.trade_count}</td><td>${esc(row.nearest_expiry)}</td><td>${esc(row.latest_time)}</td></tr><tr class="details-row"><td colspan="10"><details><summary>查看 ${row.trade_count} 笔异动明细</summary><div class="trade-grid">${row.trades.map(tradeCard).join('')}</div></details></td></tr>`;
+      }).join('');
+    }
+    function render(payload) {
+      document.getElementById('marketDate').textContent = payload.market_date || '—';
+      document.getElementById('generatedAt').textContent = payload.generated_at_shanghai || '—';
+      document.getElementById('matchedCount').textContent = Number(payload.matched_stock_count || payload.rows?.length || 0).toLocaleString();
+      document.getElementById('candidateCount').textContent = Number(payload.candidate_stock_count || 0).toLocaleString();
+      document.getElementById('contractCount').textContent = Number(payload.screened_contract_count || 0).toLocaleString();
+      document.getElementById('elapsed').textContent = payload.elapsed_seconds ? Number(payload.elapsed_seconds).toFixed(1) + 's' : '—';
+      document.getElementById('liveLabel').textContent = payload.stale ? '缓存数据' : 'OpenD 最新数据';
+      const warning = payload.refresh_error || payload.error || (payload.query_error_count ? `${payload.query_error_count} 个候选查询失败，已跳过` : '');
+      document.getElementById('errorBox').innerHTML = warning ? `<div class="error">${esc(warning)}</div>` : '';
+      renderRows(Array.isArray(payload.rows) ? payload.rows : []);
+    }
+    async function load(force=false) {
+      if (loading) return;
+      loading = true; refreshButton.disabled = true; refreshButton.textContent = '刷新中…';
+      try {
+        let response = await fetch(`/api/options-signal?refresh=${force ? 1 : 0}&t=${Date.now()}`, {cache:'no-store'});
+        if (!response.ok) throw new Error(`本地刷新接口 ${response.status}`);
+        render(await response.json());
+      } catch (error) {
+        try {
+          const fallback = await fetch(`option_signal_latest.json?t=${Date.now()}`, {cache:'no-store'});
+          if (!fallback.ok) throw error;
+          const payload = await fallback.json(); payload.refresh_error = `实时接口不可用：${error.message || error}`;
+          render(payload);
+        } catch (_) {
+          document.getElementById('errorBox').innerHTML = `<div class="error">无法加载期权信号：${esc(error.message || error)}。请确认本地 8765 服务与 OpenD 已启动。</div>`;
+        }
+      } finally { loading = false; refreshButton.disabled = false; refreshButton.textContent = '刷新最新信号'; }
+    }
+    refreshButton.addEventListener('click', () => load(true));
+    load(false);
+    setInterval(() => load(true), 60000);
+  </script>
+</body>
+</html>
