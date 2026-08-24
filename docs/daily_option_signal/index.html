@@ -10,9 +10,9 @@
     body { margin:0; background:var(--bg); color:var(--ink); font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif; }
     a { color:inherit; } button { font:inherit; }
     .layout { display:grid; grid-template-columns:252px minmax(0,1fr); gap:18px; max-width:1640px; margin:0 auto; padding:18px; }
-    .sidebar { position:sticky; top:18px; align-self:start; padding:16px; border:1px solid var(--line); border-radius:18px; background:rgba(255,255,255,.9); box-shadow:var(--shadow); }
+    .sidebar { min-width:0; max-width:100%; position:sticky; top:18px; align-self:start; padding:16px; border:1px solid var(--line); border-radius:18px; background:rgba(255,255,255,.9); box-shadow:var(--shadow); }
     .sidebar-title { margin:2px 8px 12px; color:#718283; font-size:12px; font-weight:850; letter-spacing:.12em; }
-    .nav-links { display:grid; gap:6px; } .nav-link { padding:10px 12px; border-radius:10px; color:#53686b; text-decoration:none; font-size:13px; font-weight:730; line-height:1.35; }
+    .nav-links { min-width:0; max-width:100%; display:grid; gap:6px; } .nav-link { padding:10px 12px; border-radius:10px; color:#53686b; text-decoration:none; font-size:13px; font-weight:730; line-height:1.35; }
     .nav-link:hover { background:#edf3f0; } .nav-link.active { background:var(--navy); color:white; }
     main { min-width:0; }
     .hero { position:relative; overflow:hidden; padding:28px; border-radius:22px; color:white; background:linear-gradient(135deg,#153f47 0%,#176b68 65%,#1c8576 100%); box-shadow:0 18px 42px rgba(17,66,68,.18); }
@@ -42,7 +42,7 @@
     .trade-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:8px; margin-top:10px; } .trade { padding:10px 11px; border:1px solid #e0e8e4; border-radius:10px; background:white; color:#506567; font-size:11px; line-height:1.55; } .trade b { color:var(--ink); }
     .empty { padding:52px 20px; text-align:center; color:var(--muted); } .error { margin:14px 0; padding:13px 15px; border:1px solid #f0c8c5; border-radius:12px; color:#913f3c; background:#fff0ef; font-size:12px; }
     .method { margin-top:14px; padding:18px 20px; border:1px solid var(--line); border-radius:16px; background:#f9fbfa; color:#53696a; font-size:12px; line-height:1.75; } .method b { color:var(--ink); }
-    @media (max-width:1050px) { .layout { grid-template-columns:1fr; padding:10px; } .sidebar { position:static; padding:10px; } .sidebar-title { display:none; } .nav-links { display:flex; overflow:auto; } .nav-link { flex:0 0 auto; white-space:nowrap; } .cards { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media (max-width:1050px) { .layout { width:100%; grid-template-columns:minmax(0,1fr); padding:10px; } .sidebar { width:100%; position:static; padding:10px; } .sidebar-title { display:none; } .nav-links { width:100%; display:flex; overflow-x:auto; overflow-y:hidden; } .nav-link { flex:0 0 auto; white-space:nowrap; } .cards { grid-template-columns:repeat(2,minmax(0,1fr)); } }
     @media (max-width:680px) { .hero { padding:21px; } .hero-row { display:block; } .refresh { width:100%; margin-top:18px; } .cards { grid-template-columns:1fr 1fr; } .card b { font-size:19px; } }
   </style>
 </head>
@@ -76,7 +76,7 @@
         <div class="board-head"><div><h2>权利金 / 正股市值比率排名</h2><p>仅统计 OpenD 判定的当日期权大单异动；展开个股可查看逐笔方向、V/OI、行权价和到期日。</p></div><div class="live"><span class="dot"></span><span id="liveLabel">等待数据</span></div></div>
         <div class="table-wrap"><table><thead><tr><th>排名</th><th>股票</th><th>公司</th><th>权利金总额</th><th>正股市值</th><th>比率 (bps)</th><th>Call / Put</th><th>异动笔数</th><th>最近到期</th><th>最新异动</th></tr></thead><tbody id="signalBody"><tr><td colspan="10"><div class="empty">正在读取最新数据…</div></td></tr></tbody></table></div>
       </section>
-      <div class="method"><b>计算口径：</b>先以合约当日成交量 ≥ 1,000 张建立候选池，再逐股调用 <code>get_derivative_unusual</code> 的“期权大单异动”结果复核；只汇总当前美股交易日且 0 ≤ 到期剩余天数 &lt; 30 的美元交易金额。候选预筛不参与最终权利金计算，ETF 不在正股池内。数据仅供研究，不构成投资建议。</div>
+      <div class="method"><b>计算口径：</b>先以合约当日成交量 ≥ 200 张建立候选池，再逐股调用 <code>get_derivative_unusual</code> 的“期权大单异动”结果复核；只汇总当前美股交易日且 0 ≤ 到期剩余天数 &lt; 30 的美元交易金额。候选预筛不参与最终权利金计算，ETF 不在正股池内。数据仅供研究，不构成投资建议。</div>
     </main>
   </div>
   <script>

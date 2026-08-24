@@ -1,10 +1,10 @@
 {
   "ok": true,
   "stale": false,
-  "market_date": "2026-08-23",
-  "generated_at": "2026-08-24T11:09:44+08:00",
-  "generated_at_shanghai": "2026-08-24 11:09:44",
-  "elapsed_seconds": 9.64,
+  "market_date": "2026-08-24",
+  "generated_at": "2026-08-24T21:32:22+08:00",
+  "generated_at_shanghai": "2026-08-24 21:32:22",
+  "elapsed_seconds": 35.07,
   "criteria": {
     "market": "US",
     "security_type": "STOCK",
@@ -14,10 +14,127 @@
     "ranking": "unusual_premium_total / underlying_market_cap",
     "top_n": 10
   },
-  "screened_contract_count": 2763,
-  "candidate_stock_count": 93,
-  "matched_stock_count": 0,
-  "query_error_count": 0,
-  "query_errors": [],
-  "rows": []
+  "screened_contract_count": 2728,
+  "candidate_stock_count": 217,
+  "matched_stock_count": 3,
+  "query_error_count": 1,
+  "query_errors": [
+    "US.ECHO: 拉取美股夜盘状态失败。"
+  ],
+  "rows": [
+    {
+      "symbol": "US.COHR",
+      "ticker": "COHR",
+      "name": "Coherent",
+      "screen_turnover": 4323298.0,
+      "contract_count": 4,
+      "market_cap": 56697351861.92,
+      "screen_ratio": 7.625220328682906e-05,
+      "trades": [
+        {
+          "trade_date": "2026-08-24",
+          "time": "21:30",
+          "side": "卖出",
+          "option_type": "看涨",
+          "volume": 437,
+          "open_interest": 29,
+          "vol_oi_ratio": 41.4,
+          "premium": 485211.0,
+          "currency": "USD",
+          "strike": 270.0,
+          "expiry": "2026-08-28",
+          "days_to_expiry": 4,
+          "text": "8.24 21:30，出现一笔卖出看涨期权交易，成交量为437张，未平仓数为29张，V/OI值为41.4，交易金额为485211USD，合约行权价是270，到期日为2026/08/28。"
+        }
+      ],
+      "premium_total": 485211.0,
+      "ratio": 8.557912919490078e-06,
+      "ratio_bps": 0.08557912919490078,
+      "trade_count": 1,
+      "call_premium": 485211.0,
+      "put_premium": 0,
+      "buy_premium": 0,
+      "sell_premium": 485211.0,
+      "neutral_premium": 0.0,
+      "nearest_expiry": "2026-08-28",
+      "latest_time": "21:30",
+      "rank": 1
+    },
+    {
+      "symbol": "US.PLTR",
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "screen_turnover": 7945192.0,
+      "contract_count": 14,
+      "market_cap": 432406342891.2,
+      "screen_ratio": 1.83743650633708e-05,
+      "trades": [
+        {
+          "trade_date": "2026-08-24",
+          "time": "21:30",
+          "side": "买入",
+          "option_type": "看涨",
+          "volume": 2000,
+          "open_interest": 9613,
+          "vol_oi_ratio": 0.2,
+          "premium": 1964000.0,
+          "currency": "USD",
+          "strike": 175.0,
+          "expiry": "2026-09-18",
+          "days_to_expiry": 25,
+          "text": "8.24 21:30，出现一笔买入看涨期权交易，成交量为2000张，未平仓数为9613张，V/OI值为0.2，交易金额为1964000USD，合约行权价是175，到期日为2026/09/18。"
+        }
+      ],
+      "premium_total": 1964000.0,
+      "ratio": 4.542024029684903e-06,
+      "ratio_bps": 0.04542024029684903,
+      "trade_count": 1,
+      "call_premium": 1964000.0,
+      "put_premium": 0,
+      "buy_premium": 1964000.0,
+      "sell_premium": 0,
+      "neutral_premium": 0.0,
+      "nearest_expiry": "2026-09-18",
+      "latest_time": "21:30",
+      "rank": 2
+    },
+    {
+      "symbol": "US.HOOD",
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "screen_turnover": 9139985.0,
+      "contract_count": 15,
+      "market_cap": 97217766179.49,
+      "screen_ratio": 9.401558335669987e-05,
+      "trades": [
+        {
+          "trade_date": "2026-08-24",
+          "time": "21:30",
+          "side": "买入",
+          "option_type": "看涨",
+          "volume": 1000,
+          "open_interest": 1772,
+          "vol_oi_ratio": 0.6,
+          "premium": 120000.0,
+          "currency": "USD",
+          "strike": 118.0,
+          "expiry": "2026-08-28",
+          "days_to_expiry": 4,
+          "text": "8.24 21:30，出现一笔买入看涨期权交易，成交量为1000张，未平仓数为1772张，V/OI值为0.6，交易金额为120000USD，合约行权价是118，到期日为2026/08/28。"
+        }
+      ],
+      "premium_total": 120000.0,
+      "ratio": 1.234342288614695e-06,
+      "ratio_bps": 0.01234342288614695,
+      "trade_count": 1,
+      "call_premium": 120000.0,
+      "put_premium": 0,
+      "buy_premium": 120000.0,
+      "sell_premium": 0,
+      "neutral_premium": 0.0,
+      "nearest_expiry": "2026-08-28",
+      "latest_time": "21:30",
+      "rank": 3
+    }
+  ]
 }
