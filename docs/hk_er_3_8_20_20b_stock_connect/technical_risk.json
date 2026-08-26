@@ -1,25 +1,75 @@
 {
-  "generated_at": "2026-08-24T23:47:19",
+  "generated_at": "2026-08-26T23:45:48",
   "variant_name": "港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）",
   "variant_slug": "hk_er_3_8_20_20b_stock_connect",
   "universe_mode": "current_and_planned",
-  "holding_count": 13,
+  "holding_count": 14,
   "current_holding_count": 10,
-  "planned_buy_count": 1,
+  "planned_buy_count": 2,
   "historical_buy_count": 0,
-  "ticker_count": 13,
-  "risk_high_count": 4,
-  "backtest_period": "验证期 2025-08-24 至 2026-08-24",
-  "training_period": "训练期 2022-01-03 至 2025-08-23",
+  "ticker_count": 14,
+  "risk_high_count": 5,
+  "backtest_period": "验证期 2025-08-26 至 2026-08-26",
+  "training_period": "训练期 2022-01-03 至 2025-08-25",
   "validation_method": "参数仅在训练期选择，胜率和平均收益来自随后一年验证期",
   "strategy_summary": {
     "stop_atr": 2.0,
     "take_atr": 1.5,
-    "trades": 972,
-    "win_rate": 0.6451,
-    "avg_return": 0.0181
+    "trades": 1026,
+    "win_rate": 0.6355,
+    "avg_return": 0.0169
   },
   "rows": [
+    {
+      "ticker": "HK.06969",
+      "name": "思摩尔国际",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 11.39,
+      "score": 84,
+      "rating": "4.5分",
+      "action": "多头 / 观察回踩",
+      "risk_level": "高",
+      "risk_reasons": [
+        "ATR赔率位置差"
+      ],
+      "cap_reason": "价格偏离均线过大",
+      "parts": {
+        "trend": 38,
+        "macd": 24,
+        "kdj": 7,
+        "volume": 13,
+        "atr": 2
+      },
+      "texts": {
+        "trend": "趋势38/40，EMA多头排列",
+        "macd": "MACD24/25，零轴上方动能占优",
+        "kdj": "KDJ7/10，节奏未见明确背离",
+        "volume": "量能13/15，量价配合较好",
+        "atr": "ATR2/10，追价风险偏高"
+      },
+      "atr": 0.5871,
+      "stop_loss": 10.2157,
+      "take_profit": 11.9836,
+      "add_price": 8.6836,
+      "invalidation": 7.8029,
+      "stop_pct": 0.1149,
+      "take_pct": 0.0521,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 0,
+        "win_rate": null,
+        "avg_return": null,
+        "validation": true
+      }
+    },
     {
       "ticker": "HK.01548",
       "name": "金斯瑞生物科技",
@@ -27,12 +77,12 @@
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.1520636734,
-      "market_value": 130120.692052818,
+      "weight": 0.1676786744,
+      "market_value": 140970.731365622,
       "status": "ok",
-      "latest_date": "2026-08-24",
-      "close": 32.62,
-      "score": 72,
+      "latest_date": "2026-08-26",
+      "close": 35.34,
+      "score": 79,
       "rating": "4分",
       "action": "多头",
       "risk_level": "高",
@@ -41,32 +91,82 @@
       ],
       "cap_reason": "价格偏离均线过大",
       "parts": {
-        "trend": 37,
+        "trend": 40,
         "macd": 22,
-        "kdj": 5,
-        "volume": 6,
+        "kdj": 6,
+        "volume": 9,
         "atr": 2
       },
       "texts": {
-        "trend": "趋势37/40，EMA多头排列",
+        "trend": "趋势40/40，EMA多头排列",
         "macd": "MACD22/25，零轴上方动能占优",
-        "kdj": "KDJ5/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
+        "kdj": "KDJ6/10，节奏未见明确背离",
+        "volume": "量能9/15，量价确认不足",
         "atr": "ATR2/10，追价风险偏高"
       },
-      "atr": 2.4764,
-      "stop_loss": 27.6671,
-      "take_profit": 36.3346,
-      "add_price": 17.0782,
-      "invalidation": 13.3636,
-      "stop_pct": 0.179,
-      "take_pct": 0.1139,
+      "atr": 2.5836,
+      "stop_loss": 30.1729,
+      "take_profit": 37.3918,
+      "add_price": 17.3518,
+      "invalidation": 13.4764,
+      "stop_pct": 0.1713,
+      "take_pct": 0.0581,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 57,
-        "win_rate": 0.7018,
-        "avg_return": 0.0403,
+        "trades": 59,
+        "win_rate": 0.7458,
+        "avg_return": 0.0432,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "HK.03330",
+      "name": "灵宝黄金",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.0844726884,
+      "market_value": 71017.8364000495,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 23.1,
+      "score": 70,
+      "rating": "3.5分",
+      "action": "多头观察 / 轻仓试探",
+      "risk_level": "高",
+      "risk_reasons": [
+        "MACD动能转弱"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 12,
+        "kdj": 5,
+        "volume": 6,
+        "atr": 10
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD12/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR10/10，执行位置可接受"
+      },
+      "atr": 2.0143,
+      "stop_loss": 19.0714,
+      "take_profit": 26.1214,
+      "add_price": 19.1771,
+      "invalidation": 16.1557,
+      "stop_pct": 0.2112,
+      "take_pct": 0.1308,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 96,
+        "win_rate": 0.6771,
+        "avg_return": 0.0176,
         "validation": true
       }
     },
@@ -80,9 +180,9 @@
       "weight": null,
       "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-21",
-      "close": 765.72,
-      "score": 69,
+      "latest_date": "2026-08-25",
+      "close": 765.91,
+      "score": 67,
       "rating": "3.5分",
       "action": "多头观察 / 轻仓试探",
       "risk_level": "高",
@@ -94,79 +194,29 @@
         "trend": 34,
         "macd": 12,
         "kdj": 5,
-        "volume": 8,
+        "volume": 6,
         "atr": 10
       },
       "texts": {
         "trend": "趋势34/40，EMA多头排列",
         "macd": "MACD12/25，零轴上方动能占优",
         "kdj": "KDJ5/10，节奏未见明确背离",
-        "volume": "量能8/15，量价确认不足",
+        "volume": "量能6/15，量价确认不足",
         "atr": "ATR10/10，执行位置可接受"
       },
-      "atr": 5.9664,
-      "stop_loss": 753.7872,
-      "take_profit": 774.6696,
-      "add_price": 732.0832,
-      "invalidation": 723.1336,
-      "stop_pct": 0.0158,
-      "take_pct": 0.0117,
+      "atr": 4.8443,
+      "stop_loss": 756.2215,
+      "take_profit": 773.1764,
+      "add_price": 731.5221,
+      "invalidation": 724.2557,
+      "stop_pct": 0.0128,
+      "take_pct": 0.0095,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
         "trades": 103,
         "win_rate": 0.5146,
-        "avg_return": -0.0007,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "HK.01308",
-      "name": "海丰国际",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.1001585237,
-      "market_value": 85705.5214450347,
-      "status": "ok",
-      "latest_date": "2026-08-24",
-      "close": 48.72,
-      "score": 60,
-      "rating": "3分",
-      "action": "持有观察",
-      "risk_level": "高",
-      "risk_reasons": [
-        "ATR赔率位置差"
-      ],
-      "cap_reason": "放量转弱",
-      "parts": {
-        "trend": 37,
-        "macd": 24,
-        "kdj": 6,
-        "volume": 6,
-        "atr": 2
-      },
-      "texts": {
-        "trend": "趋势37/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ6/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR2/10，追价风险偏高"
-      },
-      "atr": 1.9929,
-      "stop_loss": 44.7343,
-      "take_profit": 50.9964,
-      "add_price": 38.3564,
-      "invalidation": 35.3671,
-      "stop_pct": 0.0891,
-      "take_pct": 0.0467,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 103,
-        "win_rate": 0.7087,
-        "avg_return": 0.0134,
+        "avg_return": -0.0006,
         "validation": true
       }
     },
@@ -180,9 +230,9 @@
       "weight": null,
       "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-21",
-      "close": 713.44,
-      "score": 51,
+      "latest_date": "2026-08-25",
+      "close": 710.72,
+      "score": 47,
       "rating": "2分",
       "action": "不交易",
       "risk_level": "高",
@@ -196,135 +246,35 @@
         "trend": 26,
         "macd": 12,
         "kdj": 5,
-        "volume": 6,
+        "volume": 2,
         "atr": 2
       },
       "texts": {
         "trend": "趋势26/40，均线结构偏震荡或转弱",
         "macd": "MACD12/25，零轴上方动能占优",
         "kdj": "KDJ5/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
+        "volume": "量能2/15，量价确认不足",
         "atr": "ATR2/10，追价风险偏高"
       },
-      "atr": 9.751,
-      "stop_loss": 693.938,
-      "take_profit": 728.0665,
-      "add_price": 666.0155,
-      "invalidation": 651.389,
-      "stop_pct": 0.0281,
-      "take_pct": 0.0205,
+      "atr": 8.4117,
+      "stop_loss": 693.8966,
+      "take_profit": 723.3375,
+      "add_price": 665.3458,
+      "invalidation": 652.7283,
+      "stop_pct": 0.0242,
+      "take_pct": 0.0178,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
         "trades": 100,
         "win_rate": 0.48,
-        "avg_return": -0.002,
+        "avg_return": -0.0026,
         "validation": true
       }
     },
     {
-      "ticker": "HK.03939",
-      "name": "万国黄金集团",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.0921601592,
-      "market_value": 78861.3310288101,
-      "status": "ok",
-      "latest_date": "2026-08-24",
-      "close": 15.3,
-      "score": 88,
-      "rating": "4.5分",
-      "action": "多头 / 观察回踩",
-      "risk_level": "中",
-      "risk_reasons": [
-        "止损距离偏宽"
-      ],
-      "cap_reason": null,
-      "parts": {
-        "trend": 40,
-        "macd": 24,
-        "kdj": 6,
-        "volume": 13,
-        "atr": 5
-      },
-      "texts": {
-        "trend": "趋势40/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ6/10，节奏未见明确背离",
-        "volume": "量能13/15，量价配合较好",
-        "atr": "ATR5/10，追价风险偏高"
-      },
-      "atr": 1.0757,
-      "stop_loss": 13.1486,
-      "take_profit": 16.2079,
-      "add_price": 10.0379,
-      "invalidation": 8.4243,
-      "stop_pct": 0.1636,
-      "take_pct": 0.0593,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 84,
-        "win_rate": 0.7381,
-        "avg_return": 0.0475,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "HK.03330",
-      "name": "灵宝黄金",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.0888143286,
-      "market_value": 75998.3080436894,
-      "status": "ok",
-      "latest_date": "2026-08-24",
-      "close": 24.72,
-      "score": 83,
-      "rating": "4.5分",
-      "action": "多头 / 观察回踩",
-      "risk_level": "中",
-      "risk_reasons": [
-        "止损距离偏宽"
-      ],
-      "cap_reason": null,
-      "parts": {
-        "trend": 37,
-        "macd": 24,
-        "kdj": 8,
-        "volume": 6,
-        "atr": 8
-      },
-      "texts": {
-        "trend": "趋势37/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR8/10，执行位置可接受"
-      },
-      "atr": 2.0629,
-      "stop_loss": 20.5943,
-      "take_profit": 27.7314,
-      "add_price": 18.9814,
-      "invalidation": 15.8871,
-      "stop_pct": 0.2003,
-      "take_pct": 0.1218,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 94,
-        "win_rate": 0.6915,
-        "avg_return": 0.0193,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "HK.01818",
-      "name": "招金矿业",
+      "ticker": "HK.01258",
+      "name": "中国有色矿业",
       "sources": [
         "计划买入"
       ],
@@ -332,10 +282,10 @@
       "weight": null,
       "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-24",
-      "close": 26.14,
-      "score": 80,
-      "rating": "4分",
+      "latest_date": "2026-08-26",
+      "close": 17.2,
+      "score": 91,
+      "rating": "5分",
       "action": "多头",
       "risk_level": "中",
       "risk_reasons": [
@@ -343,182 +293,32 @@
       ],
       "cap_reason": null,
       "parts": {
-        "trend": 35,
-        "macd": 24,
+        "trend": 40,
+        "macd": 25,
         "kdj": 8,
-        "volume": 8,
+        "volume": 13,
         "atr": 5
       },
       "texts": {
-        "trend": "趋势35/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
+        "trend": "趋势40/40，EMA多头排列",
+        "macd": "MACD25/25，零轴上方动能占优",
         "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能8/15，量价确认不足",
+        "volume": "量能13/15，量价配合较好",
         "atr": "ATR5/10，追价风险偏高"
       },
-      "atr": 1.5743,
-      "stop_loss": 22.9914,
-      "take_profit": 28.3471,
-      "add_price": 20.6871,
-      "invalidation": 18.3257,
-      "stop_pct": 0.1369,
-      "take_pct": 0.0844,
+      "atr": 0.8793,
+      "stop_loss": 15.4414,
+      "take_profit": 18.0196,
+      "add_price": 14.4196,
+      "invalidation": 13.1007,
+      "stop_pct": 0.1139,
+      "take_pct": 0.0477,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 59,
-        "win_rate": 0.7458,
-        "avg_return": 0.0254,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "HK.02269",
-      "name": "药明生物",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.101229194,
-      "market_value": 86621.6925840004,
-      "status": "ok",
-      "latest_date": "2026-08-24",
-      "close": 48.6,
-      "score": 79,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "中",
-      "risk_reasons": [
-        "止损距离偏宽"
-      ],
-      "cap_reason": null,
-      "parts": {
-        "trend": 37,
-        "macd": 22,
-        "kdj": 6,
-        "volume": 6,
-        "atr": 8
-      },
-      "texts": {
-        "trend": "趋势37/40，EMA多头排列",
-        "macd": "MACD22/25，零轴上方动能占优",
-        "kdj": "KDJ6/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR8/10，执行位置可接受"
-      },
-      "atr": 2.62,
-      "stop_loss": 43.36,
-      "take_profit": 52.53,
-      "add_price": 38.27,
-      "invalidation": 34.34,
-      "stop_pct": 0.1208,
-      "take_pct": 0.0809,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 90,
-        "win_rate": 0.6333,
-        "avg_return": 0.0153,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "HK.02259",
-      "name": "紫金黄金国际",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.101258623,
-      "market_value": 86646.8749406629,
-      "status": "ok",
-      "latest_date": "2026-08-24",
-      "close": 159.4,
-      "score": 78,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "中",
-      "risk_reasons": [
-        "止损距离偏宽"
-      ],
-      "cap_reason": null,
-      "parts": {
-        "trend": 35,
-        "macd": 24,
-        "kdj": 8,
-        "volume": 6,
-        "atr": 5
-      },
-      "texts": {
-        "trend": "趋势35/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR5/10，追价风险偏高"
-      },
-      "atr": 10.8143,
-      "stop_loss": 137.7714,
-      "take_profit": 171.2071,
-      "add_price": 117.5071,
-      "invalidation": 101.2857,
-      "stop_pct": 0.157,
-      "take_pct": 0.0741,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 0,
-        "win_rate": null,
-        "avg_return": null,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "HK.02099",
-      "name": "中国黄金国际",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.0911561983,
-      "market_value": 78002.2429755131,
-      "status": "ok",
-      "latest_date": "2026-08-24",
-      "close": 251.6,
-      "score": 76,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "中",
-      "risk_reasons": [
-        "止损距离偏宽"
-      ],
-      "cap_reason": null,
-      "parts": {
-        "trend": 37,
-        "macd": 22,
-        "kdj": 6,
-        "volume": 6,
-        "atr": 5
-      },
-      "texts": {
-        "trend": "趋势37/40，EMA多头排列",
-        "macd": "MACD22/25，零轴上方动能占优",
-        "kdj": "KDJ6/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR5/10，追价风险偏高"
-      },
-      "atr": 17.2571,
-      "stop_loss": 217.0857,
-      "take_profit": 276.6286,
-      "add_price": 173.6286,
-      "invalidation": 147.7429,
-      "stop_pct": 0.159,
-      "take_pct": 0.0995,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 88,
-        "win_rate": 0.7045,
-        "avg_return": 0.0305,
+        "trades": 92,
+        "win_rate": 0.6304,
+        "avg_return": 0.013,
         "validation": true
       }
     },
@@ -529,12 +329,12 @@
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.0972348314,
-      "market_value": 83203.7215987878,
+      "weight": 0.0987754822,
+      "market_value": 83042.4740763095,
       "status": "ok",
-      "latest_date": "2026-08-24",
-      "close": 30.96,
-      "score": 76,
+      "latest_date": "2026-08-26",
+      "close": 30.9,
+      "score": 78,
       "rating": "4分",
       "action": "多头",
       "risk_level": "中",
@@ -547,78 +347,28 @@
         "macd": 22,
         "kdj": 5,
         "volume": 4,
-        "atr": 8
+        "atr": 10
       },
       "texts": {
         "trend": "趋势37/40，EMA多头排列",
         "macd": "MACD22/25，零轴上方动能占优",
         "kdj": "KDJ5/10，节奏未见明确背离",
         "volume": "量能4/15，量价确认不足",
-        "atr": "ATR8/10，执行位置可接受"
+        "atr": "ATR10/10，执行位置可接受"
       },
-      "atr": 2.0414,
-      "stop_loss": 26.8771,
-      "take_profit": 34.0221,
-      "add_price": 22.9407,
-      "invalidation": 19.8786,
-      "stop_pct": 0.1519,
-      "take_pct": 0.0989,
+      "atr": 2.24,
+      "stop_loss": 26.42,
+      "take_profit": 34.26,
+      "add_price": 23.04,
+      "invalidation": 19.68,
+      "stop_pct": 0.1696,
+      "take_pct": 0.1087,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 70,
-        "win_rate": 0.5571,
-        "avg_return": 0.0057,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "HK.01787",
-      "name": "山东黄金",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.0869028959,
-      "market_value": 74362.6975653422,
-      "status": "ok",
-      "latest_date": "2026-08-24",
-      "close": 26.78,
-      "score": 60,
-      "rating": "3分",
-      "action": "持有观察",
-      "risk_level": "中",
-      "risk_reasons": [
-        "止损距离偏宽"
-      ],
-      "cap_reason": "放量转弱",
-      "parts": {
-        "trend": 32,
-        "macd": 24,
-        "kdj": 8,
-        "volume": 6,
-        "atr": 5
-      },
-      "texts": {
-        "trend": "趋势32/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR5/10，追价风险偏高"
-      },
-      "atr": 1.6914,
-      "stop_loss": 23.3971,
-      "take_profit": 29.3171,
-      "add_price": 19.7857,
-      "invalidation": 17.2486,
-      "stop_pct": 0.1446,
-      "take_pct": 0.0947,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 63,
-        "win_rate": 0.746,
-        "avg_return": 0.0307,
+        "trades": 72,
+        "win_rate": 0.5417,
+        "avg_return": 0.0048,
         "validation": true
       }
     },
@@ -629,11 +379,311 @@
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.0890215726,
-      "market_value": 76175.6465113794,
+      "weight": 0.0873136169,
+      "market_value": 73406.2603749786,
       "status": "ok",
-      "latest_date": "2026-08-24",
-      "close": 43.46,
+      "latest_date": "2026-08-26",
+      "close": 41.88,
+      "score": 78,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 22,
+        "kdj": 5,
+        "volume": 6,
+        "atr": 8
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
+      },
+      "atr": 2.8429,
+      "stop_loss": 36.1943,
+      "take_profit": 46.1443,
+      "add_price": 33.8214,
+      "invalidation": 29.5571,
+      "stop_pct": 0.1571,
+      "take_pct": 0.1018,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 63,
+        "win_rate": 0.6032,
+        "avg_return": 0.0056,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "HK.02099",
+      "name": "中国黄金国际",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.0944766442,
+      "market_value": 79428.357115765,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 256.2,
+      "score": 77,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 22,
+        "kdj": 7,
+        "volume": 6,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ7/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 16.0857,
+      "stop_loss": 224.0286,
+      "take_profit": 276.0429,
+      "add_price": 179.1429,
+      "invalidation": 155.0143,
+      "stop_pct": 0.1436,
+      "take_pct": 0.0775,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 90,
+        "win_rate": 0.7111,
+        "avg_return": 0.0306,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "HK.03939",
+      "name": "万国黄金集团",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.0907367598,
+      "market_value": 76284.16334813,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 14.8,
+      "score": 77,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 22,
+        "kdj": 7,
+        "volume": 6,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ7/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 1.065,
+      "stop_loss": 12.67,
+      "take_profit": 16.2025,
+      "add_price": 10.4725,
+      "invalidation": 8.875,
+      "stop_pct": 0.1681,
+      "take_pct": 0.0948,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 86,
+        "win_rate": 0.7326,
+        "avg_return": 0.0461,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "HK.02259",
+      "name": "紫金黄金国际",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.1025455099,
+      "market_value": 86212.0098217637,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 158.6,
+      "score": 76,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 35,
+        "macd": 22,
+        "kdj": 8,
+        "volume": 6,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势35/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 10.6071,
+      "stop_loss": 137.3857,
+      "take_profit": 172.1036,
+      "add_price": 118.0036,
+      "invalidation": 102.0929,
+      "stop_pct": 0.1544,
+      "take_pct": 0.0851,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 5,
+        "win_rate": 0.2,
+        "avg_return": -0.0084,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "HK.01308",
+      "name": "海丰国际",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.0992229079,
+      "market_value": 83418.633557544,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 47.42,
+      "score": 73,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 22,
+        "kdj": 6,
+        "volume": 3,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ6/10，节奏未见明确背离",
+        "volume": "量能3/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 2.0614,
+      "stop_loss": 43.2971,
+      "take_profit": 50.5121,
+      "add_price": 38.3907,
+      "invalidation": 35.2986,
+      "stop_pct": 0.0952,
+      "take_pct": 0.0652,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 105,
+        "win_rate": 0.6952,
+        "avg_return": 0.0129,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "HK.01787",
+      "name": "山东黄金",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.0825060653,
+      "market_value": 69364.4579978434,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 24.98,
+      "score": 68,
+      "rating": "3.5分",
+      "action": "多头观察 / 轻仓试探",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": "长周期未翻多",
+      "parts": {
+        "trend": 29,
+        "macd": 22,
+        "kdj": 5,
+        "volume": 4,
+        "atr": 8
+      },
+      "texts": {
+        "trend": "趋势29/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能4/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
+      },
+      "atr": 1.6786,
+      "stop_loss": 21.6229,
+      "take_profit": 27.4979,
+      "add_price": 20.3293,
+      "invalidation": 17.8114,
+      "stop_pct": 0.1553,
+      "take_pct": 0.1008,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 63,
+        "win_rate": 0.746,
+        "avg_return": 0.0296,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "HK.02269",
+      "name": "药明生物",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.092271651,
+      "market_value": 77574.5763605298,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 50.75,
       "score": 60,
       "rating": "3分",
       "action": "持有观察",
@@ -644,36 +694,36 @@
       "cap_reason": "放量转弱",
       "parts": {
         "trend": 37,
-        "macd": 24,
-        "kdj": 8,
-        "volume": 6,
-        "atr": 5
+        "macd": 22,
+        "kdj": 6,
+        "volume": 3,
+        "atr": 8
       },
       "texts": {
         "trend": "趋势37/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR5/10，追价风险偏高"
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ6/10，节奏未见明确背离",
+        "volume": "量能3/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
       },
-      "atr": 2.9657,
-      "stop_loss": 37.5286,
-      "take_profit": 47.9086,
-      "add_price": 32.2629,
-      "invalidation": 27.8143,
-      "stop_pct": 0.1581,
-      "take_pct": 0.1024,
+      "atr": 2.9643,
+      "stop_loss": 44.8214,
+      "take_profit": 55.1964,
+      "add_price": 38.4421,
+      "invalidation": 33.9957,
+      "stop_pct": 0.1323,
+      "take_pct": 0.0876,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 61,
-        "win_rate": 0.6066,
-        "avg_return": 0.0069,
+        "trades": 92,
+        "win_rate": 0.6413,
+        "avg_return": 0.0178,
         "validation": true
       }
     }
   ],
-  "input_version": "81a4eb5fa08badf209c5",
+  "input_version": "802c49d0b615617f6670",
   "input_fingerprint_version": 2,
   "cache_hit": false
 }
