@@ -1,437 +1,137 @@
 {
-  "generated_at": "2026-08-26T19:50:43",
+  "generated_at": "2026-08-27T09:39:46",
   "variant_name": "ER 3/8/20 (10B 日调仓)",
   "variant_slug": "er_3_8_20",
   "universe_mode": "current_and_planned",
-  "holding_count": 12,
+  "holding_count": 19,
   "current_holding_count": 10,
-  "planned_buy_count": 0,
+  "planned_buy_count": 7,
   "historical_buy_count": 0,
-  "ticker_count": 12,
-  "risk_high_count": 11,
-  "backtest_period": "验证期 2025-08-25 至 2026-08-25",
-  "training_period": "训练期 2021-08-25 至 2025-08-24",
+  "ticker_count": 19,
+  "risk_high_count": 8,
+  "backtest_period": "验证期 2025-08-26 至 2026-08-26",
+  "training_period": "训练期 2021-08-26 至 2025-08-25",
   "validation_method": "参数仅在训练期选择，胜率和平均收益来自随后一年验证期",
   "strategy_summary": {
     "stop_atr": 2.0,
     "take_atr": 1.5,
-    "trades": 1209,
-    "win_rate": 0.6791,
-    "avg_return": 0.0143
+    "trades": 1866,
+    "win_rate": 0.6656,
+    "avg_return": 0.0148
   },
   "rows": [
     {
-      "ticker": "US.GFI",
-      "name": "金田",
+      "ticker": "US.ANET",
+      "name": "Arista Networks",
       "sources": [
-        "当前持仓"
+        "计划买入"
       ],
       "source_count": 1,
-      "weight": 0.0994640975,
-      "market_value": 79274.1639773637,
+      "weight": null,
+      "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-25",
-      "close": 48.87,
-      "score": 83,
-      "rating": "4.5分",
-      "action": "多头 / 观察回踩",
+      "latest_date": "2026-08-26",
+      "close": 202.25,
+      "score": 77,
+      "rating": "4分",
+      "action": "多头",
       "risk_level": "高",
       "risk_reasons": [
-        "ATR赔率位置差"
+        "MACD动能转弱"
       ],
-      "cap_reason": "价格偏离均线过大",
+      "cap_reason": null,
       "parts": {
-        "trend": 40,
-        "macd": 24,
-        "kdj": 6,
-        "volume": 11,
-        "atr": 2
+        "trend": 37,
+        "macd": 15,
+        "kdj": 9,
+        "volume": 8,
+        "atr": 8
       },
       "texts": {
-        "trend": "趋势40/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ6/10，节奏未见明确背离",
-        "volume": "量能11/15，量价配合较好",
-        "atr": "ATR2/10，追价风险偏高"
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD15/25，零轴上方动能占优",
+        "kdj": "KDJ9/10，节奏未见明确背离",
+        "volume": "量能8/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
       },
-      "atr": 2.0003,
-      "stop_loss": 44.8694,
-      "take_profit": 50.1001,
-      "add_price": 32.7201,
-      "invalidation": 29.7197,
-      "stop_pct": 0.0892,
-      "take_pct": 0.0252,
+      "atr": 8.2375,
+      "stop_loss": 185.775,
+      "take_profit": 214.6062,
+      "add_price": 168.6036,
+      "invalidation": 156.2473,
+      "stop_pct": 0.0887,
+      "take_pct": 0.0611,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 92,
-        "win_rate": 0.7717,
-        "avg_return": 0.0261,
+        "trades": 95,
+        "win_rate": 0.4421,
+        "avg_return": -0.0192,
         "validation": true
       }
     },
     {
-      "ticker": "US.KGC",
-      "name": "金罗斯黄金",
+      "ticker": "US.FCX",
+      "name": "麦克莫兰铜金",
       "sources": [
-        "当前持仓"
+        "计划买入"
       ],
       "source_count": 1,
-      "weight": 0.0923473763,
-      "market_value": 73602.0457783667,
+      "weight": null,
+      "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-25",
-      "close": 33.48,
-      "score": 83,
-      "rating": "4.5分",
-      "action": "多头 / 观察回踩",
-      "risk_level": "高",
-      "risk_reasons": [
-        "ATR赔率位置差"
-      ],
-      "cap_reason": "价格偏离均线过大",
-      "parts": {
-        "trend": 40,
-        "macd": 24,
-        "kdj": 6,
-        "volume": 11,
-        "atr": 2
-      },
-      "texts": {
-        "trend": "趋势40/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ6/10，节奏未见明确背离",
-        "volume": "量能11/15，量价配合较好",
-        "atr": "ATR2/10，追价风险偏高"
-      },
-      "atr": 1.2127,
-      "stop_loss": 31.0546,
-      "take_profit": 35.299,
-      "add_price": 22.9713,
-      "invalidation": 21.1523,
-      "stop_pct": 0.0781,
-      "take_pct": 0.0543,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 96,
-        "win_rate": 0.7396,
-        "avg_return": 0.0188,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "US.AU",
-      "name": "AngloGold Ashanti",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.104950244,
-      "market_value": 83646.6933097756,
-      "status": "ok",
-      "latest_date": "2026-08-25",
-      "close": 123.39,
-      "score": 81,
+      "latest_date": "2026-08-26",
+      "close": 79.0,
+      "score": 75,
       "rating": "4分",
       "action": "多头",
       "risk_level": "高",
       "risk_reasons": [
         "ATR赔率位置差"
       ],
-      "cap_reason": "价格偏离均线过大",
+      "cap_reason": null,
       "parts": {
-        "trend": 40,
+        "trend": 37,
         "macd": 24,
         "kdj": 6,
-        "volume": 9,
+        "volume": 6,
         "atr": 2
       },
       "texts": {
-        "trend": "趋势40/40，EMA多头排列",
+        "trend": "趋势37/40，EMA多头排列",
         "macd": "MACD24/25，零轴上方动能占优",
         "kdj": "KDJ6/10，节奏未见明确背离",
-        "volume": "量能9/15，量价确认不足",
+        "volume": "量能6/15，量价确认不足",
         "atr": "ATR2/10，追价风险偏高"
       },
-      "atr": 5.1801,
-      "stop_loss": 113.0298,
-      "take_profit": 131.1602,
-      "add_price": 75.9901,
-      "invalidation": 68.2199,
-      "stop_pct": 0.0917,
-      "take_pct": 0.063,
+      "atr": 2.8203,
+      "stop_loss": 73.3595,
+      "take_profit": 81.6501,
+      "add_price": 62.3801,
+      "invalidation": 58.1497,
+      "stop_pct": 0.0769,
+      "take_pct": 0.0335,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 100,
-        "win_rate": 0.68,
-        "avg_return": 0.0128,
+        "trades": 118,
+        "win_rate": 0.6441,
+        "avg_return": 0.0076,
         "validation": true
       }
     },
     {
-      "ticker": "US.WPM",
-      "name": "Wheaton Precious Metals",
+      "ticker": "US.RGLD",
+      "name": "皇家黄金",
       "sources": [
-        "当前持仓"
+        "计划买入"
       ],
       "source_count": 1,
-      "weight": 0.0995924183,
-      "market_value": 79376.437324774,
+      "weight": null,
+      "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-25",
-      "close": 163.72,
-      "score": 81,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "高",
-      "risk_reasons": [
-        "ATR赔率位置差"
-      ],
-      "cap_reason": "价格偏离均线过大",
-      "parts": {
-        "trend": 40,
-        "macd": 24,
-        "kdj": 6,
-        "volume": 9,
-        "atr": 2
-      },
-      "texts": {
-        "trend": "趋势40/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ6/10，节奏未见明确背离",
-        "volume": "量能9/15，量价确认不足",
-        "atr": "ATR2/10，追价风险偏高"
-      },
-      "atr": 5.8694,
-      "stop_loss": 151.9811,
-      "take_profit": 166.8347,
-      "add_price": 109.2347,
-      "invalidation": 100.4306,
-      "stop_pct": 0.0772,
-      "take_pct": 0.019,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 103,
-        "win_rate": 0.7184,
-        "avg_return": 0.0144,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "US.AEM",
-      "name": "伊格尔矿业",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.1116182832,
-      "market_value": 88961.2062476306,
-      "status": "ok",
-      "latest_date": "2026-08-25",
-      "close": 224.11,
-      "score": 79,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "高",
-      "risk_reasons": [
-        "ATR赔率位置差"
-      ],
-      "cap_reason": "价格偏离均线过大",
-      "parts": {
-        "trend": 40,
-        "macd": 22,
-        "kdj": 6,
-        "volume": 9,
-        "atr": 2
-      },
-      "texts": {
-        "trend": "趋势40/40，EMA多头排列",
-        "macd": "MACD22/25，零轴上方动能占优",
-        "kdj": "KDJ6/10，节奏未见明确背离",
-        "volume": "量能9/15，量价确认不足",
-        "atr": "ATR2/10，追价风险偏高"
-      },
-      "atr": 8.459,
-      "stop_loss": 207.1921,
-      "take_profit": 228.6595,
-      "add_price": 144.1299,
-      "invalidation": 131.4414,
-      "stop_pct": 0.0817,
-      "take_pct": 0.0203,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 102,
-        "win_rate": 0.6471,
-        "avg_return": 0.0061,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "US.EQX",
-      "name": "Equinox Gold",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.1088941338,
-      "market_value": 86790.0241464935,
-      "status": "ok",
-      "latest_date": "2026-08-25",
-      "close": 13.98,
-      "score": 79,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "高",
-      "risk_reasons": [
-        "ATR赔率位置差"
-      ],
-      "cap_reason": "价格偏离均线过大",
-      "parts": {
-        "trend": 38,
-        "macd": 24,
-        "kdj": 6,
-        "volume": 9,
-        "atr": 2
-      },
-      "texts": {
-        "trend": "趋势38/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ6/10，节奏未见明确背离",
-        "volume": "量能9/15，量价确认不足",
-        "atr": "ATR2/10，追价风险偏高"
-      },
-      "atr": 0.6659,
-      "stop_loss": 12.6481,
-      "take_profit": 14.413,
-      "add_price": 9.038,
-      "invalidation": 8.0391,
-      "stop_pct": 0.1053,
-      "take_pct": 0.031,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 83,
-        "win_rate": 0.6386,
-        "avg_return": 0.0058,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "US.IAG",
-      "name": "Iamgold",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.0893913067,
-      "market_value": 71246.020299064,
-      "status": "ok",
-      "latest_date": "2026-08-25",
-      "close": 22.17,
-      "score": 78,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "高",
-      "risk_reasons": [
-        "ATR赔率位置差"
-      ],
-      "cap_reason": "价格偏离均线过大",
-      "parts": {
-        "trend": 40,
-        "macd": 24,
-        "kdj": 3,
-        "volume": 9,
-        "atr": 2
-      },
-      "texts": {
-        "trend": "趋势40/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ3/10，顶背离预警",
-        "volume": "量能9/15，量价确认不足",
-        "atr": "ATR2/10，追价风险偏高"
-      },
-      "atr": 1.0088,
-      "stop_loss": 20.1523,
-      "take_profit": 22.8244,
-      "add_price": 14.1194,
-      "invalidation": 12.6062,
-      "stop_pct": 0.1001,
-      "take_pct": 0.0295,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 113,
-        "win_rate": 0.7345,
-        "avg_return": 0.025,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "US.NEM",
-      "name": "纽曼矿业",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.0960545519,
-      "market_value": 76556.7123348189,
-      "status": "ok",
-      "latest_date": "2026-08-25",
-      "close": 135.14,
-      "score": 78,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "高",
-      "risk_reasons": [
-        "ATR赔率位置差"
-      ],
-      "cap_reason": "价格偏离均线过大",
-      "parts": {
-        "trend": 40,
-        "macd": 24,
-        "kdj": 3,
-        "volume": 9,
-        "atr": 2
-      },
-      "texts": {
-        "trend": "趋势40/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ3/10，顶背离预警",
-        "volume": "量能9/15，量价确认不足",
-        "atr": "ATR2/10，追价风险偏高"
-      },
-      "atr": 4.9784,
-      "stop_loss": 125.1833,
-      "take_profit": 137.7792,
-      "add_price": 91.4693,
-      "invalidation": 84.0017,
-      "stop_pct": 0.0795,
-      "take_pct": 0.0195,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 113,
-        "win_rate": 0.7699,
-        "avg_return": 0.0182,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "US.HMY",
-      "name": "哈莫尼黄金",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.1054652701,
-      "market_value": 84057.1757088907,
-      "status": "ok",
-      "latest_date": "2026-08-25",
-      "close": 22.95,
+      "latest_date": "2026-08-26",
+      "close": 266.14,
       "score": 74,
       "rating": "4分",
       "action": "多头",
@@ -443,30 +143,180 @@
       "parts": {
         "trend": 37,
         "macd": 22,
-        "kdj": 5,
-        "volume": 8,
+        "kdj": 6,
+        "volume": 7,
         "atr": 2
       },
       "texts": {
         "trend": "趋势37/40，EMA多头排列",
         "macd": "MACD22/25，零轴上方动能占优",
-        "kdj": "KDJ5/10，节奏未见明确背离",
-        "volume": "量能8/15，量价确认不足",
+        "kdj": "KDJ6/10，节奏未见明确背离",
+        "volume": "量能7/15，量价确认不足",
         "atr": "ATR2/10，追价风险偏高"
       },
-      "atr": 0.9864,
-      "stop_loss": 20.9771,
-      "take_profit": 24.1832,
-      "add_price": 15.7082,
-      "invalidation": 14.2286,
-      "stop_pct": 0.094,
-      "take_pct": 0.0537,
+      "atr": 8.0039,
+      "stop_loss": 250.1321,
+      "take_profit": 271.932,
+      "add_price": 198.7821,
+      "invalidation": 186.7762,
+      "stop_pct": 0.064,
+      "take_pct": 0.0218,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
         "trades": 98,
-        "win_rate": 0.6939,
-        "avg_return": 0.0191,
+        "win_rate": 0.7551,
+        "avg_return": 0.0164,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.GFI",
+      "name": "金田",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.1001402662,
+      "market_value": 77570.9130631785,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 47.82,
+      "score": 73,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "高",
+      "risk_reasons": [
+        "ATR赔率位置差"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 22,
+        "kdj": 6,
+        "volume": 6,
+        "atr": 2
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ6/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR2/10，追价风险偏高"
+      },
+      "atr": 2.0067,
+      "stop_loss": 43.8066,
+      "take_profit": 50.1034,
+      "add_price": 32.8834,
+      "invalidation": 29.8733,
+      "stop_pct": 0.0916,
+      "take_pct": 0.0477,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 92,
+        "win_rate": 0.7609,
+        "avg_return": 0.0249,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.MSFT",
+      "name": "微软",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 496.37,
+      "score": 71,
+      "rating": "3.5分",
+      "action": "多头观察 / 轻仓试探",
+      "risk_level": "高",
+      "risk_reasons": [
+        "MACD动能转弱"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 15,
+        "kdj": 8,
+        "volume": 6,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD15/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 9.1071,
+      "stop_loss": 478.1558,
+      "take_profit": 510.0307,
+      "add_price": 436.9936,
+      "invalidation": 423.3329,
+      "stop_pct": 0.0381,
+      "take_pct": 0.0275,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 39,
+        "win_rate": 0.5897,
+        "avg_return": 0.0013,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.EQX",
+      "name": "Equinox Gold",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.1092366396,
+      "market_value": 84617.1694647143,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 13.63,
+      "score": 70,
+      "rating": "3.5分",
+      "action": "多头观察 / 轻仓试探",
+      "risk_level": "高",
+      "risk_reasons": [
+        "ATR赔率位置差"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 35,
+        "macd": 22,
+        "kdj": 5,
+        "volume": 6,
+        "atr": 2
+      },
+      "texts": {
+        "trend": "趋势35/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR2/10，追价风险偏高"
+      },
+      "atr": 0.6002,
+      "stop_loss": 12.4296,
+      "take_profit": 14.3801,
+      "add_price": 9.1251,
+      "invalidation": 8.2248,
+      "stop_pct": 0.0966,
+      "take_pct": 0.055,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 83,
+        "win_rate": 0.6145,
+        "avg_return": 0.0042,
         "validation": true
       }
     },
@@ -480,8 +330,8 @@
       "weight": null,
       "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-25",
-      "close": 765.91,
+      "latest_date": "2026-08-26",
+      "close": 766.08,
       "score": 67,
       "rating": "3.5分",
       "action": "多头观察 / 轻仓试探",
@@ -504,13 +354,13 @@
         "volume": "量能6/15，量价确认不足",
         "atr": "ATR10/10，执行位置可接受"
       },
-      "atr": 4.8443,
-      "stop_loss": 756.2215,
-      "take_profit": 773.1764,
-      "add_price": 731.5221,
-      "invalidation": 724.2557,
-      "stop_pct": 0.0128,
-      "take_pct": 0.0095,
+      "atr": 4.7771,
+      "stop_loss": 756.5257,
+      "take_profit": 773.2457,
+      "add_price": 736.9786,
+      "invalidation": 729.8129,
+      "stop_pct": 0.0126,
+      "take_pct": 0.0094,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
@@ -530,8 +380,8 @@
       "weight": null,
       "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-25",
-      "close": 710.72,
+      "latest_date": "2026-08-26",
+      "close": 711.37,
       "score": 47,
       "rating": "2分",
       "action": "不交易",
@@ -556,35 +406,85 @@
         "volume": "量能2/15，量价确认不足",
         "atr": "ATR2/10，追价风险偏高"
       },
-      "atr": 8.4117,
-      "stop_loss": 693.8966,
-      "take_profit": 723.3375,
-      "add_price": 665.3458,
-      "invalidation": 652.7283,
-      "stop_pct": 0.0242,
-      "take_pct": 0.0178,
+      "atr": 7.9995,
+      "stop_loss": 695.3709,
+      "take_profit": 723.3693,
+      "add_price": 677.2998,
+      "invalidation": 665.3004,
+      "stop_pct": 0.023,
+      "take_pct": 0.0169,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
         "trades": 100,
         "win_rate": 0.48,
-        "avg_return": -0.0026,
+        "avg_return": -0.0025,
         "validation": true
       }
     },
     {
-      "ticker": "US.CDE",
-      "name": "科尔黛伦矿业",
+      "ticker": "US.LITE",
+      "name": "Lumentum",
       "sources": [
-        "当前持仓"
+        "计划买入"
       ],
       "source_count": 1,
-      "weight": 0.0922223182,
-      "market_value": 73502.3728385031,
+      "weight": null,
+      "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-25",
-      "close": 21.59,
-      "score": 79,
+      "latest_date": "2026-08-26",
+      "close": 939.03,
+      "score": 85,
+      "rating": "4.5分",
+      "action": "多头 / 观察回踩",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 24,
+        "kdj": 8,
+        "volume": 8,
+        "atr": 8
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD24/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能8/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
+      },
+      "atr": 81.8494,
+      "stop_loss": 775.3313,
+      "take_profit": 1040.5997,
+      "add_price": 690.9247,
+      "invalidation": 568.1506,
+      "stop_pct": 0.2111,
+      "take_pct": 0.1082,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 116,
+        "win_rate": 0.7414,
+        "avg_return": 0.049,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.MRVL",
+      "name": "迈威尔科技",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 245.11,
+      "score": 81,
       "rating": "4分",
       "action": "多头",
       "risk_level": "中",
@@ -595,35 +495,483 @@
       "parts": {
         "trend": 37,
         "macd": 22,
-        "kdj": 7,
-        "volume": 8,
+        "kdj": 8,
+        "volume": 6,
+        "atr": 8
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
+      },
+      "atr": 16.3714,
+      "stop_loss": 212.3672,
+      "take_profit": 260.7057,
+      "add_price": 183.3357,
+      "invalidation": 158.7786,
+      "stop_pct": 0.1542,
+      "take_pct": 0.0636,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 106,
+        "win_rate": 0.7075,
+        "avg_return": 0.0229,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.CDE",
+      "name": "科尔黛伦矿业",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.0942287297,
+      "market_value": 72991.703272696,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 21.44,
+      "score": 76,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 22,
+        "kdj": 6,
+        "volume": 6,
         "atr": 5
       },
       "texts": {
         "trend": "趋势37/40，EMA多头排列",
         "macd": "MACD22/25，零轴上方动能占优",
-        "kdj": "KDJ7/10，节奏未见明确背离",
-        "volume": "量能8/15，量价确认不足",
+        "kdj": "KDJ6/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
         "atr": "ATR5/10，追价风险偏高"
       },
-      "atr": 1.19,
-      "stop_loss": 19.21,
-      "take_profit": 22.475,
-      "add_price": 14.615,
-      "invalidation": 12.83,
-      "stop_pct": 0.1239,
-      "take_pct": 0.041,
+      "atr": 1.0943,
+      "stop_loss": 19.2514,
+      "take_profit": 22.4271,
+      "add_price": 15.0521,
+      "invalidation": 13.4107,
+      "stop_pct": 0.1137,
+      "take_pct": 0.046,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
         "trades": 106,
-        "win_rate": 0.7453,
-        "avg_return": 0.0267,
+        "win_rate": 0.7358,
+        "avg_return": 0.0258,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.HL",
+      "name": "赫克拉矿业",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.094036724,
+      "market_value": 72842.9713675981,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 20.7,
+      "score": 76,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 22,
+        "kdj": 6,
+        "volume": 6,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ6/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 1.0113,
+      "stop_loss": 18.6775,
+      "take_profit": 21.9556,
+      "add_price": 14.2856,
+      "invalidation": 12.7687,
+      "stop_pct": 0.1083,
+      "take_pct": 0.0607,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 88,
+        "win_rate": 0.75,
+        "avg_return": 0.031,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.IAG",
+      "name": "Iamgold",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.0893615009,
+      "market_value": 69221.4378548416,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 21.54,
+      "score": 75,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 22,
+        "kdj": 5,
+        "volume": 6,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 1.0131,
+      "stop_loss": 19.5137,
+      "take_profit": 22.8266,
+      "add_price": 14.3066,
+      "invalidation": 12.7869,
+      "stop_pct": 0.1038,
+      "take_pct": 0.0597,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 113,
+        "win_rate": 0.7168,
+        "avg_return": 0.0237,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.NEM",
+      "name": "纽曼矿业",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.0962420993,
+      "market_value": 74551.3048931639,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 131.6,
+      "score": 75,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 22,
+        "kdj": 5,
+        "volume": 6,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 5.0066,
+      "stop_loss": 121.5868,
+      "take_profit": 137.7933,
+      "add_price": 94.3483,
+      "invalidation": 86.8384,
+      "stop_pct": 0.0824,
+      "take_pct": 0.0471,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 114,
+        "win_rate": 0.7544,
+        "avg_return": 0.0173,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.CCJ",
+      "name": "Cameco",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 107.36,
+      "score": 74,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [],
+      "cap_reason": null,
+      "parts": {
+        "trend": 28,
+        "macd": 24,
+        "kdj": 8,
+        "volume": 9,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势28/40，均线结构偏震荡或转弱",
+        "macd": "MACD24/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能9/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 3.7011,
+      "stop_loss": 99.9579,
+      "take_profit": 112.9116,
+      "add_price": 85.7805,
+      "invalidation": 80.2289,
+      "stop_pct": 0.0741,
+      "take_pct": 0.0517,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 89,
+        "win_rate": 0.7191,
+        "avg_return": 0.0174,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.HMY",
+      "name": "哈莫尼黄金",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.1060550165,
+      "market_value": 82152.6122505629,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 22.43,
+      "score": 74,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 22,
+        "kdj": 6,
+        "volume": 4,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ6/10，节奏未见明确背离",
+        "volume": "量能4/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 0.9925,
+      "stop_loss": 20.445,
+      "take_profit": 23.9187,
+      "add_price": 15.8413,
+      "invalidation": 14.3525,
+      "stop_pct": 0.0971,
+      "take_pct": 0.0664,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 98,
+        "win_rate": 0.6837,
+        "avg_return": 0.019,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.AEM",
+      "name": "伊格尔矿业",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.1096842343,
+      "market_value": 84963.8864184679,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 214.04,
+      "score": 73,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 22,
+        "kdj": 5,
+        "volume": 4,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能4/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 8.7511,
+      "stop_loss": 196.5378,
+      "take_profit": 227.1667,
+      "add_price": 147.1656,
+      "invalidation": 134.0389,
+      "stop_pct": 0.0891,
+      "take_pct": 0.0613,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 103,
+        "win_rate": 0.6214,
+        "avg_return": 0.0043,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.AU",
+      "name": "AngloGold Ashanti",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.1033630512,
+      "market_value": 80067.3551083362,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 118.11,
+      "score": 73,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 22,
+        "kdj": 5,
+        "volume": 4,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能4/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 5.4142,
+      "stop_loss": 107.2817,
+      "take_profit": 126.0971,
+      "add_price": 76.1071,
+      "invalidation": 67.9858,
+      "stop_pct": 0.1009,
+      "take_pct": 0.0676,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 101,
+        "win_rate": 0.6535,
+        "avg_return": 0.0114,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.WPM",
+      "name": "Wheaton Precious Metals",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.0976517382,
+      "market_value": 75643.2430455121,
+      "status": "ok",
+      "latest_date": "2026-08-26",
+      "close": 156.02,
+      "score": 73,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 22,
+        "kdj": 5,
+        "volume": 4,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能4/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 6.1337,
+      "stop_loss": 143.7525,
+      "take_profit": 165.2206,
+      "add_price": 111.0669,
+      "invalidation": 101.8663,
+      "stop_pct": 0.0853,
+      "take_pct": 0.059,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 104,
+        "win_rate": 0.6923,
+        "avg_return": 0.0129,
         "validation": true
       }
     }
   ],
-  "input_version": "fb535004a90565d50555",
+  "input_version": "5b2f4ae0d53b3262a5b1",
   "input_fingerprint_version": 2,
   "cache_hit": false
 }
