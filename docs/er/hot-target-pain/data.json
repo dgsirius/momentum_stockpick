@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T23:42:50.610598+08:00",
+  "generated_at": "2026-08-27T09:19:59.208567+08:00",
   "static_as_of": "2026-08-07",
   "market_as_of": "2026-08-26",
   "source_url": "https://futu.aiforce.cloud/app/app_4kbd9d47b1753",
@@ -1498,13 +1498,13 @@
         },
         {
           "date": "2026-08-26",
-          "open": 212.56,
+          "open": 212.64,
           "high": 213.6,
-          "low": 210.081,
-          "close": 211.24,
-          "ema20": 214.299,
-          "ema50": 210.565,
-          "ema200": 195.698,
+          "low": 209.23,
+          "close": 209.66,
+          "ema20": 214.149,
+          "ema50": 210.503,
+          "ema200": 195.682,
           "trend_score": 58.5,
           "trend_score_limited": false
         }
@@ -5825,6 +5825,46 @@
           "close": 213.05,
           "trend_score": 62.6,
           "trend_score_limited": false
+        },
+        {
+          "date": "2026-08-26",
+          "kind": "breakdown",
+          "kind_label": "跌破关键位置",
+          "direction": -1,
+          "title": "向下跌破 EMA50",
+          "reasons": [
+            "收盘由 EMA50 上方转到下方"
+          ],
+          "severity": 3,
+          "related_kinds": [
+            "breakdown"
+          ],
+          "article_window": {
+            "articles": 0,
+            "securities_trades": 0,
+            "site_share": 0.0,
+            "segments": {
+              "before": {
+                "articles": 0,
+                "securities_trades": 0,
+                "site_share": 0.0
+              },
+              "during": {
+                "articles": 0,
+                "securities_trades": 0,
+                "site_share": 0.0
+              },
+              "after": {
+                "articles": 0,
+                "securities_trades": 0,
+                "site_share": 0.0
+              }
+            },
+            "article_rows": []
+          },
+          "close": 209.66,
+          "trend_score": 58.5,
+          "trend_score_limited": false
         }
       ],
       "earnings_events": [
@@ -7382,14 +7422,13 @@
       ],
       "holder_psychology": {
         "as_of": "2026-08-26",
-        "close": 211.24,
+        "close": 209.66,
         "trend_score": 58.5,
-        "return_5d": -0.029,
-        "return_20d": 0.1117,
-        "price_percentile": 0.6721,
+        "return_5d": -0.0363,
+        "return_20d": 0.1034,
+        "price_percentile": 0.6475,
         "ema_state": "mixed",
         "near_emas": [
-          20,
           50
         ],
         "regime": "关键均线决策区",
@@ -8056,11 +8095,11 @@
         {
           "date": "2026-08-26",
           "open": 137.0,
-          "high": 139.52,
+          "high": 140.18,
           "low": 135.1,
-          "close": 136.455,
-          "ema20": 134.649,
-          "ema50": 138.616,
+          "close": 139.63,
+          "ema20": 134.951,
+          "ema50": 138.741,
           "ema200": null,
           "trend_score": 73.5,
           "trend_score_limited": true
@@ -9520,6 +9559,48 @@
           "close": 146.23,
           "trend_score": 40.8,
           "trend_score_limited": true
+        },
+        {
+          "date": "2026-08-26",
+          "kind": "breakout",
+          "kind_label": "突破关键位置",
+          "direction": 1,
+          "title": "向上突破 EMA50；回踩 EMA20 后收回",
+          "reasons": [
+            "收盘由 EMA50 下方转到上方",
+            "日内触及 EMA20 附近，收盘仍在其上且高于前收"
+          ],
+          "severity": 3,
+          "related_kinds": [
+            "breakout",
+            "retest"
+          ],
+          "article_window": {
+            "articles": 0,
+            "securities_trades": 0,
+            "site_share": 0.0,
+            "segments": {
+              "before": {
+                "articles": 0,
+                "securities_trades": 0,
+                "site_share": 0.0
+              },
+              "during": {
+                "articles": 0,
+                "securities_trades": 0,
+                "site_share": 0.0
+              },
+              "after": {
+                "articles": 0,
+                "securities_trades": 0,
+                "site_share": 0.0
+              }
+            },
+            "article_rows": []
+          },
+          "close": 139.63,
+          "trend_score": 73.5,
+          "trend_score_limited": true
         }
       ],
       "earnings_events": [],
@@ -10816,14 +10897,13 @@
       ],
       "holder_psychology": {
         "as_of": "2026-08-26",
-        "close": 136.455,
+        "close": 139.63,
         "trend_score": 73.5,
-        "return_5d": -0.0229,
-        "return_20d": 0.2124,
-        "price_percentile": 0.4423,
-        "ema_state": "mixed",
+        "return_5d": -0.0001,
+        "return_20d": 0.2406,
+        "price_percentile": 0.5192,
+        "ema_state": "above_all",
         "near_emas": [
-          20,
           50
         ],
         "regime": "关键均线决策区",
@@ -11987,13 +12067,13 @@
         },
         {
           "date": "2026-08-26",
-          "open": 345.02,
+          "open": 345.27,
           "high": 351.93,
           "low": 342.53,
-          "close": 344.0,
-          "ema20": 343.515,
-          "ema50": 357.523,
-          "ema200": 381.833,
+          "close": 345.82,
+          "ema20": 343.688,
+          "ema50": 357.595,
+          "ema200": 381.851,
           "trend_score": 36.7,
           "trend_score_limited": false
         }
@@ -15009,11 +15089,11 @@
       ],
       "holder_psychology": {
         "as_of": "2026-08-26",
-        "close": 344.0,
+        "close": 345.82,
         "trend_score": 36.7,
-        "return_5d": -0.0203,
-        "return_20d": 0.1531,
-        "price_percentile": 0.2151,
+        "return_5d": -0.0151,
+        "return_20d": 0.1592,
+        "price_percentile": 0.2258,
         "ema_state": "mixed",
         "near_emas": [
           20
@@ -16131,13 +16211,13 @@
         },
         {
           "date": "2026-08-26",
-          "open": 310.24,
-          "high": 313.45,
+          "open": 310.3,
+          "high": 315.43,
           "low": 308.8,
-          "close": 312.24,
-          "ema20": 311.708,
-          "ema50": 309.499,
-          "ema200": 283.757,
+          "close": 313.45,
+          "ema20": 311.823,
+          "ema50": 309.547,
+          "ema200": 283.769,
           "trend_score": 59.2,
           "trend_score_limited": false
         }
@@ -18516,11 +18596,11 @@
       ],
       "holder_psychology": {
         "as_of": "2026-08-26",
-        "close": 312.24,
+        "close": 313.45,
         "trend_score": 59.2,
-        "return_5d": -0.0145,
-        "return_20d": -0.0767,
-        "price_percentile": 0.7528,
+        "return_5d": -0.0107,
+        "return_20d": -0.0732,
+        "price_percentile": 0.7978,
         "ema_state": "above_all",
         "near_emas": [
           20,
