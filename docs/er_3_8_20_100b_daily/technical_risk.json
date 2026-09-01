@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-29T21:59:27",
+  "generated_at": "2026-09-01T14:13:31",
   "variant_name": "ER 3/8/20 (100B 日调仓)",
   "variant_slug": "er_3_8_20_100b_daily",
   "universe_mode": "current_and_planned",
-  "holding_count": 16,
+  "holding_count": 18,
   "current_holding_count": 10,
-  "planned_buy_count": 4,
+  "planned_buy_count": 6,
   "historical_buy_count": 0,
-  "ticker_count": 16,
-  "risk_high_count": 10,
-  "backtest_period": "验证期 2025-08-28 至 2026-08-28",
-  "training_period": "训练期 2022-01-03 至 2025-08-27",
+  "ticker_count": 18,
+  "risk_high_count": 12,
+  "backtest_period": "验证期 2025-08-31 至 2026-08-31",
+  "training_period": "训练期 2022-01-03 至 2025-08-30",
   "validation_method": "参数仅在训练期选择，胜率和平均收益来自随后一年验证期",
   "strategy_summary": {
     "stop_atr": 2.0,
     "take_atr": 1.5,
-    "trades": 1065,
-    "win_rate": 0.5634,
-    "avg_return": 0.0
+    "trades": 1335,
+    "win_rate": 0.615,
+    "avg_return": 0.0082
   },
   "rows": [
     {
-      "ticker": "US.PANW",
-      "name": "Palo Alto Networks",
+      "ticker": "US.NVDA",
+      "name": "英伟达",
       "sources": [
-        "当前持仓"
+        "计划买入"
       ],
       "source_count": 1,
-      "weight": 0.099887773,
-      "market_value": 111254.6474533408,
+      "weight": null,
+      "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-28",
-      "close": 371.59,
+      "latest_date": "2026-08-31",
+      "close": 220.78,
       "score": 76,
       "rating": "4分",
       "action": "多头",
@@ -54,25 +54,25 @@
         "volume": "量能6/15，量价确认不足",
         "atr": "ATR10/10，执行位置可接受"
       },
-      "atr": 17.8962,
-      "stop_loss": 335.7976,
-      "take_profit": 398.4343,
-      "add_price": 336.9481,
-      "invalidation": 310.1038,
-      "stop_pct": 0.1066,
-      "take_pct": 0.0722,
+      "atr": 6.8107,
+      "stop_loss": 207.1586,
+      "take_profit": 230.996,
+      "add_price": 210.6553,
+      "invalidation": 200.4393,
+      "stop_pct": 0.0658,
+      "take_pct": 0.0463,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 81,
-        "win_rate": 0.7284,
-        "avg_return": 0.0211,
+        "trades": 97,
+        "win_rate": 0.4639,
+        "avg_return": -0.013,
         "validation": true
       }
     },
     {
-      "ticker": "US.ANET",
-      "name": "Arista Networks",
+      "ticker": "US.PANW",
+      "name": "Palo Alto Networks",
       "sources": [
         "计划买入"
       ],
@@ -80,8 +80,58 @@
       "weight": null,
       "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-28",
-      "close": 195.38,
+      "latest_date": "2026-08-31",
+      "close": 382.13,
+      "score": 76,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "高",
+      "risk_reasons": [
+        "MACD动能转弱"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 15,
+        "kdj": 8,
+        "volume": 8,
+        "atr": 8
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD15/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能8/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
+      },
+      "atr": 18.0719,
+      "stop_loss": 345.9862,
+      "take_profit": 407.9159,
+      "add_price": 337.0359,
+      "invalidation": 309.9281,
+      "stop_pct": 0.1045,
+      "take_pct": 0.0675,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 79,
+        "win_rate": 0.7215,
+        "avg_return": 0.0207,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.ANET",
+      "name": "Arista Networks",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.095779247,
+      "market_value": 107092.9118265387,
+      "status": "ok",
+      "latest_date": "2026-08-31",
+      "close": 195.69,
       "score": 73,
       "rating": "4分",
       "action": "多头",
@@ -104,69 +154,69 @@
         "volume": "量能6/15，量价确认不足",
         "atr": "ATR10/10，执行位置可接受"
       },
-      "atr": 7.825,
-      "stop_loss": 179.73,
-      "take_profit": 207.1175,
-      "add_price": 177.3625,
-      "invalidation": 165.625,
-      "stop_pct": 0.0871,
-      "take_pct": 0.0601,
+      "atr": 7.5136,
+      "stop_loss": 180.6629,
+      "take_profit": 206.9604,
+      "add_price": 186.5868,
+      "invalidation": 175.3164,
+      "stop_pct": 0.0832,
+      "take_pct": 0.0576,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
         "trades": 94,
         "win_rate": 0.4043,
-        "avg_return": -0.0209,
+        "avg_return": -0.0208,
         "validation": true
       }
     },
     {
-      "ticker": "US.NVDA",
-      "name": "英伟达",
+      "ticker": "US.QCOM",
+      "name": "高通",
       "sources": [
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.0970362713,
-      "market_value": 108078.6549741544,
+      "weight": 0.1054243989,
+      "market_value": 117877.3712065383,
       "status": "ok",
-      "latest_date": "2026-08-28",
-      "close": 217.55,
+      "latest_date": "2026-08-31",
+      "close": 170.48,
       "score": 73,
       "rating": "4分",
       "action": "多头",
       "risk_level": "高",
       "risk_reasons": [
-        "MACD动能转弱"
+        "跌破EMA55"
       ],
       "cap_reason": null,
       "parts": {
-        "trend": 37,
-        "macd": 12,
+        "trend": 31,
+        "macd": 15,
         "kdj": 8,
-        "volume": 6,
-        "atr": 10
+        "volume": 11,
+        "atr": 8
       },
       "texts": {
-        "trend": "趋势37/40，EMA多头排列",
-        "macd": "MACD12/25，零轴上方动能占优",
+        "trend": "趋势31/40，均线结构偏震荡或转弱",
+        "macd": "MACD15/25，仍处修复或弱势区",
         "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR10/10，执行位置可接受"
+        "volume": "量能11/15，量价配合较好",
+        "atr": "ATR8/10，执行位置可接受"
       },
-      "atr": 6.8757,
-      "stop_loss": 203.7986,
-      "take_profit": 227.8636,
-      "add_price": 200.2878,
-      "invalidation": 189.9743,
-      "stop_pct": 0.0675,
-      "take_pct": 0.0474,
+      "atr": 4.8573,
+      "stop_loss": 160.7654,
+      "take_profit": 173.8087,
+      "add_price": 157.6487,
+      "invalidation": 150.3627,
+      "stop_pct": 0.0604,
+      "take_pct": 0.0195,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 97,
-        "win_rate": 0.4433,
-        "avg_return": -0.0133,
+        "trades": 70,
+        "win_rate": 0.6,
+        "avg_return": -0.0019,
         "validation": true
       }
     },
@@ -180,8 +230,8 @@
       "weight": null,
       "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-28",
-      "close": 716.43,
+      "latest_date": "2026-08-31",
+      "close": 716.76,
       "score": 73,
       "rating": "4分",
       "action": "多头",
@@ -204,13 +254,13 @@
         "volume": "量能6/15，量价确认不足",
         "atr": "ATR10/10，执行位置可接受"
       },
-      "atr": 8.4067,
-      "stop_loss": 699.6166,
-      "take_profit": 729.04,
-      "add_price": 690.0233,
-      "invalidation": 677.4133,
-      "stop_pct": 0.024,
-      "take_pct": 0.0176,
+      "atr": 8.1617,
+      "stop_loss": 700.4366,
+      "take_profit": 729.0025,
+      "add_price": 706.7808,
+      "invalidation": 694.5383,
+      "stop_pct": 0.0233,
+      "take_pct": 0.0171,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
@@ -227,47 +277,96 @@
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.1089945877,
-      "market_value": 121397.7854409986,
+      "weight": 0.1072536145,
+      "market_value": 119922.6580265305,
       "status": "ok",
-      "latest_date": "2026-08-28",
-      "close": 513.53,
+      "latest_date": "2026-08-31",
+      "close": 507.29,
       "score": 71,
       "rating": "3.5分",
       "action": "多头观察 / 轻仓试探",
       "risk_level": "高",
       "risk_reasons": [
-        "MACD动能转弱",
-        "ATR赔率位置差"
+        "MACD动能转弱"
       ],
-      "cap_reason": "价格偏离均线过大",
+      "cap_reason": null,
       "parts": {
         "trend": 37,
         "macd": 15,
         "kdj": 8,
-        "volume": 9,
-        "atr": 2
+        "volume": 6,
+        "atr": 5
       },
       "texts": {
         "trend": "趋势37/40，EMA多头排列",
         "macd": "MACD15/25，零轴上方动能占优",
         "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能9/15，量价确认不足",
-        "atr": "ATR2/10，追价风险偏高"
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
       },
-      "atr": 9.7694,
-      "stop_loss": 493.9911,
-      "take_profit": 522.6647,
-      "add_price": 479.8847,
-      "invalidation": 465.2306,
-      "stop_pct": 0.0396,
-      "take_pct": 0.0178,
+      "atr": 9.8144,
+      "stop_loss": 487.6611,
+      "take_profit": 522.0116,
+      "add_price": 482.0577,
+      "invalidation": 467.3361,
+      "stop_pct": 0.0403,
+      "take_pct": 0.029,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
         "trades": 39,
         "win_rate": 0.7179,
-        "avg_return": 0.0108,
+        "avg_return": 0.0082,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.COP",
+      "name": "康菲石油",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-08-31",
+      "close": 132.49,
+      "score": 70,
+      "rating": "3.5分",
+      "action": "多头观察 / 轻仓试探",
+      "risk_level": "高",
+      "risk_reasons": [
+        "MACD动能转弱"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 12,
+        "kdj": 5,
+        "volume": 8,
+        "atr": 8
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD12/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能8/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
+      },
+      "atr": 2.8429,
+      "stop_loss": 126.8041,
+      "take_profit": 136.7544,
+      "add_price": 116.1315,
+      "invalidation": 111.8671,
+      "stop_pct": 0.0448,
+      "take_pct": 0.0322,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 102,
+        "win_rate": 0.7353,
+        "avg_return": 0.017,
         "validation": true
       }
     },
@@ -281,9 +380,9 @@
       "weight": null,
       "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-28",
-      "close": 769.35,
-      "score": 71,
+      "latest_date": "2026-08-31",
+      "close": 767.05,
+      "score": 70,
       "rating": "3.5分",
       "action": "多头观察 / 轻仓试探",
       "risk_level": "高",
@@ -293,31 +392,31 @@
       "cap_reason": null,
       "parts": {
         "trend": 34,
-        "macd": 15,
+        "macd": 12,
         "kdj": 8,
         "volume": 6,
-        "atr": 8
+        "atr": 10
       },
       "texts": {
         "trend": "趋势34/40，EMA多头排列",
-        "macd": "MACD15/25，零轴上方动能占优",
+        "macd": "MACD12/25，零轴上方动能占优",
         "kdj": "KDJ8/10，节奏未见明确背离",
         "volume": "量能6/15，量价确认不足",
-        "atr": "ATR8/10，执行位置可接受"
+        "atr": "ATR10/10，执行位置可接受"
       },
-      "atr": 5.0973,
-      "stop_loss": 759.1554,
-      "take_profit": 776.9959,
-      "add_price": 751.3486,
-      "invalidation": 743.7027,
-      "stop_pct": 0.0134,
+      "atr": 5.0419,
+      "stop_loss": 757.999,
+      "take_profit": 774.6129,
+      "add_price": 763.041,
+      "invalidation": 755.4781,
+      "stop_pct": 0.0119,
       "take_pct": 0.0099,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
         "trades": 103,
-        "win_rate": 0.5437,
-        "avg_return": -0.0001,
+        "win_rate": 0.5146,
+        "avg_return": -0.0005,
         "validation": true
       }
     },
@@ -328,40 +427,40 @@
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.0970440642,
-      "market_value": 108087.3347559913,
+      "weight": 0.1022456512,
+      "market_value": 114323.1425303754,
       "status": "ok",
-      "latest_date": "2026-08-28",
-      "close": 218.4,
-      "score": 61,
-      "rating": "3分",
-      "action": "持有观察",
+      "latest_date": "2026-08-31",
+      "close": 231.0,
+      "score": 69,
+      "rating": "3.5分",
+      "action": "多头观察 / 轻仓试探",
       "risk_level": "高",
       "risk_reasons": [
         "跌破EMA55"
       ],
       "cap_reason": "长周期未翻多",
       "parts": {
-        "trend": 22,
+        "trend": 25,
         "macd": 15,
         "kdj": 8,
-        "volume": 6,
-        "atr": 10
+        "volume": 13,
+        "atr": 8
       },
       "texts": {
-        "trend": "趋势22/40，均线结构偏震荡或转弱",
+        "trend": "趋势25/40，均线结构偏震荡或转弱",
         "macd": "MACD15/25，仍处修复或弱势区",
         "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR10/10，执行位置可接受"
+        "volume": "量能13/15，量价配合较好",
+        "atr": "ATR8/10，执行位置可接受"
       },
-      "atr": 11.8225,
-      "stop_loss": 194.755,
-      "take_profit": 234.9913,
-      "add_price": 187.1513,
-      "invalidation": 169.4175,
-      "stop_pct": 0.1214,
-      "take_pct": 0.076,
+      "atr": 12.4796,
+      "stop_loss": 206.0407,
+      "take_profit": 240.1198,
+      "add_price": 187.4798,
+      "invalidation": 168.7604,
+      "stop_pct": 0.1211,
+      "take_pct": 0.0395,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
@@ -372,159 +471,8 @@
       }
     },
     {
-      "ticker": "US.QCOM",
-      "name": "高通",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.1019290266,
-      "market_value": 113528.1885171371,
-      "status": "ok",
-      "latest_date": "2026-08-28",
-      "close": 164.19,
-      "score": 61,
-      "rating": "3分",
-      "action": "持有观察",
-      "risk_level": "高",
-      "risk_reasons": [
-        "跌破EMA55"
-      ],
-      "cap_reason": "长周期未翻多",
-      "parts": {
-        "trend": 22,
-        "macd": 15,
-        "kdj": 8,
-        "volume": 6,
-        "atr": 10
-      },
-      "texts": {
-        "trend": "趋势22/40，均线结构偏震荡或转弱",
-        "macd": "MACD15/25，仍处修复或弱势区",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR10/10，执行位置可接受"
-      },
-      "atr": 4.5705,
-      "stop_loss": 155.0489,
-      "take_profit": 171.0458,
-      "add_price": 145.1753,
-      "invalidation": 138.3195,
-      "stop_pct": 0.059,
-      "take_pct": 0.0418,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 72,
-        "win_rate": 0.6111,
-        "avg_return": -0.0009,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "US.MRVL",
-      "name": "迈威尔科技",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.08763272,
-      "market_value": 97605.0129124889,
-      "status": "ok",
-      "latest_date": "2026-08-28",
-      "close": 216.62,
-      "score": 60,
-      "rating": "3分",
-      "action": "持有观察",
-      "risk_level": "高",
-      "risk_reasons": [
-        "跌破EMA55",
-        "ATR赔率位置差"
-      ],
-      "cap_reason": "放量转弱",
-      "parts": {
-        "trend": 33,
-        "macd": 22,
-        "kdj": 5,
-        "volume": 1,
-        "atr": 2
-      },
-      "texts": {
-        "trend": "趋势33/40，EMA多头排列",
-        "macd": "MACD22/25，零轴上方动能占优",
-        "kdj": "KDJ5/10，节奏未见明确背离",
-        "volume": "量能1/15，量价确认不足",
-        "atr": "ATR2/10，追价风险偏高"
-      },
-      "atr": 16.5271,
-      "stop_loss": 183.5658,
-      "take_profit": 241.4107,
-      "add_price": 185.8336,
-      "invalidation": 161.0429,
-      "stop_pct": 0.1801,
-      "take_pct": 0.1144,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 108,
-        "win_rate": 0.6574,
-        "avg_return": 0.0154,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "US.META",
-      "name": "Meta Platforms",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.1025599285,
-      "market_value": 114230.8848249093,
-      "status": "ok",
-      "latest_date": "2026-08-28",
-      "close": 578.02,
-      "score": 59,
-      "rating": "3分",
-      "action": "持有观察",
-      "risk_level": "高",
-      "risk_reasons": [
-        "跌破EMA55"
-      ],
-      "cap_reason": null,
-      "parts": {
-        "trend": 20,
-        "macd": 15,
-        "kdj": 8,
-        "volume": 6,
-        "atr": 10
-      },
-      "texts": {
-        "trend": "趋势20/40，均线结构偏震荡或转弱",
-        "macd": "MACD15/25，仍处修复或弱势区",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR10/10，执行位置可接受"
-      },
-      "atr": 18.6843,
-      "stop_loss": 540.6514,
-      "take_profit": 606.0465,
-      "add_price": 546.6122,
-      "invalidation": 518.5857,
-      "stop_pct": 0.0691,
-      "take_pct": 0.0485,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 0,
-        "win_rate": null,
-        "avg_return": null,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "US.CME",
-      "name": "芝加哥商品交易所",
+      "ticker": "US.EQNR",
+      "name": "Equinor",
       "sources": [
         "计划买入"
       ],
@@ -532,233 +480,43 @@
       "weight": null,
       "market_value": null,
       "status": "ok",
-      "latest_date": "2026-08-28",
-      "close": 285.8,
-      "score": 86,
-      "rating": "4.5分",
-      "action": "多头 / 观察回踩",
-      "risk_level": "中",
-      "risk_reasons": [],
-      "cap_reason": null,
-      "parts": {
-        "trend": 38,
-        "macd": 24,
-        "kdj": 6,
-        "volume": 13,
-        "atr": 5
-      },
-      "texts": {
-        "trend": "趋势38/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ6/10，节奏未见明确背离",
-        "volume": "量能13/15，量价配合较好",
-        "atr": "ATR5/10，追价风险偏高"
-      },
-      "atr": 5.8032,
-      "stop_loss": 274.1936,
-      "take_profit": 289.2016,
-      "add_price": 259.7316,
-      "invalidation": 251.0268,
-      "stop_pct": 0.0423,
-      "take_pct": 0.0119,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 83,
-        "win_rate": 0.5904,
-        "avg_return": 0.0021,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "US.PLTR",
-      "name": "Palantir",
-      "sources": [
-        "当前持仓"
+      "latest_date": "2026-08-31",
+      "close": 42.8,
+      "score": 69,
+      "rating": "3.5分",
+      "action": "多头观察 / 轻仓试探",
+      "risk_level": "高",
+      "risk_reasons": [
+        "MACD动能转弱"
       ],
-      "source_count": 1,
-      "weight": 0.1021466857,
-      "market_value": 113770.6164648062,
-      "status": "ok",
-      "latest_date": "2026-08-28",
-      "close": 186.29,
-      "score": 81,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "中",
-      "risk_reasons": [],
       "cap_reason": null,
       "parts": {
         "trend": 37,
-        "macd": 24,
-        "kdj": 8,
+        "macd": 15,
+        "kdj": 5,
         "volume": 7,
         "atr": 5
       },
       "texts": {
         "trend": "趋势37/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能7/15，量价确认不足",
-        "atr": "ATR5/10，追价风险偏高"
-      },
-      "atr": 6.8695,
-      "stop_loss": 172.551,
-      "take_profit": 191.8047,
-      "add_price": 127.0914,
-      "invalidation": 116.7872,
-      "stop_pct": 0.0796,
-      "take_pct": 0.0296,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 71,
-        "win_rate": 0.5634,
-        "avg_return": 0.0006,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "US.T",
-      "name": "AT&T",
-      "sources": [
-        "计划买入"
-      ],
-      "source_count": 1,
-      "weight": null,
-      "market_value": null,
-      "status": "ok",
-      "latest_date": "2026-08-28",
-      "close": 26.01,
-      "score": 77,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "中",
-      "risk_reasons": [],
-      "cap_reason": null,
-      "parts": {
-        "trend": 35,
-        "macd": 24,
-        "kdj": 6,
-        "volume": 7,
-        "atr": 5
-      },
-      "texts": {
-        "trend": "趋势35/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ6/10，节奏未见明确背离",
-        "volume": "量能7/15，量价确认不足",
-        "atr": "ATR5/10，追价风险偏高"
-      },
-      "atr": 0.4629,
-      "stop_loss": 25.0843,
-      "take_profit": 26.2614,
-      "add_price": 22.7764,
-      "invalidation": 22.0821,
-      "stop_pct": 0.0369,
-      "take_pct": 0.0097,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 42,
-        "win_rate": 0.5714,
-        "avg_return": -0.0013,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "US.CEG",
-      "name": "Constellation Energy",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.1000044244,
-      "market_value": 111384.573466637,
-      "status": "ok",
-      "latest_date": "2026-08-28",
-      "close": 276.75,
-      "score": 70,
-      "rating": "3.5分",
-      "action": "多头观察 / 轻仓试探",
-      "risk_level": "中",
-      "risk_reasons": [],
-      "cap_reason": "长周期未翻多",
-      "parts": {
-        "trend": 29,
-        "macd": 22,
-        "kdj": 8,
-        "volume": 6,
-        "atr": 10
-      },
-      "texts": {
-        "trend": "趋势29/40，EMA多头排列",
-        "macd": "MACD22/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR10/10，执行位置可接受"
-      },
-      "atr": 8.1812,
-      "stop_loss": 260.3876,
-      "take_profit": 289.0218,
-      "add_price": 264.7656,
-      "invalidation": 252.4938,
-      "stop_pct": 0.0628,
-      "take_pct": 0.0443,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 57,
-        "win_rate": 0.4211,
-        "avg_return": -0.0251,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "US.SPGI",
-      "name": "标普全球",
-      "sources": [
-        "计划买入"
-      ],
-      "source_count": 1,
-      "weight": null,
-      "market_value": null,
-      "status": "ok",
-      "latest_date": "2026-08-28",
-      "close": 442.89,
-      "score": 70,
-      "rating": "3.5分",
-      "action": "多头观察 / 轻仓试探",
-      "risk_level": "中",
-      "risk_reasons": [],
-      "cap_reason": "长周期未翻多",
-      "parts": {
-        "trend": 32,
-        "macd": 24,
-        "kdj": 5,
-        "volume": 7,
-        "atr": 8
-      },
-      "texts": {
-        "trend": "趋势32/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
+        "macd": "MACD15/25，零轴上方动能占优",
         "kdj": "KDJ5/10，节奏未见明确背离",
         "volume": "量能7/15，量价确认不足",
-        "atr": "ATR8/10，执行位置可接受"
+        "atr": "ATR5/10，追价风险偏高"
       },
-      "atr": 9.6318,
-      "stop_loss": 423.6264,
-      "take_profit": 449.6359,
-      "add_price": 408.2659,
-      "invalidation": 393.8182,
-      "stop_pct": 0.0455,
-      "take_pct": 0.0152,
+      "atr": 0.9132,
+      "stop_loss": 40.9736,
+      "take_profit": 43.6266,
+      "add_price": 38.5266,
+      "invalidation": 37.1568,
+      "stop_pct": 0.0446,
+      "take_pct": 0.0193,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 22,
-        "win_rate": 0.4545,
-        "avg_return": -0.0079,
+        "trades": 109,
+        "win_rate": 0.6972,
+        "avg_return": 0.0134,
         "validation": true
       }
     },
@@ -769,40 +527,40 @@
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.1016814824,
-      "market_value": 113252.4746697517,
+      "weight": 0.1001264855,
+      "market_value": 111953.6561004533,
       "status": "ok",
-      "latest_date": "2026-08-28",
-      "close": 150.85,
+      "latest_date": "2026-08-31",
+      "close": 149.12,
       "score": 68,
       "rating": "3.5分",
       "action": "多头观察 / 轻仓试探",
-      "risk_level": "中",
+      "risk_level": "高",
       "risk_reasons": [
-        "止损距离偏宽"
+        "跌破EMA55"
       ],
       "cap_reason": "长周期未翻多",
       "parts": {
         "trend": 22,
-        "macd": 24,
+        "macd": 22,
         "kdj": 8,
         "volume": 6,
-        "atr": 8
+        "atr": 10
       },
       "texts": {
         "trend": "趋势22/40，均线结构偏震荡或转弱",
-        "macd": "MACD24/25，零轴上方动能占优",
+        "macd": "MACD22/25，零轴上方动能占优",
         "kdj": "KDJ8/10，节奏未见明确背离",
         "volume": "量能6/15，量价确认不足",
-        "atr": "ATR8/10，执行位置可接受"
+        "atr": "ATR10/10，执行位置可接受"
       },
-      "atr": 6.2725,
-      "stop_loss": 138.305,
-      "take_profit": 160.2587,
-      "add_price": 133.3462,
-      "invalidation": 123.9375,
-      "stop_pct": 0.0907,
-      "take_pct": 0.0624,
+      "atr": 5.9696,
+      "stop_loss": 137.1807,
+      "take_profit": 158.0745,
+      "add_price": 140.4148,
+      "invalidation": 131.4604,
+      "stop_pct": 0.087,
+      "take_pct": 0.06,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
@@ -811,9 +569,353 @@
         "avg_return": -0.0162,
         "validation": true
       }
+    },
+    {
+      "ticker": "US.META",
+      "name": "Meta Platforms",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.1011592185,
+      "market_value": 113108.3779465912,
+      "status": "ok",
+      "latest_date": "2026-08-31",
+      "close": 572.34,
+      "score": 39,
+      "rating": "1分",
+      "action": "不交易 / 空头观察",
+      "risk_level": "高",
+      "risk_reasons": [
+        "评分低于52",
+        "跌破EMA55",
+        "ATR赔率位置差"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 12,
+        "macd": 15,
+        "kdj": 8,
+        "volume": 2,
+        "atr": 2
+      },
+      "texts": {
+        "trend": "趋势12/40，均线结构偏震荡或转弱",
+        "macd": "MACD15/25，仍处修复或弱势区",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能2/15，量价确认不足",
+        "atr": "ATR2/10，追价风险偏高"
+      },
+      "atr": 18.0062,
+      "stop_loss": 536.3276,
+      "take_profit": 599.3493,
+      "add_price": 546.2731,
+      "invalidation": 519.2638,
+      "stop_pct": 0.0671,
+      "take_pct": 0.0472,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 0,
+        "win_rate": null,
+        "avg_return": null,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.MU",
+      "name": "美光科技",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-08-31",
+      "close": 958.73,
+      "score": 86,
+      "rating": "4.5分",
+      "action": "多头 / 观察回踩",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 24,
+        "kdj": 9,
+        "volume": 6,
+        "atr": 10
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD24/25，零轴上方动能占优",
+        "kdj": "KDJ9/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR10/10，执行位置可接受"
+      },
+      "atr": 50.8953,
+      "stop_loss": 856.9393,
+      "take_profit": 1035.073,
+      "add_price": 852.4477,
+      "invalidation": 776.1047,
+      "stop_pct": 0.1188,
+      "take_pct": 0.0796,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 134,
+        "win_rate": 0.7537,
+        "avg_return": 0.028,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.PLTR",
+      "name": "Palantir",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.1018006538,
+      "market_value": 113825.5810655997,
+      "status": "ok",
+      "latest_date": "2026-08-31",
+      "close": 186.38,
+      "score": 77,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 22,
+        "kdj": 7,
+        "volume": 6,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ7/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 6.7931,
+      "stop_loss": 172.7939,
+      "take_profit": 191.7665,
+      "add_price": 146.6765,
+      "invalidation": 136.4869,
+      "stop_pct": 0.0786,
+      "take_pct": 0.0289,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 72,
+        "win_rate": 0.5694,
+        "avg_return": 0.0006,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.SNDK",
+      "name": "闪迪",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-08-31",
+      "close": 1566.7,
+      "score": 77,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [
+        "止损距离偏宽"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 30,
+        "macd": 24,
+        "kdj": 5,
+        "volume": 8,
+        "atr": 10
+      },
+      "texts": {
+        "trend": "趋势30/40，均线结构偏震荡或转弱",
+        "macd": "MACD24/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能8/15，量价确认不足",
+        "atr": "ATR10/10，执行位置可接受"
+      },
+      "atr": 128.9304,
+      "stop_loss": 1308.8391,
+      "take_profit": 1760.0957,
+      "add_price": 1227.5552,
+      "invalidation": 1034.1596,
+      "stop_pct": 0.197,
+      "take_pct": 0.1234,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 93,
+        "win_rate": 0.7419,
+        "avg_return": 0.0487,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.T",
+      "name": "AT&T",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.0952882888,
+      "market_value": 106543.9605170092,
+      "status": "ok",
+      "latest_date": "2026-08-31",
+      "close": 25.89,
+      "score": 75,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "中",
+      "risk_reasons": [],
+      "cap_reason": null,
+      "parts": {
+        "trend": 35,
+        "macd": 22,
+        "kdj": 6,
+        "volume": 7,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势35/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ6/10，节奏未见明确背离",
+        "volume": "量能7/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 0.4529,
+      "stop_loss": 24.9843,
+      "take_profit": 26.4664,
+      "add_price": 22.7714,
+      "invalidation": 22.0921,
+      "stop_pct": 0.0363,
+      "take_pct": 0.0223,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 41,
+        "win_rate": 0.561,
+        "avg_return": -0.0014,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.SPGI",
+      "name": "标普全球",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.0947815827,
+      "market_value": 105977.4010841425,
+      "status": "ok",
+      "latest_date": "2026-08-31",
+      "close": 435.84,
+      "score": 70,
+      "rating": "3.5分",
+      "action": "多头观察 / 轻仓试探",
+      "risk_level": "中",
+      "risk_reasons": [],
+      "cap_reason": "长周期未翻多",
+      "parts": {
+        "trend": 32,
+        "macd": 22,
+        "kdj": 6,
+        "volume": 4,
+        "atr": 10
+      },
+      "texts": {
+        "trend": "趋势32/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ6/10，节奏未见明确背离",
+        "volume": "量能4/15，量价确认不足",
+        "atr": "ATR10/10，执行位置可接受"
+      },
+      "atr": 9.8182,
+      "stop_loss": 416.2036,
+      "take_profit": 449.7291,
+      "add_price": 408.3591,
+      "invalidation": 393.6318,
+      "stop_pct": 0.0472,
+      "take_pct": 0.0319,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 22,
+        "win_rate": 0.4545,
+        "avg_return": -0.0079,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "US.CME",
+      "name": "芝加哥商品交易所",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.0961408592,
+      "market_value": 107497.2384936957,
+      "status": "ok",
+      "latest_date": "2026-08-31",
+      "close": 285.5,
+      "score": 60,
+      "rating": "3分",
+      "action": "持有观察",
+      "risk_level": "中",
+      "risk_reasons": [],
+      "cap_reason": "放量转弱",
+      "parts": {
+        "trend": 35,
+        "macd": 22,
+        "kdj": 6,
+        "volume": 7,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势35/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ6/10，节奏未见明确背离",
+        "volume": "量能7/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 5.78,
+      "stop_loss": 273.94,
+      "take_profit": 290.325,
+      "add_price": 259.72,
+      "invalidation": 251.05,
+      "stop_pct": 0.0422,
+      "take_pct": 0.0169,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 84,
+        "win_rate": 0.5833,
+        "avg_return": 0.002,
+        "validation": true
+      }
     }
   ],
-  "input_version": "720c266abcbb0645fe89",
+  "input_version": "783881c848986d31a3b6",
   "input_fingerprint_version": 2,
   "cache_hit": false
 }
