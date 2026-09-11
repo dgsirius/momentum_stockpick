@@ -1,125 +1,25 @@
 {
-  "generated_at": "2026-09-10T01:20:42",
+  "generated_at": "2026-09-11T12:10:32",
   "variant_name": "A股 ETF ER 10/25/50（规模20亿+ 日调仓 Top5）",
   "variant_slug": "a_share_etf_er_10_25_50_ge20b",
   "universe_mode": "current_and_planned",
-  "holding_count": 9,
+  "holding_count": 8,
   "current_holding_count": 5,
-  "planned_buy_count": 2,
+  "planned_buy_count": 1,
   "historical_buy_count": 0,
-  "ticker_count": 9,
+  "ticker_count": 8,
   "risk_high_count": 8,
-  "backtest_period": "验证期 2025-09-09 至 2026-09-09",
-  "training_period": "训练期 2022-01-03 至 2025-09-08",
+  "backtest_period": "验证期 2025-09-10 至 2026-09-10",
+  "training_period": "训练期 2022-01-03 至 2025-09-09",
   "validation_method": "参数仅在训练期选择，胜率和平均收益来自随后一年验证期",
   "strategy_summary": {
     "stop_atr": 2.0,
     "take_atr": 1.5,
-    "trades": 814,
-    "win_rate": 0.6437,
-    "avg_return": 0.0079
+    "trades": 779,
+    "win_rate": 0.656,
+    "avg_return": 0.0086
   },
   "rows": [
-    {
-      "ticker": "SH.517520",
-      "name": "黄金股ETF永赢",
-      "sources": [
-        "计划买入"
-      ],
-      "source_count": 1,
-      "weight": null,
-      "market_value": null,
-      "status": "ok",
-      "latest_date": "2026-09-09",
-      "close": 2.214,
-      "score": 76,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "高",
-      "risk_reasons": [
-        "MACD动能转弱"
-      ],
-      "cap_reason": null,
-      "parts": {
-        "trend": 37,
-        "macd": 15,
-        "kdj": 8,
-        "volume": 6,
-        "atr": 10
-      },
-      "texts": {
-        "trend": "趋势37/40，EMA多头排列",
-        "macd": "MACD15/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR10/10，执行位置可接受"
-      },
-      "atr": 0.0896,
-      "stop_loss": 2.0347,
-      "take_profit": 2.3485,
-      "add_price": 1.9798,
-      "invalidation": 1.8454,
-      "stop_pct": 0.0881,
-      "take_pct": 0.0607,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 76,
-        "win_rate": 0.75,
-        "avg_return": 0.0225,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "SZ.159562",
-      "name": "黄金股ETF华夏",
-      "sources": [
-        "计划买入"
-      ],
-      "source_count": 1,
-      "weight": null,
-      "market_value": null,
-      "status": "ok",
-      "latest_date": "2026-09-09",
-      "close": 2.402,
-      "score": 76,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "高",
-      "risk_reasons": [
-        "MACD动能转弱"
-      ],
-      "cap_reason": null,
-      "parts": {
-        "trend": 37,
-        "macd": 15,
-        "kdj": 8,
-        "volume": 6,
-        "atr": 10
-      },
-      "texts": {
-        "trend": "趋势37/40，EMA多头排列",
-        "macd": "MACD15/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR10/10，执行位置可接受"
-      },
-      "atr": 0.0941,
-      "stop_loss": 2.2139,
-      "take_profit": 2.5431,
-      "add_price": 2.152,
-      "invalidation": 2.0109,
-      "stop_pct": 0.085,
-      "take_pct": 0.0587,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 78,
-        "win_rate": 0.7692,
-        "avg_return": 0.0242,
-        "validation": true
-      }
-    },
     {
       "ticker": "SH.510720",
       "name": "红利国企ETF国泰",
@@ -127,12 +27,12 @@
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.19964313,
-      "market_value": 98603.4428069249,
+      "weight": 0.2004765174,
+      "market_value": 98005.6532267611,
       "status": "ok",
-      "latest_date": "2026-09-09",
-      "close": 1.093,
-      "score": 75,
+      "latest_date": "2026-09-10",
+      "close": 1.085,
+      "score": 74,
       "rating": "4分",
       "action": "多头",
       "risk_level": "高",
@@ -143,30 +43,30 @@
       "parts": {
         "trend": 37,
         "macd": 15,
-        "kdj": 9,
+        "kdj": 8,
         "volume": 6,
         "atr": 8
       },
       "texts": {
         "trend": "趋势37/40，EMA多头排列",
         "macd": "MACD15/25，零轴上方动能占优",
-        "kdj": "KDJ9/10，节奏未见明确背离",
+        "kdj": "KDJ8/10，节奏未见明确背离",
         "volume": "量能6/15，量价确认不足",
         "atr": "ATR8/10，执行位置可接受"
       },
       "atr": 0.0196,
-      "stop_loss": 1.0539,
+      "stop_loss": 1.0457,
       "take_profit": 1.1208,
       "add_price": 1.0298,
       "invalidation": 1.0004,
-      "stop_pct": 0.0371,
-      "take_pct": 0.0254,
+      "stop_pct": 0.0376,
+      "take_pct": 0.033,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 3.5,
         "trades": 107,
         "win_rate": 0.4766,
-        "avg_return": 0.0086,
+        "avg_return": 0.0079,
         "validation": true
       }
     },
@@ -177,11 +77,11 @@
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.1993183138,
-      "market_value": 98443.0165685343,
+      "weight": 0.200626036,
+      "market_value": 98078.747426051,
       "status": "ok",
-      "latest_date": "2026-09-09",
-      "close": 3.498,
+      "latest_date": "2026-09-10",
+      "close": 3.473,
       "score": 74,
       "rating": "4分",
       "action": "多头",
@@ -204,119 +104,19 @@
         "volume": "量能6/15，量价确认不足",
         "atr": "ATR8/10，执行位置可接受"
       },
-      "atr": 0.0556,
-      "stop_loss": 3.3869,
-      "take_profit": 3.5628,
-      "add_price": 3.2828,
-      "invalidation": 3.1994,
-      "stop_pct": 0.0328,
-      "take_pct": 0.0185,
+      "atr": 0.0561,
+      "stop_loss": 3.3609,
+      "take_profit": 3.5571,
+      "add_price": 3.283,
+      "invalidation": 3.1989,
+      "stop_pct": 0.0334,
+      "take_pct": 0.0242,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
         "trades": 113,
         "win_rate": 0.6814,
-        "avg_return": 0.0069,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "SH.561580",
-      "name": "央企红利ETF华泰柏瑞",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.1991361192,
-      "market_value": 98353.030918797,
-      "status": "ok",
-      "latest_date": "2026-09-09",
-      "close": 1.289,
-      "score": 74,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "高",
-      "risk_reasons": [
-        "MACD动能转弱"
-      ],
-      "cap_reason": null,
-      "parts": {
-        "trend": 37,
-        "macd": 15,
-        "kdj": 8,
-        "volume": 9,
-        "atr": 5
-      },
-      "texts": {
-        "trend": "趋势37/40，EMA多头排列",
-        "macd": "MACD15/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能9/15，量价确认不足",
-        "atr": "ATR5/10，追价风险偏高"
-      },
-      "atr": 0.0157,
-      "stop_loss": 1.2576,
-      "take_profit": 1.2989,
-      "add_price": 1.2109,
-      "invalidation": 1.1873,
-      "stop_pct": 0.025,
-      "take_pct": 0.0076,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 89,
-        "win_rate": 0.7416,
-        "avg_return": 0.0077,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "US.QQQ",
-      "name": "QQQ",
-      "sources": [
-        "基准观察"
-      ],
-      "source_count": 1,
-      "weight": null,
-      "market_value": null,
-      "status": "ok",
-      "latest_date": "2026-09-08",
-      "close": 718.36,
-      "score": 73,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "高",
-      "risk_reasons": [
-        "MACD动能转弱"
-      ],
-      "cap_reason": null,
-      "parts": {
-        "trend": 34,
-        "macd": 15,
-        "kdj": 8,
-        "volume": 6,
-        "atr": 10
-      },
-      "texts": {
-        "trend": "趋势34/40，EMA多头排列",
-        "macd": "MACD15/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR10/10，执行位置可接受"
-      },
-      "atr": 7.7117,
-      "stop_loss": 702.9366,
-      "take_profit": 729.9275,
-      "add_price": 706.5558,
-      "invalidation": 694.9883,
-      "stop_pct": 0.0219,
-      "take_pct": 0.0161,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 100,
-        "win_rate": 0.51,
-        "avg_return": -0.0018,
+        "avg_return": 0.0068,
         "validation": true
       }
     },
@@ -327,14 +127,14 @@
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.2030165644,
-      "market_value": 100269.5770339129,
+      "weight": 0.1990868683,
+      "market_value": 97326.3045266441,
       "status": "ok",
-      "latest_date": "2026-09-09",
-      "close": 1.341,
-      "score": 71,
-      "rating": "3.5分",
-      "action": "多头观察 / 轻仓试探",
+      "latest_date": "2026-09-10",
+      "close": 1.319,
+      "score": 73,
+      "rating": "4分",
+      "action": "多头",
       "risk_level": "高",
       "risk_reasons": [
         "MACD动能转弱"
@@ -345,28 +145,178 @@
         "macd": 15,
         "kdj": 5,
         "volume": 6,
-        "atr": 8
+        "atr": 10
       },
       "texts": {
         "trend": "趋势37/40，EMA多头排列",
         "macd": "MACD15/25，零轴上方动能占优",
         "kdj": "KDJ5/10，节奏未见明确背离",
         "volume": "量能6/15，量价确认不足",
-        "atr": "ATR8/10，执行位置可接受"
+        "atr": "ATR10/10，执行位置可接受"
       },
-      "atr": 0.0415,
-      "stop_loss": 1.258,
-      "take_profit": 1.4033,
-      "add_price": 1.2428,
-      "invalidation": 1.1805,
-      "stop_pct": 0.066,
-      "take_pct": 0.0464,
+      "atr": 0.0414,
+      "stop_loss": 1.2363,
+      "take_profit": 1.381,
+      "add_price": 1.2427,
+      "invalidation": 1.1806,
+      "stop_pct": 0.0669,
+      "take_pct": 0.047,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
         "trades": 116,
         "win_rate": 0.7155,
-        "avg_return": 0.0136,
+        "avg_return": 0.0134,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.561580",
+      "name": "央企红利ETF华泰柏瑞",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-09-10",
+      "close": 1.283,
+      "score": 72,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "高",
+      "risk_reasons": [
+        "MACD动能转弱"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 12,
+        "kdj": 8,
+        "volume": 7,
+        "atr": 8
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD12/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能7/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
+      },
+      "atr": 0.0158,
+      "stop_loss": 1.2514,
+      "take_profit": 1.2989,
+      "add_price": 1.2109,
+      "invalidation": 1.1872,
+      "stop_pct": 0.0252,
+      "take_pct": 0.0124,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 89,
+        "win_rate": 0.7416,
+        "avg_return": 0.0076,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.517520",
+      "name": "黄金股ETF永赢",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.200485256,
+      "market_value": 98009.9252096002,
+      "status": "ok",
+      "latest_date": "2026-09-10",
+      "close": 2.183,
+      "score": 70,
+      "rating": "3.5分",
+      "action": "多头观察 / 轻仓试探",
+      "risk_level": "高",
+      "risk_reasons": [
+        "MACD动能转弱"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 34,
+        "macd": 12,
+        "kdj": 8,
+        "volume": 6,
+        "atr": 10
+      },
+      "texts": {
+        "trend": "趋势34/40，EMA多头排列",
+        "macd": "MACD12/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR10/10，执行位置可接受"
+      },
+      "atr": 0.0857,
+      "stop_loss": 2.0116,
+      "take_profit": 2.3116,
+      "add_price": 1.9779,
+      "invalidation": 1.8493,
+      "stop_pct": 0.0852,
+      "take_pct": 0.0589,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 75,
+        "win_rate": 0.7333,
+        "avg_return": 0.0211,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SZ.159562",
+      "name": "黄金股ETF华夏",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.2009377082,
+      "market_value": 98231.1126060405,
+      "status": "ok",
+      "latest_date": "2026-09-10",
+      "close": 2.371,
+      "score": 70,
+      "rating": "3.5分",
+      "action": "多头观察 / 轻仓试探",
+      "risk_level": "高",
+      "risk_reasons": [
+        "MACD动能转弱"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 34,
+        "macd": 12,
+        "kdj": 8,
+        "volume": 6,
+        "atr": 10
+      },
+      "texts": {
+        "trend": "趋势34/40，EMA多头排列",
+        "macd": "MACD12/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR10/10，执行位置可接受"
+      },
+      "atr": 0.0903,
+      "stop_loss": 2.1904,
+      "take_profit": 2.5064,
+      "add_price": 2.1501,
+      "invalidation": 2.0147,
+      "stop_pct": 0.0824,
+      "take_pct": 0.0571,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 77,
+        "win_rate": 0.7662,
+        "avg_return": 0.023,
         "validation": true
       }
     },
@@ -380,97 +330,103 @@
       "weight": null,
       "market_value": null,
       "status": "ok",
-      "latest_date": "2026-09-08",
-      "close": 765.96,
-      "score": 55,
-      "rating": "3分",
-      "action": "持有观察",
+      "latest_date": "2026-09-10",
+      "close": 757.83,
+      "score": 47,
+      "rating": "2分",
+      "action": "不交易",
       "risk_level": "高",
       "risk_reasons": [
+        "评分低于52",
         "MACD动能转弱",
         "ATR赔率位置差"
       ],
       "cap_reason": null,
       "parts": {
-        "trend": 30,
+        "trend": 26,
         "macd": 12,
-        "kdj": 8,
-        "volume": 3,
+        "kdj": 5,
+        "volume": 2,
         "atr": 2
       },
       "texts": {
-        "trend": "趋势30/40，EMA多头排列",
+        "trend": "趋势26/40，均线结构偏震荡或转弱",
         "macd": "MACD12/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能3/15，量价确认不足",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能2/15，量价确认不足",
         "atr": "ATR2/10，追价风险偏高"
       },
-      "atr": 5.453,
-      "stop_loss": 756.7535,
-      "take_profit": 774.1395,
-      "add_price": 762.2065,
-      "invalidation": 754.027,
-      "stop_pct": 0.0122,
-      "take_pct": 0.0107,
+      "atr": 5.363,
+      "stop_loss": 753.9585,
+      "take_profit": 765.8745,
+      "add_price": 759.3215,
+      "invalidation": 751.277,
+      "stop_pct": 0.0051,
+      "take_pct": 0.0106,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
         "trades": 103,
         "win_rate": 0.5243,
-        "avg_return": -0.0007,
+        "avg_return": -0.0012,
         "validation": true
       }
     },
     {
-      "ticker": "SZ.159865",
-      "name": "养殖ETF国泰",
+      "ticker": "US.QQQ",
+      "name": "QQQ",
       "sources": [
-        "当前持仓"
+        "基准观察"
       ],
       "source_count": 1,
-      "weight": 0.1970430794,
-      "market_value": 97319.2817259259,
+      "weight": null,
+      "market_value": null,
       "status": "ok",
-      "latest_date": "2026-09-09",
-      "close": 0.573,
-      "score": 76,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "中",
-      "risk_reasons": [],
+      "latest_date": "2026-09-10",
+      "close": 708.69,
+      "score": 43,
+      "rating": "2分",
+      "action": "不交易",
+      "risk_level": "高",
+      "risk_reasons": [
+        "评分低于52",
+        "跌破EMA55",
+        "MACD动能转弱",
+        "ATR赔率位置差"
+      ],
       "cap_reason": null,
       "parts": {
-        "trend": 35,
-        "macd": 24,
+        "trend": 22,
+        "macd": 12,
         "kdj": 5,
-        "volume": 7,
-        "atr": 5
+        "volume": 2,
+        "atr": 2
       },
       "texts": {
-        "trend": "趋势35/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
+        "trend": "趋势22/40，均线结构偏震荡或转弱",
+        "macd": "MACD12/25，零轴上方动能占优",
         "kdj": "KDJ5/10，节奏未见明确背离",
-        "volume": "量能7/15，量价确认不足",
-        "atr": "ATR5/10，追价风险偏高"
+        "volume": "量能2/15，量价确认不足",
+        "atr": "ATR2/10，追价风险偏高"
       },
-      "atr": 0.0118,
-      "stop_loss": 0.5494,
-      "take_profit": 0.5839,
-      "add_price": 0.5279,
-      "invalidation": 0.5102,
-      "stop_pct": 0.0429,
-      "take_pct": 0.019,
+      "atr": 7.6178,
+      "stop_loss": 698.8911,
+      "take_profit": 720.1166,
+      "add_price": 706.5089,
+      "invalidation": 695.0822,
+      "stop_pct": 0.014,
+      "take_pct": 0.0161,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 32,
-        "win_rate": 0.2188,
-        "avg_return": -0.0213,
+        "trades": 99,
+        "win_rate": 0.4848,
+        "avg_return": -0.0025,
         "validation": true
       }
     }
   ],
-  "input_version": "35ae243725053701b657",
+  "input_version": "f567c4d7fadc2f799159",
   "input_fingerprint_version": 2,
   "cache_hit": false
 }
