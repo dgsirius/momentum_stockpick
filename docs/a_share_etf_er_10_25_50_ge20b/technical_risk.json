@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T20:32:45",
+  "generated_at": "2026-09-21T23:22:00",
   "variant_name": "A股 ETF ER 10/25/50（规模20亿+ 日调仓 Top5）",
   "variant_slug": "a_share_etf_er_10_25_50_ge20b",
   "universe_mode": "current_and_planned",
@@ -8,115 +8,266 @@
   "planned_buy_count": 4,
   "historical_buy_count": 0,
   "ticker_count": 11,
-  "risk_high_count": 5,
-  "backtest_period": "验证期 2025-09-18 至 2026-09-18",
-  "training_period": "训练期 2022-01-03 至 2025-09-17",
+  "risk_high_count": 6,
+  "backtest_period": "验证期 2025-09-21 至 2026-09-21",
+  "training_period": "训练期 2022-01-03 至 2025-09-20",
   "validation_method": "参数仅在训练期选择，胜率和平均收益来自随后一年验证期",
   "strategy_summary": {
     "stop_atr": 2.0,
     "take_atr": 1.5,
-    "trades": 875,
-    "win_rate": 0.5714,
-    "avg_return": 0.0017
+    "trades": 818,
+    "win_rate": 0.5807,
+    "avg_return": 0.0016
   },
   "rows": [
     {
-      "ticker": "SH.512950",
-      "name": "央企改革ETF华夏",
+      "ticker": "SZ.159509",
+      "name": "纳指科技ETF景顺",
       "sources": [
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.2003590253,
-      "market_value": 92929.5940037646,
+      "weight": 0.2018833232,
+      "market_value": 93416.2264849861,
       "status": "ok",
-      "latest_date": "2026-09-18",
-      "close": 1.506,
-      "score": 69,
-      "rating": "3.5分",
-      "action": "多头观察 / 轻仓试探",
+      "latest_date": "2026-09-21",
+      "close": 2.965,
+      "score": 86,
+      "rating": "4.5分",
+      "action": "多头 / 观察回踩",
       "risk_level": "高",
       "risk_reasons": [
-        "跌破EMA55"
+        "ATR赔率位置差"
       ],
-      "cap_reason": null,
+      "cap_reason": "价格偏离均线过大",
       "parts": {
-        "trend": 28,
-        "macd": 15,
-        "kdj": 8,
-        "volume": 8,
-        "atr": 10
+        "trend": 40,
+        "macd": 24,
+        "kdj": 7,
+        "volume": 13,
+        "atr": 2
       },
       "texts": {
-        "trend": "趋势28/40，均线结构偏震荡或转弱",
-        "macd": "MACD15/25，仍处修复或弱势区",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能8/15，量价确认不足",
-        "atr": "ATR10/10，执行位置可接受"
+        "trend": "趋势40/40，EMA多头排列",
+        "macd": "MACD24/25，零轴上方动能占优",
+        "kdj": "KDJ7/10，节奏未见明确背离",
+        "volume": "量能13/15，量价配合较好",
+        "atr": "ATR2/10，追价风险偏高"
       },
-      "atr": 0.0159,
-      "stop_loss": 1.4741,
-      "take_profit": 1.5299,
-      "add_price": 1.483,
-      "invalidation": 1.4591,
-      "stop_pct": 0.0216,
-      "take_pct": 0.0159,
+      "atr": 0.0379,
+      "stop_loss": 2.8893,
+      "take_profit": 2.9899,
+      "add_price": 2.7429,
+      "invalidation": 2.6861,
+      "stop_pct": 0.0262,
+      "take_pct": 0.0084,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
         "trades": 82,
-        "win_rate": 0.4756,
-        "avg_return": -0.0061,
+        "win_rate": 0.6341,
+        "avg_return": 0.0055,
         "validation": true
       }
     },
     {
-      "ticker": "SH.516310",
-      "name": "银行ETF易方达",
+      "ticker": "SH.513120",
+      "name": "港股创新药ETF广发",
       "sources": [
-        "当前持仓"
+        "计划买入"
       ],
       "source_count": 1,
-      "weight": 0.2003063493,
-      "market_value": 92905.1620923837,
+      "weight": null,
+      "market_value": null,
       "status": "ok",
-      "latest_date": "2026-09-18",
-      "close": 1.386,
-      "score": 67,
-      "rating": "3.5分",
-      "action": "多头观察 / 轻仓试探",
+      "latest_date": "2026-09-21",
+      "close": 1.364,
+      "score": 74,
+      "rating": "4分",
+      "action": "多头",
       "risk_level": "高",
       "risk_reasons": [
         "MACD动能转弱"
       ],
       "cap_reason": null,
       "parts": {
-        "trend": 34,
-        "macd": 12,
-        "kdj": 5,
-        "volume": 6,
-        "atr": 10
+        "trend": 37,
+        "macd": 15,
+        "kdj": 8,
+        "volume": 9,
+        "atr": 5
       },
       "texts": {
-        "trend": "趋势34/40，EMA多头排列",
-        "macd": "MACD12/25，零轴上方动能占优",
-        "kdj": "KDJ5/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR10/10，执行位置可接受"
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD15/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能9/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
       },
-      "atr": 0.0219,
-      "stop_loss": 1.3421,
-      "take_profit": 1.4189,
-      "add_price": 1.356,
-      "invalidation": 1.3231,
-      "stop_pct": 0.0327,
-      "take_pct": 0.0237,
+      "atr": 0.0361,
+      "stop_loss": 1.2919,
+      "take_profit": 1.387,
+      "add_price": 1.236,
+      "invalidation": 1.1819,
+      "stop_pct": 0.0558,
+      "take_pct": 0.0169,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 73,
-        "win_rate": 0.4795,
-        "avg_return": -0.0004,
+        "trades": 45,
+        "win_rate": 0.4222,
+        "avg_return": -0.0126,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SZ.159892",
+      "name": "恒生医药ETF华夏",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-09-21",
+      "close": 0.838,
+      "score": 74,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "高",
+      "risk_reasons": [
+        "MACD动能转弱"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 15,
+        "kdj": 8,
+        "volume": 9,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD15/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能9/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 0.0207,
+      "stop_loss": 0.7966,
+      "take_profit": 0.8534,
+      "add_price": 0.7614,
+      "invalidation": 0.7303,
+      "stop_pct": 0.052,
+      "take_pct": 0.0183,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 42,
+        "win_rate": 0.381,
+        "avg_return": -0.0195,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.513780",
+      "name": "港股创新药ETF景顺",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-09-21",
+      "close": 1.764,
+      "score": 73,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "高",
+      "risk_reasons": [
+        "MACD动能转弱"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 15,
+        "kdj": 8,
+        "volume": 8,
+        "atr": 5
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD15/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能8/15，量价确认不足",
+        "atr": "ATR5/10，追价风险偏高"
+      },
+      "atr": 0.0482,
+      "stop_loss": 1.7158,
+      "take_profit": 1.8081,
+      "add_price": 1.5991,
+      "invalidation": 1.5268,
+      "stop_pct": 0.0281,
+      "take_pct": 0.025,
+      "exit_strategy": {
+        "stop_atr": 1.0,
+        "take_atr": 1.5,
+        "trades": 49,
+        "win_rate": 0.2449,
+        "avg_return": -0.0143,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.515220",
+      "name": "煤炭ETF国泰",
+      "sources": [
+        "计划买入"
+      ],
+      "source_count": 1,
+      "weight": null,
+      "market_value": null,
+      "status": "ok",
+      "latest_date": "2026-09-21",
+      "close": 1.282,
+      "score": 57,
+      "rating": "3分",
+      "action": "持有观察",
+      "risk_level": "高",
+      "risk_reasons": [
+        "MACD动能转弱",
+        "ATR赔率位置差"
+      ],
+      "cap_reason": null,
+      "parts": {
+        "trend": 26,
+        "macd": 15,
+        "kdj": 9,
+        "volume": 5,
+        "atr": 2
+      },
+      "texts": {
+        "trend": "趋势26/40，均线结构偏震荡或转弱",
+        "macd": "MACD15/25，零轴上方动能占优",
+        "kdj": "KDJ9/10，节奏未见明确背离",
+        "volume": "量能5/15，量价确认不足",
+        "atr": "ATR2/10，追价风险偏高"
+      },
+      "atr": 0.0366,
+      "stop_loss": 1.2177,
+      "take_profit": 1.337,
+      "add_price": 1.2543,
+      "invalidation": 1.1994,
+      "stop_pct": 0.0528,
+      "take_pct": 0.0429,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 113,
+        "win_rate": 0.7168,
+        "avg_return": 0.0139,
         "validation": true
       }
     },
@@ -165,257 +316,9 @@
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 97,
-        "win_rate": 0.4948,
-        "avg_return": -0.002,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "SH.512800",
-      "name": "银行ETF华宝",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.1995336636,
-      "market_value": 92546.7785673683,
-      "status": "ok",
-      "latest_date": "2026-09-18",
-      "close": 0.835,
-      "score": 47,
-      "rating": "2分",
-      "action": "不交易",
-      "risk_level": "高",
-      "risk_reasons": [
-        "评分低于52",
-        "MACD动能转弱",
-        "ATR赔率位置差"
-      ],
-      "cap_reason": null,
-      "parts": {
-        "trend": 26,
-        "macd": 12,
-        "kdj": 5,
-        "volume": 2,
-        "atr": 2
-      },
-      "texts": {
-        "trend": "趋势26/40，均线结构偏震荡或转弱",
-        "macd": "MACD12/25，零轴上方动能占优",
-        "kdj": "KDJ5/10，节奏未见明确背离",
-        "volume": "量能2/15，量价确认不足",
-        "atr": "ATR2/10，追价风险偏高"
-      },
-      "atr": 0.0132,
-      "stop_loss": 0.8086,
-      "take_profit": 0.8548,
-      "add_price": 0.8176,
-      "invalidation": 0.7978,
-      "stop_pct": 0.0327,
-      "take_pct": 0.0237,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 72,
-        "win_rate": 0.5,
-        "avg_return": 0.0005,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "SZ.159625",
-      "name": "绿色电力ETF嘉实",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.1999551641,
-      "market_value": 92742.2769739387,
-      "status": "ok",
-      "latest_date": "2026-09-18",
-      "close": 1.211,
-      "score": 47,
-      "rating": "2分",
-      "action": "不交易",
-      "risk_level": "高",
-      "risk_reasons": [
-        "评分低于52",
-        "跌破EMA55",
-        "ATR赔率位置差"
-      ],
-      "cap_reason": "长周期未翻多",
-      "parts": {
-        "trend": 14,
-        "macd": 20,
-        "kdj": 5,
-        "volume": 6,
-        "atr": 2
-      },
-      "texts": {
-        "trend": "趋势14/40，均线结构偏震荡或转弱",
-        "macd": "MACD20/25，零轴上方动能占优",
-        "kdj": "KDJ5/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR2/10，追价风险偏高"
-      },
-      "atr": 0.0169,
-      "stop_loss": 1.1773,
-      "take_profit": 1.2363,
-      "add_price": 1.1914,
-      "invalidation": 1.1661,
-      "stop_pct": 0.0286,
-      "take_pct": 0.0209,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 78,
-        "win_rate": 0.6538,
-        "avg_return": 0.0038,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "SZ.159509",
-      "name": "纳指科技ETF景顺",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.2022071497,
-      "market_value": 93786.7825335716,
-      "status": "ok",
-      "latest_date": "2026-09-18",
-      "close": 2.916,
-      "score": 88,
-      "rating": "4.5分",
-      "action": "多头 / 观察回踩",
-      "risk_level": "中",
-      "risk_reasons": [],
-      "cap_reason": "KDJ顶背离预警",
-      "parts": {
-        "trend": 40,
-        "macd": 25,
-        "kdj": 5,
-        "volume": 13,
-        "atr": 5
-      },
-      "texts": {
-        "trend": "趋势40/40，EMA多头排列",
-        "macd": "MACD25/25，零轴上方动能占优",
-        "kdj": "KDJ5/10，顶背离预警",
-        "volume": "量能13/15，量价配合较好",
-        "atr": "ATR5/10，追价风险偏高"
-      },
-      "atr": 0.0364,
-      "stop_loss": 2.8431,
-      "take_profit": 2.9382,
-      "add_price": 2.7332,
-      "invalidation": 2.6786,
-      "stop_pct": 0.0256,
-      "take_pct": 0.0076,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 83,
-        "win_rate": 0.6386,
-        "avg_return": 0.0057,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "SZ.159363",
-      "name": "创业板人工智能ETF华宝",
-      "sources": [
-        "计划买入"
-      ],
-      "source_count": 1,
-      "weight": null,
-      "market_value": null,
-      "status": "ok",
-      "latest_date": "2026-09-18",
-      "close": 1.272,
-      "score": 70,
-      "rating": "3.5分",
-      "action": "多头观察 / 轻仓试探",
-      "risk_level": "中",
-      "risk_reasons": [],
-      "cap_reason": null,
-      "parts": {
-        "trend": 30,
-        "macd": 15,
-        "kdj": 8,
-        "volume": 9,
-        "atr": 8
-      },
-      "texts": {
-        "trend": "趋势30/40，均线结构偏震荡或转弱",
-        "macd": "MACD15/25，仍处修复或弱势区",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能9/15，量价确认不足",
-        "atr": "ATR8/10，执行位置可接受"
-      },
-      "atr": 0.0421,
-      "stop_loss": 1.1877,
-      "take_profit": 1.3081,
-      "add_price": 1.1851,
-      "invalidation": 1.1219,
-      "stop_pct": 0.071,
-      "take_pct": 0.0284,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 82,
-        "win_rate": 0.6463,
-        "avg_return": 0.0037,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "SH.515880",
-      "name": "通信ETF国泰",
-      "sources": [
-        "计划买入"
-      ],
-      "source_count": 1,
-      "weight": null,
-      "market_value": null,
-      "status": "ok",
-      "latest_date": "2026-09-18",
-      "close": 0.704,
-      "score": 84,
-      "rating": "4.5分",
-      "action": "多头 / 观察回踩",
-      "risk_level": "低",
-      "risk_reasons": [],
-      "cap_reason": null,
-      "parts": {
-        "trend": 33,
-        "macd": 22,
-        "kdj": 8,
-        "volume": 13,
-        "atr": 8
-      },
-      "texts": {
-        "trend": "趋势33/40，均线结构偏震荡或转弱",
-        "macd": "MACD22/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能13/15，量价配合较好",
-        "atr": "ATR8/10，执行位置可接受"
-      },
-      "atr": 0.0252,
-      "stop_loss": 0.6536,
-      "take_profit": 0.7266,
-      "add_price": 0.6416,
-      "invalidation": 0.6038,
-      "stop_pct": 0.0772,
-      "take_pct": 0.0321,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 85,
-        "win_rate": 0.7294,
-        "avg_return": 0.0165,
+        "trades": 95,
+        "win_rate": 0.4842,
+        "avg_return": -0.0023,
         "validation": true
       }
     },
@@ -461,9 +364,57 @@
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 93,
-        "win_rate": 0.4624,
-        "avg_return": -0.0035,
+        "trades": 91,
+        "win_rate": 0.4505,
+        "avg_return": -0.004,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SZ.159363",
+      "name": "创业板人工智能ETF华宝",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.1992574496,
+      "market_value": 92201.1721640446,
+      "status": "ok",
+      "latest_date": "2026-09-21",
+      "close": 1.282,
+      "score": 77,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "低",
+      "risk_reasons": [],
+      "cap_reason": null,
+      "parts": {
+        "trend": 30,
+        "macd": 22,
+        "kdj": 8,
+        "volume": 9,
+        "atr": 8
+      },
+      "texts": {
+        "trend": "趋势30/40，均线结构偏震荡或转弱",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能9/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
+      },
+      "atr": 0.0413,
+      "stop_loss": 1.1994,
+      "take_profit": 1.3146,
+      "add_price": 1.1846,
+      "invalidation": 1.1227,
+      "stop_pct": 0.0688,
+      "take_pct": 0.0255,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 83,
+        "win_rate": 0.6506,
+        "avg_return": 0.0037,
         "validation": true
       }
     },
@@ -471,62 +422,62 @@
       "ticker": "SZ.159583",
       "name": "通信ETF富国",
       "sources": [
-        "计划买入"
+        "当前持仓"
       ],
       "source_count": 1,
-      "weight": null,
-      "market_value": null,
+      "weight": 0.1996816947,
+      "market_value": 92397.4805028777,
       "status": "ok",
-      "latest_date": "2026-09-18",
-      "close": 1.746,
-      "score": 82,
-      "rating": "4.5分",
-      "action": "多头 / 观察回踩",
+      "latest_date": "2026-09-21",
+      "close": 1.761,
+      "score": 77,
+      "rating": "4分",
+      "action": "多头",
       "risk_level": "低",
       "risk_reasons": [],
       "cap_reason": null,
       "parts": {
-        "trend": 33,
-        "macd": 22,
+        "trend": 30,
+        "macd": 24,
         "kdj": 8,
-        "volume": 11,
+        "volume": 7,
         "atr": 8
       },
       "texts": {
-        "trend": "趋势33/40，均线结构偏震荡或转弱",
-        "macd": "MACD22/25，零轴上方动能占优",
+        "trend": "趋势30/40，均线结构偏震荡或转弱",
+        "macd": "MACD24/25，零轴上方动能占优",
         "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能11/15，量价配合较好",
+        "volume": "量能7/15，量价确认不足",
         "atr": "ATR8/10，执行位置可接受"
       },
-      "atr": 0.0624,
-      "stop_loss": 1.6211,
-      "take_profit": 1.8002,
-      "add_price": 1.5912,
-      "invalidation": 1.4976,
-      "stop_pct": 0.077,
-      "take_pct": 0.0311,
+      "atr": 0.0614,
+      "stop_loss": 1.6383,
+      "take_profit": 1.8107,
+      "add_price": 1.5907,
+      "invalidation": 1.4986,
+      "stop_pct": 0.0749,
+      "take_pct": 0.0282,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 85,
-        "win_rate": 0.6706,
-        "avg_return": 0.0073,
+        "trades": 86,
+        "win_rate": 0.6744,
+        "avg_return": 0.0075,
         "validation": true
       }
     },
     {
-      "ticker": "SZ.159381",
-      "name": "创业板人工智能ETF华夏",
+      "ticker": "SH.515880",
+      "name": "通信ETF国泰",
       "sources": [
-        "计划买入"
+        "当前持仓"
       ],
       "source_count": 1,
-      "weight": null,
-      "market_value": null,
+      "weight": 0.1998489904,
+      "market_value": 92474.8922127948,
       "status": "ok",
-      "latest_date": "2026-09-18",
-      "close": 1.205,
+      "latest_date": "2026-09-21",
+      "close": 0.712,
       "score": 75,
       "rating": "4分",
       "action": "多头",
@@ -534,37 +485,85 @@
       "risk_reasons": [],
       "cap_reason": null,
       "parts": {
-        "trend": 33,
-        "macd": 15,
+        "trend": 30,
+        "macd": 22,
         "kdj": 8,
-        "volume": 11,
+        "volume": 7,
         "atr": 8
       },
       "texts": {
-        "trend": "趋势33/40，均线结构偏震荡或转弱",
-        "macd": "MACD15/25，仍处修复或弱势区",
+        "trend": "趋势30/40，均线结构偏震荡或转弱",
+        "macd": "MACD22/25，零轴上方动能占优",
         "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能11/15，量价配合较好",
+        "volume": "量能7/15，量价确认不足",
         "atr": "ATR8/10，执行位置可接受"
       },
-      "atr": 0.0397,
-      "stop_loss": 1.1256,
-      "take_profit": 1.2399,
-      "add_price": 1.1229,
-      "invalidation": 1.0633,
-      "stop_pct": 0.0706,
-      "take_pct": 0.0289,
+      "atr": 0.0249,
+      "stop_loss": 0.6621,
+      "take_profit": 0.7345,
+      "add_price": 0.6415,
+      "invalidation": 0.6041,
+      "stop_pct": 0.0753,
+      "take_pct": 0.0316,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 45,
-        "win_rate": 0.5111,
-        "avg_return": -0.0132,
+        "trades": 86,
+        "win_rate": 0.7326,
+        "avg_return": 0.0167,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SZ.159381",
+      "name": "创业板人工智能ETF华夏",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.2000622846,
+      "market_value": 92573.5885079518,
+      "status": "ok",
+      "latest_date": "2026-09-21",
+      "close": 1.215,
+      "score": 75,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "低",
+      "risk_reasons": [],
+      "cap_reason": null,
+      "parts": {
+        "trend": 30,
+        "macd": 22,
+        "kdj": 8,
+        "volume": 7,
+        "atr": 8
+      },
+      "texts": {
+        "trend": "趋势30/40，均线结构偏震荡或转弱",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ8/10，节奏未见明确背离",
+        "volume": "量能7/15，量价确认不足",
+        "atr": "ATR8/10，执行位置可接受"
+      },
+      "atr": 0.039,
+      "stop_loss": 1.137,
+      "take_profit": 1.2465,
+      "add_price": 1.1225,
+      "invalidation": 1.064,
+      "stop_pct": 0.0686,
+      "take_pct": 0.0259,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 46,
+        "win_rate": 0.5217,
+        "avg_return": -0.0128,
         "validation": true
       }
     }
   ],
-  "input_version": "cf85c81443af49c9d14f",
+  "input_version": "3cbfd0b6abbedac2e4a2",
   "input_fingerprint_version": 2,
   "cache_hit": false
 }
