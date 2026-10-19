@@ -1013,9 +1013,300 @@
 <a class='nav-link' href='../hk_er_3_8_20_20b_stock_connect/index.html'>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</a>
 <a class='nav-link active' href='./index.html'>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</a>
 <a class='nav-link' href='../er_3_8_20_100b_top5_weekly/index.html'>ER 3/8/20 (100B Top5 周换仓)</a>
-<a class='nav-link' href='../daily_option_signal/index.html'>每日期权信号</a>
+<a class='nav-link' href='../leader_valuation/index.html'>自选股长期估值</a>
+<a class='nav-link' href='../watchlist_gap/index.html'>自选股缺口监控</a>
 <a class='nav-link' href='../watchlist_trend_score/index.html'>自选股趋势评分</a>
-<a class='nav-link' href='../long_term_trend_strength/index.html'>长线趋势最强</a></div>
+<a class='nav-link' href='../long_term_trend_strength/index.html'>长线趋势最强</a>
+<a class='nav-link' href='../bofa_fms/index.html'>美银基金经理调查</a>
+<style>.sidebar .sidebar-title[hidden]{display:none}
+.directory-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--muted,#647276);font-size:12px}
+.directory-toolbar button,.directory-dialog button,.directory-group-toggle{font-family:inherit;cursor:pointer}
+.directory-manage{border:1px solid var(--line,#d8cfc2);border-radius:7px;padding:5px 7px;background:transparent;color:var(--accent,#0f5c73);font-size:12px;white-space:nowrap}
+.sidebar .nav-links.directory-nav{display:flex;flex-direction:column;gap:6px;margin-top:12px;overflow:visible;max-height:calc(100vh - 160px);overflow-y:auto}
+.directory-nav .nav-link{display:block;flex:none;white-space:normal;overflow-wrap:anywhere;padding-left:calc(10px + var(--directory-depth,0)*12px);line-height:1.5}
+.directory-group-toggle{display:block;width:100%;text-align:left;border:0;border-radius:8px;background:transparent;color:var(--ink,#1f2a2e);padding:9px 7px 9px calc(7px + var(--directory-depth,0)*12px);font-size:13px;font-weight:750;overflow-wrap:anywhere}
+.directory-group-toggle:hover,.directory-manage:hover{background:rgba(15,92,115,.08)}
+.directory-children{display:grid;gap:6px}.directory-children[hidden]{display:none}
+.directory-notice{font-size:11px;color:var(--accent,#0f5c73);margin-top:8px}.directory-notice:empty{display:none}
+.directory-dialog{box-sizing:border-box;width:min(850px,calc(100vw - 32px));max-height:calc(100dvh - 40px);overflow:auto;padding:24px;border:1px solid #d8cfc2;border-radius:18px;background:#fffdf9;color:#1f2a2e;box-shadow:0 24px 80px #142b3440;font:14px/1.5 "Avenir Next","PingFang SC",sans-serif}
+.directory-dialog *{box-sizing:border-box}.directory-dialog::backdrop{background:rgba(22,38,44,.42);backdrop-filter:blur(3px)}
+.directory-dialog-head,.directory-dialog-foot,.directory-tools,.directory-footer-actions,.directory-order{display:flex;align-items:center;gap:10px}
+.directory-dialog-head,.directory-dialog-foot{justify-content:space-between}.directory-dialog h2{margin:0;font-size:23px}.directory-intro{color:#647276;margin:10px 0 18px;font-size:13px}
+.directory-tools{margin-bottom:12px}.directory-dialog-body{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(230px,1fr);gap:20px}
+.directory-editor-tree{min-height:300px;max-height:420px;overflow:auto;padding:8px;border:1px solid #e0d8cd;border-radius:12px;background:#f8f5ef}
+.directory-editor-row{display:block;width:100%;padding:10px 10px 10px calc(10px + var(--directory-depth,0)*16px);margin:0 0 3px;text-align:left;border:1px solid transparent;border-radius:8px;background:transparent;color:#1f2a2e;font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+.directory-editor-row:hover{background:#eaf0ef}.directory-editor-row[aria-pressed=true]{background:#e2eef0;border-color:#a8c6ce;color:#0f5c73;font-weight:700}
+.directory-editor-form{display:flex;flex-direction:column;align-items:stretch;gap:8px}.directory-editor-form label{font-size:12px;font-weight:700;color:#647276}
+.directory-editor-form input,.directory-editor-form select{width:100%;min-width:0;border:1px solid #c7cec9;border-radius:8px;padding:10px;background:white;color:#1f2a2e;font:inherit;margin-bottom:8px}
+.directory-secondary,.directory-primary,.directory-delete{border:1px solid #d8cfc2;border-radius:8px;padding:8px 12px;background:#fffdf9;color:#25444e;font-size:13px;line-height:1.4}
+.directory-primary{border-color:#0f5c73;background:#0f5c73;color:white;font-weight:700}.directory-delete{align-self:flex-start;color:#a1322d;margin-top:6px}.directory-delete[hidden]{display:none}
+.directory-dialog button:disabled{opacity:.38;cursor:default}.directory-dialog button:not(:disabled):hover{filter:brightness(.96)}
+.directory-help{font-size:12px;color:#647276;margin:8px 0;line-height:1.7}.directory-error{font-size:12px;color:#a1322d;margin:12px 0}.directory-error:empty{display:none}
+.directory-dialog-foot{border-top:1px solid #e5dfd5;margin-top:20px;padding-top:16px}.directory-dialog :focus-visible,.directory-toolbar :focus-visible,.directory-nav :focus-visible{outline:2px solid #0f5c73;outline-offset:2px}
+@media(max-width:1024px){.sidebar .nav-links.directory-nav{max-height:320px}.directory-toolbar{display:flex}.directory-nav .nav-link{white-space:normal}}
+@media(max-width:600px){.directory-dialog{padding:16px;max-height:calc(100dvh - 20px)}.directory-dialog-body{grid-template-columns:1fr;gap:14px}.directory-editor-tree{min-height:150px;max-height:230px}.directory-dialog-foot{gap:8px}.directory-footer-actions{gap:6px}.directory-secondary,.directory-primary,.directory-delete{padding:8px 10px}}
+</style>
+<script>/* Shared, browser-local directory preferences. Page URLs always come from the generated links. */
+(() => {
+  function initDirectory() {
+    const nav = document.querySelector('.sidebar .nav-links');
+    if (!nav || nav.dataset.directoryReady) return;
+    nav.dataset.directoryReady = 'true';
+    // Keep the embedded stylesheet when the generated link list is replaced.
+    nav.querySelectorAll('style').forEach(style => document.head.append(style));
+    const links = [...nav.querySelectorAll('a.nav-link')];
+    if (!links.length) return;
+    const root = new URL('../', links[0].href).pathname;
+    const key = 'dashboard-directory-v1:' + root;
+    const registry = new Map(links.map(link => [new URL(link.href).pathname, link]));
+    const defaults = links.map(link => ({id: new URL(link.href).pathname, name: link.textContent.trim(), parent: null, type: 'page'}));
+    const clone = value => JSON.parse(JSON.stringify(value));
+    function normalize(value) {
+      if (!Array.isArray(value) || value.length > 500) return clone(defaults);
+      const seen = new Set();
+      const result = value.filter(item => {
+        if (!item || typeof item.id !== 'string' || seen.has(item.id)) return false;
+        if (item.type !== 'group' && !registry.has(item.id)) return false;
+        if (item.type === 'group' && !item.id.startsWith('group:')) return false;
+        seen.add(item.id);
+        return true;
+      }).map(item => ({id: item.id, name: String(item.name || '').trim().slice(0, 100) || '未命名分组', parent: typeof item.parent === 'string' ? item.parent : null, type: item.type === 'group' ? 'group' : 'page'}));
+      defaults.forEach(item => { if (!seen.has(item.id)) result.push({...item}); });
+      const groups = new Map(result.filter(item => item.type === 'group').map(item => [item.id, item]));
+      result.forEach(item => {
+        const visited = new Set([item.id]);
+        let parent = item.parent;
+        while (parent) {
+          if (!groups.has(parent) || visited.has(parent)) { item.parent = null; break; }
+          visited.add(parent);
+          parent = groups.get(parent).parent;
+        }
+      });
+      return result;
+    }
+    let state;
+    let collapsed;
+    try { state = normalize(JSON.parse(localStorage.getItem(key))); } catch (_) { state = clone(defaults); }
+    try { collapsed = new Set(JSON.parse(localStorage.getItem(key + ':collapsed')) || []); } catch (_) { collapsed = new Set(); }
+    const el = (tag, className, text) => {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text !== undefined) node.textContent = text;
+      return node;
+    };
+    const button = (text, className, action) => {
+      const node = el('button', className, text);
+      node.type = 'button';
+      node.addEventListener('click', action);
+      return node;
+    };
+    nav.classList.add('directory-nav');
+    nav.setAttribute('aria-label', '策略目录');
+    const toolbar = el('div', 'directory-toolbar');
+    toolbar.append(el('span', '', '策略目录'));
+    const manage = button('管理目录', 'directory-manage', openEditor);
+    toolbar.append(manage);
+    const title = nav.parentElement.querySelector('.sidebar-title');
+    if (title) title.hidden = true;
+    nav.before(toolbar);
+    const notice = el('div', 'directory-notice');
+    notice.setAttribute('role', 'status');
+    nav.after(notice);
+
+    function renderNav() {
+      nav.replaceChildren();
+      const activeId = defaults.find(item => registry.get(item.id).classList.contains('active'))?.id;
+      function hasActive(id) { return state.some(item => item.parent === id && (item.id === activeId || hasActive(item.id))); }
+      function branch(parent, host, depth) {
+        state.filter(item => item.parent === parent).forEach(item => {
+          if (item.type === 'page') {
+            const link = registry.get(item.id).cloneNode(true);
+            link.textContent = item.name;
+            link.style.setProperty('--directory-depth', depth);
+            if (item.id === activeId) link.setAttribute('aria-current', 'page');
+            host.append(link);
+          } else {
+            const section = el('div', 'directory-group');
+            const hidden = collapsed.has(item.id) && !hasActive(item.id);
+            const toggle = button((hidden ? '▸ ' : '▾ ') + item.name, 'directory-group-toggle', () => {
+              if (collapsed.has(item.id)) collapsed.delete(item.id); else collapsed.add(item.id);
+              children.hidden = collapsed.has(item.id);
+              toggle.textContent = (children.hidden ? '▸ ' : '▾ ') + item.name;
+              toggle.setAttribute('aria-expanded', String(!children.hidden));
+              try { localStorage.setItem(key + ':collapsed', JSON.stringify([...collapsed])); } catch (_) { /* navigation remains usable */ }
+            });
+            toggle.style.setProperty('--directory-depth', depth);
+            toggle.setAttribute('aria-expanded', String(!hidden));
+            const children = el('div', 'directory-children');
+            children.hidden = hidden;
+            section.append(toggle, children);
+            host.append(section);
+            branch(item.id, children, depth + 1);
+          }
+        });
+      }
+      branch(null, nav, 0);
+    }
+
+    const dialog = el('dialog', 'directory-dialog');
+    dialog.setAttribute('aria-labelledby', 'directory-heading');
+    const head = el('div', 'directory-dialog-head');
+    const heading = el('h2', '', '管理目录');
+    heading.id = 'directory-heading';
+    head.append(heading, button('关闭', 'directory-secondary', () => dialog.close()));
+    const intro = el('p', 'directory-intro', '选择目录项后改名、调整父级或顺序。分组支持多层嵌套，保存后在本浏览器的各看板间共用。');
+    const tools = el('div', 'directory-tools');
+    tools.append(button('+ 新建分组', 'directory-secondary', () => {
+      if (!validName()) return;
+      const current = draft.find(item => item.id === selected);
+      const group = {id: 'group:' + crypto.randomUUID(), name: '新分组', parent: current?.type === 'group' ? current.id : current?.parent || null, type: 'group'};
+      draft.push(group); selected = group.id; renderEditor(); nameInput.focus(); nameInput.select();
+    }));
+    const body = el('div', 'directory-dialog-body');
+    const tree = el('div', 'directory-editor-tree');
+    tree.setAttribute('aria-label', '目录项目');
+    const form = el('div', 'directory-editor-form');
+    const nameLabel = el('label', '', '名称');
+    const nameInput = el('input');
+    nameInput.maxLength = 100;
+    nameInput.id = 'directory-name';
+    nameLabel.htmlFor = nameInput.id;
+    const parentLabel = el('label', '', '上级分组');
+    const parentSelect = el('select');
+    parentSelect.id = 'directory-parent';
+    parentLabel.htmlFor = parentSelect.id;
+    const order = el('div', 'directory-order');
+    const up = button('↑ 上移', 'directory-secondary', () => move(-1));
+    const down = button('↓ 下移', 'directory-secondary', () => move(1));
+    order.append(up, down);
+    const remove = button('删除分组', 'directory-delete', () => {
+      const item = draft.find(entry => entry.id === selected);
+      if (!item || item.type !== 'group') return;
+      draft.forEach(entry => { if (entry.parent === item.id) entry.parent = item.parent; });
+      draft = draft.filter(entry => entry.id !== item.id);
+      selected = item.parent || draft[0]?.id;
+      renderEditor();
+    });
+    const hint = el('p', 'directory-help', '上下移动调整同级顺序；更改上级分组可移入、移出分组。删除分组会将子项移到上一层。');
+    form.append(nameLabel, nameInput, parentLabel, parentSelect, order, remove, hint);
+    body.append(tree, form);
+    const error = el('p', 'directory-error');
+    error.setAttribute('role', 'alert');
+    const foot = el('div', 'directory-dialog-foot');
+    foot.append(button('恢复默认', 'directory-secondary', () => { draft = clone(defaults); selected = draft[0]?.id; renderEditor(); }));
+    const actions = el('div', 'directory-footer-actions');
+    actions.append(button('取消', 'directory-secondary', () => dialog.close()), button('保存目录', 'directory-primary', () => {
+      if (!validName()) return;
+      const unnamed = draft.find(item => !item.name.trim());
+      if (unnamed) {
+        selected = unnamed.id; renderEditor();
+        error.textContent = '名称不能为空。'; nameInput.focus(); return;
+      }
+      try {
+        localStorage.setItem(key, JSON.stringify(draft));
+        state = clone(draft);
+        renderNav();
+        notice.textContent = '目录已保存';
+        dialog.close();
+      } catch (_) { error.textContent = '无法保存，请检查浏览器是否允许本地存储。当前修改仍保留在面板中。'; }
+    }));
+    foot.append(actions);
+    dialog.append(head, intro, tools, body, error, foot);
+    document.body.append(dialog);
+    let draft = [];
+    let selected;
+    function validName() {
+      const item = draft.find(entry => entry.id === selected);
+      if (item && !nameInput.value.trim()) {
+        error.textContent = '名称不能为空。'; nameInput.focus(); return false;
+      }
+      if (item) item.name = nameInput.value.trim();
+      error.textContent = '';
+      return true;
+    }
+    function openEditor() {
+      draft = clone(state); selected = draft[0]?.id;
+      error.textContent = ''; renderEditor(); dialog.showModal();
+    }
+    function isDescendant(id, ancestor) {
+      let item = draft.find(entry => entry.id === id);
+      while (item?.parent) {
+        if (item.parent === ancestor) return true;
+        item = draft.find(entry => entry.id === item.parent);
+      }
+      return false;
+    }
+    function renderTree() {
+      tree.replaceChildren();
+      function branch(parent, depth) {
+        draft.filter(item => item.parent === parent).forEach(item => {
+          const row = button((item.type === 'group' ? '▾ ' : '↗ ') + (item.name || '未命名'), 'directory-editor-row', () => {
+            if (!validName()) return;
+            selected = item.id; renderEditor();
+          });
+          row.style.setProperty('--directory-depth', depth);
+          row.dataset.nodeId = item.id;
+          row.setAttribute('aria-pressed', String(item.id === selected));
+          tree.append(row);
+          branch(item.id, depth + 1);
+        });
+      }
+      branch(null, 0);
+    }
+    function renderEditor() {
+      renderTree();
+      const item = draft.find(entry => entry.id === selected);
+      nameInput.disabled = parentSelect.disabled = !item;
+      nameInput.value = item?.name || '';
+      parentSelect.replaceChildren();
+      const option = (name, value) => { const node = el('option', '', name); node.value = value; parentSelect.append(node); };
+      option('顶层目录', '');
+      function groups(parent, depth) {
+        draft.filter(entry => entry.parent === parent && entry.type === 'group').forEach(entry => {
+          if (entry.id === selected || isDescendant(entry.id, selected)) return;
+          option('　'.repeat(depth) + entry.name, entry.id); groups(entry.id, depth + 1);
+        });
+      }
+      groups(null, 0);
+      parentSelect.value = item?.parent || '';
+      const siblings = draft.filter(entry => entry.parent === item?.parent);
+      const index = siblings.findIndex(entry => entry.id === selected);
+      up.disabled = index <= 0; down.disabled = index < 0 || index === siblings.length - 1;
+      remove.hidden = item?.type !== 'group';
+    }
+    nameInput.addEventListener('input', () => {
+      const item = draft.find(entry => entry.id === selected);
+      if (item) item.name = nameInput.value;
+      error.textContent = ''; renderTree();
+    });
+    parentSelect.addEventListener('change', () => {
+      const item = draft.find(entry => entry.id === selected);
+      if (!item) return;
+      item.parent = parentSelect.value || null;
+      draft = draft.filter(entry => entry.id !== selected); draft.push(item); renderEditor();
+    });
+    function move(direction) {
+      const item = draft.find(entry => entry.id === selected);
+      const siblings = draft.filter(entry => entry.parent === item?.parent);
+      const index = siblings.findIndex(entry => entry.id === selected);
+      const other = siblings[index + direction];
+      if (!other) return;
+      const a = draft.indexOf(item), b = draft.indexOf(other);
+      [draft[a], draft[b]] = [draft[b], draft[a]];
+      renderEditor();
+    }
+    dialog.addEventListener('close', () => manage.focus());
+    window.addEventListener('storage', event => {
+      if (event.key !== key && event.key !== null) return;
+      try { state = normalize(JSON.parse(event.newValue)); renderNav(); } catch (_) { /* preserve current navigation */ }
+      if (dialog.open) error.textContent = '另一个页面更新了目录；关闭后重新打开可读取最新设置，或保存当前编辑覆盖。';
+    });
+    renderNav();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initDirectory, {once: true});
+  else initDirectory();
+})();
+</script></div>
       </aside>
 
       <main class="content">
@@ -1037,8 +1328,8 @@
         <section class="quality-banner quality-healthy">
           <div>
             <strong>数据健康</strong>
-            <span>目标日 2026-10-14</span>
-            <span>行情日 2026-10-14</span>
+            <span>目标日 2026-10-16</span>
+            <span>行情日 2026-10-16</span>
             <span>覆盖 276/276</span>
           </div>
           <details class="warning-details" open>
@@ -1048,12 +1339,12 @@
         </section>
 
         <section class="cards">
-          <div class='card'><div class='label'>最新信号日</div><div class='value'>2026-10-14</div></div>
-<div class='card'><div class='label'>下个交易日</div><div class='value'>2026-10-15</div></div>
-<div class='card'><div class='label'>区间收益</div><div class='value'>+183.34%</div></div>
-<div class='card'><div class='label'>区间超额</div><div class='value'>+170.17%</div></div>
-<div class='card'><div class='label'>最大回撤</div><div class='value'>-16.02%</div></div>
-<div class='card'><div class='label'>Sharpe</div><div class='value'>3.00</div></div>
+          <div class='card'><div class='label'>最新信号日</div><div class='value'>2026-10-16</div></div>
+<div class='card'><div class='label'>下个交易日</div><div class='value'>2026-10-19</div></div>
+<div class='card'><div class='label'>区间收益</div><div class='value'>+175.66%</div></div>
+<div class='card'><div class='label'>区间超额</div><div class='value'>+163.43%</div></div>
+<div class='card'><div class='label'>最大回撤</div><div class='value'>-18.30%</div></div>
+<div class='card'><div class='label'>Sharpe</div><div class='value'>2.90</div></div>
 <div class='card'><div class='label'>净敞口</div><div class='value'>100.0%</div></div>
 <div class='card'><div class='label'>数据覆盖</div><div class='value'>100.0%</div></div>
         </section>
@@ -1071,11 +1362,11 @@
           <div class="panel">
             <h2>当前持仓与敞口</h2>
             <p class="meta">总敞口 100.0% · 净敞口 100.0% · 对冲 0.0%</p>
-            <div class='table-scroll'><table><thead><tr><th>方向</th><th>代码</th><th>名称</th><th>数量</th><th>权重</th><th>市值</th></tr></thead><tbody><tr><td>多头</td><td>US.AMD</td><td>美国超微公司</td><td>540.50</td><td>21.78%</td><td>308,529</td></tr>
-<tr><td>多头</td><td>US.CRWD</td><td>CrowdStrike</td><td>1,197.89</td><td>21.08%</td><td>298,622</td></tr>
-<tr><td>多头</td><td>US.PANW</td><td>Palo Alto Networks</td><td>760.54</td><td>20.13%</td><td>285,231</td></tr>
-<tr><td>多头</td><td>US.MRVL</td><td>迈威尔科技</td><td>1,106.60</td><td>19.16%</td><td>271,427</td></tr>
-<tr><td>多头</td><td>US.AMAT</td><td>应用材料</td><td>566.21</td><td>17.85%</td><td>252,886</td></tr></tbody></table></div>
+            <div class='table-scroll'><table><thead><tr><th>方向</th><th>代码</th><th>名称</th><th>数量</th><th>权重</th><th>市值</th></tr></thead><tbody><tr><td>多头</td><td>US.SHEL</td><td>壳牌</td><td>2,606.59</td><td>20.17%</td><td>278,019</td></tr>
+<tr><td>多头</td><td>US.PBR</td><td>巴西石油公司</td><td>10,677.97</td><td>20.14%</td><td>277,627</td></tr>
+<tr><td>多头</td><td>US.LIN</td><td>林德气体</td><td>556.72</td><td>20.13%</td><td>277,485</td></tr>
+<tr><td>多头</td><td>US.XOM</td><td>埃克森美孚</td><td>1,548.12</td><td>20.10%</td><td>277,083</td></tr>
+<tr><td>多头</td><td>US.MSFT</td><td>微软</td><td>506.77</td><td>19.45%</td><td>268,104</td></tr></tbody></table></div>
           </div>
         </section>
 
@@ -1083,11 +1374,11 @@
           <summary>交易后目标候选 Top5</summary>
           <div class="research-body">
             <p class="meta">按最新信号日生成，包含保留与计划买入标的。</p>
-            <div class='table-scroll'><table><thead><tr><th>排名</th><th>代码</th><th>名称</th><th>动作</th><th>权重</th><th>市值</th><th>er3</th><th>er8</th><th>er20</th></tr></thead><tbody><tr class='row-keep'><td>—</td><td>US.CRWD</td><td>CrowdStrike</td><td>保留</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-<tr class='row-keep'><td>—</td><td>US.AMD</td><td>美国超微公司</td><td>保留</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-<tr class='row-keep'><td>—</td><td>US.MRVL</td><td>迈威尔科技</td><td>保留</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-<tr class='row-keep'><td>—</td><td>US.AMAT</td><td>应用材料</td><td>保留</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-<tr class='row-keep'><td>—</td><td>US.PANW</td><td>Palo Alto Networks</td><td>保留</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></tbody></table></div>
+            <div class='table-scroll'><table><thead><tr><th>排名</th><th>代码</th><th>名称</th><th>动作</th><th>权重</th><th>市值</th><th>er3</th><th>er8</th><th>er20</th></tr></thead><tbody><tr class='row-keep'><td>4</td><td>US.PBR</td><td>巴西石油公司</td><td>保留</td><td>20.14%</td><td>277,627</td><td>+3.86%</td><td>+11.28%</td><td>+24.80%</td></tr>
+<tr class='row-keep'><td>3</td><td>US.SHEL</td><td>壳牌</td><td>保留</td><td>20.17%</td><td>278,019</td><td>+5.46%</td><td>+11.29%</td><td>+12.62%</td></tr>
+<tr class='row-keep'><td>13</td><td>US.LIN</td><td>林德气体</td><td>保留</td><td>20.13%</td><td>277,485</td><td>+3.18%</td><td>+3.76%</td><td>+8.06%</td></tr>
+<tr class='row-keep'><td>5</td><td>US.XOM</td><td>埃克森美孚</td><td>保留</td><td>20.10%</td><td>277,083</td><td>+4.71%</td><td>+10.85%</td><td>+9.24%</td></tr>
+<tr class='row-keep'><td>—</td><td>US.MSFT</td><td>微软</td><td>保留</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></tbody></table></div>
           </div>
         </details>
 
@@ -1121,14 +1412,14 @@
               <a href="annual_independent_rule_comparison.csv">明细 CSV</a>
             </div>
           </div>
-          <div class="annual-stats"><div class='annual-stat'><div class='label'>独立年度累计</div><div class='value'>849.7%</div></div>
+          <div class="annual-stats"><div class='annual-stat'><div class='label'>独立年度累计</div><div class='value'>785.7%</div></div>
 <div class='annual-stat'><div class='label'>亏损年份</div><div class='value'>0/7</div></div>
-<div class='annual-stat'><div class='label'>最好年份</div><div class='value'>144.3%</div></div>
+<div class='annual-stat'><div class='label'>最好年份</div><div class='value'>127.9%</div></div>
 <div class='annual-stat'><div class='label'>最差年份</div><div class='value'>10.9%</div></div>
 <div class='annual-stat'><div class='label'>最差回撤</div><div class='value'>-33.3%</div></div>
 <div class='annual-stat'><div class='label'>覆盖年份</div><div class='value'>7</div></div></div>
           <div class="annual-table-wrap">
-            <div class='table-scroll'><table><thead><tr><th>年份</th><th>区间</th><th>策略收益</th><th>基准收益</th><th>超额收益</th><th>最大回撤</th><th>Sharpe</th><th>年化换手</th><th>模式</th></tr></thead><tbody><tr><td>2026</td><td>2026-01-01 - 2026-10-14</td><td>144.3%</td><td>13.2%</td><td>131.2%</td><td>-26.1%</td><td>2.30</td><td>14.10</td><td>mode_b</td></tr>
+            <div class='table-scroll'><table><thead><tr><th>年份</th><th>区间</th><th>策略收益</th><th>基准收益</th><th>超额收益</th><th>最大回撤</th><th>Sharpe</th><th>年化换手</th><th>模式</th></tr></thead><tbody><tr><td>2026</td><td>2026-01-01 - 2026-10-16</td><td>127.9%</td><td>12.2%</td><td>115.6%</td><td>-31.1%</td><td>2.12</td><td>13.96</td><td>mode_b</td></tr>
 <tr><td>2025</td><td>2025-01-01 - 2025-12-31</td><td>67.1%</td><td>17.7%</td><td>49.4%</td><td>-33.3%</td><td>1.66</td><td>15.21</td><td>mode_b</td></tr>
 <tr><td>2024</td><td>2024-01-01 - 2024-12-31</td><td>12.9%</td><td>24.9%</td><td>-12.0%</td><td>-22.9%</td><td>0.58</td><td>19.00</td><td>mode_b</td></tr>
 <tr><td>2023</td><td>2023-01-01 - 2023-12-31</td><td>34.3%</td><td>26.2%</td><td>8.2%</td><td>-13.8%</td><td>1.50</td><td>16.65</td><td>mode_b</td></tr>
@@ -1146,47 +1437,46 @@
           <div>
             <h2>最新信号 Top5</h2>
             <p class="meta">每日更新的 top5 名单，按当前策略排序输出。</p>
-            <div class='table-scroll'><table><thead><tr><th>排名</th><th>代码</th><th>名称</th><th>动作</th><th>计划持有</th><th>权重</th><th>市值</th><th>er3</th><th>er8</th><th>er20</th><th>20日均额</th></tr></thead><tbody><tr class='row-watch'><td>1</td><td>US.PBR</td><td>巴西石油公司</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+3.68%</td><td>+19.82%</td><td>+21.99%</td><td>545,323,896</td></tr>
-<tr class='row-watch'><td>2</td><td>US.COP</td><td>康菲石油</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+7.30%</td><td>+12.30%</td><td>+5.33%</td><td>853,719,290</td></tr>
-<tr class='row-watch'><td>3</td><td>US.BP</td><td>英国石油</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+6.69%</td><td>+8.98%</td><td>+5.50%</td><td>424,746,730</td></tr>
-<tr class='row-watch'><td>4</td><td>US.CME</td><td>芝加哥商品交易所</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+2.94%</td><td>+8.54%</td><td>+2.76%</td><td>506,097,575</td></tr>
-<tr class='row-watch'><td>5</td><td>US.XOM</td><td>埃克森美孚</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+5.93%</td><td>+7.93%</td><td>+6.32%</td><td>2,132,029,696</td></tr>
-<tr class='row-watch'><td>6</td><td>US.SHEL</td><td>壳牌</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+4.55%</td><td>+7.64%</td><td>+6.17%</td><td>639,779,888</td></tr>
-<tr class='row-watch'><td>7</td><td>US.CVX</td><td>雪佛龙</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+5.90%</td><td>+7.43%</td><td>+2.90%</td><td>1,969,632,762</td></tr>
-<tr class='row-watch'><td>8</td><td>US.MSFT</td><td>微软</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+0.89%</td><td>+3.13%</td><td>+6.79%</td><td>11,722,775,565</td></tr>
-<tr class='row-watch'><td>9</td><td>US.LIN</td><td>林德气体</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+3.01%</td><td>+2.76%</td><td>+4.56%</td><td>1,051,653,854</td></tr>
-<tr class='row-watch'><td>10</td><td>US.META</td><td>Meta Platforms</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+3.78%</td><td>+1.30%</td><td>+7.48%</td><td>16,193,729,309</td></tr>
-<tr class='row-keep'><td>—</td><td>US.CRWD</td><td>CrowdStrike</td><td>保留</td><td>True</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-<tr class='row-keep'><td>—</td><td>US.AMD</td><td>美国超微公司</td><td>保留</td><td>True</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-<tr class='row-keep'><td>—</td><td>US.MRVL</td><td>迈威尔科技</td><td>保留</td><td>True</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-<tr class='row-keep'><td>—</td><td>US.AMAT</td><td>应用材料</td><td>保留</td><td>True</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-<tr class='row-keep'><td>—</td><td>US.PANW</td><td>Palo Alto Networks</td><td>保留</td><td>True</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></tbody></table></div>
+            <div class='table-scroll'><table><thead><tr><th>排名</th><th>代码</th><th>名称</th><th>动作</th><th>计划持有</th><th>权重</th><th>市值</th><th>er3</th><th>er8</th><th>er20</th><th>20日均额</th></tr></thead><tbody><tr class='row-keep'><td>4</td><td>US.PBR</td><td>巴西石油公司</td><td>保留</td><td>True</td><td>20.14%</td><td>277,627</td><td>+3.86%</td><td>+11.28%</td><td>+24.80%</td><td>570,486,292</td></tr>
+<tr class='row-keep'><td>3</td><td>US.SHEL</td><td>壳牌</td><td>保留</td><td>True</td><td>20.17%</td><td>278,019</td><td>+5.46%</td><td>+11.29%</td><td>+12.62%</td><td>668,061,999</td></tr>
+<tr class='row-keep'><td>13</td><td>US.LIN</td><td>林德气体</td><td>保留</td><td>True</td><td>20.13%</td><td>277,485</td><td>+3.18%</td><td>+3.76%</td><td>+8.06%</td><td>1,011,930,460</td></tr>
+<tr class='row-keep'><td>5</td><td>US.XOM</td><td>埃克森美孚</td><td>保留</td><td>True</td><td>20.10%</td><td>277,083</td><td>+4.71%</td><td>+10.85%</td><td>+9.24%</td><td>1,950,940,201</td></tr>
+<tr class='row-watch'><td>1</td><td>US.COP</td><td>康菲石油</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+5.88%</td><td>+15.30%</td><td>+10.93%</td><td>798,843,650</td></tr>
+<tr class='row-watch'><td>2</td><td>US.BP</td><td>英国石油</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+5.36%</td><td>+13.59%</td><td>+12.42%</td><td>430,063,991</td></tr>
+<tr class='row-watch'><td>6</td><td>US.CME</td><td>芝加哥商品交易所</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+7.59%</td><td>+10.80%</td><td>+6.27%</td><td>500,441,974</td></tr>
+<tr class='row-watch'><td>7</td><td>US.TTE</td><td>道达尔</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+4.58%</td><td>+10.80%</td><td>+0.37%</td><td>213,363,017</td></tr>
+<tr class='row-watch'><td>8</td><td>US.SPOT</td><td>Spotify Technology</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+2.47%</td><td>+10.71%</td><td>+3.92%</td><td>740,366,809</td></tr>
+<tr class='row-watch'><td>9</td><td>US.SPGI</td><td>标普全球</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+6.69%</td><td>+10.49%</td><td>+5.80%</td><td>743,427,896</td></tr>
+<tr class='row-watch'><td>10</td><td>US.CVX</td><td>雪佛龙</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+5.23%</td><td>+10.42%</td><td>+7.18%</td><td>1,571,972,719</td></tr>
+<tr class='row-watch'><td>11</td><td>US.LMT</td><td>洛克希德马丁</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+11.43%</td><td>+10.26%</td><td>+3.30%</td><td>576,381,348</td></tr>
+<tr class='row-watch'><td>12</td><td>US.UNP</td><td>联合太平洋</td><td>观察</td><td>False</td><td>—</td><td>—</td><td>+4.26%</td><td>+6.53%</td><td>+3.26%</td><td>681,831,676</td></tr>
+<tr class='row-keep'><td>—</td><td>US.MSFT</td><td>微软</td><td>保留</td><td>True</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></tbody></table></div>
           </div>
 
           <div>
             <h2>历史触发买入信号标的</h2>
             <p class="meta">默认展示前 20 行；完整数据可下载 CSV。</p>
             <p class="meta"><a href="historical_buy_counts.csv">下载完整历史信号 CSV</a></p>
-            <div class='table-scroll'><table><thead><tr><th>代码</th><th>名称</th><th>行业</th><th>买入次数</th><th>累计买入额</th><th>最新收盘</th><th>首次信号日</th><th>最近信号日</th></tr></thead><tbody><tr><td>US.PBR</td><td>巴西石油公司</td><td>综合油气</td><td>3</td><td>747,720</td><td>25.94</td><td>2026-02-11 00:00:00</td><td>2026-09-02 00:00:00</td></tr>
-<tr><td>US.DELL</td><td>戴尔科技</td><td>计算机硬件</td><td>3</td><td>740,915</td><td>507.93</td><td>2026-03-12 00:00:00</td><td>2026-09-17 00:00:00</td></tr>
-<tr><td>US.MU</td><td>美光科技</td><td>半导体</td><td>3</td><td>658,476</td><td>914.13</td><td>2025-12-31 00:00:00</td><td>2026-06-23 00:00:00</td></tr>
-<tr><td>US.CVX</td><td>雪佛龙</td><td>综合油气</td><td>2</td><td>608,138</td><td>222.04</td><td>2026-07-22 00:00:00</td><td>2026-09-02 00:00:00</td></tr>
-<tr><td>US.META</td><td>Meta Platforms</td><td>互联网内容与信息</td><td>2</td><td>605,567</td><td>737.54</td><td>2026-07-08 00:00:00</td><td>2026-09-17 00:00:00</td></tr>
-<tr><td>US.AMAT</td><td>应用材料</td><td>半导体设备与材料</td><td>2</td><td>602,254</td><td>446.63</td><td>2026-06-08 00:00:00</td><td>2026-10-01 00:00:00</td></tr>
-<tr><td>US.CRWD</td><td>CrowdStrike</td><td>软件基础设施</td><td>2</td><td>573,855</td><td>249.29</td><td>2026-05-22 00:00:00</td><td>2026-09-17 00:00:00</td></tr>
-<tr><td>US.AMD</td><td>美国超微公司</td><td>半导体</td><td>2</td><td>540,615</td><td>570.82</td><td>2026-05-08 00:00:00</td><td>2026-09-17 00:00:00</td></tr>
-<tr><td>US.MRVL</td><td>迈威尔科技</td><td>半导体</td><td>2</td><td>455,571</td><td>245.28</td><td>2026-03-26 00:00:00</td><td>2026-10-01 00:00:00</td></tr>
-<tr><td>US.INTC</td><td>英特尔</td><td>半导体</td><td>2</td><td>450,921</td><td>98.12</td><td>2026-04-10 00:00:00</td><td>2026-09-17 00:00:00</td></tr>
-<tr><td>US.BP</td><td>英国石油</td><td>综合油气</td><td>2</td><td>433,399</td><td>48.81</td><td>2026-03-12 00:00:00</td><td>2026-07-22 00:00:00</td></tr>
-<tr><td>US.ARM</td><td>Arm Holdings</td><td>半导体</td><td>2</td><td>291,967</td><td>238.01</td><td>2026-02-26 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
-<tr><td>US.SNDK</td><td>闪迪</td><td>计算机硬件</td><td>2</td><td>265,598</td><td>1,403.34</td><td>2026-01-28 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
-<tr><td>US.ANET</td><td>Arista Networks</td><td>计算机硬件</td><td>1</td><td>310,748</td><td>195.42</td><td>2026-07-08 00:00:00</td><td>2026-07-08 00:00:00</td></tr>
-<tr><td>US.PANW</td><td>Palo Alto Networks</td><td>软件基础设施</td><td>1</td><td>306,984</td><td>375.04</td><td>2026-10-01 00:00:00</td><td>2026-10-01 00:00:00</td></tr>
-<tr><td>US.COP</td><td>康菲石油</td><td>油气勘探与开发</td><td>1</td><td>305,398</td><td>142.34</td><td>2026-09-02 00:00:00</td><td>2026-09-02 00:00:00</td></tr>
-<tr><td>US.T</td><td>AT&amp;T</td><td>电信服务</td><td>1</td><td>304,422</td><td>23.05</td><td>2026-09-02 00:00:00</td><td>2026-09-02 00:00:00</td></tr>
-<tr><td>US.XOM</td><td>埃克森美孚</td><td>综合油气</td><td>1</td><td>301,772</td><td>177.01</td><td>2026-07-22 00:00:00</td><td>2026-07-22 00:00:00</td></tr>
-<tr><td>US.AEM</td><td>伊格尔矿业</td><td>黄金</td><td>1</td><td>296,750</td><td>177.01</td><td>2026-08-19 00:00:00</td><td>2026-08-19 00:00:00</td></tr>
-<tr><td>US.CMCSA</td><td>康卡斯特</td><td>电信服务</td><td>1</td><td>296,750</td><td>21.05</td><td>2026-08-19 00:00:00</td><td>2026-08-19 00:00:00</td></tr></tbody></table></div>
+            <div class='table-scroll'><table><thead><tr><th>代码</th><th>名称</th><th>行业</th><th>买入次数</th><th>累计买入额</th><th>最新收盘</th><th>首次信号日</th><th>最近信号日</th></tr></thead><tbody><tr><td>US.PBR</td><td>巴西石油公司</td><td>综合油气</td><td>4</td><td>1,022,174</td><td>26.00</td><td>2026-02-11 00:00:00</td><td>2026-10-15 00:00:00</td></tr>
+<tr><td>US.DELL</td><td>戴尔科技</td><td>计算机硬件</td><td>3</td><td>740,915</td><td>451.71</td><td>2026-03-12 00:00:00</td><td>2026-09-17 00:00:00</td></tr>
+<tr><td>US.MU</td><td>美光科技</td><td>半导体</td><td>3</td><td>658,476</td><td>878.84</td><td>2025-12-31 00:00:00</td><td>2026-06-23 00:00:00</td></tr>
+<tr><td>US.CVX</td><td>雪佛龙</td><td>综合油气</td><td>2</td><td>608,138</td><td>224.99</td><td>2026-07-22 00:00:00</td><td>2026-09-02 00:00:00</td></tr>
+<tr><td>US.META</td><td>Meta Platforms</td><td>互联网内容与信息</td><td>2</td><td>605,567</td><td>709.33</td><td>2026-07-08 00:00:00</td><td>2026-09-17 00:00:00</td></tr>
+<tr><td>US.AMAT</td><td>应用材料</td><td>半导体设备与材料</td><td>2</td><td>602,254</td><td>409.29</td><td>2026-06-08 00:00:00</td><td>2026-10-01 00:00:00</td></tr>
+<tr><td>US.XOM</td><td>埃克森美孚</td><td>综合油气</td><td>2</td><td>575,129</td><td>178.98</td><td>2026-07-22 00:00:00</td><td>2026-10-15 00:00:00</td></tr>
+<tr><td>US.CRWD</td><td>CrowdStrike</td><td>软件基础设施</td><td>2</td><td>573,855</td><td>227.39</td><td>2026-05-22 00:00:00</td><td>2026-09-17 00:00:00</td></tr>
+<tr><td>US.MSFT</td><td>微软</td><td>软件基础设施</td><td>2</td><td>566,227</td><td>529.05</td><td>2026-08-05 00:00:00</td><td>2026-10-15 00:00:00</td></tr>
+<tr><td>US.AMD</td><td>美国超微公司</td><td>半导体</td><td>2</td><td>540,615</td><td>528.75</td><td>2026-05-08 00:00:00</td><td>2026-09-17 00:00:00</td></tr>
+<tr><td>US.MRVL</td><td>迈威尔科技</td><td>半导体</td><td>2</td><td>455,571</td><td>227.83</td><td>2026-03-26 00:00:00</td><td>2026-10-01 00:00:00</td></tr>
+<tr><td>US.INTC</td><td>英特尔</td><td>半导体</td><td>2</td><td>450,921</td><td>89.85</td><td>2026-04-10 00:00:00</td><td>2026-09-17 00:00:00</td></tr>
+<tr><td>US.BP</td><td>英国石油</td><td>综合油气</td><td>2</td><td>433,399</td><td>50.21</td><td>2026-03-12 00:00:00</td><td>2026-07-22 00:00:00</td></tr>
+<tr><td>US.SHEL</td><td>壳牌</td><td>综合油气</td><td>2</td><td>405,113</td><td>106.66</td><td>2026-03-12 00:00:00</td><td>2026-10-15 00:00:00</td></tr>
+<tr><td>US.ARM</td><td>Arm Holdings</td><td>半导体</td><td>2</td><td>291,967</td><td>227.80</td><td>2026-02-26 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
+<tr><td>US.SNDK</td><td>闪迪</td><td>计算机硬件</td><td>2</td><td>265,598</td><td>1,299.30</td><td>2026-01-28 00:00:00</td><td>2026-04-10 00:00:00</td></tr>
+<tr><td>US.ANET</td><td>Arista Networks</td><td>计算机硬件</td><td>1</td><td>310,748</td><td>176.98</td><td>2026-07-08 00:00:00</td><td>2026-07-08 00:00:00</td></tr>
+<tr><td>US.PANW</td><td>Palo Alto Networks</td><td>软件基础设施</td><td>1</td><td>306,984</td><td>342.00</td><td>2026-10-01 00:00:00</td><td>2026-10-01 00:00:00</td></tr>
+<tr><td>US.COP</td><td>康菲石油</td><td>油气勘探与开发</td><td>1</td><td>305,398</td><td>146.51</td><td>2026-09-02 00:00:00</td><td>2026-09-02 00:00:00</td></tr>
+<tr><td>US.T</td><td>AT&amp;T</td><td>电信服务</td><td>1</td><td>304,422</td><td>23.44</td><td>2026-09-02 00:00:00</td><td>2026-09-02 00:00:00</td></tr></tbody></table></div>
           </div>
           </div>
         </details>
@@ -1485,8 +1775,8 @@
 
         <div class="footer">
           <div>数据目录：/Users/richard/dowork/hk_gap_strategy/data/us_waterfall_relative_strength/futu_2025q4</div>
-          <div>最新信号日：2026-10-14，下个交易日：2026-10-15</div>
-          <div>SPY 收盘：769.60，市场过滤：none</div>
+          <div>最新信号日：2026-10-16，下个交易日：2026-10-19</div>
+          <div>SPY 收盘：763.25，市场过滤：none</div>
           <div>Warnings：Metadata file has no date column. Static metadata is used for all history; this may introduce point-in-time bias.；Using static market_cap across history. This creates look-ahead bias risk for the $100.0B+ market-cap filter.；Using static shares_outstanding across history. This approximates point-in-time market cap and may introduce bias.；Auto-adjusted mixed split pricing for US.APH before 2026-09-01 as 2-for-1; post-adjustment split-day return=2.92%.；Auto-adjusted mixed split pricing for US.CRWD before 2022-01-03 as 1-for-3; post-adjustment split-day return=29.15%.；Auto-adjusted mixed split pricing for US.CRWD before 2026-06-30 as 4-for-1; post-adjustment split-day return=2.72%.；Auto-adjusted mixed split pricing for US.DD before 2022-01-03 as 3-for-1; post-adjustment split-day return=0.25%.；Auto-adjusted mixed split pricing for US.DD before 2026-06-23 as 1-for-3; post-adjustment split-day return=-3.15%.；Auto-adjusted mixed split pricing for US.IONQ before 2025-01-08 as 2-for-1; post-adjustment split-day return=22.00%.；Auto-adjusted mixed split pricing for US.MLI before 2022-01-03 as 1-for-2; post-adjustment split-day return=-0.55%.；Auto-adjusted mixed split pricing for US.MLI before 2026-06-30 as 2-for-1; post-adjustment split-day return=0.08%.；Auto-adjusted mixed split pricing for US.NBIS before 2025-01-27 as 2-for-1; post-adjustment split-day return=25.11%.</div>
         </div>
       </main>

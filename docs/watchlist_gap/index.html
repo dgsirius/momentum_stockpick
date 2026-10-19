@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>自选股缺口监控</title>
+  <link rel="stylesheet" href="../leader_valuation/dashboard.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="gap_metrics.js" defer></script>
+  <script src="dashboard.js" defer></script>
+</head>
+<body>
+<div class="wrap"><div class="layout">
+  <aside class="sidebar"><div class="sidebar-title">策略目录</div><nav class="nav-links" aria-label="看板集合"><a class='nav-link' href='../overview/index.html'>策略总览</a>
+<a class='nav-link' href='../er_3_8_20_100b_daily/index.html'>ER 3/8/20 (100B 日调仓)</a>
+<a class='nav-link' href='../etf_er_3_8_20_whitelist/index.html'>ETF ER 3/8/20 (白名单日调仓 Top5)</a>
+<a class='nav-link' href='../hk_er_3_8_20_20b_stock_connect/index.html'>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</a>
+<a class='nav-link' href='../er_3_8_20_100b_top5_biweekly_top50/index.html'>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</a>
+<a class='nav-link' href='../er_3_8_20_100b_top5_weekly/index.html'>ER 3/8/20 (100B Top5 周换仓)</a>
+<a class='nav-link' href='../leader_valuation/index.html'>自选股长期估值</a>
+<a class='nav-link active' href='./index.html'>自选股缺口监控</a>
+<a class='nav-link' href='../watchlist_trend_score/index.html'>自选股趋势评分</a>
+<a class='nav-link' href='../long_term_trend_strength/index.html'>长线趋势最强</a>
+<a class='nav-link' href='../bofa_fms/index.html'>美银基金经理调查</a>
+<style>.sidebar .sidebar-title[hidden]{display:none}
+.directory-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--muted,#647276);font-size:12px}
+.directory-toolbar button,.directory-dialog button,.directory-group-toggle{font-family:inherit;cursor:pointer}
+.directory-manage{border:1px solid var(--line,#d8cfc2);border-radius:7px;padding:5px 7px;background:transparent;color:var(--accent,#0f5c73);font-size:12px;white-space:nowrap}
+.sidebar .nav-links.directory-nav{display:flex;flex-direction:column;gap:6px;margin-top:12px;overflow:visible;max-height:calc(100vh - 160px);overflow-y:auto}
+.directory-nav .nav-link{display:block;flex:none;white-space:normal;overflow-wrap:anywhere;padding-left:calc(10px + var(--directory-depth,0)*12px);line-height:1.5}
+.directory-group-toggle{display:block;width:100%;text-align:left;border:0;border-radius:8px;background:transparent;color:var(--ink,#1f2a2e);padding:9px 7px 9px calc(7px + var(--directory-depth,0)*12px);font-size:13px;font-weight:750;overflow-wrap:anywhere}
+.directory-group-toggle:hover,.directory-manage:hover{background:rgba(15,92,115,.08)}
+.directory-children{display:grid;gap:6px}.directory-children[hidden]{display:none}
+.directory-notice{font-size:11px;color:var(--accent,#0f5c73);margin-top:8px}.directory-notice:empty{display:none}
+.directory-dialog{box-sizing:border-box;width:min(850px,calc(100vw - 32px));max-height:calc(100dvh - 40px);overflow:auto;padding:24px;border:1px solid #d8cfc2;border-radius:18px;background:#fffdf9;color:#1f2a2e;box-shadow:0 24px 80px #142b3440;font:14px/1.5 "Avenir Next","PingFang SC",sans-serif}
+.directory-dialog *{box-sizing:border-box}.directory-dialog::backdrop{background:rgba(22,38,44,.42);backdrop-filter:blur(3px)}
+.directory-dialog-head,.directory-dialog-foot,.directory-tools,.directory-footer-actions,.directory-order{display:flex;align-items:center;gap:10px}
+.directory-dialog-head,.directory-dialog-foot{justify-content:space-between}.directory-dialog h2{margin:0;font-size:23px}.directory-intro{color:#647276;margin:10px 0 18px;font-size:13px}
+.directory-tools{margin-bottom:12px}.directory-dialog-body{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(230px,1fr);gap:20px}
+.directory-editor-tree{min-height:300px;max-height:420px;overflow:auto;padding:8px;border:1px solid #e0d8cd;border-radius:12px;background:#f8f5ef}
+.directory-editor-row{display:block;width:100%;padding:10px 10px 10px calc(10px + var(--directory-depth,0)*16px);margin:0 0 3px;text-align:left;border:1px solid transparent;border-radius:8px;background:transparent;color:#1f2a2e;font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+.directory-editor-row:hover{background:#eaf0ef}.directory-editor-row[aria-pressed=true]{background:#e2eef0;border-color:#a8c6ce;color:#0f5c73;font-weight:700}
+.directory-editor-form{display:flex;flex-direction:column;align-items:stretch;gap:8px}.directory-editor-form label{font-size:12px;font-weight:700;color:#647276}
+.directory-editor-form input,.directory-editor-form select{width:100%;min-width:0;border:1px solid #c7cec9;border-radius:8px;padding:10px;background:white;color:#1f2a2e;font:inherit;margin-bottom:8px}
+.directory-secondary,.directory-primary,.directory-delete{border:1px solid #d8cfc2;border-radius:8px;padding:8px 12px;background:#fffdf9;color:#25444e;font-size:13px;line-height:1.4}
+.directory-primary{border-color:#0f5c73;background:#0f5c73;color:white;font-weight:700}.directory-delete{align-self:flex-start;color:#a1322d;margin-top:6px}.directory-delete[hidden]{display:none}
+.directory-dialog button:disabled{opacity:.38;cursor:default}.directory-dialog button:not(:disabled):hover{filter:brightness(.96)}
+.directory-help{font-size:12px;color:#647276;margin:8px 0;line-height:1.7}.directory-error{font-size:12px;color:#a1322d;margin:12px 0}.directory-error:empty{display:none}
+.directory-dialog-foot{border-top:1px solid #e5dfd5;margin-top:20px;padding-top:16px}.directory-dialog :focus-visible,.directory-toolbar :focus-visible,.directory-nav :focus-visible{outline:2px solid #0f5c73;outline-offset:2px}
+@media(max-width:1024px){.sidebar .nav-links.directory-nav{max-height:320px}.directory-toolbar{display:flex}.directory-nav .nav-link{white-space:normal}}
+@media(max-width:600px){.directory-dialog{padding:16px;max-height:calc(100dvh - 20px)}.directory-dialog-body{grid-template-columns:1fr;gap:14px}.directory-editor-tree{min-height:150px;max-height:230px}.directory-dialog-foot{gap:8px}.directory-footer-actions{gap:6px}.directory-secondary,.directory-primary,.directory-delete{padding:8px 10px}}
+</style>
+<script>/* Shared, browser-local directory preferences. Page URLs always come from the generated links. */
+(() => {
+  function initDirectory() {
+    const nav = document.querySelector('.sidebar .nav-links');
+    if (!nav || nav.dataset.directoryReady) return;
+    nav.dataset.directoryReady = 'true';
+    // Keep the embedded stylesheet when the generated link list is replaced.
+    nav.querySelectorAll('style').forEach(style => document.head.append(style));
+    const links = [...nav.querySelectorAll('a.nav-link')];
+    if (!links.length) return;
+    const root = new URL('../', links[0].href).pathname;
+    const key = 'dashboard-directory-v1:' + root;
+    const registry = new Map(links.map(link => [new URL(link.href).pathname, link]));
+    const defaults = links.map(link => ({id: new URL(link.href).pathname, name: link.textContent.trim(), parent: null, type: 'page'}));
+    const clone = value => JSON.parse(JSON.stringify(value));
+    function normalize(value) {
+      if (!Array.isArray(value) || value.length > 500) return clone(defaults);
+      const seen = new Set();
+      const result = value.filter(item => {
+        if (!item || typeof item.id !== 'string' || seen.has(item.id)) return false;
+        if (item.type !== 'group' && !registry.has(item.id)) return false;
+        if (item.type === 'group' && !item.id.startsWith('group:')) return false;
+        seen.add(item.id);
+        return true;
+      }).map(item => ({id: item.id, name: String(item.name || '').trim().slice(0, 100) || '未命名分组', parent: typeof item.parent === 'string' ? item.parent : null, type: item.type === 'group' ? 'group' : 'page'}));
+      defaults.forEach(item => { if (!seen.has(item.id)) result.push({...item}); });
+      const groups = new Map(result.filter(item => item.type === 'group').map(item => [item.id, item]));
+      result.forEach(item => {
+        const visited = new Set([item.id]);
+        let parent = item.parent;
+        while (parent) {
+          if (!groups.has(parent) || visited.has(parent)) { item.parent = null; break; }
+          visited.add(parent);
+          parent = groups.get(parent).parent;
+        }
+      });
+      return result;
+    }
+    let state;
+    let collapsed;
+    try { state = normalize(JSON.parse(localStorage.getItem(key))); } catch (_) { state = clone(defaults); }
+    try { collapsed = new Set(JSON.parse(localStorage.getItem(key + ':collapsed')) || []); } catch (_) { collapsed = new Set(); }
+    const el = (tag, className, text) => {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text !== undefined) node.textContent = text;
+      return node;
+    };
+    const button = (text, className, action) => {
+      const node = el('button', className, text);
+      node.type = 'button';
+      node.addEventListener('click', action);
+      return node;
+    };
+    nav.classList.add('directory-nav');
+    nav.setAttribute('aria-label', '策略目录');
+    const toolbar = el('div', 'directory-toolbar');
+    toolbar.append(el('span', '', '策略目录'));
+    const manage = button('管理目录', 'directory-manage', openEditor);
+    toolbar.append(manage);
+    const title = nav.parentElement.querySelector('.sidebar-title');
+    if (title) title.hidden = true;
+    nav.before(toolbar);
+    const notice = el('div', 'directory-notice');
+    notice.setAttribute('role', 'status');
+    nav.after(notice);
+
+    function renderNav() {
+      nav.replaceChildren();
+      const activeId = defaults.find(item => registry.get(item.id).classList.contains('active'))?.id;
+      function hasActive(id) { return state.some(item => item.parent === id && (item.id === activeId || hasActive(item.id))); }
+      function branch(parent, host, depth) {
+        state.filter(item => item.parent === parent).forEach(item => {
+          if (item.type === 'page') {
+            const link = registry.get(item.id).cloneNode(true);
+            link.textContent = item.name;
+            link.style.setProperty('--directory-depth', depth);
+            if (item.id === activeId) link.setAttribute('aria-current', 'page');
+            host.append(link);
+          } else {
+            const section = el('div', 'directory-group');
+            const hidden = collapsed.has(item.id) && !hasActive(item.id);
+            const toggle = button((hidden ? '▸ ' : '▾ ') + item.name, 'directory-group-toggle', () => {
+              if (collapsed.has(item.id)) collapsed.delete(item.id); else collapsed.add(item.id);
+              children.hidden = collapsed.has(item.id);
+              toggle.textContent = (children.hidden ? '▸ ' : '▾ ') + item.name;
+              toggle.setAttribute('aria-expanded', String(!children.hidden));
+              try { localStorage.setItem(key + ':collapsed', JSON.stringify([...collapsed])); } catch (_) { /* navigation remains usable */ }
+            });
+            toggle.style.setProperty('--directory-depth', depth);
+            toggle.setAttribute('aria-expanded', String(!hidden));
+            const children = el('div', 'directory-children');
+            children.hidden = hidden;
+            section.append(toggle, children);
+            host.append(section);
+            branch(item.id, children, depth + 1);
+          }
+        });
+      }
+      branch(null, nav, 0);
+    }
+
+    const dialog = el('dialog', 'directory-dialog');
+    dialog.setAttribute('aria-labelledby', 'directory-heading');
+    const head = el('div', 'directory-dialog-head');
+    const heading = el('h2', '', '管理目录');
+    heading.id = 'directory-heading';
+    head.append(heading, button('关闭', 'directory-secondary', () => dialog.close()));
+    const intro = el('p', 'directory-intro', '选择目录项后改名、调整父级或顺序。分组支持多层嵌套，保存后在本浏览器的各看板间共用。');
+    const tools = el('div', 'directory-tools');
+    tools.append(button('+ 新建分组', 'directory-secondary', () => {
+      if (!validName()) return;
+      const current = draft.find(item => item.id === selected);
+      const group = {id: 'group:' + crypto.randomUUID(), name: '新分组', parent: current?.type === 'group' ? current.id : current?.parent || null, type: 'group'};
+      draft.push(group); selected = group.id; renderEditor(); nameInput.focus(); nameInput.select();
+    }));
+    const body = el('div', 'directory-dialog-body');
+    const tree = el('div', 'directory-editor-tree');
+    tree.setAttribute('aria-label', '目录项目');
+    const form = el('div', 'directory-editor-form');
+    const nameLabel = el('label', '', '名称');
+    const nameInput = el('input');
+    nameInput.maxLength = 100;
+    nameInput.id = 'directory-name';
+    nameLabel.htmlFor = nameInput.id;
+    const parentLabel = el('label', '', '上级分组');
+    const parentSelect = el('select');
+    parentSelect.id = 'directory-parent';
+    parentLabel.htmlFor = parentSelect.id;
+    const order = el('div', 'directory-order');
+    const up = button('↑ 上移', 'directory-secondary', () => move(-1));
+    const down = button('↓ 下移', 'directory-secondary', () => move(1));
+    order.append(up, down);
+    const remove = button('删除分组', 'directory-delete', () => {
+      const item = draft.find(entry => entry.id === selected);
+      if (!item || item.type !== 'group') return;
+      draft.forEach(entry => { if (entry.parent === item.id) entry.parent = item.parent; });
+      draft = draft.filter(entry => entry.id !== item.id);
+      selected = item.parent || draft[0]?.id;
+      renderEditor();
+    });
+    const hint = el('p', 'directory-help', '上下移动调整同级顺序；更改上级分组可移入、移出分组。删除分组会将子项移到上一层。');
+    form.append(nameLabel, nameInput, parentLabel, parentSelect, order, remove, hint);
+    body.append(tree, form);
+    const error = el('p', 'directory-error');
+    error.setAttribute('role', 'alert');
+    const foot = el('div', 'directory-dialog-foot');
+    foot.append(button('恢复默认', 'directory-secondary', () => { draft = clone(defaults); selected = draft[0]?.id; renderEditor(); }));
+    const actions = el('div', 'directory-footer-actions');
+    actions.append(button('取消', 'directory-secondary', () => dialog.close()), button('保存目录', 'directory-primary', () => {
+      if (!validName()) return;
+      const unnamed = draft.find(item => !item.name.trim());
+      if (unnamed) {
+        selected = unnamed.id; renderEditor();
+        error.textContent = '名称不能为空。'; nameInput.focus(); return;
+      }
+      try {
+        localStorage.setItem(key, JSON.stringify(draft));
+        state = clone(draft);
+        renderNav();
+        notice.textContent = '目录已保存';
+        dialog.close();
+      } catch (_) { error.textContent = '无法保存，请检查浏览器是否允许本地存储。当前修改仍保留在面板中。'; }
+    }));
+    foot.append(actions);
+    dialog.append(head, intro, tools, body, error, foot);
+    document.body.append(dialog);
+    let draft = [];
+    let selected;
+    function validName() {
+      const item = draft.find(entry => entry.id === selected);
+      if (item && !nameInput.value.trim()) {
+        error.textContent = '名称不能为空。'; nameInput.focus(); return false;
+      }
+      if (item) item.name = nameInput.value.trim();
+      error.textContent = '';
+      return true;
+    }
+    function openEditor() {
+      draft = clone(state); selected = draft[0]?.id;
+      error.textContent = ''; renderEditor(); dialog.showModal();
+    }
+    function isDescendant(id, ancestor) {
+      let item = draft.find(entry => entry.id === id);
+      while (item?.parent) {
+        if (item.parent === ancestor) return true;
+        item = draft.find(entry => entry.id === item.parent);
+      }
+      return false;
+    }
+    function renderTree() {
+      tree.replaceChildren();
+      function branch(parent, depth) {
+        draft.filter(item => item.parent === parent).forEach(item => {
+          const row = button((item.type === 'group' ? '▾ ' : '↗ ') + (item.name || '未命名'), 'directory-editor-row', () => {
+            if (!validName()) return;
+            selected = item.id; renderEditor();
+          });
+          row.style.setProperty('--directory-depth', depth);
+          row.dataset.nodeId = item.id;
+          row.setAttribute('aria-pressed', String(item.id === selected));
+          tree.append(row);
+          branch(item.id, depth + 1);
+        });
+      }
+      branch(null, 0);
+    }
+    function renderEditor() {
+      renderTree();
+      const item = draft.find(entry => entry.id === selected);
+      nameInput.disabled = parentSelect.disabled = !item;
+      nameInput.value = item?.name || '';
+      parentSelect.replaceChildren();
+      const option = (name, value) => { const node = el('option', '', name); node.value = value; parentSelect.append(node); };
+      option('顶层目录', '');
+      function groups(parent, depth) {
+        draft.filter(entry => entry.parent === parent && entry.type === 'group').forEach(entry => {
+          if (entry.id === selected || isDescendant(entry.id, selected)) return;
+          option('　'.repeat(depth) + entry.name, entry.id); groups(entry.id, depth + 1);
+        });
+      }
+      groups(null, 0);
+      parentSelect.value = item?.parent || '';
+      const siblings = draft.filter(entry => entry.parent === item?.parent);
+      const index = siblings.findIndex(entry => entry.id === selected);
+      up.disabled = index <= 0; down.disabled = index < 0 || index === siblings.length - 1;
+      remove.hidden = item?.type !== 'group';
+    }
+    nameInput.addEventListener('input', () => {
+      const item = draft.find(entry => entry.id === selected);
+      if (item) item.name = nameInput.value;
+      error.textContent = ''; renderTree();
+    });
+    parentSelect.addEventListener('change', () => {
+      const item = draft.find(entry => entry.id === selected);
+      if (!item) return;
+      item.parent = parentSelect.value || null;
+      draft = draft.filter(entry => entry.id !== selected); draft.push(item); renderEditor();
+    });
+    function move(direction) {
+      const item = draft.find(entry => entry.id === selected);
+      const siblings = draft.filter(entry => entry.parent === item?.parent);
+      const index = siblings.findIndex(entry => entry.id === selected);
+      const other = siblings[index + direction];
+      if (!other) return;
+      const a = draft.indexOf(item), b = draft.indexOf(other);
+      [draft[a], draft[b]] = [draft[b], draft[a]];
+      renderEditor();
+    }
+    dialog.addEventListener('close', () => manage.focus());
+    window.addEventListener('storage', event => {
+      if (event.key !== key && event.key !== null) return;
+      try { state = normalize(JSON.parse(event.newValue)); renderNav(); } catch (_) { /* preserve current navigation */ }
+      if (dialog.open) error.textContent = '另一个页面更新了目录；关闭后重新打开可读取最新设置，或保存当前编辑覆盖。';
+    });
+    renderNav();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initDirectory, {once: true});
+  else initDirectory();
+})();
+</script></nav></aside>
+  <main>
+    <header class="heading">
+      <div><div class="eyebrow">GAP MONITOR · <span id="eyebrow-window">400</span> SESSIONS</div><h1>自选股缺口监控</h1><p class="intro">最近 <span id="window-label">400</span> 根已收盘日 K，追踪尚未完全回补的向上与向下缺口。</p></div>
+      <div class="refresh-box"><button class="primary" id="refresh">刷新日 K 与缺口 <span aria-hidden="true">↻</span></button><div id="updated" class="muted">正在读取数据…</div></div>
+    </header>
+    <div id="job" role="status" aria-live="polite" hidden><div class="job-top"><span id="job-message"></span><span id="job-count"></span></div><progress id="job-progress" max="100" value="0"></progress><small>刷新期间显示上次数据；完成后自动更新最新缺口提醒。关闭页面不影响刷新。</small></div>
+    <div id="error" role="alert" hidden></div>
+    <section class="urgent" aria-label="最新缺口提醒" id="urgent">
+      <div class="urgent-heading"><div><div class="alert-kicker">重点关注 · 最近已收盘交易日</div><h2 id="alert-title">正在检查最新缺口</h2></div><button id="show-new">只看最新缺口 ↓</button></div>
+      <p id="alert-note">最新向上、向下缺口会在这里集中提醒，相关标的优先置顶。</p>
+      <div id="sessions" class="sessions"></div><div id="alerts" class="alert-grid"></div>
+    </section>
+    <section class="stats" aria-label="缺口统计概览">
+      <button class="stat selected" data-filter="all" aria-pressed="true"><span>监控标的池</span><strong id="total">—</strong><small id="counts">港股 · 美股 · 韩股</small><small id="types">股票 — · 普通 ETF —</small></button>
+      <button class="stat" data-filter="new-up" aria-pressed="false"><span>最新向上缺口 · 标的</span><strong class="up-text" id="latest-up">—</strong><small>点击筛选最新向上跳空</small></button>
+      <button class="stat" data-filter="new-down" aria-pressed="false"><span>最新向下缺口 · 标的</span><strong class="down-text" id="latest-down">—</strong><small>点击筛选最新向下跳空</small></button>
+      <div class="stat"><span>当前未完全回补</span><strong id="gap-total">—</strong><small id="gap-counts">向上 — · 向下 —</small></div>
+    </section>
+    <div class="pool-note"><span id="pool-info"></span><a href="../leader_valuation/index.html">估值看板（独立股池）↗</a><span id="health"></span></div>
+    <section class="controls" aria-label="筛选与排序">
+      <div class="markets" role="group" aria-label="市场筛选"><button class="selected" data-market="ALL">全部 <span></span></button><button data-market="HK">港股 <span></span></button><button data-market="US">美股 <span></span></button><button data-market="KR">韩股 <span></span></button></div>
+      <div class="tools">
+        <label class="window-picker">统计窗口 <select id="window" aria-label="统计窗口"><option value="400">400 个交易日</option><option value="300">300 个交易日</option><option value="200">200 个交易日</option><option value="100">100 个交易日</option><option value="50">50 个交易日</option></select></label>
+        <input id="search" type="search" aria-label="搜索标的" placeholder="搜索名称 / 代码">
+        <label class="window-picker">连续方向 <select id="run-direction" aria-label="最新连续缺口方向"><option value="ALL">全部方向</option><option value="up">最新连续向上</option><option value="down">最新连续向下</option></select></label>
+        <select id="sort" aria-label="排序"><option value="recent">缺口日期从近到远</option><option value="up">向上缺口数量</option><option value="down">向下缺口数量</option><option value="run">连续缺口数量：从多到少</option><option value="run-asc">连续缺口数量：从少到多</option><option value="code">市场 / 代码</option></select>
+      </div>
+    </section>
+    <div class="list-meta"><span id="result-count"></span><span id="list-note">手动置顶优先 · 点击标的查看日 K 与剩余区间</span></div>
+    <div id="pin-feedback" class="pin-feedback" role="status" aria-live="polite"></div>
+    <div class="table-shell"><table class="stock-table"><thead><tr><th>股票 / ETF</th><th>有效日 K</th><th>最新收盘</th><th>向上未补</th><th>向下未补</th><th title="从最近的未回补缺口往前计数，遇到反方向停止；无缺口日不打断">最新连续缺口</th><th>最新交易日提醒</th><th>详情</th></tr></thead><tbody id="stocks"></tbody></table><div id="empty" class="empty" hidden></div></div>
+    <div class="pagination"><div><span id="page-info"></span><label>每页 <select id="page-size" aria-label="每页标的数"><option value="24">24</option><option value="48">48</option><option value="999">全部</option></select></label></div><div><button id="previous">上一页</button><button id="next">下一页</button></div></div>
+    <section id="detail" class="detail" aria-label="标的缺口详情" hidden>
+      <div class="detail-heading"><div><div class="eyebrow">DAILY CANDLES · FORWARD ADJUSTED</div><h2 id="detail-title"></h2><p id="detail-meta"></p></div><div class="gap-legend"><span class="up-text">━ 向上剩余缺口</span><span class="down-text">━ 向下剩余缺口</span></div></div>
+      <div id="chart"></div><p id="detail-note" class="detail-note"></p>
+      <h3>尚未完全回补的缺口 <span id="detail-count"></span></h3>
+      <div class="gap-table-scroll"><table class="gap-table"><thead><tr><th>方向 / 形成日</th><th>原始区间</th><th>当前剩余区间</th><th>已回补</th><th>原始幅度</th><th>形成后日 K</th></tr></thead><tbody id="gap-rows"></tbody></table></div>
+      <div id="no-gaps" class="no-gaps" hidden>本次统计窗口内没有尚未完全回补的缺口。</div>
+    </section>
+    <details id="issues" hidden><summary id="issue-title"></summary><div id="issue-list"></div></details>
+    <details id="excluded-etfs" hidden><summary id="excluded-title"></summary><div id="excluded-list"></div></details>
+    <details class="method"><summary>缺口定义、交易日期与数据口径</summary>
+      <p><b>向上缺口：</b>当天最低价高于前一根日 K 最高价。<b>向下缺口：</b>当天最高价低于前一根日 K 最低价。只开盘跳空、当天已回补的情形不算整根 K 线缺口。</p>
+      <p>按高低价判断完全回补：向上缺口在后续最低价到达原始下边界时消失；向下缺口在后续最高价到达原始上边界时消失。部分回补仍计 1 个，并缩小剩余区间；同一标的可同时存在多个形成日期不同的缺口。</p>
+      <p>统计窗口可选最近 400、300、200、100、50 根已收盘日 K（交易日，并非自然日）。只统计所选窗口内形成、至最后收盘仍未完全回补的缺口，更早形成的不计。窗口第一天的缺口也纳入；新上市或可得历史不足所选窗口时显示实际根数。切换窗口时，缺口数量、最新连续缺口和日 K 图同步更新。幅度 = 原始缺口宽度 ÷ 缺口形成前一根收盘价。</p>
+      <p><b>最新连续缺口：</b>将所选窗口内当前未回补的缺口按形成日期从近到远排列，从最新一个开始，连续累计同方向缺口，遇到反方向停止。例如最近依次为向上、向上、向上、向下，显示“向上 × 3”；没有缺口的交易日不打断，已完全回补的缺口不参与。该计数是缺口个数，不要求连续几个交易日均跳空。</p>
+      <p>每只标的名称下方可手动置顶或取消置顶。设置独立保存在本机，刷新行情、重新打开页面或重启服务后仍保留，直到手动取消。置顶标的在“全部”和所属市场中优先排列；多只置顶标的之间按当前排序排列。置顶标的仍需符合当前搜索和方向等筛选条件。</p>
+      <p>“连续方向”筛选依据上述最新连续缺口的方向，可与市场、统计窗口及搜索组合使用。手动置顶优先级最高；连续缺口数量排序在置顶组内和其他标的中分别按数量排列，数量相同时按代码排序；其他排序在各组内保留最新交易日缺口优先排列。顶部最新缺口提醒随连续方向筛选同步更新。</p>
+      <p>本页独立从 OpenD「港股、美股」自选分组同步全部股票，不设市值门槛；韩股固定纳入三星电子与 SK 海力士。同时纳入普通正向、非杠杆 ETF。每次刷新本页都会同步自选股票和 ETF，无需先刷新估值看板。“自选股长期估值”继续使用自己的市值门槛。</p>
+      <p>按 OpenD 返回的 STOCK、ETF 类型区分股票与基金；ETF 分支继续排除杠杆、反向 ETF、ETN 及已核实的非 ETF 产品，排除清单列明原因。ETF 分类结合产品名称及已核实的发行人信息。OpenD 归为 STOCK 的标的（包括 DXYZ）随全部自选股票纳入。</p>
+      <p>港美股使用 OpenD 常规交易时段、前复权 OHLC；韩股使用 Yahoo Finance，并用同一复权因子调整开高低收，统一至最新已收盘价格基准。每次重新取完整窗口，不混用不同复权基准的旧 K 线。</p>
+      <p>个别源日 K 的开盘或收盘价超出原高低价时，将高低范围扩大至开高低收四价包络，避免制造假缺口；相关股票的详情与数据提示会列明修正根数。缺失或无效价格不跨日拼接。</p>
+      <p>最新提醒以每个市场最近已收盘交易日为准。港美股使用 OpenD 交易日历，处理节假日、半日市及美东夏令时；港股包含收市竞价。收盘后留 1 分钟才纳入当日日 K。韩股以 KOSPI 实际交易日期配合首尔收盘时刻及公开市场状态校验。盘中 K 线不参与形成、回补或提醒。</p>
+      <p>行情滞后、停牌或刷新失败的标的标注提示，不发布最新缺口提醒。刷新成功后页面会持续显示该最新交易日的提醒，直至下一交易日数据更新；不播放声音。</p>
+    </details>
+  </main>
+</div></div>
+<div id="tooltip" role="tooltip" hidden></div>
+</body></html>

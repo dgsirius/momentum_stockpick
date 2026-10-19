@@ -23,13 +23,304 @@
 <a class='nav-link' href='../hk_er_3_8_20_20b_stock_connect/index.html'>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</a>
 <a class='nav-link' href='../er_3_8_20_100b_top5_biweekly_top50/index.html'>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</a>
 <a class='nav-link' href='../er_3_8_20_100b_top5_weekly/index.html'>ER 3/8/20 (100B Top5 周换仓)</a>
-<a class='nav-link' href='../daily_option_signal/index.html'>每日期权信号</a>
+<a class='nav-link' href='../leader_valuation/index.html'>自选股长期估值</a>
+<a class='nav-link' href='../watchlist_gap/index.html'>自选股缺口监控</a>
 <a class='nav-link active' href='./index.html'>自选股趋势评分</a>
-<a class='nav-link' href='../long_term_trend_strength/index.html'>长线趋势最强</a></div></aside>
+<a class='nav-link' href='../long_term_trend_strength/index.html'>长线趋势最强</a>
+<a class='nav-link' href='../bofa_fms/index.html'>美银基金经理调查</a>
+<style>.sidebar .sidebar-title[hidden]{display:none}
+.directory-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--muted,#647276);font-size:12px}
+.directory-toolbar button,.directory-dialog button,.directory-group-toggle{font-family:inherit;cursor:pointer}
+.directory-manage{border:1px solid var(--line,#d8cfc2);border-radius:7px;padding:5px 7px;background:transparent;color:var(--accent,#0f5c73);font-size:12px;white-space:nowrap}
+.sidebar .nav-links.directory-nav{display:flex;flex-direction:column;gap:6px;margin-top:12px;overflow:visible;max-height:calc(100vh - 160px);overflow-y:auto}
+.directory-nav .nav-link{display:block;flex:none;white-space:normal;overflow-wrap:anywhere;padding-left:calc(10px + var(--directory-depth,0)*12px);line-height:1.5}
+.directory-group-toggle{display:block;width:100%;text-align:left;border:0;border-radius:8px;background:transparent;color:var(--ink,#1f2a2e);padding:9px 7px 9px calc(7px + var(--directory-depth,0)*12px);font-size:13px;font-weight:750;overflow-wrap:anywhere}
+.directory-group-toggle:hover,.directory-manage:hover{background:rgba(15,92,115,.08)}
+.directory-children{display:grid;gap:6px}.directory-children[hidden]{display:none}
+.directory-notice{font-size:11px;color:var(--accent,#0f5c73);margin-top:8px}.directory-notice:empty{display:none}
+.directory-dialog{box-sizing:border-box;width:min(850px,calc(100vw - 32px));max-height:calc(100dvh - 40px);overflow:auto;padding:24px;border:1px solid #d8cfc2;border-radius:18px;background:#fffdf9;color:#1f2a2e;box-shadow:0 24px 80px #142b3440;font:14px/1.5 "Avenir Next","PingFang SC",sans-serif}
+.directory-dialog *{box-sizing:border-box}.directory-dialog::backdrop{background:rgba(22,38,44,.42);backdrop-filter:blur(3px)}
+.directory-dialog-head,.directory-dialog-foot,.directory-tools,.directory-footer-actions,.directory-order{display:flex;align-items:center;gap:10px}
+.directory-dialog-head,.directory-dialog-foot{justify-content:space-between}.directory-dialog h2{margin:0;font-size:23px}.directory-intro{color:#647276;margin:10px 0 18px;font-size:13px}
+.directory-tools{margin-bottom:12px}.directory-dialog-body{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(230px,1fr);gap:20px}
+.directory-editor-tree{min-height:300px;max-height:420px;overflow:auto;padding:8px;border:1px solid #e0d8cd;border-radius:12px;background:#f8f5ef}
+.directory-editor-row{display:block;width:100%;padding:10px 10px 10px calc(10px + var(--directory-depth,0)*16px);margin:0 0 3px;text-align:left;border:1px solid transparent;border-radius:8px;background:transparent;color:#1f2a2e;font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+.directory-editor-row:hover{background:#eaf0ef}.directory-editor-row[aria-pressed=true]{background:#e2eef0;border-color:#a8c6ce;color:#0f5c73;font-weight:700}
+.directory-editor-form{display:flex;flex-direction:column;align-items:stretch;gap:8px}.directory-editor-form label{font-size:12px;font-weight:700;color:#647276}
+.directory-editor-form input,.directory-editor-form select{width:100%;min-width:0;border:1px solid #c7cec9;border-radius:8px;padding:10px;background:white;color:#1f2a2e;font:inherit;margin-bottom:8px}
+.directory-secondary,.directory-primary,.directory-delete{border:1px solid #d8cfc2;border-radius:8px;padding:8px 12px;background:#fffdf9;color:#25444e;font-size:13px;line-height:1.4}
+.directory-primary{border-color:#0f5c73;background:#0f5c73;color:white;font-weight:700}.directory-delete{align-self:flex-start;color:#a1322d;margin-top:6px}.directory-delete[hidden]{display:none}
+.directory-dialog button:disabled{opacity:.38;cursor:default}.directory-dialog button:not(:disabled):hover{filter:brightness(.96)}
+.directory-help{font-size:12px;color:#647276;margin:8px 0;line-height:1.7}.directory-error{font-size:12px;color:#a1322d;margin:12px 0}.directory-error:empty{display:none}
+.directory-dialog-foot{border-top:1px solid #e5dfd5;margin-top:20px;padding-top:16px}.directory-dialog :focus-visible,.directory-toolbar :focus-visible,.directory-nav :focus-visible{outline:2px solid #0f5c73;outline-offset:2px}
+@media(max-width:1024px){.sidebar .nav-links.directory-nav{max-height:320px}.directory-toolbar{display:flex}.directory-nav .nav-link{white-space:normal}}
+@media(max-width:600px){.directory-dialog{padding:16px;max-height:calc(100dvh - 20px)}.directory-dialog-body{grid-template-columns:1fr;gap:14px}.directory-editor-tree{min-height:150px;max-height:230px}.directory-dialog-foot{gap:8px}.directory-footer-actions{gap:6px}.directory-secondary,.directory-primary,.directory-delete{padding:8px 10px}}
+</style>
+<script>/* Shared, browser-local directory preferences. Page URLs always come from the generated links. */
+(() => {
+  function initDirectory() {
+    const nav = document.querySelector('.sidebar .nav-links');
+    if (!nav || nav.dataset.directoryReady) return;
+    nav.dataset.directoryReady = 'true';
+    // Keep the embedded stylesheet when the generated link list is replaced.
+    nav.querySelectorAll('style').forEach(style => document.head.append(style));
+    const links = [...nav.querySelectorAll('a.nav-link')];
+    if (!links.length) return;
+    const root = new URL('../', links[0].href).pathname;
+    const key = 'dashboard-directory-v1:' + root;
+    const registry = new Map(links.map(link => [new URL(link.href).pathname, link]));
+    const defaults = links.map(link => ({id: new URL(link.href).pathname, name: link.textContent.trim(), parent: null, type: 'page'}));
+    const clone = value => JSON.parse(JSON.stringify(value));
+    function normalize(value) {
+      if (!Array.isArray(value) || value.length > 500) return clone(defaults);
+      const seen = new Set();
+      const result = value.filter(item => {
+        if (!item || typeof item.id !== 'string' || seen.has(item.id)) return false;
+        if (item.type !== 'group' && !registry.has(item.id)) return false;
+        if (item.type === 'group' && !item.id.startsWith('group:')) return false;
+        seen.add(item.id);
+        return true;
+      }).map(item => ({id: item.id, name: String(item.name || '').trim().slice(0, 100) || '未命名分组', parent: typeof item.parent === 'string' ? item.parent : null, type: item.type === 'group' ? 'group' : 'page'}));
+      defaults.forEach(item => { if (!seen.has(item.id)) result.push({...item}); });
+      const groups = new Map(result.filter(item => item.type === 'group').map(item => [item.id, item]));
+      result.forEach(item => {
+        const visited = new Set([item.id]);
+        let parent = item.parent;
+        while (parent) {
+          if (!groups.has(parent) || visited.has(parent)) { item.parent = null; break; }
+          visited.add(parent);
+          parent = groups.get(parent).parent;
+        }
+      });
+      return result;
+    }
+    let state;
+    let collapsed;
+    try { state = normalize(JSON.parse(localStorage.getItem(key))); } catch (_) { state = clone(defaults); }
+    try { collapsed = new Set(JSON.parse(localStorage.getItem(key + ':collapsed')) || []); } catch (_) { collapsed = new Set(); }
+    const el = (tag, className, text) => {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text !== undefined) node.textContent = text;
+      return node;
+    };
+    const button = (text, className, action) => {
+      const node = el('button', className, text);
+      node.type = 'button';
+      node.addEventListener('click', action);
+      return node;
+    };
+    nav.classList.add('directory-nav');
+    nav.setAttribute('aria-label', '策略目录');
+    const toolbar = el('div', 'directory-toolbar');
+    toolbar.append(el('span', '', '策略目录'));
+    const manage = button('管理目录', 'directory-manage', openEditor);
+    toolbar.append(manage);
+    const title = nav.parentElement.querySelector('.sidebar-title');
+    if (title) title.hidden = true;
+    nav.before(toolbar);
+    const notice = el('div', 'directory-notice');
+    notice.setAttribute('role', 'status');
+    nav.after(notice);
+
+    function renderNav() {
+      nav.replaceChildren();
+      const activeId = defaults.find(item => registry.get(item.id).classList.contains('active'))?.id;
+      function hasActive(id) { return state.some(item => item.parent === id && (item.id === activeId || hasActive(item.id))); }
+      function branch(parent, host, depth) {
+        state.filter(item => item.parent === parent).forEach(item => {
+          if (item.type === 'page') {
+            const link = registry.get(item.id).cloneNode(true);
+            link.textContent = item.name;
+            link.style.setProperty('--directory-depth', depth);
+            if (item.id === activeId) link.setAttribute('aria-current', 'page');
+            host.append(link);
+          } else {
+            const section = el('div', 'directory-group');
+            const hidden = collapsed.has(item.id) && !hasActive(item.id);
+            const toggle = button((hidden ? '▸ ' : '▾ ') + item.name, 'directory-group-toggle', () => {
+              if (collapsed.has(item.id)) collapsed.delete(item.id); else collapsed.add(item.id);
+              children.hidden = collapsed.has(item.id);
+              toggle.textContent = (children.hidden ? '▸ ' : '▾ ') + item.name;
+              toggle.setAttribute('aria-expanded', String(!children.hidden));
+              try { localStorage.setItem(key + ':collapsed', JSON.stringify([...collapsed])); } catch (_) { /* navigation remains usable */ }
+            });
+            toggle.style.setProperty('--directory-depth', depth);
+            toggle.setAttribute('aria-expanded', String(!hidden));
+            const children = el('div', 'directory-children');
+            children.hidden = hidden;
+            section.append(toggle, children);
+            host.append(section);
+            branch(item.id, children, depth + 1);
+          }
+        });
+      }
+      branch(null, nav, 0);
+    }
+
+    const dialog = el('dialog', 'directory-dialog');
+    dialog.setAttribute('aria-labelledby', 'directory-heading');
+    const head = el('div', 'directory-dialog-head');
+    const heading = el('h2', '', '管理目录');
+    heading.id = 'directory-heading';
+    head.append(heading, button('关闭', 'directory-secondary', () => dialog.close()));
+    const intro = el('p', 'directory-intro', '选择目录项后改名、调整父级或顺序。分组支持多层嵌套，保存后在本浏览器的各看板间共用。');
+    const tools = el('div', 'directory-tools');
+    tools.append(button('+ 新建分组', 'directory-secondary', () => {
+      if (!validName()) return;
+      const current = draft.find(item => item.id === selected);
+      const group = {id: 'group:' + crypto.randomUUID(), name: '新分组', parent: current?.type === 'group' ? current.id : current?.parent || null, type: 'group'};
+      draft.push(group); selected = group.id; renderEditor(); nameInput.focus(); nameInput.select();
+    }));
+    const body = el('div', 'directory-dialog-body');
+    const tree = el('div', 'directory-editor-tree');
+    tree.setAttribute('aria-label', '目录项目');
+    const form = el('div', 'directory-editor-form');
+    const nameLabel = el('label', '', '名称');
+    const nameInput = el('input');
+    nameInput.maxLength = 100;
+    nameInput.id = 'directory-name';
+    nameLabel.htmlFor = nameInput.id;
+    const parentLabel = el('label', '', '上级分组');
+    const parentSelect = el('select');
+    parentSelect.id = 'directory-parent';
+    parentLabel.htmlFor = parentSelect.id;
+    const order = el('div', 'directory-order');
+    const up = button('↑ 上移', 'directory-secondary', () => move(-1));
+    const down = button('↓ 下移', 'directory-secondary', () => move(1));
+    order.append(up, down);
+    const remove = button('删除分组', 'directory-delete', () => {
+      const item = draft.find(entry => entry.id === selected);
+      if (!item || item.type !== 'group') return;
+      draft.forEach(entry => { if (entry.parent === item.id) entry.parent = item.parent; });
+      draft = draft.filter(entry => entry.id !== item.id);
+      selected = item.parent || draft[0]?.id;
+      renderEditor();
+    });
+    const hint = el('p', 'directory-help', '上下移动调整同级顺序；更改上级分组可移入、移出分组。删除分组会将子项移到上一层。');
+    form.append(nameLabel, nameInput, parentLabel, parentSelect, order, remove, hint);
+    body.append(tree, form);
+    const error = el('p', 'directory-error');
+    error.setAttribute('role', 'alert');
+    const foot = el('div', 'directory-dialog-foot');
+    foot.append(button('恢复默认', 'directory-secondary', () => { draft = clone(defaults); selected = draft[0]?.id; renderEditor(); }));
+    const actions = el('div', 'directory-footer-actions');
+    actions.append(button('取消', 'directory-secondary', () => dialog.close()), button('保存目录', 'directory-primary', () => {
+      if (!validName()) return;
+      const unnamed = draft.find(item => !item.name.trim());
+      if (unnamed) {
+        selected = unnamed.id; renderEditor();
+        error.textContent = '名称不能为空。'; nameInput.focus(); return;
+      }
+      try {
+        localStorage.setItem(key, JSON.stringify(draft));
+        state = clone(draft);
+        renderNav();
+        notice.textContent = '目录已保存';
+        dialog.close();
+      } catch (_) { error.textContent = '无法保存，请检查浏览器是否允许本地存储。当前修改仍保留在面板中。'; }
+    }));
+    foot.append(actions);
+    dialog.append(head, intro, tools, body, error, foot);
+    document.body.append(dialog);
+    let draft = [];
+    let selected;
+    function validName() {
+      const item = draft.find(entry => entry.id === selected);
+      if (item && !nameInput.value.trim()) {
+        error.textContent = '名称不能为空。'; nameInput.focus(); return false;
+      }
+      if (item) item.name = nameInput.value.trim();
+      error.textContent = '';
+      return true;
+    }
+    function openEditor() {
+      draft = clone(state); selected = draft[0]?.id;
+      error.textContent = ''; renderEditor(); dialog.showModal();
+    }
+    function isDescendant(id, ancestor) {
+      let item = draft.find(entry => entry.id === id);
+      while (item?.parent) {
+        if (item.parent === ancestor) return true;
+        item = draft.find(entry => entry.id === item.parent);
+      }
+      return false;
+    }
+    function renderTree() {
+      tree.replaceChildren();
+      function branch(parent, depth) {
+        draft.filter(item => item.parent === parent).forEach(item => {
+          const row = button((item.type === 'group' ? '▾ ' : '↗ ') + (item.name || '未命名'), 'directory-editor-row', () => {
+            if (!validName()) return;
+            selected = item.id; renderEditor();
+          });
+          row.style.setProperty('--directory-depth', depth);
+          row.dataset.nodeId = item.id;
+          row.setAttribute('aria-pressed', String(item.id === selected));
+          tree.append(row);
+          branch(item.id, depth + 1);
+        });
+      }
+      branch(null, 0);
+    }
+    function renderEditor() {
+      renderTree();
+      const item = draft.find(entry => entry.id === selected);
+      nameInput.disabled = parentSelect.disabled = !item;
+      nameInput.value = item?.name || '';
+      parentSelect.replaceChildren();
+      const option = (name, value) => { const node = el('option', '', name); node.value = value; parentSelect.append(node); };
+      option('顶层目录', '');
+      function groups(parent, depth) {
+        draft.filter(entry => entry.parent === parent && entry.type === 'group').forEach(entry => {
+          if (entry.id === selected || isDescendant(entry.id, selected)) return;
+          option('　'.repeat(depth) + entry.name, entry.id); groups(entry.id, depth + 1);
+        });
+      }
+      groups(null, 0);
+      parentSelect.value = item?.parent || '';
+      const siblings = draft.filter(entry => entry.parent === item?.parent);
+      const index = siblings.findIndex(entry => entry.id === selected);
+      up.disabled = index <= 0; down.disabled = index < 0 || index === siblings.length - 1;
+      remove.hidden = item?.type !== 'group';
+    }
+    nameInput.addEventListener('input', () => {
+      const item = draft.find(entry => entry.id === selected);
+      if (item) item.name = nameInput.value;
+      error.textContent = ''; renderTree();
+    });
+    parentSelect.addEventListener('change', () => {
+      const item = draft.find(entry => entry.id === selected);
+      if (!item) return;
+      item.parent = parentSelect.value || null;
+      draft = draft.filter(entry => entry.id !== selected); draft.push(item); renderEditor();
+    });
+    function move(direction) {
+      const item = draft.find(entry => entry.id === selected);
+      const siblings = draft.filter(entry => entry.parent === item?.parent);
+      const index = siblings.findIndex(entry => entry.id === selected);
+      const other = siblings[index + direction];
+      if (!other) return;
+      const a = draft.indexOf(item), b = draft.indexOf(other);
+      [draft[a], draft[b]] = [draft[b], draft[a]];
+      renderEditor();
+    }
+    dialog.addEventListener('close', () => manage.focus());
+    window.addEventListener('storage', event => {
+      if (event.key !== key && event.key !== null) return;
+      try { state = normalize(JSON.parse(event.newValue)); renderNav(); } catch (_) { /* preserve current navigation */ }
+      if (dialog.open) error.textContent = '另一个页面更新了目录；关闭后重新打开可读取最新设置，或保存当前编辑覆盖。';
+    });
+    renderNav();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initDirectory, {once: true});
+  else initDirectory();
+})();
+</script></div></aside>
   <main>
     <section class="hero">
       <div><div class="eyebrow">30M PRIORITY × DAILY × WEEKLY</div><h1>自选股双引擎雷达</h1><p>左侧雷达同时识别低位反转与平台启动：反转轨看支撑、耗竭和拐点，启动轨看收敛蓄势、突破、趋势共振与量价参与；30 分 K 只确认当前一刻，不改写历史。满 10 根但不足 65 根完整日 K 的新股仍使用独立短历史评分。缺口层只做额外判断，不改变分数。股池固定加入 005930（三星电子）与 000660（SK 海力士）。</p></div>
-      <div><button class="refresh-btn" id="refreshButton" type="button">刷新全部看板</button><div class="refresh-note" id="refreshStatus">当前为最新静态快照</div></div>
+      <div><button class="refresh-btn" id="refreshButton" type="button">刷新趋势评分</button><div class="refresh-note" id="refreshStatus">当前为最新静态快照</div></div>
     </section>
     <section class="stats">
       <span>股池<b id="pool">—</b></span><span class="left-stat">左侧 BUY<b id="leftBuy">—</b></span><span class="left-stat">准备区<b id="leftArming">—</b></span><span>潜伏观察<b id="leftWatch">—</b></span><span>短史已评分<b id="leftShortHistory">—</b></span><span>趋势候选<b id="candidates">—</b></span><span class="gap-stat-right">右侧缺口确认<b id="rightGapConfirmed">—</b></span><span class="gap-stat-left">左侧缺口环境<b id="leftGapContext">—</b></span><span>残差动量命中<b id="erHits">—</b></span><span>风险预警<b id="riskWarnings">—</b></span><span>风险确认<b id="riskConfirmed">—</b></span><span>美 / 港 / 韩<b><span id="usCount">—</span> / <span id="hkCount">—</span> / <span id="krCount">—</span></b></span><span>更新时间<b id="updated">—</b></span>
@@ -155,7 +446,10 @@ document.addEventListener('click',event=>{const trigger=event.target.closest('[d
 document.getElementById('scoreChartClose').addEventListener('click',hideScoreChart);
 document.addEventListener('keydown',event=>{if(event.key==='Escape')hideScoreChart()});
 document.querySelector('.table-shell').addEventListener('scroll',hideScoreChart);
-const refreshButton=document.getElementById('refreshButton'),refreshStatus=document.getElementById('refreshStatus'),apiEnabled=new Set(['127.0.0.1','localhost']).has(location.hostname);refreshButton.disabled=!apiEnabled;if(!apiEnabled)refreshStatus.textContent='静态快照需在本地总览刷新';
-refreshButton.addEventListener('click',async()=>{refreshButton.disabled=true;refreshButton.textContent='正在刷新…';refreshStatus.textContent='正在更新 OpenD、左右侧雷达、缺口层和趋势评分';try{const response=await fetch('/api/refresh',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});if(!response.ok&&response.status!==409)throw new Error(`HTTP ${response.status}`);const timer=setInterval(async()=>{try{const state=await (await fetch('/api/status',{cache:'no-store'})).json();if(!state.busy){clearInterval(timer);if(state.last_error)throw new Error(state.last_error);location.reload()}}catch(error){clearInterval(timer);refreshButton.disabled=false;refreshButton.textContent='刷新全部看板';refreshStatus.textContent=`刷新失败：${error.message}`}},2500)}catch(error){refreshButton.disabled=false;refreshButton.textContent='刷新全部看板';refreshStatus.textContent=`刷新失败：${error.message}`}});
-load().catch(error=>{document.getElementById('body').innerHTML=`<tr><td class="empty" colspan="10">数据加载失败：${esc(error.message)}</td></tr>`});
+const refreshButton=document.getElementById('refreshButton'),refreshStatus=document.getElementById('refreshStatus'),apiEnabled=new Set(['127.0.0.1','localhost']).has(location.hostname);let trendWasRunning=false,trendPolling=false;
+async function pollTrend(){if(!apiEnabled||trendPolling)return;trendPolling=true;try{const response=await fetch('/api/watchlist-trend/status',{cache:'no-store'});if(!response.ok)throw new Error(`HTTP ${response.status}`);const state=await response.json();refreshButton.disabled=state.state==='running';refreshButton.textContent=state.state==='running'?'正在刷新趋势评分…':'刷新趋势评分';refreshStatus.textContent=state.message||'仅更新本页自选池、日K、30分钟线与趋势评分';if(state.state==='running')trendWasRunning=true;else if(trendWasRunning){trendWasRunning=false;if(state.state==='complete')location.reload()}}catch(error){refreshStatus.textContent=`状态读取失败：${error.message}`}finally{trendPolling=false}}
+refreshButton.disabled=!apiEnabled;if(!apiEnabled)refreshStatus.textContent='请在本机服务独立刷新趋势评分';else{pollTrend();setInterval(pollTrend,2500)}
+refreshButton.addEventListener('click',async()=>{refreshButton.disabled=true;refreshButton.textContent='正在刷新趋势评分…';try{const response=await fetch('/api/watchlist-trend/refresh',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});const state=await response.json();if(!response.ok)throw new Error(state.error||`HTTP ${response.status}`);trendWasRunning=state.state==='running';refreshStatus.textContent=state.message;await pollTrend()}catch(error){refreshButton.disabled=false;refreshButton.textContent='刷新趋势评分';refreshStatus.textContent=`刷新失败：${error.message}`}});
+
+load().catch(error=>{document.getElementById('updated').textContent=`数据加载失败：${error.message}`});
 </script></body></html>

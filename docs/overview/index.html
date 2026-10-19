@@ -55,32 +55,335 @@
 <a class='nav-link' href='../hk_er_3_8_20_20b_stock_connect/index.html'>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</a>
 <a class='nav-link' href='../er_3_8_20_100b_top5_biweekly_top50/index.html'>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</a>
 <a class='nav-link' href='../er_3_8_20_100b_top5_weekly/index.html'>ER 3/8/20 (100B Top5 周换仓)</a>
-<a class='nav-link' href='../daily_option_signal/index.html'>每日期权信号</a>
+<a class='nav-link' href='../leader_valuation/index.html'>自选股长期估值</a>
+<a class='nav-link' href='../watchlist_gap/index.html'>自选股缺口监控</a>
 <a class='nav-link' href='../watchlist_trend_score/index.html'>自选股趋势评分</a>
-<a class='nav-link' href='../long_term_trend_strength/index.html'>长线趋势最强</a></div></aside>
+<a class='nav-link' href='../long_term_trend_strength/index.html'>长线趋势最强</a>
+<a class='nav-link' href='../bofa_fms/index.html'>美银基金经理调查</a>
+<style>.sidebar .sidebar-title[hidden]{display:none}
+.directory-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--muted,#647276);font-size:12px}
+.directory-toolbar button,.directory-dialog button,.directory-group-toggle{font-family:inherit;cursor:pointer}
+.directory-manage{border:1px solid var(--line,#d8cfc2);border-radius:7px;padding:5px 7px;background:transparent;color:var(--accent,#0f5c73);font-size:12px;white-space:nowrap}
+.sidebar .nav-links.directory-nav{display:flex;flex-direction:column;gap:6px;margin-top:12px;overflow:visible;max-height:calc(100vh - 160px);overflow-y:auto}
+.directory-nav .nav-link{display:block;flex:none;white-space:normal;overflow-wrap:anywhere;padding-left:calc(10px + var(--directory-depth,0)*12px);line-height:1.5}
+.directory-group-toggle{display:block;width:100%;text-align:left;border:0;border-radius:8px;background:transparent;color:var(--ink,#1f2a2e);padding:9px 7px 9px calc(7px + var(--directory-depth,0)*12px);font-size:13px;font-weight:750;overflow-wrap:anywhere}
+.directory-group-toggle:hover,.directory-manage:hover{background:rgba(15,92,115,.08)}
+.directory-children{display:grid;gap:6px}.directory-children[hidden]{display:none}
+.directory-notice{font-size:11px;color:var(--accent,#0f5c73);margin-top:8px}.directory-notice:empty{display:none}
+.directory-dialog{box-sizing:border-box;width:min(850px,calc(100vw - 32px));max-height:calc(100dvh - 40px);overflow:auto;padding:24px;border:1px solid #d8cfc2;border-radius:18px;background:#fffdf9;color:#1f2a2e;box-shadow:0 24px 80px #142b3440;font:14px/1.5 "Avenir Next","PingFang SC",sans-serif}
+.directory-dialog *{box-sizing:border-box}.directory-dialog::backdrop{background:rgba(22,38,44,.42);backdrop-filter:blur(3px)}
+.directory-dialog-head,.directory-dialog-foot,.directory-tools,.directory-footer-actions,.directory-order{display:flex;align-items:center;gap:10px}
+.directory-dialog-head,.directory-dialog-foot{justify-content:space-between}.directory-dialog h2{margin:0;font-size:23px}.directory-intro{color:#647276;margin:10px 0 18px;font-size:13px}
+.directory-tools{margin-bottom:12px}.directory-dialog-body{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(230px,1fr);gap:20px}
+.directory-editor-tree{min-height:300px;max-height:420px;overflow:auto;padding:8px;border:1px solid #e0d8cd;border-radius:12px;background:#f8f5ef}
+.directory-editor-row{display:block;width:100%;padding:10px 10px 10px calc(10px + var(--directory-depth,0)*16px);margin:0 0 3px;text-align:left;border:1px solid transparent;border-radius:8px;background:transparent;color:#1f2a2e;font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+.directory-editor-row:hover{background:#eaf0ef}.directory-editor-row[aria-pressed=true]{background:#e2eef0;border-color:#a8c6ce;color:#0f5c73;font-weight:700}
+.directory-editor-form{display:flex;flex-direction:column;align-items:stretch;gap:8px}.directory-editor-form label{font-size:12px;font-weight:700;color:#647276}
+.directory-editor-form input,.directory-editor-form select{width:100%;min-width:0;border:1px solid #c7cec9;border-radius:8px;padding:10px;background:white;color:#1f2a2e;font:inherit;margin-bottom:8px}
+.directory-secondary,.directory-primary,.directory-delete{border:1px solid #d8cfc2;border-radius:8px;padding:8px 12px;background:#fffdf9;color:#25444e;font-size:13px;line-height:1.4}
+.directory-primary{border-color:#0f5c73;background:#0f5c73;color:white;font-weight:700}.directory-delete{align-self:flex-start;color:#a1322d;margin-top:6px}.directory-delete[hidden]{display:none}
+.directory-dialog button:disabled{opacity:.38;cursor:default}.directory-dialog button:not(:disabled):hover{filter:brightness(.96)}
+.directory-help{font-size:12px;color:#647276;margin:8px 0;line-height:1.7}.directory-error{font-size:12px;color:#a1322d;margin:12px 0}.directory-error:empty{display:none}
+.directory-dialog-foot{border-top:1px solid #e5dfd5;margin-top:20px;padding-top:16px}.directory-dialog :focus-visible,.directory-toolbar :focus-visible,.directory-nav :focus-visible{outline:2px solid #0f5c73;outline-offset:2px}
+@media(max-width:1024px){.sidebar .nav-links.directory-nav{max-height:320px}.directory-toolbar{display:flex}.directory-nav .nav-link{white-space:normal}}
+@media(max-width:600px){.directory-dialog{padding:16px;max-height:calc(100dvh - 20px)}.directory-dialog-body{grid-template-columns:1fr;gap:14px}.directory-editor-tree{min-height:150px;max-height:230px}.directory-dialog-foot{gap:8px}.directory-footer-actions{gap:6px}.directory-secondary,.directory-primary,.directory-delete{padding:8px 10px}}
+</style>
+<script>/* Shared, browser-local directory preferences. Page URLs always come from the generated links. */
+(() => {
+  function initDirectory() {
+    const nav = document.querySelector('.sidebar .nav-links');
+    if (!nav || nav.dataset.directoryReady) return;
+    nav.dataset.directoryReady = 'true';
+    // Keep the embedded stylesheet when the generated link list is replaced.
+    nav.querySelectorAll('style').forEach(style => document.head.append(style));
+    const links = [...nav.querySelectorAll('a.nav-link')];
+    if (!links.length) return;
+    const root = new URL('../', links[0].href).pathname;
+    const key = 'dashboard-directory-v1:' + root;
+    const registry = new Map(links.map(link => [new URL(link.href).pathname, link]));
+    const defaults = links.map(link => ({id: new URL(link.href).pathname, name: link.textContent.trim(), parent: null, type: 'page'}));
+    const clone = value => JSON.parse(JSON.stringify(value));
+    function normalize(value) {
+      if (!Array.isArray(value) || value.length > 500) return clone(defaults);
+      const seen = new Set();
+      const result = value.filter(item => {
+        if (!item || typeof item.id !== 'string' || seen.has(item.id)) return false;
+        if (item.type !== 'group' && !registry.has(item.id)) return false;
+        if (item.type === 'group' && !item.id.startsWith('group:')) return false;
+        seen.add(item.id);
+        return true;
+      }).map(item => ({id: item.id, name: String(item.name || '').trim().slice(0, 100) || '未命名分组', parent: typeof item.parent === 'string' ? item.parent : null, type: item.type === 'group' ? 'group' : 'page'}));
+      defaults.forEach(item => { if (!seen.has(item.id)) result.push({...item}); });
+      const groups = new Map(result.filter(item => item.type === 'group').map(item => [item.id, item]));
+      result.forEach(item => {
+        const visited = new Set([item.id]);
+        let parent = item.parent;
+        while (parent) {
+          if (!groups.has(parent) || visited.has(parent)) { item.parent = null; break; }
+          visited.add(parent);
+          parent = groups.get(parent).parent;
+        }
+      });
+      return result;
+    }
+    let state;
+    let collapsed;
+    try { state = normalize(JSON.parse(localStorage.getItem(key))); } catch (_) { state = clone(defaults); }
+    try { collapsed = new Set(JSON.parse(localStorage.getItem(key + ':collapsed')) || []); } catch (_) { collapsed = new Set(); }
+    const el = (tag, className, text) => {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text !== undefined) node.textContent = text;
+      return node;
+    };
+    const button = (text, className, action) => {
+      const node = el('button', className, text);
+      node.type = 'button';
+      node.addEventListener('click', action);
+      return node;
+    };
+    nav.classList.add('directory-nav');
+    nav.setAttribute('aria-label', '策略目录');
+    const toolbar = el('div', 'directory-toolbar');
+    toolbar.append(el('span', '', '策略目录'));
+    const manage = button('管理目录', 'directory-manage', openEditor);
+    toolbar.append(manage);
+    const title = nav.parentElement.querySelector('.sidebar-title');
+    if (title) title.hidden = true;
+    nav.before(toolbar);
+    const notice = el('div', 'directory-notice');
+    notice.setAttribute('role', 'status');
+    nav.after(notice);
+
+    function renderNav() {
+      nav.replaceChildren();
+      const activeId = defaults.find(item => registry.get(item.id).classList.contains('active'))?.id;
+      function hasActive(id) { return state.some(item => item.parent === id && (item.id === activeId || hasActive(item.id))); }
+      function branch(parent, host, depth) {
+        state.filter(item => item.parent === parent).forEach(item => {
+          if (item.type === 'page') {
+            const link = registry.get(item.id).cloneNode(true);
+            link.textContent = item.name;
+            link.style.setProperty('--directory-depth', depth);
+            if (item.id === activeId) link.setAttribute('aria-current', 'page');
+            host.append(link);
+          } else {
+            const section = el('div', 'directory-group');
+            const hidden = collapsed.has(item.id) && !hasActive(item.id);
+            const toggle = button((hidden ? '▸ ' : '▾ ') + item.name, 'directory-group-toggle', () => {
+              if (collapsed.has(item.id)) collapsed.delete(item.id); else collapsed.add(item.id);
+              children.hidden = collapsed.has(item.id);
+              toggle.textContent = (children.hidden ? '▸ ' : '▾ ') + item.name;
+              toggle.setAttribute('aria-expanded', String(!children.hidden));
+              try { localStorage.setItem(key + ':collapsed', JSON.stringify([...collapsed])); } catch (_) { /* navigation remains usable */ }
+            });
+            toggle.style.setProperty('--directory-depth', depth);
+            toggle.setAttribute('aria-expanded', String(!hidden));
+            const children = el('div', 'directory-children');
+            children.hidden = hidden;
+            section.append(toggle, children);
+            host.append(section);
+            branch(item.id, children, depth + 1);
+          }
+        });
+      }
+      branch(null, nav, 0);
+    }
+
+    const dialog = el('dialog', 'directory-dialog');
+    dialog.setAttribute('aria-labelledby', 'directory-heading');
+    const head = el('div', 'directory-dialog-head');
+    const heading = el('h2', '', '管理目录');
+    heading.id = 'directory-heading';
+    head.append(heading, button('关闭', 'directory-secondary', () => dialog.close()));
+    const intro = el('p', 'directory-intro', '选择目录项后改名、调整父级或顺序。分组支持多层嵌套，保存后在本浏览器的各看板间共用。');
+    const tools = el('div', 'directory-tools');
+    tools.append(button('+ 新建分组', 'directory-secondary', () => {
+      if (!validName()) return;
+      const current = draft.find(item => item.id === selected);
+      const group = {id: 'group:' + crypto.randomUUID(), name: '新分组', parent: current?.type === 'group' ? current.id : current?.parent || null, type: 'group'};
+      draft.push(group); selected = group.id; renderEditor(); nameInput.focus(); nameInput.select();
+    }));
+    const body = el('div', 'directory-dialog-body');
+    const tree = el('div', 'directory-editor-tree');
+    tree.setAttribute('aria-label', '目录项目');
+    const form = el('div', 'directory-editor-form');
+    const nameLabel = el('label', '', '名称');
+    const nameInput = el('input');
+    nameInput.maxLength = 100;
+    nameInput.id = 'directory-name';
+    nameLabel.htmlFor = nameInput.id;
+    const parentLabel = el('label', '', '上级分组');
+    const parentSelect = el('select');
+    parentSelect.id = 'directory-parent';
+    parentLabel.htmlFor = parentSelect.id;
+    const order = el('div', 'directory-order');
+    const up = button('↑ 上移', 'directory-secondary', () => move(-1));
+    const down = button('↓ 下移', 'directory-secondary', () => move(1));
+    order.append(up, down);
+    const remove = button('删除分组', 'directory-delete', () => {
+      const item = draft.find(entry => entry.id === selected);
+      if (!item || item.type !== 'group') return;
+      draft.forEach(entry => { if (entry.parent === item.id) entry.parent = item.parent; });
+      draft = draft.filter(entry => entry.id !== item.id);
+      selected = item.parent || draft[0]?.id;
+      renderEditor();
+    });
+    const hint = el('p', 'directory-help', '上下移动调整同级顺序；更改上级分组可移入、移出分组。删除分组会将子项移到上一层。');
+    form.append(nameLabel, nameInput, parentLabel, parentSelect, order, remove, hint);
+    body.append(tree, form);
+    const error = el('p', 'directory-error');
+    error.setAttribute('role', 'alert');
+    const foot = el('div', 'directory-dialog-foot');
+    foot.append(button('恢复默认', 'directory-secondary', () => { draft = clone(defaults); selected = draft[0]?.id; renderEditor(); }));
+    const actions = el('div', 'directory-footer-actions');
+    actions.append(button('取消', 'directory-secondary', () => dialog.close()), button('保存目录', 'directory-primary', () => {
+      if (!validName()) return;
+      const unnamed = draft.find(item => !item.name.trim());
+      if (unnamed) {
+        selected = unnamed.id; renderEditor();
+        error.textContent = '名称不能为空。'; nameInput.focus(); return;
+      }
+      try {
+        localStorage.setItem(key, JSON.stringify(draft));
+        state = clone(draft);
+        renderNav();
+        notice.textContent = '目录已保存';
+        dialog.close();
+      } catch (_) { error.textContent = '无法保存，请检查浏览器是否允许本地存储。当前修改仍保留在面板中。'; }
+    }));
+    foot.append(actions);
+    dialog.append(head, intro, tools, body, error, foot);
+    document.body.append(dialog);
+    let draft = [];
+    let selected;
+    function validName() {
+      const item = draft.find(entry => entry.id === selected);
+      if (item && !nameInput.value.trim()) {
+        error.textContent = '名称不能为空。'; nameInput.focus(); return false;
+      }
+      if (item) item.name = nameInput.value.trim();
+      error.textContent = '';
+      return true;
+    }
+    function openEditor() {
+      draft = clone(state); selected = draft[0]?.id;
+      error.textContent = ''; renderEditor(); dialog.showModal();
+    }
+    function isDescendant(id, ancestor) {
+      let item = draft.find(entry => entry.id === id);
+      while (item?.parent) {
+        if (item.parent === ancestor) return true;
+        item = draft.find(entry => entry.id === item.parent);
+      }
+      return false;
+    }
+    function renderTree() {
+      tree.replaceChildren();
+      function branch(parent, depth) {
+        draft.filter(item => item.parent === parent).forEach(item => {
+          const row = button((item.type === 'group' ? '▾ ' : '↗ ') + (item.name || '未命名'), 'directory-editor-row', () => {
+            if (!validName()) return;
+            selected = item.id; renderEditor();
+          });
+          row.style.setProperty('--directory-depth', depth);
+          row.dataset.nodeId = item.id;
+          row.setAttribute('aria-pressed', String(item.id === selected));
+          tree.append(row);
+          branch(item.id, depth + 1);
+        });
+      }
+      branch(null, 0);
+    }
+    function renderEditor() {
+      renderTree();
+      const item = draft.find(entry => entry.id === selected);
+      nameInput.disabled = parentSelect.disabled = !item;
+      nameInput.value = item?.name || '';
+      parentSelect.replaceChildren();
+      const option = (name, value) => { const node = el('option', '', name); node.value = value; parentSelect.append(node); };
+      option('顶层目录', '');
+      function groups(parent, depth) {
+        draft.filter(entry => entry.parent === parent && entry.type === 'group').forEach(entry => {
+          if (entry.id === selected || isDescendant(entry.id, selected)) return;
+          option('　'.repeat(depth) + entry.name, entry.id); groups(entry.id, depth + 1);
+        });
+      }
+      groups(null, 0);
+      parentSelect.value = item?.parent || '';
+      const siblings = draft.filter(entry => entry.parent === item?.parent);
+      const index = siblings.findIndex(entry => entry.id === selected);
+      up.disabled = index <= 0; down.disabled = index < 0 || index === siblings.length - 1;
+      remove.hidden = item?.type !== 'group';
+    }
+    nameInput.addEventListener('input', () => {
+      const item = draft.find(entry => entry.id === selected);
+      if (item) item.name = nameInput.value;
+      error.textContent = ''; renderTree();
+    });
+    parentSelect.addEventListener('change', () => {
+      const item = draft.find(entry => entry.id === selected);
+      if (!item) return;
+      item.parent = parentSelect.value || null;
+      draft = draft.filter(entry => entry.id !== selected); draft.push(item); renderEditor();
+    });
+    function move(direction) {
+      const item = draft.find(entry => entry.id === selected);
+      const siblings = draft.filter(entry => entry.parent === item?.parent);
+      const index = siblings.findIndex(entry => entry.id === selected);
+      const other = siblings[index + direction];
+      if (!other) return;
+      const a = draft.indexOf(item), b = draft.indexOf(other);
+      [draft[a], draft[b]] = [draft[b], draft[a]];
+      renderEditor();
+    }
+    dialog.addEventListener('close', () => manage.focus());
+    window.addEventListener('storage', event => {
+      if (event.key !== key && event.key !== null) return;
+      try { state = normalize(JSON.parse(event.newValue)); renderNav(); } catch (_) { /* preserve current navigation */ }
+      if (dialog.open) error.textContent = '另一个页面更新了目录；关闭后重新打开可读取最新设置，或保存当前编辑覆盖。';
+    });
+    renderNav();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initDirectory, {once: true});
+  else initDirectory();
+})();
+</script></div></aside>
     <main>
       <div class="header-row">
         <div class="header-copy">
           <h1>策略看板总览</h1>
-          <div class="intro">统一刷新入口：按美股、港股各自交易日补拉必要数据，再更新当前集合中的 5 个策略、自选股趋势评分与长线页。</div>
+          <div class="intro">动量策略集合统一刷新入口：按美股、港股各自交易日补拉必要数据，仅更新 5 个 ER 看板和长线趋势最强。自选股与研报看板在各自页面独立更新。</div>
         </div>
         <div class="refresh-box">
-          <button id="collectionRefreshButton" class="refresh-btn" type="button">刷新全部看板</button>
+          <button id="collectionRefreshButton" class="refresh-btn" type="button">刷新动量策略集合</button>
           <div id="collectionRefreshStatus" class="refresh-note">当前为静态快照。</div>
         </div>
       </div>
       <section class="stats">
         <div class="stat"><span class="sub">策略数量</span><strong>5</strong></div>
         <div class="stat"><span class="sub">数据健康</span><strong>5/5</strong></div>
-        <div class="stat"><span class="sub">最近生成</span><strong style="font-size:16px">2026-10-15T11:43:31+08:00</strong></div>
+        <div class="stat"><span class="sub">最近生成</span><strong style="font-size:16px">2026-10-19T15:39:57+08:00</strong></div>
       </section>
       <section class="observer">
-        <div><h2>自选股趋势评分</h2><p>OpenD「美股、港股、韩股」自选 + 手动韩股 005930 / 000660：270 个标的（美股 207、港股 61、韩股 2），正股 211、普通 ETF 59；核心候选 3，残差动量并集命中 7。</p></div>
+        <div><h2>美银基金经理调查</h2><p>按月归档 Global Fund Manager Survey 的最大尾部风险与最拥挤交易。查看完整占比、类别历史柱状对比、研报原图与原文。</p></div>
+        <a href="../bofa_fms/index.html">打开看板</a>
+      </section>
+      <section class="observer">
+        <div><h2>自选股趋势评分</h2><p>OpenD「美股、港股、韩股」自选 + 手动韩股 005930 / 000660：262 个标的（美股 207、港股 53、韩股 2），正股 204、普通 ETF 58；核心候选 2，残差动量并集命中 7。</p></div>
         <a href="../watchlist_trend_score/index.html">打开看板</a>
+      </section>
+      <section class="observer">
+        <div><h2>自选股长期估值</h2><p>港股自选 ≥ 500 亿港币、美股自选 ≥ 500 亿美元，固定三星电子与 SK 海力士。最长 20 年 PB / TTM PE，当前估值水平线与历史分位。支持独立手动刷新自选股池、最新市值和估值；历史不足 20 年显示实际覆盖日期。</p></div>
+        <a href="../leader_valuation/index.html">打开看板</a>
+      </section>
+      <section class="observer">
+        <div><h2>自选股缺口监控</h2><p>全部港美自选股票，不设市值门槛，固定三星电子与 SK 海力士；纳入自选中的普通正向、非杠杆 ETF。可选最近 400、300、200、100、50 根已收盘、前复权日 K，统计未回补缺口及最新连续同方向缺口；支持手动持久置顶、最新缺口集中提醒，以及独立同步自选标的和刷新日 K。</p></div>
+        <a href="../watchlist_gap/index.html">打开看板</a>
       </section>
       <section class="panel"><div class="table-scroll"><table>
         <thead><tr><th>策略</th><th>数据 / 信号日</th><th>下次交易</th><th>今日动作</th><th>区间收益</th><th>超额</th><th>最大回撤</th><th>Sharpe</th><th>年化换手</th><th>数据健康</th><th>净敞口</th></tr></thead>
-        <tbody><tr><td><a href='../er_3_8_20_100b_daily/index.html'><strong>ER 3/8/20 (100B 日调仓)</strong></a><div class='sub'>美股</div></td><td>2026-10-14<div class='sub'>信号 2026-10-14</div></td><td>2026-10-15</td><td><span class='buy'>买 4</span> / <span class='sell'>卖 4</span></td><td>+113.3%</td><td>+100.1%</td><td>-22.5%</td><td>2.52</td><td>82.44</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>100.0%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../etf_er_3_8_20_whitelist/index.html'><strong>ETF ER 3/8/20 (白名单日调仓 Top5)</strong></a><div class='sub'>美股</div></td><td>2026-10-14<div class='sub'>信号 2026-10-14</div></td><td>2026-10-15</td><td><span class='buy'>买 4</span> / <span class='sell'>卖 4</span></td><td>+93.6%</td><td>+79.9%</td><td>-14.8%</td><td>2.22</td><td>86.32</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>100.0%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../hk_er_3_8_20_20b_stock_connect/index.html'><strong>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</strong></a><div class='sub'>港股</div></td><td>2026-10-14<div class='sub'>信号 2026-10-14</div></td><td>2026-10-15</td><td><span class='buy'>买 1</span> / <span class='sell'>卖 1</span></td><td>+33.2%</td><td>+38.3%</td><td>-30.5%</td><td>0.98</td><td>61.21</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>75.1%<div class='sub'>对冲 24.9%</div></td></tr><tr><td><a href='../er_3_8_20_100b_top5_biweekly_top50/index.html'><strong>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</strong></a><div class='sub'>美股</div></td><td>2026-10-14<div class='sub'>信号 2026-10-14</div></td><td>2026-10-15</td><td><span class='buy'>买 0</span> / <span class='sell'>卖 0</span></td><td>+183.3%</td><td>+170.2%</td><td>-16.0%</td><td>3.00</td><td>13.96</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>100.0%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../er_3_8_20_100b_top5_weekly/index.html'><strong>ER 3/8/20 (100B Top5 周换仓)</strong></a><div class='sub'>美股</div></td><td>2026-10-14<div class='sub'>信号 2026-10-14</div></td><td>2026-10-15</td><td><span class='buy'>买 0</span> / <span class='sell'>卖 0</span></td><td>+145.3%</td><td>+132.1%</td><td>-29.1%</td><td>2.27</td><td>29.93</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>99.7%<div class='sub'>对冲 0.0%</div></td></tr></tbody>
+        <tbody><tr><td><a href='../er_3_8_20_100b_daily/index.html'><strong>ER 3/8/20 (100B 日调仓)</strong></a><div class='sub'>美股</div></td><td>2026-10-16<div class='sub'>信号 2026-10-16</div></td><td>2026-10-19</td><td><span class='buy'>买 1</span> / <span class='sell'>卖 1</span></td><td>+113.8%</td><td>+101.6%</td><td>-22.5%</td><td>2.51</td><td>82.21</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>99.8%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../etf_er_3_8_20_whitelist/index.html'><strong>ETF ER 3/8/20 (白名单日调仓 Top5)</strong></a><div class='sub'>美股</div></td><td>2026-10-16<div class='sub'>信号 2026-10-16</div></td><td>2026-10-19</td><td><span class='buy'>买 1</span> / <span class='sell'>卖 1</span></td><td>+91.9%</td><td>+79.1%</td><td>-14.8%</td><td>2.18</td><td>86.96</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>100.0%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../hk_er_3_8_20_20b_stock_connect/index.html'><strong>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</strong></a><div class='sub'>港股</div></td><td>2026-10-16<div class='sub'>信号 2026-10-16</div></td><td>2026-10-19</td><td><span class='buy'>买 1</span> / <span class='sell'>卖 1</span></td><td>+29.8%</td><td>+35.4%</td><td>-32.3%</td><td>0.91</td><td>60.96</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>74.8%<div class='sub'>对冲 25.0%</div></td></tr><tr><td><a href='../er_3_8_20_100b_top5_biweekly_top50/index.html'><strong>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</strong></a><div class='sub'>美股</div></td><td>2026-10-16<div class='sub'>信号 2026-10-16</div></td><td>2026-10-19</td><td><span class='buy'>买 0</span> / <span class='sell'>卖 0</span></td><td>+175.7%</td><td>+163.4%</td><td>-18.3%</td><td>2.90</td><td>15.08</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>100.0%<div class='sub'>对冲 0.0%</div></td></tr><tr><td><a href='../er_3_8_20_100b_top5_weekly/index.html'><strong>ER 3/8/20 (100B Top5 周换仓)</strong></a><div class='sub'>美股</div></td><td>2026-10-16<div class='sub'>信号 2026-10-16</div></td><td>2026-10-19</td><td><span class='buy'>买 0</span> / <span class='sell'>卖 0</span></td><td>+138.2%</td><td>+126.0%</td><td>-29.1%</td><td>2.19</td><td>30.60</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>100.0%<div class='sub'>对冲 0.0%</div></td></tr></tbody>
       </table></div></section>
     </main>
   </div></div>
@@ -109,7 +412,7 @@
         }
         if (running) {
           previousRunning = true;
-          button.textContent = "正在刷新全部看板...";
+          button.textContent = "正在刷新动量策略集合...";
           setStatus(`正在检查必要数据并重建集合页面，开始于 ${payload.last_started_at || "刚刚"}。`);
           return;
         }
@@ -118,20 +421,20 @@
           setStatus(`后台正在处理 ${payload.active_refresh_variant || "看板任务"}。`);
           return;
         }
-        button.textContent = "刷新全部看板";
+        button.textContent = "刷新动量策略集合";
         if (payload.last_error) {
           setStatus(`刷新失败：${payload.last_error}`);
           return;
         }
         if (previousRunning) {
-          setStatus("全部刷新完成，正在载入最新总览...");
+          setStatus("动量策略集合刷新完成，正在载入最新总览...");
           reloadAsCompleted();
           return;
         }
         if (payload.last_finished_at) {
           setStatus(`最近完成：${payload.last_finished_at}。`);
         } else {
-          setStatus("一次点击刷新当前集合中的 5 个策略与长线页。");
+          setStatus("仅刷新 5 个 ER 看板和长线趋势最强；不更新其他独立看板。");
         }
       }
 
@@ -161,14 +464,14 @@
       button.addEventListener("click", () => {
         triggerRefresh().catch((error) => {
           button.disabled = false;
-          button.textContent = "刷新全部看板";
+          button.textContent = "刷新动量策略集合";
           setStatus(`刷新请求失败：${error.message}`);
         });
       });
 
       const pageUrl = new URL(window.location.href);
       if (pageUrl.searchParams.get("refresh_done") === "1") {
-        setStatus("全部刷新完成，当前总览已更新。");
+        setStatus("动量策略集合刷新完成，当前总览已更新。");
         pageUrl.searchParams.delete("refresh_done");
         window.history.replaceState({}, "", pageUrl.toString());
       } else {
