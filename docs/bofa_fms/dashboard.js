@@ -28,6 +28,7 @@
   const monthsInScope = () => allMonths.filter(m => $('year-filter').value === 'all' || m.startsWith($('year-filter').value));
   const reportsInScope = () => reports.filter(r => monthsInScope().includes(r.month));
   const observations = reports.reduce((n,r) => n + r.risk.entries.length + r.crowding.entries.length,0);
+  let aaiiData = {records:[]};
   [
     ['已归档月报',`${reports.length} 期`,`${monthLabel(reports[0].month)} — ${monthLabel(reports.at(-1).month)}`],
     ['柱状数据',`${observations} 项`,'两类问卷 · 全部列示选项'],
@@ -133,13 +134,96 @@
         winners(report[metric].entries).forEach(entry => { const line = node('div'); line.append(document.createTextNode(names[entry.category].label+' '),node('span','archive-percent',pct(entry))); td.append(line); });
         tr.append(td);
       }
+      tr.append(node('td','archive-percent',report.cash ? `${report.cash.value}%` : '未收录'));
       const source = node('td','archive-source');
       if (local) { const a = node('a','','PDF ↗'); a.href = `/api/bofa-fms/source/${report.date}.pdf`; a.target = '_blank'; a.rel = 'noopener'; source.append(a); }
-      source.append(node('div','',`风险 p.${report.risk.page} / 交易 p.${report.crowding.page}`)); tr.append(source);
+      source.append(node('div','',`风险 p.${report.risk.page} / 交易 p.${report.crowding.page}${report.cash ? ` / 现金 p.${report.cash.page}` : ''}`)); tr.append(source);
       $('archive-body').append(tr);
     });
   }
-  function render() { renderMonths(); renderSnapshot('risk'); renderSnapshot('crowding'); renderHistory('risk'); renderHistory('crowding'); renderArchive(); }
+  const allocationColors = {stocks:'#317d88',bonds:'#7b719d',cash:'#aa8c38'};
+  const allocationNames = {stocks:'股票（含基金）',bonds:'债券（含基金）',cash:'现金'};
+  const monthNumber = m => {const [y,n]=m.split('-').map(Number);return y*12+n-1};
+  const numberMonth = n => `${Math.floor(n/12)}-${String(n%12+1).padStart(2,'0')}`;
+  const monthRange = (start,end) => Array.from({length:Math.max(0,monthNumber(end)-monthNumber(start)+1)},(_,i)=>numberMonth(monthNumber(start)+i));
+  const svgNode = (tag, attrs={},text) => {const e=document.createElementNS('http://www.w3.org/2000/svg',tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,String(v)));if(text!==undefined)e.textContent=text;return e};
+  function longBars(host, months, lookup, keys, maximum, palette, active, describe, pick, inspect) {
+    const width=Math.max(360,Math.round(host.clientWidth||960)), left=42,right=14,top=25,height=215,bottom=top+height,plotWidth=width-left-right;
+    const svg=svgNode('svg',{viewBox:`0 0 ${width} 285`,role:'group','aria-label':`${months[0]||''} 至 ${months.at(-1)||''}，每月一根柱，纵轴 0 至 ${maximum}%`});
+    for(let i=0;i<=4;i++){const value=maximum*i/4,y=bottom-height*i/4;svg.append(svgNode('line',{x1:left,x2:width-right,y1:y,y2:y,class:'long-grid'}),svgNode('text',{x:left-7,y:y+4,'text-anchor':'end',class:'long-axis'},`${value}%`))}
+    const unit=plotWidth/Math.max(1,months.length),barWidth=Math.max(.5,Math.min(32,unit*.8));
+    const yearStep=months.length>240?5:months.length>60?2:1;
+    months.forEach((m,index)=>{
+      const record=lookup.get(m), x=left+(index+.5)*unit, title=record?describe(record):`${m} · 缺少数据`;
+      const group=svgNode('g',{'data-month':m,tabindex:record?'0':'-1',role:record?'button':'img','aria-label':title,class:`long-month${m===active?' chart-selected':''}`});
+      group.append(svgNode('title',{},title));
+      group.append(svgNode('rect',{x:x-unit/2,y:top,width:unit,height:height,fill:'transparent',class:'month-hit'}));
+      let sum=0;
+      if(record){keys.forEach(key=>{const value=record[key],h=value/maximum*height;group.append(svgNode('rect',{x:x-barWidth/2,y:bottom-(sum+value)/maximum*height,width:barWidth,height:h,fill:palette[key],class:'long-bar'}));sum+=value});
+        if(months.length<=36&&index%Math.max(1,Math.ceil(32/unit))===0){group.append(svgNode('text',{x,y:bottom-sum/maximum*height-7,'text-anchor':'middle',class:'long-value'},`${sum.toFixed(1)}%`))}
+        const show=()=>inspect(record);group.addEventListener('mouseenter',show);group.addEventListener('focus',show);
+        group.addEventListener('click',()=>pick(record));group.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();pick(record)}});
+      }else group.append(svgNode('rect',{x:x-barWidth/2,y:bottom-3,width:barWidth,height:3,fill:'#d2cbbf'}));
+      svg.append(group);
+      const first=index===0,last=index===months.length-1;
+      const tick=months.length<=36?m.endsWith('-01')||m.endsWith('-07'):m.endsWith('-01')&&Number(m.slice(0,4))%yearStep===0;
+      if(first||last||tick&&x>left+60&&x<width-right-60){const label=first||last||months.length<=36?monthLabel(m):m.slice(0,4);svg.append(svgNode('text',{x:first?left:last?width-right:x,y:bottom+25,'text-anchor':first?'start':last?'end':'middle',class:'long-axis'},label))}
+    });
+    host.replaceChildren(svg);
+  }
+  function renderCash() {
+    const cash=selected.cash,prior=byMonth.get(monthBefore(selected.month))?.cash;
+    const lookup=new Map(reports.filter(r=>r.cash).map(r=>[r.month,{...r,cash:r.cash.value,source:r.cash}]));
+    const describe=r=>`${r.month} · 平均现金 ${r.cash}% · PDF 第 ${r.source.page} 页 / Chart ${r.source.chart}${r.source.note?' · '+r.source.note:''}`;
+    const inspect=r=>{$('cash-readout').textContent=describe(r)};
+    const maximum=Math.max(6,Math.ceil(Math.max(...reports.map(r=>r.cash?.value||0))/2)*2);
+    $('cash-coverage').textContent=`${reports[0].month} — ${reports.at(-1).month} · ${lookup.size} 期原始月报 · 现金 / AUM · 纵轴 0–${maximum}%`;
+    $('cash-note').textContent=cash?.note||'';
+    document.querySelector('[data-evidence="cash"]').disabled=!cash;
+    longBars($('cash-history'),allMonths,lookup,['cash'],maximum,{cash:'#547f75'},selected.month,describe,r=>{if($('year-filter').value!=='all'&&!r.month.startsWith($('year-filter').value))$('year-filter').value=r.month.slice(0,4);choose(byMonth.get(r.month))},inspect);
+    if(cash){inspect(lookup.get(selected.month));if(prior)$('cash-readout').textContent+=` · 较上月 ${cash.value-prior.value>0?'+':''}${(cash.value-prior.value).toFixed(1)} pp`}
+    else $('cash-readout').textContent=`${selected.month} · 尚未收录现金比例`;
+  }
+  let aaiiSelectedMonth=null;
+  function renderAaii() {
+    const rows=aaiiData.records,latest=rows.at(-1);
+    if(!latest){$('aaii-period').textContent='尚无历史数据，请点击刷新';$('aaii-chart').replaceChildren();return}
+    const first=rows[0].month,last=latest.month;
+    for(const id of ['aaii-start','aaii-end']){$(id).min=first;$(id).max=last}
+    if($('aaii-range').value!=='custom'){
+      const count=$('aaii-range').value;
+      $('aaii-start').value=count==='all'?first:numberMonth(Math.max(monthNumber(first),monthNumber(last)-Number(count)*12+1));
+      $('aaii-end').value=last;
+    }
+    const start=$('aaii-start').value||first,end=$('aaii-end').value||last;
+    if(start>end||start<first||end>last){$('aaii-chart').replaceChildren();$('aaii-readout').textContent=`请选择 ${first} 至 ${last} 内的月份，起始月份不能晚于结束月份。`;return}
+    const scoped=rows.filter(r=>r.month>=start&&r.month<=end),lookup=new Map(scoped.map(r=>[r.month,r]));
+    $('aaii-period').textContent=`${first} — ${last} · 官方历史月度数据 · 最新网页公布期 ${last}`;
+    $('aaii-count').textContent=`共 ${rows.length} 个月 · 当前 ${scoped.length} 个月`;
+    const metric=$('aaii-metric').value,keys=metric==='all'?['stocks','bonds','cash']:[metric];
+    const maximum=metric==='all'||metric==='stocks'?100:Math.max(10,Math.ceil(Math.max(...scoped.map(r=>r[metric]),0)/10)*10);
+    $('aaii-legend').replaceChildren(...keys.map(key=>{const item=node('span','legend-item'),dot=node('span','legend-dot');dot.style.background=allocationColors[key];item.append(dot,document.createTextNode(allocationNames[key]));return item}));
+    const describe=r=>`${r.month} · ${['stocks','bonds','cash'].map(k=>`${allocationNames[k]} ${r[k].toFixed(r.precision_decimals??2)}%`).join(' / ')}${r.date_note?' · '+r.date_note:''}${r.note?' · '+r.note:''}`;
+    const inspect=r=>{$('aaii-readout').textContent=describe(r)};
+    if(!lookup.has(aaiiSelectedMonth))aaiiSelectedMonth=scoped.at(-1)?.month;
+    longBars($('aaii-chart'),monthRange(start,end),lookup,keys,maximum,allocationColors,aaiiSelectedMonth,describe,r=>{aaiiSelectedMonth=r.month;renderAaii()},inspect);
+    if(lookup.has(aaiiSelectedMonth))inspect(lookup.get(aaiiSelectedMonth));else $('aaii-readout').textContent='所选区间无数据。';
+    const corrected=rows.filter(r=>r.date_note).length;
+    $('aaii-source-note').textContent=`历史表的股票、债券、现金合计列按官网原值展示，通常为 1 位小数；已归档月度网页为 2 位小数，同月优先保留网页精度。部分月份合计受四舍五入或原表误差影响，未作归一化。${corrected?`官网历史表 2006 / 2007 年的 ${corrected} 个月误标为 2005 年，已依据连续月序及前后 1 月年度锚点校正；原日期、行号及原文件均留存，悬停对应柱子可查看说明。`:''}`;
+  }
+  $('aaii-range').addEventListener('change',()=>renderAaii());
+  $('aaii-metric').addEventListener('change',()=>renderAaii());
+  for(const id of ['aaii-start','aaii-end'])$(id).addEventListener('change',()=>{$('aaii-range').value='custom';renderAaii()});
+  let resizeTimer;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{renderCash();renderAaii()},120)});
+  async function loadAaii(){const response=await fetch('aaii_data.json',{cache:'no-store'});if(!response.ok)throw new Error(`HTTP ${response.status}`);aaiiData=await response.json();renderAaii()}
+  let aaiiRunning=false,aaiiPolling=false;
+  function applyAaiiState(state){const running=state.state==='running';$('refresh-aaii').disabled=!local||running;$('refresh-aaii').textContent=running?'正在同步…':'刷新 AAII 历史与最新数据';$('aaii-status').textContent=state.message||'';$('aaii-status').dataset.state=state.state;if(aaiiRunning&&!running)loadAaii().catch(error=>{$('aaii-status').textContent=`配置读取失败：${error.message}`});aaiiRunning=running}
+  async function pollAaii(){if(!local||aaiiPolling)return;aaiiPolling=true;try{const response=await fetch('/api/bofa-fms/aaii/status',{cache:'no-store'});if(!response.ok)throw new Error(`HTTP ${response.status}`);applyAaiiState(await response.json())}catch(error){$('aaii-status').textContent=`状态读取失败：${error.message}`}finally{aaiiPolling=false}}
+  $('refresh-aaii').disabled=!local;
+  $('refresh-aaii').addEventListener('click',async()=>{if(aaiiRunning)return;aaiiRunning=true;$('refresh-aaii').disabled=true;try{const response=await fetch('/api/bofa-fms/aaii/refresh',{method:'POST'});const state=await response.json();if(!response.ok)throw new Error(state.error||`HTTP ${response.status}`);applyAaiiState(state)}catch(error){aaiiRunning=false;$('refresh-aaii').disabled=false;$('aaii-status').textContent=`抓取失败：${error.message}；已有历史数据已保留。`}});
+  loadAaii().catch(error=>{$('aaii-status').textContent=`配置读取失败：${error.message}`});
+  if(local){pollAaii();setInterval(()=>{if(aaiiRunning)pollAaii()},2000)}
+  function render() { renderMonths(); renderCash(); renderSnapshot('risk'); renderSnapshot('crowding'); renderHistory('risk'); renderHistory('crowding'); renderArchive(); }
   $('previous-month').addEventListener('click',() => {
     const previous = reports[reports.indexOf(selected)-1]; if (!previous) return;
     if ($('year-filter').value !== 'all' && !previous.month.startsWith($('year-filter').value)) $('year-filter').value = previous.month.slice(0,4);
@@ -156,7 +240,8 @@
   });
   document.querySelectorAll('[data-evidence]').forEach(button => button.addEventListener('click',() => {
     const metric = button.dataset.evidence; const chart = selected[metric];
-    $('evidence-title').textContent = `${selected.month} · ${metric === 'risk' ? '最大风险' : '最拥挤交易'}`;
+    if(!chart)return;
+    $('evidence-title').textContent = `${selected.month} · ${{risk:'最大风险',crowding:'最拥挤交易',cash:'平均现金比例'}[metric]}`;
     $('evidence-source').textContent = `${selected.source_file} · PDF 第 ${chart.page} 页 · Chart ${chart.chart}`;
     $('evidence-image').src = chart.evidence;
     $('evidence-image').alt = `${selected.date} Chart ${chart.chart} 原始图表`;
@@ -164,8 +249,11 @@
   }));
   $('close-evidence').addEventListener('click',() => $('evidence-dialog').close());
   $('export-csv').addEventListener('click',() => {
-    const rows = [['报告日期','月份','类别','中文项','原始英文项','占比(%)','数值精度','PDF页码','图号','源文件','SHA256']];
+    const rows = [['报告日期','月份','类别','中文项','原始英文项','占比(%)','数值精度','PDF页码','图号','源文件','SHA256','历史表工作表','历史表行号','原表月份','来源说明']];
     reports.forEach(report => ['risk','crowding'].forEach(metric => report[metric].entries.forEach(entry => rows.push([report.date,report.month,metric === 'risk' ? '最大风险' : '最拥挤交易',names[entry.category].label,entry.label_original,entry.value,entry.approximate ? '图形估读约数' : '原图或原文明示',report[metric].page,report[metric].chart,report.source_file,report.sha256]))));
+    reports.forEach(r=>{if(r.cash)rows.push([r.date,r.month,'美银平均现金 / AUM','现金','FMS average cash level (% of AUM)',r.cash.value,'原图或原文明示',r.cash.page,r.cash.chart,r.source_file,r.sha256])});
+    aaiiData.records.forEach(r=>[['stocks','股票（含基金）'],['bonds','债券（含基金）'],['cash','现金']].forEach(([key,label])=>rows.push([r.published_date||'',r.month,'AAII个人投资者配置',label,key,r[key],r.precision_decimals===1?'官网历史表（1位小数）':'官网网页（2位小数）','','',r.source_url,r.source_sha256||'',r.source_sheet||'',r.source_row||'',r.source_month||r.month,[r.date_note,r.note].filter(Boolean).join(' ')])));
+    rows.forEach(row=>{while(row.length<rows[0].length)row.push('')});
     const csv = '\ufeff'+rows.map(row=>row.map(value=>'"'+String(value).replaceAll('"','""')+'"').join(',')).join('\r\n');
     const url = URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));
     const a = node('a'); a.href = url; a.download = `bofa-fms-${reports[0].month}-${reports.at(-1).month}.csv`; a.click(); setTimeout(()=>URL.revokeObjectURL(url),1000);

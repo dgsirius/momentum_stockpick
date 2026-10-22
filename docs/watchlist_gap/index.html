@@ -319,28 +319,39 @@
     <div id="error" role="alert" hidden></div>
     <section class="urgent" aria-label="最新缺口提醒" id="urgent">
       <div class="urgent-heading"><div><div class="alert-kicker">重点关注 · 最近已收盘交易日</div><h2 id="alert-title">正在检查最新缺口</h2></div><button id="show-new">只看最新缺口 ↓</button></div>
-      <p id="alert-note">最新向上、向下缺口会在这里集中提醒，相关标的优先置顶。</p>
+      <p id="alert-note">最新向上、向下缺口会在这里集中提醒，相关标的醒目标注。</p>
       <div id="sessions" class="sessions"></div><div id="alerts" class="alert-grid"></div>
     </section>
     <section class="stats" aria-label="缺口统计概览">
       <button class="stat selected" data-filter="all" aria-pressed="true"><span>监控标的池</span><strong id="total">—</strong><small id="counts">港股 · 美股 · 韩股</small><small id="types">股票 — · 普通 ETF —</small></button>
-      <button class="stat" data-filter="new-up" aria-pressed="false"><span>最新向上缺口 · 标的</span><strong class="up-text" id="latest-up">—</strong><small>点击筛选最新向上跳空</small></button>
-      <button class="stat" data-filter="new-down" aria-pressed="false"><span>最新向下缺口 · 标的</span><strong class="down-text" id="latest-down">—</strong><small>点击筛选最新向下跳空</small></button>
-      <div class="stat"><span>当前未完全回补</span><strong id="gap-total">—</strong><small id="gap-counts">向上 — · 向下 —</small></div>
+      <div class="signal-stack" role="group" aria-label="向上缺口筛选">
+        <button class="stat signal-stat" data-filter="new-up" aria-pressed="false" title="筛选最近已收盘交易日新形成向上缺口的标的"><span class="signal-row"><span>↑ 最新向上</span><strong class="up-text" id="latest-up">—</strong></span><small>最近已收盘交易日</small></button>
+        <button class="stat signal-stat" data-filter="run-up" aria-pressed="false" title="筛选最新连续缺口方向为向上的标的"><span class="signal-row"><span>↑ 连续向上</span><strong class="up-text" id="run-up-count">—</strong></span><small>最近一组未补缺口</small></button>
+      </div>
+      <div class="signal-stack" role="group" aria-label="向下缺口筛选">
+        <button class="stat signal-stat" data-filter="new-down" aria-pressed="false" title="筛选最近已收盘交易日新形成向下缺口的标的"><span class="signal-row"><span>↓ 最新向下</span><strong class="down-text" id="latest-down">—</strong></span><small>最近已收盘交易日</small></button>
+        <button class="stat signal-stat" data-filter="run-down" aria-pressed="false" title="筛选最新连续缺口方向为向下的标的"><span class="signal-row"><span>↓ 连续向下</span><strong class="down-text" id="run-down-count">—</strong></span><small>最近一组未补缺口</small></button>
+      </div>
+      <div class="stat window-stat"><span>统计窗口</span>
+        <div class="window-options" role="group" aria-label="统计窗口">
+          <button type="button" data-window="400" class="selected" aria-pressed="true">400 日</button>
+          <button type="button" data-window="300" aria-pressed="false">300 日</button>
+          <button type="button" data-window="200" aria-pressed="false">200 日</button>
+          <button type="button" data-window="100" aria-pressed="false">100 日</button>
+          <button type="button" data-window="50" aria-pressed="false">50 日</button>
+        </div><small>已收盘交易日</small>
+      </div>
     </section>
     <div class="pool-note"><span id="pool-info"></span><a href="../leader_valuation/index.html">估值看板（独立股池）↗</a><span id="health"></span></div>
     <section class="controls" aria-label="筛选与排序">
       <div class="markets" role="group" aria-label="市场筛选"><button class="selected" data-market="ALL">全部 <span></span></button><button data-market="HK">港股 <span></span></button><button data-market="US">美股 <span></span></button><button data-market="KR">韩股 <span></span></button></div>
       <div class="tools">
-        <label class="window-picker">统计窗口 <select id="window" aria-label="统计窗口"><option value="400">400 个交易日</option><option value="300">300 个交易日</option><option value="200">200 个交易日</option><option value="100">100 个交易日</option><option value="50">50 个交易日</option></select></label>
         <input id="search" type="search" aria-label="搜索标的" placeholder="搜索名称 / 代码">
-        <label class="window-picker">连续方向 <select id="run-direction" aria-label="最新连续缺口方向"><option value="ALL">全部方向</option><option value="up">最新连续向上</option><option value="down">最新连续向下</option></select></label>
-        <select id="sort" aria-label="排序"><option value="recent">缺口日期从近到远</option><option value="up">向上缺口数量</option><option value="down">向下缺口数量</option><option value="run">连续缺口数量：从多到少</option><option value="run-asc">连续缺口数量：从少到多</option><option value="code">市场 / 代码</option></select>
       </div>
     </section>
-    <div class="list-meta"><span id="result-count"></span><span id="list-note">手动置顶优先 · 点击标的查看日 K 与剩余区间</span></div>
+    <div class="list-meta"><span id="result-count"></span><span id="list-note">手动置顶优先 · 连续缺口数量从多到少</span></div>
     <div id="pin-feedback" class="pin-feedback" role="status" aria-live="polite"></div>
-    <div class="table-shell"><table class="stock-table"><thead><tr><th>股票 / ETF</th><th>有效日 K</th><th>最新收盘</th><th>向上未补</th><th>向下未补</th><th title="从最近的未回补缺口往前计数，遇到反方向停止；无缺口日不打断">最新连续缺口</th><th>最新交易日提醒</th><th>详情</th></tr></thead><tbody id="stocks"></tbody></table><div id="empty" class="empty" hidden></div></div>
+    <div class="table-shell"><table class="stock-table"><thead><tr><th>股票 / ETF</th><th>有效日 K</th><th>最新收盘</th><th>向上未补</th><th>向下未补</th><th id="run-heading" aria-sort="descending" title="从最近的未回补缺口往前计数，遇到反方向停止；无缺口日不打断"><button type="button" class="sort-button" id="sort-run" aria-label="按最新连续缺口数量从多到少排序">最新连续缺口 <span aria-hidden="true">↓</span></button></th><th>最新交易日提醒</th><th>详情</th></tr></thead><tbody id="stocks"></tbody></table><div id="empty" class="empty" hidden></div></div>
     <div class="pagination"><div><span id="page-info"></span><label>每页 <select id="page-size" aria-label="每页标的数"><option value="24">24</option><option value="48">48</option><option value="999">全部</option></select></label></div><div><button id="previous">上一页</button><button id="next">下一页</button></div></div>
     <section id="detail" class="detail" aria-label="标的缺口详情" hidden>
       <div class="detail-heading"><div><div class="eyebrow">DAILY CANDLES · FORWARD ADJUSTED</div><h2 id="detail-title"></h2><p id="detail-meta"></p></div><div class="gap-legend"><span class="up-text">━ 向上剩余缺口</span><span class="down-text">━ 向下剩余缺口</span></div></div>
@@ -356,8 +367,9 @@
       <p>按高低价判断完全回补：向上缺口在后续最低价到达原始下边界时消失；向下缺口在后续最高价到达原始上边界时消失。部分回补仍计 1 个，并缩小剩余区间；同一标的可同时存在多个形成日期不同的缺口。</p>
       <p>统计窗口可选最近 400、300、200、100、50 根已收盘日 K（交易日，并非自然日）。只统计所选窗口内形成、至最后收盘仍未完全回补的缺口，更早形成的不计。窗口第一天的缺口也纳入；新上市或可得历史不足所选窗口时显示实际根数。切换窗口时，缺口数量、最新连续缺口和日 K 图同步更新。幅度 = 原始缺口宽度 ÷ 缺口形成前一根收盘价。</p>
       <p><b>最新连续缺口：</b>将所选窗口内当前未回补的缺口按形成日期从近到远排列，从最新一个开始，连续累计同方向缺口，遇到反方向停止。例如最近依次为向上、向上、向上、向下，显示“向上 × 3”；没有缺口的交易日不打断，已完全回补的缺口不参与。该计数是缺口个数，不要求连续几个交易日均跳空。</p>
-      <p>每只标的名称下方可手动置顶或取消置顶。设置独立保存在本机，刷新行情、重新打开页面或重启服务后仍保留，直到手动取消。置顶标的在“全部”和所属市场中优先排列；多只置顶标的之间按当前排序排列。置顶标的仍需符合当前搜索和方向等筛选条件。</p>
-      <p>“连续方向”筛选依据上述最新连续缺口的方向，可与市场、统计窗口及搜索组合使用。手动置顶优先级最高；连续缺口数量排序在置顶组内和其他标的中分别按数量排列，数量相同时按代码排序；其他排序在各组内保留最新交易日缺口优先排列。顶部最新缺口提醒随连续方向筛选同步更新。</p>
+      <p>每只标的名称下方可手动置顶或取消置顶。设置独立保存在本机，刷新行情、重新打开页面或重启服务后仍保留，直到手动取消。置顶标的在“全部”和所属市场中优先排列；多只置顶标的之间按连续缺口数量从多到少排列。置顶标的仍需符合当前筛选条件。</p>
+      <p>向上、向下各有两个筛选按钮：上方“最新”筛选最近已收盘交易日新形成缺口的标的，下方“连续”筛选最近一组未回补缺口的方向；按钮数字为符合条件的标的数量，随市场、统计窗口和搜索联动。四种条件单选，再次点击已选按钮或点击“监控标的池”恢复全部。顶部提醒随筛选同步更新。</p>
+      <p>列表默认按连续缺口数量从多到少排列，也可点击“最新连续缺口 ↓”表头应用该排序并返回第一页。手动置顶优先级最高；置顶组内和其他标的分别按数量降序排列，数量相同时按代码排序。</p>
       <p>本页独立从 OpenD「港股、美股」自选分组同步全部股票，不设市值门槛；韩股固定纳入三星电子与 SK 海力士。同时纳入普通正向、非杠杆 ETF。每次刷新本页都会同步自选股票和 ETF，无需先刷新估值看板。“自选股长期估值”继续使用自己的市值门槛。</p>
       <p>按 OpenD 返回的 STOCK、ETF 类型区分股票与基金；ETF 分支继续排除杠杆、反向 ETF、ETN 及已核实的非 ETF 产品，排除清单列明原因。ETF 分类结合产品名称及已核实的发行人信息。OpenD 归为 STOCK 的标的（包括 DXYZ）随全部自选股票纳入。</p>
       <p>港美股使用 OpenD 常规交易时段、前复权 OHLC；韩股使用 Yahoo Finance，并用同一复权因子调整开高低收，统一至最新已收盘价格基准。每次重新取完整窗口，不混用不同复权基准的旧 K 线。</p>
