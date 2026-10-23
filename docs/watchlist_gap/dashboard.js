@@ -7,7 +7,7 @@
   const stamp=s=>s?String(s).replace('T',' ').replace(/\+\d\d:\d\d$/,''):'尚未更新';
   const marketName={HK:'港股',US:'美股',KR:'韩股'};
   const filterName={all:'全部标的',new:'最新缺口','new-up':'最新向上','new-down':'最新向下','run-up':'连续向上','run-down':'连续向下'};
-  let data={rows:[],counts:{},market_sessions:{}},windowRows=[],windowSize=400,market='ALL',filter='all',page=1,pageSize=24,selected='',chartConfig=null,running=false,completedAt='',pollTimer;
+  let data={rows:[],counts:{},market_sessions:{}},windowRows=[],windowSize=50,market='ALL',filter='all',page=1,pageSize=24,selected='',chartConfig=null,running=false,completedAt='',pollTimer;
   let pinnedCodes=new Set(),pinsReady=false,pinSaving=false,pinRevision=0;
   const local=['127.0.0.1','localhost'].includes(location.hostname);
   const fresh=r=>!r.stale&&r.bar_date&&r.bar_date===r.expected_session;

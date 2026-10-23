@@ -312,7 +312,7 @@
 </script></nav></aside>
   <main>
     <header class="heading">
-      <div><div class="eyebrow">GAP MONITOR · <span id="eyebrow-window">400</span> SESSIONS</div><h1>自选股缺口监控</h1><p class="intro">最近 <span id="window-label">400</span> 根已收盘日 K，追踪尚未完全回补的向上与向下缺口。</p></div>
+      <div><div class="eyebrow">GAP MONITOR · <span id="eyebrow-window">50</span> SESSIONS</div><h1>自选股缺口监控</h1><p class="intro">最近 <span id="window-label">50</span> 根已收盘日 K，追踪尚未完全回补的向上与向下缺口。</p></div>
       <div class="refresh-box"><button class="primary" id="refresh">刷新日 K 与缺口 <span aria-hidden="true">↻</span></button><div id="updated" class="muted">正在读取数据…</div></div>
     </header>
     <div id="job" role="status" aria-live="polite" hidden><div class="job-top"><span id="job-message"></span><span id="job-count"></span></div><progress id="job-progress" max="100" value="0"></progress><small>刷新期间显示上次数据；完成后自动更新最新缺口提醒。关闭页面不影响刷新。</small></div>
@@ -334,11 +334,10 @@
       </div>
       <div class="stat window-stat"><span>统计窗口</span>
         <div class="window-options" role="group" aria-label="统计窗口">
-          <button type="button" data-window="400" class="selected" aria-pressed="true">400 日</button>
           <button type="button" data-window="300" aria-pressed="false">300 日</button>
           <button type="button" data-window="200" aria-pressed="false">200 日</button>
           <button type="button" data-window="100" aria-pressed="false">100 日</button>
-          <button type="button" data-window="50" aria-pressed="false">50 日</button>
+          <button type="button" data-window="50" class="selected" aria-pressed="true">50 日</button>
         </div><small>已收盘交易日</small>
       </div>
     </section>
@@ -365,7 +364,7 @@
     <details class="method"><summary>缺口定义、交易日期与数据口径</summary>
       <p><b>向上缺口：</b>当天最低价高于前一根日 K 最高价。<b>向下缺口：</b>当天最高价低于前一根日 K 最低价。只开盘跳空、当天已回补的情形不算整根 K 线缺口。</p>
       <p>按高低价判断完全回补：向上缺口在后续最低价到达原始下边界时消失；向下缺口在后续最高价到达原始上边界时消失。部分回补仍计 1 个，并缩小剩余区间；同一标的可同时存在多个形成日期不同的缺口。</p>
-      <p>统计窗口可选最近 400、300、200、100、50 根已收盘日 K（交易日，并非自然日）。只统计所选窗口内形成、至最后收盘仍未完全回补的缺口，更早形成的不计。窗口第一天的缺口也纳入；新上市或可得历史不足所选窗口时显示实际根数。切换窗口时，缺口数量、最新连续缺口和日 K 图同步更新。幅度 = 原始缺口宽度 ÷ 缺口形成前一根收盘价。</p>
+      <p>统计窗口可选最近 300、200、100、50 根已收盘日 K，默认 50 根（交易日，并非自然日）。只统计所选窗口内形成、至最后收盘仍未完全回补的缺口，更早形成的不计。窗口第一天的缺口也纳入；新上市或可得历史不足所选窗口时显示实际根数。切换窗口时，缺口数量、最新连续缺口和日 K 图同步更新。幅度 = 原始缺口宽度 ÷ 缺口形成前一根收盘价。</p>
       <p><b>最新连续缺口：</b>将所选窗口内当前未回补的缺口按形成日期从近到远排列，从最新一个开始，连续累计同方向缺口，遇到反方向停止。例如最近依次为向上、向上、向上、向下，显示“向上 × 3”；没有缺口的交易日不打断，已完全回补的缺口不参与。该计数是缺口个数，不要求连续几个交易日均跳空。</p>
       <p>每只标的名称下方可手动置顶或取消置顶。设置独立保存在本机，刷新行情、重新打开页面或重启服务后仍保留，直到手动取消。置顶标的在“全部”和所属市场中优先排列；多只置顶标的之间按连续缺口数量从多到少排列。置顶标的仍需符合当前筛选条件。</p>
       <p>向上、向下各有两个筛选按钮：上方“最新”筛选最近已收盘交易日新形成缺口的标的，下方“连续”筛选最近一组未回补缺口的方向；按钮数字为符合条件的标的数量，随市场、统计窗口和搜索联动。四种条件单选，再次点击已选按钮或点击“监控标的池”恢复全部。顶部提醒随筛选同步更新。</p>
