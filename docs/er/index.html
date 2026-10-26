@@ -52,27 +52,27 @@
 <main class="page">
   <section class="priority-board dashboard-pane" id="asset-priority" data-dashboard-pane>
     <header class="priority-header">
-      <div><div class="priority-kicker">HEAT × TREND × CONTENT ROI</div><h1><span class="priority-title-icon" aria-hidden="true">🧭</span><span data-i18n="priorityTitle">资产内容优先级</span></h1><p data-i18n="priorityIntro">把股票按“用户关注度”和“价格趋势强弱”放进四个象限：高热度、高趋势的优先做机会内容；高热度、低趋势的侧重风险提示；低热度、高趋势的用于精准激活；两者都低的暂不投入，左下角默认只显示数量，点击数量可展开查看。每只股票的热度和趋势详细数据，请查看第二个 Tab「热门追踪&amp;趋势判断」。</p></div>
+      <div><div class="priority-kicker">HEAT × TREND × CONTENT ROI</div><h1><span class="priority-title-icon" aria-hidden="true">🧭</span><span data-i18n="priorityTitle">资产内容优先级</span></h1><p data-i18n="priorityIntro">把股票按“用户关注度”和“价格趋势强弱”放进四个象限。纵轴使用近 20 个热度日的综合热度中位数，减少单次刷新尖峰的干扰；高热度中位数、高趋势的优先做机会内容，高热度中位数、低趋势的侧重风险提示，中低热度中位数、高趋势的用于精准激活。左下角默认只显示数量，点击数量可展开查看。最新热度与趋势详细数据请查看第二个 Tab「热门追踪&amp;趋势判断」。</p></div>
       <button class="priority-reset" id="priorityReset" type="button" data-i18n="priorityReset">↺ 回到默认值</button>
     </header>
     <div class="priority-controls" aria-label="四象限筛选参数">
-      <label class="priority-control" for="priorityMinHeat"><span><span data-i18n="priorityMinHeat">最低热度过滤</span><output id="priorityMinHeatValue">20</output></span><input id="priorityMinHeat" type="range" min="1" max="80" step="1" value="20"></label>
-      <label class="priority-control" for="priorityHighHeat"><span><span data-i18n="priorityHighHeat">高热度分界</span><output id="priorityHighHeatValue">50</output></span><input id="priorityHighHeat" type="range" min="2" max="100" step="1" value="50"></label>
+      <label class="priority-control" for="priorityMinHeat"><span><span data-i18n="priorityMinHeat">最低20日中位热度</span><output id="priorityMinHeatValue">20</output></span><input id="priorityMinHeat" type="range" min="1" max="80" step="1" value="20"></label>
+      <label class="priority-control" for="priorityHighHeat"><span><span data-i18n="priorityHighHeat">高中位热度分界</span><output id="priorityHighHeatValue">50</output></span><input id="priorityHighHeat" type="range" min="2" max="100" step="1" value="50"></label>
       <label class="priority-control" for="priorityMinTrend"><span><span data-i18n="priorityMinTrend">最低趋势过滤</span><output id="priorityMinTrendValue">0</output></span><input id="priorityMinTrend" type="range" min="0" max="90" step="10" value="0"></label>
       <label class="priority-control" for="priorityHighTrend"><span><span data-i18n="priorityHighTrend">高趋势分界</span><output id="priorityHighTrendValue">70</output></span><input id="priorityHighTrend" type="range" min="10" max="100" step="10" value="70"></label>
     </div>
     <div class="priority-summary"><span><b id="priorityIncluded">—</b> <span data-i18n="priorityIncluded">只进入象限</span></span><span><b id="priorityExcluded">—</b> <span data-i18n="priorityExcluded">只已排除</span></span><span class="priority-date" id="priorityDate">正在载入最新快照…</span></div>
-    <div class="priority-selection" id="prioritySelection" data-i18n="prioritySelectHint">点击 ticker 查看最新综合热度、趋势评分、入场质量与 ER 状态</div>
+    <div class="priority-selection" id="prioritySelection" data-i18n="prioritySelectHint">点击 ticker 查看近20日热度中位数、趋势评分、入场质量与 ER 状态</div>
     <div class="priority-matrix">
-      <div class="priority-y-axis" aria-hidden="true"><span data-i18n="axisHighHeat">高热度</span><span class="priority-y-axis-line"><b data-i18n="axisHeat">最新综合热度</b></span><span data-i18n="axisLowHeat">低热度</span></div>
+      <div class="priority-y-axis" aria-hidden="true"><span data-i18n="axisHighHeat">高中位热度</span><span class="priority-y-axis-line"><b data-i18n="axisHeat">近20日热度中位数</b></span><span data-i18n="axisLowHeat">低中位热度</span></div>
       <div class="priority-quadrants" aria-label="资产内容策略四象限">
       <article class="priority-quadrant risk">
-        <div class="priority-quadrant-head"><div><div class="priority-title-row"><span class="priority-badge">P0</span><h3 data-i18n="priorityRiskTitle">风险保护</h3></div><p class="priority-rule" data-i18n="priorityRiskRule">高热度 × 低趋势</p></div><span class="priority-count"><b id="priorityRiskCount">—</b> <span data-i18n="stocksUnit">只</span></span></div>
+        <div class="priority-quadrant-head"><div><div class="priority-title-row"><span class="priority-badge">P0</span><h3 data-i18n="priorityRiskTitle">风险保护</h3></div><p class="priority-rule" data-i18n="priorityRiskRule">高热度中位数 × 低趋势</p></div><span class="priority-count"><b id="priorityRiskCount">—</b> <span data-i18n="stocksUnit">只</span></span></div>
         <p class="priority-strategy"><span data-i18n="priorityRiskStrategy">面向持仓、近期买入和高意向人群；重点解释转弱原因、关键风险位、仓位管理、对冲与事件风险。</span><span class="priority-target" data-i18n="priorityRiskTarget">目标：降低追高与失控回撤，提升信任与留存。</span></p>
         <div class="priority-assets" id="priorityRiskAssets"></div>
       </article>
       <article class="priority-quadrant opportunity">
-        <div class="priority-quadrant-head"><div><div class="priority-title-row"><h3 data-i18n="priorityOpportunityTitle">机会内容主战场</h3></div><p class="priority-rule" data-i18n="priorityOpportunityRule">高热度 × 高趋势</p></div><span class="priority-count"><b id="priorityOpportunityCount">—</b> <span data-i18n="stocksUnit">只</span></span></div>
+        <div class="priority-quadrant-head"><div><div class="priority-title-row"><h3 data-i18n="priorityOpportunityTitle">机会内容主战场</h3></div><p class="priority-rule" data-i18n="priorityOpportunityRule">高热度中位数 × 高趋势</p></div><span class="priority-count"><b id="priorityOpportunityCount">—</b> <span data-i18n="stocksUnit">只</span></span></div>
         <p class="priority-strategy"><span data-i18n="priorityOpportunityStrategy">面向持仓、关注、浏览、同板块及相似偏好人群；重点解释趋势逻辑、催化与量价确认、入场情景、风险位和同类比较。</span><span class="priority-target" data-i18n="priorityOpportunityTarget">目标：兼顾交易转化、赚效体验与后续留存。</span></p>
         <div class="priority-opportunity-split">
           <section class="priority-opportunity-tier p0"><div class="priority-tier-head"><span class="priority-badge">P0</span><h4 data-i18n="priorityOpportunityP0">趋势评分 &lt; 95</h4><span class="priority-count"><b id="priorityOpportunityP0Count">—</b> <span data-i18n="stocksUnit">只</span></span></div><div class="priority-assets" id="priorityOpportunityP0Assets"></div></section>
@@ -80,11 +80,11 @@
         </div>
       </article>
       <article class="priority-quadrant nogo">
-        <div class="priority-quadrant-head"><div><div class="priority-title-row"><span class="priority-badge">NO-GO</span><h3 data-i18n="priorityNogoTitle">不做</h3></div><p class="priority-rule" data-i18n="priorityNogoRule">中低热度 × 低趋势</p></div><button class="priority-count priority-count-toggle" id="priorityNogoToggle" type="button" aria-expanded="false" aria-controls="priorityNogoAssets"><b id="priorityNogoCount">—</b> <span data-i18n="stocksUnit">只</span><span class="priority-disclosure" aria-hidden="true">⌄</span></button></div>
+        <div class="priority-quadrant-head"><div><div class="priority-title-row"><span class="priority-badge">NO-GO</span><h3 data-i18n="priorityNogoTitle">不做</h3></div><p class="priority-rule" data-i18n="priorityNogoRule">中低热度中位数 × 低趋势</p></div><button class="priority-count priority-count-toggle" id="priorityNogoToggle" type="button" aria-expanded="false" aria-controls="priorityNogoAssets"><b id="priorityNogoCount">—</b> <span data-i18n="stocksUnit">只</span><span class="priority-disclosure" aria-hidden="true">⌄</span></button></div>
         <div class="priority-assets priority-nogo-assets" id="priorityNogoAssets" hidden></div>
       </article>
       <article class="priority-quadrant activation">
-        <div class="priority-quadrant-head"><div><div class="priority-title-row"><span class="priority-badge">P0</span><h3 data-i18n="priorityActivationTitle">精准激活</h3></div><p class="priority-rule" data-i18n="priorityActivationRule">中低热度 × 高趋势</p></div><span class="priority-count"><b id="priorityActivationCount">—</b> <span data-i18n="stocksUnit">只</span></span></div>
+        <div class="priority-quadrant-head"><div><div class="priority-title-row"><span class="priority-badge">P0</span><h3 data-i18n="priorityActivationTitle">精准激活</h3></div><p class="priority-rule" data-i18n="priorityActivationRule">中低热度中位数 × 高趋势</p></div><span class="priority-count"><b id="priorityActivationCount">—</b> <span data-i18n="stocksUnit">只</span></span></div>
         <p class="priority-strategy"><span data-i18n="priorityActivationStrategy">面向相关持仓、同板块或竞品持仓、观察名单与相似偏好人群；解释趋势形成、相对强势、催化路径和关键价位，小范围验证后再扩量。</span><span class="priority-target" data-i18n="priorityActivationTarget">目标：激活存量用户，发现下一批潜在热点。</span></p>
         <div class="priority-assets" id="priorityActivationAssets"></div>
       </article>
@@ -113,14 +113,14 @@
 <script>
 const textEN={
   navPriority:'Asset Content Priority',navHot:'Hot Tracking & Trend Assessment',navPain:'Popular-symbol Trading Pain',navEr:'Residual Momentum',heroTitle:'🔥 Hot Tracking & 🎯 Trend Assessment',
-  priorityTitle:'Asset Content Priority',priorityIntro:'Stocks are placed into four quadrants using user attention and price-trend strength: high heat with a strong trend gets opportunity content first; high heat with a weak trend calls for risk guidance; low heat with a strong trend is used for targeted activation; stocks low on both are deprioritized. The lower-left quadrant shows only its count by default; click the count to reveal the stocks. See the second tab, “Hot Tracking & Trend Assessment,” for each stock’s detailed heat and trend data.',
-  priorityReset:'↺ Restore Defaults',priorityMinHeat:'Minimum Heat Filter',priorityHighHeat:'High-Heat Threshold',priorityMinTrend:'Minimum Trend Filter',priorityHighTrend:'High-Trend Threshold',
-  priorityIncluded:'in quadrants',priorityExcluded:'filtered out',prioritySelectHint:'Click a ticker to view Latest Composite Heat, Trend Score, Entry Quality, and ER status',stocksUnit:'stocks',
-  axisHighTrend:'High Trend',axisLowTrend:'Low Trend',axisTrend:'Trend Score',axisLowHeat:'Low Heat',axisHighHeat:'High Heat',axisHeat:'Latest Composite Heat',
-  priorityRiskTitle:'Risk Protection',priorityRiskRule:'High Heat × Low Trend',priorityRiskStrategy:'For holders, recent buyers, and high-intent users; explain weakening drivers, key risk levels, position management, hedging, and event risk.',priorityRiskTarget:'Goal: reduce chasing and uncontrolled drawdowns while strengthening trust and retention.',
-  priorityOpportunityTitle:'Opportunity Content Main Field',priorityOpportunityRule:'High Heat × High Trend',priorityOpportunityStrategy:'For holders, followers, viewers, same-sector, and similar-preference users; explain the trend thesis, catalysts and price-volume confirmation, entry scenarios, risk levels, and peer comparisons.',priorityOpportunityTarget:'Goal: combine trading conversion, earning experience, and subsequent retention.',priorityOpportunityP0:'Trend Score < 95',priorityOpportunityS:'Trend Score ≥ 95',
-  priorityNogoTitle:'No-Go',priorityNogoRule:'Medium/Low Heat × Low Trend',
-  priorityActivationTitle:'Precision Activation',priorityActivationRule:'Medium/Low Heat × High Trend',priorityActivationStrategy:'For related holders, same-sector or competitor holders, watchlists, and similar-preference users; explain trend formation, relative strength, catalyst paths, and key levels, then scale only after a targeted test.',priorityActivationTarget:'Goal: activate existing users and discover the next potential hot assets.',
+  priorityTitle:'Asset Content Priority',priorityIntro:'Stocks are placed into four quadrants using user attention and price-trend strength. The vertical axis uses the median composite heat over the latest 20 heat days, reducing noise from one-off refresh spikes. High median heat with a strong trend gets opportunity content first; high median heat with a weak trend calls for risk guidance; medium/low median heat with a strong trend is used for targeted activation. The lower-left quadrant shows only its count by default; click the count to reveal the stocks. See the second tab, “Hot Tracking & Trend Assessment,” for latest heat and detailed trend data.',
+  priorityReset:'↺ Restore Defaults',priorityMinHeat:'Minimum 20-Day Median Heat',priorityHighHeat:'High Median-Heat Threshold',priorityMinTrend:'Minimum Trend Filter',priorityHighTrend:'High-Trend Threshold',
+  priorityIncluded:'in quadrants',priorityExcluded:'filtered out',prioritySelectHint:'Click a ticker to view 20-Day Median Heat, Trend Score, Entry Quality, and ER status',stocksUnit:'stocks',
+  axisHighTrend:'High Trend',axisLowTrend:'Low Trend',axisTrend:'Trend Score',axisLowHeat:'Low Median Heat',axisHighHeat:'High Median Heat',axisHeat:'20-Day Median Heat',
+  priorityRiskTitle:'Risk Protection',priorityRiskRule:'High Median Heat × Low Trend',priorityRiskStrategy:'For holders, recent buyers, and high-intent users; explain weakening drivers, key risk levels, position management, hedging, and event risk.',priorityRiskTarget:'Goal: reduce chasing and uncontrolled drawdowns while strengthening trust and retention.',
+  priorityOpportunityTitle:'Opportunity Content Main Field',priorityOpportunityRule:'High Median Heat × High Trend',priorityOpportunityStrategy:'For holders, followers, viewers, same-sector, and similar-preference users; explain the trend thesis, catalysts and price-volume confirmation, entry scenarios, risk levels, and peer comparisons.',priorityOpportunityTarget:'Goal: combine trading conversion, earning experience, and subsequent retention.',priorityOpportunityP0:'Trend Score < 95',priorityOpportunityS:'Trend Score ≥ 95',
+  priorityNogoTitle:'No-Go',priorityNogoRule:'Medium/Low Median Heat × Low Trend',
+  priorityActivationTitle:'Precision Activation',priorityActivationRule:'Medium/Low Median Heat × High Trend',priorityActivationStrategy:'For related holders, same-sector or competitor holders, watchlists, and similar-preference users; explain trend formation, relative strength, catalyst paths, and key levels, then scale only after a targeted test.',priorityActivationTarget:'Goal: activate existing users and discover the next potential hot assets.',
   rulesOpen:'View Full Methodology',rulesSummary:'From why a stock enters the pool to why it becomes a candidate',
   refresh:'Refresh OpenD',refreshNote:'Available only on Macs with the local refresh service installed',
   pool:'Stock Pool',active:'Qualified Now',retained:'Retained',candidates:'Trend Score Candidates',
@@ -258,6 +258,8 @@ const priorityCounts={
   risk:document.getElementById('priorityRiskCount'),
   nogo:document.getElementById('priorityNogoCount')
 };
+function priorityHeat(row){if(hasNumber(row?.heat_median_20d))return Number(row.heat_median_20d);const values=(row?.heat_history||[]).slice(-20).map(point=>Number(point?.heat)).filter(Number.isFinite).sort((a,b)=>a-b);if(!values.length)return null;const middle=Math.floor(values.length/2);return values.length%2?values[middle]:(values[middle-1]+values[middle])/2}
+function fmtPriorityHeat(row){const value=priorityHeat(row);return hasNumber(value)?String(Math.round(Number(value))):'—'}
 const priorityNogoToggle=document.getElementById('priorityNogoToggle'),priorityNogoAssets=document.getElementById('priorityNogoAssets');
 function updatePriorityNogoToggleLabel(){const expanded=priorityNogoToggle.getAttribute('aria-expanded')==='true',count=priorityCounts.nogo.textContent||'0',action=expanded?L('收起不做象限标的','Collapse No-Go assets'):L('查看不做象限标的','View No-Go assets'),label=L(`${action}，共 ${count} 只`,`${action}, ${count} stocks`);priorityNogoToggle.title=label;priorityNogoToggle.setAttribute('aria-label',label)}
 function setPriorityNogoExpanded(expanded){const next=Boolean(expanded)&&!priorityNogoToggle.disabled;priorityNogoToggle.setAttribute('aria-expanded',String(next));priorityNogoAssets.hidden=!next;updatePriorityNogoToggleLabel()}
@@ -271,7 +273,7 @@ function priorityValues(){
   return values
 }
 function priorityCategory(row,values){
-  const highHeat=Number(row.heat)>=values.highHeat,highTrend=Number(row.opportunity_score)>=values.highTrend;
+  const medianHeat=priorityHeat(row),highHeat=Number(medianHeat)>=values.highHeat,highTrend=Number(row.opportunity_score)>=values.highTrend;
   if(highHeat&&highTrend)return Number(row.opportunity_score)>=95?'opportunityS':'opportunityP0';
   if(!highHeat&&highTrend)return'activation';
   if(highHeat&&!highTrend)return'risk';
@@ -282,30 +284,30 @@ function priorityCategoryLabel(key){
 }
 function selectPriorityRow(row,key){
   const entry=row.entry?.quality_grade||'—',er=row.er_rank?L(`ER 第 ${row.er_rank} 名`,`ER No. ${row.er_rank}`):L('ER 当前未上榜','Not currently ranked in ER'),candidate=row.trend_candidate?L(' · 核心候选',' · Core Candidate'):'';
-  document.getElementById('prioritySelection').innerHTML=`<strong>${escapeHTML(row.ticker)}</strong> · ${escapeHTML(localizedCompanyName(row))} · ${escapeHTML(priorityCategoryLabel(key))} · ${L('最新综合热度','Latest Composite Heat')} ${escapeHTML(fmtHeat(row.heat))} · ${L('趋势评分','Trend Score')} ${fmt(row.opportunity_score)} · ${L('入场质量','Entry Quality')} ${escapeHTML(entry)} · ${escapeHTML(er)}${candidate}`
+  document.getElementById('prioritySelection').innerHTML=`<strong>${escapeHTML(row.ticker)}</strong> · ${escapeHTML(localizedCompanyName(row))} · ${escapeHTML(priorityCategoryLabel(key))} · ${L('近20日热度中位数','20-Day Median Heat')} ${escapeHTML(fmtPriorityHeat(row))} · ${L('趋势评分','Trend Score')} ${fmt(row.opportunity_score)} · ${L('入场质量','Entry Quality')} ${escapeHTML(entry)} · ${escapeHTML(er)}${candidate}`
 }
 function renderPriorityAsset(row,key){
   const button=document.createElement('button');
   button.type='button';button.className=`priority-asset${row.trend_candidate?' candidate':''}`;button.textContent=row.ticker;
-  const label=`${row.ticker} ${localizedCompanyName(row)} · ${L('最新综合热度','Latest Composite Heat')} ${fmtHeat(row.heat)} · ${L('趋势评分','Trend Score')} ${fmt(row.opportunity_score)}`;
+  const label=`${row.ticker} ${localizedCompanyName(row)} · ${L('近20日热度中位数','20-Day Median Heat')} ${fmtPriorityHeat(row)} · ${L('趋势评分','Trend Score')} ${fmt(row.opportunity_score)}`;
   button.title=label;button.setAttribute('aria-label',label);button.addEventListener('click',()=>selectPriorityRow(row,key));
   return button
 }
 function renderPriority(){
   const values=priorityValues(),rows=Array.isArray(payload.rows)?payload.rows:[],grouped={opportunityP0:[],opportunityS:[],activation:[],risk:[],nogo:[]},excluded=[];
   rows.forEach(row=>{
-    if(!hasNumber(row.heat)||!hasNumber(row.opportunity_score)||Number(row.heat)<values.minHeat||Number(row.opportunity_score)<values.minTrend){excluded.push(row);return}
+    const medianHeat=priorityHeat(row);if(!hasNumber(medianHeat)||!hasNumber(row.opportunity_score)||Number(medianHeat)<values.minHeat||Number(row.opportunity_score)<values.minTrend){excluded.push(row);return}
     const key=priorityCategory(row,values);grouped[key].push(row)
   });
-  grouped.opportunityP0.sort((a,b)=>Number(b.opportunity_score)-Number(a.opportunity_score)||Number(b.heat)-Number(a.heat));
-  grouped.opportunityS.sort((a,b)=>Number(b.opportunity_score)-Number(a.opportunity_score)||Number(b.heat)-Number(a.heat));
-  grouped.activation.sort((a,b)=>Number(b.opportunity_score)-Number(a.opportunity_score)||Number(b.heat)-Number(a.heat));
-  grouped.risk.sort((a,b)=>Number(b.heat)-Number(a.heat)||Number(b.opportunity_score)-Number(a.opportunity_score));
-  grouped.nogo.sort((a,b)=>Number(b.opportunity_score)-Number(a.opportunity_score)||Number(b.heat)-Number(a.heat));
+  grouped.opportunityP0.sort((a,b)=>Number(b.opportunity_score)-Number(a.opportunity_score)||Number(priorityHeat(b))-Number(priorityHeat(a)));
+  grouped.opportunityS.sort((a,b)=>Number(b.opportunity_score)-Number(a.opportunity_score)||Number(priorityHeat(b))-Number(priorityHeat(a)));
+  grouped.activation.sort((a,b)=>Number(b.opportunity_score)-Number(a.opportunity_score)||Number(priorityHeat(b))-Number(priorityHeat(a)));
+  grouped.risk.sort((a,b)=>Number(priorityHeat(b))-Number(priorityHeat(a))||Number(b.opportunity_score)-Number(a.opportunity_score));
+  grouped.nogo.sort((a,b)=>Number(b.opportunity_score)-Number(a.opportunity_score)||Number(priorityHeat(b))-Number(priorityHeat(a)));
   document.getElementById('priorityIncluded').textContent=String(rows.length-excluded.length);
   document.getElementById('priorityExcluded').textContent=String(excluded.length);
   document.getElementById('priorityOpportunityCount').textContent=String(grouped.opportunityP0.length+grouped.opportunityS.length);
-  document.getElementById('priorityDate').textContent=payload.heat_as_of?L(`热度数据 ${payload.heat_as_of}`,`Heat data ${payload.heat_as_of}`):L('正在载入最新快照…','Loading latest snapshot…');
+  document.getElementById('priorityDate').textContent=payload.heat_as_of?L(`20日热度中位数截至 ${payload.heat_as_of}`,`20-day median heat through ${payload.heat_as_of}`):L('正在载入最新快照…','Loading latest snapshot…');
   Object.entries(grouped).forEach(([key,valuesForKey])=>{
     priorityCounts[key].textContent=String(valuesForKey.length);
     const target=priorityTargets[key];if(!target)return;target.replaceChildren();
