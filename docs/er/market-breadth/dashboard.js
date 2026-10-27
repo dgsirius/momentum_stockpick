@@ -95,8 +95,11 @@
     byId('asof').textContent = L(`数据截至 ${data.as_of} · 美股已完成交易日`, `As of ${data.as_of} · Completed US session`);
     byId('balance').textContent = latest.new_highs > 0 ? L(`新低 / 新高 ${(latest.new_lows / latest.new_highs).toFixed(2)} 倍`, `Lows / highs ${(latest.new_lows / latest.new_highs).toFixed(2)}×`) : L('新高为零', 'No new highs');
     byId('coverage').textContent = L(`历史覆盖 ${fmt(data.histories_count)} / ${fmt(data.universe_count)} 只普通股及 ADR（${data.coverage_pct}%）· 满一年后纳入统计`, `Histories: ${fmt(data.histories_count)} / ${fmt(data.universe_count)} common stocks & ADRs (${data.coverage_pct}%) · One-year seasoning`);
+    byId('classificationSource').hidden = data.classification_source_url !== 'https://cefexplorer.com/cefs';
+    byId('classificationSource').textContent = L('基金分类：Closed End Fund Explorer', 'Fund classifications: Closed End Fund Explorer');
     const age = Math.floor((Date.now() - Date.parse(`${data.as_of}T21:00:00Z`)) / 86400000);
     byId('status').textContent = data.refresh_error ? L('本次独立行情刷新失败，当前显示上次成功快照。', 'Refresh failed. Showing the last successful snapshot.') : age > 5 ? L('数据已超过5个自然日未更新，请留意统计日期。', 'Data is over five calendar days old. Check the as-of date.') : data.coverage_pct < 100 ? L(`有 ${data.missing_count + data.stale_count} 只证券缺少本次有效历史，已排除，未按零计入。`, `${data.missing_count + data.stale_count} securities lack valid current histories and are excluded, not counted as zero.`) : '';
+    if (data.metadata_warning && !data.refresh_error) byId('status').textContent += ' ' + L('基金分类暂用最近已校验清单，行情已重新获取。', 'Fund classification uses a recently verified list; daily prices have been refreshed.');
     render();
   }
   updateLanguage();

@@ -344,4 +344,5 @@ sortButtons.forEach(button=>button.addEventListener('click',()=>{sortMode=sortMo
 function setLanguage(lang){currentLang=lang==='en'?'en':'zh';try{localStorage.setItem('hotTrendLanguage',currentLang)}catch(_){}hideMetricTooltip();applyStaticLanguage();updateSortControls();updateLoadedText();renderPriority();render()}
 document.getElementById('langToggle').addEventListener('click',()=>setLanguage(currentLang==='zh'?'en':'zh'));
 applyStaticLanguage();updateSortControls();updateLoadedText();load();
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)load()});
 </script></body></html>
