@@ -10,7 +10,8 @@
 </head>
 <body>
 <div class="wrap"><div class="layout">
-  <aside class="sidebar"><div class="sidebar-title">策略目录</div><div class="nav-links"><a class='nav-link' href='../overview/index.html'>策略总览</a>
+  <aside class="sidebar"><div class="sidebar-title">策略目录</div><div class="nav-links"><a class='nav-link' href='../soxs_paper/index.html'>SOXS 做空试跑</a>
+<a class='nav-link' href='../overview/index.html'>策略总览</a>
 <a class='nav-link' href='../er_3_8_20_100b_daily/index.html'>ER 3/8/20 (100B 日调仓)</a>
 <a class='nav-link' href='../etf_er_3_8_20_whitelist/index.html'>ETF ER 3/8/20 (白名单日调仓 Top5)</a>
 <a class='nav-link' href='../hk_er_3_8_20_20b_stock_connect/index.html'>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</a>
@@ -74,7 +75,7 @@
         seen.add(item.id);
         return true;
       }).map(item => ({id: item.id, name: String(item.name || '').trim().slice(0, 100) || '未命名分组', parent: typeof item.parent === 'string' ? item.parent : null, type: item.type === 'group' ? 'group' : 'page'}));
-      defaults.forEach(item => { if (!seen.has(item.id)) result.push({...item}); });
+      defaults.forEach(item => { if (!seen.has(item.id)) { if (item.id.endsWith('/soxs_paper/index.html')) result.unshift({...item}); else result.push({...item}); } });
       const groups = new Map(result.filter(item => item.type === 'group').map(item => [item.id, item]));
       result.forEach(item => {
         const visited = new Set([item.id]);
@@ -347,6 +348,7 @@
       <div class="section-head"><div><h2>历史柱状对比</h2><p>从左到右按月排列；选择类别，可看同一主题的关注度变化。点击柱子回到当月。</p></div><span class="muted">纵轴统一 0–100%</span></div>
       <article class="panel history-panel"><div class="section-head"><div><span class="chart-tag risk-text">TAIL RISK</span><h3>最大风险 · 时间序列</h3></div><label>关注类别 <select id="risk-category" aria-label="最大风险关注类别"></select></label></div><div id="risk-legend" class="legend"></div><div class="history-shell"><div class="y-axis"><span>100%</span><span>50%</span><span>0%</span></div><div id="risk-history" class="history-scroll" tabindex="0" aria-label="最大风险历史柱状图"></div></div></article>
       <article class="panel history-panel"><div class="section-head"><div><span class="chart-tag crowding-text">CROWDED TRADE</span><h3>最拥挤交易 · 时间序列</h3></div><label>关注类别 <select id="crowding-category" aria-label="最拥挤交易关注类别"></select></label></div><div id="crowding-legend" class="legend"></div><div class="history-shell"><div class="y-axis"><span>100%</span><span>50%</span><span>0%</span></div><div id="crowding-history" class="history-scroll" tabindex="0" aria-label="最拥挤交易历史柱状图"></div></div></article>
+      <article class="panel history-panel"><div class="section-head"><div><span class="chart-tag crowding-text">SECOND MOST CROWDED TRADE</span><h3>第二拥挤交易 · 时间序列</h3></div><label>关注类别 <select id="crowding-second-category" aria-label="第二拥挤交易关注类别"></select></label></div><div id="crowding-second-legend" class="legend"></div><div class="history-shell"><div class="y-axis"><span>100%</span><span>50%</span><span>0%</span></div><div id="crowding-second-history" class="history-scroll" tabindex="0" aria-label="第二拥挤交易历史柱状图"></div></div></article>
     </section>
     <section class="panel archive-panel"><div class="section-head"><div><h2>研报档案</h2><p>按发布日期升序 · 并列第一完整保留</p></div><span id="archive-count" class="muted"></span></div><div class="table-scroll"><table><thead><tr><th>发布日期</th><th>首要风险</th><th>最拥挤交易</th><th>平均现金</th><th>来源</th></tr></thead><tbody id="archive-body"></tbody></table></div></section>
     <section class="methodology"><h2>统计口径与后续更新</h2><div class="method-grid"><p><strong>只收录当期原始图表。</strong>使用 Global FMS 全月样本，不把前月对比柱、区域调查或选后子样本混入当月。每个读数保留英文原项、PDF 页码及图号。</p><p><strong>保留缺失与精度。</strong>未收到的月份留空；当期未列出的类别视为“未列示”。≈ 表示从未标数值的柱子估读。问卷选项和受访样本会变化，占比不是事件发生概率，也不是仓位比例。</p><p><strong>同义项谨慎对齐。</strong>如 AI equity bubble / AI bubble 及 Long Magnificent 7 stocks / Long Magnificent 7 合并。普通通胀、第二波通胀、通胀迫使加息分别保留。原始英文可在条形标签和导出中查看。</p><p id="coverage-note"></p></div><p class="update-note">点击“导入月报 PDF”，自动识别报告月份、提取最大风险、最拥挤交易及平均现金比例并追加到时间序列。重复文件不重复统计；解析不完整或同月存在不同版本时提示核对，已有历史数据保持不变。新出现的选项会保留原始英文名称。</p></section>

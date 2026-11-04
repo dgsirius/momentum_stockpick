@@ -126,7 +126,8 @@
     <div class="layout">
       <aside class="sidebar">
         <div class="sidebar-title">策略目录</div>
-        <div class="nav-links"><a class='nav-link' href='../overview/index.html'>策略总览</a>
+        <div class="nav-links"><a class='nav-link' href='../soxs_paper/index.html'>SOXS 做空试跑</a>
+<a class='nav-link' href='../overview/index.html'>策略总览</a>
 <a class='nav-link' href='../er_3_8_20_100b_daily/index.html'>ER 3/8/20 (100B 日调仓)</a>
 <a class='nav-link' href='../etf_er_3_8_20_whitelist/index.html'>ETF ER 3/8/20 (白名单日调仓 Top5)</a>
 <a class='nav-link' href='../hk_er_3_8_20_20b_stock_connect/index.html'>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</a>
@@ -190,7 +191,7 @@
         seen.add(item.id);
         return true;
       }).map(item => ({id: item.id, name: String(item.name || '').trim().slice(0, 100) || '未命名分组', parent: typeof item.parent === 'string' ? item.parent : null, type: item.type === 'group' ? 'group' : 'page'}));
-      defaults.forEach(item => { if (!seen.has(item.id)) result.push({...item}); });
+      defaults.forEach(item => { if (!seen.has(item.id)) { if (item.id.endsWith('/soxs_paper/index.html')) result.unshift({...item}); else result.push({...item}); } });
       const groups = new Map(result.filter(item => item.type === 'group').map(item => [item.id, item]));
       result.forEach(item => {
         const visited = new Set([item.id]);
@@ -434,15 +435,15 @@
             <div class="subtitle">从当前集合 5 个 ER 看板中抽取最新周线 EMA200 偏离度最大的 15 只标的；SOXX / EWY / QQQ / 000660 / 005930 不参与排名，作为常驻标的追加展示。</div>
           </div>
           <div class="generated">
-            <div>生成时间：2026-10-23 13:42:07 CST</div>
+            <div>生成时间：2026-11-04 14:32:57 CST</div>
             <div>数据刷新统一在策略总览执行。</div>
           </div>
         </section>
 
         <section class="stats">
           <div class="stat"><div class="label">展示标的数</div><div class="value">20</div></div>
-          <div class="stat"><div class="label">最新快照日</div><div class="value">2026-10-23</div></div>
-          <div class="stat"><div class="label">最高周线偏离</div><div class="value">SNDK +162.4%</div></div>
+          <div class="stat"><div class="label">最新快照日</div><div class="value">2026-11-04</div></div>
+          <div class="stat"><div class="label">最高周线偏离</div><div class="value">MU +150.7%</div></div>
           <div class="stat"><div class="label">最深单标的两年回撤</div><div class="value">CRWD -77.1%</div></div>
         </section>
 
@@ -451,26 +452,26 @@
           <p class="meta">排序字段为各标的最新周线 close / EMA200 - 1。SOXX / EWY / QQQ / 000660 / 005930 不占排名名额，固定追加展示；来源列展示该标的出现过的看板。</p>
           <table>
             <thead><tr><th>Rank</th><th>标的</th><th>名称</th><th>来源看板</th><th>周线 EMA200 偏离</th><th>最新两年最大回撤</th><th>日期</th></tr></thead>
-            <tbody><tr><td>1</td><td><strong>SNDK</strong><div class='ticker'>US.SNDK</div></td><td>闪迪</td><td>ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (100B Top5 周换仓)</td><td>+162.4%</td><td>-56.5%</td><td>2026-10-23</td></tr>
-<tr><td>2</td><td><strong>MU</strong><div class='ticker'>US.MU</div></td><td>美光科技</td><td>ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (100B Top5 周换仓)</td><td>+159.4%</td><td>-42.8%</td><td>2026-10-23</td></tr>
-<tr><td>3</td><td><strong>DELL</strong><div class='ticker'>US.DELL</div></td><td>戴尔科技</td><td>ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (100B Top5 周换仓)</td><td>+155.5%</td><td>-50.1%</td><td>2026-10-23</td></tr>
-<tr><td>4</td><td><strong>01308</strong><div class='ticker'>HK.01308</div></td><td>海丰国际</td><td>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</td><td>+125.9%</td><td>-32.8%</td><td>2026-10-23</td></tr>
-<tr><td>5</td><td><strong>AMD</strong><div class='ticker'>US.AMD</div></td><td>美国超微公司</td><td>ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (100B Top5 周换仓)</td><td>+120.5%</td><td>-53.0%</td><td>2026-10-23</td></tr>
-<tr><td>6</td><td><strong>CRWD</strong><div class='ticker'>US.CRWD</div></td><td>CrowdStrike</td><td>ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (100B Top5 周换仓)</td><td>+116.8%</td><td>-77.1%</td><td>2026-10-23</td></tr>
-<tr><td>7</td><td><strong>MRVL</strong><div class='ticker'>US.MRVL</div></td><td>迈威尔科技</td><td>ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (100B Top5 周换仓)</td><td>+106.9%</td><td>-60.8%</td><td>2026-10-23</td></tr>
-<tr><td>8</td><td><strong>STX</strong><div class='ticker'>US.STX</div></td><td>STX</td><td>ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (100B Top5 周换仓)</td><td>+104.9%</td><td>-41.6%</td><td>2026-10-23</td></tr>
-<tr><td>9</td><td><strong>01888</strong><div class='ticker'>HK.01888</div></td><td>01888</td><td>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</td><td>+102.4%</td><td>-72.0%</td><td>2026-10-23</td></tr>
-<tr><td>10</td><td><strong>PBR</strong><div class='ticker'>US.PBR</div></td><td>巴西石油公司</td><td>ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (100B Top5 周换仓)</td><td>+96.6%</td><td>-27.4%</td><td>2026-10-23</td></tr>
-<tr><td>11</td><td><strong>PLTR</strong><div class='ticker'>US.PLTR</div></td><td>Palantir</td><td>ER 3/8/20 (100B Top5 周换仓)</td><td>+95.7%</td><td>-48.2%</td><td>2026-10-23</td></tr>
-<tr><td>12</td><td><strong>01070</strong><div class='ticker'>HK.01070</div></td><td>TCL电子</td><td>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</td><td>+93.7%</td><td>-31.5%</td><td>2026-10-23</td></tr>
-<tr><td>13</td><td><strong>WDC</strong><div class='ticker'>US.WDC</div></td><td>WDC</td><td>ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (100B Top5 周换仓)</td><td>+93.4%</td><td>-55.5%</td><td>2026-10-23</td></tr>
-<tr><td>14</td><td><strong>03939</strong><div class='ticker'>HK.03939</div></td><td>万国黄金集团</td><td>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</td><td>+91.9%</td><td>-58.9%</td><td>2026-10-23</td></tr>
-<tr><td>15</td><td><strong>02099</strong><div class='ticker'>HK.02099</div></td><td>中国黄金国际</td><td>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</td><td>+90.0%</td><td>-49.9%</td><td>2026-10-23</td></tr>
-<tr><td>常驻</td><td><strong>SOXX</strong><div class='ticker'>US.SOXX</div></td><td>SOXX</td><td>ETF ER 3/8/20 (白名单日调仓 Top5)</td><td>+58.6%</td><td>-34.2%</td><td>2026-10-23</td></tr>
-<tr><td>常驻</td><td><strong>EWY</strong><div class='ticker'>US.EWY</div></td><td>EWY</td><td>ETF ER 3/8/20 (白名单日调仓 Top5)</td><td>+51.6%</td><td>-34.2%</td><td>2026-10-23</td></tr>
-<tr><td>常驻</td><td><strong>QQQ</strong><div class='ticker'>US.QQQ</div></td><td>QQQ</td><td>ETF ER 3/8/20 (白名单日调仓 Top5)</td><td>+31.9%</td><td>-22.8%</td><td>2026-10-23</td></tr>
-<tr><td>常驻</td><td><strong>000660</strong><div class='ticker'>KR.000660</div></td><td>SK hynix</td><td>常驻韩股</td><td>+86.7%</td><td>-58.1%</td><td>2026-10-23</td></tr>
-<tr><td>常驻</td><td><strong>005930</strong><div class='ticker'>KR.005930</div></td><td>Samsung Electronics</td><td>常驻韩股</td><td>+64.0%</td><td>-42.9%</td><td>2026-10-23</td></tr></tbody>
+            <tbody><tr><td>1</td><td><strong>MU</strong><div class='ticker'>US.MU</div></td><td>美光科技</td><td>ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (100B Top5 周换仓)</td><td>+150.7%</td><td>-42.8%</td><td>2026-11-04</td></tr>
+<tr><td>2</td><td><strong>SNDK</strong><div class='ticker'>US.SNDK</div></td><td>闪迪</td><td>ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (100B Top5 周换仓)</td><td>+128.3%</td><td>-56.5%</td><td>2026-11-04</td></tr>
+<tr><td>3</td><td><strong>01308</strong><div class='ticker'>HK.01308</div></td><td>海丰国际</td><td>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</td><td>+127.0%</td><td>-32.8%</td><td>2026-11-04</td></tr>
+<tr><td>4</td><td><strong>DELL</strong><div class='ticker'>US.DELL</div></td><td>戴尔科技</td><td>ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (100B Top5 周换仓)</td><td>+124.3%</td><td>-50.1%</td><td>2026-11-04</td></tr>
+<tr><td>5</td><td><strong>CRWD</strong><div class='ticker'>US.CRWD</div></td><td>CrowdStrike</td><td>ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (100B Top5 周换仓)</td><td>+117.2%</td><td>-77.1%</td><td>2026-11-04</td></tr>
+<tr><td>6</td><td><strong>AMD</strong><div class='ticker'>US.AMD</div></td><td>美国超微公司</td><td>ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (100B Top5 周换仓)</td><td>+105.3%</td><td>-47.8%</td><td>2026-11-04</td></tr>
+<tr><td>7</td><td><strong>01070</strong><div class='ticker'>HK.01070</div></td><td>TCL电子</td><td>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</td><td>+90.7%</td><td>-31.5%</td><td>2026-11-04</td></tr>
+<tr><td>8</td><td><strong>01888</strong><div class='ticker'>HK.01888</div></td><td>01888</td><td>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</td><td>+90.4%</td><td>-72.0%</td><td>2026-11-04</td></tr>
+<tr><td>9</td><td><strong>STX</strong><div class='ticker'>US.STX</div></td><td>STX</td><td>ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (100B Top5 周换仓)</td><td>+89.9%</td><td>-45.7%</td><td>2026-11-04</td></tr>
+<tr><td>10</td><td><strong>01548</strong><div class='ticker'>HK.01548</div></td><td>01548</td><td>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</td><td>+89.4%</td><td>-45.0%</td><td>2026-11-04</td></tr>
+<tr><td>11</td><td><strong>WDC</strong><div class='ticker'>US.WDC</div></td><td>WDC</td><td>ER 3/8/20 (100B 日调仓) / ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (100B Top5 周换仓)</td><td>+86.3%</td><td>-55.5%</td><td>2026-11-04</td></tr>
+<tr><td>12</td><td><strong>01919</strong><div class='ticker'>HK.01919</div></td><td>中远海控</td><td>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</td><td>+85.3%</td><td>-28.0%</td><td>2026-11-04</td></tr>
+<tr><td>13</td><td><strong>PANW</strong><div class='ticker'>US.PANW</div></td><td>Palo Alto Networks</td><td>ER 3/8/20 (100B Top5 双周 Top50 Buffer) / ER 3/8/20 (100B Top5 周换仓)</td><td>+79.3%</td><td>-36.0%</td><td>2026-11-04</td></tr>
+<tr><td>14</td><td><strong>02099</strong><div class='ticker'>HK.02099</div></td><td>中国黄金国际</td><td>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</td><td>+78.8%</td><td>-49.9%</td><td>2026-11-04</td></tr>
+<tr><td>15</td><td><strong>PLTR</strong><div class='ticker'>US.PLTR</div></td><td>Palantir</td><td>ER 3/8/20 (100B Top5 周换仓)</td><td>+72.2%</td><td>-48.2%</td><td>2026-11-04</td></tr>
+<tr><td>常驻</td><td><strong>SOXX</strong><div class='ticker'>US.SOXX</div></td><td>SOXX</td><td>ETF ER 3/8/20 (白名单日调仓 Top5)</td><td>+53.3%</td><td>-34.2%</td><td>2026-11-04</td></tr>
+<tr><td>常驻</td><td><strong>EWY</strong><div class='ticker'>US.EWY</div></td><td>EWY</td><td>ETF ER 3/8/20 (白名单日调仓 Top5)</td><td>+55.9%</td><td>-34.2%</td><td>2026-11-04</td></tr>
+<tr><td>常驻</td><td><strong>QQQ</strong><div class='ticker'>US.QQQ</div></td><td>QQQ</td><td>ETF ER 3/8/20 (白名单日调仓 Top5)</td><td>+27.6%</td><td>-22.8%</td><td>2026-11-04</td></tr>
+<tr><td>常驻</td><td><strong>000660</strong><div class='ticker'>KR.000660</div></td><td>SK hynix</td><td>常驻韩股</td><td>+102.9%</td><td>-58.1%</td><td>2026-11-04</td></tr>
+<tr><td>常驻</td><td><strong>005930</strong><div class='ticker'>KR.005930</div></td><td>Samsung Electronics</td><td>常驻韩股</td><td>+64.6%</td><td>-42.9%</td><td>2026-11-04</td></tr></tbody>
           </table>
         </section>
 

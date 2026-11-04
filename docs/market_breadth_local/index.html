@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>全美股52周新高新低</title><link rel="stylesheet" href="./dashboard.css"><script defer src="./dashboard.js"></script></head>
+<body><section class="breadth" aria-label="全美股52周新高新低">
+  <header><div><div class="eyebrow">ALL US STOCKS · MARKET BREADTH</div><h2>全美股 · 52周新高 / 新低</h2></div><div class="ranges" role="group" aria-label="历史范围"><button data-months="3" aria-pressed="false">3个月</button><button data-months="6" aria-pressed="false">半年</button><button data-months="12" aria-pressed="true">1年</button></div></header>
+  <div class="metrics"><div><span class="legend high">52周新高</span><strong id="highs">—</strong></div><div><span class="legend low">52周新低</span><strong id="lows">—</strong></div><div><span>净新高</span><strong id="net">—</strong></div><div><span>符合条件的股票</span><strong id="universe">—</strong></div></div>
+  <div class="date-line"><span id="asof">正在加载…</span><span id="balance"></span></div>
+  <div class="plot" id="plot"><svg id="chart" viewBox="0 0 1000 205" role="img" aria-label="每日52周新高和新低股票数量曲线" tabindex="0"></svg><div id="tooltip" role="status" hidden></div></div>
+  <p id="status" role="status"></p>
+  <footer><span>普通股及 ADR · 满一年历史 · 不含 ETF / 封闭式基金 / 结构化产品 / 单位证券</span><span>来源：<a href="https://www.thetrading.tools/new-highs-new-lows" target="_blank" rel="noreferrer">thetrading.tools</a> · 收盘后更新 · 本地个人使用</span><details><summary>计算与更新口径</summary><p>当天最高价严格超过此前365个自然日最高价，计为新高；当天最低价严格低于此前365日最低价，计为新低。当天不纳入比较窗口，新上市未满一年的股票不计入。两条线都表示正数股票数量，虚线为新低。</p><p>随“刷新趋势评分”检查原站公开日终数据。开盘期间不生成盘中统计，来源更新前保留最近已完成交易日；请求失败保留上次成功快照。</p></details></footer>
+</section></body></html>

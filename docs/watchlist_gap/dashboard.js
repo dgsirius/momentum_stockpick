@@ -7,7 +7,7 @@
   const stamp=s=>s?String(s).replace('T',' ').replace(/\+\d\d:\d\d$/,''):'尚未更新';
   const marketName={HK:'港股',US:'美股',KR:'韩股'};
   const filterName={all:'全部标的',new:'最新缺口','new-up':'最新向上','new-down':'最新向下','run-up':'连续向上','run-down':'连续向下'};
-  let data={rows:[],counts:{},market_sessions:{}},windowRows=[],windowSize=50,market='ALL',filter='all',page=1,pageSize=24,selected='',chartConfig=null,running=false,completedAt='',pollTimer;
+  let data={rows:[],counts:{},market_sessions:{}},windowRows=[],windowSize=50,market='ALL',filter='all',selected='',chartConfig=null,running=false,completedAt='',pollTimer;
   let pinnedCodes=new Set(),pinsReady=false,pinSaving=false,pinRevision=0;
   const local=['127.0.0.1','localhost'].includes(location.hostname);
   const fresh=r=>!r.stale&&r.bar_date&&r.bar_date===r.expected_session;
@@ -62,16 +62,15 @@
   function render(){
     $('tooltip').hidden=true;
     windowRows=data.rows.map(r=>window.GapWindowMetrics.windowView(r,windowSize));updateSummary();
-    const rows=filtered(),pages=Math.max(1,Math.ceil(rows.length/pageSize));page=Math.min(Math.max(1,page),pages);
+    const rows=filtered();
     if(!rows.some(r=>r.code===selected))selected=rows[0]?.code||'';
     $('result-count').textContent=`${market==='ALL'?'全部市场':marketName[market]} · ${windowSize} 日窗口 · ${filterName[filter]} · ${rows.length} 只标的`;
-    $('list-note').textContent='手动置顶优先 · 连续缺口数量从多到少 · 再次点击已选筛选可恢复全部';
-    $('stocks').innerHTML=rows.slice((page-1)*pageSize,page*pageSize).map(r=>{
+    $('list-note').textContent='全部显示 · 手动置顶优先 · 连续缺口数量从多到少';
+    $('stocks').innerHTML=rows.map(r=>{
       const alert=newest(r)[0],state=r.stale?'stale':alert?'fresh-'+alert.direction:'';
       return `<tr data-row="${esc(r.code)}" class="${state}${pinnedCodes.has(r.code)?' manual-pinned':''}${r.code===selected?' active-row':''}"><td><button class="stock-name" data-open="${esc(r.code)}">${esc(r.name)}${r.instrument_type==='ETF'?'<span class="etf-tag">ETF</span>':''}<small>${marketName[r.market]} · ${esc(r.code)}${pinnedCodes.has(r.code)?' · 已置顶':''}</small></button>${pinButton(r)}</td><td>${r.bar_count||0} / ${windowSize}${r.bar_count>0&&r.bar_count<windowSize?`<span class="cell-date">历史不足 ${windowSize} 根</span>`:''}</td><td>${fmt(r.close)}<span class="cell-date">${esc(r.bar_date||'—')}</span></td><td>${countPill(r.up_count,'up')}</td><td>${countPill(r.down_count,'down')}</td><td class="run-cell">${runHtml(r)}</td><td>${alert?`<span class="fresh-tag ${alert.direction}">${alert.direction==='up'?'↑ 最新向上缺口':'↓ 最新向下缺口'}</span><span class="cell-date">${alert.date} · ${fmt(alert.size_pct)}%</span>`:r.stale?`<span class="warning-tag">${r.error?'刷新失败 / 缓存':'行情日期待核实'}</span>`:'<span class="cell-date">无新缺口</span>'}</td><td><button class="view-button" data-open="${esc(r.code)}">查看日 K ↗</button></td></tr>`;
     }).join('');
     $('empty').hidden=!!rows.length;$('empty').textContent=data.rows.length?'没有符合条件的标的，请调整筛选。':'尚无缺口数据。点击本页刷新，同步自选标的并获取日 K。';
-    $('page-info').textContent=`第 ${page} / ${pages} 页`;$('previous').disabled=page<=1;$('next').disabled=page>=pages;
     document.querySelectorAll('[data-market]').forEach(b=>{const active=b.dataset.market===market;b.classList.toggle('selected',active);b.setAttribute('aria-pressed',String(active));b.querySelector('span').textContent=b.dataset.market==='ALL'?data.rows.length:data.counts?.[b.dataset.market]||0;});
     document.querySelectorAll('[data-filter]').forEach(b=>{const active=b.dataset.filter===filter;b.classList.toggle('selected',active);b.setAttribute('aria-pressed',String(active));});
     renderAlerts();renderDetail();
@@ -124,7 +123,7 @@
     if(!pinsReady||pinSaving)return;
     const pinned=!pinnedCodes.has(code),name=data.rows.find(r=>r.code===code)?.name||code;
     pinSaving=true;pinRevision++;render();pinFeedback('正在保存置顶设置…');
-    try{const response=await fetch('/api/watchlist-gap/pins',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code,pinned})}),payload=await response.json();if(!response.ok)throw new Error(payload.error||`保存失败 (${response.status})`);applyPins(payload);page=1;pinFeedback(`${pinned?'已置顶':'已取消置顶'}：${name}`);}
+    try{const response=await fetch('/api/watchlist-gap/pins',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code,pinned})}),payload=await response.json();if(!response.ok)throw new Error(payload.error||`保存失败 (${response.status})`);applyPins(payload);pinFeedback(`${pinned?'已置顶':'已取消置顶'}：${name}`);}
     catch(e){pinFeedback('置顶设置保存失败：'+e.message+'，请重试。',true);}
     finally{pinSaving=false;pinRevision++;render();}
   }
@@ -139,13 +138,12 @@
     clearTimeout(pollTimer);pollTimer=setTimeout(status,running?2500:15000);
   }
   $('refresh').addEventListener('click',async()=>{$('refresh').disabled=true;$('error').hidden=true;try{const response=await fetch('/api/watchlist-gap/refresh',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});if(!response.ok)throw new Error(`启动失败 (${response.status})`);await status();}catch(e){showError(e.message);$('refresh').disabled=false;}});
-  document.querySelectorAll('[data-market]').forEach(b=>b.addEventListener('click',()=>{market=b.dataset.market;page=1;render();}));
-  document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=filter===b.dataset.filter?'all':b.dataset.filter;page=1;render();}));
-  document.querySelectorAll('[data-window]').forEach(b=>b.addEventListener('click',()=>{windowSize=Number(b.dataset.window);page=1;render();}));
-  ['search','page-size'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',()=>{page=1;pageSize=Number($('page-size').value);render();}));
-  $('sort-run').addEventListener('click',()=>{page=1;render();});
-  $('show-new').addEventListener('click',()=>{if(filter==='all'||filter==='new')filter='new';else if(filter==='run-up')filter='new-up';else if(filter==='run-down')filter='new-down';page=1;render();document.querySelector('.controls').scrollIntoView({behavior:'smooth',block:'start'});});
-  $('previous').addEventListener('click',()=>{page--;render();});$('next').addEventListener('click',()=>{page++;render();});
+  document.querySelectorAll('[data-market]').forEach(b=>b.addEventListener('click',()=>{market=b.dataset.market;render();}));
+  document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=filter===b.dataset.filter?'all':b.dataset.filter;render();}));
+  document.querySelectorAll('[data-window]').forEach(b=>b.addEventListener('click',()=>{windowSize=Number(b.dataset.window);render();}));
+  $('search').addEventListener('input',render);
+  $('sort-run').addEventListener('click',render);
+  $('show-new').addEventListener('click',()=>{if(filter==='all'||filter==='new')filter='new';else if(filter==='run-up')filter='new-up';else if(filter==='run-down')filter='new-down';render();document.querySelector('.controls').scrollIntoView({behavior:'smooth',block:'start'});});
   ['stocks','alerts'].forEach(id=>$(id).addEventListener('click',e=>{const pin=e.target.closest('[data-pin]');if(pin){togglePin(pin.dataset.pin);return;}const b=e.target.closest('[data-open]');if(b)select(b.dataset.open);}));
   $('chart').addEventListener('pointermove',e=>{
     const tip=$('tooltip'),svg=$('chart').querySelector('svg'),cfg=chartConfig;if(!svg||!cfg)return;

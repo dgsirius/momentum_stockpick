@@ -9,7 +9,12 @@
   const pct = entry => (entry.approximate ? '≈' : '') + entry.value + '%';
   const monthLabel = month => month.replace('-', '.');
   const monthBefore = month => { const [y, m] = month.split('-').map(Number); return m === 1 ? `${y - 1}-12` : `${y}-${String(m - 1).padStart(2, '0')}`; };
-  const winners = entries => { const max = Math.max(...entries.map(e => e.value)); return entries.filter(e => e.value === max); };
+  function rankedEntries(entries, rank = 1) {
+    const levels = [...new Set(entries.map(e => e.value))].sort((a,b) => b-a);
+    return rank > 0 && rank <= levels.length ? entries.filter(e => e.value === levels[rank-1]) : [];
+  }
+  const winners = entries => rankedEntries(entries);
+  const historyConfigs = {risk:{metric:'risk',rank:1},crowding:{metric:'crowding',rank:1},'crowding-second':{metric:'crowding',rank:2}};
   const byMonth = new Map(reports.map(r => [r.month, r]));
   const colors = ['#b35e47','#317d88','#ac8b3f','#7070a2','#74864e','#aa6c89','#537791','#9b704b','#538d7b','#a85b60','#787f92','#8a8243'];
   const categoryOrder = Object.keys(names).sort();
@@ -81,31 +86,32 @@
     });
     $(metric + '-meta').textContent = `来源：${selected.date} · PDF 第 ${chart.page} 页 · Chart ${chart.chart} · 当期占比合计 ${chart.entries.some(e=>e.approximate) ? '约 ' : ''}${chart.entries.reduce((n,e)=>n+e.value,0)}%（不补足至 100%）`;
   }
-  for (const metric of ['risk','crowding']) {
-    const select = $(metric + '-category');
-    const option = node('option','','每期首位（随月份变化）'); option.value = 'leader'; select.append(option);
+  for (const [id,{metric,rank}] of Object.entries(historyConfigs)) {
+    const select = $(id + '-category');
+    const option = node('option','',rank === 2 ? '每期第二位（随月份变化）' : '每期首位（随月份变化）'); option.value = 'leader'; select.append(option);
     const categories = [...new Set(reports.flatMap(r => r[metric].entries.map(e => e.category)))];
     categories.sort((a,b) => names[a].label.localeCompare(names[b].label,'zh-CN')).forEach(id => { const option = node('option','',names[id].label); option.value = id; select.append(option); });
-    select.addEventListener('change',() => renderHistory(metric));
+    select.addEventListener('change',() => renderHistory(id));
   }
-  function renderHistory(metric) {
-    const filter = $(metric + '-category').value;
+  function renderHistory(id) {
+    const {metric,rank} = historyConfigs[id];
+    const filter = $(id + '-category').value;
     const chart = node('div','history-columns');
     const used = new Set();
     monthsInScope().forEach(m => {
       const report = byMonth.get(m);
-      const top = report ? winners(report[metric].entries) : [];
+      const top = report ? rankedEntries(report[metric].entries,rank) : [];
       const entry = report ? (filter === 'leader' ? top[0] : report[metric].entries.find(e => e.category === filter)) : null;
       const column = node('button','history-column'); column.type = 'button'; column.disabled = !report;
       if (m === selected.month) column.setAttribute('aria-current','true');
       const plot = node('span','column-plot');
-      const status = report ? '未列示' : '缺报';
+      const status = report ? (filter === 'leader' && rank === 2 && !top.length ? '未列示第二位' : '未列示') : '缺报';
       if (entry) {
         used.add(entry.category);
         const bar = node('span','column-bar'); bar.style.height = (entry.value * 2.2) + 'px'; bar.style.background = color(entry.category);
         bar.append(node('span','column-value',pct(entry))); plot.append(bar);
         const details = filter === 'leader' ? top.map(e=>`${names[e.category].label} ${pct(e)}`).join(' / ') : `${names[entry.category].label} ${pct(entry)}`;
-        column.title = `${m} · ${details}${top.length > 1 && filter === 'leader' ? '（并列第一）' : ''}`;
+        column.title = `${m} · ${details}${top.length > 1 && filter === 'leader' ? (rank === 2 ? '（并列第二）' : '（并列第一）') : ''}`;
         column.setAttribute('aria-label',column.title);
       } else {
         plot.append(node('span','column-gap',status));
@@ -115,11 +121,12 @@
       if (report) column.addEventListener('click',() => choose(report));
       chart.append(column);
     });
-    const note = node('p','history-note','可左右滚动查看全部月份。' + (filter === 'leader' ? '每根柱子是当期最高占比，类别可能变化；并列第一详见鼠标提示、月度快照及档案。灰色空位代表缺报。' : '仅展示原图当期列示的该类别；未列示并不意味着占比为零。'));
-    $(metric + '-history').replaceChildren(chart,note);
+    const rankNote = rank === 2 ? '每根柱子是当期第二高的不同占比，类别可能变化；并列第一不占用第二位。并列第二的项目完整保留在鼠标提示中，柱色对应原图顺序第一项。缺报或未列示第二位留空，不计为零。' : '每根柱子是当期最高占比，类别可能变化；并列第一详见鼠标提示、月度快照及档案。灰色空位代表缺报。';
+    const note = node('p','history-note','可左右滚动查看全部月份。' + (filter === 'leader' ? rankNote : '仅展示原图当期列示的该类别；未列示并不意味着占比为零。'));
+    $(id + '-history').replaceChildren(chart,note);
     const activeColumn = chart.querySelector('[aria-current="true"]');
-    if (activeColumn) $(metric + '-history').scrollLeft = activeColumn.offsetLeft - chart.offsetLeft - $(metric + '-history').clientWidth / 2;
-    const legend = $(metric + '-legend'); legend.replaceChildren();
+    if (activeColumn) $(id + '-history').scrollLeft = activeColumn.offsetLeft - chart.offsetLeft - $(id + '-history').clientWidth / 2;
+    const legend = $(id + '-legend'); legend.replaceChildren();
     used.forEach(id => { const item = node('span','legend-item'); const dot = node('span','legend-dot'); dot.style.background = color(id); item.append(dot,document.createTextNode(names[id].label)); legend.append(item); });
   }
   function renderArchive() {
@@ -223,7 +230,7 @@
   $('refresh-aaii').addEventListener('click',async()=>{if(aaiiRunning)return;aaiiRunning=true;$('refresh-aaii').disabled=true;try{const response=await fetch('/api/bofa-fms/aaii/refresh',{method:'POST'});const state=await response.json();if(!response.ok)throw new Error(state.error||`HTTP ${response.status}`);applyAaiiState(state)}catch(error){aaiiRunning=false;$('refresh-aaii').disabled=false;$('aaii-status').textContent=`抓取失败：${error.message}；已有历史数据已保留。`}});
   loadAaii().catch(error=>{$('aaii-status').textContent=`配置读取失败：${error.message}`});
   if(local){pollAaii();setInterval(()=>{if(aaiiRunning)pollAaii()},2000)}
-  function render() { renderMonths(); renderCash(); renderSnapshot('risk'); renderSnapshot('crowding'); renderHistory('risk'); renderHistory('crowding'); renderArchive(); }
+  function render() { renderMonths(); renderCash(); renderSnapshot('risk'); renderSnapshot('crowding'); Object.keys(historyConfigs).forEach(renderHistory); renderArchive(); }
   $('previous-month').addEventListener('click',() => {
     const previous = reports[reports.indexOf(selected)-1]; if (!previous) return;
     if ($('year-filter').value !== 'all' && !previous.month.startsWith($('year-filter').value)) $('year-filter').value = previous.month.slice(0,4);

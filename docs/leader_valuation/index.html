@@ -8,7 +8,8 @@
 </head>
 <body>
 <div class="wrap"><div class="layout">
-  <aside class="sidebar"><div class="sidebar-title">策略目录</div><nav class="nav-links" aria-label="看板集合"><a class='nav-link' href='../overview/index.html'>策略总览</a>
+  <aside class="sidebar"><div class="sidebar-title">策略目录</div><nav class="nav-links" aria-label="看板集合"><a class='nav-link' href='../soxs_paper/index.html'>SOXS 做空试跑</a>
+<a class='nav-link' href='../overview/index.html'>策略总览</a>
 <a class='nav-link' href='../er_3_8_20_100b_daily/index.html'>ER 3/8/20 (100B 日调仓)</a>
 <a class='nav-link' href='../etf_er_3_8_20_whitelist/index.html'>ETF ER 3/8/20 (白名单日调仓 Top5)</a>
 <a class='nav-link' href='../hk_er_3_8_20_20b_stock_connect/index.html'>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</a>
@@ -72,7 +73,7 @@
         seen.add(item.id);
         return true;
       }).map(item => ({id: item.id, name: String(item.name || '').trim().slice(0, 100) || '未命名分组', parent: typeof item.parent === 'string' ? item.parent : null, type: item.type === 'group' ? 'group' : 'page'}));
-      defaults.forEach(item => { if (!seen.has(item.id)) result.push({...item}); });
+      defaults.forEach(item => { if (!seen.has(item.id)) { if (item.id.endsWith('/soxs_paper/index.html')) result.unshift({...item}); else result.push({...item}); } });
       const groups = new Map(result.filter(item => item.type === 'group').map(item => [item.id, item]));
       result.forEach(item => {
         const visited = new Set([item.id]);
