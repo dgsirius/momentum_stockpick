@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-04T14:30:24",
+  "generated_at": "2026-11-04T15:48:45",
   "variant_name": "A股 ETF ER 10/25/50（规模20亿+ 日调仓 Top5）",
   "variant_slug": "a_share_etf_er_10_25_50_ge20b",
   "universe_mode": "current_and_planned",
-  "holding_count": 9,
+  "holding_count": 7,
   "current_holding_count": 5,
-  "planned_buy_count": 2,
+  "planned_buy_count": 0,
   "historical_buy_count": 0,
-  "ticker_count": 9,
+  "ticker_count": 7,
   "risk_high_count": 2,
-  "backtest_period": "验证期 2025-11-03 至 2026-11-03",
-  "training_period": "训练期 2022-01-03 至 2025-11-02",
+  "backtest_period": "验证期 2025-11-04 至 2026-11-04",
+  "training_period": "训练期 2022-01-03 至 2025-11-03",
   "validation_method": "参数仅在训练期选择，胜率和平均收益来自随后一年验证期",
   "strategy_summary": {
     "stop_atr": 2.0,
     "take_atr": 1.5,
-    "trades": 759,
-    "win_rate": 0.5665,
-    "avg_return": 0.0011
+    "trades": 588,
+    "win_rate": 0.551,
+    "avg_return": 0.0008
   },
   "rows": [
     {
@@ -67,9 +67,9 @@
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 88,
-        "win_rate": 0.5,
-        "avg_return": -0.0015,
+        "trades": 87,
+        "win_rate": 0.5057,
+        "avg_return": -0.0012,
         "validation": true
       }
     },
@@ -120,105 +120,9 @@
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 96,
-        "win_rate": 0.5208,
-        "avg_return": -0.0008,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "SH.515450",
-      "name": "红利低波50ETF南方",
-      "sources": [
-        "计划买入"
-      ],
-      "source_count": 1,
-      "weight": null,
-      "market_value": null,
-      "status": "ok",
-      "latest_date": "2026-11-03",
-      "close": 1.491,
-      "score": 89,
-      "rating": "4.5分",
-      "action": "多头 / 观察回踩",
-      "risk_level": "中",
-      "risk_reasons": [],
-      "cap_reason": null,
-      "parts": {
-        "trend": 40,
-        "macd": 24,
-        "kdj": 7,
-        "volume": 13,
-        "atr": 5
-      },
-      "texts": {
-        "trend": "趋势40/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ7/10，节奏未见明确背离",
-        "volume": "量能13/15，量价配合较好",
-        "atr": "ATR5/10，追价风险偏高"
-      },
-      "atr": 0.022,
-      "stop_loss": 1.447,
-      "take_profit": 1.503,
-      "add_price": 1.405,
-      "invalidation": 1.372,
-      "stop_pct": 0.0304,
-      "take_pct": 0.008,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
         "trades": 95,
-        "win_rate": 0.5895,
-        "avg_return": 0.0017,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "SH.561580",
-      "name": "央企红利ETF华泰柏瑞",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.2003866949,
-      "market_value": 97192.2864557051,
-      "status": "ok",
-      "latest_date": "2026-11-03",
-      "close": 1.298,
-      "score": 83,
-      "rating": "4.5分",
-      "action": "多头 / 观察回踩",
-      "risk_level": "低",
-      "risk_reasons": [],
-      "cap_reason": null,
-      "parts": {
-        "trend": 37,
-        "macd": 24,
-        "kdj": 7,
-        "volume": 7,
-        "atr": 8
-      },
-      "texts": {
-        "trend": "趋势37/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
-        "kdj": "KDJ7/10，节奏未见明确背离",
-        "volume": "量能7/15，量价确认不足",
-        "atr": "ATR8/10，执行位置可接受"
-      },
-      "atr": 0.0208,
-      "stop_loss": 1.2564,
-      "take_profit": 1.3174,
-      "add_price": 1.2444,
-      "invalidation": 1.2132,
-      "stop_pct": 0.0331,
-      "take_pct": 0.0149,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 86,
-        "win_rate": 0.6512,
-        "avg_return": 0.0037,
+        "win_rate": 0.5263,
+        "avg_return": -0.0006,
         "validation": true
       }
     },
@@ -229,12 +133,12 @@
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.1981926381,
-      "market_value": 96128.1169997382,
+      "weight": 0.2033905902,
+      "market_value": 95962.2058062472,
       "status": "ok",
-      "latest_date": "2026-11-03",
-      "close": 0.88,
-      "score": 81,
+      "latest_date": "2026-11-04",
+      "close": 0.874,
+      "score": 80,
       "rating": "4分",
       "action": "多头",
       "risk_level": "低",
@@ -243,78 +147,30 @@
       "parts": {
         "trend": 37,
         "macd": 22,
-        "kdj": 6,
+        "kdj": 5,
         "volume": 6,
         "atr": 10
       },
       "texts": {
         "trend": "趋势37/40，EMA多头排列",
         "macd": "MACD22/25，零轴上方动能占优",
-        "kdj": "KDJ6/10，节奏未见明确背离",
+        "kdj": "KDJ5/10，节奏未见明确背离",
         "volume": "量能6/15，量价确认不足",
         "atr": "ATR10/10，执行位置可接受"
       },
-      "atr": 0.0176,
-      "stop_loss": 0.8449,
-      "take_profit": 0.9064,
-      "add_price": 0.8468,
-      "invalidation": 0.8204,
-      "stop_pct": 0.0416,
+      "atr": 0.0175,
+      "stop_loss": 0.839,
+      "take_profit": 0.9002,
+      "add_price": 0.8558,
+      "invalidation": 0.8295,
+      "stop_pct": 0.0417,
       "take_pct": 0.03,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
         "trades": 77,
-        "win_rate": 0.5844,
-        "avg_return": 0.0031,
-        "validation": true
-      }
-    },
-    {
-      "ticker": "SH.512890",
-      "name": "红利低波ETF华泰柏瑞",
-      "sources": [
-        "当前持仓"
-      ],
-      "source_count": 1,
-      "weight": 0.1999306653,
-      "market_value": 96971.1013137673,
-      "status": "ok",
-      "latest_date": "2026-11-03",
-      "close": 1.238,
-      "score": 81,
-      "rating": "4分",
-      "action": "多头",
-      "risk_level": "低",
-      "risk_reasons": [],
-      "cap_reason": null,
-      "parts": {
-        "trend": 37,
-        "macd": 22,
-        "kdj": 8,
-        "volume": 6,
-        "atr": 8
-      },
-      "texts": {
-        "trend": "趋势37/40，EMA多头排列",
-        "macd": "MACD22/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
-        "atr": "ATR8/10，执行位置可接受"
-      },
-      "atr": 0.0209,
-      "stop_loss": 1.1961,
-      "take_profit": 1.2645,
-      "add_price": 1.1905,
-      "invalidation": 1.1591,
-      "stop_pct": 0.035,
-      "take_pct": 0.0214,
-      "exit_strategy": {
-        "stop_atr": 2.0,
-        "take_atr": 1.5,
-        "trades": 85,
-        "win_rate": 0.5176,
-        "avg_return": -0.0014,
+        "win_rate": 0.5714,
+        "avg_return": 0.0025,
         "validation": true
       }
     },
@@ -325,12 +181,60 @@
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.1990176876,
-      "market_value": 96528.2855574679,
+      "weight": 0.2036467507,
+      "market_value": 96083.0655333048,
       "status": "ok",
-      "latest_date": "2026-11-03",
-      "close": 1.589,
-      "score": 81,
+      "latest_date": "2026-11-04",
+      "close": 1.571,
+      "score": 80,
+      "rating": "4分",
+      "action": "多头",
+      "risk_level": "低",
+      "risk_reasons": [],
+      "cap_reason": null,
+      "parts": {
+        "trend": 37,
+        "macd": 22,
+        "kdj": 5,
+        "volume": 6,
+        "atr": 10
+      },
+      "texts": {
+        "trend": "趋势37/40，EMA多头排列",
+        "macd": "MACD22/25，零轴上方动能占优",
+        "kdj": "KDJ5/10，节奏未见明确背离",
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR10/10，执行位置可接受"
+      },
+      "atr": 0.0319,
+      "stop_loss": 1.5073,
+      "take_profit": 1.6188,
+      "add_price": 1.5379,
+      "invalidation": 1.4901,
+      "stop_pct": 0.0423,
+      "take_pct": 0.0304,
+      "exit_strategy": {
+        "stop_atr": 2.0,
+        "take_atr": 1.5,
+        "trades": 80,
+        "win_rate": 0.575,
+        "avg_return": 0.0026,
+        "validation": true
+      }
+    },
+    {
+      "ticker": "SH.515450",
+      "name": "红利低波50ETF南方",
+      "sources": [
+        "当前持仓"
+      ],
+      "source_count": 1,
+      "weight": 0.2024893388,
+      "market_value": 95536.9842152461,
+      "status": "ok",
+      "latest_date": "2026-11-04",
+      "close": 1.471,
+      "score": 78,
       "rating": "4分",
       "action": "多头",
       "risk_level": "低",
@@ -340,29 +244,29 @@
         "trend": 37,
         "macd": 22,
         "kdj": 8,
-        "volume": 6,
+        "volume": 3,
         "atr": 8
       },
       "texts": {
         "trend": "趋势37/40，EMA多头排列",
         "macd": "MACD22/25，零轴上方动能占优",
         "kdj": "KDJ8/10，节奏未见明确背离",
-        "volume": "量能6/15，量价确认不足",
+        "volume": "量能3/15，量价确认不足",
         "atr": "ATR8/10，执行位置可接受"
       },
-      "atr": 0.0319,
-      "stop_loss": 1.5253,
-      "take_profit": 1.6368,
-      "add_price": 1.5209,
-      "invalidation": 1.4731,
-      "stop_pct": 0.0418,
-      "take_pct": 0.0301,
+      "atr": 0.0226,
+      "stop_loss": 1.4257,
+      "take_profit": 1.505,
+      "add_price": 1.4153,
+      "invalidation": 1.3814,
+      "stop_pct": 0.0318,
+      "take_pct": 0.0231,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 79,
-        "win_rate": 0.5823,
-        "avg_return": 0.003,
+        "trades": 95,
+        "win_rate": 0.5579,
+        "avg_return": 0.0012,
         "validation": true
       }
     },
@@ -373,12 +277,12 @@
         "当前持仓"
       ],
       "source_count": 1,
-      "weight": 0.1988178887,
-      "market_value": 96431.3783212255,
+      "weight": 0.203991417,
+      "market_value": 96245.6833436306,
       "status": "ok",
-      "latest_date": "2026-11-03",
-      "close": 1.463,
-      "score": 81,
+      "latest_date": "2026-11-04",
+      "close": 1.45,
+      "score": 78,
       "rating": "4分",
       "action": "多头",
       "risk_level": "低",
@@ -387,30 +291,30 @@
       "parts": {
         "trend": 37,
         "macd": 22,
-        "kdj": 8,
+        "kdj": 5,
         "volume": 4,
         "atr": 10
       },
       "texts": {
         "trend": "趋势37/40，EMA多头排列",
         "macd": "MACD22/25，零轴上方动能占优",
-        "kdj": "KDJ8/10，节奏未见明确背离",
+        "kdj": "KDJ5/10，节奏未见明确背离",
         "volume": "量能4/15，量价确认不足",
         "atr": "ATR10/10，执行位置可接受"
       },
-      "atr": 0.03,
-      "stop_loss": 1.403,
-      "take_profit": 1.508,
-      "add_price": 1.403,
-      "invalidation": 1.358,
-      "stop_pct": 0.0428,
-      "take_pct": 0.0308,
+      "atr": 0.029,
+      "stop_loss": 1.392,
+      "take_profit": 1.4935,
+      "add_price": 1.4165,
+      "invalidation": 1.373,
+      "stop_pct": 0.0417,
+      "take_pct": 0.03,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
-        "trades": 78,
-        "win_rate": 0.5769,
-        "avg_return": 0.0026,
+        "trades": 79,
+        "win_rate": 0.5696,
+        "avg_return": 0.0022,
         "validation": true
       }
     },
@@ -418,15 +322,15 @@
       "ticker": "SH.515300",
       "name": "300红利低波ETF嘉实",
       "sources": [
-        "计划买入"
+        "当前持仓"
       ],
       "source_count": 1,
-      "weight": null,
-      "market_value": null,
+      "weight": 0.2024938943,
+      "market_value": 95539.1335392385,
       "status": "ok",
-      "latest_date": "2026-11-03",
-      "close": 1.391,
-      "score": 79,
+      "latest_date": "2026-11-04",
+      "close": 1.376,
+      "score": 76,
       "rating": "4分",
       "action": "多头",
       "risk_level": "低",
@@ -434,36 +338,36 @@
       "cap_reason": null,
       "parts": {
         "trend": 33,
-        "macd": 24,
+        "macd": 22,
         "kdj": 5,
-        "volume": 9,
-        "atr": 8
+        "volume": 6,
+        "atr": 10
       },
       "texts": {
         "trend": "趋势33/40，EMA多头排列",
-        "macd": "MACD24/25，零轴上方动能占优",
+        "macd": "MACD22/25，零轴上方动能占优",
         "kdj": "KDJ5/10，节奏未见明确背离",
-        "volume": "量能9/15，量价确认不足",
-        "atr": "ATR8/10，执行位置可接受"
+        "volume": "量能6/15，量价确认不足",
+        "atr": "ATR10/10，执行位置可接受"
       },
       "atr": 0.0251,
-      "stop_loss": 1.3407,
-      "take_profit": 1.4046,
+      "stop_loss": 1.3257,
+      "take_profit": 1.4076,
       "add_price": 1.3036,
       "invalidation": 1.2659,
-      "stop_pct": 0.0375,
-      "take_pct": 0.0098,
+      "stop_pct": 0.0379,
+      "take_pct": 0.0229,
       "exit_strategy": {
         "stop_atr": 2.0,
         "take_atr": 1.5,
         "trades": 75,
-        "win_rate": 0.5867,
-        "avg_return": 0.0005,
+        "win_rate": 0.56,
+        "avg_return": -0.0003,
         "validation": true
       }
     }
   ],
-  "input_version": "4384c70370c23e5c6e92",
+  "input_version": "bb5da28ab2cc247d4f5a",
   "input_fingerprint_version": 2,
   "cache_hit": false
 }
