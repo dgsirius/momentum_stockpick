@@ -115,34 +115,96 @@ function turnoverChart(item) {
   svg.appendChild(markers);
 }
 
-function renderActivityAlerts(item) {
+function alertTradingPain({item, alert}) {
+  const categories = alert.categories || [];
+  if (alert.phase === '收盘确认') {
+    const day = item.activity.days.find(row => row.date === alert.date);
+    if (day?.change > 0) return '放量上涨后，判断涨势能否延续，还是会回吐当日涨幅。';
+    if (day?.change < 0) return '放量下跌后，判断卖压是否延续，还是已出现止跌迹象。';
+    return '成交放大但方向不明，难点是判断区间会往哪一侧突破。';
+  }
+  if (categories.some(category => category.includes('财报'))) {
+    const earnings = item.activity.study?.find(scene => scene.label === '公司财报反应日');
+    if (earnings?.samples >= 5) {
+      return `财报反应日历史成交中位 ${turnoverTimes(earnings.median)}，难点是判断跳空会延续还是回补。`;
+    }
+    return item.kind === 'stock'
+      ? '财报后的跳空可能很快反转，难点是判断开盘方向能否延续。'
+      : '龙头财报带动 ETF 波动，难点是判断上涨或下跌是否扩散到其他成分股。';
+  }
+  if (categories.some(category => category.startsWith('OPEC+'))) {
+    return item.symbol === 'XLE'
+      ? '油价变动传到能源股的幅度不一，难点是判断板块能否跟随。'
+      : '会议后油价可能跳空，难点是判断初始波动能否延续到常规交易时段。';
+  }
+  if (categories.some(category => ['FOMC','美国CPI','美国非农'].includes(category))) {
+    return item.symbol === 'GLD'
+      ? '数据发布后美元与利率可能同向或背离，难点是判断金价的初始反应能否延续。'
+      : '数据发布后容易出现来回波动，难点是判断首波走势能否延续到收盘。';
+  }
+  if (alert.previous_shock) return '前一日大幅波动后，难点是判断开盘会顺势延续还是快速反转。';
+  const pain = item.holder_psychology?.pain_points?.[0];
+  return pain ? `${pain}？` : '难点是判断事件引发的短线波动能否形成持续走势。';
+}
+
+function renderActivityAlerts(selectedItem) {
   const panel = $('#activityAlerts');
-  panel.hidden = !item.activity?.watch;
+  const monitored = Object.values(payload.symbols).filter(item => item.activity?.watch);
+  panel.hidden = !monitored.length;
   if (panel.hidden) return;
-  const rows = item.activity.alerts;
   const today = new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
-  const past = rows.filter(alert => alert.date <= item.price_end);
-  const future = rows.filter(alert => alert.date >= today && alert.date > item.price_end && alert.phase === '盘前观察')
-    .sort((a,b) => a.date.localeCompare(b.date));
-  const last = past.filter(alert => alert.date === item.price_end && alert.phase === '收盘确认');
-  const earlier = past.filter(alert => alert.date < item.price_end && alert.phase === '收盘确认').slice(0,3);
-  $('#alertRuleVersion').textContent = `规则 v${payload.activity_rules.version} · 美东 · 看板内提醒`;
-  const show = (entries, empty) => entries.length ? entries.map(alert => {
+  const byDate = (a,b) => a.alert.date.localeCompare(b.alert.date);
+  const rows = monitored.flatMap(item => item.activity.alerts.map(alert => ({item,alert})));
+  const future = rows.filter(({item,alert}) =>
+    alert.phase === '盘前观察' && alert.date >= today && alert.date > item.price_end).sort(byDate);
+  const closeRows = rows.filter(({alert}) => alert.phase === '收盘确认');
+  const last = closeRows.filter(({item,alert}) => alert.date === item.price_end);
+  const earlier = monitored.flatMap(item => closeRows
+    .filter(row => row.item === item && row.alert.date < item.price_end).slice(0,3))
+    .sort((a,b) => byDate(b,a));
+  $('#alertRuleVersion').textContent = `监控 ${monitored.length} 个标的 · 美东 · 规则 v${payload.activity_rules.version}`;
+  $('#watchStatus').textContent = future.length ? `${future.length} 条观察` : '暂无信号';
+  $('#watchStatus').dataset.active = String(future.length > 0);
+  $('#closeStatus').textContent = last.length ? `${last.length} 条成交异常` : '未触发';
+  $('#closeStatus').dataset.active = String(last.length > 0);
+  const showRow = ({item,alert}) => {
     const body = `<small>${esc(alert.date)}</small><span>${esc(alert.reasons.join(' · '))}</span>`;
     const urls = (alert.sources || []).filter(validSource);
-    return `<div class="activity-alert-row">${alert.date <= item.price_end
-      ? `<button type="button" data-alert-day="${esc(alert.date)}">${body}</button>`
-      : body}${urls.length ? ` <a href="${esc(urls[0])}" target="_blank" rel="noreferrer">出处</a>` : ''}</div>`;
-  }).join('') : `<p class="activity-empty">${empty}</p>`;
-  const evidence = item.activity.evidence;
+    return `<div class="activity-alert-row"><button type="button" data-alert-symbol="${esc(item.symbol)}" data-alert-day="${esc(alert.date)}">${body}</button>${urls.length ? ` <a href="${esc(urls[0])}" target="_blank" rel="noreferrer">出处</a>` : ''}</div>`;
+  };
+  const show = (entries, empty) => {
+    if (!entries.length) return `<p class="activity-empty">${empty}</p>`;
+    const bySymbol = new Map();
+    for (const row of entries) {
+      if (!bySymbol.has(row.item.symbol)) bySymbol.set(row.item.symbol, []);
+      bySymbol.get(row.item.symbol).push(row);
+    }
+    return [[true,'个股'],[false,'主题 / ETF']].map(([stock,label]) => {
+      const groups = [...bySymbol.values()].filter(([row]) => (row.item.kind === 'stock') === stock);
+      if (!groups.length) return '';
+      return `<div class="activity-group"><h4>${label}</h4>${groups.map(group => {
+        const {item} = group[0];
+        return `<div class="activity-asset" data-alert-group="${esc(item.symbol)}">
+          <h5><span class="activity-symbol">${esc(item.symbol)}</span>${esc(item.name)}</h5>
+          ${group.map(showRow).join('')}
+          <p class="activity-pain"><strong>交易痛点</strong> ${esc(alertTradingPain(group[0]))}</p>
+        </div>`;
+      }).join('')}</div>`;
+    }).join('');
+  };
+  const evidence = selectedItem.activity?.evidence;
   $('#watchEvidence').textContent = evidence
-    ? `历史大波动后次日（${evidence.samples} 日）成交中位 ${turnoverTimes(evidence.median)}，放量率 ${fmtPct(evidence.shock_rate)}，全期 ${fmtPct(evidence.baseline_rate)}。`
+    ? `${selectedItem.symbol} 历史大波动后次日（${evidence.samples} 日）成交中位 ${turnoverTimes(evidence.median)}，放量率 ${fmtPct(evidence.shock_rate)}，全期 ${fmtPct(evidence.baseline_rate)}。`
     : '';
-  $('#watchAlerts').innerHTML = show(future.slice(0,4), '近期交易日暂无观察信号');
-  $('#closeAlerts').innerHTML = show(last,`${item.price_end} 收盘成交额未达到异常阈值`) +
+  $('#watchAlerts').innerHTML = show(future, '近期交易日暂无观察信号');
+  $('#closeAlerts').innerHTML = show(last,`${payload.market_as_of} 收盘未触发成交异常`) +
     (earlier.length ? `<details><summary>最近历史命中</summary>${show(earlier,'')}</details>` : '');
   panel.querySelectorAll('[data-alert-day]').forEach(button =>
-    button.addEventListener('click', () => showTurnoverDay(item, button.dataset.alertDay)));
+    button.addEventListener('click', () => {
+      const item = payload.symbols[button.dataset.alertSymbol];
+      if (item !== selectedItem) selectSymbol(item.symbol);
+      if (button.dataset.alertDay <= item.price_end) showTurnoverDay(item, button.dataset.alertDay);
+    }));
 }
 
 function showTurnoverDay(item, day) {
@@ -158,6 +220,16 @@ function showTurnoverDay(item, day) {
 }
 
 function renderTurnoverCases(item) {
+  const study = $('#turnoverStudy');
+  const scenes = item.activity?.study || [];
+  study.hidden = !scenes.length;
+  if (scenes.length) {
+    $('#turnoverStudyRange').textContent = `${item.price_start} 至 ${item.price_end} · 美东交易日`;
+    $('#turnoverStudyRows').innerHTML = scenes.map(scene =>
+      `<tr><th scope="row">${esc(scene.label)}</th><td>${scene.samples}</td>
+      <td>${turnoverTimes(scene.median)}</td><td>${scene.abnormal_rate == null ? '—' : fmtPct(scene.abnormal_rate)}</td></tr>`
+    ).join('');
+  }
   const host = $('#turnoverCases');
   const data = (item.activity?.days || []).filter(row => row.ratio != null && row.abnormal);
   host.hidden = !data.length;
