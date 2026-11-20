@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T08:38:17.124744+08:00",
+  "generated_at": "2026-11-20T15:23:25.771634+08:00",
   "static_as_of": "2026-10-24",
   "market_as_of": "2026-11-19",
   "activity_rules": {
@@ -8770,7 +8770,7 @@
           "ema20": 186.465,
           "ema50": 202.897,
           "ema200": 202.237,
-          "trend_score": null,
+          "trend_score": 10.6,
           "trend_score_limited": false
         },
         {
@@ -8782,7 +8782,7 @@
           "ema20": 183.083,
           "ema50": 200.861,
           "ema200": 201.727,
-          "trend_score": null,
+          "trend_score": 8.5,
           "trend_score_limited": false
         },
         {
@@ -8794,7 +8794,7 @@
           "ema20": 179.55,
           "ema50": 198.708,
           "ema200": 201.172,
-          "trend_score": null,
+          "trend_score": 10.4,
           "trend_score_limited": false
         }
       ],
@@ -12348,7 +12348,7 @@
             "article_rows": []
           },
           "close": 145.98,
-          "trend_score": null,
+          "trend_score": 10.4,
           "trend_score_limited": false
         }
       ],
@@ -15285,7 +15285,7 @@
       "holder_psychology": {
         "as_of": "2026-11-19",
         "close": 145.98,
-        "trend_score": null,
+        "trend_score": 10.4,
         "return_5d": -0.1216,
         "return_20d": -0.3121,
         "price_percentile": 0.4979,
@@ -23645,9 +23645,9 @@
           },
           {
             "date": "2026-11-19",
-            "amount": 48407619886.1,
+            "amount": 48628983088.0,
             "baseline": 34259397794.5,
-            "ratio": 1.413,
+            "ratio": 1.4194,
             "change": -0.032989,
             "abnormal": false,
             "relative": false,
@@ -27478,7 +27478,7 @@
           "ema20": 141.592,
           "ema50": 144.703,
           "ema200": null,
-          "trend_score": null,
+          "trend_score": 85.1,
           "trend_score_limited": false
         },
         {
@@ -27490,7 +27490,7 @@
           "ema20": 141.774,
           "ema50": 144.656,
           "ema200": null,
-          "trend_score": null,
+          "trend_score": 78.7,
           "trend_score_limited": false
         },
         {
@@ -27502,7 +27502,7 @@
           "ema20": 141.455,
           "ema50": 144.412,
           "ema200": null,
-          "trend_score": null,
+          "trend_score": 70.8,
           "trend_score_limited": false
         }
       ],
@@ -29559,21 +29559,19 @@
           "trend_score_limited": false
         },
         {
-          "date": "2026-11-13",
+          "date": "2026-11-18",
           "kind": "score_shift",
           "kind_label": "趋势分骤变",
           "direction": 1,
-          "title": "趋势评分跃升 15.4 分；向下跌破 EMA20",
+          "title": "趋势评分跃升 17.2 分",
           "reasons": [
-            "5个交易日趋势评分 +15.4 分",
-            "日周确认 +33.3",
-            "入场质量 +30.0",
-            "近3个交易日由 EMA20 上方转到下方；收盘低于均线 2.1%，达到 2.0% 有效跌破要求（0.8% 与 0.35×ATR% 取高）"
+            "5个交易日趋势评分 +17.2 分",
+            "日周确认 +53.3",
+            "入场质量 +35.0"
           ],
           "severity": 3,
           "related_kinds": [
-            "score_shift",
-            "breakdown"
+            "score_shift"
           ],
           "article_window": {
             "articles": 0,
@@ -29598,8 +29596,8 @@
             },
             "article_rows": []
           },
-          "close": 139.11,
-          "trend_score": 72.0,
+          "close": 143.5,
+          "trend_score": 78.7,
           "trend_score_limited": false
         }
       ],
@@ -31551,7 +31549,7 @@
       "holder_psychology": {
         "as_of": "2026-11-19",
         "close": 138.43,
-        "trend_score": null,
+        "trend_score": 70.8,
         "return_5d": -0.0108,
         "return_20d": -0.0437,
         "price_percentile": 0.2768,
@@ -32895,14 +32893,7 @@
             "abnormal": false,
             "relative": false,
             "absolute": false,
-            "events": [
-              {
-                "title": "趋势评分跃升 15.4 分；向下跌破 EMA20",
-                "category": "技术事件",
-                "url": null,
-                "announce": null
-              }
-            ]
+            "events": []
           },
           {
             "date": "2026-11-16",
@@ -32928,20 +32919,27 @@
           },
           {
             "date": "2026-11-18",
-            "amount": 12451752997.12,
+            "amount": 12448125402.0,
             "baseline": 14455865106.0,
-            "ratio": 0.8614,
+            "ratio": 0.8611,
             "change": 0.012703,
             "abnormal": false,
             "relative": false,
             "absolute": false,
-            "events": []
+            "events": [
+              {
+                "title": "趋势评分跃升 17.2 分",
+                "category": "技术事件",
+                "url": null,
+                "announce": null
+              }
+            ]
           },
           {
             "date": "2026-11-19",
-            "amount": 16702357462.15,
+            "amount": 16735425580.0,
             "baseline": 14298813107.5,
-            "ratio": 1.1681,
+            "ratio": 1.1704,
             "change": -0.035331,
             "abnormal": false,
             "relative": false,
@@ -42125,7 +42123,7 @@
           "ema20": 382.492,
           "ema50": 376.69,
           "ema200": 378.776,
-          "trend_score": null,
+          "trend_score": 80.9,
           "trend_score_limited": false
         },
         {
@@ -42137,7 +42135,7 @@
           "ema20": 382.609,
           "ema50": 376.966,
           "ema200": 378.826,
-          "trend_score": null,
+          "trend_score": 80.9,
           "trend_score_limited": false
         },
         {
@@ -42149,7 +42147,7 @@
           "ema20": 381.828,
           "ema50": 376.866,
           "ema200": 378.782,
-          "trend_score": null,
+          "trend_score": 77.1,
           "trend_score_limited": false
         }
       ],
@@ -45208,7 +45206,7 @@
       "holder_psychology": {
         "as_of": "2026-11-19",
         "close": 374.41,
-        "trend_score": null,
+        "trend_score": 77.1,
         "return_5d": -0.058,
         "return_20d": -0.0005,
         "price_percentile": 0.6303,
@@ -53570,9 +53568,9 @@
           },
           {
             "date": "2026-11-19",
-            "amount": 10029986674.47,
+            "amount": 10074583903.0,
             "baseline": 13038187055.5,
-            "ratio": 0.7693,
+            "ratio": 0.7727,
             "change": -0.024262,
             "abnormal": false,
             "relative": false,
@@ -64593,7 +64591,7 @@
           "ema20": 347.422,
           "ema50": 339.555,
           "ema200": 307.811,
-          "trend_score": null,
+          "trend_score": 95.7,
           "trend_score_limited": false
         },
         {
@@ -64605,7 +64603,7 @@
           "ema20": 347.901,
           "ema50": 340.061,
           "ema200": 308.255,
-          "trend_score": null,
+          "trend_score": 100.0,
           "trend_score_limited": false
         },
         {
@@ -64617,7 +64615,7 @@
           "ema20": 348.026,
           "ema50": 340.42,
           "ema200": 308.663,
-          "trend_score": null,
+          "trend_score": 93.8,
           "trend_score_limited": false
         }
       ],
@@ -67139,7 +67137,7 @@
       "holder_psychology": {
         "as_of": "2026-11-19",
         "close": 349.21,
-        "trend_score": null,
+        "trend_score": 93.8,
         "return_5d": -0.016,
         "return_20d": 0.0036,
         "price_percentile": 0.989,
@@ -75437,9 +75435,9 @@
           },
           {
             "date": "2026-11-19",
-            "amount": 14289661241.48,
+            "amount": 14301192442.0,
             "baseline": 14789719768.5,
-            "ratio": 0.9662,
+            "ratio": 0.967,
             "change": -0.009193,
             "abnormal": false,
             "relative": false,
@@ -86772,7 +86770,7 @@
           "ema20": 524.289,
           "ema50": 514.688,
           "ema200": 469.416,
-          "trend_score": null,
+          "trend_score": 83.0,
           "trend_score_limited": false
         },
         {
@@ -86784,7 +86782,7 @@
           "ema20": 522.672,
           "ema50": 514.399,
           "ema200": 469.793,
-          "trend_score": null,
+          "trend_score": 76.6,
           "trend_score_limited": false
         },
         {
@@ -86796,7 +86794,7 @@
           "ema20": 520.351,
           "ema50": 513.768,
           "ema200": 470.076,
-          "trend_score": null,
+          "trend_score": 75.0,
           "trend_score_limited": false
         }
       ],
@@ -88185,15 +88183,19 @@
         },
         {
           "date": "2026-11-17",
-          "kind": "breakdown",
-          "kind_label": "跌破关键位置",
+          "kind": "score_shift",
+          "kind_label": "趋势分骤变",
           "direction": -1,
-          "title": "向下跌破 EMA50",
+          "title": "趋势评分骤降 17.0 分；向下跌破 EMA50",
           "reasons": [
+            "5个交易日趋势评分 -17.0 分",
+            "日周确认 -73.3",
+            "入场质量 -35.0",
             "近3个交易日由 EMA50 上方转到下方；收盘低于均线 1.8%，达到 1.0% 有效跌破要求（0.8% 与 0.35×ATR% 取高）"
           ],
           "severity": 3,
           "related_kinds": [
+            "score_shift",
             "breakdown"
           ],
           "article_window": {
@@ -88220,7 +88222,7 @@
             "article_rows": []
           },
           "close": 505.264,
-          "trend_score": null,
+          "trend_score": 83.0,
           "trend_score_limited": false
         }
       ],
@@ -89209,7 +89211,7 @@
       "holder_psychology": {
         "as_of": "2026-11-19",
         "close": 498.3,
-        "trend_score": null,
+        "trend_score": 75.0,
         "return_5d": -0.0454,
         "return_20d": -0.0419,
         "price_percentile": 0.8207,
@@ -97507,7 +97509,7 @@
             "absolute": false,
             "events": [
               {
-                "title": "向下跌破 EMA50",
+                "title": "趋势评分骤降 17.0 分；向下跌破 EMA50",
                 "category": "技术事件",
                 "url": null,
                 "announce": null
@@ -97527,9 +97529,9 @@
           },
           {
             "date": "2026-11-19",
-            "amount": 14837865255.19,
+            "amount": 14904513532.0,
             "baseline": 14236611811.5,
-            "ratio": 1.0422,
+            "ratio": 1.0469,
             "change": -0.01776,
             "abnormal": false,
             "relative": false,
@@ -117029,9 +117031,9 @@
           },
           {
             "date": "2026-11-19",
-            "amount": 344954567.73,
+            "amount": 345375774.0,
             "baseline": 296573120.0,
-            "ratio": 1.1631,
+            "ratio": 1.1646,
             "change": -0.026934,
             "abnormal": false,
             "relative": false,
@@ -144196,9 +144198,9 @@
           },
           {
             "date": "2026-11-19",
-            "amount": 5852763497.19,
+            "amount": 5877331889.64,
             "baseline": 5650242438.5,
-            "ratio": 1.0358,
+            "ratio": 1.0402,
             "change": -0.027494,
             "abnormal": false,
             "relative": false,
@@ -158328,9 +158330,9 @@
           },
           {
             "date": "2026-11-19",
-            "amount": 2060052484.27,
+            "amount": 2067573043.0,
             "baseline": 1769192469.5,
-            "ratio": 1.1644,
+            "ratio": 1.1687,
             "change": -0.018391,
             "abnormal": false,
             "relative": false,
@@ -176473,9 +176475,9 @@
           },
           {
             "date": "2026-11-19",
-            "amount": 46704284687.34,
+            "amount": 46877551212.0,
             "baseline": 29381211843.5,
-            "ratio": 1.5896,
+            "ratio": 1.5955,
             "change": -0.021941,
             "abnormal": true,
             "relative": true,
@@ -176545,7 +176547,7 @@
             "date": "2026-11-19",
             "phase": "收盘确认",
             "reasons": [
-              "成交额达到此前 20 日中位数的 1.59×",
+              "成交额达到此前 20 日中位数的 1.60×",
               "单日急跌",
               "收盘跌破前 60 日最低价"
             ],
@@ -198103,9 +198105,9 @@
           },
           {
             "date": "2026-11-18",
-            "amount": 3377013596.9,
+            "amount": 3376683154.0,
             "baseline": 2118686536.0,
-            "ratio": 1.5939,
+            "ratio": 1.5938,
             "change": -0.03267,
             "abnormal": true,
             "relative": true,
@@ -198114,9 +198116,9 @@
           },
           {
             "date": "2026-11-19",
-            "amount": 1889571058.23,
+            "amount": 1890317679.71,
             "baseline": 2183753418.5,
-            "ratio": 0.8653,
+            "ratio": 0.8656,
             "change": -0.006526,
             "abnormal": false,
             "relative": false,
@@ -218535,9 +218537,9 @@
           },
           {
             "date": "2026-11-19",
-            "amount": 1058295210.0,
+            "amount": 1059716671.0,
             "baseline": 873638658.5,
-            "ratio": 1.2114,
+            "ratio": 1.213,
             "change": -0.008665,
             "abnormal": false,
             "relative": false,
@@ -240310,9 +240312,9 @@
           },
           {
             "date": "2026-11-19",
-            "amount": 3773975440.85,
+            "amount": 3785626308.0,
             "baseline": 3353800445.5,
-            "ratio": 1.1253,
+            "ratio": 1.1288,
             "change": -0.017615,
             "abnormal": false,
             "relative": false,
@@ -263508,9 +263510,9 @@
           },
           {
             "date": "2026-11-19",
-            "amount": 346865752.64,
+            "amount": 347736888.6,
             "baseline": 730045429.5,
-            "ratio": 0.4751,
+            "ratio": 0.4763,
             "change": 0.014547,
             "abnormal": false,
             "relative": false,
