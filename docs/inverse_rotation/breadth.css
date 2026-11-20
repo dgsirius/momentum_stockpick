@@ -1,0 +1,9 @@
+#etfBreadth [data-breadth="chart"] { position:relative; }
+#etfBreadth [data-breadth="chart"] svg { display:block; width:100%; max-height:300px; }
+#etfBreadth [data-breadth-hit] { cursor:crosshair; }
+#etfBreadth .breadth-tooltip { position:absolute; top:8px; max-width:100%; padding:8px 12px; pointer-events:none; background:#fff; border:1px solid #cbd9d4; border-radius:8px; box-shadow:0 3px 10px #243b4320; font-size:12px; line-height:1.6; }
+#etfBreadth svg text { fill:#607278; font-size:11px; }
+#etfBreadth [data-breadth="legend"] { display:flex; gap:14px; flex-wrap:wrap; font-size:12px; margin:12px 0 3px; }
+#etfBreadth .breadth-selected { background:#eef7f2; }
+#etfBreadth [data-symbol] { border:0; background:none; font:inherit; color:#17625e; cursor:pointer; padding:3px 5px; }
+#etfBreadth [data-breadth="signals"] { margin:.4em 0; padding-left:1.4em; font-size:12px; }

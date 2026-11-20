@@ -46,13 +46,11 @@
 </head>
 <body>
   <div class="wrap"><div class="layout">
-    <aside class="sidebar"><div class="sidebar-title">策略目录</div><div class="nav-links"><a class='nav-link' href='../soxs_paper/index.html'>SOXS 做空试跑</a>
+    <aside class="sidebar"><div class="sidebar-title">策略目录</div><div class="nav-links"><a class='nav-link' href='../inverse_rotation/index.html'>反向 ETF 做空轮动</a>
+<a class='nav-link' href='../soxs_paper/index.html'>SOXS 做空试跑</a>
 <a class='nav-link active' href='./index.html'>策略总览</a>
-<a class='nav-link' href='../er_3_8_20_100b_daily/index.html'>ER 3/8/20 (100B 日调仓)</a>
 <a class='nav-link' href='../etf_er_3_8_20_whitelist/index.html'>ETF ER 3/8/20 (白名单日调仓 Top5)</a>
-<a class='nav-link' href='../hk_er_3_8_20_20b_stock_connect/index.html'>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</a>
 <a class='nav-link' href='../er_3_8_20_100b_top5_biweekly_top50/index.html'>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</a>
-<a class='nav-link' href='../er_3_8_20_100b_top5_weekly/index.html'>ER 3/8/20 (100B Top5 周换仓)</a>
 <a class='nav-link' href='../leader_valuation/index.html'>自选股长期估值</a>
 <a class='nav-link' href='../watchlist_gap/index.html'>自选股缺口监控</a>
 <a class='nav-link' href='../watchlist_trend_score/index.html'>自选股趋势评分</a>
@@ -111,7 +109,7 @@
         seen.add(item.id);
         return true;
       }).map(item => ({id: item.id, name: String(item.name || '').trim().slice(0, 100) || '未命名分组', parent: typeof item.parent === 'string' ? item.parent : null, type: item.type === 'group' ? 'group' : 'page'}));
-      defaults.forEach(item => { if (!seen.has(item.id)) { if (item.id.endsWith('/soxs_paper/index.html')) result.unshift({...item}); else result.push({...item}); } });
+      defaults.forEach(item => { if (!seen.has(item.id)) { if (item.id.endsWith('/soxs_paper/index.html') || item.id.endsWith('/inverse_rotation/index.html')) result.unshift({...item}); else result.push({...item}); } });
       const groups = new Map(result.filter(item => item.type === 'group').map(item => [item.id, item]));
       result.forEach(item => {
         const visited = new Set([item.id]);
@@ -351,7 +349,7 @@
       <div class="header-row">
         <div class="header-copy">
           <h1>策略看板总览</h1>
-          <div class="intro">动量策略集合统一刷新入口：按美股、港股各自交易日补拉必要数据，仅更新 5 个 ER 看板和长线趋势最强。自选股与研报看板在各自页面独立更新。</div>
+          <div class="intro">动量策略集合统一刷新入口：按美股、港股各自交易日补拉必要数据，仅更新 2 个 ER 看板和长线趋势最强。自选股与研报看板在各自页面独立更新。</div>
         </div>
         <div class="refresh-box">
           <button id="collectionRefreshButton" class="refresh-btn" type="button">刷新动量策略集合</button>
@@ -359,13 +357,13 @@
         </div>
       </div>
       <section class="stats">
-        <div class="stat"><span class="sub">策略数量</span><strong>5</strong></div>
-        <div class="stat"><span class="sub">数据健康</span><strong>5/5</strong></div>
-        <div class="stat"><span class="sub">最近生成</span><strong style="font-size:16px">2026-11-04T14:32:19+08:00</strong></div>
+        <div class="stat"><span class="sub">策略数量</span><strong>2</strong></div>
+        <div class="stat"><span class="sub">数据健康</span><strong>2/2</strong></div>
+        <div class="stat"><span class="sub">最近生成</span><strong style="font-size:16px">2026-11-20T14:46:11+08:00</strong></div>
       </section>
       <section class="panel"><div class="table-scroll"><table>
         <thead><tr><th>策略</th><th>数据 / 信号日</th><th>下次交易</th><th>今日动作</th><th>区间收益</th><th>超额</th><th>最大回撤</th><th>Sharpe</th><th>年化换手</th><th>数据健康</th><th>净敞口</th></tr></thead>
-        <tbody><tr><td><a href='../soxs_paper/index.html'><strong>SOXS 做空试跑</strong></a><div class='sub'>美股 · 纸面账户</div></td><td>2026-11-03</td><td>2026-11-04</td><td>模型自主 0%—20%</td><td>0.0%</td><td>前向试跑</td><td>待积累</td><td>待积累</td><td>待积累</td><td>未接实盘</td><td>0.0%</td></tr><tr><td><a href='../er_3_8_20_100b_daily/index.html'><strong>ER 3/8/20 (100B 日调仓)</strong></a><div class='sub'>美股</div></td><td>2026-11-03<div class='sub'>信号 2026-11-03</div></td><td>2026-11-04</td><td><span class='buy'>买 4</span> / <span class='sell'>卖 4</span></td><td>+101.7%</td><td>+90.7%</td><td>-25.0%</td><td>2.25</td><td>82.42</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>90.0%<div class='sub'>对冲 10.1%</div></td></tr><tr><td><a href='../etf_er_3_8_20_whitelist/index.html'><strong>ETF ER 3/8/20 (白名单日调仓 Top5)</strong></a><div class='sub'>美股</div></td><td>2026-11-03<div class='sub'>信号 2026-11-03</div></td><td>2026-11-04</td><td><span class='buy'>买 2</span> / <span class='sell'>卖 2</span></td><td>+77.4%</td><td>+65.9%</td><td>-14.8%</td><td>1.87</td><td>89.24</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>90.0%<div class='sub'>对冲 10.1%</div></td></tr><tr><td><a href='../hk_er_3_8_20_20b_stock_connect/index.html'><strong>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</strong></a><div class='sub'>港股</div></td><td>2026-11-03<div class='sub'>信号 2026-11-03</div></td><td>2026-11-04</td><td><span class='buy'>买 4</span> / <span class='sell'>卖 4</span></td><td>+25.1%</td><td>+33.3%</td><td>-35.9%</td><td>0.80</td><td>61.45</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>75.3%<div class='sub'>对冲 24.7%</div></td></tr><tr><td><a href='../er_3_8_20_100b_top5_biweekly_top50/index.html'><strong>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</strong></a><div class='sub'>美股</div></td><td>2026-11-03<div class='sub'>信号 2026-11-03</div></td><td>2026-11-04</td><td><span class='buy'>买 0</span> / <span class='sell'>卖 0</span></td><td>+167.8%</td><td>+156.9%</td><td>-20.6%</td><td>2.74</td><td>15.23</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>89.9%<div class='sub'>对冲 10.1%</div></td></tr><tr><td><a href='../er_3_8_20_100b_top5_weekly/index.html'><strong>ER 3/8/20 (100B Top5 周换仓)</strong></a><div class='sub'>美股</div></td><td>2026-11-03<div class='sub'>信号 2026-11-03</div></td><td>2026-11-04</td><td><span class='buy'>买 0</span> / <span class='sell'>卖 0</span></td><td>+132.5%</td><td>+121.6%</td><td>-31.3%</td><td>2.07</td><td>30.79</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>89.9%<div class='sub'>对冲 10.1%</div></td></tr></tbody>
+        <tbody><tr><td><a href='../soxs_paper/index.html'><strong>SOXS 做空试跑</strong></a><div class='sub'>美股 · 纸面账户</div></td><td>2026-11-19</td><td>2026-11-20</td><td>模型自主 0%—20%</td><td>0.0%</td><td>前向试跑</td><td>待积累</td><td>待积累</td><td>待积累</td><td>未接实盘</td><td>0.0%</td></tr><tr><td><a href='../etf_er_3_8_20_whitelist/index.html'><strong>ETF ER 3/8/20 (白名单日调仓 Top5)</strong></a><div class='sub'>美股</div></td><td>2026-11-19<div class='sub'>信号 2026-11-19</div></td><td>2026-11-20</td><td><span class='buy'>买 2</span> / <span class='sell'>卖 2</span></td><td>+61.7%</td><td>+55.9%</td><td>-19.8%</td><td>1.55</td><td>89.23</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>90.0%<div class='sub'>对冲 9.8%</div></td></tr><tr><td><a href='../er_3_8_20_100b_top5_biweekly_top50/index.html'><strong>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</strong></a><div class='sub'>美股</div></td><td>2026-11-19<div class='sub'>信号 2026-11-19</div></td><td>2026-11-20</td><td><span class='buy'>买 0</span> / <span class='sell'>卖 0</span></td><td>+151.0%</td><td>+145.7%</td><td>-25.9%</td><td>2.48</td><td>15.51</td><td><span class='status status-healthy'>健康</span><div class='sub'>100.0%</div></td><td>74.4%<div class='sub'>对冲 24.7%</div></td></tr></tbody>
       </table></div></section>
     </main>
   </div></div>
@@ -416,7 +414,7 @@
         if (payload.last_finished_at) {
           setStatus(`最近完成：${payload.last_finished_at}。`);
         } else {
-          setStatus("仅刷新 5 个 ER 看板和长线趋势最强；不更新其他独立看板。");
+          setStatus("仅刷新 2 个 ER 看板和长线趋势最强；不更新其他独立看板。");
         }
       }
 

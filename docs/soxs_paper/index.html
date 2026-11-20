@@ -1,11 +1,9 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SOXS 做空试跑 · 策略看板</title><link rel="stylesheet" href="dashboard.css"></head>
-<body><div class="layout"><aside class="sidebar"><div class="sidebar-title">策略目录</div><div class="nav-links"><a class='nav-link active' href='./index.html'>SOXS 做空试跑</a>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SOXS 做空试跑 · 策略看板</title><link rel="stylesheet" href="dashboard.css"><link rel="stylesheet" href="breadth.css"></head>
+<body><div class="layout"><aside class="sidebar"><div class="sidebar-title">策略目录</div><div class="nav-links"><a class='nav-link' href='../inverse_rotation/index.html'>反向 ETF 做空轮动</a>
+<a class='nav-link active' href='./index.html'>SOXS 做空试跑</a>
 <a class='nav-link' href='../overview/index.html'>策略总览</a>
-<a class='nav-link' href='../er_3_8_20_100b_daily/index.html'>ER 3/8/20 (100B 日调仓)</a>
 <a class='nav-link' href='../etf_er_3_8_20_whitelist/index.html'>ETF ER 3/8/20 (白名单日调仓 Top5)</a>
-<a class='nav-link' href='../hk_er_3_8_20_20b_stock_connect/index.html'>港股 ER 8/15/40 双目标流动性（200亿，港股通 + 1000亿+）</a>
 <a class='nav-link' href='../er_3_8_20_100b_top5_biweekly_top50/index.html'>ER 3/8/20 (100B Top5 双周 Top50 Buffer)</a>
-<a class='nav-link' href='../er_3_8_20_100b_top5_weekly/index.html'>ER 3/8/20 (100B Top5 周换仓)</a>
 <a class='nav-link' href='../leader_valuation/index.html'>自选股长期估值</a>
 <a class='nav-link' href='../watchlist_gap/index.html'>自选股缺口监控</a>
 <a class='nav-link' href='../watchlist_trend_score/index.html'>自选股趋势评分</a>
@@ -64,7 +62,7 @@
         seen.add(item.id);
         return true;
       }).map(item => ({id: item.id, name: String(item.name || '').trim().slice(0, 100) || '未命名分组', parent: typeof item.parent === 'string' ? item.parent : null, type: item.type === 'group' ? 'group' : 'page'}));
-      defaults.forEach(item => { if (!seen.has(item.id)) { if (item.id.endsWith('/soxs_paper/index.html')) result.unshift({...item}); else result.push({...item}); } });
+      defaults.forEach(item => { if (!seen.has(item.id)) { if (item.id.endsWith('/soxs_paper/index.html') || item.id.endsWith('/inverse_rotation/index.html')) result.unshift({...item}); else result.push({...item}); } });
       const groups = new Map(result.filter(item => item.type === 'group').map(item => [item.id, item]));
       result.forEach(item => {
         const visited = new Set([item.id]);
@@ -305,6 +303,28 @@
 <section class="account-grid" aria-label="试跑账户"><article><small>试跑净资产</small><strong id="equity">$100,000</strong><span id="accountReturn">尚未成交</span></article><article><small>SOXS 空头市值 / 净资产</small><strong id="exposure">0.0%</strong><span id="position">0 股 · 空仓</span></article><article><small>模型下一开盘目标</small><strong id="target">—</strong><span id="targetShares">等待首次分析</span></article><article><small>维持保证金余量</small><strong id="marginSurplus">$100,000</strong><span id="marginTrigger">空仓时无追加保证金压力</span></article></section>
 <section class="decision-grid"><article class="panel plan"><div class="section-head"><div><div class="eyebrow">NEXT OPEN / EXECUTION PLAN</div><h2>下一次开盘做什么</h2></div><span id="planState" class="tag">等待计划</span></div><div class="open-time"><b id="nextOpen">—</b><small id="nextOpenEt">美国东部时间 —</small></div><h3 id="planHeadline">正在准备市场数据</h3><p id="planSummary" class="body-copy">模型将综合半导体相对强弱、绝对趋势、成交量、波动与日周K线，决定0%—20%的目标空仓。</p><div class="plan-metrics"><div><small>参考价格</small><b id="referencePrice">—</b></div><div><small>预计股数变化</small><b id="shareChange">—</b></div><div><small>初始风险止损参考</small><b id="stopPrice">—</b></div></div><div id="conditions" class="conditions"></div><div class="footnote">股数以实际开盘价重算；开盘跳空超过10%时不新增空仓。同一开盘前刷新会替换待执行计划，不重复下单。</div></article>
 <article class="panel model"><div class="section-head"><div><div class="eyebrow">MODEL REVIEW</div><h2>模型判断与证据</h2></div><span id="modelBadge" class="tag neutral">未运行</span></div><p class="muted">综合行情、相对强弱趋势、量价波动与日周线，统一给出关键证据和仓位判断。</p><div class="model-meta" id="modelMeta">本机Codex · 最新可用模型配置</div><div id="regime" class="regime">等待市场状态判断</div><div id="evidence" class="evidence"><p class="muted">每条结论会对应具体标的和可核查指标。</p></div><details><summary>形态判断、风险与反证</summary><div id="modelDetails"></div></details><div class="trace-actions"><button id="traceInput" class="text-button">查看模型输入</button><button id="traceOutput" class="text-button">查看结构化输出</button><span id="modelHash" class="mono"></span></div></article></section>
+<section class="panel" id="etfBreadth" data-symbols="SOXX">
+  <div class="section-head">
+    <div><div class="eyebrow">ETF CONSTITUENT BREADTH</div><h2>核心指数成分股广度</h2>
+      <p class="muted">按发行商股票持仓等权统计站上 20、50、200 日均线的比例。50 日广度为主线。</p></div>
+    <div class="chart-controls">
+      <select data-breadth="symbol" aria-label="广度标的"></select>
+      <select data-breadth="range" aria-label="广度历史范围">
+        <option value="126">近 6 个月</option><option value="252">近 1 年</option><option value="504">近 2 年</option>
+      </select>
+    </div>
+  </div>
+  <div class="table-wrap"><table><thead><tr>
+    <th scope="col">ETF</th><th scope="col">成分收盘</th><th scope="col">20 日</th><th scope="col">50 日</th>
+    <th scope="col">200 日</th><th scope="col">50 日广度两年分位</th><th scope="col">50 日有效覆盖</th><th scope="col">状态</th>
+  </tr></thead><tbody data-breadth="table"></tbody></table></div>
+  <p class="muted" data-breadth="detail" aria-live="polite"></p>
+  <div data-breadth="legend"></div><div data-breadth="chart"></div>
+  <div class="footnote">近期信号<ul data-breadth="signals"></ul></div>
+  <p class="footnote">首轮历史按当前持仓回算，之后用各交易日可获得的持仓并记录披露日期。每条均线至少覆盖 90% 成分才显示读数，分位需要连续 504 个有效观察。FXI 使用港股收盘，背离只比较有对应美股 ETF 收盘的日期。
+    <a data-breadth="source" target="_blank" rel="noopener noreferrer" hidden>发行商持仓来源</a></p>
+</section>
+
 <section class="panel sessions-panel"><div class="section-head"><div><div class="eyebrow">ALL SESSIONS / VERIFIED EVIDENCE</div><h2>盘前、盘后与夜盘</h2><p class="muted">各时段报价、成交样本及数据新鲜度，作为模型综合判断的基础数据。</p></div><div><select id="sessionSymbol" aria-label="全时段报价标的"></select><div id="snapshotTime" class="muted">—</div></div></div><div id="sessionQuotes" class="session-grid"></div><p class="footnote">交易日和时间优先由全时段逐笔与1分钟K线核实；分钟标签不等于精确成交时刻。成交量/额是已取得样本累计，可能未覆盖整段。上次已结束时段、当前有效时段、滞后及未核验快照分别标注；纸面成交仍按实际常规盘开盘核算。</p><div id="extendedContext" class="extended-context"></div></section>
 <section class="market-grid"><article class="panel chart-panel"><div class="section-head"><div><div class="eyebrow">PRICE / STRUCTURE</div><h2>日周K线与均线</h2></div><div class="chart-controls"><select id="chartSymbol" aria-label="图表标的"></select><select id="chartRange" aria-label="图表周期"><option value="30">日K · 6周</option><option value="63" selected>日K · 3个月</option><option value="126">日K · 6个月</option><option value="weekly">周K · 近7个月</option></select></div></div><div id="chartStats" class="chart-stats"></div><div id="candles" class="candles"></div><div id="patternNote" class="footnote"></div></article>
 <article class="panel risk-panel"><div class="risk-divider"></div><h3>仓位与风险边界</h3><dl class="risk-list" id="riskList"></dl><p class="footnote">保证金与借券参数来自用户截图参考，非券商实时额度。模型仓位不超过20%；两次调仓之间，实际敞口仍会随价格变化。</p></article></section>
@@ -315,4 +335,4 @@
 <section class="panel"><div class="section-head"><div><div class="eyebrow">AUDIT TRAIL</div><h2>计划、成交与数据链路</h2></div><span id="pipelineUpdated" class="muted"></span></div><div id="pipeline" class="pipeline"></div><div class="tabs"><button data-tab="plans" class="active">开盘计划</button><button data-tab="fills">试跑成交</button><button data-tab="events">完整事件</button></div><div id="journal" class="table-wrap"></div></section>
 <details class="panel settings"><summary>试跑参数与执行口径</summary><form id="settingsForm"><div class="settings-grid"><label>参考借券费（% / 年）<input name="borrow_rate" type="number" min="0" max="50" step="0.1"></label><label>初始保证金（%）<input name="initial_margin" type="number" min="50" max="500" step="1"></label><label>维持保证金（%）<input name="maintenance_margin" type="number" min="30" max="500" step="1"></label><label>单边交易摩擦（%）<input name="friction" type="number" min="0" max="2" step="0.01"></label><label>止损 ATR 倍数<input name="stop_atr" type="number" min="1" max="5" step="0.25"></label><label>最大持仓交易日<input name="roll_sessions" type="number" min="1" max="120" step="1"></label></div><button class="secondary" type="submit">保存后续试跑参数</button><span id="settingsStatus" role="status"></span></form><p class="footnote">参数修改只作用于之后的核算，不改写已记账成本。模型以0%—20%自主决策；20日持仓上限和2ATR止损是初始试跑风险设置，并非历史最优参数。现金利息0。试跑使用整数股及净股数调整；价格跳空时止损可能按更差开盘价成交。止损在刷新时根据已发生的行情进行纸面核算，并非券商挂单；本服务仅使用OpenD行情接口，没有实盘下单或解锁接口。</p></details>
 <footer>数据 → 指标 → 模型理由摘要 → 风险校验 → 开盘计划 → 纸面成交。每一步都能回看。</footer>
-</main></div><dialog id="traceDialog"><div class="section-head"><h2 id="traceTitle">模型数据</h2><button id="closeTrace" class="secondary">关闭</button></div><pre id="traceContent"></pre></dialog><script src="dashboard.js"></script></body></html>
+</main></div><dialog id="traceDialog"><div class="section-head"><h2 id="traceTitle">模型数据</h2><button id="closeTrace" class="secondary">关闭</button></div><pre id="traceContent"></pre></dialog><script src="breadth.js"></script><script src="dashboard.js"></script></body></html>
