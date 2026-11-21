@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-20T17:59:42.698491+08:00",
+  "generated_at": "2026-11-21T09:07:41.136255+08:00",
   "static_as_of": "2026-10-24",
-  "market_as_of": "2026-11-19",
+  "market_as_of": "2026-11-20",
   "activity_rules": {
     "version": 2,
     "turnover_multiple": 1.5,
     "increase_quantile": 0.95,
     "source": "https://openapi.futunn.com/futu-api-doc/quote/request-history-kline.html"
   },
-  "earnings_checked_on": "2026-11-20",
+  "earnings_checked_on": "2026-11-21",
   "earnings_source": "Futu OpenD · get_financials_earnings_price_move",
   "source_url": "https://futu.feishu.link/app/app_4kbd9d47b1753",
   "source_section": "② 站内热门持仓标的 · 历史聚合",
@@ -93,7 +93,7 @@
       "timeline_start": "2024-01-01",
       "latest_article": "2026-10-22",
       "price_start": "2024-01-02",
-      "price_end": "2026-11-19",
+      "price_end": "2026-11-20",
       "pre_ipo": false,
       "pre_ipo_through": null,
       "series": [
@@ -8796,6 +8796,18 @@
           "ema200": 201.172,
           "trend_score": 10.4,
           "trend_score_limited": false
+        },
+        {
+          "date": "2026-11-20",
+          "open": 143.52,
+          "high": 143.725,
+          "low": 124.5,
+          "close": 125.53,
+          "ema20": 174.405,
+          "ema50": 195.839,
+          "ema200": 200.42,
+          "trend_score": 3.7,
+          "trend_score_limited": false
         }
       ],
       "articles": [
@@ -12312,7 +12324,7 @@
           "trend_score_limited": false
         },
         {
-          "date": "2026-11-19",
+          "date": "2026-11-20",
           "kind": "breakdown",
           "kind_label": "跌破关键位置",
           "direction": -1,
@@ -12347,8 +12359,8 @@
             },
             "article_rows": []
           },
-          "close": 145.98,
-          "trend_score": 10.4,
+          "close": 125.53,
+          "trend_score": 3.7,
           "trend_score_limited": false
         }
       ],
@@ -12634,6 +12646,20 @@
           "previous_close": 173.73,
           "close": 166.19,
           "actual_drawdown": 0.3053
+        },
+        {
+          "key": "2026-10-06|40",
+          "date": "2026-11-20",
+          "previous_date": "2026-11-19",
+          "crossing_time": "2026-11-19T02:51:31Z",
+          "threshold": 0.4,
+          "threshold_percent": 40,
+          "threshold_price": 143.544,
+          "peak_date": "2026-10-06",
+          "peak_close": 239.24,
+          "previous_close": 145.98,
+          "close": 125.53,
+          "actual_drawdown": 0.4753
         }
       ],
       "content_points": [
@@ -12647,7 +12673,7 @@
           "performance_percentile": 0.3438,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.6869,
+          "price_percentile": 0.6873,
           "technical_positions": [
             "EMA20/EMA50 附近"
           ],
@@ -12677,7 +12703,7 @@
           "performance_percentile": 0.2344,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.6979,
+          "price_percentile": 0.6983,
           "technical_positions": [
             "EMA20/EMA50 附近"
           ],
@@ -12707,7 +12733,7 @@
           "performance_percentile": 0.6562,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7255,
+          "price_percentile": 0.7259,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "可用均线上方",
@@ -12739,7 +12765,7 @@
           "performance_percentile": 0.7812,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.6676,
+          "price_percentile": 0.668,
           "technical_positions": [
             "EMA20/EMA50 附近"
           ],
@@ -12802,7 +12828,7 @@
           "performance_percentile": 0.2031,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.5821,
+          "price_percentile": 0.5826,
           "technical_positions": [
             "EMA200 附近",
             "邻近：趋势评分骤降 22.8 分"
@@ -12833,7 +12859,7 @@
           "performance_percentile": 0.6875,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.6248,
+          "price_percentile": 0.6253,
           "technical_positions": [
             "EMA20 附近",
             "邻近：向上突破 EMA200"
@@ -12864,7 +12890,7 @@
           "performance_percentile": 0.3125,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.6028,
+          "price_percentile": 0.6033,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "邻近：跌破近20日支撑位"
@@ -12895,7 +12921,7 @@
           "performance_percentile": 0.2969,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.6179,
+          "price_percentile": 0.6185,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "邻近：趋势评分跃升 16.3 分"
@@ -12926,7 +12952,7 @@
           "performance_percentile": 0.0469,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8345,
+          "price_percentile": 0.8347,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -12958,7 +12984,7 @@
           "performance_percentile": 0.125,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8248,
+          "price_percentile": 0.8251,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -12989,7 +13015,7 @@
           "performance_percentile": 0.7188,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8993,
+          "price_percentile": 0.8994,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -13021,7 +13047,7 @@
           "performance_percentile": 0.7344,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8869,
+          "price_percentile": 0.8871,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -13052,7 +13078,7 @@
           "performance_percentile": 0.8281,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9117,
+          "price_percentile": 0.9118,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -13094,7 +13120,7 @@
           "performance_percentile": 0.8594,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9724,
+          "price_percentile": 0.9725,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -13300,7 +13326,7 @@
           "performance_percentile": 0.7969,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9448,
+          "price_percentile": 0.9449,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -13384,7 +13410,7 @@
           "performance_percentile": 0.9688,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9407,
+          "price_percentile": 0.9408,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -13481,7 +13507,7 @@
           "performance_percentile": 0.9531,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9131,
+          "price_percentile": 0.9132,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -13589,7 +13615,7 @@
           "performance_percentile": 0.8906,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.9076,
+          "price_percentile": 0.9077,
           "technical_positions": [
             "EMA20 附近",
             "文章区间价格高位",
@@ -13621,7 +13647,7 @@
           "performance_percentile": 0.9219,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9352,
+          "price_percentile": 0.9353,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -13665,7 +13691,7 @@
           "performance_percentile": 0.2656,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8703,
+          "price_percentile": 0.8705,
           "technical_positions": [
             "EMA50 附近",
             "文章区间价格高位",
@@ -13697,7 +13723,7 @@
           "performance_percentile": 0.9062,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8966,
+          "price_percentile": 0.8967,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -13730,7 +13756,7 @@
           "performance_percentile": 0.2188,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8497,
+          "price_percentile": 0.8499,
           "technical_positions": [
             "EMA50 附近",
             "文章区间价格高位",
@@ -13762,7 +13788,7 @@
           "performance_percentile": 0.9375,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8207,
+          "price_percentile": 0.8209,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：向下跌破 EMA50；向下跌破 EMA20"
@@ -13793,7 +13819,7 @@
           "performance_percentile": 0.0938,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8028,
+          "price_percentile": 0.803,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：向下跌破 EMA50；向下跌破 EMA20"
@@ -13824,7 +13850,7 @@
           "performance_percentile": 0.1094,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.7972,
+          "price_percentile": 0.7975,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：趋势评分骤降 16.5 分"
@@ -13855,7 +13881,7 @@
           "performance_percentile": 0.5469,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8276,
+          "price_percentile": 0.8278,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：趋势评分骤降 16.5 分"
@@ -13908,7 +13934,7 @@
           "performance_percentile": 0.5156,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.7945,
+          "price_percentile": 0.7948,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：趋势评分骤降 16.5 分"
@@ -13939,7 +13965,7 @@
           "performance_percentile": 0.5625,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8428,
+          "price_percentile": 0.843,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "文章区间价格高位"
@@ -13981,7 +14007,7 @@
           "performance_percentile": 0.0156,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8441,
+          "price_percentile": 0.8444,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "文章区间价格高位",
@@ -14013,7 +14039,7 @@
           "performance_percentile": 0.0781,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8455,
+          "price_percentile": 0.8457,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "文章区间价格高位",
@@ -14045,7 +14071,7 @@
           "performance_percentile": 0.8438,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.891,
+          "price_percentile": 0.8912,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -14099,7 +14125,7 @@
           "performance_percentile": 0.1875,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8069,
+          "price_percentile": 0.8072,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：向下跌破 EMA50；向下跌破 EMA20"
@@ -14130,7 +14156,7 @@
           "performance_percentile": 0.5,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8097,
+          "price_percentile": 0.8099,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：向下跌破 EMA50；向下跌破 EMA20"
@@ -14172,7 +14198,7 @@
           "performance_percentile": 0.25,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8579,
+          "price_percentile": 0.8581,
           "technical_positions": [
             "EMA50 附近",
             "可用均线上方",
@@ -14248,7 +14274,7 @@
           "performance_percentile": 0.0312,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9283,
+          "price_percentile": 0.9284,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -14279,7 +14305,7 @@
           "performance_percentile": 0.2812,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9255,
+          "price_percentile": 0.9256,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -14363,7 +14389,7 @@
           "performance_percentile": 0.3594,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9655,
+          "price_percentile": 0.9656,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -14405,7 +14431,7 @@
           "performance_percentile": 0.1719,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9434,
+          "price_percentile": 0.9435,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -14448,7 +14474,7 @@
           "performance_percentile": 0.6406,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9297,
+          "price_percentile": 0.9298,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -14503,7 +14529,7 @@
           "performance_percentile": 0.8125,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.92,
+          "price_percentile": 0.9201,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -14536,7 +14562,7 @@
           "performance_percentile": 0.625,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8717,
+          "price_percentile": 0.8719,
           "technical_positions": [
             "EMA50 附近",
             "文章区间价格高位",
@@ -14601,7 +14627,7 @@
           "performance_percentile": 0.6719,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.9007,
+          "price_percentile": 0.9008,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "文章区间价格高位",
@@ -14666,7 +14692,7 @@
           "performance_percentile": 0.75,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8786,
+          "price_percentile": 0.8788,
           "technical_positions": [
             "EMA50 附近",
             "文章区间价格高位",
@@ -14818,7 +14844,7 @@
           "performance_percentile": 0.3281,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9283,
+          "price_percentile": 0.9284,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -14862,7 +14888,7 @@
           "performance_percentile": 0.4688,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9476,
+          "price_percentile": 0.9477,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -14893,7 +14919,7 @@
           "performance_percentile": 0.3906,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9228,
+          "price_percentile": 0.9229,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -14925,7 +14951,7 @@
           "performance_percentile": 0.4531,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9903,
+          "price_percentile": 0.9904,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -14998,7 +15024,7 @@
           "performance_percentile": 0.1406,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.9338,
+          "price_percentile": 0.9339,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "文章区间价格高位"
@@ -15029,7 +15055,7 @@
           "performance_percentile": 0.4062,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.9324,
+          "price_percentile": 0.9325,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "文章区间价格高位",
@@ -15061,7 +15087,7 @@
           "performance_percentile": 0.0625,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.9324,
+          "price_percentile": 0.9325,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "文章区间价格高位",
@@ -15229,7 +15255,7 @@
           "performance_percentile": 0.4375,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.9214,
+          "price_percentile": 0.9215,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：趋势评分骤降 21.8 分"
@@ -15260,7 +15286,7 @@
           "performance_percentile": 0.4219,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8952,
+          "price_percentile": 0.8953,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：趋势评分骤降 21.8 分"
@@ -15283,12 +15309,12 @@
         }
       ],
       "holder_psychology": {
-        "as_of": "2026-11-19",
-        "close": 145.98,
-        "trend_score": 10.4,
-        "return_5d": -0.1216,
-        "return_20d": -0.3121,
-        "price_percentile": 0.4979,
+        "as_of": "2026-11-20",
+        "close": 125.53,
+        "trend_score": 3.7,
+        "return_5d": -0.2292,
+        "return_20d": -0.405,
+        "price_percentile": 0.3168,
         "ema_state": "below_all",
         "near_emas": [],
         "regime": "低位/弱势防守",
@@ -23652,6 +23678,17 @@
             "abnormal": false,
             "relative": false,
             "absolute": false,
+            "events": []
+          },
+          {
+            "date": "2026-11-20",
+            "amount": 84273562007.0,
+            "baseline": 41556423082.0,
+            "ratio": 2.0279,
+            "change": -0.140088,
+            "abnormal": true,
+            "relative": true,
+            "absolute": true,
             "events": [
               {
                 "title": "跌破近20日支撑位",
@@ -23663,6 +23700,33 @@
           }
         ],
         "alerts": [
+          {
+            "id": "NVDA:2026-11-23:盘前观察",
+            "date": "2026-11-23",
+            "phase": "盘前观察",
+            "reasons": [
+              "前一交易日 -14.01%，绝对涨跌进入过去最多 252 个交易日的最高一成"
+            ],
+            "categories": [],
+            "previous_shock": true,
+            "sources": []
+          },
+          {
+            "id": "NVDA:2026-11-20:收盘确认",
+            "date": "2026-11-20",
+            "phase": "收盘确认",
+            "reasons": [
+              "成交额达到此前 20 日中位数的 2.03×",
+              "超基准成交额 427.17 亿美元，超过历史第 95 百分位",
+              "单日急跌",
+              "收盘跌破前 60 日最低价"
+            ],
+            "categories": [
+              "技术事件"
+            ],
+            "previous_shock": false,
+            "sources": []
+          },
           {
             "id": "NVDA:2026-11-18:盘前观察",
             "date": "2026-11-18",
@@ -26067,14 +26131,14 @@
           "samples": 81,
           "median": 1.2298,
           "shock_rate": 0.32098765432098764,
-          "baseline_rate": 0.11862068965517242
+          "baseline_rate": 0.11983471074380166
         },
         "study": [
           {
             "label": "全部交易日",
-            "samples": 725,
-            "median": 0.9953,
-            "abnormal_rate": 0.11862068965517242
+            "samples": 726,
+            "median": 0.9956,
+            "abnormal_rate": 0.11983471074380166
           },
           {
             "label": "公司财报反应日",
@@ -26090,9 +26154,9 @@
           },
           {
             "label": "单日下跌 ≥ 2%",
-            "samples": 138,
-            "median": 1.1816,
-            "abnormal_rate": 0.2463768115942029
+            "samples": 139,
+            "median": 1.1823,
+            "abnormal_rate": 0.2517985611510791
           },
           {
             "label": "前一日大幅波动",
@@ -26108,9 +26172,9 @@
           },
           {
             "label": "收盘跌破前 60 日最低价",
-            "samples": 12,
-            "median": 1.5659,
-            "abnormal_rate": 0.5833333333333334
+            "samples": 13,
+            "median": 1.5859,
+            "abnormal_rate": 0.6153846153846154
           }
         ],
         "related": [
@@ -26157,7 +26221,7 @@
       "timeline_start": "2026-03-26",
       "latest_article": "2026-10-22",
       "price_start": "2026-06-12",
-      "price_end": "2026-11-19",
+      "price_end": "2026-11-20",
       "pre_ipo": true,
       "pre_ipo_through": "2026-06-11",
       "series": [
@@ -27503,6 +27567,18 @@
           "ema50": 144.412,
           "ema200": null,
           "trend_score": 70.8,
+          "trend_score_limited": false
+        },
+        {
+          "date": "2026-11-20",
+          "open": 131.93,
+          "high": 133.841,
+          "low": 126.28,
+          "close": 127.79,
+          "ema20": 140.154,
+          "ema50": 143.76,
+          "ema200": null,
+          "trend_score": 72.2,
           "trend_score_limited": false
         }
       ],
@@ -30302,7 +30378,7 @@
           "performance_percentile": 1.0,
           "performance_label": "高表现",
           "ema_state": "no_price",
-          "price_percentile": 0.8929,
+          "price_percentile": 0.8938,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：单日上涨 19.6%"
@@ -30366,7 +30442,7 @@
           "performance_percentile": 0.9583,
           "performance_label": "高表现",
           "ema_state": "no_price",
-          "price_percentile": 0.9911,
+          "price_percentile": 0.9912,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：单日上涨 19.6%"
@@ -30494,7 +30570,7 @@
           "performance_percentile": 0.875,
           "performance_label": "高表现",
           "ema_state": "no_price",
-          "price_percentile": 0.9821,
+          "price_percentile": 0.9823,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：单日上涨 19.6%"
@@ -30558,7 +30634,7 @@
           "performance_percentile": 0.125,
           "performance_label": "普通表现",
           "ema_state": "no_price",
-          "price_percentile": 0.8304,
+          "price_percentile": 0.8319,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：单日下跌 16.4%"
@@ -30589,7 +30665,7 @@
           "performance_percentile": 0.6458,
           "performance_label": "中上表现",
           "ema_state": "no_price",
-          "price_percentile": 0.9286,
+          "price_percentile": 0.9292,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：单日上涨 7.2%"
@@ -30620,7 +30696,7 @@
           "performance_percentile": 0.75,
           "performance_label": "高表现",
           "ema_state": "no_price",
-          "price_percentile": 0.9464,
+          "price_percentile": 0.9469,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：单日上涨 7.2%"
@@ -30651,7 +30727,7 @@
           "performance_percentile": 0.8125,
           "performance_label": "高表现",
           "ema_state": "no_price",
-          "price_percentile": 0.875,
+          "price_percentile": 0.8761,
           "technical_positions": [
             "文章区间价格高位"
           ],
@@ -30692,7 +30768,7 @@
           "performance_percentile": 0.7083,
           "performance_label": "中上表现",
           "ema_state": "no_price",
-          "price_percentile": 0.6339,
+          "price_percentile": 0.6372,
           "technical_positions": [
             "均线结构与文章区间位置中性"
           ],
@@ -30722,7 +30798,7 @@
           "performance_percentile": 0.2917,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.2321,
+          "price_percentile": 0.2389,
           "technical_positions": [
             "可用均线下方",
             "文章区间价格低位"
@@ -30753,7 +30829,7 @@
           "performance_percentile": 0.0417,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.1161,
+          "price_percentile": 0.115,
           "technical_positions": [
             "可用均线下方",
             "文章区间价格低位",
@@ -30785,7 +30861,7 @@
           "performance_percentile": 0.1458,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.0804,
+          "price_percentile": 0.0796,
           "technical_positions": [
             "可用均线下方",
             "文章区间价格低位",
@@ -30817,7 +30893,7 @@
           "performance_percentile": 0.0833,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.0446,
+          "price_percentile": 0.0442,
           "technical_positions": [
             "可用均线下方",
             "文章区间价格低位"
@@ -30848,7 +30924,7 @@
           "performance_percentile": 0.5,
           "performance_label": "中上表现",
           "ema_state": "below_all",
-          "price_percentile": 0.0893,
+          "price_percentile": 0.0885,
           "technical_positions": [
             "可用均线下方",
             "文章区间价格低位"
@@ -30879,7 +30955,7 @@
           "performance_percentile": 0.7292,
           "performance_label": "中上表现",
           "ema_state": "below_all",
-          "price_percentile": 0.0268,
+          "price_percentile": 0.0265,
           "technical_positions": [
             "可用均线下方",
             "文章区间价格低位"
@@ -30910,7 +30986,7 @@
           "performance_percentile": 0.3125,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.0536,
+          "price_percentile": 0.0531,
           "technical_positions": [
             "可用均线下方",
             "文章区间价格低位"
@@ -30952,7 +31028,7 @@
           "performance_percentile": 0.6875,
           "performance_label": "中上表现",
           "ema_state": "below_all",
-          "price_percentile": 0.1429,
+          "price_percentile": 0.1416,
           "technical_positions": [
             "EMA20 附近",
             "可用均线下方",
@@ -30984,7 +31060,7 @@
           "performance_percentile": 0.8958,
           "performance_label": "高表现",
           "ema_state": "below_all",
-          "price_percentile": 0.0089,
+          "price_percentile": 0.0088,
           "technical_positions": [
             "可用均线下方",
             "文章区间价格低位"
@@ -31048,7 +31124,7 @@
           "performance_percentile": 0.5417,
           "performance_label": "中上表现",
           "ema_state": "below_all",
-          "price_percentile": 0.0625,
+          "price_percentile": 0.0619,
           "technical_positions": [
             "可用均线下方",
             "文章区间价格低位"
@@ -31079,7 +31155,7 @@
           "performance_percentile": 0.625,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.5357,
+          "price_percentile": 0.5398,
           "technical_positions": [
             "可用均线上方",
             "邻近：历史确认的可能顶部"
@@ -31132,10 +31208,9 @@
           "performance_percentile": 0.3542,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.25,
+          "price_percentile": 0.2566,
           "technical_positions": [
-            "可用均线上方",
-            "文章区间价格低位"
+            "可用均线上方"
           ],
           "nearby_event_date": null,
           "nearby_event_title": null,
@@ -31163,7 +31238,7 @@
           "performance_percentile": 0.2708,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.5625,
+          "price_percentile": 0.5664,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -31193,7 +31268,7 @@
           "performance_percentile": 0.5625,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8214,
+          "price_percentile": 0.823,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -31225,7 +31300,7 @@
           "performance_percentile": 0.3958,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7589,
+          "price_percentile": 0.7611,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -31257,7 +31332,7 @@
           "performance_percentile": 0.25,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7321,
+          "price_percentile": 0.7345,
           "technical_positions": [
             "可用均线上方",
             "邻近：趋势评分骤降 20.6 分"
@@ -31288,7 +31363,7 @@
           "performance_percentile": 0.4167,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9643,
+          "price_percentile": 0.9646,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -31320,7 +31395,7 @@
           "performance_percentile": 0.1042,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8839,
+          "price_percentile": 0.885,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -31352,7 +31427,7 @@
           "performance_percentile": 0.5208,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9107,
+          "price_percentile": 0.9115,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -31384,7 +31459,7 @@
           "performance_percentile": 0.4792,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.5893,
+          "price_percentile": 0.5929,
           "technical_positions": [
             "EMA50 附近",
             "可用均线下方",
@@ -31416,7 +31491,7 @@
           "performance_percentile": 0.0625,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.5714,
+          "price_percentile": 0.5752,
           "technical_positions": [
             "EMA50 附近",
             "可用均线下方",
@@ -31448,7 +31523,7 @@
           "performance_percentile": 0.8542,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8661,
+          "price_percentile": 0.8673,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -31524,7 +31599,7 @@
           "performance_percentile": 0.1875,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.4821,
+          "price_percentile": 0.4867,
           "technical_positions": [
             "可用均线下方",
             "邻近：向下跌破 EMA50；向下跌破 EMA20"
@@ -31547,12 +31622,12 @@
         }
       ],
       "holder_psychology": {
-        "as_of": "2026-11-19",
-        "close": 138.43,
-        "trend_score": 70.8,
-        "return_5d": -0.0108,
-        "return_20d": -0.0437,
-        "price_percentile": 0.2768,
+        "as_of": "2026-11-20",
+        "close": 127.79,
+        "trend_score": 72.2,
+        "return_5d": -0.0814,
+        "return_20d": -0.1336,
+        "price_percentile": 0.1504,
         "ema_state": "below_all",
         "near_emas": [],
         "regime": "低位/弱势防守",
@@ -32945,9 +33020,31 @@
             "relative": false,
             "absolute": false,
             "events": []
+          },
+          {
+            "date": "2026-11-20",
+            "amount": 16155026408.0,
+            "baseline": 14298813107.5,
+            "ratio": 1.1298,
+            "change": -0.076862,
+            "abnormal": false,
+            "relative": false,
+            "absolute": false,
+            "events": []
           }
         ],
         "alerts": [
+          {
+            "id": "SPCX:2026-11-23:盘前观察",
+            "date": "2026-11-23",
+            "phase": "盘前观察",
+            "reasons": [
+              "前一交易日 -7.69%，绝对涨跌进入过去最多 252 个交易日的最高一成"
+            ],
+            "categories": [],
+            "previous_shock": true,
+            "sources": []
+          },
           {
             "id": "SPCX:2026-11-09:盘前观察",
             "date": "2026-11-09",
@@ -33358,14 +33455,14 @@
           "samples": 6,
           "median": 1.4094,
           "shock_rate": 0.5,
-          "baseline_rate": 0.21739130434782608
+          "baseline_rate": 0.21505376344086022
         },
         "study": [
           {
             "label": "全部交易日",
-            "samples": 92,
-            "median": 0.999,
-            "abnormal_rate": 0.21739130434782608
+            "samples": 93,
+            "median": 1.0029,
+            "abnormal_rate": 0.21505376344086022
           },
           {
             "label": "公司财报反应日",
@@ -33381,9 +33478,9 @@
           },
           {
             "label": "单日下跌 ≥ 2%",
-            "samples": 30,
-            "median": 1.0414,
-            "abnormal_rate": 0.2
+            "samples": 31,
+            "median": 1.0692,
+            "abnormal_rate": 0.1935483870967742
           },
           {
             "label": "前一日大幅波动",
@@ -33446,7 +33543,7 @@
       "timeline_start": "2024-01-01",
       "latest_article": "2026-10-22",
       "price_start": "2024-01-02",
-      "price_end": "2026-11-19",
+      "price_end": "2026-11-20",
       "pre_ipo": false,
       "pre_ipo_through": null,
       "series": [
@@ -42149,6 +42246,18 @@
           "ema200": 378.782,
           "trend_score": 77.1,
           "trend_score_limited": false
+        },
+        {
+          "date": "2026-11-20",
+          "open": 370.425,
+          "high": 373.88,
+          "low": 344.33,
+          "close": 345.82,
+          "ema20": 378.399,
+          "ema50": 375.648,
+          "ema200": 378.454,
+          "trend_score": 83.3,
+          "trend_score_limited": false
         }
       ],
       "articles": [
@@ -44026,6 +44135,47 @@
           "close": 390.22,
           "trend_score": 86.0,
           "trend_score_limited": false
+        },
+        {
+          "date": "2026-11-20",
+          "kind": "breakdown",
+          "kind_label": "跌破关键位置",
+          "direction": -1,
+          "title": "向下跌破 EMA50；向下跌破 EMA200",
+          "reasons": [
+            "近3个交易日由 EMA50 上方转到下方；收盘低于均线 7.9%，达到 1.6% 有效跌破要求（0.8% 与 0.35×ATR% 取高）",
+            "近3个交易日由 EMA200 上方转到下方；收盘低于均线 8.6%，达到 1.6% 有效跌破要求（0.8% 与 0.35×ATR% 取高）"
+          ],
+          "severity": 3,
+          "related_kinds": [
+            "breakdown"
+          ],
+          "article_window": {
+            "articles": 0,
+            "securities_trades": 0,
+            "site_share": 0,
+            "segments": {
+              "before": {
+                "articles": 0,
+                "securities_trades": 0,
+                "site_share": 0
+              },
+              "during": {
+                "articles": 0,
+                "securities_trades": 0,
+                "site_share": 0
+              },
+              "after": {
+                "articles": 0,
+                "securities_trades": 0,
+                "site_share": 0
+              }
+            },
+            "article_rows": []
+          },
+          "close": 345.82,
+          "trend_score": 83.3,
+          "trend_score_limited": false
         }
       ],
       "earnings_events": [
@@ -44351,7 +44501,7 @@
           "performance_percentile": 0.7917,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7062,
+          "price_percentile": 0.7066,
           "technical_positions": [
             "EMA50/EMA200 附近",
             "可用均线上方",
@@ -44383,7 +44533,7 @@
           "performance_percentile": 0.625,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.6883,
+          "price_percentile": 0.6887,
           "technical_positions": [
             "EMA50/EMA200 附近",
             "邻近：向上突破 EMA200；突破近20日压力位"
@@ -44414,7 +44564,7 @@
           "performance_percentile": 0.5833,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.6841,
+          "price_percentile": 0.6846,
           "technical_positions": [
             "EMA50/EMA200 附近",
             "邻近：向下跌破 EMA50；向下跌破 EMA200"
@@ -44445,7 +44595,7 @@
           "performance_percentile": 1.0,
           "performance_label": "高表现",
           "ema_state": "below_all",
-          "price_percentile": 0.6262,
+          "price_percentile": 0.6267,
           "technical_positions": [
             "EMA20 附近",
             "可用均线下方",
@@ -44499,7 +44649,7 @@
           "performance_percentile": 0.6667,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9062,
+          "price_percentile": 0.9063,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -44531,7 +44681,7 @@
           "performance_percentile": 0.2917,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8538,
+          "price_percentile": 0.854,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -44564,7 +44714,7 @@
           "performance_percentile": 0.3333,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.6717,
+          "price_percentile": 0.6722,
           "technical_positions": [
             "可用均线下方",
             "邻近：向上突破 EMA200"
@@ -44595,7 +44745,7 @@
           "performance_percentile": 0.4167,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.7186,
+          "price_percentile": 0.719,
           "technical_positions": [
             "EMA20/EMA200 附近",
             "可用均线下方",
@@ -44627,7 +44777,7 @@
           "performance_percentile": 0.2083,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.7007,
+          "price_percentile": 0.7011,
           "technical_positions": [
             "EMA200 附近",
             "可用均线下方",
@@ -44659,7 +44809,7 @@
           "performance_percentile": 0.0417,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.6552,
+          "price_percentile": 0.6556,
           "technical_positions": [
             "可用均线下方",
             "邻近：趋势评分骤降 37.0 分；单日下跌 14.5%；跌破近20日支撑位"
@@ -44690,7 +44840,7 @@
           "performance_percentile": 0.7083,
           "performance_label": "中上表现",
           "ema_state": "below_all",
-          "price_percentile": 0.6276,
+          "price_percentile": 0.6281,
           "technical_positions": [
             "可用均线下方",
             "邻近：趋势评分骤降 37.0 分；单日下跌 14.5%；跌破近20日支撑位"
@@ -44721,7 +44871,7 @@
           "performance_percentile": 0.9583,
           "performance_label": "高表现",
           "ema_state": "below_all",
-          "price_percentile": 0.4179,
+          "price_percentile": 0.4174,
           "technical_positions": [
             "可用均线下方",
             "邻近：趋势评分骤降 37.0 分；单日下跌 14.5%；跌破近20日支撑位"
@@ -44785,7 +44935,7 @@
           "performance_percentile": 0.9167,
           "performance_label": "高表现",
           "ema_state": "below_all",
-          "price_percentile": 0.4,
+          "price_percentile": 0.3994,
           "technical_positions": [
             "可用均线下方",
             "邻近：趋势评分骤降 37.0 分；单日下跌 14.5%；跌破近20日支撑位"
@@ -44827,7 +44977,7 @@
           "performance_percentile": 0.1667,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.3917,
+          "price_percentile": 0.3912,
           "technical_positions": [
             "可用均线下方",
             "邻近：历史确认的可能底部"
@@ -44858,7 +45008,7 @@
           "performance_percentile": 0.4583,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.5172,
+          "price_percentile": 0.5165,
           "technical_positions": [
             "EMA20 附近",
             "邻近：趋势评分跃升 25.5 分；突破近20日压力位"
@@ -44889,7 +45039,7 @@
           "performance_percentile": 0.75,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.5393,
+          "price_percentile": 0.5399,
           "technical_positions": [
             "EMA20 附近",
             "邻近：向下跌破 EMA50"
@@ -44920,7 +45070,7 @@
           "performance_percentile": 0.25,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.5366,
+          "price_percentile": 0.5372,
           "technical_positions": [
             "EMA20 附近",
             "邻近：趋势评分跃升 20.0 分；向上突破 EMA50；回踩 EMA20 后收回"
@@ -44951,7 +45101,7 @@
           "performance_percentile": 0.5,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.5724,
+          "price_percentile": 0.573,
           "technical_positions": [
             "EMA50 附近",
             "邻近：趋势评分跃升 20.0 分；向上突破 EMA50；回踩 EMA20 后收回"
@@ -44982,7 +45132,7 @@
           "performance_percentile": 0.8333,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.5586,
+          "price_percentile": 0.5592,
           "technical_positions": [
             "EMA20/EMA50 附近"
           ],
@@ -45023,7 +45173,7 @@
           "performance_percentile": 0.125,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6469,
+          "price_percentile": 0.6474,
           "technical_positions": [
             "EMA200 附近",
             "可用均线上方",
@@ -45055,7 +45205,7 @@
           "performance_percentile": 0.375,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.6359,
+          "price_percentile": 0.6364,
           "technical_positions": [
             "EMA20/EMA200 附近",
             "邻近：向下跌破 EMA200"
@@ -45086,7 +45236,7 @@
           "performance_percentile": 0.0833,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.5641,
+          "price_percentile": 0.5647,
           "technical_positions": [
             "可用均线下方",
             "邻近：向下跌破 EMA200"
@@ -45117,7 +45267,7 @@
           "performance_percentile": 0.5417,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.6097,
+          "price_percentile": 0.6102,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "邻近：趋势评分跃升 29.1 分"
@@ -45159,7 +45309,7 @@
           "performance_percentile": 0.875,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.6317,
+          "price_percentile": 0.6322,
           "technical_positions": [
             "EMA20/EMA200 附近",
             "邻近：趋势评分跃升 29.1 分"
@@ -45204,18 +45354,14 @@
         }
       ],
       "holder_psychology": {
-        "as_of": "2026-11-19",
-        "close": 374.41,
-        "trend_score": 77.1,
-        "return_5d": -0.058,
-        "return_20d": -0.0005,
-        "price_percentile": 0.6303,
+        "as_of": "2026-11-20",
+        "close": 345.82,
+        "trend_score": 83.3,
+        "return_5d": -0.1138,
+        "return_20d": -0.0709,
+        "price_percentile": 0.522,
         "ema_state": "below_all",
-        "near_emas": [
-          20,
-          50,
-          200
-        ],
+        "near_emas": [],
         "regime": "低位/弱势防守",
         "headline": "套牢、补仓与止损之间的决策压力",
         "mindset": "持仓者更容易锚定原成本并等待回本，同时担心继续下跌；任何反弹都可能触发“减仓还是再等等”的冲突。",
@@ -53576,9 +53722,38 @@
             "relative": false,
             "absolute": false,
             "events": []
+          },
+          {
+            "date": "2026-11-20",
+            "amount": 16403777759.0,
+            "baseline": 12811424877.0,
+            "ratio": 1.2804,
+            "change": -0.07636,
+            "abnormal": false,
+            "relative": false,
+            "absolute": false,
+            "events": [
+              {
+                "title": "向下跌破 EMA50；向下跌破 EMA200",
+                "category": "技术事件",
+                "url": null,
+                "announce": null
+              }
+            ]
           }
         ],
         "alerts": [
+          {
+            "id": "TSLA:2026-11-23:盘前观察",
+            "date": "2026-11-23",
+            "phase": "盘前观察",
+            "reasons": [
+              "前一交易日 -7.64%，绝对涨跌进入过去最多 252 个交易日的最高一成"
+            ],
+            "categories": [],
+            "previous_shock": true,
+            "sources": []
+          },
           {
             "id": "TSLA:2026-11-10:盘前观察",
             "date": "2026-11-10",
@@ -55826,14 +56001,14 @@
           "samples": 80,
           "median": 1.133,
           "shock_rate": 0.2,
-          "baseline_rate": 0.10344827586206896
+          "baseline_rate": 0.10330578512396695
         },
         "study": [
           {
             "label": "全部交易日",
-            "samples": 725,
-            "median": 0.9647,
-            "abnormal_rate": 0.10344827586206896
+            "samples": 726,
+            "median": 0.9651,
+            "abnormal_rate": 0.10330578512396695
           },
           {
             "label": "公司财报反应日",
@@ -55849,9 +56024,9 @@
           },
           {
             "label": "单日下跌 ≥ 2%",
-            "samples": 178,
-            "median": 1.0381,
-            "abnormal_rate": 0.12359550561797752
+            "samples": 179,
+            "median": 1.0382,
+            "abnormal_rate": 0.12290502793296089
           },
           {
             "label": "前一日大幅波动",
@@ -55914,7 +56089,7 @@
       "timeline_start": "2024-01-01",
       "latest_article": "2026-10-15",
       "price_start": "2024-01-02",
-      "price_end": "2026-11-19",
+      "price_end": "2026-11-20",
       "pre_ipo": false,
       "pre_ipo_through": null,
       "series": [
@@ -64617,6 +64792,18 @@
           "ema200": 308.663,
           "trend_score": 93.8,
           "trend_score_limited": false
+        },
+        {
+          "date": "2026-11-20",
+          "open": 352.865,
+          "high": 354.34,
+          "low": 340.56,
+          "close": 342.56,
+          "ema20": 347.505,
+          "ema50": 340.504,
+          "ema200": 309.0,
+          "trend_score": 94.4,
+          "trend_score_limited": false
         }
       ],
       "articles": [
@@ -66271,7 +66458,7 @@
           "performance_percentile": 0.2727,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7103,
+          "price_percentile": 0.7094,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方"
@@ -66313,7 +66500,7 @@
           "performance_percentile": 0.6364,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7186,
+          "price_percentile": 0.7176,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方"
@@ -66344,7 +66531,7 @@
           "performance_percentile": 0.1818,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7407,
+          "price_percentile": 0.7397,
           "technical_positions": [
             "可用均线上方",
             "邻近：突破近20日压力位"
@@ -66375,7 +66562,7 @@
           "performance_percentile": 0.3182,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7379,
+          "price_percentile": 0.7369,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -66407,7 +66594,7 @@
           "performance_percentile": 0.4091,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8041,
+          "price_percentile": 0.803,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -66450,7 +66637,7 @@
           "performance_percentile": 0.0909,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8524,
+          "price_percentile": 0.8512,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -66482,7 +66669,7 @@
           "performance_percentile": 0.4545,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8841,
+          "price_percentile": 0.8829,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -66513,7 +66700,7 @@
           "performance_percentile": 0.5455,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8814,
+          "price_percentile": 0.8802,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -66544,7 +66731,7 @@
           "performance_percentile": 0.1364,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8607,
+          "price_percentile": 0.8595,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -66587,7 +66774,7 @@
           "performance_percentile": 0.7727,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8193,
+          "price_percentile": 0.8182,
           "technical_positions": [
             "EMA50 附近",
             "文章区间价格高位",
@@ -66619,7 +66806,7 @@
           "performance_percentile": 0.2273,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8359,
+          "price_percentile": 0.8347,
           "technical_positions": [
             "EMA20 附近",
             "文章区间价格高位",
@@ -66651,7 +66838,7 @@
           "performance_percentile": 0.9545,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.811,
+          "price_percentile": 0.8099,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：趋势评分骤降 23.8 分；单日下跌 6.1%；向下跌破 EMA50"
@@ -66704,7 +66891,7 @@
           "performance_percentile": 0.7273,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9007,
+          "price_percentile": 0.8994,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -66758,7 +66945,7 @@
           "performance_percentile": 0.3636,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9186,
+          "price_percentile": 0.9174,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -66790,7 +66977,7 @@
           "performance_percentile": 0.0455,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9159,
+          "price_percentile": 0.9146,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -66821,7 +67008,7 @@
           "performance_percentile": 0.8636,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9614,
+          "price_percentile": 0.9601,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -66875,7 +67062,7 @@
           "performance_percentile": 1.0,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8676,
+          "price_percentile": 0.8664,
           "technical_positions": [
             "EMA50 附近",
             "文章区间价格高位",
@@ -66940,7 +67127,7 @@
           "performance_percentile": 0.5,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9117,
+          "price_percentile": 0.9105,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -66983,7 +67170,7 @@
           "performance_percentile": 0.9091,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9172,
+          "price_percentile": 0.916,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -67036,7 +67223,7 @@
           "performance_percentile": 0.6818,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9628,
+          "price_percentile": 0.9614,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -67067,7 +67254,7 @@
           "performance_percentile": 0.5909,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9724,
+          "price_percentile": 0.9725,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -67099,7 +67286,7 @@
           "performance_percentile": 0.8182,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9683,
+          "price_percentile": 0.9669,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -67135,47 +67322,48 @@
         }
       ],
       "holder_psychology": {
-        "as_of": "2026-11-19",
-        "close": 349.21,
-        "trend_score": 93.8,
-        "return_5d": -0.016,
-        "return_20d": 0.0036,
-        "price_percentile": 0.989,
-        "ema_state": "above_all",
+        "as_of": "2026-11-20",
+        "close": 342.56,
+        "trend_score": 94.4,
+        "return_5d": -0.0385,
+        "return_20d": -0.0141,
+        "price_percentile": 0.9697,
+        "ema_state": "mixed",
         "near_emas": [
-          20
+          20,
+          50
         ],
-        "regime": "高位强趋势",
-        "headline": "高位盈利保护与继续持有之间的拉扯",
-        "mindset": "已有持仓者更可能一边享受趋势，一边担心利润回吐；未充分上车的用户则容易出现踏空和追高焦虑。",
+        "regime": "关键均线决策区",
+        "headline": "关键均线得失带来的方向选择焦虑",
+        "mindset": "价格靠近常用成本与趋势参考线时，持仓者通常最纠结：守住想加仓，跌破又担心是假动作或卖在最低点。",
         "pain_points": [
-          "继续持有还是分批落袋",
-          "回撤到哪一条均线才算趋势破坏",
-          "高位加仓会不会买在阶段顶部"
+          "均线附近到底是机会还是风险",
+          "等待确认会不会错过反弹",
+          "假突破与真转势怎样区分"
         ],
         "content_actions": [
-          "给出分层止盈与移动保护位",
-          "解释 EMA20/50 回踩与趋势失效的区别",
-          "用情景路径替代单一涨跌判断"
+          "把确认条件写成可执行清单",
+          "同时标出向上、向下两套路径",
+          "解释量价和收盘确认的重要性"
         ],
         "historical_basis": [
           {
-            "date": "2026-09-10",
-            "securities_trades": 2328,
+            "date": "2026-07-31",
+            "securities_trades": 2751,
+            "site_share": 0.0026,
+            "position": "EMA50 附近；文章区间价格高位"
+          },
+          {
+            "date": "2026-06-26",
+            "securities_trades": 2361,
             "site_share": 0.0022,
-            "position": "可用均线上方；文章区间价格高位"
+            "position": "文章区间价格高位；邻近：趋势评分骤降 23.8 分；单日下跌 6.1%；向下跌破 EMA50"
           },
           {
-            "date": "2026-07-28",
-            "securities_trades": 2031,
-            "site_share": 0.0019,
-            "position": "可用均线上方；文章区间价格高位"
-          },
-          {
-            "date": "2026-10-15",
-            "securities_trades": 1977,
-            "site_share": 0.0019,
-            "position": "EMA20 附近；可用均线上方"
+            "date": "2026-06-09",
+            "securities_trades": 1466,
+            "site_share": 0.0014,
+            "position": "EMA50 附近；文章区间价格高位"
           }
         ],
         "matching_high_bubble_days": 3,
@@ -75443,9 +75631,32 @@
             "relative": false,
             "absolute": false,
             "events": []
+          },
+          {
+            "date": "2026-11-20",
+            "amount": 27860681030.0,
+            "baseline": 14507121621.5,
+            "ratio": 1.9205,
+            "change": -0.019043,
+            "abnormal": true,
+            "relative": true,
+            "absolute": true,
+            "events": []
           }
         ],
         "alerts": [
+          {
+            "id": "AAPL:2026-11-20:收盘确认",
+            "date": "2026-11-20",
+            "phase": "收盘确认",
+            "reasons": [
+              "成交额达到此前 20 日中位数的 1.92×",
+              "超基准成交额 133.54 亿美元，超过历史第 95 百分位"
+            ],
+            "categories": [],
+            "previous_shock": false,
+            "sources": []
+          },
           {
             "id": "AAPL:2026-11-05:盘前观察",
             "date": "2026-11-05",
@@ -78005,14 +78216,14 @@
           "samples": 88,
           "median": 1.1596,
           "shock_rate": 0.25,
-          "baseline_rate": 0.12827586206896552
+          "baseline_rate": 0.12947658402203857
         },
         "study": [
           {
             "label": "全部交易日",
-            "samples": 725,
-            "median": 1.0045,
-            "abnormal_rate": 0.12827586206896552
+            "samples": 726,
+            "median": 1.0046,
+            "abnormal_rate": 0.12947658402203857
           },
           {
             "label": "公司财报反应日",
@@ -78093,7 +78304,7 @@
       "timeline_start": "2024-01-01",
       "latest_article": "2026-10-21",
       "price_start": "2024-01-02",
-      "price_end": "2026-11-19",
+      "price_end": "2026-11-20",
       "pre_ipo": false,
       "pre_ipo_through": null,
       "series": [
@@ -86796,6 +87007,18 @@
           "ema200": 470.076,
           "trend_score": 75.0,
           "trend_score_limited": false
+        },
+        {
+          "date": "2026-11-20",
+          "open": 493.74,
+          "high": 503.8,
+          "low": 481.03,
+          "close": 484.52,
+          "ema20": 516.938,
+          "ema50": 512.621,
+          "ema200": 470.22,
+          "trend_score": 79.6,
+          "trend_score_limited": false
         }
       ],
       "articles": [
@@ -88423,7 +88646,7 @@
           "performance_percentile": 0.6087,
           "performance_label": "中上表现",
           "ema_state": "below_all",
-          "price_percentile": 0.2772,
+          "price_percentile": 0.2769,
           "technical_positions": [
             "EMA20 附近",
             "可用均线下方"
@@ -88486,7 +88709,7 @@
           "performance_percentile": 0.8696,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.3503,
+          "price_percentile": 0.3499,
           "technical_positions": [
             "均线结构与文章区间位置中性",
             "邻近：趋势评分跃升 20.4 分"
@@ -88517,7 +88740,7 @@
           "performance_percentile": 0.4783,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.44,
+          "price_percentile": 0.4394,
           "technical_positions": [
             "均线结构与文章区间位置中性",
             "邻近：趋势评分跃升 20.4 分"
@@ -88548,7 +88771,7 @@
           "performance_percentile": 0.087,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.5159,
+          "price_percentile": 0.5152,
           "technical_positions": [
             "均线结构与文章区间位置中性"
           ],
@@ -88578,7 +88801,7 @@
           "performance_percentile": 0.5652,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.571,
+          "price_percentile": 0.5702,
           "technical_positions": [
             "EMA200 附近"
           ],
@@ -88608,7 +88831,7 @@
           "performance_percentile": 0.3913,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.5269,
+          "price_percentile": 0.5262,
           "technical_positions": [
             "均线结构与文章区间位置中性",
             "邻近：趋势评分跃升 19.1 分"
@@ -88639,7 +88862,7 @@
           "performance_percentile": 0.6522,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.5517,
+          "price_percentile": 0.551,
           "technical_positions": [
             "均线结构与文章区间位置中性",
             "邻近：趋势评分跃升 19.1 分"
@@ -88670,7 +88893,7 @@
           "performance_percentile": 0.2174,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.5214,
+          "price_percentile": 0.5207,
           "technical_positions": [
             "均线结构与文章区间位置中性",
             "邻近：趋势评分跃升 19.1 分"
@@ -88701,7 +88924,7 @@
           "performance_percentile": 1.0,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.2979,
+          "price_percentile": 0.2975,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "邻近：趋势评分跃升 19.1 分"
@@ -88765,7 +88988,7 @@
           "performance_percentile": 0.8261,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.5117,
+          "price_percentile": 0.511,
           "technical_positions": [
             "均线结构与文章区间位置中性",
             "邻近：向上突破 EMA50；向上突破 EMA20"
@@ -88796,7 +89019,7 @@
           "performance_percentile": 0.5217,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.4717,
+          "price_percentile": 0.4711,
           "technical_positions": [
             "EMA20 附近"
           ],
@@ -88826,7 +89049,7 @@
           "performance_percentile": 0.7391,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6745,
+          "price_percentile": 0.6736,
           "technical_positions": [
             "可用均线上方",
             "邻近：历史确认的可能顶部；突破近20日压力位"
@@ -88889,7 +89112,7 @@
           "performance_percentile": 0.3043,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.1076,
+          "price_percentile": 0.1074,
           "technical_positions": [
             "EMA20 附近",
             "文章区间价格低位"
@@ -88920,7 +89143,7 @@
           "performance_percentile": 0.2609,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.0717,
+          "price_percentile": 0.0716,
           "technical_positions": [
             "可用均线下方",
             "文章区间价格低位",
@@ -88952,7 +89175,7 @@
           "performance_percentile": 0.4348,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.0731,
+          "price_percentile": 0.073,
           "technical_positions": [
             "EMA20 附近",
             "可用均线下方",
@@ -88985,7 +89208,7 @@
           "performance_percentile": 0.9565,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6455,
+          "price_percentile": 0.6446,
           "technical_positions": [
             "可用均线上方",
             "邻近：单日上涨 15.5%；向上突破 EMA50；向上突破 EMA200"
@@ -89060,7 +89283,7 @@
           "performance_percentile": 0.3478,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8166,
+          "price_percentile": 0.8168,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -89091,7 +89314,7 @@
           "performance_percentile": 0.1304,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8924,
+          "price_percentile": 0.8926,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -89185,7 +89408,7 @@
           "performance_percentile": 0.0435,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9834,
+          "price_percentile": 0.9835,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -89209,12 +89432,12 @@
         }
       ],
       "holder_psychology": {
-        "as_of": "2026-11-19",
-        "close": 498.3,
-        "trend_score": 75.0,
-        "return_5d": -0.0454,
-        "return_20d": -0.0419,
-        "price_percentile": 0.8207,
+        "as_of": "2026-11-20",
+        "close": 484.52,
+        "trend_score": 79.6,
+        "return_5d": -0.0733,
+        "return_20d": -0.0745,
+        "price_percentile": 0.7521,
         "ema_state": "mixed",
         "near_emas": [],
         "regime": "方向分歧期",
@@ -97537,9 +97760,33 @@
             "relative": false,
             "absolute": false,
             "events": []
+          },
+          {
+            "date": "2026-11-20",
+            "amount": 23066272508.62,
+            "baseline": 14379121297.5,
+            "ratio": 1.6042,
+            "change": -0.027654,
+            "abnormal": true,
+            "relative": true,
+            "absolute": false,
+            "events": []
           }
         ],
         "alerts": [
+          {
+            "id": "MSFT:2026-11-20:收盘确认",
+            "date": "2026-11-20",
+            "phase": "收盘确认",
+            "reasons": [
+              "成交额达到此前 20 日中位数的 1.60×",
+              "单日急跌",
+              "收盘跌破前 60 日最低价"
+            ],
+            "categories": [],
+            "previous_shock": false,
+            "sources": []
+          },
           {
             "id": "MSFT:2026-11-06:盘前观察",
             "date": "2026-11-06",
@@ -99986,14 +100233,14 @@
           "samples": 87,
           "median": 1.1636,
           "shock_rate": 0.2413793103448276,
-          "baseline_rate": 0.11448275862068966
+          "baseline_rate": 0.11570247933884298
         },
         "study": [
           {
             "label": "全部交易日",
-            "samples": 725,
-            "median": 1.0056,
-            "abnormal_rate": 0.11448275862068966
+            "samples": 726,
+            "median": 1.0059,
+            "abnormal_rate": 0.11570247933884298
           },
           {
             "label": "公司财报反应日",
@@ -100009,9 +100256,9 @@
           },
           {
             "label": "单日下跌 ≥ 2%",
-            "samples": 64,
-            "median": 1.2742,
-            "abnormal_rate": 0.34375
+            "samples": 65,
+            "median": 1.2942,
+            "abnormal_rate": 0.35384615384615387
           },
           {
             "label": "前一日大幅波动",
@@ -100027,9 +100274,9 @@
           },
           {
             "label": "收盘跌破前 60 日最低价",
-            "samples": 22,
-            "median": 1.2483,
-            "abnormal_rate": 0.4090909090909091
+            "samples": 23,
+            "median": 1.2493,
+            "abnormal_rate": 0.43478260869565216
           }
         ],
         "related": [
@@ -100075,7 +100322,7 @@
       "timeline_start": "2025-09-30",
       "latest_article": "2026-10-23",
       "price_start": "2025-09-30",
-      "price_end": "2026-11-19",
+      "price_end": "2026-11-20",
       "pre_ipo": false,
       "pre_ipo_through": null,
       "series": [
@@ -103533,6 +103780,18 @@
           "ema50": 69.466,
           "ema200": 67.029,
           "trend_score": 54.2,
+          "trend_score_limited": false
+        },
+        {
+          "date": "2026-11-20",
+          "open": 64.54,
+          "high": 65.325,
+          "low": 61.36,
+          "close": 61.66,
+          "ema20": 67.832,
+          "ema50": 69.16,
+          "ema200": 66.975,
+          "trend_score": 47.2,
           "trend_score_limited": false
         }
       ],
@@ -108380,18 +108639,21 @@
           "trend_score_limited": false
         },
         {
-          "date": "2026-11-18",
+          "date": "2026-11-20",
           "kind": "score_shift",
           "kind_label": "趋势分骤变",
           "direction": -1,
-          "title": "趋势评分骤降 15.1 分",
+          "title": "趋势评分骤降 22.6 分；跌破近20日支撑位",
           "reasons": [
-            "5个交易日趋势评分 -15.1 分",
-            "趋势主体 -18.3"
+            "5个交易日趋势评分 -22.6 分",
+            "入场质量 -35.0",
+            "趋势主体 -22.6",
+            "收盘低于此前20日最低价 1% 以上"
           ],
           "severity": 3,
           "related_kinds": [
-            "score_shift"
+            "score_shift",
+            "breakdown"
           ],
           "article_window": {
             "articles": 0,
@@ -108416,8 +108678,8 @@
             },
             "article_rows": []
           },
-          "close": 66.83,
-          "trend_score": 55.9,
+          "close": 61.66,
+          "trend_score": 47.2,
           "trend_score_limited": false
         }
       ],
@@ -108479,7 +108741,7 @@
           "performance_percentile": 0.8346,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.2604,
+          "price_percentile": 0.263,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -108509,7 +108771,7 @@
           "performance_percentile": 0.4291,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.2986,
+          "price_percentile": 0.301,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方"
@@ -108540,7 +108802,7 @@
           "performance_percentile": 0.9606,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.2188,
+          "price_percentile": 0.2215,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -108584,7 +108846,7 @@
           "performance_percentile": 0.5354,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.3021,
+          "price_percentile": 0.3045,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -108616,7 +108878,7 @@
           "performance_percentile": 0.6614,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.2812,
+          "price_percentile": 0.2837,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -108648,7 +108910,7 @@
           "performance_percentile": 0.9213,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.3125,
+          "price_percentile": 0.3149,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -108691,7 +108953,7 @@
           "performance_percentile": 0.3622,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.3264,
+          "price_percentile": 0.3287,
           "technical_positions": [
             "可用均线上方",
             "邻近：突破近20日压力位"
@@ -108722,7 +108984,7 @@
           "performance_percentile": 0.9921,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.5556,
+          "price_percentile": 0.5571,
           "technical_positions": [
             "可用均线上方",
             "邻近：突破近20日压力位"
@@ -108775,7 +109037,7 @@
           "performance_percentile": 0.2756,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6701,
+          "price_percentile": 0.6713,
           "technical_positions": [
             "可用均线上方",
             "邻近：突破近20日压力位"
@@ -108806,7 +109068,7 @@
           "performance_percentile": 0.8425,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7014,
+          "price_percentile": 0.7024,
           "technical_positions": [
             "可用均线上方",
             "邻近：突破近20日压力位"
@@ -108837,7 +109099,7 @@
           "performance_percentile": 0.9528,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.4618,
+          "price_percentile": 0.4637,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -108891,7 +109153,7 @@
           "performance_percentile": 0.2953,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6354,
+          "price_percentile": 0.6367,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -108932,7 +109194,7 @@
           "performance_percentile": 0.8189,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.4792,
+          "price_percentile": 0.481,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -108964,10 +109226,9 @@
           "performance_percentile": 0.685,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.25,
+          "price_percentile": 0.2526,
           "technical_positions": [
             "EMA50 附近",
-            "文章区间价格低位",
             "邻近：向上突破 EMA20"
           ],
           "nearby_event_date": "2025-11-10",
@@ -109007,7 +109268,7 @@
           "performance_percentile": 0.1654,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.2639,
+          "price_percentile": 0.2664,
           "technical_positions": [
             "EMA20/EMA50 附近"
           ],
@@ -109037,7 +109298,7 @@
           "performance_percentile": 0.5512,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.2465,
+          "price_percentile": 0.2491,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "文章区间价格低位",
@@ -109080,7 +109341,7 @@
           "performance_percentile": 0.622,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.1632,
+          "price_percentile": 0.1661,
           "technical_positions": [
             "EMA50 附近",
             "文章区间价格低位",
@@ -109112,7 +109373,7 @@
           "performance_percentile": 0.3858,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.191,
+          "price_percentile": 0.1938,
           "technical_positions": [
             "EMA50 附近",
             "文章区间价格低位",
@@ -109144,7 +109405,7 @@
           "performance_percentile": 0.9449,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.1319,
+          "price_percentile": 0.1349,
           "technical_positions": [
             "文章区间价格低位",
             "邻近：向下跌破 EMA50"
@@ -109186,7 +109447,7 @@
           "performance_percentile": 0.5906,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.3889,
+          "price_percentile": 0.391,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -109218,7 +109479,7 @@
           "performance_percentile": 0.1102,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.4722,
+          "price_percentile": 0.474,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方"
@@ -109249,7 +109510,7 @@
           "performance_percentile": 0.3386,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.5903,
+          "price_percentile": 0.5917,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -109279,7 +109540,7 @@
           "performance_percentile": 0.4882,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.4931,
+          "price_percentile": 0.4948,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方"
@@ -109310,7 +109571,7 @@
           "performance_percentile": 0.5118,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.3056,
+          "price_percentile": 0.308,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "邻近：向下跌破 EMA20"
@@ -109341,7 +109602,7 @@
           "performance_percentile": 0.5276,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6528,
+          "price_percentile": 0.654,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -109371,7 +109632,7 @@
           "performance_percentile": 0.0157,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6562,
+          "price_percentile": 0.6574,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -109401,7 +109662,7 @@
           "performance_percentile": 0.2283,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6562,
+          "price_percentile": 0.6574,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -109431,7 +109692,7 @@
           "performance_percentile": 0.189,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.4583,
+          "price_percentile": 0.4602,
           "technical_positions": [
             "EMA20/EMA50 附近"
           ],
@@ -109461,7 +109722,7 @@
           "performance_percentile": 0.1417,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.5104,
+          "price_percentile": 0.5121,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "可用均线上方"
@@ -109492,7 +109753,7 @@
           "performance_percentile": 0.3937,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.1806,
+          "price_percentile": 0.1834,
           "technical_positions": [
             "文章区间价格低位",
             "邻近：趋势评分骤降 25.0 分；跌破近20日支撑位"
@@ -109523,7 +109784,7 @@
           "performance_percentile": 0.8268,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.2396,
+          "price_percentile": 0.2422,
           "technical_positions": [
             "文章区间价格低位",
             "邻近：趋势评分骤降 25.0 分；跌破近20日支撑位"
@@ -109565,7 +109826,7 @@
           "performance_percentile": 0.4094,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.3403,
+          "price_percentile": 0.3426,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "邻近：趋势评分骤降 25.0 分；跌破近20日支撑位"
@@ -109596,7 +109857,7 @@
           "performance_percentile": 0.2126,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.4062,
+          "price_percentile": 0.4083,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "可用均线上方",
@@ -109628,7 +109889,7 @@
           "performance_percentile": 0.2598,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.4514,
+          "price_percentile": 0.4533,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "可用均线上方",
@@ -109671,7 +109932,7 @@
           "performance_percentile": 0.8661,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.5278,
+          "price_percentile": 0.5294,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "可用均线上方",
@@ -109725,7 +109986,7 @@
           "performance_percentile": 0.5591,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.4861,
+          "price_percentile": 0.4879,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "可用均线上方"
@@ -109756,7 +110017,7 @@
           "performance_percentile": 0.1339,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.4896,
+          "price_percentile": 0.4913,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "可用均线上方"
@@ -109787,7 +110048,7 @@
           "performance_percentile": 0.126,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.2778,
+          "price_percentile": 0.2803,
           "technical_positions": [
             "EMA50 附近"
           ],
@@ -109817,7 +110078,7 @@
           "performance_percentile": 0.2441,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.1771,
+          "price_percentile": 0.1799,
           "technical_positions": [
             "文章区间价格低位"
           ],
@@ -109847,7 +110108,7 @@
           "performance_percentile": 0.1969,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.1944,
+          "price_percentile": 0.1972,
           "technical_positions": [
             "文章区间价格低位",
             "邻近：趋势评分骤降 14.2 分"
@@ -109878,7 +110139,7 @@
           "performance_percentile": 0.5984,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.2326,
+          "price_percentile": 0.2353,
           "technical_positions": [
             "EMA20 附近",
             "文章区间价格低位",
@@ -109910,7 +110171,7 @@
           "performance_percentile": 0.6535,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.0833,
+          "price_percentile": 0.083,
           "technical_positions": [
             "EMA200 附近",
             "文章区间价格低位"
@@ -109941,7 +110202,7 @@
           "performance_percentile": 0.7953,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.2153,
+          "price_percentile": 0.218,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "文章区间价格低位",
@@ -109973,7 +110234,7 @@
           "performance_percentile": 0.7638,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.1458,
+          "price_percentile": 0.1488,
           "technical_positions": [
             "EMA20 附近",
             "文章区间价格低位",
@@ -110005,7 +110266,7 @@
           "performance_percentile": 0.5433,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.1424,
+          "price_percentile": 0.1453,
           "technical_positions": [
             "EMA20 附近",
             "文章区间价格低位"
@@ -110036,7 +110297,7 @@
           "performance_percentile": 0.2835,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.0694,
+          "price_percentile": 0.0692,
           "technical_positions": [
             "EMA200 附近",
             "文章区间价格低位"
@@ -110067,7 +110328,7 @@
           "performance_percentile": 0.7323,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.0625,
+          "price_percentile": 0.0623,
           "technical_positions": [
             "EMA20/EMA200 附近",
             "文章区间价格低位",
@@ -110099,7 +110360,7 @@
           "performance_percentile": 0.7559,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.0764,
+          "price_percentile": 0.0761,
           "technical_positions": [
             "EMA20/EMA200 附近",
             "文章区间价格低位"
@@ -110141,7 +110402,7 @@
           "performance_percentile": 0.4646,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.0312,
+          "price_percentile": 0.0311,
           "technical_positions": [
             "可用均线下方",
             "文章区间价格低位",
@@ -110184,7 +110445,7 @@
           "performance_percentile": 0.4173,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.0347,
+          "price_percentile": 0.0346,
           "technical_positions": [
             "EMA20 附近",
             "可用均线下方",
@@ -110216,7 +110477,7 @@
           "performance_percentile": 0.2677,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.0174,
+          "price_percentile": 0.0173,
           "technical_positions": [
             "EMA20 附近",
             "可用均线下方",
@@ -110248,7 +110509,7 @@
           "performance_percentile": 0.0394,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.059,
+          "price_percentile": 0.0588,
           "technical_positions": [
             "EMA50/EMA200 附近",
             "文章区间价格低位",
@@ -110280,7 +110541,7 @@
           "performance_percentile": 0.4961,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.2361,
+          "price_percentile": 0.2388,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格低位"
@@ -110311,7 +110572,7 @@
           "performance_percentile": 0.3071,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.3819,
+          "price_percentile": 0.3841,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -110341,7 +110602,7 @@
           "performance_percentile": 0.2047,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.5417,
+          "price_percentile": 0.5433,
           "technical_positions": [
             "可用均线上方",
             "邻近：趋势评分跃升 20.3 分"
@@ -110372,7 +110633,7 @@
           "performance_percentile": 0.3307,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.3854,
+          "price_percentile": 0.3875,
           "technical_positions": [
             "可用均线上方",
             "邻近：趋势评分跃升 20.3 分"
@@ -110403,7 +110664,7 @@
           "performance_percentile": 0.1811,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.5764,
+          "price_percentile": 0.5779,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -110444,7 +110705,7 @@
           "performance_percentile": 0.5197,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6458,
+          "price_percentile": 0.6471,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -110485,7 +110746,7 @@
           "performance_percentile": 0.7165,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6076,
+          "price_percentile": 0.609,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -110515,7 +110776,7 @@
           "performance_percentile": 0.8976,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.5035,
+          "price_percentile": 0.5052,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -110578,7 +110839,7 @@
           "performance_percentile": 0.1496,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6111,
+          "price_percentile": 0.6125,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -110608,7 +110869,7 @@
           "performance_percentile": 0.7244,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7778,
+          "price_percentile": 0.7785,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -110640,7 +110901,7 @@
           "performance_percentile": 0.7087,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8958,
+          "price_percentile": 0.8962,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -110671,7 +110932,7 @@
           "performance_percentile": 0.9843,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9132,
+          "price_percentile": 0.9135,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -110713,7 +110974,7 @@
           "performance_percentile": 0.5748,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8611,
+          "price_percentile": 0.8616,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -110755,7 +111016,7 @@
           "performance_percentile": 0.6929,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7431,
+          "price_percentile": 0.7439,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方"
@@ -110797,7 +111058,7 @@
           "performance_percentile": 0.9134,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8368,
+          "price_percentile": 0.8374,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -110828,7 +111089,7 @@
           "performance_percentile": 0.937,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8403,
+          "price_percentile": 0.8408,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -110882,7 +111143,7 @@
           "performance_percentile": 0.9055,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8646,
+          "price_percentile": 0.8651,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -110915,7 +111176,7 @@
           "performance_percentile": 0.9291,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.7257,
+          "price_percentile": 0.7266,
           "technical_positions": [
             "EMA20 附近",
             "邻近：向下跌破 EMA20"
@@ -110946,7 +111207,7 @@
           "performance_percentile": 0.315,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8056,
+          "price_percentile": 0.8062,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -110979,7 +111240,7 @@
           "performance_percentile": 0.6457,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.4132,
+          "price_percentile": 0.4152,
           "technical_positions": [
             "EMA50 附近",
             "邻近：趋势评分骤降 24.7 分"
@@ -111010,7 +111271,7 @@
           "performance_percentile": 0.2362,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.3958,
+          "price_percentile": 0.3979,
           "technical_positions": [
             "EMA50 附近"
           ],
@@ -111040,7 +111301,7 @@
           "performance_percentile": 0.8583,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.1979,
+          "price_percentile": 0.2007,
           "technical_positions": [
             "EMA200 附近",
             "文章区间价格低位",
@@ -111072,7 +111333,7 @@
           "performance_percentile": 0.9764,
           "performance_label": "高表现",
           "ema_state": "below_all",
-          "price_percentile": 0.1701,
+          "price_percentile": 0.173,
           "technical_positions": [
             "EMA200 附近",
             "可用均线下方",
@@ -111105,7 +111366,7 @@
           "performance_percentile": 0.748,
           "performance_label": "中上表现",
           "ema_state": "below_all",
-          "price_percentile": 0.1042,
+          "price_percentile": 0.1038,
           "technical_positions": [
             "可用均线下方",
             "文章区间价格低位",
@@ -111137,7 +111398,7 @@
           "performance_percentile": 0.8898,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.2292,
+          "price_percentile": 0.2318,
           "technical_positions": [
             "EMA200 附近",
             "文章区间价格低位"
@@ -111168,7 +111429,7 @@
           "performance_percentile": 0.2953,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.5972,
+          "price_percentile": 0.5986,
           "technical_positions": [
             "EMA50 附近",
             "可用均线上方",
@@ -111200,7 +111461,7 @@
           "performance_percentile": 0.7717,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6389,
+          "price_percentile": 0.6401,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "可用均线上方",
@@ -111232,7 +111493,7 @@
           "performance_percentile": 0.1732,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7847,
+          "price_percentile": 0.7855,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -111264,7 +111525,7 @@
           "performance_percentile": 0.1024,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7049,
+          "price_percentile": 0.7059,
           "technical_positions": [
             "可用均线上方",
             "邻近：趋势评分跃升 26.3 分；突破近20日压力位"
@@ -111306,7 +111567,7 @@
           "performance_percentile": 0.2205,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6215,
+          "price_percentile": 0.6228,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "可用均线上方"
@@ -111337,7 +111598,7 @@
           "performance_percentile": 0.811,
           "performance_label": "高表现",
           "ema_state": "below_all",
-          "price_percentile": 0.2083,
+          "price_percentile": 0.2111,
           "technical_positions": [
             "EMA200 附近",
             "可用均线下方",
@@ -111380,7 +111641,7 @@
           "performance_percentile": 0.0787,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.2014,
+          "price_percentile": 0.2042,
           "technical_positions": [
             "EMA200 附近",
             "可用均线下方",
@@ -111412,7 +111673,7 @@
           "performance_percentile": 0.3701,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.2222,
+          "price_percentile": 0.2249,
           "technical_positions": [
             "EMA200 附近",
             "可用均线下方",
@@ -111478,7 +111739,7 @@
           "performance_percentile": 0.4488,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.2674,
+          "price_percentile": 0.2699,
           "technical_positions": [
             "EMA20/EMA200 附近",
             "邻近：趋势评分骤降 30.4 分"
@@ -111520,7 +111781,7 @@
           "performance_percentile": 0.4016,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.4583,
+          "price_percentile": 0.4602,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "可用均线上方",
@@ -111563,7 +111824,7 @@
           "performance_percentile": 0.1575,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7812,
+          "price_percentile": 0.782,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -111595,7 +111856,7 @@
           "performance_percentile": 0.0079,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7882,
+          "price_percentile": 0.7889,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -111626,7 +111887,7 @@
           "performance_percentile": 0.3465,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7292,
+          "price_percentile": 0.7301,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -111678,7 +111939,7 @@
           "performance_percentile": 0.063,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7396,
+          "price_percentile": 0.7405,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方"
@@ -111709,7 +111970,7 @@
           "performance_percentile": 0.4291,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6667,
+          "price_percentile": 0.6678,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "可用均线上方",
@@ -111752,7 +112013,7 @@
           "performance_percentile": 0.0945,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.5938,
+          "price_percentile": 0.5952,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "邻近：趋势评分骤降 18.2 分"
@@ -111794,7 +112055,7 @@
           "performance_percentile": 0.6142,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6875,
+          "price_percentile": 0.6886,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "可用均线上方",
@@ -111837,7 +112098,7 @@
           "performance_percentile": 0.8819,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.6146,
+          "price_percentile": 0.6159,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "邻近：趋势评分骤降 18.2 分"
@@ -111879,7 +112140,7 @@
           "performance_percentile": 0.6378,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.6597,
+          "price_percentile": 0.6609,
           "technical_positions": [
             "EMA20/EMA50 附近"
           ],
@@ -111942,7 +112203,7 @@
           "performance_percentile": 0.6693,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.684,
+          "price_percentile": 0.6851,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "可用均线上方"
@@ -112017,7 +112278,7 @@
           "performance_percentile": 0.7795,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6806,
+          "price_percentile": 0.6817,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "可用均线上方"
@@ -112081,7 +112342,7 @@
           "performance_percentile": 1.0,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7535,
+          "price_percentile": 0.7543,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -112157,7 +112418,7 @@
           "performance_percentile": 0.378,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7951,
+          "price_percentile": 0.7958,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -112199,7 +112460,7 @@
           "performance_percentile": 0.6063,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7639,
+          "price_percentile": 0.7647,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -112243,7 +112504,7 @@
           "performance_percentile": 0.8031,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7118,
+          "price_percentile": 0.7128,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "可用均线上方",
@@ -112297,7 +112558,7 @@
           "performance_percentile": 0.1181,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7674,
+          "price_percentile": 0.7682,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -112330,7 +112591,7 @@
           "performance_percentile": 0.7008,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8299,
+          "price_percentile": 0.8304,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -112396,7 +112657,7 @@
           "performance_percentile": 0.5669,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7951,
+          "price_percentile": 0.7958,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -112428,7 +112689,7 @@
           "performance_percentile": 0.8504,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.816,
+          "price_percentile": 0.8166,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -112482,7 +112743,7 @@
           "performance_percentile": 0.4567,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8681,
+          "price_percentile": 0.8685,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -112515,7 +112776,7 @@
           "performance_percentile": 0.0236,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8681,
+          "price_percentile": 0.8685,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -112548,7 +112809,7 @@
           "performance_percentile": 0.874,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9549,
+          "price_percentile": 0.955,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -112602,7 +112863,7 @@
           "performance_percentile": 0.3543,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.941,
+          "price_percentile": 0.9412,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -112634,7 +112895,7 @@
           "performance_percentile": 0.252,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9514,
+          "price_percentile": 0.9516,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -112666,7 +112927,7 @@
           "performance_percentile": 0.4724,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9618,
+          "price_percentile": 0.9619,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -112697,7 +112958,7 @@
           "performance_percentile": 0.5039,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.934,
+          "price_percentile": 0.9343,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -112729,7 +112990,7 @@
           "performance_percentile": 0.0315,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9236,
+          "price_percentile": 0.9239,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -112761,7 +113022,7 @@
           "performance_percentile": 0.0866,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9375,
+          "price_percentile": 0.9377,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -112793,7 +113054,7 @@
           "performance_percentile": 0.4409,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9583,
+          "price_percentile": 0.9585,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -112824,7 +113085,7 @@
           "performance_percentile": 0.6299,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9826,
+          "price_percentile": 0.9827,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -112972,7 +113233,7 @@
           "performance_percentile": 0.4803,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9688,
+          "price_percentile": 0.9689,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -113005,7 +113266,7 @@
           "performance_percentile": 0.7402,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9653,
+          "price_percentile": 0.9654,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -113049,7 +113310,7 @@
           "performance_percentile": 0.0472,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.9201,
+          "price_percentile": 0.9204,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "文章区间价格高位",
@@ -113081,7 +113342,7 @@
           "performance_percentile": 0.5827,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9479,
+          "price_percentile": 0.9481,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -113136,7 +113397,7 @@
           "performance_percentile": 0.6772,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.9444,
+          "price_percentile": 0.9446,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "文章区间价格高位"
@@ -113178,7 +113439,7 @@
           "performance_percentile": 0.9685,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8889,
+          "price_percentile": 0.8893,
           "technical_positions": [
             "EMA50 附近",
             "文章区间价格高位"
@@ -113242,7 +113503,7 @@
           "performance_percentile": 0.0709,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8715,
+          "price_percentile": 0.872,
           "technical_positions": [
             "EMA50 附近",
             "文章区间价格高位"
@@ -113265,12 +113526,12 @@
         }
       ],
       "holder_psychology": {
-        "as_of": "2026-11-19",
-        "close": 65.03,
-        "trend_score": 54.2,
-        "return_5d": -0.0556,
-        "return_20d": -0.0769,
-        "price_percentile": 0.3472,
+        "as_of": "2026-11-20",
+        "close": 61.66,
+        "trend_score": 47.2,
+        "return_5d": -0.102,
+        "return_20d": -0.12,
+        "price_percentile": 0.1107,
         "ema_state": "below_all",
         "near_emas": [],
         "regime": "低位/弱势防守",
@@ -117016,12 +117277,6 @@
             "absolute": false,
             "events": [
               {
-                "title": "趋势评分骤降 15.1 分",
-                "category": "技术事件",
-                "url": null,
-                "announce": null
-              },
-              {
                 "title": "英伟达财报反应日（11-17 盘后公布）",
                 "category": "英伟达财报",
                 "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx",
@@ -117039,6 +117294,24 @@
             "relative": false,
             "absolute": false,
             "events": []
+          },
+          {
+            "date": "2026-11-20",
+            "amount": 609455045.0,
+            "baseline": 296573120.0,
+            "ratio": 2.055,
+            "change": -0.051822,
+            "abnormal": true,
+            "relative": true,
+            "absolute": true,
+            "events": [
+              {
+                "title": "趋势评分骤降 22.6 分；跌破近20日支撑位",
+                "category": "技术事件",
+                "url": null,
+                "announce": null
+              }
+            ]
           }
         ],
         "alerts": [],
@@ -117090,7 +117363,7 @@
       "timeline_start": "2024-01-01",
       "latest_article": "2026-10-23",
       "price_start": "2024-01-02",
-      "price_end": "2026-11-19",
+      "price_end": "2026-11-20",
       "pre_ipo": false,
       "pre_ipo_through": null,
       "series": [
@@ -125793,6 +126066,18 @@
           "ema200": 157.083,
           "trend_score": 50.8,
           "trend_score_limited": false
+        },
+        {
+          "date": "2026-11-20",
+          "open": 135.08,
+          "high": 135.41,
+          "low": 122.2,
+          "close": 123.4,
+          "ema20": 148.782,
+          "ema50": 161.19,
+          "ema200": 156.748,
+          "trend_score": 45.3,
+          "trend_score_limited": false
         }
       ],
       "articles": [
@@ -130836,6 +131121,46 @@
           "close": 154.99,
           "trend_score": 58.5,
           "trend_score_limited": false
+        },
+        {
+          "date": "2026-11-20",
+          "kind": "breakdown",
+          "kind_label": "跌破关键位置",
+          "direction": -1,
+          "title": "跌破近20日支撑位",
+          "reasons": [
+            "收盘低于此前20日最低价 1% 以上"
+          ],
+          "severity": 3,
+          "related_kinds": [
+            "breakdown"
+          ],
+          "article_window": {
+            "articles": 0,
+            "securities_trades": 0,
+            "site_share": 0,
+            "segments": {
+              "before": {
+                "articles": 0,
+                "securities_trades": 0,
+                "site_share": 0
+              },
+              "during": {
+                "articles": 0,
+                "securities_trades": 0,
+                "site_share": 0
+              },
+              "after": {
+                "articles": 0,
+                "securities_trades": 0,
+                "site_share": 0
+              }
+            },
+            "article_rows": []
+          },
+          "close": 123.4,
+          "trend_score": 45.3,
+          "trend_score_limited": false
         }
       ],
       "earnings_events": [],
@@ -130995,6 +131320,20 @@
           "previous_close": 157.17,
           "close": 151.217,
           "actual_drawdown": 0.307
+        },
+        {
+          "key": "2026-06-22|40",
+          "date": "2026-11-20",
+          "previous_date": "2026-11-19",
+          "crossing_time": "2026-11-19T11:36:06Z",
+          "threshold": 0.4,
+          "threshold_percent": 40,
+          "threshold_price": 130.916,
+          "peak_date": "2026-06-22",
+          "peak_close": 218.194,
+          "previous_close": 137.95,
+          "close": 123.4,
+          "actual_drawdown": 0.4344
         }
       ],
       "content_points": [
@@ -131008,7 +131347,7 @@
           "performance_percentile": 0.2982,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6359,
+          "price_percentile": 0.635,
           "technical_positions": [
             "可用均线上方",
             "邻近：单日下跌 6.3%"
@@ -131039,7 +131378,7 @@
           "performance_percentile": 0.5263,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6124,
+          "price_percentile": 0.6116,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -131071,7 +131410,7 @@
           "performance_percentile": 0.8246,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6276,
+          "price_percentile": 0.6267,
           "technical_positions": [
             "可用均线上方",
             "邻近：向上突破 EMA20"
@@ -131113,7 +131452,7 @@
           "performance_percentile": 0.4386,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6331,
+          "price_percentile": 0.6322,
           "technical_positions": [
             "可用均线上方",
             "邻近：向上突破 EMA20"
@@ -131144,7 +131483,7 @@
           "performance_percentile": 0.5614,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6234,
+          "price_percentile": 0.6226,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方"
@@ -131186,7 +131525,7 @@
           "performance_percentile": 0.386,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6483,
+          "price_percentile": 0.6474,
           "technical_positions": [
             "可用均线上方",
             "邻近：突破近20日压力位"
@@ -131217,7 +131556,7 @@
           "performance_percentile": 0.2719,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.669,
+          "price_percentile": 0.668,
           "technical_positions": [
             "可用均线上方",
             "邻近：突破近20日压力位"
@@ -131248,7 +131587,7 @@
           "performance_percentile": 0.9298,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6828,
+          "price_percentile": 0.6818,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -131278,7 +131617,7 @@
           "performance_percentile": 0.7281,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6497,
+          "price_percentile": 0.6488,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方"
@@ -131331,7 +131670,7 @@
           "performance_percentile": 0.9123,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6745,
+          "price_percentile": 0.6736,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -131372,7 +131711,7 @@
           "performance_percentile": 0.2193,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6552,
+          "price_percentile": 0.6543,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方"
@@ -131414,7 +131753,7 @@
           "performance_percentile": 0.2105,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.6469,
+          "price_percentile": 0.646,
           "technical_positions": [
             "EMA20 附近",
             "邻近：向上突破 EMA20"
@@ -131445,7 +131784,7 @@
           "performance_percentile": 0.693,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6593,
+          "price_percentile": 0.6584,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -131477,7 +131816,7 @@
           "performance_percentile": 0.193,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6538,
+          "price_percentile": 0.6529,
           "technical_positions": [
             "可用均线上方",
             "邻近：趋势评分跃升 18.7 分"
@@ -131519,7 +131858,7 @@
           "performance_percentile": 0.2018,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6841,
+          "price_percentile": 0.6832,
           "technical_positions": [
             "可用均线上方",
             "邻近：趋势评分跃升 18.7 分"
@@ -131550,7 +131889,7 @@
           "performance_percentile": 0.0877,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6952,
+          "price_percentile": 0.6942,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -131580,7 +131919,7 @@
           "performance_percentile": 0.1667,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.6579,
+          "price_percentile": 0.657,
           "technical_positions": [
             "EMA20 附近"
           ],
@@ -131610,7 +131949,7 @@
           "performance_percentile": 0.1579,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6979,
+          "price_percentile": 0.697,
           "technical_positions": [
             "可用均线上方",
             "邻近：突破近20日压力位"
@@ -131641,7 +131980,7 @@
           "performance_percentile": 0.1404,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7048,
+          "price_percentile": 0.7039,
           "technical_positions": [
             "可用均线上方",
             "邻近：突破近20日压力位"
@@ -131672,7 +132011,7 @@
           "performance_percentile": 0.8421,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7186,
+          "price_percentile": 0.7176,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -131702,7 +132041,7 @@
           "performance_percentile": 0.7719,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7241,
+          "price_percentile": 0.7231,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -131743,7 +132082,7 @@
           "performance_percentile": 0.5351,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7421,
+          "price_percentile": 0.741,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -131784,7 +132123,7 @@
           "performance_percentile": 0.4474,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7559,
+          "price_percentile": 0.7548,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -131815,7 +132154,7 @@
           "performance_percentile": 0.807,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7462,
+          "price_percentile": 0.7452,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -131845,7 +132184,7 @@
           "performance_percentile": 0.0702,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7462,
+          "price_percentile": 0.7452,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -131875,7 +132214,7 @@
           "performance_percentile": 0.9035,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7779,
+          "price_percentile": 0.7769,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -131918,7 +132257,7 @@
           "performance_percentile": 0.6491,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7641,
+          "price_percentile": 0.7631,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -131949,7 +132288,7 @@
           "performance_percentile": 0.7193,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.749,
+          "price_percentile": 0.7479,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -131992,7 +132331,7 @@
           "performance_percentile": 0.8509,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.7117,
+          "price_percentile": 0.7107,
           "technical_positions": [
             "均线结构与文章区间位置中性",
             "邻近：向上突破 EMA20"
@@ -132034,7 +132373,7 @@
           "performance_percentile": 0.3772,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.7131,
+          "price_percentile": 0.7121,
           "technical_positions": [
             "均线结构与文章区间位置中性",
             "邻近：向上突破 EMA20"
@@ -132065,7 +132404,7 @@
           "performance_percentile": 0.2281,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7655,
+          "price_percentile": 0.7645,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -132097,7 +132436,7 @@
           "performance_percentile": 0.6009,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7766,
+          "price_percentile": 0.7755,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -132128,7 +132467,7 @@
           "performance_percentile": 0.8158,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.7614,
+          "price_percentile": 0.7603,
           "technical_positions": [
             "EMA20 附近",
             "文章区间价格高位",
@@ -132160,7 +132499,7 @@
           "performance_percentile": 0.4035,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.72,
+          "price_percentile": 0.719,
           "technical_positions": [
             "EMA50 附近",
             "邻近：趋势评分骤降 21.6 分"
@@ -132191,7 +132530,7 @@
           "performance_percentile": 0.2456,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.7393,
+          "price_percentile": 0.7383,
           "technical_positions": [
             "EMA50 附近",
             "邻近：趋势评分骤降 21.6 分"
@@ -132222,7 +132561,7 @@
           "performance_percentile": 0.6404,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.7269,
+          "price_percentile": 0.7259,
           "technical_positions": [
             "EMA50 附近",
             "邻近：趋势评分骤降 21.6 分"
@@ -132253,7 +132592,7 @@
           "performance_percentile": 0.4123,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.6993,
+          "price_percentile": 0.6983,
           "technical_positions": [
             "均线结构与文章区间位置中性",
             "邻近：趋势评分骤降 21.6 分"
@@ -132284,7 +132623,7 @@
           "performance_percentile": 0.7105,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7476,
+          "price_percentile": 0.7466,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -132316,7 +132655,7 @@
           "performance_percentile": 0.1491,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.7007,
+          "price_percentile": 0.6997,
           "technical_positions": [
             "均线结构与文章区间位置中性",
             "邻近：向下跌破 EMA50；向下跌破 EMA20"
@@ -132347,7 +132686,7 @@
           "performance_percentile": 0.0351,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7338,
+          "price_percentile": 0.7328,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "可用均线上方"
@@ -132378,7 +132717,7 @@
           "performance_percentile": 0.7018,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7848,
+          "price_percentile": 0.7851,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -132410,7 +132749,7 @@
           "performance_percentile": 0.6009,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7862,
+          "price_percentile": 0.7865,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -132453,7 +132792,7 @@
           "performance_percentile": 0.3333,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7903,
+          "price_percentile": 0.7906,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -132485,7 +132824,7 @@
           "performance_percentile": 0.8947,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7917,
+          "price_percentile": 0.792,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -132528,7 +132867,7 @@
           "performance_percentile": 0.6667,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7931,
+          "price_percentile": 0.7934,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -132560,7 +132899,7 @@
           "performance_percentile": 0.5,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7972,
+          "price_percentile": 0.7975,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -132592,7 +132931,7 @@
           "performance_percentile": 0.5175,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7986,
+          "price_percentile": 0.7989,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -132624,7 +132963,7 @@
           "performance_percentile": 0.7895,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8207,
+          "price_percentile": 0.8209,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -132656,7 +132995,7 @@
           "performance_percentile": 0.9211,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8193,
+          "price_percentile": 0.8196,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -132698,7 +133037,7 @@
           "performance_percentile": 0.8333,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8593,
+          "price_percentile": 0.8595,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -132730,7 +133069,7 @@
           "performance_percentile": 0.8596,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8372,
+          "price_percentile": 0.8375,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -132762,7 +133101,7 @@
           "performance_percentile": 0.1316,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8993,
+          "price_percentile": 0.8994,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -132794,7 +133133,7 @@
           "performance_percentile": 0.2368,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8428,
+          "price_percentile": 0.843,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -132825,7 +133164,7 @@
           "performance_percentile": 0.1842,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8869,
+          "price_percentile": 0.8871,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -132856,7 +133195,7 @@
           "performance_percentile": 0.8684,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.96,
+          "price_percentile": 0.9601,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -132888,7 +133227,7 @@
           "performance_percentile": 0.7632,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9586,
+          "price_percentile": 0.9587,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -132920,7 +133259,7 @@
           "performance_percentile": 0.9561,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9903,
+          "price_percentile": 0.9904,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -133038,7 +133377,7 @@
           "performance_percentile": 0.3246,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9434,
+          "price_percentile": 0.9435,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -133070,7 +133409,7 @@
           "performance_percentile": 0.6842,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.9186,
+          "price_percentile": 0.9187,
           "technical_positions": [
             "EMA20 附近",
             "文章区间价格高位",
@@ -133337,7 +133676,7 @@
           "performance_percentile": 0.3158,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.931,
+          "price_percentile": 0.9311,
           "technical_positions": [
             "EMA50 附近",
             "文章区间价格高位",
@@ -133369,7 +133708,7 @@
           "performance_percentile": 0.4211,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.971,
+          "price_percentile": 0.9711,
           "technical_positions": [
             "EMA20 附近",
             "文章区间价格高位",
@@ -133433,7 +133772,7 @@
           "performance_percentile": 0.5526,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.9338,
+          "price_percentile": 0.9339,
           "technical_positions": [
             "EMA50 附近",
             "文章区间价格高位"
@@ -133517,7 +133856,7 @@
           "performance_percentile": 0.6754,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.9048,
+          "price_percentile": 0.905,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：趋势评分骤降 15.5 分"
@@ -133548,7 +133887,7 @@
           "performance_percentile": 0.5439,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8924,
+          "price_percentile": 0.8926,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：趋势评分骤降 15.5 分"
@@ -133579,7 +133918,7 @@
           "performance_percentile": 0.1096,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.9297,
+          "price_percentile": 0.9298,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "文章区间价格高位"
@@ -133610,7 +133949,7 @@
           "performance_percentile": 0.5088,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8966,
+          "price_percentile": 0.8967,
           "technical_positions": [
             "文章区间价格高位"
           ],
@@ -133640,7 +133979,7 @@
           "performance_percentile": 0.5702,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8759,
+          "price_percentile": 0.876,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：趋势评分骤降 23.8 分；历史确认的可能底部；跌破近20日支撑位"
@@ -133693,7 +134032,7 @@
           "performance_percentile": 0.1096,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8552,
+          "price_percentile": 0.8554,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：趋势评分骤降 23.8 分；历史确认的可能底部；跌破近20日支撑位"
@@ -133724,7 +134063,7 @@
           "performance_percentile": 0.6228,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8607,
+          "price_percentile": 0.8609,
           "technical_positions": [
             "文章区间价格高位"
           ],
@@ -133765,7 +134104,7 @@
           "performance_percentile": 0.8772,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.9062,
+          "price_percentile": 0.9063,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "文章区间价格高位"
@@ -133818,7 +134157,7 @@
           "performance_percentile": 0.0175,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.9021,
+          "price_percentile": 0.9022,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "文章区间价格高位"
@@ -133849,7 +134188,7 @@
           "performance_percentile": 0.0965,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.9145,
+          "price_percentile": 0.9146,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "文章区间价格高位"
@@ -133880,7 +134219,7 @@
           "performance_percentile": 0.4298,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9283,
+          "price_percentile": 0.9284,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位"
@@ -133922,7 +134261,7 @@
           "performance_percentile": 0.0439,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9269,
+          "price_percentile": 0.927,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -133954,7 +134293,7 @@
           "performance_percentile": 0.3509,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.891,
+          "price_percentile": 0.8912,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：向下跌破 EMA50；向下跌破 EMA20"
@@ -133996,7 +134335,7 @@
           "performance_percentile": 0.3684,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.869,
+          "price_percentile": 0.8691,
           "technical_positions": [
             "文章区间价格高位"
           ],
@@ -134026,7 +134365,7 @@
           "performance_percentile": 0.0526,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8731,
+          "price_percentile": 0.8733,
           "technical_positions": [
             "文章区间价格高位"
           ],
@@ -134056,7 +134395,7 @@
           "performance_percentile": 0.614,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8634,
+          "price_percentile": 0.8636,
           "technical_positions": [
             "文章区间价格高位"
           ],
@@ -134086,7 +134425,7 @@
           "performance_percentile": 0.0263,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8634,
+          "price_percentile": 0.8636,
           "technical_positions": [
             "文章区间价格高位"
           ],
@@ -134116,7 +134455,7 @@
           "performance_percentile": 0.7807,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8662,
+          "price_percentile": 0.8664,
           "technical_positions": [
             "文章区间价格高位"
           ],
@@ -134157,7 +134496,7 @@
           "performance_percentile": 0.6316,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8469,
+          "price_percentile": 0.8471,
           "technical_positions": [
             "文章区间价格高位"
           ],
@@ -134198,7 +134537,7 @@
           "performance_percentile": 0.4561,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8497,
+          "price_percentile": 0.8499,
           "technical_positions": [
             "文章区间价格高位"
           ],
@@ -134239,7 +134578,7 @@
           "performance_percentile": 0.9474,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.851,
+          "price_percentile": 0.8512,
           "technical_positions": [
             "文章区间价格高位"
           ],
@@ -134302,7 +134641,7 @@
           "performance_percentile": 0.6579,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8828,
+          "price_percentile": 0.8829,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "文章区间价格高位"
@@ -134333,7 +134672,7 @@
           "performance_percentile": 0.5877,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.909,
+          "price_percentile": 0.9091,
           "technical_positions": [
             "EMA50 附近",
             "可用均线上方",
@@ -134366,7 +134705,7 @@
           "performance_percentile": 0.4649,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8772,
+          "price_percentile": 0.8774,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "文章区间价格高位",
@@ -134431,7 +134770,7 @@
           "performance_percentile": 0.4825,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8979,
+          "price_percentile": 0.8981,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "文章区间价格高位",
@@ -134463,7 +134802,7 @@
           "performance_percentile": 0.7982,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8455,
+          "price_percentile": 0.8457,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：向下跌破 EMA50；向下跌破 EMA20"
@@ -134505,7 +134844,7 @@
           "performance_percentile": 0.5789,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9131,
+          "price_percentile": 0.9132,
           "technical_positions": [
             "EMA50 附近",
             "可用均线上方",
@@ -134548,7 +134887,7 @@
           "performance_percentile": 0.9386,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9393,
+          "price_percentile": 0.9394,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -134602,7 +134941,7 @@
           "performance_percentile": 0.0614,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9655,
+          "price_percentile": 0.9656,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -134666,7 +135005,7 @@
           "performance_percentile": 0.2632,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9531,
+          "price_percentile": 0.9532,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -134729,7 +135068,7 @@
           "performance_percentile": 0.2895,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9462,
+          "price_percentile": 0.9463,
           "technical_positions": [
             "EMA20 附近",
             "可用均线上方",
@@ -134761,7 +135100,7 @@
           "performance_percentile": 0.307,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.9241,
+          "price_percentile": 0.9242,
           "technical_positions": [
             "EMA50 附近",
             "文章区间价格高位"
@@ -134792,7 +135131,7 @@
           "performance_percentile": 0.7456,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.9228,
+          "price_percentile": 0.9229,
           "technical_positions": [
             "EMA50 附近",
             "文章区间价格高位",
@@ -134846,7 +135185,7 @@
           "performance_percentile": 0.886,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8814,
+          "price_percentile": 0.8815,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：趋势评分骤降 34.2 分"
@@ -134899,7 +135238,7 @@
           "performance_percentile": 1.0,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8717,
+          "price_percentile": 0.8719,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：趋势评分骤降 34.2 分"
@@ -134952,7 +135291,7 @@
           "performance_percentile": 0.1754,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.84,
+          "price_percentile": 0.8402,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：趋势评分骤降 34.2 分"
@@ -134983,7 +135322,7 @@
           "performance_percentile": 0.0088,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8483,
+          "price_percentile": 0.8485,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：历史确认的可能底部；跌破近20日支撑位"
@@ -135014,7 +135353,7 @@
           "performance_percentile": 0.9649,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8317,
+          "price_percentile": 0.832,
           "technical_positions": [
             "EMA200 附近",
             "文章区间价格高位",
@@ -135079,7 +135418,7 @@
           "performance_percentile": 0.0789,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8331,
+          "price_percentile": 0.8333,
           "technical_positions": [
             "EMA200 附近",
             "文章区间价格高位",
@@ -135103,12 +135442,12 @@
         }
       ],
       "holder_psychology": {
-        "as_of": "2026-11-19",
-        "close": 137.95,
-        "trend_score": 50.8,
-        "return_5d": -0.1099,
-        "return_20d": -0.13,
-        "price_percentile": 0.7959,
+        "as_of": "2026-11-20",
+        "close": 123.4,
+        "trend_score": 45.3,
+        "return_5d": -0.1735,
+        "return_20d": -0.2258,
+        "price_percentile": 0.7837,
         "ema_state": "below_all",
         "near_emas": [],
         "regime": "低位/弱势防守",
@@ -144206,6 +144545,24 @@
             "relative": false,
             "absolute": false,
             "events": []
+          },
+          {
+            "date": "2026-11-20",
+            "amount": 11331459975.0,
+            "baseline": 5650242438.5,
+            "ratio": 2.0055,
+            "change": -0.105473,
+            "abnormal": true,
+            "relative": true,
+            "absolute": true,
+            "events": [
+              {
+                "title": "跌破近20日支撑位",
+                "category": "技术事件",
+                "url": null,
+                "announce": null
+              }
+            ]
           }
         ],
         "alerts": [
@@ -144223,6 +144580,33 @@
             "sources": [
               "https://www.bls.gov/schedule/news_release/empsit.htm"
             ]
+          },
+          {
+            "id": "SOXX:2026-11-23:盘前观察",
+            "date": "2026-11-23",
+            "phase": "盘前观察",
+            "reasons": [
+              "前一交易日 -10.55%，绝对涨跌进入过去最多 252 个交易日的最高一成"
+            ],
+            "categories": [],
+            "previous_shock": true,
+            "sources": []
+          },
+          {
+            "id": "SOXX:2026-11-20:收盘确认",
+            "date": "2026-11-20",
+            "phase": "收盘确认",
+            "reasons": [
+              "成交额达到此前 20 日中位数的 2.01×",
+              "超基准成交额 56.81 亿美元，超过历史第 95 百分位",
+              "单日急跌",
+              "收盘跌破前 60 日最低价"
+            ],
+            "categories": [
+              "技术事件"
+            ],
+            "previous_shock": false,
+            "sources": []
           },
           {
             "id": "SOXX:2026-11-18:盘前观察",
@@ -148085,7 +148469,7 @@
           "samples": 105,
           "median": 1.1973,
           "shock_rate": 0.3523809523809524,
-          "baseline_rate": 0.1986206896551724
+          "baseline_rate": 0.19972451790633608
         },
         "study": [],
         "related": [
@@ -148131,7 +148515,7 @@
       "timeline_start": "2025-10-14",
       "latest_article": "2026-10-15",
       "price_start": "2026-04-02",
-      "price_end": "2026-11-19",
+      "price_end": "2026-11-20",
       "pre_ipo": true,
       "pre_ipo_through": "2026-04-01",
       "series": [
@@ -150065,6 +150449,18 @@
           "ema50": 48.844,
           "ema200": null,
           "trend_score": 23.7,
+          "trend_score_limited": false
+        },
+        {
+          "date": "2026-11-20",
+          "open": 37.26,
+          "high": 37.31,
+          "low": 33.32,
+          "close": 33.36,
+          "ema20": 42.694,
+          "ema50": 48.237,
+          "ema200": null,
+          "trend_score": 22.6,
           "trend_score_limited": false
         }
       ],
@@ -154161,7 +154557,7 @@
           "performance_percentile": 0.4937,
           "performance_label": "普通表现",
           "ema_state": "no_price",
-          "price_percentile": 0.0186,
+          "price_percentile": 0.0185,
           "technical_positions": [
             "文章区间价格低位",
             "邻近：单日上涨 10.3%"
@@ -154192,7 +154588,7 @@
           "performance_percentile": 0.4177,
           "performance_label": "普通表现",
           "ema_state": "no_price",
-          "price_percentile": 0.0373,
+          "price_percentile": 0.037,
           "technical_positions": [
             "文章区间价格低位",
             "邻近：单日上涨 10.3%"
@@ -154223,7 +154619,7 @@
           "performance_percentile": 0.1392,
           "performance_label": "普通表现",
           "ema_state": "no_price",
-          "price_percentile": 0.0311,
+          "price_percentile": 0.0309,
           "technical_positions": [
             "文章区间价格低位",
             "邻近：单日上涨 10.3%"
@@ -154254,7 +154650,7 @@
           "performance_percentile": 0.8481,
           "performance_label": "高表现",
           "ema_state": "no_price",
-          "price_percentile": 0.087,
+          "price_percentile": 0.0926,
           "technical_positions": [
             "文章区间价格低位"
           ],
@@ -154284,7 +154680,7 @@
           "performance_percentile": 0.0633,
           "performance_label": "普通表现",
           "ema_state": "no_price",
-          "price_percentile": 0.1304,
+          "price_percentile": 0.1358,
           "technical_positions": [
             "文章区间价格低位"
           ],
@@ -154314,7 +154710,7 @@
           "performance_percentile": 0.038,
           "performance_label": "普通表现",
           "ema_state": "no_price",
-          "price_percentile": 0.118,
+          "price_percentile": 0.1235,
           "technical_positions": [
             "文章区间价格低位",
             "邻近：突破近20日压力位"
@@ -154345,7 +154741,7 @@
           "performance_percentile": 0.3924,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.1677,
+          "price_percentile": 0.1728,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格低位",
@@ -154377,7 +154773,7 @@
           "performance_percentile": 0.7975,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.1925,
+          "price_percentile": 0.1975,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格低位",
@@ -154409,7 +154805,7 @@
           "performance_percentile": 0.8354,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.2981,
+          "price_percentile": 0.3025,
           "technical_positions": [
             "可用均线上方",
             "邻近：单日上涨 13.4%；突破近20日压力位"
@@ -154440,7 +154836,7 @@
           "performance_percentile": 0.3291,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.4286,
+          "price_percentile": 0.4321,
           "technical_positions": [
             "可用均线上方",
             "邻近：单日上涨 13.4%；突破近20日压力位"
@@ -154471,7 +154867,7 @@
           "performance_percentile": 0.5823,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.3292,
+          "price_percentile": 0.3333,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -154501,7 +154897,7 @@
           "performance_percentile": 0.7595,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7516,
+          "price_percentile": 0.7531,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -154533,7 +154929,7 @@
           "performance_percentile": 0.6076,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7826,
+          "price_percentile": 0.784,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -154565,7 +154961,7 @@
           "performance_percentile": 0.7722,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9193,
+          "price_percentile": 0.9198,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -154597,7 +154993,7 @@
           "performance_percentile": 0.3671,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.559,
+          "price_percentile": 0.5617,
           "technical_positions": [
             "可用均线下方",
             "邻近：单日下跌 15.1%；向下跌破 EMA20"
@@ -154628,7 +155024,7 @@
           "performance_percentile": 0.6835,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7578,
+          "price_percentile": 0.7593,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -154660,7 +155056,7 @@
           "performance_percentile": 0.2911,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9006,
+          "price_percentile": 0.9012,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -154692,7 +155088,7 @@
           "performance_percentile": 0.3165,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9627,
+          "price_percentile": 0.963,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -154756,7 +155152,7 @@
           "performance_percentile": 0.9747,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9317,
+          "price_percentile": 0.9321,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -154831,7 +155227,7 @@
           "performance_percentile": 0.5443,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.9752,
+          "price_percentile": 0.9753,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -154863,7 +155259,7 @@
           "performance_percentile": 1.0,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.913,
+          "price_percentile": 0.9136,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：向下跌破 EMA20"
@@ -154905,7 +155301,7 @@
           "performance_percentile": 0.0127,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.7702,
+          "price_percentile": 0.7716,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：向下跌破 EMA20"
@@ -154936,7 +155332,7 @@
           "performance_percentile": 0.8734,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.8882,
+          "price_percentile": 0.8889,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：回踩 EMA50 后收回"
@@ -154967,7 +155363,7 @@
           "performance_percentile": 0.9873,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.764,
+          "price_percentile": 0.7654,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：回踩 EMA50 后收回"
@@ -154998,7 +155394,7 @@
           "performance_percentile": 0.9241,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.882,
+          "price_percentile": 0.8827,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：回踩 EMA50 后收回"
@@ -155029,7 +155425,7 @@
           "performance_percentile": 0.9494,
           "performance_label": "高表现",
           "ema_state": "below_all",
-          "price_percentile": 0.6273,
+          "price_percentile": 0.6296,
           "technical_positions": [
             "可用均线下方",
             "邻近：趋势评分骤降 24.1 分；跌破近20日支撑位"
@@ -155071,7 +155467,7 @@
           "performance_percentile": 0.9367,
           "performance_label": "高表现",
           "ema_state": "mixed",
-          "price_percentile": 0.795,
+          "price_percentile": 0.7963,
           "technical_positions": [
             "文章区间价格高位",
             "邻近：趋势评分骤降 24.1 分；跌破近20日支撑位"
@@ -155124,7 +155520,7 @@
           "performance_percentile": 0.7342,
           "performance_label": "中上表现",
           "ema_state": "below_all",
-          "price_percentile": 0.646,
+          "price_percentile": 0.6481,
           "technical_positions": [
             "可用均线下方",
             "邻近：趋势评分骤降 24.1 分；跌破近20日支撑位"
@@ -155155,7 +155551,7 @@
           "performance_percentile": 0.4557,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.6894,
+          "price_percentile": 0.6914,
           "technical_positions": [
             "EMA50 附近"
           ],
@@ -155185,7 +155581,7 @@
           "performance_percentile": 0.2025,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.677,
+          "price_percentile": 0.679,
           "technical_positions": [
             "EMA50 附近",
             "可用均线下方"
@@ -155216,7 +155612,7 @@
           "performance_percentile": 0.443,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.2112,
+          "price_percentile": 0.216,
           "technical_positions": [
             "可用均线下方",
             "文章区间价格低位",
@@ -155248,7 +155644,7 @@
           "performance_percentile": 0.2658,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.4099,
+          "price_percentile": 0.4136,
           "technical_positions": [
             "可用均线下方",
             "邻近：历史确认的可能底部；跌破近20日支撑位"
@@ -155279,7 +155675,7 @@
           "performance_percentile": 0.3038,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.5155,
+          "price_percentile": 0.5185,
           "technical_positions": [
             "EMA20 附近",
             "可用均线下方",
@@ -155311,7 +155707,7 @@
           "performance_percentile": 0.7848,
           "performance_label": "高表现",
           "ema_state": "below_all",
-          "price_percentile": 0.3851,
+          "price_percentile": 0.3889,
           "technical_positions": [
             "可用均线下方",
             "邻近：趋势评分骤降 27.1 分"
@@ -155353,7 +155749,7 @@
           "performance_percentile": 0.5063,
           "performance_label": "中上表现",
           "ema_state": "below_all",
-          "price_percentile": 0.323,
+          "price_percentile": 0.3272,
           "technical_positions": [
             "可用均线下方"
           ],
@@ -155383,7 +155779,7 @@
           "performance_percentile": 0.557,
           "performance_label": "中上表现",
           "ema_state": "mixed",
-          "price_percentile": 0.5093,
+          "price_percentile": 0.5123,
           "technical_positions": [
             "EMA50 附近"
           ],
@@ -155413,7 +155809,7 @@
           "performance_percentile": 0.6709,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6149,
+          "price_percentile": 0.6173,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -155443,7 +155839,7 @@
           "performance_percentile": 0.8987,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6335,
+          "price_percentile": 0.6358,
           "technical_positions": [
             "可用均线上方",
             "邻近：趋势评分跃升 50.9 分；突破近20日压力位"
@@ -155518,7 +155914,7 @@
           "performance_percentile": 0.8101,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7453,
+          "price_percentile": 0.7469,
           "technical_positions": [
             "可用均线上方",
             "邻近：趋势评分跃升 50.9 分；突破近20日压力位"
@@ -155571,7 +155967,7 @@
           "performance_percentile": 0.2785,
           "performance_label": "普通表现",
           "ema_state": "mixed",
-          "price_percentile": 0.5404,
+          "price_percentile": 0.5432,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "邻近：趋势评分跃升 50.9 分；突破近20日压力位"
@@ -155602,7 +155998,7 @@
           "performance_percentile": 0.5316,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6522,
+          "price_percentile": 0.6543,
           "technical_positions": [
             "可用均线上方",
             "邻近：趋势评分跃升 50.9 分；突破近20日压力位"
@@ -155633,7 +156029,7 @@
           "performance_percentile": 0.4051,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6584,
+          "price_percentile": 0.6605,
           "technical_positions": [
             "可用均线上方",
             "邻近：向下跌破 EMA50"
@@ -155697,7 +156093,7 @@
           "performance_percentile": 0.6582,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.5776,
+          "price_percentile": 0.5802,
           "technical_positions": [
             "EMA20/EMA50 附近",
             "可用均线上方",
@@ -155740,7 +156136,7 @@
           "performance_percentile": 0.2532,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7143,
+          "price_percentile": 0.716,
           "technical_positions": [
             "可用均线上方",
             "邻近：趋势评分跃升 18.2 分；向上突破 EMA50；向上突破 EMA20"
@@ -155771,7 +156167,7 @@
           "performance_percentile": 0.1899,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.6957,
+          "price_percentile": 0.6975,
           "technical_positions": [
             "可用均线上方"
           ],
@@ -155801,7 +156197,7 @@
           "performance_percentile": 0.1139,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.5217,
+          "price_percentile": 0.5247,
           "technical_positions": [
             "可用均线下方",
             "邻近：趋势评分骤降 23.2 分"
@@ -155832,7 +156228,7 @@
           "performance_percentile": 0.6329,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7081,
+          "price_percentile": 0.7099,
           "technical_positions": [
             "可用均线上方",
             "邻近：趋势评分骤降 23.2 分"
@@ -155863,7 +156259,7 @@
           "performance_percentile": 0.4304,
           "performance_label": "普通表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8758,
+          "price_percentile": 0.8765,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -155895,7 +156291,7 @@
           "performance_percentile": 0.6456,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8323,
+          "price_percentile": 0.8333,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -155927,7 +156323,7 @@
           "performance_percentile": 0.6203,
           "performance_label": "中上表现",
           "ema_state": "above_all",
-          "price_percentile": 0.7764,
+          "price_percentile": 0.7778,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -155970,7 +156366,7 @@
           "performance_percentile": 0.8608,
           "performance_label": "高表现",
           "ema_state": "above_all",
-          "price_percentile": 0.8447,
+          "price_percentile": 0.8457,
           "technical_positions": [
             "可用均线上方",
             "文章区间价格高位",
@@ -156013,7 +156409,7 @@
           "performance_percentile": 0.0253,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.6149,
+          "price_percentile": 0.6173,
           "technical_positions": [
             "可用均线下方",
             "邻近：趋势评分骤降 21.5 分；向下跌破 EMA50；向下跌破 EMA20"
@@ -156044,7 +156440,7 @@
           "performance_percentile": 0.8228,
           "performance_label": "高表现",
           "ema_state": "below_all",
-          "price_percentile": 0.441,
+          "price_percentile": 0.4444,
           "technical_positions": [
             "可用均线下方",
             "邻近：趋势评分骤降 47.5 分"
@@ -156075,7 +156471,7 @@
           "performance_percentile": 0.7089,
           "performance_label": "中上表现",
           "ema_state": "below_all",
-          "price_percentile": 0.3354,
+          "price_percentile": 0.3395,
           "technical_positions": [
             "可用均线下方",
             "邻近：趋势评分骤降 47.5 分"
@@ -156106,7 +156502,7 @@
           "performance_percentile": 0.0506,
           "performance_label": "普通表现",
           "ema_state": "below_all",
-          "price_percentile": 0.3168,
+          "price_percentile": 0.321,
           "technical_positions": [
             "可用均线下方",
             "邻近：趋势评分骤降 47.5 分"
@@ -156129,12 +156525,12 @@
         }
       ],
       "holder_psychology": {
-        "as_of": "2026-11-19",
-        "close": 38.43,
-        "trend_score": 23.7,
-        "return_5d": -0.1198,
-        "return_20d": -0.1587,
-        "price_percentile": 0.1242,
+        "as_of": "2026-11-20",
+        "close": 33.36,
+        "trend_score": 22.6,
+        "return_5d": -0.2132,
+        "return_20d": -0.2911,
+        "price_percentile": 0.0432,
         "ema_state": "below_all",
         "near_emas": [],
         "regime": "低位/弱势防守",
@@ -158338,6 +158734,17 @@
             "relative": false,
             "absolute": false,
             "events": []
+          },
+          {
+            "date": "2026-11-20",
+            "amount": 2449160233.0,
+            "baseline": 1769192469.5,
+            "ratio": 1.3843,
+            "change": -0.131928,
+            "abnormal": false,
+            "relative": false,
+            "absolute": false,
+            "events": []
           }
         ],
         "alerts": [],
@@ -158359,7 +158766,7 @@
       "price_code": "US.QQQ",
       "timeline_start": "2024-01-02",
       "price_start": "2024-01-02",
-      "price_end": "2026-11-19",
+      "price_end": "2026-11-20",
       "series": [
         {
           "date": "2024-01-02",
@@ -165610,6 +166017,16 @@
           "ema20": 681.152,
           "ema50": 700.171,
           "ema200": 682.208
+        },
+        {
+          "date": "2026-11-20",
+          "open": 638.84,
+          "high": 643.28,
+          "low": 606.229,
+          "close": 608.45,
+          "ema20": 674.228,
+          "ema50": 696.574,
+          "ema200": 681.475
         }
       ],
       "pre_ipo": false,
@@ -166941,19 +167358,19 @@
           "close": 647.05
         },
         {
-          "date": "2026-11-16",
+          "date": "2026-11-20",
           "kind": "breakdown",
           "kind_label": "跌破关键位置",
           "direction": -1,
-          "title": "向下跌破 EMA200",
+          "title": "跌破近20日支撑位",
           "reasons": [
-            "近3个交易日由 EMA200 上方转到下方；收盘低于均线 3.1%，达到 0.9% 有效跌破要求（0.8% 与 0.35×ATR% 取高）"
+            "收盘低于此前20日最低价 1% 以上"
           ],
           "severity": 3,
           "related_kinds": [
             "breakdown"
           ],
-          "close": 661.75
+          "close": 608.45
         }
       ],
       "earnings_events": [],
@@ -176435,14 +176852,7 @@
             "abnormal": false,
             "relative": false,
             "absolute": false,
-            "events": [
-              {
-                "title": "向下跌破 EMA200",
-                "category": "技术事件",
-                "url": null,
-                "announce": null
-              }
-            ]
+            "events": []
           },
           {
             "date": "2026-11-17",
@@ -176483,6 +176893,24 @@
             "relative": true,
             "absolute": false,
             "events": []
+          },
+          {
+            "date": "2026-11-20",
+            "amount": 84057155438.0,
+            "baseline": 29381211843.5,
+            "ratio": 2.8609,
+            "change": -0.056725,
+            "abnormal": true,
+            "relative": true,
+            "absolute": true,
+            "events": [
+              {
+                "title": "跌破近20日支撑位",
+                "category": "技术事件",
+                "url": null,
+                "announce": null
+              }
+            ]
           }
         ],
         "alerts": [
@@ -176532,14 +176960,43 @@
             ]
           },
           {
+            "id": "QQQ:2026-11-23:盘前观察",
+            "date": "2026-11-23",
+            "phase": "盘前观察",
+            "reasons": [
+              "前一交易日 -5.67%，绝对涨跌进入过去最多 252 个交易日的最高一成"
+            ],
+            "categories": [],
+            "previous_shock": true,
+            "sources": []
+          },
+          {
             "id": "QQQ:2026-11-20:盘前观察",
             "date": "2026-11-20",
             "phase": "盘前观察",
             "reasons": [
               "前一交易日 -2.19%，绝对涨跌进入过去最多 252 个交易日的最高一成"
             ],
-            "categories": [],
+            "categories": [
+              "技术事件"
+            ],
             "previous_shock": true,
+            "sources": []
+          },
+          {
+            "id": "QQQ:2026-11-20:收盘确认",
+            "date": "2026-11-20",
+            "phase": "收盘确认",
+            "reasons": [
+              "成交额达到此前 20 日中位数的 2.86×",
+              "超基准成交额 546.76 亿美元，超过历史第 95 百分位",
+              "单日急跌",
+              "收盘跌破前 60 日最低价"
+            ],
+            "categories": [
+              "技术事件"
+            ],
+            "previous_shock": false,
             "sources": []
           },
           {
@@ -180184,10 +180641,10 @@
         ],
         "watch": true,
         "evidence": {
-          "samples": 80,
-          "median": 1.1338,
-          "shock_rate": 0.2375,
-          "baseline_rate": 0.10482758620689656
+          "samples": 81,
+          "median": 1.1355,
+          "shock_rate": 0.24691358024691357,
+          "baseline_rate": 0.10606060606060606
         },
         "study": [],
         "related": [
@@ -180207,7 +180664,7 @@
       "price_code": "US.XLE",
       "timeline_start": "2024-01-02",
       "price_start": "2024-01-02",
-      "price_end": "2026-11-19",
+      "price_end": "2026-11-20",
       "series": [
         {
           "date": "2024-01-02",
@@ -187458,6 +187915,16 @@
           "ema20": 64.057,
           "ema50": 64.153,
           "ema200": 58.793
+        },
+        {
+          "date": "2026-11-20",
+          "open": 60.71,
+          "high": 61.5,
+          "low": 60.335,
+          "close": 60.51,
+          "ema20": 63.72,
+          "ema50": 64.01,
+          "ema200": 58.81
         }
       ],
       "pre_ipo": false,
@@ -198124,6 +198591,17 @@
             "relative": false,
             "absolute": false,
             "events": []
+          },
+          {
+            "date": "2026-11-20",
+            "amount": 2867591126.0,
+            "baseline": 2118686536.0,
+            "ratio": 1.3535,
+            "change": -0.006241,
+            "abnormal": false,
+            "relative": false,
+            "absolute": false,
+            "events": []
           }
         ],
         "alerts": [
@@ -200344,7 +200822,7 @@
           "samples": 83,
           "median": 1.1234,
           "shock_rate": 0.21686746987951808,
-          "baseline_rate": 0.10758620689655173
+          "baseline_rate": 0.10743801652892562
         },
         "study": [],
         "related": [
@@ -200360,7 +200838,7 @@
       "price_code": "US.IGV",
       "timeline_start": "2024-01-02",
       "price_start": "2024-01-02",
-      "price_end": "2026-11-19",
+      "price_end": "2026-11-20",
       "series": [
         {
           "date": "2024-01-02",
@@ -207611,6 +208089,16 @@
           "ema20": 101.583,
           "ema50": 103.505,
           "ema200": 99.701
+        },
+        {
+          "date": "2026-11-20",
+          "open": 94.73,
+          "high": 96.0,
+          "low": 91.09,
+          "close": 91.66,
+          "ema20": 100.638,
+          "ema50": 103.041,
+          "ema200": 99.621
         }
       ],
       "pre_ipo": false,
@@ -209025,20 +209513,19 @@
           "close": 101.46
         },
         {
-          "date": "2026-11-17",
+          "date": "2026-11-20",
           "kind": "breakdown",
           "kind_label": "跌破关键位置",
           "direction": -1,
-          "title": "向下跌破 EMA200；跌破近20日支撑位",
+          "title": "跌破近20日支撑位",
           "reasons": [
-            "近3个交易日由 EMA200 上方转到下方；收盘低于均线 4.0%，达到 1.1% 有效跌破要求（0.8% 与 0.35×ATR% 取高）",
             "收盘低于此前20日最低价 1% 以上"
           ],
           "severity": 3,
           "related_kinds": [
             "breakdown"
           ],
-          "close": 95.74
+          "close": 91.66
         }
       ],
       "earnings_events": [],
@@ -218515,14 +219002,7 @@
             "abnormal": true,
             "relative": true,
             "absolute": false,
-            "events": [
-              {
-                "title": "向下跌破 EMA200；跌破近20日支撑位",
-                "category": "技术事件",
-                "url": null,
-                "announce": null
-              }
-            ]
+            "events": []
           },
           {
             "date": "2026-11-18",
@@ -218545,6 +219025,24 @@
             "relative": false,
             "absolute": false,
             "events": []
+          },
+          {
+            "date": "2026-11-20",
+            "amount": 1441796869.0,
+            "baseline": 873638658.5,
+            "ratio": 1.6503,
+            "change": -0.046202,
+            "abnormal": true,
+            "relative": true,
+            "absolute": false,
+            "events": [
+              {
+                "title": "跌破近20日支撑位",
+                "category": "技术事件",
+                "url": null,
+                "announce": null
+              }
+            ]
           }
         ],
         "alerts": [
@@ -218579,6 +219077,32 @@
             ]
           },
           {
+            "id": "IGV:2026-11-23:盘前观察",
+            "date": "2026-11-23",
+            "phase": "盘前观察",
+            "reasons": [
+              "前一交易日 -4.62%，绝对涨跌进入过去最多 252 个交易日的最高一成"
+            ],
+            "categories": [],
+            "previous_shock": true,
+            "sources": []
+          },
+          {
+            "id": "IGV:2026-11-20:收盘确认",
+            "date": "2026-11-20",
+            "phase": "收盘确认",
+            "reasons": [
+              "成交额达到此前 20 日中位数的 1.65×",
+              "单日急跌",
+              "收盘跌破前 60 日最低价"
+            ],
+            "categories": [
+              "技术事件"
+            ],
+            "previous_shock": false,
+            "sources": []
+          },
+          {
             "id": "IGV:2026-11-17:收盘确认",
             "date": "2026-11-17",
             "phase": "收盘确认",
@@ -218587,9 +219111,7 @@
               "单日急跌",
               "收盘跌破前 60 日最低价"
             ],
-            "categories": [
-              "技术事件"
-            ],
+            "categories": [],
             "previous_shock": false,
             "sources": []
           },
@@ -222562,7 +223084,7 @@
           "samples": 89,
           "median": 1.3182,
           "shock_rate": 0.3707865168539326,
-          "baseline_rate": 0.20551724137931035
+          "baseline_rate": 0.2066115702479339
         },
         "study": [],
         "related": [
@@ -222580,7 +223102,7 @@
       "price_code": "US.GLD",
       "timeline_start": "2024-01-02",
       "price_start": "2024-01-02",
-      "price_end": "2026-11-19",
+      "price_end": "2026-11-20",
       "series": [
         {
           "date": "2024-01-02",
@@ -229831,6 +230353,16 @@
           "ema20": 361.056,
           "ema50": 373.072,
           "ema200": 387.669
+        },
+        {
+          "date": "2026-11-20",
+          "open": 326.975,
+          "high": 328.6,
+          "low": 320.95,
+          "close": 322.87,
+          "ema20": 357.419,
+          "ema50": 371.104,
+          "ema200": 387.025
         }
       ],
       "pre_ipo": false,
@@ -231032,7 +231564,7 @@
           "close": 369.36
         },
         {
-          "date": "2026-11-18",
+          "date": "2026-11-20",
           "kind": "breakdown",
           "kind_label": "跌破关键位置",
           "direction": -1,
@@ -231044,7 +231576,7 @@
           "related_kinds": [
             "breakdown"
           ],
-          "close": 341.19
+          "close": 322.87
         }
       ],
       "earnings_events": [],
@@ -240301,14 +240833,7 @@
             "abnormal": false,
             "relative": false,
             "absolute": false,
-            "events": [
-              {
-                "title": "跌破近20日支撑位",
-                "category": "技术事件",
-                "url": null,
-                "announce": null
-              }
-            ]
+            "events": []
           },
           {
             "date": "2026-11-19",
@@ -240320,6 +240845,24 @@
             "relative": false,
             "absolute": false,
             "events": []
+          },
+          {
+            "date": "2026-11-20",
+            "amount": 7668639095.0,
+            "baseline": 3353800445.5,
+            "ratio": 2.2866,
+            "change": -0.036727,
+            "abnormal": true,
+            "relative": true,
+            "absolute": true,
+            "events": [
+              {
+                "title": "跌破近20日支撑位",
+                "category": "技术事件",
+                "url": null,
+                "announce": null
+              }
+            ]
           }
         ],
         "alerts": [
@@ -240367,6 +240910,33 @@
             "sources": [
               "https://www.bls.gov/schedule/news_release/empsit.htm"
             ]
+          },
+          {
+            "id": "GLD:2026-11-23:盘前观察",
+            "date": "2026-11-23",
+            "phase": "盘前观察",
+            "reasons": [
+              "前一交易日 -3.67%，绝对涨跌进入过去最多 252 个交易日的最高一成"
+            ],
+            "categories": [],
+            "previous_shock": true,
+            "sources": []
+          },
+          {
+            "id": "GLD:2026-11-20:收盘确认",
+            "date": "2026-11-20",
+            "phase": "收盘确认",
+            "reasons": [
+              "成交额达到此前 20 日中位数的 2.29×",
+              "超基准成交额 43.15 亿美元，超过历史第 95 百分位",
+              "单日急跌",
+              "收盘跌破前 60 日最低价"
+            ],
+            "categories": [
+              "技术事件"
+            ],
+            "previous_shock": false,
+            "sources": []
           },
           {
             "id": "GLD:2026-11-19:盘前观察",
@@ -244689,7 +245259,7 @@
           "samples": 105,
           "median": 1.1315,
           "shock_rate": 0.2761904761904762,
-          "baseline_rate": 0.18758620689655173
+          "baseline_rate": 0.1887052341597796
         },
         "study": [],
         "related": [
@@ -244705,7 +245275,7 @@
       "price_code": "US.USO",
       "timeline_start": "2024-01-02",
       "price_start": "2024-01-02",
-      "price_end": "2026-11-19",
+      "price_end": "2026-11-20",
       "series": [
         {
           "date": "2024-01-02",
@@ -251956,6 +252526,16 @@
           "ema20": 147.113,
           "ema50": 147.885,
           "ema200": 128.395
+        },
+        {
+          "date": "2026-11-20",
+          "open": 136.61,
+          "high": 139.79,
+          "low": 135.135,
+          "close": 139.63,
+          "ema20": 146.4,
+          "ema50": 147.561,
+          "ema200": 128.507
         }
       ],
       "pre_ipo": false,
@@ -263518,6 +264098,17 @@
             "relative": false,
             "absolute": false,
             "events": []
+          },
+          {
+            "date": "2026-11-20",
+            "amount": 624698303.0,
+            "baseline": 730045429.5,
+            "ratio": 0.8557,
+            "change": 0.011152,
+            "abnormal": false,
+            "relative": false,
+            "absolute": false,
+            "events": []
           }
         ],
         "alerts": [
@@ -266620,7 +267211,7 @@
           "samples": 99,
           "median": 1.1334,
           "shock_rate": 0.3434343434343434,
-          "baseline_rate": 0.1793103448275862
+          "baseline_rate": 0.1790633608815427
         },
         "study": [],
         "related": [
